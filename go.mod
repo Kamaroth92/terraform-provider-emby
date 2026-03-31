@@ -1,13 +1,16 @@
-module github.com/hashicorp/terraform-provider-scaffolding-framework
+module terraform-provider-emby
 
 go 1.25.5
 
 require (
+	github.com/GIT_USER_ID/GIT_REPO_ID v0.0.0-00010101000000-000000000000
 	github.com/hashicorp/terraform-plugin-framework v1.19.0
 	github.com/hashicorp/terraform-plugin-go v0.31.0
 	github.com/hashicorp/terraform-plugin-log v0.10.0
 	github.com/hashicorp/terraform-plugin-testing v1.15.0
 )
+
+replace github.com/GIT_USER_ID/GIT_REPO_ID => ./internal/client
 
 require (
 	github.com/ProtonMail/go-crypto v1.3.0 // indirect

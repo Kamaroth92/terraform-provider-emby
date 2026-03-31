@@ -1,108 +1,131 @@
-// Copyright IBM Corp. 2021, 2025
-// SPDX-License-Identifier: MPL-2.0
-
 package provider
 
 import (
 	"context"
-	"net/http"
+	"os"
 
-	"github.com/hashicorp/terraform-plugin-framework/action"
+	embyclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 	"github.com/hashicorp/terraform-plugin-framework/datasource"
-	"github.com/hashicorp/terraform-plugin-framework/ephemeral"
-	"github.com/hashicorp/terraform-plugin-framework/function"
+	"github.com/hashicorp/terraform-plugin-framework/path"
 	"github.com/hashicorp/terraform-plugin-framework/provider"
 	"github.com/hashicorp/terraform-plugin-framework/provider/schema"
 	"github.com/hashicorp/terraform-plugin-framework/resource"
 	"github.com/hashicorp/terraform-plugin-framework/types"
 )
 
-// Ensure ScaffoldingProvider satisfies various provider interfaces.
-var _ provider.Provider = &ScaffoldingProvider{}
-var _ provider.ProviderWithFunctions = &ScaffoldingProvider{}
-var _ provider.ProviderWithEphemeralResources = &ScaffoldingProvider{}
-var _ provider.ProviderWithActions = &ScaffoldingProvider{}
+var _ provider.Provider = &EmbyProvider{}
 
-// ScaffoldingProvider defines the provider implementation.
-type ScaffoldingProvider struct {
-	// version is set to the provider version on release, "dev" when the
-	// provider is built and ran locally, and "test" when running acceptance
-	// testing.
+type EmbyProvider struct {
 	version string
 }
 
-// ScaffoldingProviderModel describes the provider data model.
-type ScaffoldingProviderModel struct {
-	Endpoint types.String `tfsdk:"endpoint"`
+type EmbyProviderModel struct {
+	Hostname types.String `tfsdk:"hostname"`
+	ApiKey   types.String `tfsdk:"api_key"`
 }
 
-func (p *ScaffoldingProvider) Metadata(ctx context.Context, req provider.MetadataRequest, resp *provider.MetadataResponse) {
-	resp.TypeName = "scaffolding"
+// EmbyProviderData is passed to data sources and resources via Configure.
+type EmbyProviderData struct {
+	Client *embyclient.APIClient
+	Auth   context.Context
+}
+
+func (p *EmbyProvider) Metadata(_ context.Context, _ provider.MetadataRequest, resp *provider.MetadataResponse) {
+	resp.TypeName = "emby"
 	resp.Version = p.version
 }
 
-func (p *ScaffoldingProvider) Schema(ctx context.Context, req provider.SchemaRequest, resp *provider.SchemaResponse) {
+func (p *EmbyProvider) Schema(_ context.Context, _ provider.SchemaRequest, resp *provider.SchemaResponse) {
 	resp.Schema = schema.Schema{
+		MarkdownDescription: "The Emby provider allows you to interact with your Emby media server.",
 		Attributes: map[string]schema.Attribute{
-			"endpoint": schema.StringAttribute{
-				MarkdownDescription: "Example provider attribute",
+			"hostname": schema.StringAttribute{
+				MarkdownDescription: "The base URL of your Emby server (e.g. `http://emby.example.com:8096`).",
 				Optional:            true,
+			},
+			"api_key": schema.StringAttribute{
+				MarkdownDescription: "The API key used to authenticate with Emby.",
+				Optional:            true,
+				Sensitive:           true,
 			},
 		},
 	}
 }
 
-func (p *ScaffoldingProvider) Configure(ctx context.Context, req provider.ConfigureRequest, resp *provider.ConfigureResponse) {
-	var data ScaffoldingProviderModel
+func (p *EmbyProvider) Configure(ctx context.Context, req provider.ConfigureRequest, resp *provider.ConfigureResponse) {
+	var data EmbyProviderModel
 
 	resp.Diagnostics.Append(req.Config.Get(ctx, &data)...)
-
 	if resp.Diagnostics.HasError() {
 		return
 	}
 
-	// Configuration values are now available.
-	// if data.Endpoint.IsNull() { /* ... */ }
+	if data.Hostname.IsUnknown() {
+		resp.Diagnostics.AddAttributeError(
+			path.Root("hostname"),
+			"Unknown Emby API Host",
+			"The provider cannot create the Emby API client as there is an unknown configuration value for the Emby API host. "+
+				"Either target apply the source of the value first, set the value statically in the configuration, or use the EMBY_HOST environment variable.",
+		)
+	}
 
-	// Example client configuration for data sources and resources
-	client := http.DefaultClient
-	resp.DataSourceData = client
-	resp.ResourceData = client
+	if data.ApiKey.IsUnknown() {
+		resp.Diagnostics.AddAttributeError(
+			path.Root("api_key"),
+			"Unknown Emby API Key",
+			"The provider cannot create the Emby API client as there is an unknown configuration value for the Emby API key. "+
+				"Either target apply the source of the value first, set the value statically in the configuration, or use the EMBY_API_KEY environment variable.",
+		)
+	}
+
+	hostname := os.Getenv("EMBY_HOSTNAME")
+
+	apiKey := os.Getenv("EMBY_APIKEY")
+
+	if !data.Hostname.IsNull() {
+		hostname = data.Hostname.ValueString()
+	}
+
+	if !data.ApiKey.IsNull() {
+		apiKey = data.ApiKey.ValueString()
+	}
+
+	cfg := embyclient.NewConfiguration()
+	cfg.Servers = embyclient.OAPIServerConfigs{
+		{URL: hostname + "/emby"},
+	}
+
+	client := embyclient.NewAPIClient(cfg)
+
+	authCtx := context.WithValue(context.Background(), embyclient.ContextAPIKeys, map[string]embyclient.APIKey{
+		"apikeyauth": {Key: apiKey},
+	})
+
+	providerData := &EmbyProviderData{
+		Client: client,
+		Auth:   authCtx,
+	}
+
+	resp.DataSourceData = providerData
+	resp.ResourceData = providerData
 }
 
-func (p *ScaffoldingProvider) Resources(ctx context.Context) []func() resource.Resource {
+func (p *EmbyProvider) Resources(_ context.Context) []func() resource.Resource {
 	return []func() resource.Resource{
-		NewExampleResource,
+		NewUserResource,
 	}
 }
 
-func (p *ScaffoldingProvider) EphemeralResources(ctx context.Context) []func() ephemeral.EphemeralResource {
-	return []func() ephemeral.EphemeralResource{
-		NewExampleEphemeralResource,
-	}
-}
-
-func (p *ScaffoldingProvider) DataSources(ctx context.Context) []func() datasource.DataSource {
+func (p *EmbyProvider) DataSources(_ context.Context) []func() datasource.DataSource {
 	return []func() datasource.DataSource{
-		NewExampleDataSource,
-	}
-}
-
-func (p *ScaffoldingProvider) Functions(ctx context.Context) []func() function.Function {
-	return []func() function.Function{
-		NewExampleFunction,
-	}
-}
-
-func (p *ScaffoldingProvider) Actions(ctx context.Context) []func() action.Action {
-	return []func() action.Action{
-		NewExampleAction,
+		NewLibrariesDataSource,
+		NewLibraryDataSource,
 	}
 }
 
 func New(version string) func() provider.Provider {
 	return func() provider.Provider {
-		return &ScaffoldingProvider{
+		return &EmbyProvider{
 			version: version,
 		}
 	}

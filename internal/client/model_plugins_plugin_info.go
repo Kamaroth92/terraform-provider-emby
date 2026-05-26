@@ -19,12 +19,12 @@ var _ MappedNullable = &PluginsPluginInfo{}
 
 // PluginsPluginInfo struct for PluginsPluginInfo
 type PluginsPluginInfo struct {
-	Name *string `json:"Name,omitempty"`
-	Version *string `json:"Version,omitempty"`
+	Name                  *string `json:"Name,omitempty"`
+	Version               *string `json:"Version,omitempty"`
 	ConfigurationFileName *string `json:"ConfigurationFileName,omitempty"`
-	Description *string `json:"Description,omitempty"`
-	Id *string `json:"Id,omitempty"`
-	ImageTag *string `json:"ImageTag,omitempty"`
+	Description           *string `json:"Description,omitempty"`
+	Id                    *string `json:"Id,omitempty"`
+	ImageTag              *string `json:"ImageTag,omitempty"`
 }
 
 // NewPluginsPluginInfo instantiates a new PluginsPluginInfo object
@@ -237,7 +237,7 @@ func (o *PluginsPluginInfo) SetImageTag(v string) {
 }
 
 func (o PluginsPluginInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -302,5 +302,3 @@ func (v *NullablePluginsPluginInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

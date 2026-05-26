@@ -19,10 +19,10 @@ var _ MappedNullable = &NotificationTypeInfo{}
 
 // NotificationTypeInfo struct for NotificationTypeInfo
 type NotificationTypeInfo struct {
-	Name *string `json:"Name,omitempty"`
-	Id *string `json:"Id,omitempty"`
+	Name         *string `json:"Name,omitempty"`
+	Id           *string `json:"Id,omitempty"`
 	CategoryName *string `json:"CategoryName,omitempty"`
-	CategoryId *string `json:"CategoryId,omitempty"`
+	CategoryId   *string `json:"CategoryId,omitempty"`
 }
 
 // NewNotificationTypeInfo instantiates a new NotificationTypeInfo object
@@ -171,7 +171,7 @@ func (o *NotificationTypeInfo) SetCategoryId(v string) {
 }
 
 func (o NotificationTypeInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -230,5 +230,3 @@ func (v *NullableNotificationTypeInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

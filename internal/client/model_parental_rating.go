@@ -19,8 +19,8 @@ var _ MappedNullable = &ParentalRating{}
 
 // ParentalRating struct for ParentalRating
 type ParentalRating struct {
-	Name *string `json:"Name,omitempty"`
-	Value *int32 `json:"Value,omitempty"`
+	Name  *string `json:"Name,omitempty"`
+	Value *int32  `json:"Value,omitempty"`
 }
 
 // NewParentalRating instantiates a new ParentalRating object
@@ -105,7 +105,7 @@ func (o *ParentalRating) SetValue(v int32) {
 }
 
 func (o ParentalRating) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -158,5 +158,3 @@ func (v *NullableParentalRating) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

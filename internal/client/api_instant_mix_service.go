@@ -20,17 +20,16 @@ import (
 	"time"
 )
 
-
 type InstantMixServiceAPI interface {
 
 	/*
-	GetAlbumsByIdInstantmix Creates an instant playlist based on a given album
+		GetAlbumsByIdInstantmix Creates an instant playlist based on a given album
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiGetAlbumsByIdInstantmixRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiGetAlbumsByIdInstantmixRequest
 	*/
 	GetAlbumsByIdInstantmix(ctx context.Context, id string) ApiGetAlbumsByIdInstantmixRequest
 
@@ -39,12 +38,12 @@ type InstantMixServiceAPI interface {
 	GetAlbumsByIdInstantmixExecute(r ApiGetAlbumsByIdInstantmixRequest) (*QueryResultBaseItemDto, *http.Response, error)
 
 	/*
-	GetArtistsInstantmix Creates an instant playlist based on a given artist
+		GetArtistsInstantmix Creates an instant playlist based on a given artist
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetArtistsInstantmixRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetArtistsInstantmixRequest
 	*/
 	GetArtistsInstantmix(ctx context.Context) ApiGetArtistsInstantmixRequest
 
@@ -53,12 +52,12 @@ type InstantMixServiceAPI interface {
 	GetArtistsInstantmixExecute(r ApiGetArtistsInstantmixRequest) (*QueryResultBaseItemDto, *http.Response, error)
 
 	/*
-	GetAudiobooksNextup Gets a list of next up episodes
+		GetAudiobooksNextup Gets a list of next up episodes
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetAudiobooksNextupRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetAudiobooksNextupRequest
 	*/
 	GetAudiobooksNextup(ctx context.Context) ApiGetAudiobooksNextupRequest
 
@@ -67,13 +66,13 @@ type InstantMixServiceAPI interface {
 	GetAudiobooksNextupExecute(r ApiGetAudiobooksNextupRequest) (*QueryResultBaseItemDto, *http.Response, error)
 
 	/*
-	GetItemsByIdInstantmix Creates an instant playlist based on a given item
+		GetItemsByIdInstantmix Creates an instant playlist based on a given item
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiGetItemsByIdInstantmixRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiGetItemsByIdInstantmixRequest
 	*/
 	GetItemsByIdInstantmix(ctx context.Context, id string) ApiGetItemsByIdInstantmixRequest
 
@@ -82,13 +81,13 @@ type InstantMixServiceAPI interface {
 	GetItemsByIdInstantmixExecute(r ApiGetItemsByIdInstantmixRequest) (*QueryResultBaseItemDto, *http.Response, error)
 
 	/*
-	GetMusicgenresByNameInstantmix Creates an instant playlist based on a music genre
+		GetMusicgenresByNameInstantmix Creates an instant playlist based on a music genre
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param name
-	@return ApiGetMusicgenresByNameInstantmixRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param name
+		@return ApiGetMusicgenresByNameInstantmixRequest
 	*/
 	GetMusicgenresByNameInstantmix(ctx context.Context, name string) ApiGetMusicgenresByNameInstantmixRequest
 
@@ -97,12 +96,12 @@ type InstantMixServiceAPI interface {
 	GetMusicgenresByNameInstantmixExecute(r ApiGetMusicgenresByNameInstantmixRequest) (*QueryResultBaseItemDto, *http.Response, error)
 
 	/*
-	GetMusicgenresInstantmix Creates an instant playlist based on a music genre
+		GetMusicgenresInstantmix Creates an instant playlist based on a music genre
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetMusicgenresInstantmixRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetMusicgenresInstantmixRequest
 	*/
 	GetMusicgenresInstantmix(ctx context.Context) ApiGetMusicgenresInstantmixRequest
 
@@ -111,13 +110,13 @@ type InstantMixServiceAPI interface {
 	GetMusicgenresInstantmixExecute(r ApiGetMusicgenresInstantmixRequest) (*QueryResultBaseItemDto, *http.Response, error)
 
 	/*
-	GetPlaylistsByIdInstantmix Creates an instant playlist based on a given playlist
+		GetPlaylistsByIdInstantmix Creates an instant playlist based on a given playlist
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiGetPlaylistsByIdInstantmixRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiGetPlaylistsByIdInstantmixRequest
 	*/
 	GetPlaylistsByIdInstantmix(ctx context.Context, id string) ApiGetPlaylistsByIdInstantmixRequest
 
@@ -126,13 +125,13 @@ type InstantMixServiceAPI interface {
 	GetPlaylistsByIdInstantmixExecute(r ApiGetPlaylistsByIdInstantmixRequest) (*QueryResultBaseItemDto, *http.Response, error)
 
 	/*
-	GetSongsByIdInstantmix Creates an instant playlist based on a given song
+		GetSongsByIdInstantmix Creates an instant playlist based on a given song
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiGetSongsByIdInstantmixRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiGetSongsByIdInstantmixRequest
 	*/
 	GetSongsByIdInstantmix(ctx context.Context, id string) ApiGetSongsByIdInstantmixRequest
 
@@ -145,108 +144,108 @@ type InstantMixServiceAPI interface {
 type InstantMixServiceAPIService service
 
 type ApiGetAlbumsByIdInstantmixRequest struct {
-	ctx context.Context
-	ApiService InstantMixServiceAPI
-	id string
-	artistType *string
-	maxOfficialRating *string
-	hasThemeSong *bool
-	hasThemeVideo *bool
-	hasSubtitles *bool
-	hasSpecialFeature *bool
-	hasTrailer *bool
-	isSpecialSeason *bool
-	adjacentTo *string
-	startItemId *string
-	minIndexNumber *int32
-	minStartDate *time.Time
-	maxStartDate *time.Time
-	minEndDate *time.Time
-	maxEndDate *time.Time
-	minPlayers *int32
-	maxPlayers *int32
-	parentIndexNumber *int32
-	hasParentalRating *bool
-	isHD *bool
-	isUnaired *bool
-	minCommunityRating *float64
-	minCriticRating *float64
-	airedDuringSeason *int32
-	minPremiereDate *time.Time
-	minDateLastSaved *time.Time
-	minDateLastSavedForUser *time.Time
-	maxPremiereDate *time.Time
-	hasOverview *bool
-	hasImdbId *bool
-	hasTmdbId *bool
-	hasTvdbId *bool
-	excludeItemIds *string
-	startIndex *int32
-	limit *int32
-	recursive *bool
-	searchTerm *string
-	sortOrder *string
-	parentId *string
-	fields *string
-	excludeItemTypes *string
-	includeItemTypes *string
-	anyProviderIdEquals *string
-	filters *string
-	isFavorite *bool
-	isMovie *bool
-	isSeries *bool
-	isFolder *bool
-	isNews *bool
-	isKids *bool
-	isSports *bool
-	isNew *bool
-	isPremiere *bool
-	isNewOrPremiere *bool
-	isRepeat *bool
-	projectToMedia *bool
-	mediaTypes *string
-	imageTypes *string
-	sortBy *string
-	isPlayed *bool
-	genres *string
-	officialRatings *string
-	tags *string
-	excludeTags *string
-	years *string
-	enableImages *bool
-	enableUserData *bool
-	imageTypeLimit *int32
-	enableImageTypes *string
-	person *string
-	personIds *string
-	personTypes *string
-	studios *string
-	studioIds *string
-	artists *string
-	artistIds *string
-	albums *string
-	ids *string
-	videoTypes *string
-	containers *string
-	audioCodecs *string
-	audioLayouts *string
-	videoCodecs *string
-	extendedVideoTypes *string
-	subtitleCodecs *string
-	path *string
-	userId *string
-	minOfficialRating *string
-	isLocked *bool
-	isPlaceHolder *bool
-	hasOfficialRating *bool
-	groupItemsIntoCollections *bool
-	is3D *bool
-	seriesStatus *string
-	nameStartsWithOrGreater *string
-	artistStartsWithOrGreater *string
+	ctx                            context.Context
+	ApiService                     InstantMixServiceAPI
+	id                             string
+	artistType                     *string
+	maxOfficialRating              *string
+	hasThemeSong                   *bool
+	hasThemeVideo                  *bool
+	hasSubtitles                   *bool
+	hasSpecialFeature              *bool
+	hasTrailer                     *bool
+	isSpecialSeason                *bool
+	adjacentTo                     *string
+	startItemId                    *string
+	minIndexNumber                 *int32
+	minStartDate                   *time.Time
+	maxStartDate                   *time.Time
+	minEndDate                     *time.Time
+	maxEndDate                     *time.Time
+	minPlayers                     *int32
+	maxPlayers                     *int32
+	parentIndexNumber              *int32
+	hasParentalRating              *bool
+	isHD                           *bool
+	isUnaired                      *bool
+	minCommunityRating             *float64
+	minCriticRating                *float64
+	airedDuringSeason              *int32
+	minPremiereDate                *time.Time
+	minDateLastSaved               *time.Time
+	minDateLastSavedForUser        *time.Time
+	maxPremiereDate                *time.Time
+	hasOverview                    *bool
+	hasImdbId                      *bool
+	hasTmdbId                      *bool
+	hasTvdbId                      *bool
+	excludeItemIds                 *string
+	startIndex                     *int32
+	limit                          *int32
+	recursive                      *bool
+	searchTerm                     *string
+	sortOrder                      *string
+	parentId                       *string
+	fields                         *string
+	excludeItemTypes               *string
+	includeItemTypes               *string
+	anyProviderIdEquals            *string
+	filters                        *string
+	isFavorite                     *bool
+	isMovie                        *bool
+	isSeries                       *bool
+	isFolder                       *bool
+	isNews                         *bool
+	isKids                         *bool
+	isSports                       *bool
+	isNew                          *bool
+	isPremiere                     *bool
+	isNewOrPremiere                *bool
+	isRepeat                       *bool
+	projectToMedia                 *bool
+	mediaTypes                     *string
+	imageTypes                     *string
+	sortBy                         *string
+	isPlayed                       *bool
+	genres                         *string
+	officialRatings                *string
+	tags                           *string
+	excludeTags                    *string
+	years                          *string
+	enableImages                   *bool
+	enableUserData                 *bool
+	imageTypeLimit                 *int32
+	enableImageTypes               *string
+	person                         *string
+	personIds                      *string
+	personTypes                    *string
+	studios                        *string
+	studioIds                      *string
+	artists                        *string
+	artistIds                      *string
+	albums                         *string
+	ids                            *string
+	videoTypes                     *string
+	containers                     *string
+	audioCodecs                    *string
+	audioLayouts                   *string
+	videoCodecs                    *string
+	extendedVideoTypes             *string
+	subtitleCodecs                 *string
+	path                           *string
+	userId                         *string
+	minOfficialRating              *string
+	isLocked                       *bool
+	isPlaceHolder                  *bool
+	hasOfficialRating              *bool
+	groupItemsIntoCollections      *bool
+	is3D                           *bool
+	seriesStatus                   *string
+	nameStartsWithOrGreater        *string
+	artistStartsWithOrGreater      *string
 	albumArtistStartsWithOrGreater *string
-	nameStartsWith *string
-	nameLessThan *string
+	nameStartsWith                 *string
+	nameLessThan                   *string
 }
 
 // Artist or AlbumArtist
@@ -852,26 +851,27 @@ GetAlbumsByIdInstantmix Creates an instant playlist based on a given album
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiGetAlbumsByIdInstantmixRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiGetAlbumsByIdInstantmixRequest
 */
 func (a *InstantMixServiceAPIService) GetAlbumsByIdInstantmix(ctx context.Context, id string) ApiGetAlbumsByIdInstantmixRequest {
 	return ApiGetAlbumsByIdInstantmixRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
-//  @return QueryResultBaseItemDto
+//
+//	@return QueryResultBaseItemDto
 func (a *InstantMixServiceAPIService) GetAlbumsByIdInstantmixExecute(r ApiGetAlbumsByIdInstantmixRequest) (*QueryResultBaseItemDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *QueryResultBaseItemDto
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *QueryResultBaseItemDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "InstantMixServiceAPIService.GetAlbumsByIdInstantmix")
@@ -1252,107 +1252,107 @@ func (a *InstantMixServiceAPIService) GetAlbumsByIdInstantmixExecute(r ApiGetAlb
 }
 
 type ApiGetArtistsInstantmixRequest struct {
-	ctx context.Context
-	ApiService InstantMixServiceAPI
-	artistType *string
-	maxOfficialRating *string
-	hasThemeSong *bool
-	hasThemeVideo *bool
-	hasSubtitles *bool
-	hasSpecialFeature *bool
-	hasTrailer *bool
-	isSpecialSeason *bool
-	adjacentTo *string
-	startItemId *string
-	minIndexNumber *int32
-	minStartDate *time.Time
-	maxStartDate *time.Time
-	minEndDate *time.Time
-	maxEndDate *time.Time
-	minPlayers *int32
-	maxPlayers *int32
-	parentIndexNumber *int32
-	hasParentalRating *bool
-	isHD *bool
-	isUnaired *bool
-	minCommunityRating *float64
-	minCriticRating *float64
-	airedDuringSeason *int32
-	minPremiereDate *time.Time
-	minDateLastSaved *time.Time
-	minDateLastSavedForUser *time.Time
-	maxPremiereDate *time.Time
-	hasOverview *bool
-	hasImdbId *bool
-	hasTmdbId *bool
-	hasTvdbId *bool
-	excludeItemIds *string
-	startIndex *int32
-	limit *int32
-	recursive *bool
-	searchTerm *string
-	sortOrder *string
-	parentId *string
-	fields *string
-	excludeItemTypes *string
-	includeItemTypes *string
-	anyProviderIdEquals *string
-	filters *string
-	isFavorite *bool
-	isMovie *bool
-	isSeries *bool
-	isFolder *bool
-	isNews *bool
-	isKids *bool
-	isSports *bool
-	isNew *bool
-	isPremiere *bool
-	isNewOrPremiere *bool
-	isRepeat *bool
-	projectToMedia *bool
-	mediaTypes *string
-	imageTypes *string
-	sortBy *string
-	isPlayed *bool
-	genres *string
-	officialRatings *string
-	tags *string
-	excludeTags *string
-	years *string
-	enableImages *bool
-	enableUserData *bool
-	imageTypeLimit *int32
-	enableImageTypes *string
-	person *string
-	personIds *string
-	personTypes *string
-	studios *string
-	studioIds *string
-	artists *string
-	artistIds *string
-	albums *string
-	ids *string
-	videoTypes *string
-	containers *string
-	audioCodecs *string
-	audioLayouts *string
-	videoCodecs *string
-	extendedVideoTypes *string
-	subtitleCodecs *string
-	path *string
-	userId *string
-	minOfficialRating *string
-	isLocked *bool
-	isPlaceHolder *bool
-	hasOfficialRating *bool
-	groupItemsIntoCollections *bool
-	is3D *bool
-	seriesStatus *string
-	nameStartsWithOrGreater *string
-	artistStartsWithOrGreater *string
+	ctx                            context.Context
+	ApiService                     InstantMixServiceAPI
+	artistType                     *string
+	maxOfficialRating              *string
+	hasThemeSong                   *bool
+	hasThemeVideo                  *bool
+	hasSubtitles                   *bool
+	hasSpecialFeature              *bool
+	hasTrailer                     *bool
+	isSpecialSeason                *bool
+	adjacentTo                     *string
+	startItemId                    *string
+	minIndexNumber                 *int32
+	minStartDate                   *time.Time
+	maxStartDate                   *time.Time
+	minEndDate                     *time.Time
+	maxEndDate                     *time.Time
+	minPlayers                     *int32
+	maxPlayers                     *int32
+	parentIndexNumber              *int32
+	hasParentalRating              *bool
+	isHD                           *bool
+	isUnaired                      *bool
+	minCommunityRating             *float64
+	minCriticRating                *float64
+	airedDuringSeason              *int32
+	minPremiereDate                *time.Time
+	minDateLastSaved               *time.Time
+	minDateLastSavedForUser        *time.Time
+	maxPremiereDate                *time.Time
+	hasOverview                    *bool
+	hasImdbId                      *bool
+	hasTmdbId                      *bool
+	hasTvdbId                      *bool
+	excludeItemIds                 *string
+	startIndex                     *int32
+	limit                          *int32
+	recursive                      *bool
+	searchTerm                     *string
+	sortOrder                      *string
+	parentId                       *string
+	fields                         *string
+	excludeItemTypes               *string
+	includeItemTypes               *string
+	anyProviderIdEquals            *string
+	filters                        *string
+	isFavorite                     *bool
+	isMovie                        *bool
+	isSeries                       *bool
+	isFolder                       *bool
+	isNews                         *bool
+	isKids                         *bool
+	isSports                       *bool
+	isNew                          *bool
+	isPremiere                     *bool
+	isNewOrPremiere                *bool
+	isRepeat                       *bool
+	projectToMedia                 *bool
+	mediaTypes                     *string
+	imageTypes                     *string
+	sortBy                         *string
+	isPlayed                       *bool
+	genres                         *string
+	officialRatings                *string
+	tags                           *string
+	excludeTags                    *string
+	years                          *string
+	enableImages                   *bool
+	enableUserData                 *bool
+	imageTypeLimit                 *int32
+	enableImageTypes               *string
+	person                         *string
+	personIds                      *string
+	personTypes                    *string
+	studios                        *string
+	studioIds                      *string
+	artists                        *string
+	artistIds                      *string
+	albums                         *string
+	ids                            *string
+	videoTypes                     *string
+	containers                     *string
+	audioCodecs                    *string
+	audioLayouts                   *string
+	videoCodecs                    *string
+	extendedVideoTypes             *string
+	subtitleCodecs                 *string
+	path                           *string
+	userId                         *string
+	minOfficialRating              *string
+	isLocked                       *bool
+	isPlaceHolder                  *bool
+	hasOfficialRating              *bool
+	groupItemsIntoCollections      *bool
+	is3D                           *bool
+	seriesStatus                   *string
+	nameStartsWithOrGreater        *string
+	artistStartsWithOrGreater      *string
 	albumArtistStartsWithOrGreater *string
-	nameStartsWith *string
-	nameLessThan *string
+	nameStartsWith                 *string
+	nameLessThan                   *string
 }
 
 // Artist or AlbumArtist
@@ -1958,24 +1958,25 @@ GetArtistsInstantmix Creates an instant playlist based on a given artist
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetArtistsInstantmixRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetArtistsInstantmixRequest
 */
 func (a *InstantMixServiceAPIService) GetArtistsInstantmix(ctx context.Context) ApiGetArtistsInstantmixRequest {
 	return ApiGetArtistsInstantmixRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return QueryResultBaseItemDto
+//
+//	@return QueryResultBaseItemDto
 func (a *InstantMixServiceAPIService) GetArtistsInstantmixExecute(r ApiGetArtistsInstantmixRequest) (*QueryResultBaseItemDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *QueryResultBaseItemDto
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *QueryResultBaseItemDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "InstantMixServiceAPIService.GetArtistsInstantmix")
@@ -2355,18 +2356,18 @@ func (a *InstantMixServiceAPIService) GetArtistsInstantmixExecute(r ApiGetArtist
 }
 
 type ApiGetAudiobooksNextupRequest struct {
-	ctx context.Context
-	ApiService InstantMixServiceAPI
-	userId *string
-	startIndex *int32
-	limit *int32
-	fields *string
-	albumId *string
-	parentId *string
-	enableImages *bool
-	imageTypeLimit *int32
+	ctx              context.Context
+	ApiService       InstantMixServiceAPI
+	userId           *string
+	startIndex       *int32
+	limit            *int32
+	fields           *string
+	albumId          *string
+	parentId         *string
+	enableImages     *bool
+	imageTypeLimit   *int32
 	enableImageTypes *string
-	enableUserData *bool
+	enableUserData   *bool
 }
 
 // User Id
@@ -2438,24 +2439,25 @@ GetAudiobooksNextup Gets a list of next up episodes
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetAudiobooksNextupRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetAudiobooksNextupRequest
 */
 func (a *InstantMixServiceAPIService) GetAudiobooksNextup(ctx context.Context) ApiGetAudiobooksNextupRequest {
 	return ApiGetAudiobooksNextupRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return QueryResultBaseItemDto
+//
+//	@return QueryResultBaseItemDto
 func (a *InstantMixServiceAPIService) GetAudiobooksNextupExecute(r ApiGetAudiobooksNextupRequest) (*QueryResultBaseItemDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *QueryResultBaseItemDto
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *QueryResultBaseItemDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "InstantMixServiceAPIService.GetAudiobooksNextup")
@@ -2569,108 +2571,108 @@ func (a *InstantMixServiceAPIService) GetAudiobooksNextupExecute(r ApiGetAudiobo
 }
 
 type ApiGetItemsByIdInstantmixRequest struct {
-	ctx context.Context
-	ApiService InstantMixServiceAPI
-	id string
-	artistType *string
-	maxOfficialRating *string
-	hasThemeSong *bool
-	hasThemeVideo *bool
-	hasSubtitles *bool
-	hasSpecialFeature *bool
-	hasTrailer *bool
-	isSpecialSeason *bool
-	adjacentTo *string
-	startItemId *string
-	minIndexNumber *int32
-	minStartDate *time.Time
-	maxStartDate *time.Time
-	minEndDate *time.Time
-	maxEndDate *time.Time
-	minPlayers *int32
-	maxPlayers *int32
-	parentIndexNumber *int32
-	hasParentalRating *bool
-	isHD *bool
-	isUnaired *bool
-	minCommunityRating *float64
-	minCriticRating *float64
-	airedDuringSeason *int32
-	minPremiereDate *time.Time
-	minDateLastSaved *time.Time
-	minDateLastSavedForUser *time.Time
-	maxPremiereDate *time.Time
-	hasOverview *bool
-	hasImdbId *bool
-	hasTmdbId *bool
-	hasTvdbId *bool
-	excludeItemIds *string
-	startIndex *int32
-	limit *int32
-	recursive *bool
-	searchTerm *string
-	sortOrder *string
-	parentId *string
-	fields *string
-	excludeItemTypes *string
-	includeItemTypes *string
-	anyProviderIdEquals *string
-	filters *string
-	isFavorite *bool
-	isMovie *bool
-	isSeries *bool
-	isFolder *bool
-	isNews *bool
-	isKids *bool
-	isSports *bool
-	isNew *bool
-	isPremiere *bool
-	isNewOrPremiere *bool
-	isRepeat *bool
-	projectToMedia *bool
-	mediaTypes *string
-	imageTypes *string
-	sortBy *string
-	isPlayed *bool
-	genres *string
-	officialRatings *string
-	tags *string
-	excludeTags *string
-	years *string
-	enableImages *bool
-	enableUserData *bool
-	imageTypeLimit *int32
-	enableImageTypes *string
-	person *string
-	personIds *string
-	personTypes *string
-	studios *string
-	studioIds *string
-	artists *string
-	artistIds *string
-	albums *string
-	ids *string
-	videoTypes *string
-	containers *string
-	audioCodecs *string
-	audioLayouts *string
-	videoCodecs *string
-	extendedVideoTypes *string
-	subtitleCodecs *string
-	path *string
-	userId *string
-	minOfficialRating *string
-	isLocked *bool
-	isPlaceHolder *bool
-	hasOfficialRating *bool
-	groupItemsIntoCollections *bool
-	is3D *bool
-	seriesStatus *string
-	nameStartsWithOrGreater *string
-	artistStartsWithOrGreater *string
+	ctx                            context.Context
+	ApiService                     InstantMixServiceAPI
+	id                             string
+	artistType                     *string
+	maxOfficialRating              *string
+	hasThemeSong                   *bool
+	hasThemeVideo                  *bool
+	hasSubtitles                   *bool
+	hasSpecialFeature              *bool
+	hasTrailer                     *bool
+	isSpecialSeason                *bool
+	adjacentTo                     *string
+	startItemId                    *string
+	minIndexNumber                 *int32
+	minStartDate                   *time.Time
+	maxStartDate                   *time.Time
+	minEndDate                     *time.Time
+	maxEndDate                     *time.Time
+	minPlayers                     *int32
+	maxPlayers                     *int32
+	parentIndexNumber              *int32
+	hasParentalRating              *bool
+	isHD                           *bool
+	isUnaired                      *bool
+	minCommunityRating             *float64
+	minCriticRating                *float64
+	airedDuringSeason              *int32
+	minPremiereDate                *time.Time
+	minDateLastSaved               *time.Time
+	minDateLastSavedForUser        *time.Time
+	maxPremiereDate                *time.Time
+	hasOverview                    *bool
+	hasImdbId                      *bool
+	hasTmdbId                      *bool
+	hasTvdbId                      *bool
+	excludeItemIds                 *string
+	startIndex                     *int32
+	limit                          *int32
+	recursive                      *bool
+	searchTerm                     *string
+	sortOrder                      *string
+	parentId                       *string
+	fields                         *string
+	excludeItemTypes               *string
+	includeItemTypes               *string
+	anyProviderIdEquals            *string
+	filters                        *string
+	isFavorite                     *bool
+	isMovie                        *bool
+	isSeries                       *bool
+	isFolder                       *bool
+	isNews                         *bool
+	isKids                         *bool
+	isSports                       *bool
+	isNew                          *bool
+	isPremiere                     *bool
+	isNewOrPremiere                *bool
+	isRepeat                       *bool
+	projectToMedia                 *bool
+	mediaTypes                     *string
+	imageTypes                     *string
+	sortBy                         *string
+	isPlayed                       *bool
+	genres                         *string
+	officialRatings                *string
+	tags                           *string
+	excludeTags                    *string
+	years                          *string
+	enableImages                   *bool
+	enableUserData                 *bool
+	imageTypeLimit                 *int32
+	enableImageTypes               *string
+	person                         *string
+	personIds                      *string
+	personTypes                    *string
+	studios                        *string
+	studioIds                      *string
+	artists                        *string
+	artistIds                      *string
+	albums                         *string
+	ids                            *string
+	videoTypes                     *string
+	containers                     *string
+	audioCodecs                    *string
+	audioLayouts                   *string
+	videoCodecs                    *string
+	extendedVideoTypes             *string
+	subtitleCodecs                 *string
+	path                           *string
+	userId                         *string
+	minOfficialRating              *string
+	isLocked                       *bool
+	isPlaceHolder                  *bool
+	hasOfficialRating              *bool
+	groupItemsIntoCollections      *bool
+	is3D                           *bool
+	seriesStatus                   *string
+	nameStartsWithOrGreater        *string
+	artistStartsWithOrGreater      *string
 	albumArtistStartsWithOrGreater *string
-	nameStartsWith *string
-	nameLessThan *string
+	nameStartsWith                 *string
+	nameLessThan                   *string
 }
 
 // Artist or AlbumArtist
@@ -3276,26 +3278,27 @@ GetItemsByIdInstantmix Creates an instant playlist based on a given item
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiGetItemsByIdInstantmixRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiGetItemsByIdInstantmixRequest
 */
 func (a *InstantMixServiceAPIService) GetItemsByIdInstantmix(ctx context.Context, id string) ApiGetItemsByIdInstantmixRequest {
 	return ApiGetItemsByIdInstantmixRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
-//  @return QueryResultBaseItemDto
+//
+//	@return QueryResultBaseItemDto
 func (a *InstantMixServiceAPIService) GetItemsByIdInstantmixExecute(r ApiGetItemsByIdInstantmixRequest) (*QueryResultBaseItemDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *QueryResultBaseItemDto
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *QueryResultBaseItemDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "InstantMixServiceAPIService.GetItemsByIdInstantmix")
@@ -3676,108 +3679,108 @@ func (a *InstantMixServiceAPIService) GetItemsByIdInstantmixExecute(r ApiGetItem
 }
 
 type ApiGetMusicgenresByNameInstantmixRequest struct {
-	ctx context.Context
-	ApiService InstantMixServiceAPI
-	name string
-	artistType *string
-	maxOfficialRating *string
-	hasThemeSong *bool
-	hasThemeVideo *bool
-	hasSubtitles *bool
-	hasSpecialFeature *bool
-	hasTrailer *bool
-	isSpecialSeason *bool
-	adjacentTo *string
-	startItemId *string
-	minIndexNumber *int32
-	minStartDate *time.Time
-	maxStartDate *time.Time
-	minEndDate *time.Time
-	maxEndDate *time.Time
-	minPlayers *int32
-	maxPlayers *int32
-	parentIndexNumber *int32
-	hasParentalRating *bool
-	isHD *bool
-	isUnaired *bool
-	minCommunityRating *float64
-	minCriticRating *float64
-	airedDuringSeason *int32
-	minPremiereDate *time.Time
-	minDateLastSaved *time.Time
-	minDateLastSavedForUser *time.Time
-	maxPremiereDate *time.Time
-	hasOverview *bool
-	hasImdbId *bool
-	hasTmdbId *bool
-	hasTvdbId *bool
-	excludeItemIds *string
-	startIndex *int32
-	limit *int32
-	recursive *bool
-	searchTerm *string
-	sortOrder *string
-	parentId *string
-	fields *string
-	excludeItemTypes *string
-	includeItemTypes *string
-	anyProviderIdEquals *string
-	filters *string
-	isFavorite *bool
-	isMovie *bool
-	isSeries *bool
-	isFolder *bool
-	isNews *bool
-	isKids *bool
-	isSports *bool
-	isNew *bool
-	isPremiere *bool
-	isNewOrPremiere *bool
-	isRepeat *bool
-	projectToMedia *bool
-	mediaTypes *string
-	imageTypes *string
-	sortBy *string
-	isPlayed *bool
-	genres *string
-	officialRatings *string
-	tags *string
-	excludeTags *string
-	years *string
-	enableImages *bool
-	enableUserData *bool
-	imageTypeLimit *int32
-	enableImageTypes *string
-	person *string
-	personIds *string
-	personTypes *string
-	studios *string
-	studioIds *string
-	artists *string
-	artistIds *string
-	albums *string
-	ids *string
-	videoTypes *string
-	containers *string
-	audioCodecs *string
-	audioLayouts *string
-	videoCodecs *string
-	extendedVideoTypes *string
-	subtitleCodecs *string
-	path *string
-	userId *string
-	minOfficialRating *string
-	isLocked *bool
-	isPlaceHolder *bool
-	hasOfficialRating *bool
-	groupItemsIntoCollections *bool
-	is3D *bool
-	seriesStatus *string
-	nameStartsWithOrGreater *string
-	artistStartsWithOrGreater *string
+	ctx                            context.Context
+	ApiService                     InstantMixServiceAPI
+	name                           string
+	artistType                     *string
+	maxOfficialRating              *string
+	hasThemeSong                   *bool
+	hasThemeVideo                  *bool
+	hasSubtitles                   *bool
+	hasSpecialFeature              *bool
+	hasTrailer                     *bool
+	isSpecialSeason                *bool
+	adjacentTo                     *string
+	startItemId                    *string
+	minIndexNumber                 *int32
+	minStartDate                   *time.Time
+	maxStartDate                   *time.Time
+	minEndDate                     *time.Time
+	maxEndDate                     *time.Time
+	minPlayers                     *int32
+	maxPlayers                     *int32
+	parentIndexNumber              *int32
+	hasParentalRating              *bool
+	isHD                           *bool
+	isUnaired                      *bool
+	minCommunityRating             *float64
+	minCriticRating                *float64
+	airedDuringSeason              *int32
+	minPremiereDate                *time.Time
+	minDateLastSaved               *time.Time
+	minDateLastSavedForUser        *time.Time
+	maxPremiereDate                *time.Time
+	hasOverview                    *bool
+	hasImdbId                      *bool
+	hasTmdbId                      *bool
+	hasTvdbId                      *bool
+	excludeItemIds                 *string
+	startIndex                     *int32
+	limit                          *int32
+	recursive                      *bool
+	searchTerm                     *string
+	sortOrder                      *string
+	parentId                       *string
+	fields                         *string
+	excludeItemTypes               *string
+	includeItemTypes               *string
+	anyProviderIdEquals            *string
+	filters                        *string
+	isFavorite                     *bool
+	isMovie                        *bool
+	isSeries                       *bool
+	isFolder                       *bool
+	isNews                         *bool
+	isKids                         *bool
+	isSports                       *bool
+	isNew                          *bool
+	isPremiere                     *bool
+	isNewOrPremiere                *bool
+	isRepeat                       *bool
+	projectToMedia                 *bool
+	mediaTypes                     *string
+	imageTypes                     *string
+	sortBy                         *string
+	isPlayed                       *bool
+	genres                         *string
+	officialRatings                *string
+	tags                           *string
+	excludeTags                    *string
+	years                          *string
+	enableImages                   *bool
+	enableUserData                 *bool
+	imageTypeLimit                 *int32
+	enableImageTypes               *string
+	person                         *string
+	personIds                      *string
+	personTypes                    *string
+	studios                        *string
+	studioIds                      *string
+	artists                        *string
+	artistIds                      *string
+	albums                         *string
+	ids                            *string
+	videoTypes                     *string
+	containers                     *string
+	audioCodecs                    *string
+	audioLayouts                   *string
+	videoCodecs                    *string
+	extendedVideoTypes             *string
+	subtitleCodecs                 *string
+	path                           *string
+	userId                         *string
+	minOfficialRating              *string
+	isLocked                       *bool
+	isPlaceHolder                  *bool
+	hasOfficialRating              *bool
+	groupItemsIntoCollections      *bool
+	is3D                           *bool
+	seriesStatus                   *string
+	nameStartsWithOrGreater        *string
+	artistStartsWithOrGreater      *string
 	albumArtistStartsWithOrGreater *string
-	nameStartsWith *string
-	nameLessThan *string
+	nameStartsWith                 *string
+	nameLessThan                   *string
 }
 
 // Artist or AlbumArtist
@@ -4383,26 +4386,27 @@ GetMusicgenresByNameInstantmix Creates an instant playlist based on a music genr
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param name
- @return ApiGetMusicgenresByNameInstantmixRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param name
+	@return ApiGetMusicgenresByNameInstantmixRequest
 */
 func (a *InstantMixServiceAPIService) GetMusicgenresByNameInstantmix(ctx context.Context, name string) ApiGetMusicgenresByNameInstantmixRequest {
 	return ApiGetMusicgenresByNameInstantmixRequest{
 		ApiService: a,
-		ctx: ctx,
-		name: name,
+		ctx:        ctx,
+		name:       name,
 	}
 }
 
 // Execute executes the request
-//  @return QueryResultBaseItemDto
+//
+//	@return QueryResultBaseItemDto
 func (a *InstantMixServiceAPIService) GetMusicgenresByNameInstantmixExecute(r ApiGetMusicgenresByNameInstantmixRequest) (*QueryResultBaseItemDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *QueryResultBaseItemDto
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *QueryResultBaseItemDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "InstantMixServiceAPIService.GetMusicgenresByNameInstantmix")
@@ -4783,107 +4787,107 @@ func (a *InstantMixServiceAPIService) GetMusicgenresByNameInstantmixExecute(r Ap
 }
 
 type ApiGetMusicgenresInstantmixRequest struct {
-	ctx context.Context
-	ApiService InstantMixServiceAPI
-	artistType *string
-	maxOfficialRating *string
-	hasThemeSong *bool
-	hasThemeVideo *bool
-	hasSubtitles *bool
-	hasSpecialFeature *bool
-	hasTrailer *bool
-	isSpecialSeason *bool
-	adjacentTo *string
-	startItemId *string
-	minIndexNumber *int32
-	minStartDate *time.Time
-	maxStartDate *time.Time
-	minEndDate *time.Time
-	maxEndDate *time.Time
-	minPlayers *int32
-	maxPlayers *int32
-	parentIndexNumber *int32
-	hasParentalRating *bool
-	isHD *bool
-	isUnaired *bool
-	minCommunityRating *float64
-	minCriticRating *float64
-	airedDuringSeason *int32
-	minPremiereDate *time.Time
-	minDateLastSaved *time.Time
-	minDateLastSavedForUser *time.Time
-	maxPremiereDate *time.Time
-	hasOverview *bool
-	hasImdbId *bool
-	hasTmdbId *bool
-	hasTvdbId *bool
-	excludeItemIds *string
-	startIndex *int32
-	limit *int32
-	recursive *bool
-	searchTerm *string
-	sortOrder *string
-	parentId *string
-	fields *string
-	excludeItemTypes *string
-	includeItemTypes *string
-	anyProviderIdEquals *string
-	filters *string
-	isFavorite *bool
-	isMovie *bool
-	isSeries *bool
-	isFolder *bool
-	isNews *bool
-	isKids *bool
-	isSports *bool
-	isNew *bool
-	isPremiere *bool
-	isNewOrPremiere *bool
-	isRepeat *bool
-	projectToMedia *bool
-	mediaTypes *string
-	imageTypes *string
-	sortBy *string
-	isPlayed *bool
-	genres *string
-	officialRatings *string
-	tags *string
-	excludeTags *string
-	years *string
-	enableImages *bool
-	enableUserData *bool
-	imageTypeLimit *int32
-	enableImageTypes *string
-	person *string
-	personIds *string
-	personTypes *string
-	studios *string
-	studioIds *string
-	artists *string
-	artistIds *string
-	albums *string
-	ids *string
-	videoTypes *string
-	containers *string
-	audioCodecs *string
-	audioLayouts *string
-	videoCodecs *string
-	extendedVideoTypes *string
-	subtitleCodecs *string
-	path *string
-	userId *string
-	minOfficialRating *string
-	isLocked *bool
-	isPlaceHolder *bool
-	hasOfficialRating *bool
-	groupItemsIntoCollections *bool
-	is3D *bool
-	seriesStatus *string
-	nameStartsWithOrGreater *string
-	artistStartsWithOrGreater *string
+	ctx                            context.Context
+	ApiService                     InstantMixServiceAPI
+	artistType                     *string
+	maxOfficialRating              *string
+	hasThemeSong                   *bool
+	hasThemeVideo                  *bool
+	hasSubtitles                   *bool
+	hasSpecialFeature              *bool
+	hasTrailer                     *bool
+	isSpecialSeason                *bool
+	adjacentTo                     *string
+	startItemId                    *string
+	minIndexNumber                 *int32
+	minStartDate                   *time.Time
+	maxStartDate                   *time.Time
+	minEndDate                     *time.Time
+	maxEndDate                     *time.Time
+	minPlayers                     *int32
+	maxPlayers                     *int32
+	parentIndexNumber              *int32
+	hasParentalRating              *bool
+	isHD                           *bool
+	isUnaired                      *bool
+	minCommunityRating             *float64
+	minCriticRating                *float64
+	airedDuringSeason              *int32
+	minPremiereDate                *time.Time
+	minDateLastSaved               *time.Time
+	minDateLastSavedForUser        *time.Time
+	maxPremiereDate                *time.Time
+	hasOverview                    *bool
+	hasImdbId                      *bool
+	hasTmdbId                      *bool
+	hasTvdbId                      *bool
+	excludeItemIds                 *string
+	startIndex                     *int32
+	limit                          *int32
+	recursive                      *bool
+	searchTerm                     *string
+	sortOrder                      *string
+	parentId                       *string
+	fields                         *string
+	excludeItemTypes               *string
+	includeItemTypes               *string
+	anyProviderIdEquals            *string
+	filters                        *string
+	isFavorite                     *bool
+	isMovie                        *bool
+	isSeries                       *bool
+	isFolder                       *bool
+	isNews                         *bool
+	isKids                         *bool
+	isSports                       *bool
+	isNew                          *bool
+	isPremiere                     *bool
+	isNewOrPremiere                *bool
+	isRepeat                       *bool
+	projectToMedia                 *bool
+	mediaTypes                     *string
+	imageTypes                     *string
+	sortBy                         *string
+	isPlayed                       *bool
+	genres                         *string
+	officialRatings                *string
+	tags                           *string
+	excludeTags                    *string
+	years                          *string
+	enableImages                   *bool
+	enableUserData                 *bool
+	imageTypeLimit                 *int32
+	enableImageTypes               *string
+	person                         *string
+	personIds                      *string
+	personTypes                    *string
+	studios                        *string
+	studioIds                      *string
+	artists                        *string
+	artistIds                      *string
+	albums                         *string
+	ids                            *string
+	videoTypes                     *string
+	containers                     *string
+	audioCodecs                    *string
+	audioLayouts                   *string
+	videoCodecs                    *string
+	extendedVideoTypes             *string
+	subtitleCodecs                 *string
+	path                           *string
+	userId                         *string
+	minOfficialRating              *string
+	isLocked                       *bool
+	isPlaceHolder                  *bool
+	hasOfficialRating              *bool
+	groupItemsIntoCollections      *bool
+	is3D                           *bool
+	seriesStatus                   *string
+	nameStartsWithOrGreater        *string
+	artistStartsWithOrGreater      *string
 	albumArtistStartsWithOrGreater *string
-	nameStartsWith *string
-	nameLessThan *string
+	nameStartsWith                 *string
+	nameLessThan                   *string
 }
 
 // Artist or AlbumArtist
@@ -5489,24 +5493,25 @@ GetMusicgenresInstantmix Creates an instant playlist based on a music genre
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetMusicgenresInstantmixRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetMusicgenresInstantmixRequest
 */
 func (a *InstantMixServiceAPIService) GetMusicgenresInstantmix(ctx context.Context) ApiGetMusicgenresInstantmixRequest {
 	return ApiGetMusicgenresInstantmixRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return QueryResultBaseItemDto
+//
+//	@return QueryResultBaseItemDto
 func (a *InstantMixServiceAPIService) GetMusicgenresInstantmixExecute(r ApiGetMusicgenresInstantmixRequest) (*QueryResultBaseItemDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *QueryResultBaseItemDto
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *QueryResultBaseItemDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "InstantMixServiceAPIService.GetMusicgenresInstantmix")
@@ -5886,108 +5891,108 @@ func (a *InstantMixServiceAPIService) GetMusicgenresInstantmixExecute(r ApiGetMu
 }
 
 type ApiGetPlaylistsByIdInstantmixRequest struct {
-	ctx context.Context
-	ApiService InstantMixServiceAPI
-	id string
-	artistType *string
-	maxOfficialRating *string
-	hasThemeSong *bool
-	hasThemeVideo *bool
-	hasSubtitles *bool
-	hasSpecialFeature *bool
-	hasTrailer *bool
-	isSpecialSeason *bool
-	adjacentTo *string
-	startItemId *string
-	minIndexNumber *int32
-	minStartDate *time.Time
-	maxStartDate *time.Time
-	minEndDate *time.Time
-	maxEndDate *time.Time
-	minPlayers *int32
-	maxPlayers *int32
-	parentIndexNumber *int32
-	hasParentalRating *bool
-	isHD *bool
-	isUnaired *bool
-	minCommunityRating *float64
-	minCriticRating *float64
-	airedDuringSeason *int32
-	minPremiereDate *time.Time
-	minDateLastSaved *time.Time
-	minDateLastSavedForUser *time.Time
-	maxPremiereDate *time.Time
-	hasOverview *bool
-	hasImdbId *bool
-	hasTmdbId *bool
-	hasTvdbId *bool
-	excludeItemIds *string
-	startIndex *int32
-	limit *int32
-	recursive *bool
-	searchTerm *string
-	sortOrder *string
-	parentId *string
-	fields *string
-	excludeItemTypes *string
-	includeItemTypes *string
-	anyProviderIdEquals *string
-	filters *string
-	isFavorite *bool
-	isMovie *bool
-	isSeries *bool
-	isFolder *bool
-	isNews *bool
-	isKids *bool
-	isSports *bool
-	isNew *bool
-	isPremiere *bool
-	isNewOrPremiere *bool
-	isRepeat *bool
-	projectToMedia *bool
-	mediaTypes *string
-	imageTypes *string
-	sortBy *string
-	isPlayed *bool
-	genres *string
-	officialRatings *string
-	tags *string
-	excludeTags *string
-	years *string
-	enableImages *bool
-	enableUserData *bool
-	imageTypeLimit *int32
-	enableImageTypes *string
-	person *string
-	personIds *string
-	personTypes *string
-	studios *string
-	studioIds *string
-	artists *string
-	artistIds *string
-	albums *string
-	ids *string
-	videoTypes *string
-	containers *string
-	audioCodecs *string
-	audioLayouts *string
-	videoCodecs *string
-	extendedVideoTypes *string
-	subtitleCodecs *string
-	path *string
-	userId *string
-	minOfficialRating *string
-	isLocked *bool
-	isPlaceHolder *bool
-	hasOfficialRating *bool
-	groupItemsIntoCollections *bool
-	is3D *bool
-	seriesStatus *string
-	nameStartsWithOrGreater *string
-	artistStartsWithOrGreater *string
+	ctx                            context.Context
+	ApiService                     InstantMixServiceAPI
+	id                             string
+	artistType                     *string
+	maxOfficialRating              *string
+	hasThemeSong                   *bool
+	hasThemeVideo                  *bool
+	hasSubtitles                   *bool
+	hasSpecialFeature              *bool
+	hasTrailer                     *bool
+	isSpecialSeason                *bool
+	adjacentTo                     *string
+	startItemId                    *string
+	minIndexNumber                 *int32
+	minStartDate                   *time.Time
+	maxStartDate                   *time.Time
+	minEndDate                     *time.Time
+	maxEndDate                     *time.Time
+	minPlayers                     *int32
+	maxPlayers                     *int32
+	parentIndexNumber              *int32
+	hasParentalRating              *bool
+	isHD                           *bool
+	isUnaired                      *bool
+	minCommunityRating             *float64
+	minCriticRating                *float64
+	airedDuringSeason              *int32
+	minPremiereDate                *time.Time
+	minDateLastSaved               *time.Time
+	minDateLastSavedForUser        *time.Time
+	maxPremiereDate                *time.Time
+	hasOverview                    *bool
+	hasImdbId                      *bool
+	hasTmdbId                      *bool
+	hasTvdbId                      *bool
+	excludeItemIds                 *string
+	startIndex                     *int32
+	limit                          *int32
+	recursive                      *bool
+	searchTerm                     *string
+	sortOrder                      *string
+	parentId                       *string
+	fields                         *string
+	excludeItemTypes               *string
+	includeItemTypes               *string
+	anyProviderIdEquals            *string
+	filters                        *string
+	isFavorite                     *bool
+	isMovie                        *bool
+	isSeries                       *bool
+	isFolder                       *bool
+	isNews                         *bool
+	isKids                         *bool
+	isSports                       *bool
+	isNew                          *bool
+	isPremiere                     *bool
+	isNewOrPremiere                *bool
+	isRepeat                       *bool
+	projectToMedia                 *bool
+	mediaTypes                     *string
+	imageTypes                     *string
+	sortBy                         *string
+	isPlayed                       *bool
+	genres                         *string
+	officialRatings                *string
+	tags                           *string
+	excludeTags                    *string
+	years                          *string
+	enableImages                   *bool
+	enableUserData                 *bool
+	imageTypeLimit                 *int32
+	enableImageTypes               *string
+	person                         *string
+	personIds                      *string
+	personTypes                    *string
+	studios                        *string
+	studioIds                      *string
+	artists                        *string
+	artistIds                      *string
+	albums                         *string
+	ids                            *string
+	videoTypes                     *string
+	containers                     *string
+	audioCodecs                    *string
+	audioLayouts                   *string
+	videoCodecs                    *string
+	extendedVideoTypes             *string
+	subtitleCodecs                 *string
+	path                           *string
+	userId                         *string
+	minOfficialRating              *string
+	isLocked                       *bool
+	isPlaceHolder                  *bool
+	hasOfficialRating              *bool
+	groupItemsIntoCollections      *bool
+	is3D                           *bool
+	seriesStatus                   *string
+	nameStartsWithOrGreater        *string
+	artistStartsWithOrGreater      *string
 	albumArtistStartsWithOrGreater *string
-	nameStartsWith *string
-	nameLessThan *string
+	nameStartsWith                 *string
+	nameLessThan                   *string
 }
 
 // Artist or AlbumArtist
@@ -6593,26 +6598,27 @@ GetPlaylistsByIdInstantmix Creates an instant playlist based on a given playlist
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiGetPlaylistsByIdInstantmixRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiGetPlaylistsByIdInstantmixRequest
 */
 func (a *InstantMixServiceAPIService) GetPlaylistsByIdInstantmix(ctx context.Context, id string) ApiGetPlaylistsByIdInstantmixRequest {
 	return ApiGetPlaylistsByIdInstantmixRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
-//  @return QueryResultBaseItemDto
+//
+//	@return QueryResultBaseItemDto
 func (a *InstantMixServiceAPIService) GetPlaylistsByIdInstantmixExecute(r ApiGetPlaylistsByIdInstantmixRequest) (*QueryResultBaseItemDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *QueryResultBaseItemDto
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *QueryResultBaseItemDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "InstantMixServiceAPIService.GetPlaylistsByIdInstantmix")
@@ -6993,108 +6999,108 @@ func (a *InstantMixServiceAPIService) GetPlaylistsByIdInstantmixExecute(r ApiGet
 }
 
 type ApiGetSongsByIdInstantmixRequest struct {
-	ctx context.Context
-	ApiService InstantMixServiceAPI
-	id string
-	artistType *string
-	maxOfficialRating *string
-	hasThemeSong *bool
-	hasThemeVideo *bool
-	hasSubtitles *bool
-	hasSpecialFeature *bool
-	hasTrailer *bool
-	isSpecialSeason *bool
-	adjacentTo *string
-	startItemId *string
-	minIndexNumber *int32
-	minStartDate *time.Time
-	maxStartDate *time.Time
-	minEndDate *time.Time
-	maxEndDate *time.Time
-	minPlayers *int32
-	maxPlayers *int32
-	parentIndexNumber *int32
-	hasParentalRating *bool
-	isHD *bool
-	isUnaired *bool
-	minCommunityRating *float64
-	minCriticRating *float64
-	airedDuringSeason *int32
-	minPremiereDate *time.Time
-	minDateLastSaved *time.Time
-	minDateLastSavedForUser *time.Time
-	maxPremiereDate *time.Time
-	hasOverview *bool
-	hasImdbId *bool
-	hasTmdbId *bool
-	hasTvdbId *bool
-	excludeItemIds *string
-	startIndex *int32
-	limit *int32
-	recursive *bool
-	searchTerm *string
-	sortOrder *string
-	parentId *string
-	fields *string
-	excludeItemTypes *string
-	includeItemTypes *string
-	anyProviderIdEquals *string
-	filters *string
-	isFavorite *bool
-	isMovie *bool
-	isSeries *bool
-	isFolder *bool
-	isNews *bool
-	isKids *bool
-	isSports *bool
-	isNew *bool
-	isPremiere *bool
-	isNewOrPremiere *bool
-	isRepeat *bool
-	projectToMedia *bool
-	mediaTypes *string
-	imageTypes *string
-	sortBy *string
-	isPlayed *bool
-	genres *string
-	officialRatings *string
-	tags *string
-	excludeTags *string
-	years *string
-	enableImages *bool
-	enableUserData *bool
-	imageTypeLimit *int32
-	enableImageTypes *string
-	person *string
-	personIds *string
-	personTypes *string
-	studios *string
-	studioIds *string
-	artists *string
-	artistIds *string
-	albums *string
-	ids *string
-	videoTypes *string
-	containers *string
-	audioCodecs *string
-	audioLayouts *string
-	videoCodecs *string
-	extendedVideoTypes *string
-	subtitleCodecs *string
-	path *string
-	userId *string
-	minOfficialRating *string
-	isLocked *bool
-	isPlaceHolder *bool
-	hasOfficialRating *bool
-	groupItemsIntoCollections *bool
-	is3D *bool
-	seriesStatus *string
-	nameStartsWithOrGreater *string
-	artistStartsWithOrGreater *string
+	ctx                            context.Context
+	ApiService                     InstantMixServiceAPI
+	id                             string
+	artistType                     *string
+	maxOfficialRating              *string
+	hasThemeSong                   *bool
+	hasThemeVideo                  *bool
+	hasSubtitles                   *bool
+	hasSpecialFeature              *bool
+	hasTrailer                     *bool
+	isSpecialSeason                *bool
+	adjacentTo                     *string
+	startItemId                    *string
+	minIndexNumber                 *int32
+	minStartDate                   *time.Time
+	maxStartDate                   *time.Time
+	minEndDate                     *time.Time
+	maxEndDate                     *time.Time
+	minPlayers                     *int32
+	maxPlayers                     *int32
+	parentIndexNumber              *int32
+	hasParentalRating              *bool
+	isHD                           *bool
+	isUnaired                      *bool
+	minCommunityRating             *float64
+	minCriticRating                *float64
+	airedDuringSeason              *int32
+	minPremiereDate                *time.Time
+	minDateLastSaved               *time.Time
+	minDateLastSavedForUser        *time.Time
+	maxPremiereDate                *time.Time
+	hasOverview                    *bool
+	hasImdbId                      *bool
+	hasTmdbId                      *bool
+	hasTvdbId                      *bool
+	excludeItemIds                 *string
+	startIndex                     *int32
+	limit                          *int32
+	recursive                      *bool
+	searchTerm                     *string
+	sortOrder                      *string
+	parentId                       *string
+	fields                         *string
+	excludeItemTypes               *string
+	includeItemTypes               *string
+	anyProviderIdEquals            *string
+	filters                        *string
+	isFavorite                     *bool
+	isMovie                        *bool
+	isSeries                       *bool
+	isFolder                       *bool
+	isNews                         *bool
+	isKids                         *bool
+	isSports                       *bool
+	isNew                          *bool
+	isPremiere                     *bool
+	isNewOrPremiere                *bool
+	isRepeat                       *bool
+	projectToMedia                 *bool
+	mediaTypes                     *string
+	imageTypes                     *string
+	sortBy                         *string
+	isPlayed                       *bool
+	genres                         *string
+	officialRatings                *string
+	tags                           *string
+	excludeTags                    *string
+	years                          *string
+	enableImages                   *bool
+	enableUserData                 *bool
+	imageTypeLimit                 *int32
+	enableImageTypes               *string
+	person                         *string
+	personIds                      *string
+	personTypes                    *string
+	studios                        *string
+	studioIds                      *string
+	artists                        *string
+	artistIds                      *string
+	albums                         *string
+	ids                            *string
+	videoTypes                     *string
+	containers                     *string
+	audioCodecs                    *string
+	audioLayouts                   *string
+	videoCodecs                    *string
+	extendedVideoTypes             *string
+	subtitleCodecs                 *string
+	path                           *string
+	userId                         *string
+	minOfficialRating              *string
+	isLocked                       *bool
+	isPlaceHolder                  *bool
+	hasOfficialRating              *bool
+	groupItemsIntoCollections      *bool
+	is3D                           *bool
+	seriesStatus                   *string
+	nameStartsWithOrGreater        *string
+	artistStartsWithOrGreater      *string
 	albumArtistStartsWithOrGreater *string
-	nameStartsWith *string
-	nameLessThan *string
+	nameStartsWith                 *string
+	nameLessThan                   *string
 }
 
 // Artist or AlbumArtist
@@ -7700,26 +7706,27 @@ GetSongsByIdInstantmix Creates an instant playlist based on a given song
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiGetSongsByIdInstantmixRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiGetSongsByIdInstantmixRequest
 */
 func (a *InstantMixServiceAPIService) GetSongsByIdInstantmix(ctx context.Context, id string) ApiGetSongsByIdInstantmixRequest {
 	return ApiGetSongsByIdInstantmixRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
-//  @return QueryResultBaseItemDto
+//
+//	@return QueryResultBaseItemDto
 func (a *InstantMixServiceAPIService) GetSongsByIdInstantmixExecute(r ApiGetSongsByIdInstantmixRequest) (*QueryResultBaseItemDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *QueryResultBaseItemDto
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *QueryResultBaseItemDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "InstantMixServiceAPIService.GetSongsByIdInstantmix")

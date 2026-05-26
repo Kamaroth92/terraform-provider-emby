@@ -20,17 +20,17 @@ type LibraryItemLinkType string
 
 // List of Library.ItemLinkType
 const (
-	LIBRARYITEMLINKTYPE_ARTISTS LibraryItemLinkType = "Artists"
-	LIBRARYITEMLINKTYPE_ALBUM_ARTISTS LibraryItemLinkType = "AlbumArtists"
-	LIBRARYITEMLINKTYPE_GENRES LibraryItemLinkType = "Genres"
-	LIBRARYITEMLINKTYPE_STUDIOS LibraryItemLinkType = "Studios"
-	LIBRARYITEMLINKTYPE_TAGS LibraryItemLinkType = "Tags"
-	LIBRARYITEMLINKTYPE_COMPOSERS LibraryItemLinkType = "Composers"
-	LIBRARYITEMLINKTYPE_COLLECTIONS LibraryItemLinkType = "Collections"
-	LIBRARYITEMLINKTYPE_ALBUMS LibraryItemLinkType = "Albums"
+	LIBRARYITEMLINKTYPE_ARTISTS            LibraryItemLinkType = "Artists"
+	LIBRARYITEMLINKTYPE_ALBUM_ARTISTS      LibraryItemLinkType = "AlbumArtists"
+	LIBRARYITEMLINKTYPE_GENRES             LibraryItemLinkType = "Genres"
+	LIBRARYITEMLINKTYPE_STUDIOS            LibraryItemLinkType = "Studios"
+	LIBRARYITEMLINKTYPE_TAGS               LibraryItemLinkType = "Tags"
+	LIBRARYITEMLINKTYPE_COMPOSERS          LibraryItemLinkType = "Composers"
+	LIBRARYITEMLINKTYPE_COLLECTIONS        LibraryItemLinkType = "Collections"
+	LIBRARYITEMLINKTYPE_ALBUMS             LibraryItemLinkType = "Albums"
 	LIBRARYITEMLINKTYPE_COLLECTION_FOLDERS LibraryItemLinkType = "CollectionFolders"
-	LIBRARYITEMLINKTYPE_LIVE_TV_SERIES LibraryItemLinkType = "LiveTVSeries"
-	LIBRARYITEMLINKTYPE_GAME_SYSTEMS LibraryItemLinkType = "GameSystems"
+	LIBRARYITEMLINKTYPE_LIVE_TV_SERIES     LibraryItemLinkType = "LiveTVSeries"
+	LIBRARYITEMLINKTYPE_GAME_SYSTEMS       LibraryItemLinkType = "GameSystems"
 )
 
 // All allowed values of LibraryItemLinkType enum
@@ -126,4 +126,3 @@ func (v *NullableLibraryItemLinkType) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

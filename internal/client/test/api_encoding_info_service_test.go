@@ -1,3 +1,5 @@
+// Copyright (c) HashiCorp, Inc.
+
 /*
 Emby Server REST API (BETA)
 
@@ -11,10 +13,10 @@ package embyclient
 
 import (
 	"context"
+	openapiclient "github.com/Kamaroth92/terraform-provider-emby/client"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func Test_embyclient_EncodingInfoServiceAPIService(t *testing.T) {
@@ -24,7 +26,7 @@ func Test_embyclient_EncodingInfoServiceAPIService(t *testing.T) {
 
 	t.Run("Test EncodingInfoServiceAPIService GetEncodingCodecconfigurationDefaults", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.EncodingInfoServiceAPI.GetEncodingCodecconfigurationDefaults(context.Background()).Execute()
 
@@ -36,7 +38,7 @@ func Test_embyclient_EncodingInfoServiceAPIService(t *testing.T) {
 
 	t.Run("Test EncodingInfoServiceAPIService GetEncodingCodecinformationVideo", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.EncodingInfoServiceAPI.GetEncodingCodecinformationVideo(context.Background()).Execute()
 
@@ -48,7 +50,7 @@ func Test_embyclient_EncodingInfoServiceAPIService(t *testing.T) {
 
 	t.Run("Test EncodingInfoServiceAPIService GetEncodingTonemapoptions", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.EncodingInfoServiceAPI.GetEncodingTonemapoptions(context.Background()).Execute()
 

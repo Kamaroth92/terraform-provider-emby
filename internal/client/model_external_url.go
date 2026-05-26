@@ -20,7 +20,7 @@ var _ MappedNullable = &ExternalUrl{}
 // ExternalUrl struct for ExternalUrl
 type ExternalUrl struct {
 	Name *string `json:"Name,omitempty"`
-	Url *string `json:"Url,omitempty"`
+	Url  *string `json:"Url,omitempty"`
 }
 
 // NewExternalUrl instantiates a new ExternalUrl object
@@ -105,7 +105,7 @@ func (o *ExternalUrl) SetUrl(v string) {
 }
 
 func (o ExternalUrl) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -158,5 +158,3 @@ func (v *NullableExternalUrl) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

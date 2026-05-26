@@ -20,13 +20,13 @@ type MediaStreamType string
 
 // List of MediaStreamType
 const (
-	MEDIASTREAMTYPE_UNKNOWN MediaStreamType = "Unknown"
-	MEDIASTREAMTYPE_AUDIO MediaStreamType = "Audio"
-	MEDIASTREAMTYPE_VIDEO MediaStreamType = "Video"
-	MEDIASTREAMTYPE_SUBTITLE MediaStreamType = "Subtitle"
+	MEDIASTREAMTYPE_UNKNOWN        MediaStreamType = "Unknown"
+	MEDIASTREAMTYPE_AUDIO          MediaStreamType = "Audio"
+	MEDIASTREAMTYPE_VIDEO          MediaStreamType = "Video"
+	MEDIASTREAMTYPE_SUBTITLE       MediaStreamType = "Subtitle"
 	MEDIASTREAMTYPE_EMBEDDED_IMAGE MediaStreamType = "EmbeddedImage"
-	MEDIASTREAMTYPE_ATTACHMENT MediaStreamType = "Attachment"
-	MEDIASTREAMTYPE_DATA MediaStreamType = "Data"
+	MEDIASTREAMTYPE_ATTACHMENT     MediaStreamType = "Attachment"
+	MEDIASTREAMTYPE_DATA           MediaStreamType = "Data"
 )
 
 // All allowed values of MediaStreamType enum
@@ -118,4 +118,3 @@ func (v *NullableMediaStreamType) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

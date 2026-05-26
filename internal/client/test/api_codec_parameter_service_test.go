@@ -1,3 +1,5 @@
+// Copyright (c) HashiCorp, Inc.
+
 /*
 Emby Server REST API (BETA)
 
@@ -11,10 +13,10 @@ package embyclient
 
 import (
 	"context"
+	openapiclient "github.com/Kamaroth92/terraform-provider-emby/client"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func Test_embyclient_CodecParameterServiceAPIService(t *testing.T) {
@@ -24,7 +26,7 @@ func Test_embyclient_CodecParameterServiceAPIService(t *testing.T) {
 
 	t.Run("Test CodecParameterServiceAPIService GetEncodingCodecparameters", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.CodecParameterServiceAPI.GetEncodingCodecparameters(context.Background()).Execute()
 
@@ -36,7 +38,7 @@ func Test_embyclient_CodecParameterServiceAPIService(t *testing.T) {
 
 	t.Run("Test CodecParameterServiceAPIService GetEncodingdiagnosticsCodecparameters", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.CodecParameterServiceAPI.GetEncodingdiagnosticsCodecparameters(context.Background()).Execute()
 
@@ -48,7 +50,7 @@ func Test_embyclient_CodecParameterServiceAPIService(t *testing.T) {
 
 	t.Run("Test CodecParameterServiceAPIService PostEncodingCodecparameters", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.CodecParameterServiceAPI.PostEncodingCodecparameters(context.Background()).Execute()
 
@@ -59,7 +61,7 @@ func Test_embyclient_CodecParameterServiceAPIService(t *testing.T) {
 
 	t.Run("Test CodecParameterServiceAPIService PostEncodingdiagnosticsCodecparameters", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.CodecParameterServiceAPI.PostEncodingdiagnosticsCodecparameters(context.Background()).Execute()
 

@@ -20,24 +20,24 @@ type ExtendedVideoSubTypes string
 
 // List of ExtendedVideoSubTypes
 const (
-	EXTENDEDVIDEOSUBTYPES_NONE ExtendedVideoSubTypes = "None"
-	EXTENDEDVIDEOSUBTYPES_HDR10 ExtendedVideoSubTypes = "Hdr10"
+	EXTENDEDVIDEOSUBTYPES_NONE            ExtendedVideoSubTypes = "None"
+	EXTENDEDVIDEOSUBTYPES_HDR10           ExtendedVideoSubTypes = "Hdr10"
 	EXTENDEDVIDEOSUBTYPES_HYPER_LOG_GAMMA ExtendedVideoSubTypes = "HyperLogGamma"
-	EXTENDEDVIDEOSUBTYPES_HDR10_PLUS0 ExtendedVideoSubTypes = "Hdr10Plus0"
-	EXTENDEDVIDEOSUBTYPES_DOVI_PROFILE02 ExtendedVideoSubTypes = "DoviProfile02"
-	EXTENDEDVIDEOSUBTYPES_DOVI_PROFILE10 ExtendedVideoSubTypes = "DoviProfile10"
-	EXTENDEDVIDEOSUBTYPES_DOVI_PROFILE22 ExtendedVideoSubTypes = "DoviProfile22"
-	EXTENDEDVIDEOSUBTYPES_DOVI_PROFILE30 ExtendedVideoSubTypes = "DoviProfile30"
-	EXTENDEDVIDEOSUBTYPES_DOVI_PROFILE42 ExtendedVideoSubTypes = "DoviProfile42"
-	EXTENDEDVIDEOSUBTYPES_DOVI_PROFILE50 ExtendedVideoSubTypes = "DoviProfile50"
-	EXTENDEDVIDEOSUBTYPES_DOVI_PROFILE61 ExtendedVideoSubTypes = "DoviProfile61"
-	EXTENDEDVIDEOSUBTYPES_DOVI_PROFILE76 ExtendedVideoSubTypes = "DoviProfile76"
-	EXTENDEDVIDEOSUBTYPES_DOVI_PROFILE81 ExtendedVideoSubTypes = "DoviProfile81"
-	EXTENDEDVIDEOSUBTYPES_DOVI_PROFILE82 ExtendedVideoSubTypes = "DoviProfile82"
-	EXTENDEDVIDEOSUBTYPES_DOVI_PROFILE83 ExtendedVideoSubTypes = "DoviProfile83"
-	EXTENDEDVIDEOSUBTYPES_DOVI_PROFILE84 ExtendedVideoSubTypes = "DoviProfile84"
-	EXTENDEDVIDEOSUBTYPES_DOVI_PROFILE85 ExtendedVideoSubTypes = "DoviProfile85"
-	EXTENDEDVIDEOSUBTYPES_DOVI_PROFILE92 ExtendedVideoSubTypes = "DoviProfile92"
+	EXTENDEDVIDEOSUBTYPES_HDR10_PLUS0     ExtendedVideoSubTypes = "Hdr10Plus0"
+	EXTENDEDVIDEOSUBTYPES_DOVI_PROFILE02  ExtendedVideoSubTypes = "DoviProfile02"
+	EXTENDEDVIDEOSUBTYPES_DOVI_PROFILE10  ExtendedVideoSubTypes = "DoviProfile10"
+	EXTENDEDVIDEOSUBTYPES_DOVI_PROFILE22  ExtendedVideoSubTypes = "DoviProfile22"
+	EXTENDEDVIDEOSUBTYPES_DOVI_PROFILE30  ExtendedVideoSubTypes = "DoviProfile30"
+	EXTENDEDVIDEOSUBTYPES_DOVI_PROFILE42  ExtendedVideoSubTypes = "DoviProfile42"
+	EXTENDEDVIDEOSUBTYPES_DOVI_PROFILE50  ExtendedVideoSubTypes = "DoviProfile50"
+	EXTENDEDVIDEOSUBTYPES_DOVI_PROFILE61  ExtendedVideoSubTypes = "DoviProfile61"
+	EXTENDEDVIDEOSUBTYPES_DOVI_PROFILE76  ExtendedVideoSubTypes = "DoviProfile76"
+	EXTENDEDVIDEOSUBTYPES_DOVI_PROFILE81  ExtendedVideoSubTypes = "DoviProfile81"
+	EXTENDEDVIDEOSUBTYPES_DOVI_PROFILE82  ExtendedVideoSubTypes = "DoviProfile82"
+	EXTENDEDVIDEOSUBTYPES_DOVI_PROFILE83  ExtendedVideoSubTypes = "DoviProfile83"
+	EXTENDEDVIDEOSUBTYPES_DOVI_PROFILE84  ExtendedVideoSubTypes = "DoviProfile84"
+	EXTENDEDVIDEOSUBTYPES_DOVI_PROFILE85  ExtendedVideoSubTypes = "DoviProfile85"
+	EXTENDEDVIDEOSUBTYPES_DOVI_PROFILE92  ExtendedVideoSubTypes = "DoviProfile92"
 )
 
 // All allowed values of ExtendedVideoSubTypes enum
@@ -140,4 +140,3 @@ func (v *NullableExtendedVideoSubTypes) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

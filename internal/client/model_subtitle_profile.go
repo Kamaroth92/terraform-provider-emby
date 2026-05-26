@@ -19,13 +19,13 @@ var _ MappedNullable = &SubtitleProfile{}
 
 // SubtitleProfile struct for SubtitleProfile
 type SubtitleProfile struct {
-	Format *string `json:"Format,omitempty"`
-	Method *SubtitleDeliveryMethod `json:"Method,omitempty"`
-	DidlMode *string `json:"DidlMode,omitempty"`
-	Language *string `json:"Language,omitempty"`
-	Container *string `json:"Container,omitempty"`
-	AllowChunkedResponse *bool `json:"AllowChunkedResponse,omitempty"`
-	Protocol *string `json:"Protocol,omitempty"`
+	Format               *string                 `json:"Format,omitempty"`
+	Method               *SubtitleDeliveryMethod `json:"Method,omitempty"`
+	DidlMode             *string                 `json:"DidlMode,omitempty"`
+	Language             *string                 `json:"Language,omitempty"`
+	Container            *string                 `json:"Container,omitempty"`
+	AllowChunkedResponse *bool                   `json:"AllowChunkedResponse,omitempty"`
+	Protocol             *string                 `json:"Protocol,omitempty"`
 }
 
 // NewSubtitleProfile instantiates a new SubtitleProfile object
@@ -270,7 +270,7 @@ func (o *SubtitleProfile) SetProtocol(v string) {
 }
 
 func (o SubtitleProfile) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -338,5 +338,3 @@ func (v *NullableSubtitleProfile) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

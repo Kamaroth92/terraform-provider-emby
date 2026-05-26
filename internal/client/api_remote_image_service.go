@@ -19,16 +19,15 @@ import (
 	"strings"
 )
 
-
 type RemoteImageServiceAPI interface {
 
 	/*
-	GetImagesRemote Gets a remote image
+		GetImagesRemote Gets a remote image
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetImagesRemoteRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetImagesRemoteRequest
 	*/
 	GetImagesRemote(ctx context.Context) ApiGetImagesRemoteRequest
 
@@ -36,13 +35,13 @@ type RemoteImageServiceAPI interface {
 	GetImagesRemoteExecute(r ApiGetImagesRemoteRequest) (*http.Response, error)
 
 	/*
-	GetItemsByIdRemoteimages Gets available remote images for an item
+		GetItemsByIdRemoteimages Gets available remote images for an item
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiGetItemsByIdRemoteimagesRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiGetItemsByIdRemoteimagesRequest
 	*/
 	GetItemsByIdRemoteimages(ctx context.Context, id string) ApiGetItemsByIdRemoteimagesRequest
 
@@ -51,13 +50,13 @@ type RemoteImageServiceAPI interface {
 	GetItemsByIdRemoteimagesExecute(r ApiGetItemsByIdRemoteimagesRequest) (*RemoteImageResult, *http.Response, error)
 
 	/*
-	GetItemsByIdRemoteimagesProviders Gets available remote image providers for an item
+		GetItemsByIdRemoteimagesProviders Gets available remote image providers for an item
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiGetItemsByIdRemoteimagesProvidersRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiGetItemsByIdRemoteimagesProvidersRequest
 	*/
 	GetItemsByIdRemoteimagesProviders(ctx context.Context, id string) ApiGetItemsByIdRemoteimagesProvidersRequest
 
@@ -66,13 +65,13 @@ type RemoteImageServiceAPI interface {
 	GetItemsByIdRemoteimagesProvidersExecute(r ApiGetItemsByIdRemoteimagesProvidersRequest) ([]ImageProviderInfo, *http.Response, error)
 
 	/*
-	PostItemsByIdRemoteimagesDownload Downloads a remote image for an item
+		PostItemsByIdRemoteimagesDownload Downloads a remote image for an item
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiPostItemsByIdRemoteimagesDownloadRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiPostItemsByIdRemoteimagesDownloadRequest
 	*/
 	PostItemsByIdRemoteimagesDownload(ctx context.Context, id string) ApiPostItemsByIdRemoteimagesDownloadRequest
 
@@ -84,9 +83,9 @@ type RemoteImageServiceAPI interface {
 type RemoteImageServiceAPIService service
 
 type ApiGetImagesRemoteRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService RemoteImageServiceAPI
-	imageUrl *string
+	imageUrl   *string
 }
 
 // The image url
@@ -104,22 +103,22 @@ GetImagesRemote Gets a remote image
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetImagesRemoteRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetImagesRemoteRequest
 */
 func (a *RemoteImageServiceAPIService) GetImagesRemote(ctx context.Context) ApiGetImagesRemoteRequest {
 	return ApiGetImagesRemoteRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *RemoteImageServiceAPIService) GetImagesRemoteExecute(r ApiGetImagesRemoteRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "RemoteImageServiceAPIService.GetImagesRemote")
@@ -197,15 +196,15 @@ func (a *RemoteImageServiceAPIService) GetImagesRemoteExecute(r ApiGetImagesRemo
 }
 
 type ApiGetItemsByIdRemoteimagesRequest struct {
-	ctx context.Context
-	ApiService RemoteImageServiceAPI
-	id string
-	type_ *ImageType
-	startIndex *int32
-	limit *int32
-	providerName *string
+	ctx                 context.Context
+	ApiService          RemoteImageServiceAPI
+	id                  string
+	type_               *ImageType
+	startIndex          *int32
+	limit               *int32
+	providerName        *string
 	includeAllLanguages *bool
-	enableSeriesImages *bool
+	enableSeriesImages  *bool
 }
 
 // The image type
@@ -253,26 +252,27 @@ GetItemsByIdRemoteimages Gets available remote images for an item
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiGetItemsByIdRemoteimagesRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiGetItemsByIdRemoteimagesRequest
 */
 func (a *RemoteImageServiceAPIService) GetItemsByIdRemoteimages(ctx context.Context, id string) ApiGetItemsByIdRemoteimagesRequest {
 	return ApiGetItemsByIdRemoteimagesRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
-//  @return RemoteImageResult
+//
+//	@return RemoteImageResult
 func (a *RemoteImageServiceAPIService) GetItemsByIdRemoteimagesExecute(r ApiGetItemsByIdRemoteimagesRequest) (*RemoteImageResult, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *RemoteImageResult
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *RemoteImageResult
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "RemoteImageServiceAPIService.GetItemsByIdRemoteimages")
@@ -374,9 +374,9 @@ func (a *RemoteImageServiceAPIService) GetItemsByIdRemoteimagesExecute(r ApiGetI
 }
 
 type ApiGetItemsByIdRemoteimagesProvidersRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService RemoteImageServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiGetItemsByIdRemoteimagesProvidersRequest) Execute() ([]ImageProviderInfo, *http.Response, error) {
@@ -388,26 +388,27 @@ GetItemsByIdRemoteimagesProviders Gets available remote image providers for an i
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiGetItemsByIdRemoteimagesProvidersRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiGetItemsByIdRemoteimagesProvidersRequest
 */
 func (a *RemoteImageServiceAPIService) GetItemsByIdRemoteimagesProviders(ctx context.Context, id string) ApiGetItemsByIdRemoteimagesProvidersRequest {
 	return ApiGetItemsByIdRemoteimagesProvidersRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
-//  @return []ImageProviderInfo
+//
+//	@return []ImageProviderInfo
 func (a *RemoteImageServiceAPIService) GetItemsByIdRemoteimagesProvidersExecute(r ApiGetItemsByIdRemoteimagesProvidersRequest) ([]ImageProviderInfo, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []ImageProviderInfo
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue []ImageProviderInfo
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "RemoteImageServiceAPIService.GetItemsByIdRemoteimagesProviders")
@@ -491,13 +492,13 @@ func (a *RemoteImageServiceAPIService) GetItemsByIdRemoteimagesProvidersExecute(
 }
 
 type ApiPostItemsByIdRemoteimagesDownloadRequest struct {
-	ctx context.Context
-	ApiService RemoteImageServiceAPI
-	id string
-	type_ *ImageType
+	ctx                           context.Context
+	ApiService                    RemoteImageServiceAPI
+	id                            string
+	type_                         *ImageType
 	imagesBaseDownloadRemoteImage *ImagesBaseDownloadRemoteImage
-	providerName *string
-	imageUrl *string
+	providerName                  *string
+	imageUrl                      *string
 }
 
 // The image type
@@ -506,7 +507,7 @@ func (r ApiPostItemsByIdRemoteimagesDownloadRequest) Type_(type_ ImageType) ApiP
 	return r
 }
 
-// BaseDownloadRemoteImage: 
+// BaseDownloadRemoteImage:
 func (r ApiPostItemsByIdRemoteimagesDownloadRequest) ImagesBaseDownloadRemoteImage(imagesBaseDownloadRemoteImage ImagesBaseDownloadRemoteImage) ApiPostItemsByIdRemoteimagesDownloadRequest {
 	r.imagesBaseDownloadRemoteImage = &imagesBaseDownloadRemoteImage
 	return r
@@ -533,24 +534,24 @@ PostItemsByIdRemoteimagesDownload Downloads a remote image for an item
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiPostItemsByIdRemoteimagesDownloadRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiPostItemsByIdRemoteimagesDownloadRequest
 */
 func (a *RemoteImageServiceAPIService) PostItemsByIdRemoteimagesDownload(ctx context.Context, id string) ApiPostItemsByIdRemoteimagesDownloadRequest {
 	return ApiPostItemsByIdRemoteimagesDownloadRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *RemoteImageServiceAPIService) PostItemsByIdRemoteimagesDownloadExecute(r ApiPostItemsByIdRemoteimagesDownloadRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "RemoteImageServiceAPIService.PostItemsByIdRemoteimagesDownload")

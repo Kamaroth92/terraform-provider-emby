@@ -19,7 +19,7 @@ var _ MappedNullable = &NetEndPointInfo{}
 
 // NetEndPointInfo struct for NetEndPointInfo
 type NetEndPointInfo struct {
-	IsLocal *bool `json:"IsLocal,omitempty"`
+	IsLocal     *bool `json:"IsLocal,omitempty"`
 	IsInNetwork *bool `json:"IsInNetwork,omitempty"`
 }
 
@@ -105,7 +105,7 @@ func (o *NetEndPointInfo) SetIsInNetwork(v bool) {
 }
 
 func (o NetEndPointInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -158,5 +158,3 @@ func (v *NullableNetEndPointInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

@@ -20,45 +20,45 @@ var _ MappedNullable = &ApiBaseItemsRequest{}
 
 // ApiBaseItemsRequest struct for ApiBaseItemsRequest
 type ApiBaseItemsRequest struct {
-	IsSpecialEpisode NullableBool `json:"IsSpecialEpisode,omitempty"`
-	Is4K NullableBool `json:"Is4K,omitempty"`
-	MinDateCreated NullableTime `json:"MinDateCreated,omitempty"`
-	MaxDateCreated NullableTime `json:"MaxDateCreated,omitempty"`
-	EnableTotalRecordCount *bool `json:"EnableTotalRecordCount,omitempty"`
-	MatchAnyWord *bool `json:"MatchAnyWord,omitempty"`
-	IsDuplicate NullableBool `json:"IsDuplicate,omitempty"`
-	Name *string `json:"Name,omitempty"`
-	RecordingKeyword *string `json:"RecordingKeyword,omitempty"`
-	RecordingKeywordType *LiveTvKeywordType `json:"RecordingKeywordType,omitempty"`
-	RandomSeed *int32 `json:"RandomSeed,omitempty"`
-	GenreIds *string `json:"GenreIds,omitempty"`
-	CollectionIds *string `json:"CollectionIds,omitempty"`
-	TagIds *string `json:"TagIds,omitempty"`
-	ExcludeTagIds *string `json:"ExcludeTagIds,omitempty"`
-	ItemPersonTypes []PersonType `json:"ItemPersonTypes,omitempty"`
-	ExcludeArtistIds *string `json:"ExcludeArtistIds,omitempty"`
-	AlbumArtistIds *string `json:"AlbumArtistIds,omitempty"`
-	ComposerArtistIds *string `json:"ComposerArtistIds,omitempty"`
-	ContributingArtistIds *string `json:"ContributingArtistIds,omitempty"`
-	AlbumIds *string `json:"AlbumIds,omitempty"`
-	OuterIds *string `json:"OuterIds,omitempty"`
-	ListItemIds *string `json:"ListItemIds,omitempty"`
-	AudioLanguages *string `json:"AudioLanguages,omitempty"`
-	SubtitleLanguages *string `json:"SubtitleLanguages,omitempty"`
-	CanEditItems NullableBool `json:"CanEditItems,omitempty"`
-	GroupItemsInto *LibraryItemLinkType `json:"GroupItemsInto,omitempty"`
-	IsStandaloneSpecial NullableBool `json:"IsStandaloneSpecial,omitempty"`
-	MinWidth NullableInt32 `json:"MinWidth,omitempty"`
-	MinHeight NullableInt32 `json:"MinHeight,omitempty"`
-	MaxWidth NullableInt32 `json:"MaxWidth,omitempty"`
-	MaxHeight NullableInt32 `json:"MaxHeight,omitempty"`
-	GroupProgramsBySeries *bool `json:"GroupProgramsBySeries,omitempty"`
-	GroupByPresentationUniqueKey NullableBool `json:"GroupByPresentationUniqueKey,omitempty"`
-	AirDays []DayOfWeek `json:"AirDays,omitempty"`
-	IsAiring NullableBool `json:"IsAiring,omitempty"`
-	HasAired NullableBool `json:"HasAired,omitempty"`
-	CollectionTypes *string `json:"CollectionTypes,omitempty"`
-	ExcludeSources []string `json:"ExcludeSources,omitempty"`
+	IsSpecialEpisode             NullableBool         `json:"IsSpecialEpisode,omitempty"`
+	Is4K                         NullableBool         `json:"Is4K,omitempty"`
+	MinDateCreated               NullableTime         `json:"MinDateCreated,omitempty"`
+	MaxDateCreated               NullableTime         `json:"MaxDateCreated,omitempty"`
+	EnableTotalRecordCount       *bool                `json:"EnableTotalRecordCount,omitempty"`
+	MatchAnyWord                 *bool                `json:"MatchAnyWord,omitempty"`
+	IsDuplicate                  NullableBool         `json:"IsDuplicate,omitempty"`
+	Name                         *string              `json:"Name,omitempty"`
+	RecordingKeyword             *string              `json:"RecordingKeyword,omitempty"`
+	RecordingKeywordType         *LiveTvKeywordType   `json:"RecordingKeywordType,omitempty"`
+	RandomSeed                   *int32               `json:"RandomSeed,omitempty"`
+	GenreIds                     *string              `json:"GenreIds,omitempty"`
+	CollectionIds                *string              `json:"CollectionIds,omitempty"`
+	TagIds                       *string              `json:"TagIds,omitempty"`
+	ExcludeTagIds                *string              `json:"ExcludeTagIds,omitempty"`
+	ItemPersonTypes              []PersonType         `json:"ItemPersonTypes,omitempty"`
+	ExcludeArtistIds             *string              `json:"ExcludeArtistIds,omitempty"`
+	AlbumArtistIds               *string              `json:"AlbumArtistIds,omitempty"`
+	ComposerArtistIds            *string              `json:"ComposerArtistIds,omitempty"`
+	ContributingArtistIds        *string              `json:"ContributingArtistIds,omitempty"`
+	AlbumIds                     *string              `json:"AlbumIds,omitempty"`
+	OuterIds                     *string              `json:"OuterIds,omitempty"`
+	ListItemIds                  *string              `json:"ListItemIds,omitempty"`
+	AudioLanguages               *string              `json:"AudioLanguages,omitempty"`
+	SubtitleLanguages            *string              `json:"SubtitleLanguages,omitempty"`
+	CanEditItems                 NullableBool         `json:"CanEditItems,omitempty"`
+	GroupItemsInto               *LibraryItemLinkType `json:"GroupItemsInto,omitempty"`
+	IsStandaloneSpecial          NullableBool         `json:"IsStandaloneSpecial,omitempty"`
+	MinWidth                     NullableInt32        `json:"MinWidth,omitempty"`
+	MinHeight                    NullableInt32        `json:"MinHeight,omitempty"`
+	MaxWidth                     NullableInt32        `json:"MaxWidth,omitempty"`
+	MaxHeight                    NullableInt32        `json:"MaxHeight,omitempty"`
+	GroupProgramsBySeries        *bool                `json:"GroupProgramsBySeries,omitempty"`
+	GroupByPresentationUniqueKey NullableBool         `json:"GroupByPresentationUniqueKey,omitempty"`
+	AirDays                      []DayOfWeek          `json:"AirDays,omitempty"`
+	IsAiring                     NullableBool         `json:"IsAiring,omitempty"`
+	HasAired                     NullableBool         `json:"HasAired,omitempty"`
+	CollectionTypes              *string              `json:"CollectionTypes,omitempty"`
+	ExcludeSources               []string             `json:"ExcludeSources,omitempty"`
 }
 
 // NewApiBaseItemsRequest instantiates a new ApiBaseItemsRequest object
@@ -110,6 +110,7 @@ func (o *ApiBaseItemsRequest) HasIsSpecialEpisode() bool {
 func (o *ApiBaseItemsRequest) SetIsSpecialEpisode(v bool) {
 	o.IsSpecialEpisode.Set(&v)
 }
+
 // SetIsSpecialEpisodeNil sets the value for IsSpecialEpisode to be an explicit nil
 func (o *ApiBaseItemsRequest) SetIsSpecialEpisodeNil() {
 	o.IsSpecialEpisode.Set(nil)
@@ -152,6 +153,7 @@ func (o *ApiBaseItemsRequest) HasIs4K() bool {
 func (o *ApiBaseItemsRequest) SetIs4K(v bool) {
 	o.Is4K.Set(&v)
 }
+
 // SetIs4KNil sets the value for Is4K to be an explicit nil
 func (o *ApiBaseItemsRequest) SetIs4KNil() {
 	o.Is4K.Set(nil)
@@ -194,6 +196,7 @@ func (o *ApiBaseItemsRequest) HasMinDateCreated() bool {
 func (o *ApiBaseItemsRequest) SetMinDateCreated(v time.Time) {
 	o.MinDateCreated.Set(&v)
 }
+
 // SetMinDateCreatedNil sets the value for MinDateCreated to be an explicit nil
 func (o *ApiBaseItemsRequest) SetMinDateCreatedNil() {
 	o.MinDateCreated.Set(nil)
@@ -236,6 +239,7 @@ func (o *ApiBaseItemsRequest) HasMaxDateCreated() bool {
 func (o *ApiBaseItemsRequest) SetMaxDateCreated(v time.Time) {
 	o.MaxDateCreated.Set(&v)
 }
+
 // SetMaxDateCreatedNil sets the value for MaxDateCreated to be an explicit nil
 func (o *ApiBaseItemsRequest) SetMaxDateCreatedNil() {
 	o.MaxDateCreated.Set(nil)
@@ -342,6 +346,7 @@ func (o *ApiBaseItemsRequest) HasIsDuplicate() bool {
 func (o *ApiBaseItemsRequest) SetIsDuplicate(v bool) {
 	o.IsDuplicate.Set(&v)
 }
+
 // SetIsDuplicateNil sets the value for IsDuplicate to be an explicit nil
 func (o *ApiBaseItemsRequest) SetIsDuplicateNil() {
 	o.IsDuplicate.Set(nil)
@@ -960,6 +965,7 @@ func (o *ApiBaseItemsRequest) HasCanEditItems() bool {
 func (o *ApiBaseItemsRequest) SetCanEditItems(v bool) {
 	o.CanEditItems.Set(&v)
 }
+
 // SetCanEditItemsNil sets the value for CanEditItems to be an explicit nil
 func (o *ApiBaseItemsRequest) SetCanEditItemsNil() {
 	o.CanEditItems.Set(nil)
@@ -1034,6 +1040,7 @@ func (o *ApiBaseItemsRequest) HasIsStandaloneSpecial() bool {
 func (o *ApiBaseItemsRequest) SetIsStandaloneSpecial(v bool) {
 	o.IsStandaloneSpecial.Set(&v)
 }
+
 // SetIsStandaloneSpecialNil sets the value for IsStandaloneSpecial to be an explicit nil
 func (o *ApiBaseItemsRequest) SetIsStandaloneSpecialNil() {
 	o.IsStandaloneSpecial.Set(nil)
@@ -1076,6 +1083,7 @@ func (o *ApiBaseItemsRequest) HasMinWidth() bool {
 func (o *ApiBaseItemsRequest) SetMinWidth(v int32) {
 	o.MinWidth.Set(&v)
 }
+
 // SetMinWidthNil sets the value for MinWidth to be an explicit nil
 func (o *ApiBaseItemsRequest) SetMinWidthNil() {
 	o.MinWidth.Set(nil)
@@ -1118,6 +1126,7 @@ func (o *ApiBaseItemsRequest) HasMinHeight() bool {
 func (o *ApiBaseItemsRequest) SetMinHeight(v int32) {
 	o.MinHeight.Set(&v)
 }
+
 // SetMinHeightNil sets the value for MinHeight to be an explicit nil
 func (o *ApiBaseItemsRequest) SetMinHeightNil() {
 	o.MinHeight.Set(nil)
@@ -1160,6 +1169,7 @@ func (o *ApiBaseItemsRequest) HasMaxWidth() bool {
 func (o *ApiBaseItemsRequest) SetMaxWidth(v int32) {
 	o.MaxWidth.Set(&v)
 }
+
 // SetMaxWidthNil sets the value for MaxWidth to be an explicit nil
 func (o *ApiBaseItemsRequest) SetMaxWidthNil() {
 	o.MaxWidth.Set(nil)
@@ -1202,6 +1212,7 @@ func (o *ApiBaseItemsRequest) HasMaxHeight() bool {
 func (o *ApiBaseItemsRequest) SetMaxHeight(v int32) {
 	o.MaxHeight.Set(&v)
 }
+
 // SetMaxHeightNil sets the value for MaxHeight to be an explicit nil
 func (o *ApiBaseItemsRequest) SetMaxHeightNil() {
 	o.MaxHeight.Set(nil)
@@ -1276,6 +1287,7 @@ func (o *ApiBaseItemsRequest) HasGroupByPresentationUniqueKey() bool {
 func (o *ApiBaseItemsRequest) SetGroupByPresentationUniqueKey(v bool) {
 	o.GroupByPresentationUniqueKey.Set(&v)
 }
+
 // SetGroupByPresentationUniqueKeyNil sets the value for GroupByPresentationUniqueKey to be an explicit nil
 func (o *ApiBaseItemsRequest) SetGroupByPresentationUniqueKeyNil() {
 	o.GroupByPresentationUniqueKey.Set(nil)
@@ -1350,6 +1362,7 @@ func (o *ApiBaseItemsRequest) HasIsAiring() bool {
 func (o *ApiBaseItemsRequest) SetIsAiring(v bool) {
 	o.IsAiring.Set(&v)
 }
+
 // SetIsAiringNil sets the value for IsAiring to be an explicit nil
 func (o *ApiBaseItemsRequest) SetIsAiringNil() {
 	o.IsAiring.Set(nil)
@@ -1392,6 +1405,7 @@ func (o *ApiBaseItemsRequest) HasHasAired() bool {
 func (o *ApiBaseItemsRequest) SetHasAired(v bool) {
 	o.HasAired.Set(&v)
 }
+
 // SetHasAiredNil sets the value for HasAired to be an explicit nil
 func (o *ApiBaseItemsRequest) SetHasAiredNil() {
 	o.HasAired.Set(nil)
@@ -1467,7 +1481,7 @@ func (o *ApiBaseItemsRequest) SetExcludeSources(v []string) {
 }
 
 func (o ApiBaseItemsRequest) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -1631,5 +1645,3 @@ func (v *NullableApiBaseItemsRequest) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

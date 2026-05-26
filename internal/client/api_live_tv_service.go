@@ -20,16 +20,15 @@ import (
 	"time"
 )
 
-
 type LiveTvServiceAPI interface {
 
 	/*
-	DeleteLivetvChannelmappingoptions Method for DeleteLivetvChannelmappingoptions
+		DeleteLivetvChannelmappingoptions Method for DeleteLivetvChannelmappingoptions
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiDeleteLivetvChannelmappingoptionsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiDeleteLivetvChannelmappingoptionsRequest
 	*/
 	DeleteLivetvChannelmappingoptions(ctx context.Context) ApiDeleteLivetvChannelmappingoptionsRequest
 
@@ -37,12 +36,12 @@ type LiveTvServiceAPI interface {
 	DeleteLivetvChannelmappingoptionsExecute(r ApiDeleteLivetvChannelmappingoptionsRequest) (*http.Response, error)
 
 	/*
-	DeleteLivetvChannelmappings Method for DeleteLivetvChannelmappings
+		DeleteLivetvChannelmappings Method for DeleteLivetvChannelmappings
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiDeleteLivetvChannelmappingsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiDeleteLivetvChannelmappingsRequest
 	*/
 	DeleteLivetvChannelmappings(ctx context.Context) ApiDeleteLivetvChannelmappingsRequest
 
@@ -50,12 +49,12 @@ type LiveTvServiceAPI interface {
 	DeleteLivetvChannelmappingsExecute(r ApiDeleteLivetvChannelmappingsRequest) (*http.Response, error)
 
 	/*
-	DeleteLivetvListingproviders Deletes a listing provider
+		DeleteLivetvListingproviders Deletes a listing provider
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiDeleteLivetvListingprovidersRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiDeleteLivetvListingprovidersRequest
 	*/
 	DeleteLivetvListingproviders(ctx context.Context) ApiDeleteLivetvListingprovidersRequest
 
@@ -63,13 +62,13 @@ type LiveTvServiceAPI interface {
 	DeleteLivetvListingprovidersExecute(r ApiDeleteLivetvListingprovidersRequest) (*http.Response, error)
 
 	/*
-	DeleteLivetvRecordingsById Deletes a live tv recording
+		DeleteLivetvRecordingsById Deletes a live tv recording
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Recording Id
-	@return ApiDeleteLivetvRecordingsByIdRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Recording Id
+		@return ApiDeleteLivetvRecordingsByIdRequest
 	*/
 	DeleteLivetvRecordingsById(ctx context.Context, id string) ApiDeleteLivetvRecordingsByIdRequest
 
@@ -77,13 +76,13 @@ type LiveTvServiceAPI interface {
 	DeleteLivetvRecordingsByIdExecute(r ApiDeleteLivetvRecordingsByIdRequest) (*http.Response, error)
 
 	/*
-	DeleteLivetvSeriestimersById Cancels a live tv series timer
+		DeleteLivetvSeriestimersById Cancels a live tv series timer
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Timer Id
-	@return ApiDeleteLivetvSeriestimersByIdRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Timer Id
+		@return ApiDeleteLivetvSeriestimersByIdRequest
 	*/
 	DeleteLivetvSeriestimersById(ctx context.Context, id string) ApiDeleteLivetvSeriestimersByIdRequest
 
@@ -91,13 +90,13 @@ type LiveTvServiceAPI interface {
 	DeleteLivetvSeriestimersByIdExecute(r ApiDeleteLivetvSeriestimersByIdRequest) (*http.Response, error)
 
 	/*
-	DeleteLivetvTimersById Cancels a live tv timer
+		DeleteLivetvTimersById Cancels a live tv timer
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Timer Id
-	@return ApiDeleteLivetvTimersByIdRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Timer Id
+		@return ApiDeleteLivetvTimersByIdRequest
 	*/
 	DeleteLivetvTimersById(ctx context.Context, id string) ApiDeleteLivetvTimersByIdRequest
 
@@ -105,12 +104,12 @@ type LiveTvServiceAPI interface {
 	DeleteLivetvTimersByIdExecute(r ApiDeleteLivetvTimersByIdRequest) (*http.Response, error)
 
 	/*
-	DeleteLivetvTunerhosts Deletes a tuner host
+		DeleteLivetvTunerhosts Deletes a tuner host
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiDeleteLivetvTunerhostsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiDeleteLivetvTunerhostsRequest
 	*/
 	DeleteLivetvTunerhosts(ctx context.Context) ApiDeleteLivetvTunerhostsRequest
 
@@ -118,12 +117,12 @@ type LiveTvServiceAPI interface {
 	DeleteLivetvTunerhostsExecute(r ApiDeleteLivetvTunerhostsRequest) (*http.Response, error)
 
 	/*
-	GetLivetvAvailablerecordingoptions Gets available recording options
+		GetLivetvAvailablerecordingoptions Gets available recording options
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetLivetvAvailablerecordingoptionsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetLivetvAvailablerecordingoptionsRequest
 	*/
 	GetLivetvAvailablerecordingoptions(ctx context.Context) ApiGetLivetvAvailablerecordingoptionsRequest
 
@@ -132,12 +131,12 @@ type LiveTvServiceAPI interface {
 	GetLivetvAvailablerecordingoptionsExecute(r ApiGetLivetvAvailablerecordingoptionsRequest) (*ApiAvailableRecordingOptions, *http.Response, error)
 
 	/*
-	GetLivetvChannelmappingoptions Method for GetLivetvChannelmappingoptions
+		GetLivetvChannelmappingoptions Method for GetLivetvChannelmappingoptions
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetLivetvChannelmappingoptionsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetLivetvChannelmappingoptionsRequest
 	*/
 	GetLivetvChannelmappingoptions(ctx context.Context) ApiGetLivetvChannelmappingoptionsRequest
 
@@ -145,12 +144,12 @@ type LiveTvServiceAPI interface {
 	GetLivetvChannelmappingoptionsExecute(r ApiGetLivetvChannelmappingoptionsRequest) (*http.Response, error)
 
 	/*
-	GetLivetvChannelmappings Method for GetLivetvChannelmappings
+		GetLivetvChannelmappings Method for GetLivetvChannelmappings
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetLivetvChannelmappingsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetLivetvChannelmappingsRequest
 	*/
 	GetLivetvChannelmappings(ctx context.Context) ApiGetLivetvChannelmappingsRequest
 
@@ -158,12 +157,12 @@ type LiveTvServiceAPI interface {
 	GetLivetvChannelmappingsExecute(r ApiGetLivetvChannelmappingsRequest) (*http.Response, error)
 
 	/*
-	GetLivetvChannels Gets available live tv channels.
+		GetLivetvChannels Gets available live tv channels.
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetLivetvChannelsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetLivetvChannelsRequest
 	*/
 	GetLivetvChannels(ctx context.Context) ApiGetLivetvChannelsRequest
 
@@ -172,13 +171,13 @@ type LiveTvServiceAPI interface {
 	GetLivetvChannelsExecute(r ApiGetLivetvChannelsRequest) (*QueryResultBaseItemDto, *http.Response, error)
 
 	/*
-	GetLivetvChannelsById Gets a live tv channel
+		GetLivetvChannelsById Gets a live tv channel
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Channel Id
-	@return ApiGetLivetvChannelsByIdRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Channel Id
+		@return ApiGetLivetvChannelsByIdRequest
 	*/
 	GetLivetvChannelsById(ctx context.Context, id string) ApiGetLivetvChannelsByIdRequest
 
@@ -187,12 +186,12 @@ type LiveTvServiceAPI interface {
 	GetLivetvChannelsByIdExecute(r ApiGetLivetvChannelsByIdRequest) (*BaseItemDto, *http.Response, error)
 
 	/*
-	GetLivetvChanneltags Gets live tv channel tags
+		GetLivetvChanneltags Gets live tv channel tags
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetLivetvChanneltagsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetLivetvChanneltagsRequest
 	*/
 	GetLivetvChanneltags(ctx context.Context) ApiGetLivetvChanneltagsRequest
 
@@ -201,12 +200,12 @@ type LiveTvServiceAPI interface {
 	GetLivetvChanneltagsExecute(r ApiGetLivetvChanneltagsRequest) (*QueryResultBaseItemDto, *http.Response, error)
 
 	/*
-	GetLivetvChanneltagsPrefixes Gets live tv channel tag prefixes
+		GetLivetvChanneltagsPrefixes Gets live tv channel tag prefixes
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetLivetvChanneltagsPrefixesRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetLivetvChanneltagsPrefixesRequest
 	*/
 	GetLivetvChanneltagsPrefixes(ctx context.Context) ApiGetLivetvChanneltagsPrefixesRequest
 
@@ -215,12 +214,12 @@ type LiveTvServiceAPI interface {
 	GetLivetvChanneltagsPrefixesExecute(r ApiGetLivetvChanneltagsPrefixesRequest) ([]ApiTagItem, *http.Response, error)
 
 	/*
-	GetLivetvEPG Gets the epg.
+		GetLivetvEPG Gets the epg.
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetLivetvEPGRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetLivetvEPGRequest
 	*/
 	GetLivetvEPG(ctx context.Context) ApiGetLivetvEPGRequest
 
@@ -229,12 +228,12 @@ type LiveTvServiceAPI interface {
 	GetLivetvEPGExecute(r ApiGetLivetvEPGRequest) (*QueryResultApiEpgRow, *http.Response, error)
 
 	/*
-	GetLivetvFolder Gets the top level live tv folder
+		GetLivetvFolder Gets the top level live tv folder
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetLivetvFolderRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetLivetvFolderRequest
 	*/
 	GetLivetvFolder(ctx context.Context) ApiGetLivetvFolderRequest
 
@@ -243,12 +242,12 @@ type LiveTvServiceAPI interface {
 	GetLivetvFolderExecute(r ApiGetLivetvFolderRequest) (*BaseItemDto, *http.Response, error)
 
 	/*
-	GetLivetvGuideinfo Gets guide info
+		GetLivetvGuideinfo Gets guide info
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetLivetvGuideinfoRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetLivetvGuideinfoRequest
 	*/
 	GetLivetvGuideinfo(ctx context.Context) ApiGetLivetvGuideinfoRequest
 
@@ -257,12 +256,12 @@ type LiveTvServiceAPI interface {
 	GetLivetvGuideinfoExecute(r ApiGetLivetvGuideinfoRequest) (*LiveTvGuideInfo, *http.Response, error)
 
 	/*
-	GetLivetvInfo Gets available live tv services.
+		GetLivetvInfo Gets available live tv services.
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetLivetvInfoRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetLivetvInfoRequest
 	*/
 	GetLivetvInfo(ctx context.Context) ApiGetLivetvInfoRequest
 
@@ -271,12 +270,12 @@ type LiveTvServiceAPI interface {
 	GetLivetvInfoExecute(r ApiGetLivetvInfoRequest) (*LiveTvLiveTvInfo, *http.Response, error)
 
 	/*
-	GetLivetvListingproviders Gets current listing providers
+		GetLivetvListingproviders Gets current listing providers
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetLivetvListingprovidersRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetLivetvListingprovidersRequest
 	*/
 	GetLivetvListingproviders(ctx context.Context) ApiGetLivetvListingprovidersRequest
 
@@ -285,12 +284,12 @@ type LiveTvServiceAPI interface {
 	GetLivetvListingprovidersExecute(r ApiGetLivetvListingprovidersRequest) ([]LiveTvListingsProviderInfo, *http.Response, error)
 
 	/*
-	GetLivetvListingprovidersAvailable Gets listing provider
+		GetLivetvListingprovidersAvailable Gets listing provider
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetLivetvListingprovidersAvailableRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetLivetvListingprovidersAvailableRequest
 	*/
 	GetLivetvListingprovidersAvailable(ctx context.Context) ApiGetLivetvListingprovidersAvailableRequest
 
@@ -299,12 +298,12 @@ type LiveTvServiceAPI interface {
 	GetLivetvListingprovidersAvailableExecute(r ApiGetLivetvListingprovidersAvailableRequest) ([]ApiListingProviderTypeInfo, *http.Response, error)
 
 	/*
-	GetLivetvListingprovidersDefault Method for GetLivetvListingprovidersDefault
+		GetLivetvListingprovidersDefault Method for GetLivetvListingprovidersDefault
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetLivetvListingprovidersDefaultRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetLivetvListingprovidersDefaultRequest
 	*/
 	GetLivetvListingprovidersDefault(ctx context.Context) ApiGetLivetvListingprovidersDefaultRequest
 
@@ -313,12 +312,12 @@ type LiveTvServiceAPI interface {
 	GetLivetvListingprovidersDefaultExecute(r ApiGetLivetvListingprovidersDefaultRequest) (*LiveTvListingsProviderInfo, *http.Response, error)
 
 	/*
-	GetLivetvListingprovidersLineups Gets available lineups
+		GetLivetvListingprovidersLineups Gets available lineups
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetLivetvListingprovidersLineupsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetLivetvListingprovidersLineupsRequest
 	*/
 	GetLivetvListingprovidersLineups(ctx context.Context) ApiGetLivetvListingprovidersLineupsRequest
 
@@ -327,12 +326,12 @@ type LiveTvServiceAPI interface {
 	GetLivetvListingprovidersLineupsExecute(r ApiGetLivetvListingprovidersLineupsRequest) ([]NameIdPair, *http.Response, error)
 
 	/*
-	GetLivetvManageChannels Gets the channel management list
+		GetLivetvManageChannels Gets the channel management list
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetLivetvManageChannelsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetLivetvManageChannelsRequest
 	*/
 	GetLivetvManageChannels(ctx context.Context) ApiGetLivetvManageChannelsRequest
 
@@ -341,12 +340,12 @@ type LiveTvServiceAPI interface {
 	GetLivetvManageChannelsExecute(r ApiGetLivetvManageChannelsRequest) (*QueryResultBaseItemDto, *http.Response, error)
 
 	/*
-	GetLivetvPrograms Gets available live tv epgs..
+		GetLivetvPrograms Gets available live tv epgs..
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetLivetvProgramsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetLivetvProgramsRequest
 	*/
 	GetLivetvPrograms(ctx context.Context) ApiGetLivetvProgramsRequest
 
@@ -354,12 +353,12 @@ type LiveTvServiceAPI interface {
 	GetLivetvProgramsExecute(r ApiGetLivetvProgramsRequest) (*http.Response, error)
 
 	/*
-	GetLivetvProgramsRecommended Gets available live tv epgs..
+		GetLivetvProgramsRecommended Gets available live tv epgs..
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetLivetvProgramsRecommendedRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetLivetvProgramsRecommendedRequest
 	*/
 	GetLivetvProgramsRecommended(ctx context.Context) ApiGetLivetvProgramsRecommendedRequest
 
@@ -368,12 +367,12 @@ type LiveTvServiceAPI interface {
 	GetLivetvProgramsRecommendedExecute(r ApiGetLivetvProgramsRecommendedRequest) (*QueryResultBaseItemDto, *http.Response, error)
 
 	/*
-	GetLivetvRecordings Gets live tv recordings
+		GetLivetvRecordings Gets live tv recordings
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetLivetvRecordingsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetLivetvRecordingsRequest
 	*/
 	GetLivetvRecordings(ctx context.Context) ApiGetLivetvRecordingsRequest
 
@@ -381,13 +380,13 @@ type LiveTvServiceAPI interface {
 	GetLivetvRecordingsExecute(r ApiGetLivetvRecordingsRequest) (*http.Response, error)
 
 	/*
-	GetLivetvRecordingsById Gets a live tv recording
+		GetLivetvRecordingsById Gets a live tv recording
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Recording Id
-	@return ApiGetLivetvRecordingsByIdRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Recording Id
+		@return ApiGetLivetvRecordingsByIdRequest
 	*/
 	GetLivetvRecordingsById(ctx context.Context, id string) ApiGetLivetvRecordingsByIdRequest
 
@@ -396,12 +395,12 @@ type LiveTvServiceAPI interface {
 	GetLivetvRecordingsByIdExecute(r ApiGetLivetvRecordingsByIdRequest) (*BaseItemDto, *http.Response, error)
 
 	/*
-	GetLivetvRecordingsFolders Gets recording folders
+		GetLivetvRecordingsFolders Gets recording folders
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetLivetvRecordingsFoldersRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetLivetvRecordingsFoldersRequest
 	*/
 	GetLivetvRecordingsFolders(ctx context.Context) ApiGetLivetvRecordingsFoldersRequest
 
@@ -410,12 +409,12 @@ type LiveTvServiceAPI interface {
 	GetLivetvRecordingsFoldersExecute(r ApiGetLivetvRecordingsFoldersRequest) ([]BaseItemDto, *http.Response, error)
 
 	/*
-	GetLivetvRecordingsGroups Gets live tv recording groups
+		GetLivetvRecordingsGroups Gets live tv recording groups
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetLivetvRecordingsGroupsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetLivetvRecordingsGroupsRequest
 	*/
 	GetLivetvRecordingsGroups(ctx context.Context) ApiGetLivetvRecordingsGroupsRequest
 
@@ -424,12 +423,12 @@ type LiveTvServiceAPI interface {
 	GetLivetvRecordingsGroupsExecute(r ApiGetLivetvRecordingsGroupsRequest) (*QueryResultBaseItemDto, *http.Response, error)
 
 	/*
-	GetLivetvRecordingsSeries Gets live tv recordings
+		GetLivetvRecordingsSeries Gets live tv recordings
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetLivetvRecordingsSeriesRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetLivetvRecordingsSeriesRequest
 	*/
 	GetLivetvRecordingsSeries(ctx context.Context) ApiGetLivetvRecordingsSeriesRequest
 
@@ -438,12 +437,12 @@ type LiveTvServiceAPI interface {
 	GetLivetvRecordingsSeriesExecute(r ApiGetLivetvRecordingsSeriesRequest) (*QueryResultBaseItemDto, *http.Response, error)
 
 	/*
-	GetLivetvSeriestimers Gets live tv series timers
+		GetLivetvSeriestimers Gets live tv series timers
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetLivetvSeriestimersRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetLivetvSeriestimersRequest
 	*/
 	GetLivetvSeriestimers(ctx context.Context) ApiGetLivetvSeriestimersRequest
 
@@ -452,13 +451,13 @@ type LiveTvServiceAPI interface {
 	GetLivetvSeriestimersExecute(r ApiGetLivetvSeriestimersRequest) (*QueryResultLiveTvSeriesTimerInfoDto, *http.Response, error)
 
 	/*
-	GetLivetvSeriestimersById Gets a live tv series timer
+		GetLivetvSeriestimersById Gets a live tv series timer
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Timer Id
-	@return ApiGetLivetvSeriestimersByIdRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Timer Id
+		@return ApiGetLivetvSeriestimersByIdRequest
 	*/
 	GetLivetvSeriestimersById(ctx context.Context, id string) ApiGetLivetvSeriestimersByIdRequest
 
@@ -467,12 +466,12 @@ type LiveTvServiceAPI interface {
 	GetLivetvSeriestimersByIdExecute(r ApiGetLivetvSeriestimersByIdRequest) (*LiveTvTimerInfoDto, *http.Response, error)
 
 	/*
-	GetLivetvTimers Gets live tv timers
+		GetLivetvTimers Gets live tv timers
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetLivetvTimersRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetLivetvTimersRequest
 	*/
 	GetLivetvTimers(ctx context.Context) ApiGetLivetvTimersRequest
 
@@ -481,13 +480,13 @@ type LiveTvServiceAPI interface {
 	GetLivetvTimersExecute(r ApiGetLivetvTimersRequest) (*QueryResultLiveTvTimerInfoDto, *http.Response, error)
 
 	/*
-	GetLivetvTimersById Gets a live tv timer
+		GetLivetvTimersById Gets a live tv timer
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Timer Id
-	@return ApiGetLivetvTimersByIdRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Timer Id
+		@return ApiGetLivetvTimersByIdRequest
 	*/
 	GetLivetvTimersById(ctx context.Context, id string) ApiGetLivetvTimersByIdRequest
 
@@ -496,12 +495,12 @@ type LiveTvServiceAPI interface {
 	GetLivetvTimersByIdExecute(r ApiGetLivetvTimersByIdRequest) (*LiveTvTimerInfoDto, *http.Response, error)
 
 	/*
-	GetLivetvTimersDefaults Gets default values for a new timer
+		GetLivetvTimersDefaults Gets default values for a new timer
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetLivetvTimersDefaultsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetLivetvTimersDefaultsRequest
 	*/
 	GetLivetvTimersDefaults(ctx context.Context) ApiGetLivetvTimersDefaultsRequest
 
@@ -510,12 +509,12 @@ type LiveTvServiceAPI interface {
 	GetLivetvTimersDefaultsExecute(r ApiGetLivetvTimersDefaultsRequest) (*LiveTvSeriesTimerInfoDto, *http.Response, error)
 
 	/*
-	GetLivetvTunerhosts Gets tuner hosts
+		GetLivetvTunerhosts Gets tuner hosts
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetLivetvTunerhostsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetLivetvTunerhostsRequest
 	*/
 	GetLivetvTunerhosts(ctx context.Context) ApiGetLivetvTunerhostsRequest
 
@@ -524,13 +523,13 @@ type LiveTvServiceAPI interface {
 	GetLivetvTunerhostsExecute(r ApiGetLivetvTunerhostsRequest) ([]LiveTvTunerHostInfo, *http.Response, error)
 
 	/*
-	GetLivetvTunerhostsDefaultByType Gets tuner hosts
+		GetLivetvTunerhostsDefaultByType Gets tuner hosts
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param type_ Type
-	@return ApiGetLivetvTunerhostsDefaultByTypeRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param type_ Type
+		@return ApiGetLivetvTunerhostsDefaultByTypeRequest
 	*/
 	GetLivetvTunerhostsDefaultByType(ctx context.Context, type_ string) ApiGetLivetvTunerhostsDefaultByTypeRequest
 
@@ -539,12 +538,12 @@ type LiveTvServiceAPI interface {
 	GetLivetvTunerhostsDefaultByTypeExecute(r ApiGetLivetvTunerhostsDefaultByTypeRequest) (*LiveTvTunerHostInfo, *http.Response, error)
 
 	/*
-	GetLivetvTunerhostsTypes Method for GetLivetvTunerhostsTypes
+		GetLivetvTunerhostsTypes Method for GetLivetvTunerhostsTypes
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetLivetvTunerhostsTypesRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetLivetvTunerhostsTypesRequest
 	*/
 	GetLivetvTunerhostsTypes(ctx context.Context) ApiGetLivetvTunerhostsTypesRequest
 
@@ -553,12 +552,12 @@ type LiveTvServiceAPI interface {
 	GetLivetvTunerhostsTypesExecute(r ApiGetLivetvTunerhostsTypesRequest) ([]NameIdPair, *http.Response, error)
 
 	/*
-	GetLivetvTunersDiscover Method for GetLivetvTunersDiscover
+		GetLivetvTunersDiscover Method for GetLivetvTunersDiscover
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetLivetvTunersDiscoverRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetLivetvTunersDiscoverRequest
 	*/
 	GetLivetvTunersDiscover(ctx context.Context) ApiGetLivetvTunersDiscoverRequest
 
@@ -567,12 +566,12 @@ type LiveTvServiceAPI interface {
 	GetLivetvTunersDiscoverExecute(r ApiGetLivetvTunersDiscoverRequest) ([]LiveTvTunerHostInfo, *http.Response, error)
 
 	/*
-	GetLivetvTunersDiscvover Method for GetLivetvTunersDiscvover
+		GetLivetvTunersDiscvover Method for GetLivetvTunersDiscvover
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetLivetvTunersDiscvoverRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetLivetvTunersDiscvoverRequest
 	*/
 	GetLivetvTunersDiscvover(ctx context.Context) ApiGetLivetvTunersDiscvoverRequest
 
@@ -581,12 +580,12 @@ type LiveTvServiceAPI interface {
 	GetLivetvTunersDiscvoverExecute(r ApiGetLivetvTunersDiscvoverRequest) ([]LiveTvTunerHostInfo, *http.Response, error)
 
 	/*
-	HeadLivetvChannelmappingoptions Method for HeadLivetvChannelmappingoptions
+		HeadLivetvChannelmappingoptions Method for HeadLivetvChannelmappingoptions
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiHeadLivetvChannelmappingoptionsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiHeadLivetvChannelmappingoptionsRequest
 	*/
 	HeadLivetvChannelmappingoptions(ctx context.Context) ApiHeadLivetvChannelmappingoptionsRequest
 
@@ -594,12 +593,12 @@ type LiveTvServiceAPI interface {
 	HeadLivetvChannelmappingoptionsExecute(r ApiHeadLivetvChannelmappingoptionsRequest) (*http.Response, error)
 
 	/*
-	HeadLivetvChannelmappings Method for HeadLivetvChannelmappings
+		HeadLivetvChannelmappings Method for HeadLivetvChannelmappings
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiHeadLivetvChannelmappingsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiHeadLivetvChannelmappingsRequest
 	*/
 	HeadLivetvChannelmappings(ctx context.Context) ApiHeadLivetvChannelmappingsRequest
 
@@ -607,12 +606,12 @@ type LiveTvServiceAPI interface {
 	HeadLivetvChannelmappingsExecute(r ApiHeadLivetvChannelmappingsRequest) (*http.Response, error)
 
 	/*
-	PostLivetvChannelmappingoptions Method for PostLivetvChannelmappingoptions
+		PostLivetvChannelmappingoptions Method for PostLivetvChannelmappingoptions
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostLivetvChannelmappingoptionsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostLivetvChannelmappingoptionsRequest
 	*/
 	PostLivetvChannelmappingoptions(ctx context.Context) ApiPostLivetvChannelmappingoptionsRequest
 
@@ -620,12 +619,12 @@ type LiveTvServiceAPI interface {
 	PostLivetvChannelmappingoptionsExecute(r ApiPostLivetvChannelmappingoptionsRequest) (*http.Response, error)
 
 	/*
-	PostLivetvChannelmappings Method for PostLivetvChannelmappings
+		PostLivetvChannelmappings Method for PostLivetvChannelmappings
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostLivetvChannelmappingsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostLivetvChannelmappingsRequest
 	*/
 	PostLivetvChannelmappings(ctx context.Context) ApiPostLivetvChannelmappingsRequest
 
@@ -633,12 +632,12 @@ type LiveTvServiceAPI interface {
 	PostLivetvChannelmappingsExecute(r ApiPostLivetvChannelmappingsRequest) (*http.Response, error)
 
 	/*
-	PostLivetvListingproviders Adds a listing provider
+		PostLivetvListingproviders Adds a listing provider
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostLivetvListingprovidersRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostLivetvListingprovidersRequest
 	*/
 	PostLivetvListingproviders(ctx context.Context) ApiPostLivetvListingprovidersRequest
 
@@ -647,12 +646,12 @@ type LiveTvServiceAPI interface {
 	PostLivetvListingprovidersExecute(r ApiPostLivetvListingprovidersRequest) (*LiveTvListingsProviderInfo, *http.Response, error)
 
 	/*
-	PostLivetvListingprovidersDelete Deletes a listing provider
+		PostLivetvListingprovidersDelete Deletes a listing provider
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostLivetvListingprovidersDeleteRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostLivetvListingprovidersDeleteRequest
 	*/
 	PostLivetvListingprovidersDelete(ctx context.Context) ApiPostLivetvListingprovidersDeleteRequest
 
@@ -660,13 +659,13 @@ type LiveTvServiceAPI interface {
 	PostLivetvListingprovidersDeleteExecute(r ApiPostLivetvListingprovidersDeleteRequest) (*http.Response, error)
 
 	/*
-	PostLivetvManageChannelsByIdDisabled Sets a channel disabled or not
+		PostLivetvManageChannelsByIdDisabled Sets a channel disabled or not
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiPostLivetvManageChannelsByIdDisabledRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id
+		@return ApiPostLivetvManageChannelsByIdDisabledRequest
 	*/
 	PostLivetvManageChannelsByIdDisabled(ctx context.Context, id string) ApiPostLivetvManageChannelsByIdDisabledRequest
 
@@ -675,13 +674,13 @@ type LiveTvServiceAPI interface {
 	PostLivetvManageChannelsByIdDisabledExecute(r ApiPostLivetvManageChannelsByIdDisabledRequest) (*QueryResultChannelManagementInfo, *http.Response, error)
 
 	/*
-	PostLivetvManageChannelsByIdSortindex Sets a channel sort index
+		PostLivetvManageChannelsByIdSortindex Sets a channel sort index
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiPostLivetvManageChannelsByIdSortindexRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id
+		@return ApiPostLivetvManageChannelsByIdSortindexRequest
 	*/
 	PostLivetvManageChannelsByIdSortindex(ctx context.Context, id string) ApiPostLivetvManageChannelsByIdSortindexRequest
 
@@ -690,12 +689,12 @@ type LiveTvServiceAPI interface {
 	PostLivetvManageChannelsByIdSortindexExecute(r ApiPostLivetvManageChannelsByIdSortindexRequest) (*QueryResultChannelManagementInfo, *http.Response, error)
 
 	/*
-	PostLivetvPrograms Gets available live tv epgs..
+		PostLivetvPrograms Gets available live tv epgs..
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostLivetvProgramsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostLivetvProgramsRequest
 	*/
 	PostLivetvPrograms(ctx context.Context) ApiPostLivetvProgramsRequest
 
@@ -703,13 +702,13 @@ type LiveTvServiceAPI interface {
 	PostLivetvProgramsExecute(r ApiPostLivetvProgramsRequest) (*http.Response, error)
 
 	/*
-	PostLivetvRecordingsByIdDelete Deletes a live tv recording
+		PostLivetvRecordingsByIdDelete Deletes a live tv recording
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Recording Id
-	@return ApiPostLivetvRecordingsByIdDeleteRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Recording Id
+		@return ApiPostLivetvRecordingsByIdDeleteRequest
 	*/
 	PostLivetvRecordingsByIdDelete(ctx context.Context, id string) ApiPostLivetvRecordingsByIdDeleteRequest
 
@@ -717,12 +716,12 @@ type LiveTvServiceAPI interface {
 	PostLivetvRecordingsByIdDeleteExecute(r ApiPostLivetvRecordingsByIdDeleteRequest) (*http.Response, error)
 
 	/*
-	PostLivetvSeriestimers Creates a live tv series timer
+		PostLivetvSeriestimers Creates a live tv series timer
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostLivetvSeriestimersRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostLivetvSeriestimersRequest
 	*/
 	PostLivetvSeriestimers(ctx context.Context) ApiPostLivetvSeriestimersRequest
 
@@ -731,13 +730,13 @@ type LiveTvServiceAPI interface {
 	PostLivetvSeriestimersExecute(r ApiPostLivetvSeriestimersRequest) (*LiveTvSeriesTimerInfoDto, *http.Response, error)
 
 	/*
-	PostLivetvSeriestimersById Updates a live tv series timer
+		PostLivetvSeriestimersById Updates a live tv series timer
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiPostLivetvSeriestimersByIdRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id
+		@return ApiPostLivetvSeriestimersByIdRequest
 	*/
 	PostLivetvSeriestimersById(ctx context.Context, id string) ApiPostLivetvSeriestimersByIdRequest
 
@@ -745,13 +744,13 @@ type LiveTvServiceAPI interface {
 	PostLivetvSeriestimersByIdExecute(r ApiPostLivetvSeriestimersByIdRequest) (*http.Response, error)
 
 	/*
-	PostLivetvSeriestimersByIdDelete Cancels a live tv series timer
+		PostLivetvSeriestimersByIdDelete Cancels a live tv series timer
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Timer Id
-	@return ApiPostLivetvSeriestimersByIdDeleteRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Timer Id
+		@return ApiPostLivetvSeriestimersByIdDeleteRequest
 	*/
 	PostLivetvSeriestimersByIdDelete(ctx context.Context, id string) ApiPostLivetvSeriestimersByIdDeleteRequest
 
@@ -759,12 +758,12 @@ type LiveTvServiceAPI interface {
 	PostLivetvSeriestimersByIdDeleteExecute(r ApiPostLivetvSeriestimersByIdDeleteRequest) (*http.Response, error)
 
 	/*
-	PostLivetvTimers Creates a live tv timer
+		PostLivetvTimers Creates a live tv timer
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostLivetvTimersRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostLivetvTimersRequest
 	*/
 	PostLivetvTimers(ctx context.Context) ApiPostLivetvTimersRequest
 
@@ -772,13 +771,13 @@ type LiveTvServiceAPI interface {
 	PostLivetvTimersExecute(r ApiPostLivetvTimersRequest) (*http.Response, error)
 
 	/*
-	PostLivetvTimersById Updates a live tv timer
+		PostLivetvTimersById Updates a live tv timer
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiPostLivetvTimersByIdRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id
+		@return ApiPostLivetvTimersByIdRequest
 	*/
 	PostLivetvTimersById(ctx context.Context, id string) ApiPostLivetvTimersByIdRequest
 
@@ -786,13 +785,13 @@ type LiveTvServiceAPI interface {
 	PostLivetvTimersByIdExecute(r ApiPostLivetvTimersByIdRequest) (*http.Response, error)
 
 	/*
-	PostLivetvTimersByIdDelete Cancels a live tv timer
+		PostLivetvTimersByIdDelete Cancels a live tv timer
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Timer Id
-	@return ApiPostLivetvTimersByIdDeleteRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Timer Id
+		@return ApiPostLivetvTimersByIdDeleteRequest
 	*/
 	PostLivetvTimersByIdDelete(ctx context.Context, id string) ApiPostLivetvTimersByIdDeleteRequest
 
@@ -800,12 +799,12 @@ type LiveTvServiceAPI interface {
 	PostLivetvTimersByIdDeleteExecute(r ApiPostLivetvTimersByIdDeleteRequest) (*http.Response, error)
 
 	/*
-	PostLivetvTunerhosts Adds a tuner host
+		PostLivetvTunerhosts Adds a tuner host
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostLivetvTunerhostsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostLivetvTunerhostsRequest
 	*/
 	PostLivetvTunerhosts(ctx context.Context) ApiPostLivetvTunerhostsRequest
 
@@ -814,12 +813,12 @@ type LiveTvServiceAPI interface {
 	PostLivetvTunerhostsExecute(r ApiPostLivetvTunerhostsRequest) (*LiveTvTunerHostInfo, *http.Response, error)
 
 	/*
-	PostLivetvTunerhostsDelete Deletes a tuner host
+		PostLivetvTunerhostsDelete Deletes a tuner host
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostLivetvTunerhostsDeleteRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostLivetvTunerhostsDeleteRequest
 	*/
 	PostLivetvTunerhostsDelete(ctx context.Context) ApiPostLivetvTunerhostsDeleteRequest
 
@@ -827,13 +826,13 @@ type LiveTvServiceAPI interface {
 	PostLivetvTunerhostsDeleteExecute(r ApiPostLivetvTunerhostsDeleteRequest) (*http.Response, error)
 
 	/*
-	PostLivetvTunersByIdReset Resets a tv tuner
+		PostLivetvTunersByIdReset Resets a tv tuner
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Tuner Id
-	@return ApiPostLivetvTunersByIdResetRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Tuner Id
+		@return ApiPostLivetvTunersByIdResetRequest
 	*/
 	PostLivetvTunersByIdReset(ctx context.Context, id string) ApiPostLivetvTunersByIdResetRequest
 
@@ -841,12 +840,12 @@ type LiveTvServiceAPI interface {
 	PostLivetvTunersByIdResetExecute(r ApiPostLivetvTunersByIdResetRequest) (*http.Response, error)
 
 	/*
-	PutLivetvChannelmappingoptions Method for PutLivetvChannelmappingoptions
+		PutLivetvChannelmappingoptions Method for PutLivetvChannelmappingoptions
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPutLivetvChannelmappingoptionsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPutLivetvChannelmappingoptionsRequest
 	*/
 	PutLivetvChannelmappingoptions(ctx context.Context) ApiPutLivetvChannelmappingoptionsRequest
 
@@ -854,12 +853,12 @@ type LiveTvServiceAPI interface {
 	PutLivetvChannelmappingoptionsExecute(r ApiPutLivetvChannelmappingoptionsRequest) (*http.Response, error)
 
 	/*
-	PutLivetvChannelmappings Method for PutLivetvChannelmappings
+		PutLivetvChannelmappings Method for PutLivetvChannelmappings
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPutLivetvChannelmappingsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPutLivetvChannelmappingsRequest
 	*/
 	PutLivetvChannelmappings(ctx context.Context) ApiPutLivetvChannelmappingsRequest
 
@@ -871,7 +870,7 @@ type LiveTvServiceAPI interface {
 type LiveTvServiceAPIService service
 
 type ApiDeleteLivetvChannelmappingoptionsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveTvServiceAPI
 	providerId *string
 }
@@ -891,22 +890,22 @@ DeleteLivetvChannelmappingoptions Method for DeleteLivetvChannelmappingoptions
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiDeleteLivetvChannelmappingoptionsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiDeleteLivetvChannelmappingoptionsRequest
 */
 func (a *LiveTvServiceAPIService) DeleteLivetvChannelmappingoptions(ctx context.Context) ApiDeleteLivetvChannelmappingoptionsRequest {
 	return ApiDeleteLivetvChannelmappingoptionsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *LiveTvServiceAPIService) DeleteLivetvChannelmappingoptionsExecute(r ApiDeleteLivetvChannelmappingoptionsRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodDelete
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodDelete
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.DeleteLivetvChannelmappingoptions")
@@ -984,7 +983,7 @@ func (a *LiveTvServiceAPIService) DeleteLivetvChannelmappingoptionsExecute(r Api
 }
 
 type ApiDeleteLivetvChannelmappingsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveTvServiceAPI
 	providerId *string
 }
@@ -1004,22 +1003,22 @@ DeleteLivetvChannelmappings Method for DeleteLivetvChannelmappings
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiDeleteLivetvChannelmappingsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiDeleteLivetvChannelmappingsRequest
 */
 func (a *LiveTvServiceAPIService) DeleteLivetvChannelmappings(ctx context.Context) ApiDeleteLivetvChannelmappingsRequest {
 	return ApiDeleteLivetvChannelmappingsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *LiveTvServiceAPIService) DeleteLivetvChannelmappingsExecute(r ApiDeleteLivetvChannelmappingsRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodDelete
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodDelete
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.DeleteLivetvChannelmappings")
@@ -1097,9 +1096,9 @@ func (a *LiveTvServiceAPIService) DeleteLivetvChannelmappingsExecute(r ApiDelete
 }
 
 type ApiDeleteLivetvListingprovidersRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveTvServiceAPI
-	id *string
+	id         *string
 }
 
 // Provider id
@@ -1117,22 +1116,22 @@ DeleteLivetvListingproviders Deletes a listing provider
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiDeleteLivetvListingprovidersRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiDeleteLivetvListingprovidersRequest
 */
 func (a *LiveTvServiceAPIService) DeleteLivetvListingproviders(ctx context.Context) ApiDeleteLivetvListingprovidersRequest {
 	return ApiDeleteLivetvListingprovidersRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *LiveTvServiceAPIService) DeleteLivetvListingprovidersExecute(r ApiDeleteLivetvListingprovidersRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodDelete
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodDelete
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.DeleteLivetvListingproviders")
@@ -1209,9 +1208,9 @@ func (a *LiveTvServiceAPIService) DeleteLivetvListingprovidersExecute(r ApiDelet
 }
 
 type ApiDeleteLivetvRecordingsByIdRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveTvServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiDeleteLivetvRecordingsByIdRequest) Execute() (*http.Response, error) {
@@ -1223,24 +1222,24 @@ DeleteLivetvRecordingsById Deletes a live tv recording
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Recording Id
- @return ApiDeleteLivetvRecordingsByIdRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Recording Id
+	@return ApiDeleteLivetvRecordingsByIdRequest
 */
 func (a *LiveTvServiceAPIService) DeleteLivetvRecordingsById(ctx context.Context, id string) ApiDeleteLivetvRecordingsByIdRequest {
 	return ApiDeleteLivetvRecordingsByIdRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *LiveTvServiceAPIService) DeleteLivetvRecordingsByIdExecute(r ApiDeleteLivetvRecordingsByIdRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodDelete
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodDelete
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.DeleteLivetvRecordingsById")
@@ -1315,9 +1314,9 @@ func (a *LiveTvServiceAPIService) DeleteLivetvRecordingsByIdExecute(r ApiDeleteL
 }
 
 type ApiDeleteLivetvSeriestimersByIdRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveTvServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiDeleteLivetvSeriestimersByIdRequest) Execute() (*http.Response, error) {
@@ -1329,24 +1328,24 @@ DeleteLivetvSeriestimersById Cancels a live tv series timer
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Timer Id
- @return ApiDeleteLivetvSeriestimersByIdRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Timer Id
+	@return ApiDeleteLivetvSeriestimersByIdRequest
 */
 func (a *LiveTvServiceAPIService) DeleteLivetvSeriestimersById(ctx context.Context, id string) ApiDeleteLivetvSeriestimersByIdRequest {
 	return ApiDeleteLivetvSeriestimersByIdRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *LiveTvServiceAPIService) DeleteLivetvSeriestimersByIdExecute(r ApiDeleteLivetvSeriestimersByIdRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodDelete
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodDelete
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.DeleteLivetvSeriestimersById")
@@ -1421,9 +1420,9 @@ func (a *LiveTvServiceAPIService) DeleteLivetvSeriestimersByIdExecute(r ApiDelet
 }
 
 type ApiDeleteLivetvTimersByIdRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveTvServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiDeleteLivetvTimersByIdRequest) Execute() (*http.Response, error) {
@@ -1435,24 +1434,24 @@ DeleteLivetvTimersById Cancels a live tv timer
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Timer Id
- @return ApiDeleteLivetvTimersByIdRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Timer Id
+	@return ApiDeleteLivetvTimersByIdRequest
 */
 func (a *LiveTvServiceAPIService) DeleteLivetvTimersById(ctx context.Context, id string) ApiDeleteLivetvTimersByIdRequest {
 	return ApiDeleteLivetvTimersByIdRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *LiveTvServiceAPIService) DeleteLivetvTimersByIdExecute(r ApiDeleteLivetvTimersByIdRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodDelete
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodDelete
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.DeleteLivetvTimersById")
@@ -1527,9 +1526,9 @@ func (a *LiveTvServiceAPIService) DeleteLivetvTimersByIdExecute(r ApiDeleteLivet
 }
 
 type ApiDeleteLivetvTunerhostsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveTvServiceAPI
-	id *string
+	id         *string
 }
 
 // Tuner host id
@@ -1547,22 +1546,22 @@ DeleteLivetvTunerhosts Deletes a tuner host
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiDeleteLivetvTunerhostsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiDeleteLivetvTunerhostsRequest
 */
 func (a *LiveTvServiceAPIService) DeleteLivetvTunerhosts(ctx context.Context) ApiDeleteLivetvTunerhostsRequest {
 	return ApiDeleteLivetvTunerhostsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *LiveTvServiceAPIService) DeleteLivetvTunerhostsExecute(r ApiDeleteLivetvTunerhostsRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodDelete
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodDelete
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.DeleteLivetvTunerhosts")
@@ -1639,7 +1638,7 @@ func (a *LiveTvServiceAPIService) DeleteLivetvTunerhostsExecute(r ApiDeleteLivet
 }
 
 type ApiGetLivetvAvailablerecordingoptionsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveTvServiceAPI
 }
 
@@ -1652,24 +1651,25 @@ GetLivetvAvailablerecordingoptions Gets available recording options
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetLivetvAvailablerecordingoptionsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetLivetvAvailablerecordingoptionsRequest
 */
 func (a *LiveTvServiceAPIService) GetLivetvAvailablerecordingoptions(ctx context.Context) ApiGetLivetvAvailablerecordingoptionsRequest {
 	return ApiGetLivetvAvailablerecordingoptionsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return ApiAvailableRecordingOptions
+//
+//	@return ApiAvailableRecordingOptions
 func (a *LiveTvServiceAPIService) GetLivetvAvailablerecordingoptionsExecute(r ApiGetLivetvAvailablerecordingoptionsRequest) (*ApiAvailableRecordingOptions, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *ApiAvailableRecordingOptions
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *ApiAvailableRecordingOptions
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.GetLivetvAvailablerecordingoptions")
@@ -1752,7 +1752,7 @@ func (a *LiveTvServiceAPIService) GetLivetvAvailablerecordingoptionsExecute(r Ap
 }
 
 type ApiGetLivetvChannelmappingoptionsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveTvServiceAPI
 	providerId *string
 }
@@ -1772,22 +1772,22 @@ GetLivetvChannelmappingoptions Method for GetLivetvChannelmappingoptions
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetLivetvChannelmappingoptionsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetLivetvChannelmappingoptionsRequest
 */
 func (a *LiveTvServiceAPIService) GetLivetvChannelmappingoptions(ctx context.Context) ApiGetLivetvChannelmappingoptionsRequest {
 	return ApiGetLivetvChannelmappingoptionsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *LiveTvServiceAPIService) GetLivetvChannelmappingoptionsExecute(r ApiGetLivetvChannelmappingoptionsRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.GetLivetvChannelmappingoptions")
@@ -1865,7 +1865,7 @@ func (a *LiveTvServiceAPIService) GetLivetvChannelmappingoptionsExecute(r ApiGet
 }
 
 type ApiGetLivetvChannelmappingsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveTvServiceAPI
 	providerId *string
 }
@@ -1885,22 +1885,22 @@ GetLivetvChannelmappings Method for GetLivetvChannelmappings
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetLivetvChannelmappingsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetLivetvChannelmappingsRequest
 */
 func (a *LiveTvServiceAPIService) GetLivetvChannelmappings(ctx context.Context) ApiGetLivetvChannelmappingsRequest {
 	return ApiGetLivetvChannelmappingsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *LiveTvServiceAPIService) GetLivetvChannelmappingsExecute(r ApiGetLivetvChannelmappingsRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.GetLivetvChannelmappings")
@@ -1978,112 +1978,112 @@ func (a *LiveTvServiceAPIService) GetLivetvChannelmappingsExecute(r ApiGetLivetv
 }
 
 type ApiGetLivetvChannelsRequest struct {
-	ctx context.Context
-	ApiService LiveTvServiceAPI
-	type_ *LiveTvChannelType
-	isLiked *bool
-	isDisliked *bool
-	enableFavoriteSorting *bool
-	addCurrentProgram *bool
-	artistType *string
-	maxOfficialRating *string
-	hasThemeSong *bool
-	hasThemeVideo *bool
-	hasSubtitles *bool
-	hasSpecialFeature *bool
-	hasTrailer *bool
-	isSpecialSeason *bool
-	adjacentTo *string
-	startItemId *string
-	minIndexNumber *int32
-	minStartDate *time.Time
-	maxStartDate *time.Time
-	minEndDate *time.Time
-	maxEndDate *time.Time
-	minPlayers *int32
-	maxPlayers *int32
-	parentIndexNumber *int32
-	hasParentalRating *bool
-	isHD *bool
-	isUnaired *bool
-	minCommunityRating *float64
-	minCriticRating *float64
-	airedDuringSeason *int32
-	minPremiereDate *time.Time
-	minDateLastSaved *time.Time
-	minDateLastSavedForUser *time.Time
-	maxPremiereDate *time.Time
-	hasOverview *bool
-	hasImdbId *bool
-	hasTmdbId *bool
-	hasTvdbId *bool
-	excludeItemIds *string
-	startIndex *int32
-	limit *int32
-	recursive *bool
-	searchTerm *string
-	sortOrder *string
-	parentId *string
-	fields *string
-	excludeItemTypes *string
-	includeItemTypes *string
-	anyProviderIdEquals *string
-	filters *string
-	isFavorite *bool
-	isMovie *bool
-	isSeries *bool
-	isFolder *bool
-	isNews *bool
-	isKids *bool
-	isSports *bool
-	isNew *bool
-	isPremiere *bool
-	isNewOrPremiere *bool
-	isRepeat *bool
-	projectToMedia *bool
-	mediaTypes *string
-	imageTypes *string
-	sortBy *string
-	isPlayed *bool
-	genres *string
-	officialRatings *string
-	tags *string
-	excludeTags *string
-	years *string
-	enableImages *bool
-	enableUserData *bool
-	imageTypeLimit *int32
-	enableImageTypes *string
-	person *string
-	personIds *string
-	personTypes *string
-	studios *string
-	studioIds *string
-	artists *string
-	artistIds *string
-	albums *string
-	ids *string
-	videoTypes *string
-	containers *string
-	audioCodecs *string
-	audioLayouts *string
-	videoCodecs *string
-	extendedVideoTypes *string
-	subtitleCodecs *string
-	path *string
-	userId *string
-	minOfficialRating *string
-	isLocked *bool
-	isPlaceHolder *bool
-	hasOfficialRating *bool
-	groupItemsIntoCollections *bool
-	is3D *bool
-	seriesStatus *string
-	nameStartsWithOrGreater *string
-	artistStartsWithOrGreater *string
+	ctx                            context.Context
+	ApiService                     LiveTvServiceAPI
+	type_                          *LiveTvChannelType
+	isLiked                        *bool
+	isDisliked                     *bool
+	enableFavoriteSorting          *bool
+	addCurrentProgram              *bool
+	artistType                     *string
+	maxOfficialRating              *string
+	hasThemeSong                   *bool
+	hasThemeVideo                  *bool
+	hasSubtitles                   *bool
+	hasSpecialFeature              *bool
+	hasTrailer                     *bool
+	isSpecialSeason                *bool
+	adjacentTo                     *string
+	startItemId                    *string
+	minIndexNumber                 *int32
+	minStartDate                   *time.Time
+	maxStartDate                   *time.Time
+	minEndDate                     *time.Time
+	maxEndDate                     *time.Time
+	minPlayers                     *int32
+	maxPlayers                     *int32
+	parentIndexNumber              *int32
+	hasParentalRating              *bool
+	isHD                           *bool
+	isUnaired                      *bool
+	minCommunityRating             *float64
+	minCriticRating                *float64
+	airedDuringSeason              *int32
+	minPremiereDate                *time.Time
+	minDateLastSaved               *time.Time
+	minDateLastSavedForUser        *time.Time
+	maxPremiereDate                *time.Time
+	hasOverview                    *bool
+	hasImdbId                      *bool
+	hasTmdbId                      *bool
+	hasTvdbId                      *bool
+	excludeItemIds                 *string
+	startIndex                     *int32
+	limit                          *int32
+	recursive                      *bool
+	searchTerm                     *string
+	sortOrder                      *string
+	parentId                       *string
+	fields                         *string
+	excludeItemTypes               *string
+	includeItemTypes               *string
+	anyProviderIdEquals            *string
+	filters                        *string
+	isFavorite                     *bool
+	isMovie                        *bool
+	isSeries                       *bool
+	isFolder                       *bool
+	isNews                         *bool
+	isKids                         *bool
+	isSports                       *bool
+	isNew                          *bool
+	isPremiere                     *bool
+	isNewOrPremiere                *bool
+	isRepeat                       *bool
+	projectToMedia                 *bool
+	mediaTypes                     *string
+	imageTypes                     *string
+	sortBy                         *string
+	isPlayed                       *bool
+	genres                         *string
+	officialRatings                *string
+	tags                           *string
+	excludeTags                    *string
+	years                          *string
+	enableImages                   *bool
+	enableUserData                 *bool
+	imageTypeLimit                 *int32
+	enableImageTypes               *string
+	person                         *string
+	personIds                      *string
+	personTypes                    *string
+	studios                        *string
+	studioIds                      *string
+	artists                        *string
+	artistIds                      *string
+	albums                         *string
+	ids                            *string
+	videoTypes                     *string
+	containers                     *string
+	audioCodecs                    *string
+	audioLayouts                   *string
+	videoCodecs                    *string
+	extendedVideoTypes             *string
+	subtitleCodecs                 *string
+	path                           *string
+	userId                         *string
+	minOfficialRating              *string
+	isLocked                       *bool
+	isPlaceHolder                  *bool
+	hasOfficialRating              *bool
+	groupItemsIntoCollections      *bool
+	is3D                           *bool
+	seriesStatus                   *string
+	nameStartsWithOrGreater        *string
+	artistStartsWithOrGreater      *string
 	albumArtistStartsWithOrGreater *string
-	nameStartsWith *string
-	nameLessThan *string
+	nameStartsWith                 *string
+	nameLessThan                   *string
 }
 
 // Optional filter by channel type.
@@ -2719,24 +2719,25 @@ GetLivetvChannels Gets available live tv channels.
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetLivetvChannelsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetLivetvChannelsRequest
 */
 func (a *LiveTvServiceAPIService) GetLivetvChannels(ctx context.Context) ApiGetLivetvChannelsRequest {
 	return ApiGetLivetvChannelsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return QueryResultBaseItemDto
+//
+//	@return QueryResultBaseItemDto
 func (a *LiveTvServiceAPIService) GetLivetvChannelsExecute(r ApiGetLivetvChannelsRequest) (*QueryResultBaseItemDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *QueryResultBaseItemDto
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *QueryResultBaseItemDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.GetLivetvChannels")
@@ -3131,10 +3132,10 @@ func (a *LiveTvServiceAPIService) GetLivetvChannelsExecute(r ApiGetLivetvChannel
 }
 
 type ApiGetLivetvChannelsByIdRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveTvServiceAPI
-	id string
-	userId *string
+	id         string
+	userId     *string
 }
 
 // Optional attach user data.
@@ -3152,26 +3153,27 @@ GetLivetvChannelsById Gets a live tv channel
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Channel Id
- @return ApiGetLivetvChannelsByIdRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Channel Id
+	@return ApiGetLivetvChannelsByIdRequest
 */
 func (a *LiveTvServiceAPIService) GetLivetvChannelsById(ctx context.Context, id string) ApiGetLivetvChannelsByIdRequest {
 	return ApiGetLivetvChannelsByIdRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
-//  @return BaseItemDto
+//
+//	@return BaseItemDto
 func (a *LiveTvServiceAPIService) GetLivetvChannelsByIdExecute(r ApiGetLivetvChannelsByIdRequest) (*BaseItemDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *BaseItemDto
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *BaseItemDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.GetLivetvChannelsById")
@@ -3258,107 +3260,107 @@ func (a *LiveTvServiceAPIService) GetLivetvChannelsByIdExecute(r ApiGetLivetvCha
 }
 
 type ApiGetLivetvChanneltagsRequest struct {
-	ctx context.Context
-	ApiService LiveTvServiceAPI
-	artistType *string
-	maxOfficialRating *string
-	hasThemeSong *bool
-	hasThemeVideo *bool
-	hasSubtitles *bool
-	hasSpecialFeature *bool
-	hasTrailer *bool
-	isSpecialSeason *bool
-	adjacentTo *string
-	startItemId *string
-	minIndexNumber *int32
-	minStartDate *time.Time
-	maxStartDate *time.Time
-	minEndDate *time.Time
-	maxEndDate *time.Time
-	minPlayers *int32
-	maxPlayers *int32
-	parentIndexNumber *int32
-	hasParentalRating *bool
-	isHD *bool
-	isUnaired *bool
-	minCommunityRating *float64
-	minCriticRating *float64
-	airedDuringSeason *int32
-	minPremiereDate *time.Time
-	minDateLastSaved *time.Time
-	minDateLastSavedForUser *time.Time
-	maxPremiereDate *time.Time
-	hasOverview *bool
-	hasImdbId *bool
-	hasTmdbId *bool
-	hasTvdbId *bool
-	excludeItemIds *string
-	startIndex *int32
-	limit *int32
-	recursive *bool
-	searchTerm *string
-	sortOrder *string
-	parentId *string
-	fields *string
-	excludeItemTypes *string
-	includeItemTypes *string
-	anyProviderIdEquals *string
-	filters *string
-	isFavorite *bool
-	isMovie *bool
-	isSeries *bool
-	isFolder *bool
-	isNews *bool
-	isKids *bool
-	isSports *bool
-	isNew *bool
-	isPremiere *bool
-	isNewOrPremiere *bool
-	isRepeat *bool
-	projectToMedia *bool
-	mediaTypes *string
-	imageTypes *string
-	sortBy *string
-	isPlayed *bool
-	genres *string
-	officialRatings *string
-	tags *string
-	excludeTags *string
-	years *string
-	enableImages *bool
-	enableUserData *bool
-	imageTypeLimit *int32
-	enableImageTypes *string
-	person *string
-	personIds *string
-	personTypes *string
-	studios *string
-	studioIds *string
-	artists *string
-	artistIds *string
-	albums *string
-	ids *string
-	videoTypes *string
-	containers *string
-	audioCodecs *string
-	audioLayouts *string
-	videoCodecs *string
-	extendedVideoTypes *string
-	subtitleCodecs *string
-	path *string
-	userId *string
-	minOfficialRating *string
-	isLocked *bool
-	isPlaceHolder *bool
-	hasOfficialRating *bool
-	groupItemsIntoCollections *bool
-	is3D *bool
-	seriesStatus *string
-	nameStartsWithOrGreater *string
-	artistStartsWithOrGreater *string
+	ctx                            context.Context
+	ApiService                     LiveTvServiceAPI
+	artistType                     *string
+	maxOfficialRating              *string
+	hasThemeSong                   *bool
+	hasThemeVideo                  *bool
+	hasSubtitles                   *bool
+	hasSpecialFeature              *bool
+	hasTrailer                     *bool
+	isSpecialSeason                *bool
+	adjacentTo                     *string
+	startItemId                    *string
+	minIndexNumber                 *int32
+	minStartDate                   *time.Time
+	maxStartDate                   *time.Time
+	minEndDate                     *time.Time
+	maxEndDate                     *time.Time
+	minPlayers                     *int32
+	maxPlayers                     *int32
+	parentIndexNumber              *int32
+	hasParentalRating              *bool
+	isHD                           *bool
+	isUnaired                      *bool
+	minCommunityRating             *float64
+	minCriticRating                *float64
+	airedDuringSeason              *int32
+	minPremiereDate                *time.Time
+	minDateLastSaved               *time.Time
+	minDateLastSavedForUser        *time.Time
+	maxPremiereDate                *time.Time
+	hasOverview                    *bool
+	hasImdbId                      *bool
+	hasTmdbId                      *bool
+	hasTvdbId                      *bool
+	excludeItemIds                 *string
+	startIndex                     *int32
+	limit                          *int32
+	recursive                      *bool
+	searchTerm                     *string
+	sortOrder                      *string
+	parentId                       *string
+	fields                         *string
+	excludeItemTypes               *string
+	includeItemTypes               *string
+	anyProviderIdEquals            *string
+	filters                        *string
+	isFavorite                     *bool
+	isMovie                        *bool
+	isSeries                       *bool
+	isFolder                       *bool
+	isNews                         *bool
+	isKids                         *bool
+	isSports                       *bool
+	isNew                          *bool
+	isPremiere                     *bool
+	isNewOrPremiere                *bool
+	isRepeat                       *bool
+	projectToMedia                 *bool
+	mediaTypes                     *string
+	imageTypes                     *string
+	sortBy                         *string
+	isPlayed                       *bool
+	genres                         *string
+	officialRatings                *string
+	tags                           *string
+	excludeTags                    *string
+	years                          *string
+	enableImages                   *bool
+	enableUserData                 *bool
+	imageTypeLimit                 *int32
+	enableImageTypes               *string
+	person                         *string
+	personIds                      *string
+	personTypes                    *string
+	studios                        *string
+	studioIds                      *string
+	artists                        *string
+	artistIds                      *string
+	albums                         *string
+	ids                            *string
+	videoTypes                     *string
+	containers                     *string
+	audioCodecs                    *string
+	audioLayouts                   *string
+	videoCodecs                    *string
+	extendedVideoTypes             *string
+	subtitleCodecs                 *string
+	path                           *string
+	userId                         *string
+	minOfficialRating              *string
+	isLocked                       *bool
+	isPlaceHolder                  *bool
+	hasOfficialRating              *bool
+	groupItemsIntoCollections      *bool
+	is3D                           *bool
+	seriesStatus                   *string
+	nameStartsWithOrGreater        *string
+	artistStartsWithOrGreater      *string
 	albumArtistStartsWithOrGreater *string
-	nameStartsWith *string
-	nameLessThan *string
+	nameStartsWith                 *string
+	nameLessThan                   *string
 }
 
 // Artist or AlbumArtist
@@ -3964,24 +3966,25 @@ GetLivetvChanneltags Gets live tv channel tags
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetLivetvChanneltagsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetLivetvChanneltagsRequest
 */
 func (a *LiveTvServiceAPIService) GetLivetvChanneltags(ctx context.Context) ApiGetLivetvChanneltagsRequest {
 	return ApiGetLivetvChanneltagsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return QueryResultBaseItemDto
+//
+//	@return QueryResultBaseItemDto
 func (a *LiveTvServiceAPIService) GetLivetvChanneltagsExecute(r ApiGetLivetvChanneltagsRequest) (*QueryResultBaseItemDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *QueryResultBaseItemDto
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *QueryResultBaseItemDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.GetLivetvChanneltags")
@@ -4361,107 +4364,107 @@ func (a *LiveTvServiceAPIService) GetLivetvChanneltagsExecute(r ApiGetLivetvChan
 }
 
 type ApiGetLivetvChanneltagsPrefixesRequest struct {
-	ctx context.Context
-	ApiService LiveTvServiceAPI
-	artistType *string
-	maxOfficialRating *string
-	hasThemeSong *bool
-	hasThemeVideo *bool
-	hasSubtitles *bool
-	hasSpecialFeature *bool
-	hasTrailer *bool
-	isSpecialSeason *bool
-	adjacentTo *string
-	startItemId *string
-	minIndexNumber *int32
-	minStartDate *time.Time
-	maxStartDate *time.Time
-	minEndDate *time.Time
-	maxEndDate *time.Time
-	minPlayers *int32
-	maxPlayers *int32
-	parentIndexNumber *int32
-	hasParentalRating *bool
-	isHD *bool
-	isUnaired *bool
-	minCommunityRating *float64
-	minCriticRating *float64
-	airedDuringSeason *int32
-	minPremiereDate *time.Time
-	minDateLastSaved *time.Time
-	minDateLastSavedForUser *time.Time
-	maxPremiereDate *time.Time
-	hasOverview *bool
-	hasImdbId *bool
-	hasTmdbId *bool
-	hasTvdbId *bool
-	excludeItemIds *string
-	startIndex *int32
-	limit *int32
-	recursive *bool
-	searchTerm *string
-	sortOrder *string
-	parentId *string
-	fields *string
-	excludeItemTypes *string
-	includeItemTypes *string
-	anyProviderIdEquals *string
-	filters *string
-	isFavorite *bool
-	isMovie *bool
-	isSeries *bool
-	isFolder *bool
-	isNews *bool
-	isKids *bool
-	isSports *bool
-	isNew *bool
-	isPremiere *bool
-	isNewOrPremiere *bool
-	isRepeat *bool
-	projectToMedia *bool
-	mediaTypes *string
-	imageTypes *string
-	sortBy *string
-	isPlayed *bool
-	genres *string
-	officialRatings *string
-	tags *string
-	excludeTags *string
-	years *string
-	enableImages *bool
-	enableUserData *bool
-	imageTypeLimit *int32
-	enableImageTypes *string
-	person *string
-	personIds *string
-	personTypes *string
-	studios *string
-	studioIds *string
-	artists *string
-	artistIds *string
-	albums *string
-	ids *string
-	videoTypes *string
-	containers *string
-	audioCodecs *string
-	audioLayouts *string
-	videoCodecs *string
-	extendedVideoTypes *string
-	subtitleCodecs *string
-	path *string
-	userId *string
-	minOfficialRating *string
-	isLocked *bool
-	isPlaceHolder *bool
-	hasOfficialRating *bool
-	groupItemsIntoCollections *bool
-	is3D *bool
-	seriesStatus *string
-	nameStartsWithOrGreater *string
-	artistStartsWithOrGreater *string
+	ctx                            context.Context
+	ApiService                     LiveTvServiceAPI
+	artistType                     *string
+	maxOfficialRating              *string
+	hasThemeSong                   *bool
+	hasThemeVideo                  *bool
+	hasSubtitles                   *bool
+	hasSpecialFeature              *bool
+	hasTrailer                     *bool
+	isSpecialSeason                *bool
+	adjacentTo                     *string
+	startItemId                    *string
+	minIndexNumber                 *int32
+	minStartDate                   *time.Time
+	maxStartDate                   *time.Time
+	minEndDate                     *time.Time
+	maxEndDate                     *time.Time
+	minPlayers                     *int32
+	maxPlayers                     *int32
+	parentIndexNumber              *int32
+	hasParentalRating              *bool
+	isHD                           *bool
+	isUnaired                      *bool
+	minCommunityRating             *float64
+	minCriticRating                *float64
+	airedDuringSeason              *int32
+	minPremiereDate                *time.Time
+	minDateLastSaved               *time.Time
+	minDateLastSavedForUser        *time.Time
+	maxPremiereDate                *time.Time
+	hasOverview                    *bool
+	hasImdbId                      *bool
+	hasTmdbId                      *bool
+	hasTvdbId                      *bool
+	excludeItemIds                 *string
+	startIndex                     *int32
+	limit                          *int32
+	recursive                      *bool
+	searchTerm                     *string
+	sortOrder                      *string
+	parentId                       *string
+	fields                         *string
+	excludeItemTypes               *string
+	includeItemTypes               *string
+	anyProviderIdEquals            *string
+	filters                        *string
+	isFavorite                     *bool
+	isMovie                        *bool
+	isSeries                       *bool
+	isFolder                       *bool
+	isNews                         *bool
+	isKids                         *bool
+	isSports                       *bool
+	isNew                          *bool
+	isPremiere                     *bool
+	isNewOrPremiere                *bool
+	isRepeat                       *bool
+	projectToMedia                 *bool
+	mediaTypes                     *string
+	imageTypes                     *string
+	sortBy                         *string
+	isPlayed                       *bool
+	genres                         *string
+	officialRatings                *string
+	tags                           *string
+	excludeTags                    *string
+	years                          *string
+	enableImages                   *bool
+	enableUserData                 *bool
+	imageTypeLimit                 *int32
+	enableImageTypes               *string
+	person                         *string
+	personIds                      *string
+	personTypes                    *string
+	studios                        *string
+	studioIds                      *string
+	artists                        *string
+	artistIds                      *string
+	albums                         *string
+	ids                            *string
+	videoTypes                     *string
+	containers                     *string
+	audioCodecs                    *string
+	audioLayouts                   *string
+	videoCodecs                    *string
+	extendedVideoTypes             *string
+	subtitleCodecs                 *string
+	path                           *string
+	userId                         *string
+	minOfficialRating              *string
+	isLocked                       *bool
+	isPlaceHolder                  *bool
+	hasOfficialRating              *bool
+	groupItemsIntoCollections      *bool
+	is3D                           *bool
+	seriesStatus                   *string
+	nameStartsWithOrGreater        *string
+	artistStartsWithOrGreater      *string
 	albumArtistStartsWithOrGreater *string
-	nameStartsWith *string
-	nameLessThan *string
+	nameStartsWith                 *string
+	nameLessThan                   *string
 }
 
 // Artist or AlbumArtist
@@ -5067,24 +5070,25 @@ GetLivetvChanneltagsPrefixes Gets live tv channel tag prefixes
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetLivetvChanneltagsPrefixesRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetLivetvChanneltagsPrefixesRequest
 */
 func (a *LiveTvServiceAPIService) GetLivetvChanneltagsPrefixes(ctx context.Context) ApiGetLivetvChanneltagsPrefixesRequest {
 	return ApiGetLivetvChanneltagsPrefixesRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return []ApiTagItem
+//
+//	@return []ApiTagItem
 func (a *LiveTvServiceAPIService) GetLivetvChanneltagsPrefixesExecute(r ApiGetLivetvChanneltagsPrefixesRequest) ([]ApiTagItem, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []ApiTagItem
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue []ApiTagItem
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.GetLivetvChanneltagsPrefixes")
@@ -5464,113 +5468,113 @@ func (a *LiveTvServiceAPIService) GetLivetvChanneltagsPrefixesExecute(r ApiGetLi
 }
 
 type ApiGetLivetvEPGRequest struct {
-	ctx context.Context
-	ApiService LiveTvServiceAPI
-	type_ *LiveTvChannelType
-	isLiked *bool
-	isDisliked *bool
-	enableFavoriteSorting *bool
-	addCurrentProgram *bool
-	channelIds *string
-	artistType *string
-	maxOfficialRating *string
-	hasThemeSong *bool
-	hasThemeVideo *bool
-	hasSubtitles *bool
-	hasSpecialFeature *bool
-	hasTrailer *bool
-	isSpecialSeason *bool
-	adjacentTo *string
-	startItemId *string
-	minIndexNumber *int32
-	minStartDate *time.Time
-	maxStartDate *time.Time
-	minEndDate *time.Time
-	maxEndDate *time.Time
-	minPlayers *int32
-	maxPlayers *int32
-	parentIndexNumber *int32
-	hasParentalRating *bool
-	isHD *bool
-	isUnaired *bool
-	minCommunityRating *float64
-	minCriticRating *float64
-	airedDuringSeason *int32
-	minPremiereDate *time.Time
-	minDateLastSaved *time.Time
-	minDateLastSavedForUser *time.Time
-	maxPremiereDate *time.Time
-	hasOverview *bool
-	hasImdbId *bool
-	hasTmdbId *bool
-	hasTvdbId *bool
-	excludeItemIds *string
-	startIndex *int32
-	limit *int32
-	recursive *bool
-	searchTerm *string
-	sortOrder *string
-	parentId *string
-	fields *string
-	excludeItemTypes *string
-	includeItemTypes *string
-	anyProviderIdEquals *string
-	filters *string
-	isFavorite *bool
-	isMovie *bool
-	isSeries *bool
-	isFolder *bool
-	isNews *bool
-	isKids *bool
-	isSports *bool
-	isNew *bool
-	isPremiere *bool
-	isNewOrPremiere *bool
-	isRepeat *bool
-	projectToMedia *bool
-	mediaTypes *string
-	imageTypes *string
-	sortBy *string
-	isPlayed *bool
-	genres *string
-	officialRatings *string
-	tags *string
-	excludeTags *string
-	years *string
-	enableImages *bool
-	enableUserData *bool
-	imageTypeLimit *int32
-	enableImageTypes *string
-	person *string
-	personIds *string
-	personTypes *string
-	studios *string
-	studioIds *string
-	artists *string
-	artistIds *string
-	albums *string
-	ids *string
-	videoTypes *string
-	containers *string
-	audioCodecs *string
-	audioLayouts *string
-	videoCodecs *string
-	extendedVideoTypes *string
-	subtitleCodecs *string
-	path *string
-	userId *string
-	minOfficialRating *string
-	isLocked *bool
-	isPlaceHolder *bool
-	hasOfficialRating *bool
-	groupItemsIntoCollections *bool
-	is3D *bool
-	seriesStatus *string
-	nameStartsWithOrGreater *string
-	artistStartsWithOrGreater *string
+	ctx                            context.Context
+	ApiService                     LiveTvServiceAPI
+	type_                          *LiveTvChannelType
+	isLiked                        *bool
+	isDisliked                     *bool
+	enableFavoriteSorting          *bool
+	addCurrentProgram              *bool
+	channelIds                     *string
+	artistType                     *string
+	maxOfficialRating              *string
+	hasThemeSong                   *bool
+	hasThemeVideo                  *bool
+	hasSubtitles                   *bool
+	hasSpecialFeature              *bool
+	hasTrailer                     *bool
+	isSpecialSeason                *bool
+	adjacentTo                     *string
+	startItemId                    *string
+	minIndexNumber                 *int32
+	minStartDate                   *time.Time
+	maxStartDate                   *time.Time
+	minEndDate                     *time.Time
+	maxEndDate                     *time.Time
+	minPlayers                     *int32
+	maxPlayers                     *int32
+	parentIndexNumber              *int32
+	hasParentalRating              *bool
+	isHD                           *bool
+	isUnaired                      *bool
+	minCommunityRating             *float64
+	minCriticRating                *float64
+	airedDuringSeason              *int32
+	minPremiereDate                *time.Time
+	minDateLastSaved               *time.Time
+	minDateLastSavedForUser        *time.Time
+	maxPremiereDate                *time.Time
+	hasOverview                    *bool
+	hasImdbId                      *bool
+	hasTmdbId                      *bool
+	hasTvdbId                      *bool
+	excludeItemIds                 *string
+	startIndex                     *int32
+	limit                          *int32
+	recursive                      *bool
+	searchTerm                     *string
+	sortOrder                      *string
+	parentId                       *string
+	fields                         *string
+	excludeItemTypes               *string
+	includeItemTypes               *string
+	anyProviderIdEquals            *string
+	filters                        *string
+	isFavorite                     *bool
+	isMovie                        *bool
+	isSeries                       *bool
+	isFolder                       *bool
+	isNews                         *bool
+	isKids                         *bool
+	isSports                       *bool
+	isNew                          *bool
+	isPremiere                     *bool
+	isNewOrPremiere                *bool
+	isRepeat                       *bool
+	projectToMedia                 *bool
+	mediaTypes                     *string
+	imageTypes                     *string
+	sortBy                         *string
+	isPlayed                       *bool
+	genres                         *string
+	officialRatings                *string
+	tags                           *string
+	excludeTags                    *string
+	years                          *string
+	enableImages                   *bool
+	enableUserData                 *bool
+	imageTypeLimit                 *int32
+	enableImageTypes               *string
+	person                         *string
+	personIds                      *string
+	personTypes                    *string
+	studios                        *string
+	studioIds                      *string
+	artists                        *string
+	artistIds                      *string
+	albums                         *string
+	ids                            *string
+	videoTypes                     *string
+	containers                     *string
+	audioCodecs                    *string
+	audioLayouts                   *string
+	videoCodecs                    *string
+	extendedVideoTypes             *string
+	subtitleCodecs                 *string
+	path                           *string
+	userId                         *string
+	minOfficialRating              *string
+	isLocked                       *bool
+	isPlaceHolder                  *bool
+	hasOfficialRating              *bool
+	groupItemsIntoCollections      *bool
+	is3D                           *bool
+	seriesStatus                   *string
+	nameStartsWithOrGreater        *string
+	artistStartsWithOrGreater      *string
 	albumArtistStartsWithOrGreater *string
-	nameStartsWith *string
-	nameLessThan *string
+	nameStartsWith                 *string
+	nameLessThan                   *string
 }
 
 // Optional filter by channel type.
@@ -6212,24 +6216,25 @@ GetLivetvEPG Gets the epg.
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetLivetvEPGRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetLivetvEPGRequest
 */
 func (a *LiveTvServiceAPIService) GetLivetvEPG(ctx context.Context) ApiGetLivetvEPGRequest {
 	return ApiGetLivetvEPGRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return QueryResultApiEpgRow
+//
+//	@return QueryResultApiEpgRow
 func (a *LiveTvServiceAPIService) GetLivetvEPGExecute(r ApiGetLivetvEPGRequest) (*QueryResultApiEpgRow, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *QueryResultApiEpgRow
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *QueryResultApiEpgRow
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.GetLivetvEPG")
@@ -6627,7 +6632,7 @@ func (a *LiveTvServiceAPIService) GetLivetvEPGExecute(r ApiGetLivetvEPGRequest) 
 }
 
 type ApiGetLivetvFolderRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveTvServiceAPI
 }
 
@@ -6640,24 +6645,25 @@ GetLivetvFolder Gets the top level live tv folder
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetLivetvFolderRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetLivetvFolderRequest
 */
 func (a *LiveTvServiceAPIService) GetLivetvFolder(ctx context.Context) ApiGetLivetvFolderRequest {
 	return ApiGetLivetvFolderRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return BaseItemDto
+//
+//	@return BaseItemDto
 func (a *LiveTvServiceAPIService) GetLivetvFolderExecute(r ApiGetLivetvFolderRequest) (*BaseItemDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *BaseItemDto
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *BaseItemDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.GetLivetvFolder")
@@ -6740,7 +6746,7 @@ func (a *LiveTvServiceAPIService) GetLivetvFolderExecute(r ApiGetLivetvFolderReq
 }
 
 type ApiGetLivetvGuideinfoRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveTvServiceAPI
 }
 
@@ -6753,24 +6759,25 @@ GetLivetvGuideinfo Gets guide info
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetLivetvGuideinfoRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetLivetvGuideinfoRequest
 */
 func (a *LiveTvServiceAPIService) GetLivetvGuideinfo(ctx context.Context) ApiGetLivetvGuideinfoRequest {
 	return ApiGetLivetvGuideinfoRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return LiveTvGuideInfo
+//
+//	@return LiveTvGuideInfo
 func (a *LiveTvServiceAPIService) GetLivetvGuideinfoExecute(r ApiGetLivetvGuideinfoRequest) (*LiveTvGuideInfo, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *LiveTvGuideInfo
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *LiveTvGuideInfo
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.GetLivetvGuideinfo")
@@ -6853,7 +6860,7 @@ func (a *LiveTvServiceAPIService) GetLivetvGuideinfoExecute(r ApiGetLivetvGuidei
 }
 
 type ApiGetLivetvInfoRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveTvServiceAPI
 }
 
@@ -6866,24 +6873,25 @@ GetLivetvInfo Gets available live tv services.
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetLivetvInfoRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetLivetvInfoRequest
 */
 func (a *LiveTvServiceAPIService) GetLivetvInfo(ctx context.Context) ApiGetLivetvInfoRequest {
 	return ApiGetLivetvInfoRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return LiveTvLiveTvInfo
+//
+//	@return LiveTvLiveTvInfo
 func (a *LiveTvServiceAPIService) GetLivetvInfoExecute(r ApiGetLivetvInfoRequest) (*LiveTvLiveTvInfo, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *LiveTvLiveTvInfo
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *LiveTvLiveTvInfo
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.GetLivetvInfo")
@@ -6966,9 +6974,9 @@ func (a *LiveTvServiceAPIService) GetLivetvInfoExecute(r ApiGetLivetvInfoRequest
 }
 
 type ApiGetLivetvListingprovidersRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveTvServiceAPI
-	channelId *string
+	channelId  *string
 }
 
 // Channel id
@@ -6986,24 +6994,25 @@ GetLivetvListingproviders Gets current listing providers
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetLivetvListingprovidersRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetLivetvListingprovidersRequest
 */
 func (a *LiveTvServiceAPIService) GetLivetvListingproviders(ctx context.Context) ApiGetLivetvListingprovidersRequest {
 	return ApiGetLivetvListingprovidersRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return []LiveTvListingsProviderInfo
+//
+//	@return []LiveTvListingsProviderInfo
 func (a *LiveTvServiceAPIService) GetLivetvListingprovidersExecute(r ApiGetLivetvListingprovidersRequest) ([]LiveTvListingsProviderInfo, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []LiveTvListingsProviderInfo
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue []LiveTvListingsProviderInfo
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.GetLivetvListingproviders")
@@ -7090,7 +7099,7 @@ func (a *LiveTvServiceAPIService) GetLivetvListingprovidersExecute(r ApiGetLivet
 }
 
 type ApiGetLivetvListingprovidersAvailableRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveTvServiceAPI
 }
 
@@ -7103,24 +7112,25 @@ GetLivetvListingprovidersAvailable Gets listing provider
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetLivetvListingprovidersAvailableRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetLivetvListingprovidersAvailableRequest
 */
 func (a *LiveTvServiceAPIService) GetLivetvListingprovidersAvailable(ctx context.Context) ApiGetLivetvListingprovidersAvailableRequest {
 	return ApiGetLivetvListingprovidersAvailableRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return []ApiListingProviderTypeInfo
+//
+//	@return []ApiListingProviderTypeInfo
 func (a *LiveTvServiceAPIService) GetLivetvListingprovidersAvailableExecute(r ApiGetLivetvListingprovidersAvailableRequest) ([]ApiListingProviderTypeInfo, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []ApiListingProviderTypeInfo
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue []ApiListingProviderTypeInfo
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.GetLivetvListingprovidersAvailable")
@@ -7203,7 +7213,7 @@ func (a *LiveTvServiceAPIService) GetLivetvListingprovidersAvailableExecute(r Ap
 }
 
 type ApiGetLivetvListingprovidersDefaultRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveTvServiceAPI
 }
 
@@ -7216,24 +7226,25 @@ GetLivetvListingprovidersDefault Method for GetLivetvListingprovidersDefault
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetLivetvListingprovidersDefaultRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetLivetvListingprovidersDefaultRequest
 */
 func (a *LiveTvServiceAPIService) GetLivetvListingprovidersDefault(ctx context.Context) ApiGetLivetvListingprovidersDefaultRequest {
 	return ApiGetLivetvListingprovidersDefaultRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return LiveTvListingsProviderInfo
+//
+//	@return LiveTvListingsProviderInfo
 func (a *LiveTvServiceAPIService) GetLivetvListingprovidersDefaultExecute(r ApiGetLivetvListingprovidersDefaultRequest) (*LiveTvListingsProviderInfo, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *LiveTvListingsProviderInfo
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *LiveTvListingsProviderInfo
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.GetLivetvListingprovidersDefault")
@@ -7316,12 +7327,12 @@ func (a *LiveTvServiceAPIService) GetLivetvListingprovidersDefaultExecute(r ApiG
 }
 
 type ApiGetLivetvListingprovidersLineupsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveTvServiceAPI
-	id *string
-	type_ *string
-	location *string
-	country *string
+	id         *string
+	type_      *string
+	location   *string
+	country    *string
 }
 
 // Provider id
@@ -7357,24 +7368,25 @@ GetLivetvListingprovidersLineups Gets available lineups
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetLivetvListingprovidersLineupsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetLivetvListingprovidersLineupsRequest
 */
 func (a *LiveTvServiceAPIService) GetLivetvListingprovidersLineups(ctx context.Context) ApiGetLivetvListingprovidersLineupsRequest {
 	return ApiGetLivetvListingprovidersLineupsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return []NameIdPair
+//
+//	@return []NameIdPair
 func (a *LiveTvServiceAPIService) GetLivetvListingprovidersLineupsExecute(r ApiGetLivetvListingprovidersLineupsRequest) ([]NameIdPair, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []NameIdPair
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue []NameIdPair
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.GetLivetvListingprovidersLineups")
@@ -7469,12 +7481,12 @@ func (a *LiveTvServiceAPIService) GetLivetvListingprovidersLineupsExecute(r ApiG
 }
 
 type ApiGetLivetvManageChannelsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveTvServiceAPI
 	startIndex *int32
-	limit *int32
-	sortBy *string
-	sortOrder *string
+	limit      *int32
+	sortBy     *string
+	sortOrder  *string
 }
 
 // Optional. The record index to start at. All items with a lower index will be dropped from the results.
@@ -7510,24 +7522,25 @@ GetLivetvManageChannels Gets the channel management list
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetLivetvManageChannelsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetLivetvManageChannelsRequest
 */
 func (a *LiveTvServiceAPIService) GetLivetvManageChannels(ctx context.Context) ApiGetLivetvManageChannelsRequest {
 	return ApiGetLivetvManageChannelsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return QueryResultBaseItemDto
+//
+//	@return QueryResultBaseItemDto
 func (a *LiveTvServiceAPIService) GetLivetvManageChannelsExecute(r ApiGetLivetvManageChannelsRequest) (*QueryResultBaseItemDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *QueryResultBaseItemDto
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *QueryResultBaseItemDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.GetLivetvManageChannels")
@@ -7622,108 +7635,108 @@ func (a *LiveTvServiceAPIService) GetLivetvManageChannelsExecute(r ApiGetLivetvM
 }
 
 type ApiGetLivetvProgramsRequest struct {
-	ctx context.Context
-	ApiService LiveTvServiceAPI
-	channelIds *string
-	artistType *string
-	maxOfficialRating *string
-	hasThemeSong *bool
-	hasThemeVideo *bool
-	hasSubtitles *bool
-	hasSpecialFeature *bool
-	hasTrailer *bool
-	isSpecialSeason *bool
-	adjacentTo *string
-	startItemId *string
-	minIndexNumber *int32
-	minStartDate *time.Time
-	maxStartDate *time.Time
-	minEndDate *time.Time
-	maxEndDate *time.Time
-	minPlayers *int32
-	maxPlayers *int32
-	parentIndexNumber *int32
-	hasParentalRating *bool
-	isHD *bool
-	isUnaired *bool
-	minCommunityRating *float64
-	minCriticRating *float64
-	airedDuringSeason *int32
-	minPremiereDate *time.Time
-	minDateLastSaved *time.Time
-	minDateLastSavedForUser *time.Time
-	maxPremiereDate *time.Time
-	hasOverview *bool
-	hasImdbId *bool
-	hasTmdbId *bool
-	hasTvdbId *bool
-	excludeItemIds *string
-	startIndex *int32
-	limit *int32
-	recursive *bool
-	searchTerm *string
-	sortOrder *string
-	parentId *string
-	fields *string
-	excludeItemTypes *string
-	includeItemTypes *string
-	anyProviderIdEquals *string
-	filters *string
-	isFavorite *bool
-	isMovie *bool
-	isSeries *bool
-	isFolder *bool
-	isNews *bool
-	isKids *bool
-	isSports *bool
-	isNew *bool
-	isPremiere *bool
-	isNewOrPremiere *bool
-	isRepeat *bool
-	projectToMedia *bool
-	mediaTypes *string
-	imageTypes *string
-	sortBy *string
-	isPlayed *bool
-	genres *string
-	officialRatings *string
-	tags *string
-	excludeTags *string
-	years *string
-	enableImages *bool
-	enableUserData *bool
-	imageTypeLimit *int32
-	enableImageTypes *string
-	person *string
-	personIds *string
-	personTypes *string
-	studios *string
-	studioIds *string
-	artists *string
-	artistIds *string
-	albums *string
-	ids *string
-	videoTypes *string
-	containers *string
-	audioCodecs *string
-	audioLayouts *string
-	videoCodecs *string
-	extendedVideoTypes *string
-	subtitleCodecs *string
-	path *string
-	userId *string
-	minOfficialRating *string
-	isLocked *bool
-	isPlaceHolder *bool
-	hasOfficialRating *bool
-	groupItemsIntoCollections *bool
-	is3D *bool
-	seriesStatus *string
-	nameStartsWithOrGreater *string
-	artistStartsWithOrGreater *string
+	ctx                            context.Context
+	ApiService                     LiveTvServiceAPI
+	channelIds                     *string
+	artistType                     *string
+	maxOfficialRating              *string
+	hasThemeSong                   *bool
+	hasThemeVideo                  *bool
+	hasSubtitles                   *bool
+	hasSpecialFeature              *bool
+	hasTrailer                     *bool
+	isSpecialSeason                *bool
+	adjacentTo                     *string
+	startItemId                    *string
+	minIndexNumber                 *int32
+	minStartDate                   *time.Time
+	maxStartDate                   *time.Time
+	minEndDate                     *time.Time
+	maxEndDate                     *time.Time
+	minPlayers                     *int32
+	maxPlayers                     *int32
+	parentIndexNumber              *int32
+	hasParentalRating              *bool
+	isHD                           *bool
+	isUnaired                      *bool
+	minCommunityRating             *float64
+	minCriticRating                *float64
+	airedDuringSeason              *int32
+	minPremiereDate                *time.Time
+	minDateLastSaved               *time.Time
+	minDateLastSavedForUser        *time.Time
+	maxPremiereDate                *time.Time
+	hasOverview                    *bool
+	hasImdbId                      *bool
+	hasTmdbId                      *bool
+	hasTvdbId                      *bool
+	excludeItemIds                 *string
+	startIndex                     *int32
+	limit                          *int32
+	recursive                      *bool
+	searchTerm                     *string
+	sortOrder                      *string
+	parentId                       *string
+	fields                         *string
+	excludeItemTypes               *string
+	includeItemTypes               *string
+	anyProviderIdEquals            *string
+	filters                        *string
+	isFavorite                     *bool
+	isMovie                        *bool
+	isSeries                       *bool
+	isFolder                       *bool
+	isNews                         *bool
+	isKids                         *bool
+	isSports                       *bool
+	isNew                          *bool
+	isPremiere                     *bool
+	isNewOrPremiere                *bool
+	isRepeat                       *bool
+	projectToMedia                 *bool
+	mediaTypes                     *string
+	imageTypes                     *string
+	sortBy                         *string
+	isPlayed                       *bool
+	genres                         *string
+	officialRatings                *string
+	tags                           *string
+	excludeTags                    *string
+	years                          *string
+	enableImages                   *bool
+	enableUserData                 *bool
+	imageTypeLimit                 *int32
+	enableImageTypes               *string
+	person                         *string
+	personIds                      *string
+	personTypes                    *string
+	studios                        *string
+	studioIds                      *string
+	artists                        *string
+	artistIds                      *string
+	albums                         *string
+	ids                            *string
+	videoTypes                     *string
+	containers                     *string
+	audioCodecs                    *string
+	audioLayouts                   *string
+	videoCodecs                    *string
+	extendedVideoTypes             *string
+	subtitleCodecs                 *string
+	path                           *string
+	userId                         *string
+	minOfficialRating              *string
+	isLocked                       *bool
+	isPlaceHolder                  *bool
+	hasOfficialRating              *bool
+	groupItemsIntoCollections      *bool
+	is3D                           *bool
+	seriesStatus                   *string
+	nameStartsWithOrGreater        *string
+	artistStartsWithOrGreater      *string
 	albumArtistStartsWithOrGreater *string
-	nameStartsWith *string
-	nameLessThan *string
+	nameStartsWith                 *string
+	nameLessThan                   *string
 }
 
 // The channels to return guide information for.
@@ -8335,22 +8348,22 @@ GetLivetvPrograms Gets available live tv epgs..
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetLivetvProgramsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetLivetvProgramsRequest
 */
 func (a *LiveTvServiceAPIService) GetLivetvPrograms(ctx context.Context) ApiGetLivetvProgramsRequest {
 	return ApiGetLivetvProgramsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *LiveTvServiceAPIService) GetLivetvProgramsExecute(r ApiGetLivetvProgramsRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.GetLivetvPrograms")
@@ -8724,107 +8737,107 @@ func (a *LiveTvServiceAPIService) GetLivetvProgramsExecute(r ApiGetLivetvProgram
 }
 
 type ApiGetLivetvProgramsRecommendedRequest struct {
-	ctx context.Context
-	ApiService LiveTvServiceAPI
-	artistType *string
-	maxOfficialRating *string
-	hasThemeSong *bool
-	hasThemeVideo *bool
-	hasSubtitles *bool
-	hasSpecialFeature *bool
-	hasTrailer *bool
-	isSpecialSeason *bool
-	adjacentTo *string
-	startItemId *string
-	minIndexNumber *int32
-	minStartDate *time.Time
-	maxStartDate *time.Time
-	minEndDate *time.Time
-	maxEndDate *time.Time
-	minPlayers *int32
-	maxPlayers *int32
-	parentIndexNumber *int32
-	hasParentalRating *bool
-	isHD *bool
-	isUnaired *bool
-	minCommunityRating *float64
-	minCriticRating *float64
-	airedDuringSeason *int32
-	minPremiereDate *time.Time
-	minDateLastSaved *time.Time
-	minDateLastSavedForUser *time.Time
-	maxPremiereDate *time.Time
-	hasOverview *bool
-	hasImdbId *bool
-	hasTmdbId *bool
-	hasTvdbId *bool
-	excludeItemIds *string
-	startIndex *int32
-	limit *int32
-	recursive *bool
-	searchTerm *string
-	sortOrder *string
-	parentId *string
-	fields *string
-	excludeItemTypes *string
-	includeItemTypes *string
-	anyProviderIdEquals *string
-	filters *string
-	isFavorite *bool
-	isMovie *bool
-	isSeries *bool
-	isFolder *bool
-	isNews *bool
-	isKids *bool
-	isSports *bool
-	isNew *bool
-	isPremiere *bool
-	isNewOrPremiere *bool
-	isRepeat *bool
-	projectToMedia *bool
-	mediaTypes *string
-	imageTypes *string
-	sortBy *string
-	isPlayed *bool
-	genres *string
-	officialRatings *string
-	tags *string
-	excludeTags *string
-	years *string
-	enableImages *bool
-	enableUserData *bool
-	imageTypeLimit *int32
-	enableImageTypes *string
-	person *string
-	personIds *string
-	personTypes *string
-	studios *string
-	studioIds *string
-	artists *string
-	artistIds *string
-	albums *string
-	ids *string
-	videoTypes *string
-	containers *string
-	audioCodecs *string
-	audioLayouts *string
-	videoCodecs *string
-	extendedVideoTypes *string
-	subtitleCodecs *string
-	path *string
-	userId *string
-	minOfficialRating *string
-	isLocked *bool
-	isPlaceHolder *bool
-	hasOfficialRating *bool
-	groupItemsIntoCollections *bool
-	is3D *bool
-	seriesStatus *string
-	nameStartsWithOrGreater *string
-	artistStartsWithOrGreater *string
+	ctx                            context.Context
+	ApiService                     LiveTvServiceAPI
+	artistType                     *string
+	maxOfficialRating              *string
+	hasThemeSong                   *bool
+	hasThemeVideo                  *bool
+	hasSubtitles                   *bool
+	hasSpecialFeature              *bool
+	hasTrailer                     *bool
+	isSpecialSeason                *bool
+	adjacentTo                     *string
+	startItemId                    *string
+	minIndexNumber                 *int32
+	minStartDate                   *time.Time
+	maxStartDate                   *time.Time
+	minEndDate                     *time.Time
+	maxEndDate                     *time.Time
+	minPlayers                     *int32
+	maxPlayers                     *int32
+	parentIndexNumber              *int32
+	hasParentalRating              *bool
+	isHD                           *bool
+	isUnaired                      *bool
+	minCommunityRating             *float64
+	minCriticRating                *float64
+	airedDuringSeason              *int32
+	minPremiereDate                *time.Time
+	minDateLastSaved               *time.Time
+	minDateLastSavedForUser        *time.Time
+	maxPremiereDate                *time.Time
+	hasOverview                    *bool
+	hasImdbId                      *bool
+	hasTmdbId                      *bool
+	hasTvdbId                      *bool
+	excludeItemIds                 *string
+	startIndex                     *int32
+	limit                          *int32
+	recursive                      *bool
+	searchTerm                     *string
+	sortOrder                      *string
+	parentId                       *string
+	fields                         *string
+	excludeItemTypes               *string
+	includeItemTypes               *string
+	anyProviderIdEquals            *string
+	filters                        *string
+	isFavorite                     *bool
+	isMovie                        *bool
+	isSeries                       *bool
+	isFolder                       *bool
+	isNews                         *bool
+	isKids                         *bool
+	isSports                       *bool
+	isNew                          *bool
+	isPremiere                     *bool
+	isNewOrPremiere                *bool
+	isRepeat                       *bool
+	projectToMedia                 *bool
+	mediaTypes                     *string
+	imageTypes                     *string
+	sortBy                         *string
+	isPlayed                       *bool
+	genres                         *string
+	officialRatings                *string
+	tags                           *string
+	excludeTags                    *string
+	years                          *string
+	enableImages                   *bool
+	enableUserData                 *bool
+	imageTypeLimit                 *int32
+	enableImageTypes               *string
+	person                         *string
+	personIds                      *string
+	personTypes                    *string
+	studios                        *string
+	studioIds                      *string
+	artists                        *string
+	artistIds                      *string
+	albums                         *string
+	ids                            *string
+	videoTypes                     *string
+	containers                     *string
+	audioCodecs                    *string
+	audioLayouts                   *string
+	videoCodecs                    *string
+	extendedVideoTypes             *string
+	subtitleCodecs                 *string
+	path                           *string
+	userId                         *string
+	minOfficialRating              *string
+	isLocked                       *bool
+	isPlaceHolder                  *bool
+	hasOfficialRating              *bool
+	groupItemsIntoCollections      *bool
+	is3D                           *bool
+	seriesStatus                   *string
+	nameStartsWithOrGreater        *string
+	artistStartsWithOrGreater      *string
 	albumArtistStartsWithOrGreater *string
-	nameStartsWith *string
-	nameLessThan *string
+	nameStartsWith                 *string
+	nameLessThan                   *string
 }
 
 // Artist or AlbumArtist
@@ -9430,24 +9443,25 @@ GetLivetvProgramsRecommended Gets available live tv epgs..
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetLivetvProgramsRecommendedRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetLivetvProgramsRecommendedRequest
 */
 func (a *LiveTvServiceAPIService) GetLivetvProgramsRecommended(ctx context.Context) ApiGetLivetvProgramsRecommendedRequest {
 	return ApiGetLivetvProgramsRecommendedRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return QueryResultBaseItemDto
+//
+//	@return QueryResultBaseItemDto
 func (a *LiveTvServiceAPIService) GetLivetvProgramsRecommendedExecute(r ApiGetLivetvProgramsRecommendedRequest) (*QueryResultBaseItemDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *QueryResultBaseItemDto
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *QueryResultBaseItemDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.GetLivetvProgramsRecommended")
@@ -9827,111 +9841,111 @@ func (a *LiveTvServiceAPIService) GetLivetvProgramsRecommendedExecute(r ApiGetLi
 }
 
 type ApiGetLivetvRecordingsRequest struct {
-	ctx context.Context
-	ApiService LiveTvServiceAPI
-	channelId *string
-	status *LiveTvRecordingStatus
-	isInProgress *bool
-	seriesTimerId *string
-	artistType *string
-	maxOfficialRating *string
-	hasThemeSong *bool
-	hasThemeVideo *bool
-	hasSubtitles *bool
-	hasSpecialFeature *bool
-	hasTrailer *bool
-	isSpecialSeason *bool
-	adjacentTo *string
-	startItemId *string
-	minIndexNumber *int32
-	minStartDate *time.Time
-	maxStartDate *time.Time
-	minEndDate *time.Time
-	maxEndDate *time.Time
-	minPlayers *int32
-	maxPlayers *int32
-	parentIndexNumber *int32
-	hasParentalRating *bool
-	isHD *bool
-	isUnaired *bool
-	minCommunityRating *float64
-	minCriticRating *float64
-	airedDuringSeason *int32
-	minPremiereDate *time.Time
-	minDateLastSaved *time.Time
-	minDateLastSavedForUser *time.Time
-	maxPremiereDate *time.Time
-	hasOverview *bool
-	hasImdbId *bool
-	hasTmdbId *bool
-	hasTvdbId *bool
-	excludeItemIds *string
-	startIndex *int32
-	limit *int32
-	recursive *bool
-	searchTerm *string
-	sortOrder *string
-	parentId *string
-	fields *string
-	excludeItemTypes *string
-	includeItemTypes *string
-	anyProviderIdEquals *string
-	filters *string
-	isFavorite *bool
-	isMovie *bool
-	isSeries *bool
-	isFolder *bool
-	isNews *bool
-	isKids *bool
-	isSports *bool
-	isNew *bool
-	isPremiere *bool
-	isNewOrPremiere *bool
-	isRepeat *bool
-	projectToMedia *bool
-	mediaTypes *string
-	imageTypes *string
-	sortBy *string
-	isPlayed *bool
-	genres *string
-	officialRatings *string
-	tags *string
-	excludeTags *string
-	years *string
-	enableImages *bool
-	enableUserData *bool
-	imageTypeLimit *int32
-	enableImageTypes *string
-	person *string
-	personIds *string
-	personTypes *string
-	studios *string
-	studioIds *string
-	artists *string
-	artistIds *string
-	albums *string
-	ids *string
-	videoTypes *string
-	containers *string
-	audioCodecs *string
-	audioLayouts *string
-	videoCodecs *string
-	extendedVideoTypes *string
-	subtitleCodecs *string
-	path *string
-	userId *string
-	minOfficialRating *string
-	isLocked *bool
-	isPlaceHolder *bool
-	hasOfficialRating *bool
-	groupItemsIntoCollections *bool
-	is3D *bool
-	seriesStatus *string
-	nameStartsWithOrGreater *string
-	artistStartsWithOrGreater *string
+	ctx                            context.Context
+	ApiService                     LiveTvServiceAPI
+	channelId                      *string
+	status                         *LiveTvRecordingStatus
+	isInProgress                   *bool
+	seriesTimerId                  *string
+	artistType                     *string
+	maxOfficialRating              *string
+	hasThemeSong                   *bool
+	hasThemeVideo                  *bool
+	hasSubtitles                   *bool
+	hasSpecialFeature              *bool
+	hasTrailer                     *bool
+	isSpecialSeason                *bool
+	adjacentTo                     *string
+	startItemId                    *string
+	minIndexNumber                 *int32
+	minStartDate                   *time.Time
+	maxStartDate                   *time.Time
+	minEndDate                     *time.Time
+	maxEndDate                     *time.Time
+	minPlayers                     *int32
+	maxPlayers                     *int32
+	parentIndexNumber              *int32
+	hasParentalRating              *bool
+	isHD                           *bool
+	isUnaired                      *bool
+	minCommunityRating             *float64
+	minCriticRating                *float64
+	airedDuringSeason              *int32
+	minPremiereDate                *time.Time
+	minDateLastSaved               *time.Time
+	minDateLastSavedForUser        *time.Time
+	maxPremiereDate                *time.Time
+	hasOverview                    *bool
+	hasImdbId                      *bool
+	hasTmdbId                      *bool
+	hasTvdbId                      *bool
+	excludeItemIds                 *string
+	startIndex                     *int32
+	limit                          *int32
+	recursive                      *bool
+	searchTerm                     *string
+	sortOrder                      *string
+	parentId                       *string
+	fields                         *string
+	excludeItemTypes               *string
+	includeItemTypes               *string
+	anyProviderIdEquals            *string
+	filters                        *string
+	isFavorite                     *bool
+	isMovie                        *bool
+	isSeries                       *bool
+	isFolder                       *bool
+	isNews                         *bool
+	isKids                         *bool
+	isSports                       *bool
+	isNew                          *bool
+	isPremiere                     *bool
+	isNewOrPremiere                *bool
+	isRepeat                       *bool
+	projectToMedia                 *bool
+	mediaTypes                     *string
+	imageTypes                     *string
+	sortBy                         *string
+	isPlayed                       *bool
+	genres                         *string
+	officialRatings                *string
+	tags                           *string
+	excludeTags                    *string
+	years                          *string
+	enableImages                   *bool
+	enableUserData                 *bool
+	imageTypeLimit                 *int32
+	enableImageTypes               *string
+	person                         *string
+	personIds                      *string
+	personTypes                    *string
+	studios                        *string
+	studioIds                      *string
+	artists                        *string
+	artistIds                      *string
+	albums                         *string
+	ids                            *string
+	videoTypes                     *string
+	containers                     *string
+	audioCodecs                    *string
+	audioLayouts                   *string
+	videoCodecs                    *string
+	extendedVideoTypes             *string
+	subtitleCodecs                 *string
+	path                           *string
+	userId                         *string
+	minOfficialRating              *string
+	isLocked                       *bool
+	isPlaceHolder                  *bool
+	hasOfficialRating              *bool
+	groupItemsIntoCollections      *bool
+	is3D                           *bool
+	seriesStatus                   *string
+	nameStartsWithOrGreater        *string
+	artistStartsWithOrGreater      *string
 	albumArtistStartsWithOrGreater *string
-	nameStartsWith *string
-	nameLessThan *string
+	nameStartsWith                 *string
+	nameLessThan                   *string
 }
 
 // Optional filter by channel id.
@@ -10561,22 +10575,22 @@ GetLivetvRecordings Gets live tv recordings
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetLivetvRecordingsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetLivetvRecordingsRequest
 */
 func (a *LiveTvServiceAPIService) GetLivetvRecordings(ctx context.Context) ApiGetLivetvRecordingsRequest {
 	return ApiGetLivetvRecordingsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *LiveTvServiceAPIService) GetLivetvRecordingsExecute(r ApiGetLivetvRecordingsRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.GetLivetvRecordings")
@@ -10959,10 +10973,10 @@ func (a *LiveTvServiceAPIService) GetLivetvRecordingsExecute(r ApiGetLivetvRecor
 }
 
 type ApiGetLivetvRecordingsByIdRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveTvServiceAPI
-	id string
-	userId *string
+	id         string
+	userId     *string
 }
 
 // Optional attach user data.
@@ -10980,26 +10994,27 @@ GetLivetvRecordingsById Gets a live tv recording
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Recording Id
- @return ApiGetLivetvRecordingsByIdRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Recording Id
+	@return ApiGetLivetvRecordingsByIdRequest
 */
 func (a *LiveTvServiceAPIService) GetLivetvRecordingsById(ctx context.Context, id string) ApiGetLivetvRecordingsByIdRequest {
 	return ApiGetLivetvRecordingsByIdRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
-//  @return BaseItemDto
+//
+//	@return BaseItemDto
 func (a *LiveTvServiceAPIService) GetLivetvRecordingsByIdExecute(r ApiGetLivetvRecordingsByIdRequest) (*BaseItemDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *BaseItemDto
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *BaseItemDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.GetLivetvRecordingsById")
@@ -11086,107 +11101,107 @@ func (a *LiveTvServiceAPIService) GetLivetvRecordingsByIdExecute(r ApiGetLivetvR
 }
 
 type ApiGetLivetvRecordingsFoldersRequest struct {
-	ctx context.Context
-	ApiService LiveTvServiceAPI
-	artistType *string
-	maxOfficialRating *string
-	hasThemeSong *bool
-	hasThemeVideo *bool
-	hasSubtitles *bool
-	hasSpecialFeature *bool
-	hasTrailer *bool
-	isSpecialSeason *bool
-	adjacentTo *string
-	startItemId *string
-	minIndexNumber *int32
-	minStartDate *time.Time
-	maxStartDate *time.Time
-	minEndDate *time.Time
-	maxEndDate *time.Time
-	minPlayers *int32
-	maxPlayers *int32
-	parentIndexNumber *int32
-	hasParentalRating *bool
-	isHD *bool
-	isUnaired *bool
-	minCommunityRating *float64
-	minCriticRating *float64
-	airedDuringSeason *int32
-	minPremiereDate *time.Time
-	minDateLastSaved *time.Time
-	minDateLastSavedForUser *time.Time
-	maxPremiereDate *time.Time
-	hasOverview *bool
-	hasImdbId *bool
-	hasTmdbId *bool
-	hasTvdbId *bool
-	excludeItemIds *string
-	startIndex *int32
-	limit *int32
-	recursive *bool
-	searchTerm *string
-	sortOrder *string
-	parentId *string
-	fields *string
-	excludeItemTypes *string
-	includeItemTypes *string
-	anyProviderIdEquals *string
-	filters *string
-	isFavorite *bool
-	isMovie *bool
-	isSeries *bool
-	isFolder *bool
-	isNews *bool
-	isKids *bool
-	isSports *bool
-	isNew *bool
-	isPremiere *bool
-	isNewOrPremiere *bool
-	isRepeat *bool
-	projectToMedia *bool
-	mediaTypes *string
-	imageTypes *string
-	sortBy *string
-	isPlayed *bool
-	genres *string
-	officialRatings *string
-	tags *string
-	excludeTags *string
-	years *string
-	enableImages *bool
-	enableUserData *bool
-	imageTypeLimit *int32
-	enableImageTypes *string
-	person *string
-	personIds *string
-	personTypes *string
-	studios *string
-	studioIds *string
-	artists *string
-	artistIds *string
-	albums *string
-	ids *string
-	videoTypes *string
-	containers *string
-	audioCodecs *string
-	audioLayouts *string
-	videoCodecs *string
-	extendedVideoTypes *string
-	subtitleCodecs *string
-	path *string
-	userId *string
-	minOfficialRating *string
-	isLocked *bool
-	isPlaceHolder *bool
-	hasOfficialRating *bool
-	groupItemsIntoCollections *bool
-	is3D *bool
-	seriesStatus *string
-	nameStartsWithOrGreater *string
-	artistStartsWithOrGreater *string
+	ctx                            context.Context
+	ApiService                     LiveTvServiceAPI
+	artistType                     *string
+	maxOfficialRating              *string
+	hasThemeSong                   *bool
+	hasThemeVideo                  *bool
+	hasSubtitles                   *bool
+	hasSpecialFeature              *bool
+	hasTrailer                     *bool
+	isSpecialSeason                *bool
+	adjacentTo                     *string
+	startItemId                    *string
+	minIndexNumber                 *int32
+	minStartDate                   *time.Time
+	maxStartDate                   *time.Time
+	minEndDate                     *time.Time
+	maxEndDate                     *time.Time
+	minPlayers                     *int32
+	maxPlayers                     *int32
+	parentIndexNumber              *int32
+	hasParentalRating              *bool
+	isHD                           *bool
+	isUnaired                      *bool
+	minCommunityRating             *float64
+	minCriticRating                *float64
+	airedDuringSeason              *int32
+	minPremiereDate                *time.Time
+	minDateLastSaved               *time.Time
+	minDateLastSavedForUser        *time.Time
+	maxPremiereDate                *time.Time
+	hasOverview                    *bool
+	hasImdbId                      *bool
+	hasTmdbId                      *bool
+	hasTvdbId                      *bool
+	excludeItemIds                 *string
+	startIndex                     *int32
+	limit                          *int32
+	recursive                      *bool
+	searchTerm                     *string
+	sortOrder                      *string
+	parentId                       *string
+	fields                         *string
+	excludeItemTypes               *string
+	includeItemTypes               *string
+	anyProviderIdEquals            *string
+	filters                        *string
+	isFavorite                     *bool
+	isMovie                        *bool
+	isSeries                       *bool
+	isFolder                       *bool
+	isNews                         *bool
+	isKids                         *bool
+	isSports                       *bool
+	isNew                          *bool
+	isPremiere                     *bool
+	isNewOrPremiere                *bool
+	isRepeat                       *bool
+	projectToMedia                 *bool
+	mediaTypes                     *string
+	imageTypes                     *string
+	sortBy                         *string
+	isPlayed                       *bool
+	genres                         *string
+	officialRatings                *string
+	tags                           *string
+	excludeTags                    *string
+	years                          *string
+	enableImages                   *bool
+	enableUserData                 *bool
+	imageTypeLimit                 *int32
+	enableImageTypes               *string
+	person                         *string
+	personIds                      *string
+	personTypes                    *string
+	studios                        *string
+	studioIds                      *string
+	artists                        *string
+	artistIds                      *string
+	albums                         *string
+	ids                            *string
+	videoTypes                     *string
+	containers                     *string
+	audioCodecs                    *string
+	audioLayouts                   *string
+	videoCodecs                    *string
+	extendedVideoTypes             *string
+	subtitleCodecs                 *string
+	path                           *string
+	userId                         *string
+	minOfficialRating              *string
+	isLocked                       *bool
+	isPlaceHolder                  *bool
+	hasOfficialRating              *bool
+	groupItemsIntoCollections      *bool
+	is3D                           *bool
+	seriesStatus                   *string
+	nameStartsWithOrGreater        *string
+	artistStartsWithOrGreater      *string
 	albumArtistStartsWithOrGreater *string
-	nameStartsWith *string
-	nameLessThan *string
+	nameStartsWith                 *string
+	nameLessThan                   *string
 }
 
 // Artist or AlbumArtist
@@ -11792,24 +11807,25 @@ GetLivetvRecordingsFolders Gets recording folders
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetLivetvRecordingsFoldersRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetLivetvRecordingsFoldersRequest
 */
 func (a *LiveTvServiceAPIService) GetLivetvRecordingsFolders(ctx context.Context) ApiGetLivetvRecordingsFoldersRequest {
 	return ApiGetLivetvRecordingsFoldersRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return []BaseItemDto
+//
+//	@return []BaseItemDto
 func (a *LiveTvServiceAPIService) GetLivetvRecordingsFoldersExecute(r ApiGetLivetvRecordingsFoldersRequest) ([]BaseItemDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []BaseItemDto
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue []BaseItemDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.GetLivetvRecordingsFolders")
@@ -12189,7 +12205,7 @@ func (a *LiveTvServiceAPIService) GetLivetvRecordingsFoldersExecute(r ApiGetLive
 }
 
 type ApiGetLivetvRecordingsGroupsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveTvServiceAPI
 }
 
@@ -12202,24 +12218,25 @@ GetLivetvRecordingsGroups Gets live tv recording groups
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetLivetvRecordingsGroupsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetLivetvRecordingsGroupsRequest
 */
 func (a *LiveTvServiceAPIService) GetLivetvRecordingsGroups(ctx context.Context) ApiGetLivetvRecordingsGroupsRequest {
 	return ApiGetLivetvRecordingsGroupsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return QueryResultBaseItemDto
+//
+//	@return QueryResultBaseItemDto
 func (a *LiveTvServiceAPIService) GetLivetvRecordingsGroupsExecute(r ApiGetLivetvRecordingsGroupsRequest) (*QueryResultBaseItemDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *QueryResultBaseItemDto
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *QueryResultBaseItemDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.GetLivetvRecordingsGroups")
@@ -12302,7 +12319,7 @@ func (a *LiveTvServiceAPIService) GetLivetvRecordingsGroupsExecute(r ApiGetLivet
 }
 
 type ApiGetLivetvRecordingsSeriesRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveTvServiceAPI
 }
 
@@ -12315,24 +12332,25 @@ GetLivetvRecordingsSeries Gets live tv recordings
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetLivetvRecordingsSeriesRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetLivetvRecordingsSeriesRequest
 */
 func (a *LiveTvServiceAPIService) GetLivetvRecordingsSeries(ctx context.Context) ApiGetLivetvRecordingsSeriesRequest {
 	return ApiGetLivetvRecordingsSeriesRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return QueryResultBaseItemDto
+//
+//	@return QueryResultBaseItemDto
 func (a *LiveTvServiceAPIService) GetLivetvRecordingsSeriesExecute(r ApiGetLivetvRecordingsSeriesRequest) (*QueryResultBaseItemDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *QueryResultBaseItemDto
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *QueryResultBaseItemDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.GetLivetvRecordingsSeries")
@@ -12415,12 +12433,12 @@ func (a *LiveTvServiceAPIService) GetLivetvRecordingsSeriesExecute(r ApiGetLivet
 }
 
 type ApiGetLivetvSeriestimersRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveTvServiceAPI
-	sortBy *string
-	sortOrder *SortOrder
+	sortBy     *string
+	sortOrder  *SortOrder
 	startIndex *int32
-	limit *int32
+	limit      *int32
 }
 
 // Optional. Sort by SortName or Priority
@@ -12456,24 +12474,25 @@ GetLivetvSeriestimers Gets live tv series timers
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetLivetvSeriestimersRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetLivetvSeriestimersRequest
 */
 func (a *LiveTvServiceAPIService) GetLivetvSeriestimers(ctx context.Context) ApiGetLivetvSeriestimersRequest {
 	return ApiGetLivetvSeriestimersRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return QueryResultLiveTvSeriesTimerInfoDto
+//
+//	@return QueryResultLiveTvSeriesTimerInfoDto
 func (a *LiveTvServiceAPIService) GetLivetvSeriestimersExecute(r ApiGetLivetvSeriestimersRequest) (*QueryResultLiveTvSeriesTimerInfoDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *QueryResultLiveTvSeriesTimerInfoDto
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *QueryResultLiveTvSeriesTimerInfoDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.GetLivetvSeriestimers")
@@ -12568,9 +12587,9 @@ func (a *LiveTvServiceAPIService) GetLivetvSeriestimersExecute(r ApiGetLivetvSer
 }
 
 type ApiGetLivetvSeriestimersByIdRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveTvServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiGetLivetvSeriestimersByIdRequest) Execute() (*LiveTvTimerInfoDto, *http.Response, error) {
@@ -12582,26 +12601,27 @@ GetLivetvSeriestimersById Gets a live tv series timer
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Timer Id
- @return ApiGetLivetvSeriestimersByIdRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Timer Id
+	@return ApiGetLivetvSeriestimersByIdRequest
 */
 func (a *LiveTvServiceAPIService) GetLivetvSeriestimersById(ctx context.Context, id string) ApiGetLivetvSeriestimersByIdRequest {
 	return ApiGetLivetvSeriestimersByIdRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
-//  @return LiveTvTimerInfoDto
+//
+//	@return LiveTvTimerInfoDto
 func (a *LiveTvServiceAPIService) GetLivetvSeriestimersByIdExecute(r ApiGetLivetvSeriestimersByIdRequest) (*LiveTvTimerInfoDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *LiveTvTimerInfoDto
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *LiveTvTimerInfoDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.GetLivetvSeriestimersById")
@@ -12685,9 +12705,9 @@ func (a *LiveTvServiceAPIService) GetLivetvSeriestimersByIdExecute(r ApiGetLivet
 }
 
 type ApiGetLivetvTimersRequest struct {
-	ctx context.Context
-	ApiService LiveTvServiceAPI
-	channelId *string
+	ctx           context.Context
+	ApiService    LiveTvServiceAPI
+	channelId     *string
 	seriesTimerId *string
 }
 
@@ -12712,24 +12732,25 @@ GetLivetvTimers Gets live tv timers
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetLivetvTimersRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetLivetvTimersRequest
 */
 func (a *LiveTvServiceAPIService) GetLivetvTimers(ctx context.Context) ApiGetLivetvTimersRequest {
 	return ApiGetLivetvTimersRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return QueryResultLiveTvTimerInfoDto
+//
+//	@return QueryResultLiveTvTimerInfoDto
 func (a *LiveTvServiceAPIService) GetLivetvTimersExecute(r ApiGetLivetvTimersRequest) (*QueryResultLiveTvTimerInfoDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *QueryResultLiveTvTimerInfoDto
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *QueryResultLiveTvTimerInfoDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.GetLivetvTimers")
@@ -12818,9 +12839,9 @@ func (a *LiveTvServiceAPIService) GetLivetvTimersExecute(r ApiGetLivetvTimersReq
 }
 
 type ApiGetLivetvTimersByIdRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveTvServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiGetLivetvTimersByIdRequest) Execute() (*LiveTvTimerInfoDto, *http.Response, error) {
@@ -12832,26 +12853,27 @@ GetLivetvTimersById Gets a live tv timer
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Timer Id
- @return ApiGetLivetvTimersByIdRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Timer Id
+	@return ApiGetLivetvTimersByIdRequest
 */
 func (a *LiveTvServiceAPIService) GetLivetvTimersById(ctx context.Context, id string) ApiGetLivetvTimersByIdRequest {
 	return ApiGetLivetvTimersByIdRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
-//  @return LiveTvTimerInfoDto
+//
+//	@return LiveTvTimerInfoDto
 func (a *LiveTvServiceAPIService) GetLivetvTimersByIdExecute(r ApiGetLivetvTimersByIdRequest) (*LiveTvTimerInfoDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *LiveTvTimerInfoDto
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *LiveTvTimerInfoDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.GetLivetvTimersById")
@@ -12935,9 +12957,9 @@ func (a *LiveTvServiceAPIService) GetLivetvTimersByIdExecute(r ApiGetLivetvTimer
 }
 
 type ApiGetLivetvTimersDefaultsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveTvServiceAPI
-	programId *string
+	programId  *string
 }
 
 // Optional, to attach default values based on a program.
@@ -12955,24 +12977,25 @@ GetLivetvTimersDefaults Gets default values for a new timer
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetLivetvTimersDefaultsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetLivetvTimersDefaultsRequest
 */
 func (a *LiveTvServiceAPIService) GetLivetvTimersDefaults(ctx context.Context) ApiGetLivetvTimersDefaultsRequest {
 	return ApiGetLivetvTimersDefaultsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return LiveTvSeriesTimerInfoDto
+//
+//	@return LiveTvSeriesTimerInfoDto
 func (a *LiveTvServiceAPIService) GetLivetvTimersDefaultsExecute(r ApiGetLivetvTimersDefaultsRequest) (*LiveTvSeriesTimerInfoDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *LiveTvSeriesTimerInfoDto
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *LiveTvSeriesTimerInfoDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.GetLivetvTimersDefaults")
@@ -13058,7 +13081,7 @@ func (a *LiveTvServiceAPIService) GetLivetvTimersDefaultsExecute(r ApiGetLivetvT
 }
 
 type ApiGetLivetvTunerhostsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveTvServiceAPI
 }
 
@@ -13071,24 +13094,25 @@ GetLivetvTunerhosts Gets tuner hosts
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetLivetvTunerhostsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetLivetvTunerhostsRequest
 */
 func (a *LiveTvServiceAPIService) GetLivetvTunerhosts(ctx context.Context) ApiGetLivetvTunerhostsRequest {
 	return ApiGetLivetvTunerhostsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return []LiveTvTunerHostInfo
+//
+//	@return []LiveTvTunerHostInfo
 func (a *LiveTvServiceAPIService) GetLivetvTunerhostsExecute(r ApiGetLivetvTunerhostsRequest) ([]LiveTvTunerHostInfo, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []LiveTvTunerHostInfo
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue []LiveTvTunerHostInfo
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.GetLivetvTunerhosts")
@@ -13171,9 +13195,9 @@ func (a *LiveTvServiceAPIService) GetLivetvTunerhostsExecute(r ApiGetLivetvTuner
 }
 
 type ApiGetLivetvTunerhostsDefaultByTypeRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveTvServiceAPI
-	type_ string
+	type_      string
 }
 
 func (r ApiGetLivetvTunerhostsDefaultByTypeRequest) Execute() (*LiveTvTunerHostInfo, *http.Response, error) {
@@ -13185,26 +13209,27 @@ GetLivetvTunerhostsDefaultByType Gets tuner hosts
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param type_ Type
- @return ApiGetLivetvTunerhostsDefaultByTypeRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param type_ Type
+	@return ApiGetLivetvTunerhostsDefaultByTypeRequest
 */
 func (a *LiveTvServiceAPIService) GetLivetvTunerhostsDefaultByType(ctx context.Context, type_ string) ApiGetLivetvTunerhostsDefaultByTypeRequest {
 	return ApiGetLivetvTunerhostsDefaultByTypeRequest{
 		ApiService: a,
-		ctx: ctx,
-		type_: type_,
+		ctx:        ctx,
+		type_:      type_,
 	}
 }
 
 // Execute executes the request
-//  @return LiveTvTunerHostInfo
+//
+//	@return LiveTvTunerHostInfo
 func (a *LiveTvServiceAPIService) GetLivetvTunerhostsDefaultByTypeExecute(r ApiGetLivetvTunerhostsDefaultByTypeRequest) (*LiveTvTunerHostInfo, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *LiveTvTunerHostInfo
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *LiveTvTunerHostInfo
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.GetLivetvTunerhostsDefaultByType")
@@ -13288,7 +13313,7 @@ func (a *LiveTvServiceAPIService) GetLivetvTunerhostsDefaultByTypeExecute(r ApiG
 }
 
 type ApiGetLivetvTunerhostsTypesRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveTvServiceAPI
 }
 
@@ -13301,24 +13326,25 @@ GetLivetvTunerhostsTypes Method for GetLivetvTunerhostsTypes
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetLivetvTunerhostsTypesRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetLivetvTunerhostsTypesRequest
 */
 func (a *LiveTvServiceAPIService) GetLivetvTunerhostsTypes(ctx context.Context) ApiGetLivetvTunerhostsTypesRequest {
 	return ApiGetLivetvTunerhostsTypesRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return []NameIdPair
+//
+//	@return []NameIdPair
 func (a *LiveTvServiceAPIService) GetLivetvTunerhostsTypesExecute(r ApiGetLivetvTunerhostsTypesRequest) ([]NameIdPair, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []NameIdPair
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue []NameIdPair
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.GetLivetvTunerhostsTypes")
@@ -13401,7 +13427,7 @@ func (a *LiveTvServiceAPIService) GetLivetvTunerhostsTypesExecute(r ApiGetLivetv
 }
 
 type ApiGetLivetvTunersDiscoverRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveTvServiceAPI
 }
 
@@ -13414,24 +13440,25 @@ GetLivetvTunersDiscover Method for GetLivetvTunersDiscover
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetLivetvTunersDiscoverRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetLivetvTunersDiscoverRequest
 */
 func (a *LiveTvServiceAPIService) GetLivetvTunersDiscover(ctx context.Context) ApiGetLivetvTunersDiscoverRequest {
 	return ApiGetLivetvTunersDiscoverRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return []LiveTvTunerHostInfo
+//
+//	@return []LiveTvTunerHostInfo
 func (a *LiveTvServiceAPIService) GetLivetvTunersDiscoverExecute(r ApiGetLivetvTunersDiscoverRequest) ([]LiveTvTunerHostInfo, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []LiveTvTunerHostInfo
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue []LiveTvTunerHostInfo
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.GetLivetvTunersDiscover")
@@ -13514,7 +13541,7 @@ func (a *LiveTvServiceAPIService) GetLivetvTunersDiscoverExecute(r ApiGetLivetvT
 }
 
 type ApiGetLivetvTunersDiscvoverRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveTvServiceAPI
 }
 
@@ -13527,24 +13554,25 @@ GetLivetvTunersDiscvover Method for GetLivetvTunersDiscvover
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetLivetvTunersDiscvoverRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetLivetvTunersDiscvoverRequest
 */
 func (a *LiveTvServiceAPIService) GetLivetvTunersDiscvover(ctx context.Context) ApiGetLivetvTunersDiscvoverRequest {
 	return ApiGetLivetvTunersDiscvoverRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return []LiveTvTunerHostInfo
+//
+//	@return []LiveTvTunerHostInfo
 func (a *LiveTvServiceAPIService) GetLivetvTunersDiscvoverExecute(r ApiGetLivetvTunersDiscvoverRequest) ([]LiveTvTunerHostInfo, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []LiveTvTunerHostInfo
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue []LiveTvTunerHostInfo
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.GetLivetvTunersDiscvover")
@@ -13627,7 +13655,7 @@ func (a *LiveTvServiceAPIService) GetLivetvTunersDiscvoverExecute(r ApiGetLivetv
 }
 
 type ApiHeadLivetvChannelmappingoptionsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveTvServiceAPI
 	providerId *string
 }
@@ -13647,22 +13675,22 @@ HeadLivetvChannelmappingoptions Method for HeadLivetvChannelmappingoptions
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiHeadLivetvChannelmappingoptionsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiHeadLivetvChannelmappingoptionsRequest
 */
 func (a *LiveTvServiceAPIService) HeadLivetvChannelmappingoptions(ctx context.Context) ApiHeadLivetvChannelmappingoptionsRequest {
 	return ApiHeadLivetvChannelmappingoptionsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *LiveTvServiceAPIService) HeadLivetvChannelmappingoptionsExecute(r ApiHeadLivetvChannelmappingoptionsRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodHead
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodHead
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.HeadLivetvChannelmappingoptions")
@@ -13740,7 +13768,7 @@ func (a *LiveTvServiceAPIService) HeadLivetvChannelmappingoptionsExecute(r ApiHe
 }
 
 type ApiHeadLivetvChannelmappingsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveTvServiceAPI
 	providerId *string
 }
@@ -13760,22 +13788,22 @@ HeadLivetvChannelmappings Method for HeadLivetvChannelmappings
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiHeadLivetvChannelmappingsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiHeadLivetvChannelmappingsRequest
 */
 func (a *LiveTvServiceAPIService) HeadLivetvChannelmappings(ctx context.Context) ApiHeadLivetvChannelmappingsRequest {
 	return ApiHeadLivetvChannelmappingsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *LiveTvServiceAPIService) HeadLivetvChannelmappingsExecute(r ApiHeadLivetvChannelmappingsRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodHead
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodHead
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.HeadLivetvChannelmappings")
@@ -13853,7 +13881,7 @@ func (a *LiveTvServiceAPIService) HeadLivetvChannelmappingsExecute(r ApiHeadLive
 }
 
 type ApiPostLivetvChannelmappingoptionsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveTvServiceAPI
 	providerId *string
 }
@@ -13873,22 +13901,22 @@ PostLivetvChannelmappingoptions Method for PostLivetvChannelmappingoptions
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostLivetvChannelmappingoptionsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostLivetvChannelmappingoptionsRequest
 */
 func (a *LiveTvServiceAPIService) PostLivetvChannelmappingoptions(ctx context.Context) ApiPostLivetvChannelmappingoptionsRequest {
 	return ApiPostLivetvChannelmappingoptionsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *LiveTvServiceAPIService) PostLivetvChannelmappingoptionsExecute(r ApiPostLivetvChannelmappingoptionsRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.PostLivetvChannelmappingoptions")
@@ -13966,9 +13994,9 @@ func (a *LiveTvServiceAPIService) PostLivetvChannelmappingoptionsExecute(r ApiPo
 }
 
 type ApiPostLivetvChannelmappingsRequest struct {
-	ctx context.Context
-	ApiService LiveTvServiceAPI
-	providerId *string
+	ctx                  context.Context
+	ApiService           LiveTvServiceAPI
+	providerId           *string
 	apiSetChannelMapping *ApiSetChannelMapping
 }
 
@@ -13993,22 +14021,22 @@ PostLivetvChannelmappings Method for PostLivetvChannelmappings
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostLivetvChannelmappingsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostLivetvChannelmappingsRequest
 */
 func (a *LiveTvServiceAPIService) PostLivetvChannelmappings(ctx context.Context) ApiPostLivetvChannelmappingsRequest {
 	return ApiPostLivetvChannelmappingsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *LiveTvServiceAPIService) PostLivetvChannelmappingsExecute(r ApiPostLivetvChannelmappingsRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.PostLivetvChannelmappings")
@@ -14091,12 +14119,12 @@ func (a *LiveTvServiceAPIService) PostLivetvChannelmappingsExecute(r ApiPostLive
 }
 
 type ApiPostLivetvListingprovidersRequest struct {
-	ctx context.Context
-	ApiService LiveTvServiceAPI
+	ctx                        context.Context
+	ApiService                 LiveTvServiceAPI
 	liveTvListingsProviderInfo *LiveTvListingsProviderInfo
 }
 
-// ListingsProviderInfo: 
+// ListingsProviderInfo:
 func (r ApiPostLivetvListingprovidersRequest) LiveTvListingsProviderInfo(liveTvListingsProviderInfo LiveTvListingsProviderInfo) ApiPostLivetvListingprovidersRequest {
 	r.liveTvListingsProviderInfo = &liveTvListingsProviderInfo
 	return r
@@ -14111,24 +14139,25 @@ PostLivetvListingproviders Adds a listing provider
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostLivetvListingprovidersRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostLivetvListingprovidersRequest
 */
 func (a *LiveTvServiceAPIService) PostLivetvListingproviders(ctx context.Context) ApiPostLivetvListingprovidersRequest {
 	return ApiPostLivetvListingprovidersRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return LiveTvListingsProviderInfo
+//
+//	@return LiveTvListingsProviderInfo
 func (a *LiveTvServiceAPIService) PostLivetvListingprovidersExecute(r ApiPostLivetvListingprovidersRequest) (*LiveTvListingsProviderInfo, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *LiveTvListingsProviderInfo
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *LiveTvListingsProviderInfo
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.PostLivetvListingproviders")
@@ -14216,9 +14245,9 @@ func (a *LiveTvServiceAPIService) PostLivetvListingprovidersExecute(r ApiPostLiv
 }
 
 type ApiPostLivetvListingprovidersDeleteRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveTvServiceAPI
-	id *string
+	id         *string
 }
 
 // Provider id
@@ -14236,22 +14265,22 @@ PostLivetvListingprovidersDelete Deletes a listing provider
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostLivetvListingprovidersDeleteRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostLivetvListingprovidersDeleteRequest
 */
 func (a *LiveTvServiceAPIService) PostLivetvListingprovidersDelete(ctx context.Context) ApiPostLivetvListingprovidersDeleteRequest {
 	return ApiPostLivetvListingprovidersDeleteRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *LiveTvServiceAPIService) PostLivetvListingprovidersDeleteExecute(r ApiPostLivetvListingprovidersDeleteRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.PostLivetvListingprovidersDelete")
@@ -14328,9 +14357,9 @@ func (a *LiveTvServiceAPIService) PostLivetvListingprovidersDeleteExecute(r ApiP
 }
 
 type ApiPostLivetvManageChannelsByIdDisabledRequest struct {
-	ctx context.Context
-	ApiService LiveTvServiceAPI
-	id string
+	ctx                   context.Context
+	ApiService            LiveTvServiceAPI
+	id                    string
 	apiSetChannelDisabled *ApiSetChannelDisabled
 }
 
@@ -14349,26 +14378,27 @@ PostLivetvManageChannelsByIdDisabled Sets a channel disabled or not
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id
- @return ApiPostLivetvManageChannelsByIdDisabledRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id
+	@return ApiPostLivetvManageChannelsByIdDisabledRequest
 */
 func (a *LiveTvServiceAPIService) PostLivetvManageChannelsByIdDisabled(ctx context.Context, id string) ApiPostLivetvManageChannelsByIdDisabledRequest {
 	return ApiPostLivetvManageChannelsByIdDisabledRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
-//  @return QueryResultChannelManagementInfo
+//
+//	@return QueryResultChannelManagementInfo
 func (a *LiveTvServiceAPIService) PostLivetvManageChannelsByIdDisabledExecute(r ApiPostLivetvManageChannelsByIdDisabledRequest) (*QueryResultChannelManagementInfo, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *QueryResultChannelManagementInfo
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *QueryResultChannelManagementInfo
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.PostLivetvManageChannelsByIdDisabled")
@@ -14457,9 +14487,9 @@ func (a *LiveTvServiceAPIService) PostLivetvManageChannelsByIdDisabledExecute(r 
 }
 
 type ApiPostLivetvManageChannelsByIdSortindexRequest struct {
-	ctx context.Context
-	ApiService LiveTvServiceAPI
-	id string
+	ctx                    context.Context
+	ApiService             LiveTvServiceAPI
+	id                     string
 	apiSetChannelSortIndex *ApiSetChannelSortIndex
 }
 
@@ -14478,26 +14508,27 @@ PostLivetvManageChannelsByIdSortindex Sets a channel sort index
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id
- @return ApiPostLivetvManageChannelsByIdSortindexRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id
+	@return ApiPostLivetvManageChannelsByIdSortindexRequest
 */
 func (a *LiveTvServiceAPIService) PostLivetvManageChannelsByIdSortindex(ctx context.Context, id string) ApiPostLivetvManageChannelsByIdSortindexRequest {
 	return ApiPostLivetvManageChannelsByIdSortindexRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
-//  @return QueryResultChannelManagementInfo
+//
+//	@return QueryResultChannelManagementInfo
 func (a *LiveTvServiceAPIService) PostLivetvManageChannelsByIdSortindexExecute(r ApiPostLivetvManageChannelsByIdSortindexRequest) (*QueryResultChannelManagementInfo, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *QueryResultChannelManagementInfo
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *QueryResultChannelManagementInfo
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.PostLivetvManageChannelsByIdSortindex")
@@ -14586,112 +14617,112 @@ func (a *LiveTvServiceAPIService) PostLivetvManageChannelsByIdSortindexExecute(r
 }
 
 type ApiPostLivetvProgramsRequest struct {
-	ctx context.Context
-	ApiService LiveTvServiceAPI
-	apiBaseItemsRequest *ApiBaseItemsRequest
-	channelIds *string
-	artistType *string
-	maxOfficialRating *string
-	hasThemeSong *bool
-	hasThemeVideo *bool
-	hasSubtitles *bool
-	hasSpecialFeature *bool
-	hasTrailer *bool
-	isSpecialSeason *bool
-	adjacentTo *string
-	startItemId *string
-	minIndexNumber *int32
-	minStartDate *time.Time
-	maxStartDate *time.Time
-	minEndDate *time.Time
-	maxEndDate *time.Time
-	minPlayers *int32
-	maxPlayers *int32
-	parentIndexNumber *int32
-	hasParentalRating *bool
-	isHD *bool
-	isUnaired *bool
-	minCommunityRating *float64
-	minCriticRating *float64
-	airedDuringSeason *int32
-	minPremiereDate *time.Time
-	minDateLastSaved *time.Time
-	minDateLastSavedForUser *time.Time
-	maxPremiereDate *time.Time
-	hasOverview *bool
-	hasImdbId *bool
-	hasTmdbId *bool
-	hasTvdbId *bool
-	excludeItemIds *string
-	startIndex *int32
-	limit *int32
-	recursive *bool
-	searchTerm *string
-	sortOrder *string
-	parentId *string
-	fields *string
-	excludeItemTypes *string
-	includeItemTypes *string
-	anyProviderIdEquals *string
-	filters *string
-	isFavorite *bool
-	isMovie *bool
-	isSeries *bool
-	isFolder *bool
-	isNews *bool
-	isKids *bool
-	isSports *bool
-	isNew *bool
-	isPremiere *bool
-	isNewOrPremiere *bool
-	isRepeat *bool
-	projectToMedia *bool
-	mediaTypes *string
-	imageTypes *string
-	sortBy *string
-	isPlayed *bool
-	genres *string
-	officialRatings *string
-	tags *string
-	excludeTags *string
-	years *string
-	enableImages *bool
-	enableUserData *bool
-	imageTypeLimit *int32
-	enableImageTypes *string
-	person *string
-	personIds *string
-	personTypes *string
-	studios *string
-	studioIds *string
-	artists *string
-	artistIds *string
-	albums *string
-	ids *string
-	videoTypes *string
-	containers *string
-	audioCodecs *string
-	audioLayouts *string
-	videoCodecs *string
-	extendedVideoTypes *string
-	subtitleCodecs *string
-	path *string
-	userId *string
-	minOfficialRating *string
-	isLocked *bool
-	isPlaceHolder *bool
-	hasOfficialRating *bool
-	groupItemsIntoCollections *bool
-	is3D *bool
-	seriesStatus *string
-	nameStartsWithOrGreater *string
-	artistStartsWithOrGreater *string
+	ctx                            context.Context
+	ApiService                     LiveTvServiceAPI
+	apiBaseItemsRequest            *ApiBaseItemsRequest
+	channelIds                     *string
+	artistType                     *string
+	maxOfficialRating              *string
+	hasThemeSong                   *bool
+	hasThemeVideo                  *bool
+	hasSubtitles                   *bool
+	hasSpecialFeature              *bool
+	hasTrailer                     *bool
+	isSpecialSeason                *bool
+	adjacentTo                     *string
+	startItemId                    *string
+	minIndexNumber                 *int32
+	minStartDate                   *time.Time
+	maxStartDate                   *time.Time
+	minEndDate                     *time.Time
+	maxEndDate                     *time.Time
+	minPlayers                     *int32
+	maxPlayers                     *int32
+	parentIndexNumber              *int32
+	hasParentalRating              *bool
+	isHD                           *bool
+	isUnaired                      *bool
+	minCommunityRating             *float64
+	minCriticRating                *float64
+	airedDuringSeason              *int32
+	minPremiereDate                *time.Time
+	minDateLastSaved               *time.Time
+	minDateLastSavedForUser        *time.Time
+	maxPremiereDate                *time.Time
+	hasOverview                    *bool
+	hasImdbId                      *bool
+	hasTmdbId                      *bool
+	hasTvdbId                      *bool
+	excludeItemIds                 *string
+	startIndex                     *int32
+	limit                          *int32
+	recursive                      *bool
+	searchTerm                     *string
+	sortOrder                      *string
+	parentId                       *string
+	fields                         *string
+	excludeItemTypes               *string
+	includeItemTypes               *string
+	anyProviderIdEquals            *string
+	filters                        *string
+	isFavorite                     *bool
+	isMovie                        *bool
+	isSeries                       *bool
+	isFolder                       *bool
+	isNews                         *bool
+	isKids                         *bool
+	isSports                       *bool
+	isNew                          *bool
+	isPremiere                     *bool
+	isNewOrPremiere                *bool
+	isRepeat                       *bool
+	projectToMedia                 *bool
+	mediaTypes                     *string
+	imageTypes                     *string
+	sortBy                         *string
+	isPlayed                       *bool
+	genres                         *string
+	officialRatings                *string
+	tags                           *string
+	excludeTags                    *string
+	years                          *string
+	enableImages                   *bool
+	enableUserData                 *bool
+	imageTypeLimit                 *int32
+	enableImageTypes               *string
+	person                         *string
+	personIds                      *string
+	personTypes                    *string
+	studios                        *string
+	studioIds                      *string
+	artists                        *string
+	artistIds                      *string
+	albums                         *string
+	ids                            *string
+	videoTypes                     *string
+	containers                     *string
+	audioCodecs                    *string
+	audioLayouts                   *string
+	videoCodecs                    *string
+	extendedVideoTypes             *string
+	subtitleCodecs                 *string
+	path                           *string
+	userId                         *string
+	minOfficialRating              *string
+	isLocked                       *bool
+	isPlaceHolder                  *bool
+	hasOfficialRating              *bool
+	groupItemsIntoCollections      *bool
+	is3D                           *bool
+	seriesStatus                   *string
+	nameStartsWithOrGreater        *string
+	artistStartsWithOrGreater      *string
 	albumArtistStartsWithOrGreater *string
-	nameStartsWith *string
-	nameLessThan *string
+	nameStartsWith                 *string
+	nameLessThan                   *string
 }
 
-// BaseItemsRequest: 
+// BaseItemsRequest:
 func (r ApiPostLivetvProgramsRequest) ApiBaseItemsRequest(apiBaseItemsRequest ApiBaseItemsRequest) ApiPostLivetvProgramsRequest {
 	r.apiBaseItemsRequest = &apiBaseItemsRequest
 	return r
@@ -15306,22 +15337,22 @@ PostLivetvPrograms Gets available live tv epgs..
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostLivetvProgramsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostLivetvProgramsRequest
 */
 func (a *LiveTvServiceAPIService) PostLivetvPrograms(ctx context.Context) ApiPostLivetvProgramsRequest {
 	return ApiPostLivetvProgramsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *LiveTvServiceAPIService) PostLivetvProgramsExecute(r ApiPostLivetvProgramsRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.PostLivetvPrograms")
@@ -15700,9 +15731,9 @@ func (a *LiveTvServiceAPIService) PostLivetvProgramsExecute(r ApiPostLivetvProgr
 }
 
 type ApiPostLivetvRecordingsByIdDeleteRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveTvServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiPostLivetvRecordingsByIdDeleteRequest) Execute() (*http.Response, error) {
@@ -15714,24 +15745,24 @@ PostLivetvRecordingsByIdDelete Deletes a live tv recording
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Recording Id
- @return ApiPostLivetvRecordingsByIdDeleteRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Recording Id
+	@return ApiPostLivetvRecordingsByIdDeleteRequest
 */
 func (a *LiveTvServiceAPIService) PostLivetvRecordingsByIdDelete(ctx context.Context, id string) ApiPostLivetvRecordingsByIdDeleteRequest {
 	return ApiPostLivetvRecordingsByIdDeleteRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *LiveTvServiceAPIService) PostLivetvRecordingsByIdDeleteExecute(r ApiPostLivetvRecordingsByIdDeleteRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.PostLivetvRecordingsByIdDelete")
@@ -15806,12 +15837,12 @@ func (a *LiveTvServiceAPIService) PostLivetvRecordingsByIdDeleteExecute(r ApiPos
 }
 
 type ApiPostLivetvSeriestimersRequest struct {
-	ctx context.Context
-	ApiService LiveTvServiceAPI
+	ctx                   context.Context
+	ApiService            LiveTvServiceAPI
 	liveTvSeriesTimerInfo *LiveTvSeriesTimerInfo
 }
 
-// SeriesTimerInfo: 
+// SeriesTimerInfo:
 func (r ApiPostLivetvSeriestimersRequest) LiveTvSeriesTimerInfo(liveTvSeriesTimerInfo LiveTvSeriesTimerInfo) ApiPostLivetvSeriestimersRequest {
 	r.liveTvSeriesTimerInfo = &liveTvSeriesTimerInfo
 	return r
@@ -15826,24 +15857,25 @@ PostLivetvSeriestimers Creates a live tv series timer
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostLivetvSeriestimersRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostLivetvSeriestimersRequest
 */
 func (a *LiveTvServiceAPIService) PostLivetvSeriestimers(ctx context.Context) ApiPostLivetvSeriestimersRequest {
 	return ApiPostLivetvSeriestimersRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return LiveTvSeriesTimerInfoDto
+//
+//	@return LiveTvSeriesTimerInfoDto
 func (a *LiveTvServiceAPIService) PostLivetvSeriestimersExecute(r ApiPostLivetvSeriestimersRequest) (*LiveTvSeriesTimerInfoDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *LiveTvSeriesTimerInfoDto
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *LiveTvSeriesTimerInfoDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.PostLivetvSeriestimers")
@@ -15931,13 +15963,13 @@ func (a *LiveTvServiceAPIService) PostLivetvSeriestimersExecute(r ApiPostLivetvS
 }
 
 type ApiPostLivetvSeriestimersByIdRequest struct {
-	ctx context.Context
-	ApiService LiveTvServiceAPI
-	id string
+	ctx                   context.Context
+	ApiService            LiveTvServiceAPI
+	id                    string
 	liveTvSeriesTimerInfo *LiveTvSeriesTimerInfo
 }
 
-// SeriesTimerInfo: 
+// SeriesTimerInfo:
 func (r ApiPostLivetvSeriestimersByIdRequest) LiveTvSeriesTimerInfo(liveTvSeriesTimerInfo LiveTvSeriesTimerInfo) ApiPostLivetvSeriestimersByIdRequest {
 	r.liveTvSeriesTimerInfo = &liveTvSeriesTimerInfo
 	return r
@@ -15952,24 +15984,24 @@ PostLivetvSeriestimersById Updates a live tv series timer
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id
- @return ApiPostLivetvSeriestimersByIdRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id
+	@return ApiPostLivetvSeriestimersByIdRequest
 */
 func (a *LiveTvServiceAPIService) PostLivetvSeriestimersById(ctx context.Context, id string) ApiPostLivetvSeriestimersByIdRequest {
 	return ApiPostLivetvSeriestimersByIdRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *LiveTvServiceAPIService) PostLivetvSeriestimersByIdExecute(r ApiPostLivetvSeriestimersByIdRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.PostLivetvSeriestimersById")
@@ -16049,9 +16081,9 @@ func (a *LiveTvServiceAPIService) PostLivetvSeriestimersByIdExecute(r ApiPostLiv
 }
 
 type ApiPostLivetvSeriestimersByIdDeleteRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveTvServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiPostLivetvSeriestimersByIdDeleteRequest) Execute() (*http.Response, error) {
@@ -16063,24 +16095,24 @@ PostLivetvSeriestimersByIdDelete Cancels a live tv series timer
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Timer Id
- @return ApiPostLivetvSeriestimersByIdDeleteRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Timer Id
+	@return ApiPostLivetvSeriestimersByIdDeleteRequest
 */
 func (a *LiveTvServiceAPIService) PostLivetvSeriestimersByIdDelete(ctx context.Context, id string) ApiPostLivetvSeriestimersByIdDeleteRequest {
 	return ApiPostLivetvSeriestimersByIdDeleteRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *LiveTvServiceAPIService) PostLivetvSeriestimersByIdDeleteExecute(r ApiPostLivetvSeriestimersByIdDeleteRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.PostLivetvSeriestimersByIdDelete")
@@ -16155,12 +16187,12 @@ func (a *LiveTvServiceAPIService) PostLivetvSeriestimersByIdDeleteExecute(r ApiP
 }
 
 type ApiPostLivetvTimersRequest struct {
-	ctx context.Context
-	ApiService LiveTvServiceAPI
+	ctx                context.Context
+	ApiService         LiveTvServiceAPI
 	liveTvTimerInfoDto *LiveTvTimerInfoDto
 }
 
-// TimerInfoDto: 
+// TimerInfoDto:
 func (r ApiPostLivetvTimersRequest) LiveTvTimerInfoDto(liveTvTimerInfoDto LiveTvTimerInfoDto) ApiPostLivetvTimersRequest {
 	r.liveTvTimerInfoDto = &liveTvTimerInfoDto
 	return r
@@ -16175,22 +16207,22 @@ PostLivetvTimers Creates a live tv timer
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostLivetvTimersRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostLivetvTimersRequest
 */
 func (a *LiveTvServiceAPIService) PostLivetvTimers(ctx context.Context) ApiPostLivetvTimersRequest {
 	return ApiPostLivetvTimersRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *LiveTvServiceAPIService) PostLivetvTimersExecute(r ApiPostLivetvTimersRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.PostLivetvTimers")
@@ -16269,13 +16301,13 @@ func (a *LiveTvServiceAPIService) PostLivetvTimersExecute(r ApiPostLivetvTimersR
 }
 
 type ApiPostLivetvTimersByIdRequest struct {
-	ctx context.Context
-	ApiService LiveTvServiceAPI
-	id string
+	ctx                context.Context
+	ApiService         LiveTvServiceAPI
+	id                 string
 	liveTvTimerInfoDto *LiveTvTimerInfoDto
 }
 
-// TimerInfoDto: 
+// TimerInfoDto:
 func (r ApiPostLivetvTimersByIdRequest) LiveTvTimerInfoDto(liveTvTimerInfoDto LiveTvTimerInfoDto) ApiPostLivetvTimersByIdRequest {
 	r.liveTvTimerInfoDto = &liveTvTimerInfoDto
 	return r
@@ -16290,24 +16322,24 @@ PostLivetvTimersById Updates a live tv timer
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id
- @return ApiPostLivetvTimersByIdRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id
+	@return ApiPostLivetvTimersByIdRequest
 */
 func (a *LiveTvServiceAPIService) PostLivetvTimersById(ctx context.Context, id string) ApiPostLivetvTimersByIdRequest {
 	return ApiPostLivetvTimersByIdRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *LiveTvServiceAPIService) PostLivetvTimersByIdExecute(r ApiPostLivetvTimersByIdRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.PostLivetvTimersById")
@@ -16387,9 +16419,9 @@ func (a *LiveTvServiceAPIService) PostLivetvTimersByIdExecute(r ApiPostLivetvTim
 }
 
 type ApiPostLivetvTimersByIdDeleteRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveTvServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiPostLivetvTimersByIdDeleteRequest) Execute() (*http.Response, error) {
@@ -16401,24 +16433,24 @@ PostLivetvTimersByIdDelete Cancels a live tv timer
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Timer Id
- @return ApiPostLivetvTimersByIdDeleteRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Timer Id
+	@return ApiPostLivetvTimersByIdDeleteRequest
 */
 func (a *LiveTvServiceAPIService) PostLivetvTimersByIdDelete(ctx context.Context, id string) ApiPostLivetvTimersByIdDeleteRequest {
 	return ApiPostLivetvTimersByIdDeleteRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *LiveTvServiceAPIService) PostLivetvTimersByIdDeleteExecute(r ApiPostLivetvTimersByIdDeleteRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.PostLivetvTimersByIdDelete")
@@ -16493,12 +16525,12 @@ func (a *LiveTvServiceAPIService) PostLivetvTimersByIdDeleteExecute(r ApiPostLiv
 }
 
 type ApiPostLivetvTunerhostsRequest struct {
-	ctx context.Context
-	ApiService LiveTvServiceAPI
+	ctx                 context.Context
+	ApiService          LiveTvServiceAPI
 	liveTvTunerHostInfo *LiveTvTunerHostInfo
 }
 
-// TunerHostInfo: 
+// TunerHostInfo:
 func (r ApiPostLivetvTunerhostsRequest) LiveTvTunerHostInfo(liveTvTunerHostInfo LiveTvTunerHostInfo) ApiPostLivetvTunerhostsRequest {
 	r.liveTvTunerHostInfo = &liveTvTunerHostInfo
 	return r
@@ -16513,24 +16545,25 @@ PostLivetvTunerhosts Adds a tuner host
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostLivetvTunerhostsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostLivetvTunerhostsRequest
 */
 func (a *LiveTvServiceAPIService) PostLivetvTunerhosts(ctx context.Context) ApiPostLivetvTunerhostsRequest {
 	return ApiPostLivetvTunerhostsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return LiveTvTunerHostInfo
+//
+//	@return LiveTvTunerHostInfo
 func (a *LiveTvServiceAPIService) PostLivetvTunerhostsExecute(r ApiPostLivetvTunerhostsRequest) (*LiveTvTunerHostInfo, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *LiveTvTunerHostInfo
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *LiveTvTunerHostInfo
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.PostLivetvTunerhosts")
@@ -16618,9 +16651,9 @@ func (a *LiveTvServiceAPIService) PostLivetvTunerhostsExecute(r ApiPostLivetvTun
 }
 
 type ApiPostLivetvTunerhostsDeleteRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveTvServiceAPI
-	id *string
+	id         *string
 }
 
 // Tuner host id
@@ -16638,22 +16671,22 @@ PostLivetvTunerhostsDelete Deletes a tuner host
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostLivetvTunerhostsDeleteRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostLivetvTunerhostsDeleteRequest
 */
 func (a *LiveTvServiceAPIService) PostLivetvTunerhostsDelete(ctx context.Context) ApiPostLivetvTunerhostsDeleteRequest {
 	return ApiPostLivetvTunerhostsDeleteRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *LiveTvServiceAPIService) PostLivetvTunerhostsDeleteExecute(r ApiPostLivetvTunerhostsDeleteRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.PostLivetvTunerhostsDelete")
@@ -16730,9 +16763,9 @@ func (a *LiveTvServiceAPIService) PostLivetvTunerhostsDeleteExecute(r ApiPostLiv
 }
 
 type ApiPostLivetvTunersByIdResetRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveTvServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiPostLivetvTunersByIdResetRequest) Execute() (*http.Response, error) {
@@ -16744,24 +16777,24 @@ PostLivetvTunersByIdReset Resets a tv tuner
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Tuner Id
- @return ApiPostLivetvTunersByIdResetRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Tuner Id
+	@return ApiPostLivetvTunersByIdResetRequest
 */
 func (a *LiveTvServiceAPIService) PostLivetvTunersByIdReset(ctx context.Context, id string) ApiPostLivetvTunersByIdResetRequest {
 	return ApiPostLivetvTunersByIdResetRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *LiveTvServiceAPIService) PostLivetvTunersByIdResetExecute(r ApiPostLivetvTunersByIdResetRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.PostLivetvTunersByIdReset")
@@ -16836,7 +16869,7 @@ func (a *LiveTvServiceAPIService) PostLivetvTunersByIdResetExecute(r ApiPostLive
 }
 
 type ApiPutLivetvChannelmappingoptionsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveTvServiceAPI
 	providerId *string
 }
@@ -16856,22 +16889,22 @@ PutLivetvChannelmappingoptions Method for PutLivetvChannelmappingoptions
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPutLivetvChannelmappingoptionsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPutLivetvChannelmappingoptionsRequest
 */
 func (a *LiveTvServiceAPIService) PutLivetvChannelmappingoptions(ctx context.Context) ApiPutLivetvChannelmappingoptionsRequest {
 	return ApiPutLivetvChannelmappingoptionsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *LiveTvServiceAPIService) PutLivetvChannelmappingoptionsExecute(r ApiPutLivetvChannelmappingoptionsRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPut
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPut
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.PutLivetvChannelmappingoptions")
@@ -16949,9 +16982,9 @@ func (a *LiveTvServiceAPIService) PutLivetvChannelmappingoptionsExecute(r ApiPut
 }
 
 type ApiPutLivetvChannelmappingsRequest struct {
-	ctx context.Context
-	ApiService LiveTvServiceAPI
-	providerId *string
+	ctx                  context.Context
+	ApiService           LiveTvServiceAPI
+	providerId           *string
 	apiSetChannelMapping *ApiSetChannelMapping
 }
 
@@ -16976,22 +17009,22 @@ PutLivetvChannelmappings Method for PutLivetvChannelmappings
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPutLivetvChannelmappingsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPutLivetvChannelmappingsRequest
 */
 func (a *LiveTvServiceAPIService) PutLivetvChannelmappings(ctx context.Context) ApiPutLivetvChannelmappingsRequest {
 	return ApiPutLivetvChannelmappingsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *LiveTvServiceAPIService) PutLivetvChannelmappingsExecute(r ApiPutLivetvChannelmappingsRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPut
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPut
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveTvServiceAPIService.PutLivetvChannelmappings")

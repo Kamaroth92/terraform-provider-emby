@@ -16,22 +16,21 @@ import (
 	"io"
 	"net/http"
 	"net/url"
-	"strings"
 	"os"
+	"strings"
 )
-
 
 type ImageServiceAPI interface {
 
 	/*
-	DeleteItemsByIdImagesByType Method for DeleteItemsByIdImagesByType
+		DeleteItemsByIdImagesByType Method for DeleteItemsByIdImagesByType
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@param type_ Image Type
-	@return ApiDeleteItemsByIdImagesByTypeRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@param type_ Image Type
+		@return ApiDeleteItemsByIdImagesByTypeRequest
 	*/
 	DeleteItemsByIdImagesByType(ctx context.Context, id string, type_ ImageType) ApiDeleteItemsByIdImagesByTypeRequest
 
@@ -39,15 +38,15 @@ type ImageServiceAPI interface {
 	DeleteItemsByIdImagesByTypeExecute(r ApiDeleteItemsByIdImagesByTypeRequest) (*http.Response, error)
 
 	/*
-	DeleteItemsByIdImagesByTypeByIndex Method for DeleteItemsByIdImagesByTypeByIndex
+		DeleteItemsByIdImagesByTypeByIndex Method for DeleteItemsByIdImagesByTypeByIndex
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@param index Image Index
-	@param type_ Image Type
-	@return ApiDeleteItemsByIdImagesByTypeByIndexRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@param index Image Index
+		@param type_ Image Type
+		@return ApiDeleteItemsByIdImagesByTypeByIndexRequest
 	*/
 	DeleteItemsByIdImagesByTypeByIndex(ctx context.Context, id string, index int32, type_ ImageType) ApiDeleteItemsByIdImagesByTypeByIndexRequest
 
@@ -55,14 +54,14 @@ type ImageServiceAPI interface {
 	DeleteItemsByIdImagesByTypeByIndexExecute(r ApiDeleteItemsByIdImagesByTypeByIndexRequest) (*http.Response, error)
 
 	/*
-	DeleteUsersByIdImagesByType Method for DeleteUsersByIdImagesByType
+		DeleteUsersByIdImagesByType Method for DeleteUsersByIdImagesByType
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id User Id
-	@param type_ Image Type
-	@return ApiDeleteUsersByIdImagesByTypeRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id User Id
+		@param type_ Image Type
+		@return ApiDeleteUsersByIdImagesByTypeRequest
 	*/
 	DeleteUsersByIdImagesByType(ctx context.Context, id string, type_ ImageType) ApiDeleteUsersByIdImagesByTypeRequest
 
@@ -70,15 +69,15 @@ type ImageServiceAPI interface {
 	DeleteUsersByIdImagesByTypeExecute(r ApiDeleteUsersByIdImagesByTypeRequest) (*http.Response, error)
 
 	/*
-	DeleteUsersByIdImagesByTypeByIndex Method for DeleteUsersByIdImagesByTypeByIndex
+		DeleteUsersByIdImagesByTypeByIndex Method for DeleteUsersByIdImagesByTypeByIndex
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id User Id
-	@param index Image Index
-	@param type_ Image Type
-	@return ApiDeleteUsersByIdImagesByTypeByIndexRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id User Id
+		@param index Image Index
+		@param type_ Image Type
+		@return ApiDeleteUsersByIdImagesByTypeByIndexRequest
 	*/
 	DeleteUsersByIdImagesByTypeByIndex(ctx context.Context, id string, index int32, type_ ImageType) ApiDeleteUsersByIdImagesByTypeByIndexRequest
 
@@ -86,14 +85,14 @@ type ImageServiceAPI interface {
 	DeleteUsersByIdImagesByTypeByIndexExecute(r ApiDeleteUsersByIdImagesByTypeByIndexRequest) (*http.Response, error)
 
 	/*
-	GetArtistsByNameImagesByType Method for GetArtistsByNameImagesByType
+		GetArtistsByNameImagesByType Method for GetArtistsByNameImagesByType
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param name Item name
-	@param type_ Image Type
-	@return ApiGetArtistsByNameImagesByTypeRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param name Item name
+		@param type_ Image Type
+		@return ApiGetArtistsByNameImagesByTypeRequest
 	*/
 	GetArtistsByNameImagesByType(ctx context.Context, name string, type_ ImageType) ApiGetArtistsByNameImagesByTypeRequest
 
@@ -101,15 +100,15 @@ type ImageServiceAPI interface {
 	GetArtistsByNameImagesByTypeExecute(r ApiGetArtistsByNameImagesByTypeRequest) (*http.Response, error)
 
 	/*
-	GetArtistsByNameImagesByTypeByIndex Method for GetArtistsByNameImagesByTypeByIndex
+		GetArtistsByNameImagesByTypeByIndex Method for GetArtistsByNameImagesByTypeByIndex
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param name Item name
-	@param index Image Index
-	@param type_ Image Type
-	@return ApiGetArtistsByNameImagesByTypeByIndexRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param name Item name
+		@param index Image Index
+		@param type_ Image Type
+		@return ApiGetArtistsByNameImagesByTypeByIndexRequest
 	*/
 	GetArtistsByNameImagesByTypeByIndex(ctx context.Context, name string, index int32, type_ ImageType) ApiGetArtistsByNameImagesByTypeByIndexRequest
 
@@ -117,14 +116,14 @@ type ImageServiceAPI interface {
 	GetArtistsByNameImagesByTypeByIndexExecute(r ApiGetArtistsByNameImagesByTypeByIndexRequest) (*http.Response, error)
 
 	/*
-	GetGamegenresByNameImagesByType Method for GetGamegenresByNameImagesByType
+		GetGamegenresByNameImagesByType Method for GetGamegenresByNameImagesByType
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param name Item name
-	@param type_ Image Type
-	@return ApiGetGamegenresByNameImagesByTypeRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param name Item name
+		@param type_ Image Type
+		@return ApiGetGamegenresByNameImagesByTypeRequest
 	*/
 	GetGamegenresByNameImagesByType(ctx context.Context, name string, type_ ImageType) ApiGetGamegenresByNameImagesByTypeRequest
 
@@ -132,15 +131,15 @@ type ImageServiceAPI interface {
 	GetGamegenresByNameImagesByTypeExecute(r ApiGetGamegenresByNameImagesByTypeRequest) (*http.Response, error)
 
 	/*
-	GetGamegenresByNameImagesByTypeByIndex Method for GetGamegenresByNameImagesByTypeByIndex
+		GetGamegenresByNameImagesByTypeByIndex Method for GetGamegenresByNameImagesByTypeByIndex
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param name Item name
-	@param index Image Index
-	@param type_ Image Type
-	@return ApiGetGamegenresByNameImagesByTypeByIndexRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param name Item name
+		@param index Image Index
+		@param type_ Image Type
+		@return ApiGetGamegenresByNameImagesByTypeByIndexRequest
 	*/
 	GetGamegenresByNameImagesByTypeByIndex(ctx context.Context, name string, index int32, type_ ImageType) ApiGetGamegenresByNameImagesByTypeByIndexRequest
 
@@ -148,14 +147,14 @@ type ImageServiceAPI interface {
 	GetGamegenresByNameImagesByTypeByIndexExecute(r ApiGetGamegenresByNameImagesByTypeByIndexRequest) (*http.Response, error)
 
 	/*
-	GetGenresByNameImagesByType Method for GetGenresByNameImagesByType
+		GetGenresByNameImagesByType Method for GetGenresByNameImagesByType
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param name Item name
-	@param type_ Image Type
-	@return ApiGetGenresByNameImagesByTypeRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param name Item name
+		@param type_ Image Type
+		@return ApiGetGenresByNameImagesByTypeRequest
 	*/
 	GetGenresByNameImagesByType(ctx context.Context, name string, type_ ImageType) ApiGetGenresByNameImagesByTypeRequest
 
@@ -163,15 +162,15 @@ type ImageServiceAPI interface {
 	GetGenresByNameImagesByTypeExecute(r ApiGetGenresByNameImagesByTypeRequest) (*http.Response, error)
 
 	/*
-	GetGenresByNameImagesByTypeByIndex Method for GetGenresByNameImagesByTypeByIndex
+		GetGenresByNameImagesByTypeByIndex Method for GetGenresByNameImagesByTypeByIndex
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param name Item name
-	@param index Image Index
-	@param type_ Image Type
-	@return ApiGetGenresByNameImagesByTypeByIndexRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param name Item name
+		@param index Image Index
+		@param type_ Image Type
+		@return ApiGetGenresByNameImagesByTypeByIndexRequest
 	*/
 	GetGenresByNameImagesByTypeByIndex(ctx context.Context, name string, index int32, type_ ImageType) ApiGetGenresByNameImagesByTypeByIndexRequest
 
@@ -179,13 +178,13 @@ type ImageServiceAPI interface {
 	GetGenresByNameImagesByTypeByIndexExecute(r ApiGetGenresByNameImagesByTypeByIndexRequest) (*http.Response, error)
 
 	/*
-	GetItemsByIdImages Gets information about an item's images
+		GetItemsByIdImages Gets information about an item's images
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiGetItemsByIdImagesRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiGetItemsByIdImagesRequest
 	*/
 	GetItemsByIdImages(ctx context.Context, id string) ApiGetItemsByIdImagesRequest
 
@@ -194,14 +193,14 @@ type ImageServiceAPI interface {
 	GetItemsByIdImagesExecute(r ApiGetItemsByIdImagesRequest) ([]ImageInfo, *http.Response, error)
 
 	/*
-	GetItemsByIdImagesByType Method for GetItemsByIdImagesByType
+		GetItemsByIdImagesByType Method for GetItemsByIdImagesByType
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@param type_ Image Type
-	@return ApiGetItemsByIdImagesByTypeRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@param type_ Image Type
+		@return ApiGetItemsByIdImagesByTypeRequest
 	*/
 	GetItemsByIdImagesByType(ctx context.Context, id string, type_ ImageType) ApiGetItemsByIdImagesByTypeRequest
 
@@ -209,15 +208,15 @@ type ImageServiceAPI interface {
 	GetItemsByIdImagesByTypeExecute(r ApiGetItemsByIdImagesByTypeRequest) (*http.Response, error)
 
 	/*
-	GetItemsByIdImagesByTypeByIndex Method for GetItemsByIdImagesByTypeByIndex
+		GetItemsByIdImagesByTypeByIndex Method for GetItemsByIdImagesByTypeByIndex
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@param index Image Index
-	@param type_ Image Type
-	@return ApiGetItemsByIdImagesByTypeByIndexRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@param index Image Index
+		@param type_ Image Type
+		@return ApiGetItemsByIdImagesByTypeByIndexRequest
 	*/
 	GetItemsByIdImagesByTypeByIndex(ctx context.Context, id string, index int32, type_ ImageType) ApiGetItemsByIdImagesByTypeByIndexRequest
 
@@ -225,21 +224,21 @@ type ImageServiceAPI interface {
 	GetItemsByIdImagesByTypeByIndexExecute(r ApiGetItemsByIdImagesByTypeByIndexRequest) (*http.Response, error)
 
 	/*
-	GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount Method for GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount
+		GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount Method for GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param percentPlayed
-	@param unPlayedCount
-	@param id Item Id
-	@param maxWidth The maximum image width to return.
-	@param maxHeight The maximum image height to return.
-	@param tag Optional. Supply the cache tag from the item object to receive strong caching headers.
-	@param format Determines the output foramt of the image - original,gif,jpg,png
-	@param index Image Index
-	@param type_ Image Type
-	@return ApiGetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param percentPlayed
+		@param unPlayedCount
+		@param id Item Id
+		@param maxWidth The maximum image width to return.
+		@param maxHeight The maximum image height to return.
+		@param tag Optional. Supply the cache tag from the item object to receive strong caching headers.
+		@param format Determines the output foramt of the image - original,gif,jpg,png
+		@param index Image Index
+		@param type_ Image Type
+		@return ApiGetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountRequest
 	*/
 	GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(ctx context.Context, percentPlayed int32, unPlayedCount int32, id string, maxWidth int32, maxHeight int32, tag string, format string, index int32, type_ ImageType) ApiGetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountRequest
 
@@ -247,14 +246,14 @@ type ImageServiceAPI interface {
 	GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountExecute(r ApiGetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountRequest) (*http.Response, error)
 
 	/*
-	GetMusicgenresByNameImagesByType Method for GetMusicgenresByNameImagesByType
+		GetMusicgenresByNameImagesByType Method for GetMusicgenresByNameImagesByType
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param name Item name
-	@param type_ Image Type
-	@return ApiGetMusicgenresByNameImagesByTypeRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param name Item name
+		@param type_ Image Type
+		@return ApiGetMusicgenresByNameImagesByTypeRequest
 	*/
 	GetMusicgenresByNameImagesByType(ctx context.Context, name string, type_ ImageType) ApiGetMusicgenresByNameImagesByTypeRequest
 
@@ -262,15 +261,15 @@ type ImageServiceAPI interface {
 	GetMusicgenresByNameImagesByTypeExecute(r ApiGetMusicgenresByNameImagesByTypeRequest) (*http.Response, error)
 
 	/*
-	GetMusicgenresByNameImagesByTypeByIndex Method for GetMusicgenresByNameImagesByTypeByIndex
+		GetMusicgenresByNameImagesByTypeByIndex Method for GetMusicgenresByNameImagesByTypeByIndex
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param name Item name
-	@param index Image Index
-	@param type_ Image Type
-	@return ApiGetMusicgenresByNameImagesByTypeByIndexRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param name Item name
+		@param index Image Index
+		@param type_ Image Type
+		@return ApiGetMusicgenresByNameImagesByTypeByIndexRequest
 	*/
 	GetMusicgenresByNameImagesByTypeByIndex(ctx context.Context, name string, index int32, type_ ImageType) ApiGetMusicgenresByNameImagesByTypeByIndexRequest
 
@@ -278,14 +277,14 @@ type ImageServiceAPI interface {
 	GetMusicgenresByNameImagesByTypeByIndexExecute(r ApiGetMusicgenresByNameImagesByTypeByIndexRequest) (*http.Response, error)
 
 	/*
-	GetPersonsByNameImagesByType Method for GetPersonsByNameImagesByType
+		GetPersonsByNameImagesByType Method for GetPersonsByNameImagesByType
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param name Item name
-	@param type_ Image Type
-	@return ApiGetPersonsByNameImagesByTypeRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param name Item name
+		@param type_ Image Type
+		@return ApiGetPersonsByNameImagesByTypeRequest
 	*/
 	GetPersonsByNameImagesByType(ctx context.Context, name string, type_ ImageType) ApiGetPersonsByNameImagesByTypeRequest
 
@@ -293,15 +292,15 @@ type ImageServiceAPI interface {
 	GetPersonsByNameImagesByTypeExecute(r ApiGetPersonsByNameImagesByTypeRequest) (*http.Response, error)
 
 	/*
-	GetPersonsByNameImagesByTypeByIndex Method for GetPersonsByNameImagesByTypeByIndex
+		GetPersonsByNameImagesByTypeByIndex Method for GetPersonsByNameImagesByTypeByIndex
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param name Item name
-	@param index Image Index
-	@param type_ Image Type
-	@return ApiGetPersonsByNameImagesByTypeByIndexRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param name Item name
+		@param index Image Index
+		@param type_ Image Type
+		@return ApiGetPersonsByNameImagesByTypeByIndexRequest
 	*/
 	GetPersonsByNameImagesByTypeByIndex(ctx context.Context, name string, index int32, type_ ImageType) ApiGetPersonsByNameImagesByTypeByIndexRequest
 
@@ -309,14 +308,14 @@ type ImageServiceAPI interface {
 	GetPersonsByNameImagesByTypeByIndexExecute(r ApiGetPersonsByNameImagesByTypeByIndexRequest) (*http.Response, error)
 
 	/*
-	GetStudiosByNameImagesByType Method for GetStudiosByNameImagesByType
+		GetStudiosByNameImagesByType Method for GetStudiosByNameImagesByType
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param name Item name
-	@param type_ Image Type
-	@return ApiGetStudiosByNameImagesByTypeRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param name Item name
+		@param type_ Image Type
+		@return ApiGetStudiosByNameImagesByTypeRequest
 	*/
 	GetStudiosByNameImagesByType(ctx context.Context, name string, type_ ImageType) ApiGetStudiosByNameImagesByTypeRequest
 
@@ -324,15 +323,15 @@ type ImageServiceAPI interface {
 	GetStudiosByNameImagesByTypeExecute(r ApiGetStudiosByNameImagesByTypeRequest) (*http.Response, error)
 
 	/*
-	GetStudiosByNameImagesByTypeByIndex Method for GetStudiosByNameImagesByTypeByIndex
+		GetStudiosByNameImagesByTypeByIndex Method for GetStudiosByNameImagesByTypeByIndex
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param name Item name
-	@param index Image Index
-	@param type_ Image Type
-	@return ApiGetStudiosByNameImagesByTypeByIndexRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param name Item name
+		@param index Image Index
+		@param type_ Image Type
+		@return ApiGetStudiosByNameImagesByTypeByIndexRequest
 	*/
 	GetStudiosByNameImagesByTypeByIndex(ctx context.Context, name string, index int32, type_ ImageType) ApiGetStudiosByNameImagesByTypeByIndexRequest
 
@@ -340,14 +339,14 @@ type ImageServiceAPI interface {
 	GetStudiosByNameImagesByTypeByIndexExecute(r ApiGetStudiosByNameImagesByTypeByIndexRequest) (*http.Response, error)
 
 	/*
-	GetUsersByIdImagesByType Method for GetUsersByIdImagesByType
+		GetUsersByIdImagesByType Method for GetUsersByIdImagesByType
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id User Id
-	@param type_ Image Type
-	@return ApiGetUsersByIdImagesByTypeRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id User Id
+		@param type_ Image Type
+		@return ApiGetUsersByIdImagesByTypeRequest
 	*/
 	GetUsersByIdImagesByType(ctx context.Context, id string, type_ ImageType) ApiGetUsersByIdImagesByTypeRequest
 
@@ -355,15 +354,15 @@ type ImageServiceAPI interface {
 	GetUsersByIdImagesByTypeExecute(r ApiGetUsersByIdImagesByTypeRequest) (*http.Response, error)
 
 	/*
-	GetUsersByIdImagesByTypeByIndex Method for GetUsersByIdImagesByTypeByIndex
+		GetUsersByIdImagesByTypeByIndex Method for GetUsersByIdImagesByTypeByIndex
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id User Id
-	@param index Image Index
-	@param type_ Image Type
-	@return ApiGetUsersByIdImagesByTypeByIndexRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id User Id
+		@param index Image Index
+		@param type_ Image Type
+		@return ApiGetUsersByIdImagesByTypeByIndexRequest
 	*/
 	GetUsersByIdImagesByTypeByIndex(ctx context.Context, id string, index int32, type_ ImageType) ApiGetUsersByIdImagesByTypeByIndexRequest
 
@@ -371,14 +370,14 @@ type ImageServiceAPI interface {
 	GetUsersByIdImagesByTypeByIndexExecute(r ApiGetUsersByIdImagesByTypeByIndexRequest) (*http.Response, error)
 
 	/*
-	HeadArtistsByNameImagesByType Method for HeadArtistsByNameImagesByType
+		HeadArtistsByNameImagesByType Method for HeadArtistsByNameImagesByType
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param name Item name
-	@param type_ Image Type
-	@return ApiHeadArtistsByNameImagesByTypeRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param name Item name
+		@param type_ Image Type
+		@return ApiHeadArtistsByNameImagesByTypeRequest
 	*/
 	HeadArtistsByNameImagesByType(ctx context.Context, name string, type_ ImageType) ApiHeadArtistsByNameImagesByTypeRequest
 
@@ -386,15 +385,15 @@ type ImageServiceAPI interface {
 	HeadArtistsByNameImagesByTypeExecute(r ApiHeadArtistsByNameImagesByTypeRequest) (*http.Response, error)
 
 	/*
-	HeadArtistsByNameImagesByTypeByIndex Method for HeadArtistsByNameImagesByTypeByIndex
+		HeadArtistsByNameImagesByTypeByIndex Method for HeadArtistsByNameImagesByTypeByIndex
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param name Item name
-	@param index Image Index
-	@param type_ Image Type
-	@return ApiHeadArtistsByNameImagesByTypeByIndexRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param name Item name
+		@param index Image Index
+		@param type_ Image Type
+		@return ApiHeadArtistsByNameImagesByTypeByIndexRequest
 	*/
 	HeadArtistsByNameImagesByTypeByIndex(ctx context.Context, name string, index int32, type_ ImageType) ApiHeadArtistsByNameImagesByTypeByIndexRequest
 
@@ -402,14 +401,14 @@ type ImageServiceAPI interface {
 	HeadArtistsByNameImagesByTypeByIndexExecute(r ApiHeadArtistsByNameImagesByTypeByIndexRequest) (*http.Response, error)
 
 	/*
-	HeadGamegenresByNameImagesByType Method for HeadGamegenresByNameImagesByType
+		HeadGamegenresByNameImagesByType Method for HeadGamegenresByNameImagesByType
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param name Item name
-	@param type_ Image Type
-	@return ApiHeadGamegenresByNameImagesByTypeRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param name Item name
+		@param type_ Image Type
+		@return ApiHeadGamegenresByNameImagesByTypeRequest
 	*/
 	HeadGamegenresByNameImagesByType(ctx context.Context, name string, type_ ImageType) ApiHeadGamegenresByNameImagesByTypeRequest
 
@@ -417,15 +416,15 @@ type ImageServiceAPI interface {
 	HeadGamegenresByNameImagesByTypeExecute(r ApiHeadGamegenresByNameImagesByTypeRequest) (*http.Response, error)
 
 	/*
-	HeadGamegenresByNameImagesByTypeByIndex Method for HeadGamegenresByNameImagesByTypeByIndex
+		HeadGamegenresByNameImagesByTypeByIndex Method for HeadGamegenresByNameImagesByTypeByIndex
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param name Item name
-	@param index Image Index
-	@param type_ Image Type
-	@return ApiHeadGamegenresByNameImagesByTypeByIndexRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param name Item name
+		@param index Image Index
+		@param type_ Image Type
+		@return ApiHeadGamegenresByNameImagesByTypeByIndexRequest
 	*/
 	HeadGamegenresByNameImagesByTypeByIndex(ctx context.Context, name string, index int32, type_ ImageType) ApiHeadGamegenresByNameImagesByTypeByIndexRequest
 
@@ -433,14 +432,14 @@ type ImageServiceAPI interface {
 	HeadGamegenresByNameImagesByTypeByIndexExecute(r ApiHeadGamegenresByNameImagesByTypeByIndexRequest) (*http.Response, error)
 
 	/*
-	HeadGenresByNameImagesByType Method for HeadGenresByNameImagesByType
+		HeadGenresByNameImagesByType Method for HeadGenresByNameImagesByType
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param name Item name
-	@param type_ Image Type
-	@return ApiHeadGenresByNameImagesByTypeRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param name Item name
+		@param type_ Image Type
+		@return ApiHeadGenresByNameImagesByTypeRequest
 	*/
 	HeadGenresByNameImagesByType(ctx context.Context, name string, type_ ImageType) ApiHeadGenresByNameImagesByTypeRequest
 
@@ -448,15 +447,15 @@ type ImageServiceAPI interface {
 	HeadGenresByNameImagesByTypeExecute(r ApiHeadGenresByNameImagesByTypeRequest) (*http.Response, error)
 
 	/*
-	HeadGenresByNameImagesByTypeByIndex Method for HeadGenresByNameImagesByTypeByIndex
+		HeadGenresByNameImagesByTypeByIndex Method for HeadGenresByNameImagesByTypeByIndex
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param name Item name
-	@param index Image Index
-	@param type_ Image Type
-	@return ApiHeadGenresByNameImagesByTypeByIndexRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param name Item name
+		@param index Image Index
+		@param type_ Image Type
+		@return ApiHeadGenresByNameImagesByTypeByIndexRequest
 	*/
 	HeadGenresByNameImagesByTypeByIndex(ctx context.Context, name string, index int32, type_ ImageType) ApiHeadGenresByNameImagesByTypeByIndexRequest
 
@@ -464,14 +463,14 @@ type ImageServiceAPI interface {
 	HeadGenresByNameImagesByTypeByIndexExecute(r ApiHeadGenresByNameImagesByTypeByIndexRequest) (*http.Response, error)
 
 	/*
-	HeadItemsByIdImagesByType Method for HeadItemsByIdImagesByType
+		HeadItemsByIdImagesByType Method for HeadItemsByIdImagesByType
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@param type_ Image Type
-	@return ApiHeadItemsByIdImagesByTypeRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@param type_ Image Type
+		@return ApiHeadItemsByIdImagesByTypeRequest
 	*/
 	HeadItemsByIdImagesByType(ctx context.Context, id string, type_ ImageType) ApiHeadItemsByIdImagesByTypeRequest
 
@@ -479,15 +478,15 @@ type ImageServiceAPI interface {
 	HeadItemsByIdImagesByTypeExecute(r ApiHeadItemsByIdImagesByTypeRequest) (*http.Response, error)
 
 	/*
-	HeadItemsByIdImagesByTypeByIndex Method for HeadItemsByIdImagesByTypeByIndex
+		HeadItemsByIdImagesByTypeByIndex Method for HeadItemsByIdImagesByTypeByIndex
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@param index Image Index
-	@param type_ Image Type
-	@return ApiHeadItemsByIdImagesByTypeByIndexRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@param index Image Index
+		@param type_ Image Type
+		@return ApiHeadItemsByIdImagesByTypeByIndexRequest
 	*/
 	HeadItemsByIdImagesByTypeByIndex(ctx context.Context, id string, index int32, type_ ImageType) ApiHeadItemsByIdImagesByTypeByIndexRequest
 
@@ -495,21 +494,21 @@ type ImageServiceAPI interface {
 	HeadItemsByIdImagesByTypeByIndexExecute(r ApiHeadItemsByIdImagesByTypeByIndexRequest) (*http.Response, error)
 
 	/*
-	HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount Method for HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount
+		HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount Method for HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param percentPlayed
-	@param unPlayedCount
-	@param id Item Id
-	@param maxWidth The maximum image width to return.
-	@param maxHeight The maximum image height to return.
-	@param tag Optional. Supply the cache tag from the item object to receive strong caching headers.
-	@param format Determines the output foramt of the image - original,gif,jpg,png
-	@param index Image Index
-	@param type_ Image Type
-	@return ApiHeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param percentPlayed
+		@param unPlayedCount
+		@param id Item Id
+		@param maxWidth The maximum image width to return.
+		@param maxHeight The maximum image height to return.
+		@param tag Optional. Supply the cache tag from the item object to receive strong caching headers.
+		@param format Determines the output foramt of the image - original,gif,jpg,png
+		@param index Image Index
+		@param type_ Image Type
+		@return ApiHeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountRequest
 	*/
 	HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(ctx context.Context, percentPlayed int32, unPlayedCount int32, id string, maxWidth int32, maxHeight int32, tag string, format string, index int32, type_ ImageType) ApiHeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountRequest
 
@@ -517,14 +516,14 @@ type ImageServiceAPI interface {
 	HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountExecute(r ApiHeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountRequest) (*http.Response, error)
 
 	/*
-	HeadMusicgenresByNameImagesByType Method for HeadMusicgenresByNameImagesByType
+		HeadMusicgenresByNameImagesByType Method for HeadMusicgenresByNameImagesByType
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param name Item name
-	@param type_ Image Type
-	@return ApiHeadMusicgenresByNameImagesByTypeRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param name Item name
+		@param type_ Image Type
+		@return ApiHeadMusicgenresByNameImagesByTypeRequest
 	*/
 	HeadMusicgenresByNameImagesByType(ctx context.Context, name string, type_ ImageType) ApiHeadMusicgenresByNameImagesByTypeRequest
 
@@ -532,15 +531,15 @@ type ImageServiceAPI interface {
 	HeadMusicgenresByNameImagesByTypeExecute(r ApiHeadMusicgenresByNameImagesByTypeRequest) (*http.Response, error)
 
 	/*
-	HeadMusicgenresByNameImagesByTypeByIndex Method for HeadMusicgenresByNameImagesByTypeByIndex
+		HeadMusicgenresByNameImagesByTypeByIndex Method for HeadMusicgenresByNameImagesByTypeByIndex
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param name Item name
-	@param index Image Index
-	@param type_ Image Type
-	@return ApiHeadMusicgenresByNameImagesByTypeByIndexRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param name Item name
+		@param index Image Index
+		@param type_ Image Type
+		@return ApiHeadMusicgenresByNameImagesByTypeByIndexRequest
 	*/
 	HeadMusicgenresByNameImagesByTypeByIndex(ctx context.Context, name string, index int32, type_ ImageType) ApiHeadMusicgenresByNameImagesByTypeByIndexRequest
 
@@ -548,14 +547,14 @@ type ImageServiceAPI interface {
 	HeadMusicgenresByNameImagesByTypeByIndexExecute(r ApiHeadMusicgenresByNameImagesByTypeByIndexRequest) (*http.Response, error)
 
 	/*
-	HeadPersonsByNameImagesByType Method for HeadPersonsByNameImagesByType
+		HeadPersonsByNameImagesByType Method for HeadPersonsByNameImagesByType
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param name Item name
-	@param type_ Image Type
-	@return ApiHeadPersonsByNameImagesByTypeRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param name Item name
+		@param type_ Image Type
+		@return ApiHeadPersonsByNameImagesByTypeRequest
 	*/
 	HeadPersonsByNameImagesByType(ctx context.Context, name string, type_ ImageType) ApiHeadPersonsByNameImagesByTypeRequest
 
@@ -563,15 +562,15 @@ type ImageServiceAPI interface {
 	HeadPersonsByNameImagesByTypeExecute(r ApiHeadPersonsByNameImagesByTypeRequest) (*http.Response, error)
 
 	/*
-	HeadPersonsByNameImagesByTypeByIndex Method for HeadPersonsByNameImagesByTypeByIndex
+		HeadPersonsByNameImagesByTypeByIndex Method for HeadPersonsByNameImagesByTypeByIndex
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param name Item name
-	@param index Image Index
-	@param type_ Image Type
-	@return ApiHeadPersonsByNameImagesByTypeByIndexRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param name Item name
+		@param index Image Index
+		@param type_ Image Type
+		@return ApiHeadPersonsByNameImagesByTypeByIndexRequest
 	*/
 	HeadPersonsByNameImagesByTypeByIndex(ctx context.Context, name string, index int32, type_ ImageType) ApiHeadPersonsByNameImagesByTypeByIndexRequest
 
@@ -579,14 +578,14 @@ type ImageServiceAPI interface {
 	HeadPersonsByNameImagesByTypeByIndexExecute(r ApiHeadPersonsByNameImagesByTypeByIndexRequest) (*http.Response, error)
 
 	/*
-	HeadStudiosByNameImagesByType Method for HeadStudiosByNameImagesByType
+		HeadStudiosByNameImagesByType Method for HeadStudiosByNameImagesByType
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param name Item name
-	@param type_ Image Type
-	@return ApiHeadStudiosByNameImagesByTypeRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param name Item name
+		@param type_ Image Type
+		@return ApiHeadStudiosByNameImagesByTypeRequest
 	*/
 	HeadStudiosByNameImagesByType(ctx context.Context, name string, type_ ImageType) ApiHeadStudiosByNameImagesByTypeRequest
 
@@ -594,15 +593,15 @@ type ImageServiceAPI interface {
 	HeadStudiosByNameImagesByTypeExecute(r ApiHeadStudiosByNameImagesByTypeRequest) (*http.Response, error)
 
 	/*
-	HeadStudiosByNameImagesByTypeByIndex Method for HeadStudiosByNameImagesByTypeByIndex
+		HeadStudiosByNameImagesByTypeByIndex Method for HeadStudiosByNameImagesByTypeByIndex
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param name Item name
-	@param index Image Index
-	@param type_ Image Type
-	@return ApiHeadStudiosByNameImagesByTypeByIndexRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param name Item name
+		@param index Image Index
+		@param type_ Image Type
+		@return ApiHeadStudiosByNameImagesByTypeByIndexRequest
 	*/
 	HeadStudiosByNameImagesByTypeByIndex(ctx context.Context, name string, index int32, type_ ImageType) ApiHeadStudiosByNameImagesByTypeByIndexRequest
 
@@ -610,14 +609,14 @@ type ImageServiceAPI interface {
 	HeadStudiosByNameImagesByTypeByIndexExecute(r ApiHeadStudiosByNameImagesByTypeByIndexRequest) (*http.Response, error)
 
 	/*
-	HeadUsersByIdImagesByType Method for HeadUsersByIdImagesByType
+		HeadUsersByIdImagesByType Method for HeadUsersByIdImagesByType
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id User Id
-	@param type_ Image Type
-	@return ApiHeadUsersByIdImagesByTypeRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id User Id
+		@param type_ Image Type
+		@return ApiHeadUsersByIdImagesByTypeRequest
 	*/
 	HeadUsersByIdImagesByType(ctx context.Context, id string, type_ ImageType) ApiHeadUsersByIdImagesByTypeRequest
 
@@ -625,15 +624,15 @@ type ImageServiceAPI interface {
 	HeadUsersByIdImagesByTypeExecute(r ApiHeadUsersByIdImagesByTypeRequest) (*http.Response, error)
 
 	/*
-	HeadUsersByIdImagesByTypeByIndex Method for HeadUsersByIdImagesByTypeByIndex
+		HeadUsersByIdImagesByTypeByIndex Method for HeadUsersByIdImagesByTypeByIndex
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id User Id
-	@param index Image Index
-	@param type_ Image Type
-	@return ApiHeadUsersByIdImagesByTypeByIndexRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id User Id
+		@param index Image Index
+		@param type_ Image Type
+		@return ApiHeadUsersByIdImagesByTypeByIndexRequest
 	*/
 	HeadUsersByIdImagesByTypeByIndex(ctx context.Context, id string, index int32, type_ ImageType) ApiHeadUsersByIdImagesByTypeByIndexRequest
 
@@ -641,14 +640,14 @@ type ImageServiceAPI interface {
 	HeadUsersByIdImagesByTypeByIndexExecute(r ApiHeadUsersByIdImagesByTypeByIndexRequest) (*http.Response, error)
 
 	/*
-	PostItemsByIdImagesByType Uploads an image for an item, must be base64 encoded.
+		PostItemsByIdImagesByType Uploads an image for an item, must be base64 encoded.
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@param type_ Image Type
-	@return ApiPostItemsByIdImagesByTypeRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@param type_ Image Type
+		@return ApiPostItemsByIdImagesByTypeRequest
 	*/
 	PostItemsByIdImagesByType(ctx context.Context, id string, type_ ImageType) ApiPostItemsByIdImagesByTypeRequest
 
@@ -656,15 +655,15 @@ type ImageServiceAPI interface {
 	PostItemsByIdImagesByTypeExecute(r ApiPostItemsByIdImagesByTypeRequest) (*http.Response, error)
 
 	/*
-	PostItemsByIdImagesByTypeByIndex Uploads an image for an item, must be base64 encoded.
+		PostItemsByIdImagesByTypeByIndex Uploads an image for an item, must be base64 encoded.
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@param index Image Index
-	@param type_ Image Type
-	@return ApiPostItemsByIdImagesByTypeByIndexRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@param index Image Index
+		@param type_ Image Type
+		@return ApiPostItemsByIdImagesByTypeByIndexRequest
 	*/
 	PostItemsByIdImagesByTypeByIndex(ctx context.Context, id string, index int32, type_ ImageType) ApiPostItemsByIdImagesByTypeByIndexRequest
 
@@ -672,15 +671,15 @@ type ImageServiceAPI interface {
 	PostItemsByIdImagesByTypeByIndexExecute(r ApiPostItemsByIdImagesByTypeByIndexRequest) (*http.Response, error)
 
 	/*
-	PostItemsByIdImagesByTypeByIndexDelete Method for PostItemsByIdImagesByTypeByIndexDelete
+		PostItemsByIdImagesByTypeByIndexDelete Method for PostItemsByIdImagesByTypeByIndexDelete
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@param index Image Index
-	@param type_ Image Type
-	@return ApiPostItemsByIdImagesByTypeByIndexDeleteRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@param index Image Index
+		@param type_ Image Type
+		@return ApiPostItemsByIdImagesByTypeByIndexDeleteRequest
 	*/
 	PostItemsByIdImagesByTypeByIndexDelete(ctx context.Context, id string, index int32, type_ ImageType) ApiPostItemsByIdImagesByTypeByIndexDeleteRequest
 
@@ -688,15 +687,15 @@ type ImageServiceAPI interface {
 	PostItemsByIdImagesByTypeByIndexDeleteExecute(r ApiPostItemsByIdImagesByTypeByIndexDeleteRequest) (*http.Response, error)
 
 	/*
-	PostItemsByIdImagesByTypeByIndexIndex Updates the index for an item image
+		PostItemsByIdImagesByTypeByIndexIndex Updates the index for an item image
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@param type_ Image Type
-	@param index Image Index
-	@return ApiPostItemsByIdImagesByTypeByIndexIndexRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@param type_ Image Type
+		@param index Image Index
+		@return ApiPostItemsByIdImagesByTypeByIndexIndexRequest
 	*/
 	PostItemsByIdImagesByTypeByIndexIndex(ctx context.Context, id string, type_ ImageType, index int32) ApiPostItemsByIdImagesByTypeByIndexIndexRequest
 
@@ -704,15 +703,15 @@ type ImageServiceAPI interface {
 	PostItemsByIdImagesByTypeByIndexIndexExecute(r ApiPostItemsByIdImagesByTypeByIndexIndexRequest) (*http.Response, error)
 
 	/*
-	PostItemsByIdImagesByTypeByIndexUrl Updates the index for an item image
+		PostItemsByIdImagesByTypeByIndexUrl Updates the index for an item image
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@param type_ Image Type
-	@param index Image Index
-	@return ApiPostItemsByIdImagesByTypeByIndexUrlRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@param type_ Image Type
+		@param index Image Index
+		@return ApiPostItemsByIdImagesByTypeByIndexUrlRequest
 	*/
 	PostItemsByIdImagesByTypeByIndexUrl(ctx context.Context, id string, type_ ImageType, index int32) ApiPostItemsByIdImagesByTypeByIndexUrlRequest
 
@@ -720,14 +719,14 @@ type ImageServiceAPI interface {
 	PostItemsByIdImagesByTypeByIndexUrlExecute(r ApiPostItemsByIdImagesByTypeByIndexUrlRequest) (*http.Response, error)
 
 	/*
-	PostItemsByIdImagesByTypeDelete Method for PostItemsByIdImagesByTypeDelete
+		PostItemsByIdImagesByTypeDelete Method for PostItemsByIdImagesByTypeDelete
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@param type_ Image Type
-	@return ApiPostItemsByIdImagesByTypeDeleteRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@param type_ Image Type
+		@return ApiPostItemsByIdImagesByTypeDeleteRequest
 	*/
 	PostItemsByIdImagesByTypeDelete(ctx context.Context, id string, type_ ImageType) ApiPostItemsByIdImagesByTypeDeleteRequest
 
@@ -735,14 +734,14 @@ type ImageServiceAPI interface {
 	PostItemsByIdImagesByTypeDeleteExecute(r ApiPostItemsByIdImagesByTypeDeleteRequest) (*http.Response, error)
 
 	/*
-	PostUsersByIdImagesByType Uploads an image for an item, must be base64 encoded.
+		PostUsersByIdImagesByType Uploads an image for an item, must be base64 encoded.
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id User Id
-	@param type_ Image Type
-	@return ApiPostUsersByIdImagesByTypeRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id User Id
+		@param type_ Image Type
+		@return ApiPostUsersByIdImagesByTypeRequest
 	*/
 	PostUsersByIdImagesByType(ctx context.Context, id string, type_ ImageType) ApiPostUsersByIdImagesByTypeRequest
 
@@ -750,14 +749,14 @@ type ImageServiceAPI interface {
 	PostUsersByIdImagesByTypeExecute(r ApiPostUsersByIdImagesByTypeRequest) (*http.Response, error)
 
 	/*
-	PostUsersByIdImagesByTypeByIndex Uploads an image for an item, must be base64 encoded.
+		PostUsersByIdImagesByTypeByIndex Uploads an image for an item, must be base64 encoded.
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id User Id
-	@param type_ Image Type
-	@return ApiPostUsersByIdImagesByTypeByIndexRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id User Id
+		@param type_ Image Type
+		@return ApiPostUsersByIdImagesByTypeByIndexRequest
 	*/
 	PostUsersByIdImagesByTypeByIndex(ctx context.Context, id string, type_ ImageType) ApiPostUsersByIdImagesByTypeByIndexRequest
 
@@ -765,15 +764,15 @@ type ImageServiceAPI interface {
 	PostUsersByIdImagesByTypeByIndexExecute(r ApiPostUsersByIdImagesByTypeByIndexRequest) (*http.Response, error)
 
 	/*
-	PostUsersByIdImagesByTypeByIndexDelete Method for PostUsersByIdImagesByTypeByIndexDelete
+		PostUsersByIdImagesByTypeByIndexDelete Method for PostUsersByIdImagesByTypeByIndexDelete
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id User Id
-	@param index Image Index
-	@param type_ Image Type
-	@return ApiPostUsersByIdImagesByTypeByIndexDeleteRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id User Id
+		@param index Image Index
+		@param type_ Image Type
+		@return ApiPostUsersByIdImagesByTypeByIndexDeleteRequest
 	*/
 	PostUsersByIdImagesByTypeByIndexDelete(ctx context.Context, id string, index int32, type_ ImageType) ApiPostUsersByIdImagesByTypeByIndexDeleteRequest
 
@@ -781,14 +780,14 @@ type ImageServiceAPI interface {
 	PostUsersByIdImagesByTypeByIndexDeleteExecute(r ApiPostUsersByIdImagesByTypeByIndexDeleteRequest) (*http.Response, error)
 
 	/*
-	PostUsersByIdImagesByTypeDelete Method for PostUsersByIdImagesByTypeDelete
+		PostUsersByIdImagesByTypeDelete Method for PostUsersByIdImagesByTypeDelete
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id User Id
-	@param type_ Image Type
-	@return ApiPostUsersByIdImagesByTypeDeleteRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id User Id
+		@param type_ Image Type
+		@return ApiPostUsersByIdImagesByTypeDeleteRequest
 	*/
 	PostUsersByIdImagesByTypeDelete(ctx context.Context, id string, type_ ImageType) ApiPostUsersByIdImagesByTypeDeleteRequest
 
@@ -800,11 +799,11 @@ type ImageServiceAPI interface {
 type ImageServiceAPIService service
 
 type ApiDeleteItemsByIdImagesByTypeRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService ImageServiceAPI
-	id string
-	type_ ImageType
-	index *int32
+	id         string
+	type_      ImageType
+	index      *int32
 }
 
 // Image Index
@@ -822,26 +821,26 @@ DeleteItemsByIdImagesByType Method for DeleteItemsByIdImagesByType
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @param type_ Image Type
- @return ApiDeleteItemsByIdImagesByTypeRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@param type_ Image Type
+	@return ApiDeleteItemsByIdImagesByTypeRequest
 */
 func (a *ImageServiceAPIService) DeleteItemsByIdImagesByType(ctx context.Context, id string, type_ ImageType) ApiDeleteItemsByIdImagesByTypeRequest {
 	return ApiDeleteItemsByIdImagesByTypeRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
-		type_: type_,
+		ctx:        ctx,
+		id:         id,
+		type_:      type_,
 	}
 }
 
 // Execute executes the request
 func (a *ImageServiceAPIService) DeleteItemsByIdImagesByTypeExecute(r ApiDeleteItemsByIdImagesByTypeRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodDelete
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodDelete
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImageServiceAPIService.DeleteItemsByIdImagesByType")
@@ -920,11 +919,11 @@ func (a *ImageServiceAPIService) DeleteItemsByIdImagesByTypeExecute(r ApiDeleteI
 }
 
 type ApiDeleteItemsByIdImagesByTypeByIndexRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService ImageServiceAPI
-	id string
-	index int32
-	type_ ImageType
+	id         string
+	index      int32
+	type_      ImageType
 }
 
 func (r ApiDeleteItemsByIdImagesByTypeByIndexRequest) Execute() (*http.Response, error) {
@@ -936,28 +935,28 @@ DeleteItemsByIdImagesByTypeByIndex Method for DeleteItemsByIdImagesByTypeByIndex
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @param index Image Index
- @param type_ Image Type
- @return ApiDeleteItemsByIdImagesByTypeByIndexRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@param index Image Index
+	@param type_ Image Type
+	@return ApiDeleteItemsByIdImagesByTypeByIndexRequest
 */
 func (a *ImageServiceAPIService) DeleteItemsByIdImagesByTypeByIndex(ctx context.Context, id string, index int32, type_ ImageType) ApiDeleteItemsByIdImagesByTypeByIndexRequest {
 	return ApiDeleteItemsByIdImagesByTypeByIndexRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
-		index: index,
-		type_: type_,
+		ctx:        ctx,
+		id:         id,
+		index:      index,
+		type_:      type_,
 	}
 }
 
 // Execute executes the request
 func (a *ImageServiceAPIService) DeleteItemsByIdImagesByTypeByIndexExecute(r ApiDeleteItemsByIdImagesByTypeByIndexRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodDelete
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodDelete
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImageServiceAPIService.DeleteItemsByIdImagesByTypeByIndex")
@@ -1034,11 +1033,11 @@ func (a *ImageServiceAPIService) DeleteItemsByIdImagesByTypeByIndexExecute(r Api
 }
 
 type ApiDeleteUsersByIdImagesByTypeRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService ImageServiceAPI
-	id string
-	type_ ImageType
-	index *int32
+	id         string
+	type_      ImageType
+	index      *int32
 }
 
 // Image Index
@@ -1056,26 +1055,26 @@ DeleteUsersByIdImagesByType Method for DeleteUsersByIdImagesByType
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id User Id
- @param type_ Image Type
- @return ApiDeleteUsersByIdImagesByTypeRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id User Id
+	@param type_ Image Type
+	@return ApiDeleteUsersByIdImagesByTypeRequest
 */
 func (a *ImageServiceAPIService) DeleteUsersByIdImagesByType(ctx context.Context, id string, type_ ImageType) ApiDeleteUsersByIdImagesByTypeRequest {
 	return ApiDeleteUsersByIdImagesByTypeRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
-		type_: type_,
+		ctx:        ctx,
+		id:         id,
+		type_:      type_,
 	}
 }
 
 // Execute executes the request
 func (a *ImageServiceAPIService) DeleteUsersByIdImagesByTypeExecute(r ApiDeleteUsersByIdImagesByTypeRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodDelete
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodDelete
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImageServiceAPIService.DeleteUsersByIdImagesByType")
@@ -1154,11 +1153,11 @@ func (a *ImageServiceAPIService) DeleteUsersByIdImagesByTypeExecute(r ApiDeleteU
 }
 
 type ApiDeleteUsersByIdImagesByTypeByIndexRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService ImageServiceAPI
-	id string
-	index int32
-	type_ ImageType
+	id         string
+	index      int32
+	type_      ImageType
 }
 
 func (r ApiDeleteUsersByIdImagesByTypeByIndexRequest) Execute() (*http.Response, error) {
@@ -1170,28 +1169,28 @@ DeleteUsersByIdImagesByTypeByIndex Method for DeleteUsersByIdImagesByTypeByIndex
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id User Id
- @param index Image Index
- @param type_ Image Type
- @return ApiDeleteUsersByIdImagesByTypeByIndexRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id User Id
+	@param index Image Index
+	@param type_ Image Type
+	@return ApiDeleteUsersByIdImagesByTypeByIndexRequest
 */
 func (a *ImageServiceAPIService) DeleteUsersByIdImagesByTypeByIndex(ctx context.Context, id string, index int32, type_ ImageType) ApiDeleteUsersByIdImagesByTypeByIndexRequest {
 	return ApiDeleteUsersByIdImagesByTypeByIndexRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
-		index: index,
-		type_: type_,
+		ctx:        ctx,
+		id:         id,
+		index:      index,
+		type_:      type_,
 	}
 }
 
 // Execute executes the request
 func (a *ImageServiceAPIService) DeleteUsersByIdImagesByTypeByIndexExecute(r ApiDeleteUsersByIdImagesByTypeByIndexRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodDelete
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodDelete
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImageServiceAPIService.DeleteUsersByIdImagesByTypeByIndex")
@@ -1268,24 +1267,24 @@ func (a *ImageServiceAPIService) DeleteUsersByIdImagesByTypeByIndexExecute(r Api
 }
 
 type ApiGetArtistsByNameImagesByTypeRequest struct {
-	ctx context.Context
-	ApiService ImageServiceAPI
-	name string
-	type_ ImageType
-	maxWidth *int32
-	maxHeight *int32
-	width *int32
-	height *int32
-	quality *int32
-	tag *string
-	cropWhitespace *bool
+	ctx                  context.Context
+	ApiService           ImageServiceAPI
+	name                 string
+	type_                ImageType
+	maxWidth             *int32
+	maxHeight            *int32
+	width                *int32
+	height               *int32
+	quality              *int32
+	tag                  *string
+	cropWhitespace       *bool
 	enableImageEnhancers *bool
-	format *string
-	backgroundColor *string
-	foregroundLayer *string
-	autoOrient *bool
-	keepAnimation *bool
-	index *int32
+	format               *string
+	backgroundColor      *string
+	foregroundLayer      *string
+	autoOrient           *bool
+	keepAnimation        *bool
+	index                *int32
 }
 
 // The maximum image width to return.
@@ -1381,26 +1380,26 @@ GetArtistsByNameImagesByType Method for GetArtistsByNameImagesByType
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param name Item name
- @param type_ Image Type
- @return ApiGetArtistsByNameImagesByTypeRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param name Item name
+	@param type_ Image Type
+	@return ApiGetArtistsByNameImagesByTypeRequest
 */
 func (a *ImageServiceAPIService) GetArtistsByNameImagesByType(ctx context.Context, name string, type_ ImageType) ApiGetArtistsByNameImagesByTypeRequest {
 	return ApiGetArtistsByNameImagesByTypeRequest{
 		ApiService: a,
-		ctx: ctx,
-		name: name,
-		type_: type_,
+		ctx:        ctx,
+		name:       name,
+		type_:      type_,
 	}
 }
 
 // Execute executes the request
 func (a *ImageServiceAPIService) GetArtistsByNameImagesByTypeExecute(r ApiGetArtistsByNameImagesByTypeRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImageServiceAPIService.GetArtistsByNameImagesByType")
@@ -1518,24 +1517,24 @@ func (a *ImageServiceAPIService) GetArtistsByNameImagesByTypeExecute(r ApiGetArt
 }
 
 type ApiGetArtistsByNameImagesByTypeByIndexRequest struct {
-	ctx context.Context
-	ApiService ImageServiceAPI
-	name string
-	index int32
-	type_ ImageType
-	maxWidth *int32
-	maxHeight *int32
-	width *int32
-	height *int32
-	quality *int32
-	tag *string
-	cropWhitespace *bool
+	ctx                  context.Context
+	ApiService           ImageServiceAPI
+	name                 string
+	index                int32
+	type_                ImageType
+	maxWidth             *int32
+	maxHeight            *int32
+	width                *int32
+	height               *int32
+	quality              *int32
+	tag                  *string
+	cropWhitespace       *bool
 	enableImageEnhancers *bool
-	format *string
-	backgroundColor *string
-	foregroundLayer *string
-	autoOrient *bool
-	keepAnimation *bool
+	format               *string
+	backgroundColor      *string
+	foregroundLayer      *string
+	autoOrient           *bool
+	keepAnimation        *bool
 }
 
 // The maximum image width to return.
@@ -1625,28 +1624,28 @@ GetArtistsByNameImagesByTypeByIndex Method for GetArtistsByNameImagesByTypeByInd
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param name Item name
- @param index Image Index
- @param type_ Image Type
- @return ApiGetArtistsByNameImagesByTypeByIndexRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param name Item name
+	@param index Image Index
+	@param type_ Image Type
+	@return ApiGetArtistsByNameImagesByTypeByIndexRequest
 */
 func (a *ImageServiceAPIService) GetArtistsByNameImagesByTypeByIndex(ctx context.Context, name string, index int32, type_ ImageType) ApiGetArtistsByNameImagesByTypeByIndexRequest {
 	return ApiGetArtistsByNameImagesByTypeByIndexRequest{
 		ApiService: a,
-		ctx: ctx,
-		name: name,
-		index: index,
-		type_: type_,
+		ctx:        ctx,
+		name:       name,
+		index:      index,
+		type_:      type_,
 	}
 }
 
 // Execute executes the request
 func (a *ImageServiceAPIService) GetArtistsByNameImagesByTypeByIndexExecute(r ApiGetArtistsByNameImagesByTypeByIndexRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImageServiceAPIService.GetArtistsByNameImagesByTypeByIndex")
@@ -1762,24 +1761,24 @@ func (a *ImageServiceAPIService) GetArtistsByNameImagesByTypeByIndexExecute(r Ap
 }
 
 type ApiGetGamegenresByNameImagesByTypeRequest struct {
-	ctx context.Context
-	ApiService ImageServiceAPI
-	name string
-	type_ ImageType
-	maxWidth *int32
-	maxHeight *int32
-	width *int32
-	height *int32
-	quality *int32
-	tag *string
-	cropWhitespace *bool
+	ctx                  context.Context
+	ApiService           ImageServiceAPI
+	name                 string
+	type_                ImageType
+	maxWidth             *int32
+	maxHeight            *int32
+	width                *int32
+	height               *int32
+	quality              *int32
+	tag                  *string
+	cropWhitespace       *bool
 	enableImageEnhancers *bool
-	format *string
-	backgroundColor *string
-	foregroundLayer *string
-	autoOrient *bool
-	keepAnimation *bool
-	index *int32
+	format               *string
+	backgroundColor      *string
+	foregroundLayer      *string
+	autoOrient           *bool
+	keepAnimation        *bool
+	index                *int32
 }
 
 // The maximum image width to return.
@@ -1875,26 +1874,26 @@ GetGamegenresByNameImagesByType Method for GetGamegenresByNameImagesByType
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param name Item name
- @param type_ Image Type
- @return ApiGetGamegenresByNameImagesByTypeRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param name Item name
+	@param type_ Image Type
+	@return ApiGetGamegenresByNameImagesByTypeRequest
 */
 func (a *ImageServiceAPIService) GetGamegenresByNameImagesByType(ctx context.Context, name string, type_ ImageType) ApiGetGamegenresByNameImagesByTypeRequest {
 	return ApiGetGamegenresByNameImagesByTypeRequest{
 		ApiService: a,
-		ctx: ctx,
-		name: name,
-		type_: type_,
+		ctx:        ctx,
+		name:       name,
+		type_:      type_,
 	}
 }
 
 // Execute executes the request
 func (a *ImageServiceAPIService) GetGamegenresByNameImagesByTypeExecute(r ApiGetGamegenresByNameImagesByTypeRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImageServiceAPIService.GetGamegenresByNameImagesByType")
@@ -2012,24 +2011,24 @@ func (a *ImageServiceAPIService) GetGamegenresByNameImagesByTypeExecute(r ApiGet
 }
 
 type ApiGetGamegenresByNameImagesByTypeByIndexRequest struct {
-	ctx context.Context
-	ApiService ImageServiceAPI
-	name string
-	index int32
-	type_ ImageType
-	maxWidth *int32
-	maxHeight *int32
-	width *int32
-	height *int32
-	quality *int32
-	tag *string
-	cropWhitespace *bool
+	ctx                  context.Context
+	ApiService           ImageServiceAPI
+	name                 string
+	index                int32
+	type_                ImageType
+	maxWidth             *int32
+	maxHeight            *int32
+	width                *int32
+	height               *int32
+	quality              *int32
+	tag                  *string
+	cropWhitespace       *bool
 	enableImageEnhancers *bool
-	format *string
-	backgroundColor *string
-	foregroundLayer *string
-	autoOrient *bool
-	keepAnimation *bool
+	format               *string
+	backgroundColor      *string
+	foregroundLayer      *string
+	autoOrient           *bool
+	keepAnimation        *bool
 }
 
 // The maximum image width to return.
@@ -2119,28 +2118,28 @@ GetGamegenresByNameImagesByTypeByIndex Method for GetGamegenresByNameImagesByTyp
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param name Item name
- @param index Image Index
- @param type_ Image Type
- @return ApiGetGamegenresByNameImagesByTypeByIndexRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param name Item name
+	@param index Image Index
+	@param type_ Image Type
+	@return ApiGetGamegenresByNameImagesByTypeByIndexRequest
 */
 func (a *ImageServiceAPIService) GetGamegenresByNameImagesByTypeByIndex(ctx context.Context, name string, index int32, type_ ImageType) ApiGetGamegenresByNameImagesByTypeByIndexRequest {
 	return ApiGetGamegenresByNameImagesByTypeByIndexRequest{
 		ApiService: a,
-		ctx: ctx,
-		name: name,
-		index: index,
-		type_: type_,
+		ctx:        ctx,
+		name:       name,
+		index:      index,
+		type_:      type_,
 	}
 }
 
 // Execute executes the request
 func (a *ImageServiceAPIService) GetGamegenresByNameImagesByTypeByIndexExecute(r ApiGetGamegenresByNameImagesByTypeByIndexRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImageServiceAPIService.GetGamegenresByNameImagesByTypeByIndex")
@@ -2256,24 +2255,24 @@ func (a *ImageServiceAPIService) GetGamegenresByNameImagesByTypeByIndexExecute(r
 }
 
 type ApiGetGenresByNameImagesByTypeRequest struct {
-	ctx context.Context
-	ApiService ImageServiceAPI
-	name string
-	type_ ImageType
-	maxWidth *int32
-	maxHeight *int32
-	width *int32
-	height *int32
-	quality *int32
-	tag *string
-	cropWhitespace *bool
+	ctx                  context.Context
+	ApiService           ImageServiceAPI
+	name                 string
+	type_                ImageType
+	maxWidth             *int32
+	maxHeight            *int32
+	width                *int32
+	height               *int32
+	quality              *int32
+	tag                  *string
+	cropWhitespace       *bool
 	enableImageEnhancers *bool
-	format *string
-	backgroundColor *string
-	foregroundLayer *string
-	autoOrient *bool
-	keepAnimation *bool
-	index *int32
+	format               *string
+	backgroundColor      *string
+	foregroundLayer      *string
+	autoOrient           *bool
+	keepAnimation        *bool
+	index                *int32
 }
 
 // The maximum image width to return.
@@ -2369,26 +2368,26 @@ GetGenresByNameImagesByType Method for GetGenresByNameImagesByType
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param name Item name
- @param type_ Image Type
- @return ApiGetGenresByNameImagesByTypeRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param name Item name
+	@param type_ Image Type
+	@return ApiGetGenresByNameImagesByTypeRequest
 */
 func (a *ImageServiceAPIService) GetGenresByNameImagesByType(ctx context.Context, name string, type_ ImageType) ApiGetGenresByNameImagesByTypeRequest {
 	return ApiGetGenresByNameImagesByTypeRequest{
 		ApiService: a,
-		ctx: ctx,
-		name: name,
-		type_: type_,
+		ctx:        ctx,
+		name:       name,
+		type_:      type_,
 	}
 }
 
 // Execute executes the request
 func (a *ImageServiceAPIService) GetGenresByNameImagesByTypeExecute(r ApiGetGenresByNameImagesByTypeRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImageServiceAPIService.GetGenresByNameImagesByType")
@@ -2506,24 +2505,24 @@ func (a *ImageServiceAPIService) GetGenresByNameImagesByTypeExecute(r ApiGetGenr
 }
 
 type ApiGetGenresByNameImagesByTypeByIndexRequest struct {
-	ctx context.Context
-	ApiService ImageServiceAPI
-	name string
-	index int32
-	type_ ImageType
-	maxWidth *int32
-	maxHeight *int32
-	width *int32
-	height *int32
-	quality *int32
-	tag *string
-	cropWhitespace *bool
+	ctx                  context.Context
+	ApiService           ImageServiceAPI
+	name                 string
+	index                int32
+	type_                ImageType
+	maxWidth             *int32
+	maxHeight            *int32
+	width                *int32
+	height               *int32
+	quality              *int32
+	tag                  *string
+	cropWhitespace       *bool
 	enableImageEnhancers *bool
-	format *string
-	backgroundColor *string
-	foregroundLayer *string
-	autoOrient *bool
-	keepAnimation *bool
+	format               *string
+	backgroundColor      *string
+	foregroundLayer      *string
+	autoOrient           *bool
+	keepAnimation        *bool
 }
 
 // The maximum image width to return.
@@ -2613,28 +2612,28 @@ GetGenresByNameImagesByTypeByIndex Method for GetGenresByNameImagesByTypeByIndex
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param name Item name
- @param index Image Index
- @param type_ Image Type
- @return ApiGetGenresByNameImagesByTypeByIndexRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param name Item name
+	@param index Image Index
+	@param type_ Image Type
+	@return ApiGetGenresByNameImagesByTypeByIndexRequest
 */
 func (a *ImageServiceAPIService) GetGenresByNameImagesByTypeByIndex(ctx context.Context, name string, index int32, type_ ImageType) ApiGetGenresByNameImagesByTypeByIndexRequest {
 	return ApiGetGenresByNameImagesByTypeByIndexRequest{
 		ApiService: a,
-		ctx: ctx,
-		name: name,
-		index: index,
-		type_: type_,
+		ctx:        ctx,
+		name:       name,
+		index:      index,
+		type_:      type_,
 	}
 }
 
 // Execute executes the request
 func (a *ImageServiceAPIService) GetGenresByNameImagesByTypeByIndexExecute(r ApiGetGenresByNameImagesByTypeByIndexRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImageServiceAPIService.GetGenresByNameImagesByTypeByIndex")
@@ -2750,9 +2749,9 @@ func (a *ImageServiceAPIService) GetGenresByNameImagesByTypeByIndexExecute(r Api
 }
 
 type ApiGetItemsByIdImagesRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService ImageServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiGetItemsByIdImagesRequest) Execute() ([]ImageInfo, *http.Response, error) {
@@ -2764,26 +2763,27 @@ GetItemsByIdImages Gets information about an item's images
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiGetItemsByIdImagesRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiGetItemsByIdImagesRequest
 */
 func (a *ImageServiceAPIService) GetItemsByIdImages(ctx context.Context, id string) ApiGetItemsByIdImagesRequest {
 	return ApiGetItemsByIdImagesRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
-//  @return []ImageInfo
+//
+//	@return []ImageInfo
 func (a *ImageServiceAPIService) GetItemsByIdImagesExecute(r ApiGetItemsByIdImagesRequest) ([]ImageInfo, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []ImageInfo
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue []ImageInfo
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImageServiceAPIService.GetItemsByIdImages")
@@ -2867,24 +2867,24 @@ func (a *ImageServiceAPIService) GetItemsByIdImagesExecute(r ApiGetItemsByIdImag
 }
 
 type ApiGetItemsByIdImagesByTypeRequest struct {
-	ctx context.Context
-	ApiService ImageServiceAPI
-	id string
-	type_ ImageType
-	maxWidth *int32
-	maxHeight *int32
-	width *int32
-	height *int32
-	quality *int32
-	tag *string
-	cropWhitespace *bool
+	ctx                  context.Context
+	ApiService           ImageServiceAPI
+	id                   string
+	type_                ImageType
+	maxWidth             *int32
+	maxHeight            *int32
+	width                *int32
+	height               *int32
+	quality              *int32
+	tag                  *string
+	cropWhitespace       *bool
 	enableImageEnhancers *bool
-	format *string
-	backgroundColor *string
-	foregroundLayer *string
-	autoOrient *bool
-	keepAnimation *bool
-	index *int32
+	format               *string
+	backgroundColor      *string
+	foregroundLayer      *string
+	autoOrient           *bool
+	keepAnimation        *bool
+	index                *int32
 }
 
 // The maximum image width to return.
@@ -2980,26 +2980,26 @@ GetItemsByIdImagesByType Method for GetItemsByIdImagesByType
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @param type_ Image Type
- @return ApiGetItemsByIdImagesByTypeRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@param type_ Image Type
+	@return ApiGetItemsByIdImagesByTypeRequest
 */
 func (a *ImageServiceAPIService) GetItemsByIdImagesByType(ctx context.Context, id string, type_ ImageType) ApiGetItemsByIdImagesByTypeRequest {
 	return ApiGetItemsByIdImagesByTypeRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
-		type_: type_,
+		ctx:        ctx,
+		id:         id,
+		type_:      type_,
 	}
 }
 
 // Execute executes the request
 func (a *ImageServiceAPIService) GetItemsByIdImagesByTypeExecute(r ApiGetItemsByIdImagesByTypeRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImageServiceAPIService.GetItemsByIdImagesByType")
@@ -3117,24 +3117,24 @@ func (a *ImageServiceAPIService) GetItemsByIdImagesByTypeExecute(r ApiGetItemsBy
 }
 
 type ApiGetItemsByIdImagesByTypeByIndexRequest struct {
-	ctx context.Context
-	ApiService ImageServiceAPI
-	id string
-	index int32
-	type_ ImageType
-	maxWidth *int32
-	maxHeight *int32
-	width *int32
-	height *int32
-	quality *int32
-	tag *string
-	cropWhitespace *bool
+	ctx                  context.Context
+	ApiService           ImageServiceAPI
+	id                   string
+	index                int32
+	type_                ImageType
+	maxWidth             *int32
+	maxHeight            *int32
+	width                *int32
+	height               *int32
+	quality              *int32
+	tag                  *string
+	cropWhitespace       *bool
 	enableImageEnhancers *bool
-	format *string
-	backgroundColor *string
-	foregroundLayer *string
-	autoOrient *bool
-	keepAnimation *bool
+	format               *string
+	backgroundColor      *string
+	foregroundLayer      *string
+	autoOrient           *bool
+	keepAnimation        *bool
 }
 
 // The maximum image width to return.
@@ -3224,28 +3224,28 @@ GetItemsByIdImagesByTypeByIndex Method for GetItemsByIdImagesByTypeByIndex
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @param index Image Index
- @param type_ Image Type
- @return ApiGetItemsByIdImagesByTypeByIndexRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@param index Image Index
+	@param type_ Image Type
+	@return ApiGetItemsByIdImagesByTypeByIndexRequest
 */
 func (a *ImageServiceAPIService) GetItemsByIdImagesByTypeByIndex(ctx context.Context, id string, index int32, type_ ImageType) ApiGetItemsByIdImagesByTypeByIndexRequest {
 	return ApiGetItemsByIdImagesByTypeByIndexRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
-		index: index,
-		type_: type_,
+		ctx:        ctx,
+		id:         id,
+		index:      index,
+		type_:      type_,
 	}
 }
 
 // Execute executes the request
 func (a *ImageServiceAPIService) GetItemsByIdImagesByTypeByIndexExecute(r ApiGetItemsByIdImagesByTypeByIndexRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImageServiceAPIService.GetItemsByIdImagesByTypeByIndex")
@@ -3361,26 +3361,26 @@ func (a *ImageServiceAPIService) GetItemsByIdImagesByTypeByIndexExecute(r ApiGet
 }
 
 type ApiGetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountRequest struct {
-	ctx context.Context
-	ApiService ImageServiceAPI
-	percentPlayed int32
-	unPlayedCount int32
-	id string
-	maxWidth int32
-	maxHeight int32
-	tag string
-	format string
-	index int32
-	type_ ImageType
-	width *int32
-	height *int32
-	quality *int32
-	cropWhitespace *bool
+	ctx                  context.Context
+	ApiService           ImageServiceAPI
+	percentPlayed        int32
+	unPlayedCount        int32
+	id                   string
+	maxWidth             int32
+	maxHeight            int32
+	tag                  string
+	format               string
+	index                int32
+	type_                ImageType
+	width                *int32
+	height               *int32
+	quality              *int32
+	cropWhitespace       *bool
 	enableImageEnhancers *bool
-	backgroundColor *string
-	foregroundLayer *string
-	autoOrient *bool
-	keepAnimation *bool
+	backgroundColor      *string
+	foregroundLayer      *string
+	autoOrient           *bool
+	keepAnimation        *bool
 }
 
 // The fixed image width to return.
@@ -3446,40 +3446,40 @@ GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayed
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param percentPlayed
- @param unPlayedCount
- @param id Item Id
- @param maxWidth The maximum image width to return.
- @param maxHeight The maximum image height to return.
- @param tag Optional. Supply the cache tag from the item object to receive strong caching headers.
- @param format Determines the output foramt of the image - original,gif,jpg,png
- @param index Image Index
- @param type_ Image Type
- @return ApiGetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param percentPlayed
+	@param unPlayedCount
+	@param id Item Id
+	@param maxWidth The maximum image width to return.
+	@param maxHeight The maximum image height to return.
+	@param tag Optional. Supply the cache tag from the item object to receive strong caching headers.
+	@param format Determines the output foramt of the image - original,gif,jpg,png
+	@param index Image Index
+	@param type_ Image Type
+	@return ApiGetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountRequest
 */
 func (a *ImageServiceAPIService) GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(ctx context.Context, percentPlayed int32, unPlayedCount int32, id string, maxWidth int32, maxHeight int32, tag string, format string, index int32, type_ ImageType) ApiGetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountRequest {
 	return ApiGetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountRequest{
-		ApiService: a,
-		ctx: ctx,
+		ApiService:    a,
+		ctx:           ctx,
 		percentPlayed: percentPlayed,
 		unPlayedCount: unPlayedCount,
-		id: id,
-		maxWidth: maxWidth,
-		maxHeight: maxHeight,
-		tag: tag,
-		format: format,
-		index: index,
-		type_: type_,
+		id:            id,
+		maxWidth:      maxWidth,
+		maxHeight:     maxHeight,
+		tag:           tag,
+		format:        format,
+		index:         index,
+		type_:         type_,
 	}
 }
 
 // Execute executes the request
 func (a *ImageServiceAPIService) GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountExecute(r ApiGetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImageServiceAPIService.GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount")
@@ -3589,24 +3589,24 @@ func (a *ImageServiceAPIService) GetItemsByIdImagesByTypeByIndexByTagByFormatByM
 }
 
 type ApiGetMusicgenresByNameImagesByTypeRequest struct {
-	ctx context.Context
-	ApiService ImageServiceAPI
-	name string
-	type_ ImageType
-	maxWidth *int32
-	maxHeight *int32
-	width *int32
-	height *int32
-	quality *int32
-	tag *string
-	cropWhitespace *bool
+	ctx                  context.Context
+	ApiService           ImageServiceAPI
+	name                 string
+	type_                ImageType
+	maxWidth             *int32
+	maxHeight            *int32
+	width                *int32
+	height               *int32
+	quality              *int32
+	tag                  *string
+	cropWhitespace       *bool
 	enableImageEnhancers *bool
-	format *string
-	backgroundColor *string
-	foregroundLayer *string
-	autoOrient *bool
-	keepAnimation *bool
-	index *int32
+	format               *string
+	backgroundColor      *string
+	foregroundLayer      *string
+	autoOrient           *bool
+	keepAnimation        *bool
+	index                *int32
 }
 
 // The maximum image width to return.
@@ -3702,26 +3702,26 @@ GetMusicgenresByNameImagesByType Method for GetMusicgenresByNameImagesByType
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param name Item name
- @param type_ Image Type
- @return ApiGetMusicgenresByNameImagesByTypeRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param name Item name
+	@param type_ Image Type
+	@return ApiGetMusicgenresByNameImagesByTypeRequest
 */
 func (a *ImageServiceAPIService) GetMusicgenresByNameImagesByType(ctx context.Context, name string, type_ ImageType) ApiGetMusicgenresByNameImagesByTypeRequest {
 	return ApiGetMusicgenresByNameImagesByTypeRequest{
 		ApiService: a,
-		ctx: ctx,
-		name: name,
-		type_: type_,
+		ctx:        ctx,
+		name:       name,
+		type_:      type_,
 	}
 }
 
 // Execute executes the request
 func (a *ImageServiceAPIService) GetMusicgenresByNameImagesByTypeExecute(r ApiGetMusicgenresByNameImagesByTypeRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImageServiceAPIService.GetMusicgenresByNameImagesByType")
@@ -3839,24 +3839,24 @@ func (a *ImageServiceAPIService) GetMusicgenresByNameImagesByTypeExecute(r ApiGe
 }
 
 type ApiGetMusicgenresByNameImagesByTypeByIndexRequest struct {
-	ctx context.Context
-	ApiService ImageServiceAPI
-	name string
-	index int32
-	type_ ImageType
-	maxWidth *int32
-	maxHeight *int32
-	width *int32
-	height *int32
-	quality *int32
-	tag *string
-	cropWhitespace *bool
+	ctx                  context.Context
+	ApiService           ImageServiceAPI
+	name                 string
+	index                int32
+	type_                ImageType
+	maxWidth             *int32
+	maxHeight            *int32
+	width                *int32
+	height               *int32
+	quality              *int32
+	tag                  *string
+	cropWhitespace       *bool
 	enableImageEnhancers *bool
-	format *string
-	backgroundColor *string
-	foregroundLayer *string
-	autoOrient *bool
-	keepAnimation *bool
+	format               *string
+	backgroundColor      *string
+	foregroundLayer      *string
+	autoOrient           *bool
+	keepAnimation        *bool
 }
 
 // The maximum image width to return.
@@ -3946,28 +3946,28 @@ GetMusicgenresByNameImagesByTypeByIndex Method for GetMusicgenresByNameImagesByT
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param name Item name
- @param index Image Index
- @param type_ Image Type
- @return ApiGetMusicgenresByNameImagesByTypeByIndexRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param name Item name
+	@param index Image Index
+	@param type_ Image Type
+	@return ApiGetMusicgenresByNameImagesByTypeByIndexRequest
 */
 func (a *ImageServiceAPIService) GetMusicgenresByNameImagesByTypeByIndex(ctx context.Context, name string, index int32, type_ ImageType) ApiGetMusicgenresByNameImagesByTypeByIndexRequest {
 	return ApiGetMusicgenresByNameImagesByTypeByIndexRequest{
 		ApiService: a,
-		ctx: ctx,
-		name: name,
-		index: index,
-		type_: type_,
+		ctx:        ctx,
+		name:       name,
+		index:      index,
+		type_:      type_,
 	}
 }
 
 // Execute executes the request
 func (a *ImageServiceAPIService) GetMusicgenresByNameImagesByTypeByIndexExecute(r ApiGetMusicgenresByNameImagesByTypeByIndexRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImageServiceAPIService.GetMusicgenresByNameImagesByTypeByIndex")
@@ -4083,24 +4083,24 @@ func (a *ImageServiceAPIService) GetMusicgenresByNameImagesByTypeByIndexExecute(
 }
 
 type ApiGetPersonsByNameImagesByTypeRequest struct {
-	ctx context.Context
-	ApiService ImageServiceAPI
-	name string
-	type_ ImageType
-	maxWidth *int32
-	maxHeight *int32
-	width *int32
-	height *int32
-	quality *int32
-	tag *string
-	cropWhitespace *bool
+	ctx                  context.Context
+	ApiService           ImageServiceAPI
+	name                 string
+	type_                ImageType
+	maxWidth             *int32
+	maxHeight            *int32
+	width                *int32
+	height               *int32
+	quality              *int32
+	tag                  *string
+	cropWhitespace       *bool
 	enableImageEnhancers *bool
-	format *string
-	backgroundColor *string
-	foregroundLayer *string
-	autoOrient *bool
-	keepAnimation *bool
-	index *int32
+	format               *string
+	backgroundColor      *string
+	foregroundLayer      *string
+	autoOrient           *bool
+	keepAnimation        *bool
+	index                *int32
 }
 
 // The maximum image width to return.
@@ -4196,26 +4196,26 @@ GetPersonsByNameImagesByType Method for GetPersonsByNameImagesByType
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param name Item name
- @param type_ Image Type
- @return ApiGetPersonsByNameImagesByTypeRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param name Item name
+	@param type_ Image Type
+	@return ApiGetPersonsByNameImagesByTypeRequest
 */
 func (a *ImageServiceAPIService) GetPersonsByNameImagesByType(ctx context.Context, name string, type_ ImageType) ApiGetPersonsByNameImagesByTypeRequest {
 	return ApiGetPersonsByNameImagesByTypeRequest{
 		ApiService: a,
-		ctx: ctx,
-		name: name,
-		type_: type_,
+		ctx:        ctx,
+		name:       name,
+		type_:      type_,
 	}
 }
 
 // Execute executes the request
 func (a *ImageServiceAPIService) GetPersonsByNameImagesByTypeExecute(r ApiGetPersonsByNameImagesByTypeRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImageServiceAPIService.GetPersonsByNameImagesByType")
@@ -4333,24 +4333,24 @@ func (a *ImageServiceAPIService) GetPersonsByNameImagesByTypeExecute(r ApiGetPer
 }
 
 type ApiGetPersonsByNameImagesByTypeByIndexRequest struct {
-	ctx context.Context
-	ApiService ImageServiceAPI
-	name string
-	index int32
-	type_ ImageType
-	maxWidth *int32
-	maxHeight *int32
-	width *int32
-	height *int32
-	quality *int32
-	tag *string
-	cropWhitespace *bool
+	ctx                  context.Context
+	ApiService           ImageServiceAPI
+	name                 string
+	index                int32
+	type_                ImageType
+	maxWidth             *int32
+	maxHeight            *int32
+	width                *int32
+	height               *int32
+	quality              *int32
+	tag                  *string
+	cropWhitespace       *bool
 	enableImageEnhancers *bool
-	format *string
-	backgroundColor *string
-	foregroundLayer *string
-	autoOrient *bool
-	keepAnimation *bool
+	format               *string
+	backgroundColor      *string
+	foregroundLayer      *string
+	autoOrient           *bool
+	keepAnimation        *bool
 }
 
 // The maximum image width to return.
@@ -4440,28 +4440,28 @@ GetPersonsByNameImagesByTypeByIndex Method for GetPersonsByNameImagesByTypeByInd
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param name Item name
- @param index Image Index
- @param type_ Image Type
- @return ApiGetPersonsByNameImagesByTypeByIndexRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param name Item name
+	@param index Image Index
+	@param type_ Image Type
+	@return ApiGetPersonsByNameImagesByTypeByIndexRequest
 */
 func (a *ImageServiceAPIService) GetPersonsByNameImagesByTypeByIndex(ctx context.Context, name string, index int32, type_ ImageType) ApiGetPersonsByNameImagesByTypeByIndexRequest {
 	return ApiGetPersonsByNameImagesByTypeByIndexRequest{
 		ApiService: a,
-		ctx: ctx,
-		name: name,
-		index: index,
-		type_: type_,
+		ctx:        ctx,
+		name:       name,
+		index:      index,
+		type_:      type_,
 	}
 }
 
 // Execute executes the request
 func (a *ImageServiceAPIService) GetPersonsByNameImagesByTypeByIndexExecute(r ApiGetPersonsByNameImagesByTypeByIndexRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImageServiceAPIService.GetPersonsByNameImagesByTypeByIndex")
@@ -4577,24 +4577,24 @@ func (a *ImageServiceAPIService) GetPersonsByNameImagesByTypeByIndexExecute(r Ap
 }
 
 type ApiGetStudiosByNameImagesByTypeRequest struct {
-	ctx context.Context
-	ApiService ImageServiceAPI
-	name string
-	type_ ImageType
-	maxWidth *int32
-	maxHeight *int32
-	width *int32
-	height *int32
-	quality *int32
-	tag *string
-	cropWhitespace *bool
+	ctx                  context.Context
+	ApiService           ImageServiceAPI
+	name                 string
+	type_                ImageType
+	maxWidth             *int32
+	maxHeight            *int32
+	width                *int32
+	height               *int32
+	quality              *int32
+	tag                  *string
+	cropWhitespace       *bool
 	enableImageEnhancers *bool
-	format *string
-	backgroundColor *string
-	foregroundLayer *string
-	autoOrient *bool
-	keepAnimation *bool
-	index *int32
+	format               *string
+	backgroundColor      *string
+	foregroundLayer      *string
+	autoOrient           *bool
+	keepAnimation        *bool
+	index                *int32
 }
 
 // The maximum image width to return.
@@ -4690,26 +4690,26 @@ GetStudiosByNameImagesByType Method for GetStudiosByNameImagesByType
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param name Item name
- @param type_ Image Type
- @return ApiGetStudiosByNameImagesByTypeRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param name Item name
+	@param type_ Image Type
+	@return ApiGetStudiosByNameImagesByTypeRequest
 */
 func (a *ImageServiceAPIService) GetStudiosByNameImagesByType(ctx context.Context, name string, type_ ImageType) ApiGetStudiosByNameImagesByTypeRequest {
 	return ApiGetStudiosByNameImagesByTypeRequest{
 		ApiService: a,
-		ctx: ctx,
-		name: name,
-		type_: type_,
+		ctx:        ctx,
+		name:       name,
+		type_:      type_,
 	}
 }
 
 // Execute executes the request
 func (a *ImageServiceAPIService) GetStudiosByNameImagesByTypeExecute(r ApiGetStudiosByNameImagesByTypeRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImageServiceAPIService.GetStudiosByNameImagesByType")
@@ -4827,24 +4827,24 @@ func (a *ImageServiceAPIService) GetStudiosByNameImagesByTypeExecute(r ApiGetStu
 }
 
 type ApiGetStudiosByNameImagesByTypeByIndexRequest struct {
-	ctx context.Context
-	ApiService ImageServiceAPI
-	name string
-	index int32
-	type_ ImageType
-	maxWidth *int32
-	maxHeight *int32
-	width *int32
-	height *int32
-	quality *int32
-	tag *string
-	cropWhitespace *bool
+	ctx                  context.Context
+	ApiService           ImageServiceAPI
+	name                 string
+	index                int32
+	type_                ImageType
+	maxWidth             *int32
+	maxHeight            *int32
+	width                *int32
+	height               *int32
+	quality              *int32
+	tag                  *string
+	cropWhitespace       *bool
 	enableImageEnhancers *bool
-	format *string
-	backgroundColor *string
-	foregroundLayer *string
-	autoOrient *bool
-	keepAnimation *bool
+	format               *string
+	backgroundColor      *string
+	foregroundLayer      *string
+	autoOrient           *bool
+	keepAnimation        *bool
 }
 
 // The maximum image width to return.
@@ -4934,28 +4934,28 @@ GetStudiosByNameImagesByTypeByIndex Method for GetStudiosByNameImagesByTypeByInd
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param name Item name
- @param index Image Index
- @param type_ Image Type
- @return ApiGetStudiosByNameImagesByTypeByIndexRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param name Item name
+	@param index Image Index
+	@param type_ Image Type
+	@return ApiGetStudiosByNameImagesByTypeByIndexRequest
 */
 func (a *ImageServiceAPIService) GetStudiosByNameImagesByTypeByIndex(ctx context.Context, name string, index int32, type_ ImageType) ApiGetStudiosByNameImagesByTypeByIndexRequest {
 	return ApiGetStudiosByNameImagesByTypeByIndexRequest{
 		ApiService: a,
-		ctx: ctx,
-		name: name,
-		index: index,
-		type_: type_,
+		ctx:        ctx,
+		name:       name,
+		index:      index,
+		type_:      type_,
 	}
 }
 
 // Execute executes the request
 func (a *ImageServiceAPIService) GetStudiosByNameImagesByTypeByIndexExecute(r ApiGetStudiosByNameImagesByTypeByIndexRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImageServiceAPIService.GetStudiosByNameImagesByTypeByIndex")
@@ -5071,24 +5071,24 @@ func (a *ImageServiceAPIService) GetStudiosByNameImagesByTypeByIndexExecute(r Ap
 }
 
 type ApiGetUsersByIdImagesByTypeRequest struct {
-	ctx context.Context
-	ApiService ImageServiceAPI
-	id string
-	type_ ImageType
-	maxWidth *int32
-	maxHeight *int32
-	width *int32
-	height *int32
-	quality *int32
-	tag *string
-	cropWhitespace *bool
+	ctx                  context.Context
+	ApiService           ImageServiceAPI
+	id                   string
+	type_                ImageType
+	maxWidth             *int32
+	maxHeight            *int32
+	width                *int32
+	height               *int32
+	quality              *int32
+	tag                  *string
+	cropWhitespace       *bool
 	enableImageEnhancers *bool
-	format *string
-	backgroundColor *string
-	foregroundLayer *string
-	autoOrient *bool
-	keepAnimation *bool
-	index *int32
+	format               *string
+	backgroundColor      *string
+	foregroundLayer      *string
+	autoOrient           *bool
+	keepAnimation        *bool
+	index                *int32
 }
 
 // The maximum image width to return.
@@ -5184,26 +5184,26 @@ GetUsersByIdImagesByType Method for GetUsersByIdImagesByType
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id User Id
- @param type_ Image Type
- @return ApiGetUsersByIdImagesByTypeRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id User Id
+	@param type_ Image Type
+	@return ApiGetUsersByIdImagesByTypeRequest
 */
 func (a *ImageServiceAPIService) GetUsersByIdImagesByType(ctx context.Context, id string, type_ ImageType) ApiGetUsersByIdImagesByTypeRequest {
 	return ApiGetUsersByIdImagesByTypeRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
-		type_: type_,
+		ctx:        ctx,
+		id:         id,
+		type_:      type_,
 	}
 }
 
 // Execute executes the request
 func (a *ImageServiceAPIService) GetUsersByIdImagesByTypeExecute(r ApiGetUsersByIdImagesByTypeRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImageServiceAPIService.GetUsersByIdImagesByType")
@@ -5321,24 +5321,24 @@ func (a *ImageServiceAPIService) GetUsersByIdImagesByTypeExecute(r ApiGetUsersBy
 }
 
 type ApiGetUsersByIdImagesByTypeByIndexRequest struct {
-	ctx context.Context
-	ApiService ImageServiceAPI
-	id string
-	index int32
-	type_ ImageType
-	maxWidth *int32
-	maxHeight *int32
-	width *int32
-	height *int32
-	quality *int32
-	tag *string
-	cropWhitespace *bool
+	ctx                  context.Context
+	ApiService           ImageServiceAPI
+	id                   string
+	index                int32
+	type_                ImageType
+	maxWidth             *int32
+	maxHeight            *int32
+	width                *int32
+	height               *int32
+	quality              *int32
+	tag                  *string
+	cropWhitespace       *bool
 	enableImageEnhancers *bool
-	format *string
-	backgroundColor *string
-	foregroundLayer *string
-	autoOrient *bool
-	keepAnimation *bool
+	format               *string
+	backgroundColor      *string
+	foregroundLayer      *string
+	autoOrient           *bool
+	keepAnimation        *bool
 }
 
 // The maximum image width to return.
@@ -5428,28 +5428,28 @@ GetUsersByIdImagesByTypeByIndex Method for GetUsersByIdImagesByTypeByIndex
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id User Id
- @param index Image Index
- @param type_ Image Type
- @return ApiGetUsersByIdImagesByTypeByIndexRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id User Id
+	@param index Image Index
+	@param type_ Image Type
+	@return ApiGetUsersByIdImagesByTypeByIndexRequest
 */
 func (a *ImageServiceAPIService) GetUsersByIdImagesByTypeByIndex(ctx context.Context, id string, index int32, type_ ImageType) ApiGetUsersByIdImagesByTypeByIndexRequest {
 	return ApiGetUsersByIdImagesByTypeByIndexRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
-		index: index,
-		type_: type_,
+		ctx:        ctx,
+		id:         id,
+		index:      index,
+		type_:      type_,
 	}
 }
 
 // Execute executes the request
 func (a *ImageServiceAPIService) GetUsersByIdImagesByTypeByIndexExecute(r ApiGetUsersByIdImagesByTypeByIndexRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImageServiceAPIService.GetUsersByIdImagesByTypeByIndex")
@@ -5565,24 +5565,24 @@ func (a *ImageServiceAPIService) GetUsersByIdImagesByTypeByIndexExecute(r ApiGet
 }
 
 type ApiHeadArtistsByNameImagesByTypeRequest struct {
-	ctx context.Context
-	ApiService ImageServiceAPI
-	name string
-	type_ ImageType
-	maxWidth *int32
-	maxHeight *int32
-	width *int32
-	height *int32
-	quality *int32
-	tag *string
-	cropWhitespace *bool
+	ctx                  context.Context
+	ApiService           ImageServiceAPI
+	name                 string
+	type_                ImageType
+	maxWidth             *int32
+	maxHeight            *int32
+	width                *int32
+	height               *int32
+	quality              *int32
+	tag                  *string
+	cropWhitespace       *bool
 	enableImageEnhancers *bool
-	format *string
-	backgroundColor *string
-	foregroundLayer *string
-	autoOrient *bool
-	keepAnimation *bool
-	index *int32
+	format               *string
+	backgroundColor      *string
+	foregroundLayer      *string
+	autoOrient           *bool
+	keepAnimation        *bool
+	index                *int32
 }
 
 // The maximum image width to return.
@@ -5678,26 +5678,26 @@ HeadArtistsByNameImagesByType Method for HeadArtistsByNameImagesByType
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param name Item name
- @param type_ Image Type
- @return ApiHeadArtistsByNameImagesByTypeRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param name Item name
+	@param type_ Image Type
+	@return ApiHeadArtistsByNameImagesByTypeRequest
 */
 func (a *ImageServiceAPIService) HeadArtistsByNameImagesByType(ctx context.Context, name string, type_ ImageType) ApiHeadArtistsByNameImagesByTypeRequest {
 	return ApiHeadArtistsByNameImagesByTypeRequest{
 		ApiService: a,
-		ctx: ctx,
-		name: name,
-		type_: type_,
+		ctx:        ctx,
+		name:       name,
+		type_:      type_,
 	}
 }
 
 // Execute executes the request
 func (a *ImageServiceAPIService) HeadArtistsByNameImagesByTypeExecute(r ApiHeadArtistsByNameImagesByTypeRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodHead
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodHead
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImageServiceAPIService.HeadArtistsByNameImagesByType")
@@ -5815,24 +5815,24 @@ func (a *ImageServiceAPIService) HeadArtistsByNameImagesByTypeExecute(r ApiHeadA
 }
 
 type ApiHeadArtistsByNameImagesByTypeByIndexRequest struct {
-	ctx context.Context
-	ApiService ImageServiceAPI
-	name string
-	index int32
-	type_ ImageType
-	maxWidth *int32
-	maxHeight *int32
-	width *int32
-	height *int32
-	quality *int32
-	tag *string
-	cropWhitespace *bool
+	ctx                  context.Context
+	ApiService           ImageServiceAPI
+	name                 string
+	index                int32
+	type_                ImageType
+	maxWidth             *int32
+	maxHeight            *int32
+	width                *int32
+	height               *int32
+	quality              *int32
+	tag                  *string
+	cropWhitespace       *bool
 	enableImageEnhancers *bool
-	format *string
-	backgroundColor *string
-	foregroundLayer *string
-	autoOrient *bool
-	keepAnimation *bool
+	format               *string
+	backgroundColor      *string
+	foregroundLayer      *string
+	autoOrient           *bool
+	keepAnimation        *bool
 }
 
 // The maximum image width to return.
@@ -5922,28 +5922,28 @@ HeadArtistsByNameImagesByTypeByIndex Method for HeadArtistsByNameImagesByTypeByI
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param name Item name
- @param index Image Index
- @param type_ Image Type
- @return ApiHeadArtistsByNameImagesByTypeByIndexRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param name Item name
+	@param index Image Index
+	@param type_ Image Type
+	@return ApiHeadArtistsByNameImagesByTypeByIndexRequest
 */
 func (a *ImageServiceAPIService) HeadArtistsByNameImagesByTypeByIndex(ctx context.Context, name string, index int32, type_ ImageType) ApiHeadArtistsByNameImagesByTypeByIndexRequest {
 	return ApiHeadArtistsByNameImagesByTypeByIndexRequest{
 		ApiService: a,
-		ctx: ctx,
-		name: name,
-		index: index,
-		type_: type_,
+		ctx:        ctx,
+		name:       name,
+		index:      index,
+		type_:      type_,
 	}
 }
 
 // Execute executes the request
 func (a *ImageServiceAPIService) HeadArtistsByNameImagesByTypeByIndexExecute(r ApiHeadArtistsByNameImagesByTypeByIndexRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodHead
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodHead
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImageServiceAPIService.HeadArtistsByNameImagesByTypeByIndex")
@@ -6059,24 +6059,24 @@ func (a *ImageServiceAPIService) HeadArtistsByNameImagesByTypeByIndexExecute(r A
 }
 
 type ApiHeadGamegenresByNameImagesByTypeRequest struct {
-	ctx context.Context
-	ApiService ImageServiceAPI
-	name string
-	type_ ImageType
-	maxWidth *int32
-	maxHeight *int32
-	width *int32
-	height *int32
-	quality *int32
-	tag *string
-	cropWhitespace *bool
+	ctx                  context.Context
+	ApiService           ImageServiceAPI
+	name                 string
+	type_                ImageType
+	maxWidth             *int32
+	maxHeight            *int32
+	width                *int32
+	height               *int32
+	quality              *int32
+	tag                  *string
+	cropWhitespace       *bool
 	enableImageEnhancers *bool
-	format *string
-	backgroundColor *string
-	foregroundLayer *string
-	autoOrient *bool
-	keepAnimation *bool
-	index *int32
+	format               *string
+	backgroundColor      *string
+	foregroundLayer      *string
+	autoOrient           *bool
+	keepAnimation        *bool
+	index                *int32
 }
 
 // The maximum image width to return.
@@ -6172,26 +6172,26 @@ HeadGamegenresByNameImagesByType Method for HeadGamegenresByNameImagesByType
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param name Item name
- @param type_ Image Type
- @return ApiHeadGamegenresByNameImagesByTypeRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param name Item name
+	@param type_ Image Type
+	@return ApiHeadGamegenresByNameImagesByTypeRequest
 */
 func (a *ImageServiceAPIService) HeadGamegenresByNameImagesByType(ctx context.Context, name string, type_ ImageType) ApiHeadGamegenresByNameImagesByTypeRequest {
 	return ApiHeadGamegenresByNameImagesByTypeRequest{
 		ApiService: a,
-		ctx: ctx,
-		name: name,
-		type_: type_,
+		ctx:        ctx,
+		name:       name,
+		type_:      type_,
 	}
 }
 
 // Execute executes the request
 func (a *ImageServiceAPIService) HeadGamegenresByNameImagesByTypeExecute(r ApiHeadGamegenresByNameImagesByTypeRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodHead
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodHead
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImageServiceAPIService.HeadGamegenresByNameImagesByType")
@@ -6309,24 +6309,24 @@ func (a *ImageServiceAPIService) HeadGamegenresByNameImagesByTypeExecute(r ApiHe
 }
 
 type ApiHeadGamegenresByNameImagesByTypeByIndexRequest struct {
-	ctx context.Context
-	ApiService ImageServiceAPI
-	name string
-	index int32
-	type_ ImageType
-	maxWidth *int32
-	maxHeight *int32
-	width *int32
-	height *int32
-	quality *int32
-	tag *string
-	cropWhitespace *bool
+	ctx                  context.Context
+	ApiService           ImageServiceAPI
+	name                 string
+	index                int32
+	type_                ImageType
+	maxWidth             *int32
+	maxHeight            *int32
+	width                *int32
+	height               *int32
+	quality              *int32
+	tag                  *string
+	cropWhitespace       *bool
 	enableImageEnhancers *bool
-	format *string
-	backgroundColor *string
-	foregroundLayer *string
-	autoOrient *bool
-	keepAnimation *bool
+	format               *string
+	backgroundColor      *string
+	foregroundLayer      *string
+	autoOrient           *bool
+	keepAnimation        *bool
 }
 
 // The maximum image width to return.
@@ -6416,28 +6416,28 @@ HeadGamegenresByNameImagesByTypeByIndex Method for HeadGamegenresByNameImagesByT
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param name Item name
- @param index Image Index
- @param type_ Image Type
- @return ApiHeadGamegenresByNameImagesByTypeByIndexRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param name Item name
+	@param index Image Index
+	@param type_ Image Type
+	@return ApiHeadGamegenresByNameImagesByTypeByIndexRequest
 */
 func (a *ImageServiceAPIService) HeadGamegenresByNameImagesByTypeByIndex(ctx context.Context, name string, index int32, type_ ImageType) ApiHeadGamegenresByNameImagesByTypeByIndexRequest {
 	return ApiHeadGamegenresByNameImagesByTypeByIndexRequest{
 		ApiService: a,
-		ctx: ctx,
-		name: name,
-		index: index,
-		type_: type_,
+		ctx:        ctx,
+		name:       name,
+		index:      index,
+		type_:      type_,
 	}
 }
 
 // Execute executes the request
 func (a *ImageServiceAPIService) HeadGamegenresByNameImagesByTypeByIndexExecute(r ApiHeadGamegenresByNameImagesByTypeByIndexRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodHead
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodHead
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImageServiceAPIService.HeadGamegenresByNameImagesByTypeByIndex")
@@ -6553,24 +6553,24 @@ func (a *ImageServiceAPIService) HeadGamegenresByNameImagesByTypeByIndexExecute(
 }
 
 type ApiHeadGenresByNameImagesByTypeRequest struct {
-	ctx context.Context
-	ApiService ImageServiceAPI
-	name string
-	type_ ImageType
-	maxWidth *int32
-	maxHeight *int32
-	width *int32
-	height *int32
-	quality *int32
-	tag *string
-	cropWhitespace *bool
+	ctx                  context.Context
+	ApiService           ImageServiceAPI
+	name                 string
+	type_                ImageType
+	maxWidth             *int32
+	maxHeight            *int32
+	width                *int32
+	height               *int32
+	quality              *int32
+	tag                  *string
+	cropWhitespace       *bool
 	enableImageEnhancers *bool
-	format *string
-	backgroundColor *string
-	foregroundLayer *string
-	autoOrient *bool
-	keepAnimation *bool
-	index *int32
+	format               *string
+	backgroundColor      *string
+	foregroundLayer      *string
+	autoOrient           *bool
+	keepAnimation        *bool
+	index                *int32
 }
 
 // The maximum image width to return.
@@ -6666,26 +6666,26 @@ HeadGenresByNameImagesByType Method for HeadGenresByNameImagesByType
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param name Item name
- @param type_ Image Type
- @return ApiHeadGenresByNameImagesByTypeRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param name Item name
+	@param type_ Image Type
+	@return ApiHeadGenresByNameImagesByTypeRequest
 */
 func (a *ImageServiceAPIService) HeadGenresByNameImagesByType(ctx context.Context, name string, type_ ImageType) ApiHeadGenresByNameImagesByTypeRequest {
 	return ApiHeadGenresByNameImagesByTypeRequest{
 		ApiService: a,
-		ctx: ctx,
-		name: name,
-		type_: type_,
+		ctx:        ctx,
+		name:       name,
+		type_:      type_,
 	}
 }
 
 // Execute executes the request
 func (a *ImageServiceAPIService) HeadGenresByNameImagesByTypeExecute(r ApiHeadGenresByNameImagesByTypeRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodHead
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodHead
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImageServiceAPIService.HeadGenresByNameImagesByType")
@@ -6803,24 +6803,24 @@ func (a *ImageServiceAPIService) HeadGenresByNameImagesByTypeExecute(r ApiHeadGe
 }
 
 type ApiHeadGenresByNameImagesByTypeByIndexRequest struct {
-	ctx context.Context
-	ApiService ImageServiceAPI
-	name string
-	index int32
-	type_ ImageType
-	maxWidth *int32
-	maxHeight *int32
-	width *int32
-	height *int32
-	quality *int32
-	tag *string
-	cropWhitespace *bool
+	ctx                  context.Context
+	ApiService           ImageServiceAPI
+	name                 string
+	index                int32
+	type_                ImageType
+	maxWidth             *int32
+	maxHeight            *int32
+	width                *int32
+	height               *int32
+	quality              *int32
+	tag                  *string
+	cropWhitespace       *bool
 	enableImageEnhancers *bool
-	format *string
-	backgroundColor *string
-	foregroundLayer *string
-	autoOrient *bool
-	keepAnimation *bool
+	format               *string
+	backgroundColor      *string
+	foregroundLayer      *string
+	autoOrient           *bool
+	keepAnimation        *bool
 }
 
 // The maximum image width to return.
@@ -6910,28 +6910,28 @@ HeadGenresByNameImagesByTypeByIndex Method for HeadGenresByNameImagesByTypeByInd
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param name Item name
- @param index Image Index
- @param type_ Image Type
- @return ApiHeadGenresByNameImagesByTypeByIndexRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param name Item name
+	@param index Image Index
+	@param type_ Image Type
+	@return ApiHeadGenresByNameImagesByTypeByIndexRequest
 */
 func (a *ImageServiceAPIService) HeadGenresByNameImagesByTypeByIndex(ctx context.Context, name string, index int32, type_ ImageType) ApiHeadGenresByNameImagesByTypeByIndexRequest {
 	return ApiHeadGenresByNameImagesByTypeByIndexRequest{
 		ApiService: a,
-		ctx: ctx,
-		name: name,
-		index: index,
-		type_: type_,
+		ctx:        ctx,
+		name:       name,
+		index:      index,
+		type_:      type_,
 	}
 }
 
 // Execute executes the request
 func (a *ImageServiceAPIService) HeadGenresByNameImagesByTypeByIndexExecute(r ApiHeadGenresByNameImagesByTypeByIndexRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodHead
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodHead
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImageServiceAPIService.HeadGenresByNameImagesByTypeByIndex")
@@ -7047,24 +7047,24 @@ func (a *ImageServiceAPIService) HeadGenresByNameImagesByTypeByIndexExecute(r Ap
 }
 
 type ApiHeadItemsByIdImagesByTypeRequest struct {
-	ctx context.Context
-	ApiService ImageServiceAPI
-	id string
-	type_ ImageType
-	maxWidth *int32
-	maxHeight *int32
-	width *int32
-	height *int32
-	quality *int32
-	tag *string
-	cropWhitespace *bool
+	ctx                  context.Context
+	ApiService           ImageServiceAPI
+	id                   string
+	type_                ImageType
+	maxWidth             *int32
+	maxHeight            *int32
+	width                *int32
+	height               *int32
+	quality              *int32
+	tag                  *string
+	cropWhitespace       *bool
 	enableImageEnhancers *bool
-	format *string
-	backgroundColor *string
-	foregroundLayer *string
-	autoOrient *bool
-	keepAnimation *bool
-	index *int32
+	format               *string
+	backgroundColor      *string
+	foregroundLayer      *string
+	autoOrient           *bool
+	keepAnimation        *bool
+	index                *int32
 }
 
 // The maximum image width to return.
@@ -7160,26 +7160,26 @@ HeadItemsByIdImagesByType Method for HeadItemsByIdImagesByType
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @param type_ Image Type
- @return ApiHeadItemsByIdImagesByTypeRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@param type_ Image Type
+	@return ApiHeadItemsByIdImagesByTypeRequest
 */
 func (a *ImageServiceAPIService) HeadItemsByIdImagesByType(ctx context.Context, id string, type_ ImageType) ApiHeadItemsByIdImagesByTypeRequest {
 	return ApiHeadItemsByIdImagesByTypeRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
-		type_: type_,
+		ctx:        ctx,
+		id:         id,
+		type_:      type_,
 	}
 }
 
 // Execute executes the request
 func (a *ImageServiceAPIService) HeadItemsByIdImagesByTypeExecute(r ApiHeadItemsByIdImagesByTypeRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodHead
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodHead
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImageServiceAPIService.HeadItemsByIdImagesByType")
@@ -7297,24 +7297,24 @@ func (a *ImageServiceAPIService) HeadItemsByIdImagesByTypeExecute(r ApiHeadItems
 }
 
 type ApiHeadItemsByIdImagesByTypeByIndexRequest struct {
-	ctx context.Context
-	ApiService ImageServiceAPI
-	id string
-	index int32
-	type_ ImageType
-	maxWidth *int32
-	maxHeight *int32
-	width *int32
-	height *int32
-	quality *int32
-	tag *string
-	cropWhitespace *bool
+	ctx                  context.Context
+	ApiService           ImageServiceAPI
+	id                   string
+	index                int32
+	type_                ImageType
+	maxWidth             *int32
+	maxHeight            *int32
+	width                *int32
+	height               *int32
+	quality              *int32
+	tag                  *string
+	cropWhitespace       *bool
 	enableImageEnhancers *bool
-	format *string
-	backgroundColor *string
-	foregroundLayer *string
-	autoOrient *bool
-	keepAnimation *bool
+	format               *string
+	backgroundColor      *string
+	foregroundLayer      *string
+	autoOrient           *bool
+	keepAnimation        *bool
 }
 
 // The maximum image width to return.
@@ -7404,28 +7404,28 @@ HeadItemsByIdImagesByTypeByIndex Method for HeadItemsByIdImagesByTypeByIndex
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @param index Image Index
- @param type_ Image Type
- @return ApiHeadItemsByIdImagesByTypeByIndexRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@param index Image Index
+	@param type_ Image Type
+	@return ApiHeadItemsByIdImagesByTypeByIndexRequest
 */
 func (a *ImageServiceAPIService) HeadItemsByIdImagesByTypeByIndex(ctx context.Context, id string, index int32, type_ ImageType) ApiHeadItemsByIdImagesByTypeByIndexRequest {
 	return ApiHeadItemsByIdImagesByTypeByIndexRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
-		index: index,
-		type_: type_,
+		ctx:        ctx,
+		id:         id,
+		index:      index,
+		type_:      type_,
 	}
 }
 
 // Execute executes the request
 func (a *ImageServiceAPIService) HeadItemsByIdImagesByTypeByIndexExecute(r ApiHeadItemsByIdImagesByTypeByIndexRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodHead
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodHead
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImageServiceAPIService.HeadItemsByIdImagesByTypeByIndex")
@@ -7541,26 +7541,26 @@ func (a *ImageServiceAPIService) HeadItemsByIdImagesByTypeByIndexExecute(r ApiHe
 }
 
 type ApiHeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountRequest struct {
-	ctx context.Context
-	ApiService ImageServiceAPI
-	percentPlayed int32
-	unPlayedCount int32
-	id string
-	maxWidth int32
-	maxHeight int32
-	tag string
-	format string
-	index int32
-	type_ ImageType
-	width *int32
-	height *int32
-	quality *int32
-	cropWhitespace *bool
+	ctx                  context.Context
+	ApiService           ImageServiceAPI
+	percentPlayed        int32
+	unPlayedCount        int32
+	id                   string
+	maxWidth             int32
+	maxHeight            int32
+	tag                  string
+	format               string
+	index                int32
+	type_                ImageType
+	width                *int32
+	height               *int32
+	quality              *int32
+	cropWhitespace       *bool
 	enableImageEnhancers *bool
-	backgroundColor *string
-	foregroundLayer *string
-	autoOrient *bool
-	keepAnimation *bool
+	backgroundColor      *string
+	foregroundLayer      *string
+	autoOrient           *bool
+	keepAnimation        *bool
 }
 
 // The fixed image width to return.
@@ -7626,40 +7626,40 @@ HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplaye
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param percentPlayed
- @param unPlayedCount
- @param id Item Id
- @param maxWidth The maximum image width to return.
- @param maxHeight The maximum image height to return.
- @param tag Optional. Supply the cache tag from the item object to receive strong caching headers.
- @param format Determines the output foramt of the image - original,gif,jpg,png
- @param index Image Index
- @param type_ Image Type
- @return ApiHeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param percentPlayed
+	@param unPlayedCount
+	@param id Item Id
+	@param maxWidth The maximum image width to return.
+	@param maxHeight The maximum image height to return.
+	@param tag Optional. Supply the cache tag from the item object to receive strong caching headers.
+	@param format Determines the output foramt of the image - original,gif,jpg,png
+	@param index Image Index
+	@param type_ Image Type
+	@return ApiHeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountRequest
 */
 func (a *ImageServiceAPIService) HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount(ctx context.Context, percentPlayed int32, unPlayedCount int32, id string, maxWidth int32, maxHeight int32, tag string, format string, index int32, type_ ImageType) ApiHeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountRequest {
 	return ApiHeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountRequest{
-		ApiService: a,
-		ctx: ctx,
+		ApiService:    a,
+		ctx:           ctx,
 		percentPlayed: percentPlayed,
 		unPlayedCount: unPlayedCount,
-		id: id,
-		maxWidth: maxWidth,
-		maxHeight: maxHeight,
-		tag: tag,
-		format: format,
-		index: index,
-		type_: type_,
+		id:            id,
+		maxWidth:      maxWidth,
+		maxHeight:     maxHeight,
+		tag:           tag,
+		format:        format,
+		index:         index,
+		type_:         type_,
 	}
 }
 
 // Execute executes the request
 func (a *ImageServiceAPIService) HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountExecute(r ApiHeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcountRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodHead
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodHead
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImageServiceAPIService.HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount")
@@ -7769,24 +7769,24 @@ func (a *ImageServiceAPIService) HeadItemsByIdImagesByTypeByIndexByTagByFormatBy
 }
 
 type ApiHeadMusicgenresByNameImagesByTypeRequest struct {
-	ctx context.Context
-	ApiService ImageServiceAPI
-	name string
-	type_ ImageType
-	maxWidth *int32
-	maxHeight *int32
-	width *int32
-	height *int32
-	quality *int32
-	tag *string
-	cropWhitespace *bool
+	ctx                  context.Context
+	ApiService           ImageServiceAPI
+	name                 string
+	type_                ImageType
+	maxWidth             *int32
+	maxHeight            *int32
+	width                *int32
+	height               *int32
+	quality              *int32
+	tag                  *string
+	cropWhitespace       *bool
 	enableImageEnhancers *bool
-	format *string
-	backgroundColor *string
-	foregroundLayer *string
-	autoOrient *bool
-	keepAnimation *bool
-	index *int32
+	format               *string
+	backgroundColor      *string
+	foregroundLayer      *string
+	autoOrient           *bool
+	keepAnimation        *bool
+	index                *int32
 }
 
 // The maximum image width to return.
@@ -7882,26 +7882,26 @@ HeadMusicgenresByNameImagesByType Method for HeadMusicgenresByNameImagesByType
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param name Item name
- @param type_ Image Type
- @return ApiHeadMusicgenresByNameImagesByTypeRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param name Item name
+	@param type_ Image Type
+	@return ApiHeadMusicgenresByNameImagesByTypeRequest
 */
 func (a *ImageServiceAPIService) HeadMusicgenresByNameImagesByType(ctx context.Context, name string, type_ ImageType) ApiHeadMusicgenresByNameImagesByTypeRequest {
 	return ApiHeadMusicgenresByNameImagesByTypeRequest{
 		ApiService: a,
-		ctx: ctx,
-		name: name,
-		type_: type_,
+		ctx:        ctx,
+		name:       name,
+		type_:      type_,
 	}
 }
 
 // Execute executes the request
 func (a *ImageServiceAPIService) HeadMusicgenresByNameImagesByTypeExecute(r ApiHeadMusicgenresByNameImagesByTypeRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodHead
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodHead
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImageServiceAPIService.HeadMusicgenresByNameImagesByType")
@@ -8019,24 +8019,24 @@ func (a *ImageServiceAPIService) HeadMusicgenresByNameImagesByTypeExecute(r ApiH
 }
 
 type ApiHeadMusicgenresByNameImagesByTypeByIndexRequest struct {
-	ctx context.Context
-	ApiService ImageServiceAPI
-	name string
-	index int32
-	type_ ImageType
-	maxWidth *int32
-	maxHeight *int32
-	width *int32
-	height *int32
-	quality *int32
-	tag *string
-	cropWhitespace *bool
+	ctx                  context.Context
+	ApiService           ImageServiceAPI
+	name                 string
+	index                int32
+	type_                ImageType
+	maxWidth             *int32
+	maxHeight            *int32
+	width                *int32
+	height               *int32
+	quality              *int32
+	tag                  *string
+	cropWhitespace       *bool
 	enableImageEnhancers *bool
-	format *string
-	backgroundColor *string
-	foregroundLayer *string
-	autoOrient *bool
-	keepAnimation *bool
+	format               *string
+	backgroundColor      *string
+	foregroundLayer      *string
+	autoOrient           *bool
+	keepAnimation        *bool
 }
 
 // The maximum image width to return.
@@ -8126,28 +8126,28 @@ HeadMusicgenresByNameImagesByTypeByIndex Method for HeadMusicgenresByNameImagesB
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param name Item name
- @param index Image Index
- @param type_ Image Type
- @return ApiHeadMusicgenresByNameImagesByTypeByIndexRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param name Item name
+	@param index Image Index
+	@param type_ Image Type
+	@return ApiHeadMusicgenresByNameImagesByTypeByIndexRequest
 */
 func (a *ImageServiceAPIService) HeadMusicgenresByNameImagesByTypeByIndex(ctx context.Context, name string, index int32, type_ ImageType) ApiHeadMusicgenresByNameImagesByTypeByIndexRequest {
 	return ApiHeadMusicgenresByNameImagesByTypeByIndexRequest{
 		ApiService: a,
-		ctx: ctx,
-		name: name,
-		index: index,
-		type_: type_,
+		ctx:        ctx,
+		name:       name,
+		index:      index,
+		type_:      type_,
 	}
 }
 
 // Execute executes the request
 func (a *ImageServiceAPIService) HeadMusicgenresByNameImagesByTypeByIndexExecute(r ApiHeadMusicgenresByNameImagesByTypeByIndexRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodHead
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodHead
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImageServiceAPIService.HeadMusicgenresByNameImagesByTypeByIndex")
@@ -8263,24 +8263,24 @@ func (a *ImageServiceAPIService) HeadMusicgenresByNameImagesByTypeByIndexExecute
 }
 
 type ApiHeadPersonsByNameImagesByTypeRequest struct {
-	ctx context.Context
-	ApiService ImageServiceAPI
-	name string
-	type_ ImageType
-	maxWidth *int32
-	maxHeight *int32
-	width *int32
-	height *int32
-	quality *int32
-	tag *string
-	cropWhitespace *bool
+	ctx                  context.Context
+	ApiService           ImageServiceAPI
+	name                 string
+	type_                ImageType
+	maxWidth             *int32
+	maxHeight            *int32
+	width                *int32
+	height               *int32
+	quality              *int32
+	tag                  *string
+	cropWhitespace       *bool
 	enableImageEnhancers *bool
-	format *string
-	backgroundColor *string
-	foregroundLayer *string
-	autoOrient *bool
-	keepAnimation *bool
-	index *int32
+	format               *string
+	backgroundColor      *string
+	foregroundLayer      *string
+	autoOrient           *bool
+	keepAnimation        *bool
+	index                *int32
 }
 
 // The maximum image width to return.
@@ -8376,26 +8376,26 @@ HeadPersonsByNameImagesByType Method for HeadPersonsByNameImagesByType
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param name Item name
- @param type_ Image Type
- @return ApiHeadPersonsByNameImagesByTypeRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param name Item name
+	@param type_ Image Type
+	@return ApiHeadPersonsByNameImagesByTypeRequest
 */
 func (a *ImageServiceAPIService) HeadPersonsByNameImagesByType(ctx context.Context, name string, type_ ImageType) ApiHeadPersonsByNameImagesByTypeRequest {
 	return ApiHeadPersonsByNameImagesByTypeRequest{
 		ApiService: a,
-		ctx: ctx,
-		name: name,
-		type_: type_,
+		ctx:        ctx,
+		name:       name,
+		type_:      type_,
 	}
 }
 
 // Execute executes the request
 func (a *ImageServiceAPIService) HeadPersonsByNameImagesByTypeExecute(r ApiHeadPersonsByNameImagesByTypeRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodHead
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodHead
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImageServiceAPIService.HeadPersonsByNameImagesByType")
@@ -8513,24 +8513,24 @@ func (a *ImageServiceAPIService) HeadPersonsByNameImagesByTypeExecute(r ApiHeadP
 }
 
 type ApiHeadPersonsByNameImagesByTypeByIndexRequest struct {
-	ctx context.Context
-	ApiService ImageServiceAPI
-	name string
-	index int32
-	type_ ImageType
-	maxWidth *int32
-	maxHeight *int32
-	width *int32
-	height *int32
-	quality *int32
-	tag *string
-	cropWhitespace *bool
+	ctx                  context.Context
+	ApiService           ImageServiceAPI
+	name                 string
+	index                int32
+	type_                ImageType
+	maxWidth             *int32
+	maxHeight            *int32
+	width                *int32
+	height               *int32
+	quality              *int32
+	tag                  *string
+	cropWhitespace       *bool
 	enableImageEnhancers *bool
-	format *string
-	backgroundColor *string
-	foregroundLayer *string
-	autoOrient *bool
-	keepAnimation *bool
+	format               *string
+	backgroundColor      *string
+	foregroundLayer      *string
+	autoOrient           *bool
+	keepAnimation        *bool
 }
 
 // The maximum image width to return.
@@ -8620,28 +8620,28 @@ HeadPersonsByNameImagesByTypeByIndex Method for HeadPersonsByNameImagesByTypeByI
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param name Item name
- @param index Image Index
- @param type_ Image Type
- @return ApiHeadPersonsByNameImagesByTypeByIndexRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param name Item name
+	@param index Image Index
+	@param type_ Image Type
+	@return ApiHeadPersonsByNameImagesByTypeByIndexRequest
 */
 func (a *ImageServiceAPIService) HeadPersonsByNameImagesByTypeByIndex(ctx context.Context, name string, index int32, type_ ImageType) ApiHeadPersonsByNameImagesByTypeByIndexRequest {
 	return ApiHeadPersonsByNameImagesByTypeByIndexRequest{
 		ApiService: a,
-		ctx: ctx,
-		name: name,
-		index: index,
-		type_: type_,
+		ctx:        ctx,
+		name:       name,
+		index:      index,
+		type_:      type_,
 	}
 }
 
 // Execute executes the request
 func (a *ImageServiceAPIService) HeadPersonsByNameImagesByTypeByIndexExecute(r ApiHeadPersonsByNameImagesByTypeByIndexRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodHead
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodHead
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImageServiceAPIService.HeadPersonsByNameImagesByTypeByIndex")
@@ -8757,24 +8757,24 @@ func (a *ImageServiceAPIService) HeadPersonsByNameImagesByTypeByIndexExecute(r A
 }
 
 type ApiHeadStudiosByNameImagesByTypeRequest struct {
-	ctx context.Context
-	ApiService ImageServiceAPI
-	name string
-	type_ ImageType
-	maxWidth *int32
-	maxHeight *int32
-	width *int32
-	height *int32
-	quality *int32
-	tag *string
-	cropWhitespace *bool
+	ctx                  context.Context
+	ApiService           ImageServiceAPI
+	name                 string
+	type_                ImageType
+	maxWidth             *int32
+	maxHeight            *int32
+	width                *int32
+	height               *int32
+	quality              *int32
+	tag                  *string
+	cropWhitespace       *bool
 	enableImageEnhancers *bool
-	format *string
-	backgroundColor *string
-	foregroundLayer *string
-	autoOrient *bool
-	keepAnimation *bool
-	index *int32
+	format               *string
+	backgroundColor      *string
+	foregroundLayer      *string
+	autoOrient           *bool
+	keepAnimation        *bool
+	index                *int32
 }
 
 // The maximum image width to return.
@@ -8870,26 +8870,26 @@ HeadStudiosByNameImagesByType Method for HeadStudiosByNameImagesByType
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param name Item name
- @param type_ Image Type
- @return ApiHeadStudiosByNameImagesByTypeRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param name Item name
+	@param type_ Image Type
+	@return ApiHeadStudiosByNameImagesByTypeRequest
 */
 func (a *ImageServiceAPIService) HeadStudiosByNameImagesByType(ctx context.Context, name string, type_ ImageType) ApiHeadStudiosByNameImagesByTypeRequest {
 	return ApiHeadStudiosByNameImagesByTypeRequest{
 		ApiService: a,
-		ctx: ctx,
-		name: name,
-		type_: type_,
+		ctx:        ctx,
+		name:       name,
+		type_:      type_,
 	}
 }
 
 // Execute executes the request
 func (a *ImageServiceAPIService) HeadStudiosByNameImagesByTypeExecute(r ApiHeadStudiosByNameImagesByTypeRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodHead
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodHead
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImageServiceAPIService.HeadStudiosByNameImagesByType")
@@ -9007,24 +9007,24 @@ func (a *ImageServiceAPIService) HeadStudiosByNameImagesByTypeExecute(r ApiHeadS
 }
 
 type ApiHeadStudiosByNameImagesByTypeByIndexRequest struct {
-	ctx context.Context
-	ApiService ImageServiceAPI
-	name string
-	index int32
-	type_ ImageType
-	maxWidth *int32
-	maxHeight *int32
-	width *int32
-	height *int32
-	quality *int32
-	tag *string
-	cropWhitespace *bool
+	ctx                  context.Context
+	ApiService           ImageServiceAPI
+	name                 string
+	index                int32
+	type_                ImageType
+	maxWidth             *int32
+	maxHeight            *int32
+	width                *int32
+	height               *int32
+	quality              *int32
+	tag                  *string
+	cropWhitespace       *bool
 	enableImageEnhancers *bool
-	format *string
-	backgroundColor *string
-	foregroundLayer *string
-	autoOrient *bool
-	keepAnimation *bool
+	format               *string
+	backgroundColor      *string
+	foregroundLayer      *string
+	autoOrient           *bool
+	keepAnimation        *bool
 }
 
 // The maximum image width to return.
@@ -9114,28 +9114,28 @@ HeadStudiosByNameImagesByTypeByIndex Method for HeadStudiosByNameImagesByTypeByI
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param name Item name
- @param index Image Index
- @param type_ Image Type
- @return ApiHeadStudiosByNameImagesByTypeByIndexRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param name Item name
+	@param index Image Index
+	@param type_ Image Type
+	@return ApiHeadStudiosByNameImagesByTypeByIndexRequest
 */
 func (a *ImageServiceAPIService) HeadStudiosByNameImagesByTypeByIndex(ctx context.Context, name string, index int32, type_ ImageType) ApiHeadStudiosByNameImagesByTypeByIndexRequest {
 	return ApiHeadStudiosByNameImagesByTypeByIndexRequest{
 		ApiService: a,
-		ctx: ctx,
-		name: name,
-		index: index,
-		type_: type_,
+		ctx:        ctx,
+		name:       name,
+		index:      index,
+		type_:      type_,
 	}
 }
 
 // Execute executes the request
 func (a *ImageServiceAPIService) HeadStudiosByNameImagesByTypeByIndexExecute(r ApiHeadStudiosByNameImagesByTypeByIndexRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodHead
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodHead
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImageServiceAPIService.HeadStudiosByNameImagesByTypeByIndex")
@@ -9251,24 +9251,24 @@ func (a *ImageServiceAPIService) HeadStudiosByNameImagesByTypeByIndexExecute(r A
 }
 
 type ApiHeadUsersByIdImagesByTypeRequest struct {
-	ctx context.Context
-	ApiService ImageServiceAPI
-	id string
-	type_ ImageType
-	maxWidth *int32
-	maxHeight *int32
-	width *int32
-	height *int32
-	quality *int32
-	tag *string
-	cropWhitespace *bool
+	ctx                  context.Context
+	ApiService           ImageServiceAPI
+	id                   string
+	type_                ImageType
+	maxWidth             *int32
+	maxHeight            *int32
+	width                *int32
+	height               *int32
+	quality              *int32
+	tag                  *string
+	cropWhitespace       *bool
 	enableImageEnhancers *bool
-	format *string
-	backgroundColor *string
-	foregroundLayer *string
-	autoOrient *bool
-	keepAnimation *bool
-	index *int32
+	format               *string
+	backgroundColor      *string
+	foregroundLayer      *string
+	autoOrient           *bool
+	keepAnimation        *bool
+	index                *int32
 }
 
 // The maximum image width to return.
@@ -9364,26 +9364,26 @@ HeadUsersByIdImagesByType Method for HeadUsersByIdImagesByType
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id User Id
- @param type_ Image Type
- @return ApiHeadUsersByIdImagesByTypeRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id User Id
+	@param type_ Image Type
+	@return ApiHeadUsersByIdImagesByTypeRequest
 */
 func (a *ImageServiceAPIService) HeadUsersByIdImagesByType(ctx context.Context, id string, type_ ImageType) ApiHeadUsersByIdImagesByTypeRequest {
 	return ApiHeadUsersByIdImagesByTypeRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
-		type_: type_,
+		ctx:        ctx,
+		id:         id,
+		type_:      type_,
 	}
 }
 
 // Execute executes the request
 func (a *ImageServiceAPIService) HeadUsersByIdImagesByTypeExecute(r ApiHeadUsersByIdImagesByTypeRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodHead
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodHead
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImageServiceAPIService.HeadUsersByIdImagesByType")
@@ -9501,24 +9501,24 @@ func (a *ImageServiceAPIService) HeadUsersByIdImagesByTypeExecute(r ApiHeadUsers
 }
 
 type ApiHeadUsersByIdImagesByTypeByIndexRequest struct {
-	ctx context.Context
-	ApiService ImageServiceAPI
-	id string
-	index int32
-	type_ ImageType
-	maxWidth *int32
-	maxHeight *int32
-	width *int32
-	height *int32
-	quality *int32
-	tag *string
-	cropWhitespace *bool
+	ctx                  context.Context
+	ApiService           ImageServiceAPI
+	id                   string
+	index                int32
+	type_                ImageType
+	maxWidth             *int32
+	maxHeight            *int32
+	width                *int32
+	height               *int32
+	quality              *int32
+	tag                  *string
+	cropWhitespace       *bool
 	enableImageEnhancers *bool
-	format *string
-	backgroundColor *string
-	foregroundLayer *string
-	autoOrient *bool
-	keepAnimation *bool
+	format               *string
+	backgroundColor      *string
+	foregroundLayer      *string
+	autoOrient           *bool
+	keepAnimation        *bool
 }
 
 // The maximum image width to return.
@@ -9608,28 +9608,28 @@ HeadUsersByIdImagesByTypeByIndex Method for HeadUsersByIdImagesByTypeByIndex
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id User Id
- @param index Image Index
- @param type_ Image Type
- @return ApiHeadUsersByIdImagesByTypeByIndexRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id User Id
+	@param index Image Index
+	@param type_ Image Type
+	@return ApiHeadUsersByIdImagesByTypeByIndexRequest
 */
 func (a *ImageServiceAPIService) HeadUsersByIdImagesByTypeByIndex(ctx context.Context, id string, index int32, type_ ImageType) ApiHeadUsersByIdImagesByTypeByIndexRequest {
 	return ApiHeadUsersByIdImagesByTypeByIndexRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
-		index: index,
-		type_: type_,
+		ctx:        ctx,
+		id:         id,
+		index:      index,
+		type_:      type_,
 	}
 }
 
 // Execute executes the request
 func (a *ImageServiceAPIService) HeadUsersByIdImagesByTypeByIndexExecute(r ApiHeadUsersByIdImagesByTypeByIndexRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodHead
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodHead
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImageServiceAPIService.HeadUsersByIdImagesByTypeByIndex")
@@ -9745,12 +9745,12 @@ func (a *ImageServiceAPIService) HeadUsersByIdImagesByTypeByIndexExecute(r ApiHe
 }
 
 type ApiPostItemsByIdImagesByTypeRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService ImageServiceAPI
-	id string
-	type_ ImageType
-	body *os.File
-	index *int32
+	id         string
+	type_      ImageType
+	body       *os.File
+	index      *int32
 }
 
 // Binary stream
@@ -9774,26 +9774,26 @@ PostItemsByIdImagesByType Uploads an image for an item, must be base64 encoded.
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @param type_ Image Type
- @return ApiPostItemsByIdImagesByTypeRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@param type_ Image Type
+	@return ApiPostItemsByIdImagesByTypeRequest
 */
 func (a *ImageServiceAPIService) PostItemsByIdImagesByType(ctx context.Context, id string, type_ ImageType) ApiPostItemsByIdImagesByTypeRequest {
 	return ApiPostItemsByIdImagesByTypeRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
-		type_: type_,
+		ctx:        ctx,
+		id:         id,
+		type_:      type_,
 	}
 }
 
 // Execute executes the request
 func (a *ImageServiceAPIService) PostItemsByIdImagesByTypeExecute(r ApiPostItemsByIdImagesByTypeRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImageServiceAPIService.PostItemsByIdImagesByType")
@@ -9877,12 +9877,12 @@ func (a *ImageServiceAPIService) PostItemsByIdImagesByTypeExecute(r ApiPostItems
 }
 
 type ApiPostItemsByIdImagesByTypeByIndexRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService ImageServiceAPI
-	id string
-	index int32
-	type_ ImageType
-	body *os.File
+	id         string
+	index      int32
+	type_      ImageType
+	body       *os.File
 }
 
 // Binary stream
@@ -9900,28 +9900,28 @@ PostItemsByIdImagesByTypeByIndex Uploads an image for an item, must be base64 en
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @param index Image Index
- @param type_ Image Type
- @return ApiPostItemsByIdImagesByTypeByIndexRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@param index Image Index
+	@param type_ Image Type
+	@return ApiPostItemsByIdImagesByTypeByIndexRequest
 */
 func (a *ImageServiceAPIService) PostItemsByIdImagesByTypeByIndex(ctx context.Context, id string, index int32, type_ ImageType) ApiPostItemsByIdImagesByTypeByIndexRequest {
 	return ApiPostItemsByIdImagesByTypeByIndexRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
-		index: index,
-		type_: type_,
+		ctx:        ctx,
+		id:         id,
+		index:      index,
+		type_:      type_,
 	}
 }
 
 // Execute executes the request
 func (a *ImageServiceAPIService) PostItemsByIdImagesByTypeByIndexExecute(r ApiPostItemsByIdImagesByTypeByIndexRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImageServiceAPIService.PostItemsByIdImagesByTypeByIndex")
@@ -10003,11 +10003,11 @@ func (a *ImageServiceAPIService) PostItemsByIdImagesByTypeByIndexExecute(r ApiPo
 }
 
 type ApiPostItemsByIdImagesByTypeByIndexDeleteRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService ImageServiceAPI
-	id string
-	index int32
-	type_ ImageType
+	id         string
+	index      int32
+	type_      ImageType
 }
 
 func (r ApiPostItemsByIdImagesByTypeByIndexDeleteRequest) Execute() (*http.Response, error) {
@@ -10019,28 +10019,28 @@ PostItemsByIdImagesByTypeByIndexDelete Method for PostItemsByIdImagesByTypeByInd
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @param index Image Index
- @param type_ Image Type
- @return ApiPostItemsByIdImagesByTypeByIndexDeleteRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@param index Image Index
+	@param type_ Image Type
+	@return ApiPostItemsByIdImagesByTypeByIndexDeleteRequest
 */
 func (a *ImageServiceAPIService) PostItemsByIdImagesByTypeByIndexDelete(ctx context.Context, id string, index int32, type_ ImageType) ApiPostItemsByIdImagesByTypeByIndexDeleteRequest {
 	return ApiPostItemsByIdImagesByTypeByIndexDeleteRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
-		index: index,
-		type_: type_,
+		ctx:        ctx,
+		id:         id,
+		index:      index,
+		type_:      type_,
 	}
 }
 
 // Execute executes the request
 func (a *ImageServiceAPIService) PostItemsByIdImagesByTypeByIndexDeleteExecute(r ApiPostItemsByIdImagesByTypeByIndexDeleteRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImageServiceAPIService.PostItemsByIdImagesByTypeByIndexDelete")
@@ -10117,12 +10117,12 @@ func (a *ImageServiceAPIService) PostItemsByIdImagesByTypeByIndexDeleteExecute(r
 }
 
 type ApiPostItemsByIdImagesByTypeByIndexIndexRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService ImageServiceAPI
-	id string
-	type_ ImageType
-	index int32
-	newIndex *int32
+	id         string
+	type_      ImageType
+	index      int32
+	newIndex   *int32
 }
 
 // The new image index
@@ -10140,28 +10140,28 @@ PostItemsByIdImagesByTypeByIndexIndex Updates the index for an item image
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @param type_ Image Type
- @param index Image Index
- @return ApiPostItemsByIdImagesByTypeByIndexIndexRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@param type_ Image Type
+	@param index Image Index
+	@return ApiPostItemsByIdImagesByTypeByIndexIndexRequest
 */
 func (a *ImageServiceAPIService) PostItemsByIdImagesByTypeByIndexIndex(ctx context.Context, id string, type_ ImageType, index int32) ApiPostItemsByIdImagesByTypeByIndexIndexRequest {
 	return ApiPostItemsByIdImagesByTypeByIndexIndexRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
-		type_: type_,
-		index: index,
+		ctx:        ctx,
+		id:         id,
+		type_:      type_,
+		index:      index,
 	}
 }
 
 // Execute executes the request
 func (a *ImageServiceAPIService) PostItemsByIdImagesByTypeByIndexIndexExecute(r ApiPostItemsByIdImagesByTypeByIndexIndexRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImageServiceAPIService.PostItemsByIdImagesByTypeByIndexIndex")
@@ -10242,12 +10242,12 @@ func (a *ImageServiceAPIService) PostItemsByIdImagesByTypeByIndexIndexExecute(r 
 }
 
 type ApiPostItemsByIdImagesByTypeByIndexUrlRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService ImageServiceAPI
-	id string
-	type_ ImageType
-	index int32
-	url *string
+	id         string
+	type_      ImageType
+	index      int32
+	url        *string
 }
 
 // The url for the new image
@@ -10265,28 +10265,28 @@ PostItemsByIdImagesByTypeByIndexUrl Updates the index for an item image
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @param type_ Image Type
- @param index Image Index
- @return ApiPostItemsByIdImagesByTypeByIndexUrlRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@param type_ Image Type
+	@param index Image Index
+	@return ApiPostItemsByIdImagesByTypeByIndexUrlRequest
 */
 func (a *ImageServiceAPIService) PostItemsByIdImagesByTypeByIndexUrl(ctx context.Context, id string, type_ ImageType, index int32) ApiPostItemsByIdImagesByTypeByIndexUrlRequest {
 	return ApiPostItemsByIdImagesByTypeByIndexUrlRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
-		type_: type_,
-		index: index,
+		ctx:        ctx,
+		id:         id,
+		type_:      type_,
+		index:      index,
 	}
 }
 
 // Execute executes the request
 func (a *ImageServiceAPIService) PostItemsByIdImagesByTypeByIndexUrlExecute(r ApiPostItemsByIdImagesByTypeByIndexUrlRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImageServiceAPIService.PostItemsByIdImagesByTypeByIndexUrl")
@@ -10367,11 +10367,11 @@ func (a *ImageServiceAPIService) PostItemsByIdImagesByTypeByIndexUrlExecute(r Ap
 }
 
 type ApiPostItemsByIdImagesByTypeDeleteRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService ImageServiceAPI
-	id string
-	type_ ImageType
-	index *int32
+	id         string
+	type_      ImageType
+	index      *int32
 }
 
 // Image Index
@@ -10389,26 +10389,26 @@ PostItemsByIdImagesByTypeDelete Method for PostItemsByIdImagesByTypeDelete
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @param type_ Image Type
- @return ApiPostItemsByIdImagesByTypeDeleteRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@param type_ Image Type
+	@return ApiPostItemsByIdImagesByTypeDeleteRequest
 */
 func (a *ImageServiceAPIService) PostItemsByIdImagesByTypeDelete(ctx context.Context, id string, type_ ImageType) ApiPostItemsByIdImagesByTypeDeleteRequest {
 	return ApiPostItemsByIdImagesByTypeDeleteRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
-		type_: type_,
+		ctx:        ctx,
+		id:         id,
+		type_:      type_,
 	}
 }
 
 // Execute executes the request
 func (a *ImageServiceAPIService) PostItemsByIdImagesByTypeDeleteExecute(r ApiPostItemsByIdImagesByTypeDeleteRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImageServiceAPIService.PostItemsByIdImagesByTypeDelete")
@@ -10487,11 +10487,11 @@ func (a *ImageServiceAPIService) PostItemsByIdImagesByTypeDeleteExecute(r ApiPos
 }
 
 type ApiPostUsersByIdImagesByTypeRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService ImageServiceAPI
-	id string
-	type_ ImageType
-	body *os.File
+	id         string
+	type_      ImageType
+	body       *os.File
 }
 
 // Binary stream
@@ -10509,26 +10509,26 @@ PostUsersByIdImagesByType Uploads an image for an item, must be base64 encoded.
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id User Id
- @param type_ Image Type
- @return ApiPostUsersByIdImagesByTypeRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id User Id
+	@param type_ Image Type
+	@return ApiPostUsersByIdImagesByTypeRequest
 */
 func (a *ImageServiceAPIService) PostUsersByIdImagesByType(ctx context.Context, id string, type_ ImageType) ApiPostUsersByIdImagesByTypeRequest {
 	return ApiPostUsersByIdImagesByTypeRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
-		type_: type_,
+		ctx:        ctx,
+		id:         id,
+		type_:      type_,
 	}
 }
 
 // Execute executes the request
 func (a *ImageServiceAPIService) PostUsersByIdImagesByTypeExecute(r ApiPostUsersByIdImagesByTypeRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImageServiceAPIService.PostUsersByIdImagesByType")
@@ -10609,11 +10609,11 @@ func (a *ImageServiceAPIService) PostUsersByIdImagesByTypeExecute(r ApiPostUsers
 }
 
 type ApiPostUsersByIdImagesByTypeByIndexRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService ImageServiceAPI
-	id string
-	type_ ImageType
-	body *os.File
+	id         string
+	type_      ImageType
+	body       *os.File
 }
 
 // Binary stream
@@ -10631,26 +10631,26 @@ PostUsersByIdImagesByTypeByIndex Uploads an image for an item, must be base64 en
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id User Id
- @param type_ Image Type
- @return ApiPostUsersByIdImagesByTypeByIndexRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id User Id
+	@param type_ Image Type
+	@return ApiPostUsersByIdImagesByTypeByIndexRequest
 */
 func (a *ImageServiceAPIService) PostUsersByIdImagesByTypeByIndex(ctx context.Context, id string, type_ ImageType) ApiPostUsersByIdImagesByTypeByIndexRequest {
 	return ApiPostUsersByIdImagesByTypeByIndexRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
-		type_: type_,
+		ctx:        ctx,
+		id:         id,
+		type_:      type_,
 	}
 }
 
 // Execute executes the request
 func (a *ImageServiceAPIService) PostUsersByIdImagesByTypeByIndexExecute(r ApiPostUsersByIdImagesByTypeByIndexRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImageServiceAPIService.PostUsersByIdImagesByTypeByIndex")
@@ -10731,11 +10731,11 @@ func (a *ImageServiceAPIService) PostUsersByIdImagesByTypeByIndexExecute(r ApiPo
 }
 
 type ApiPostUsersByIdImagesByTypeByIndexDeleteRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService ImageServiceAPI
-	id string
-	index int32
-	type_ ImageType
+	id         string
+	index      int32
+	type_      ImageType
 }
 
 func (r ApiPostUsersByIdImagesByTypeByIndexDeleteRequest) Execute() (*http.Response, error) {
@@ -10747,28 +10747,28 @@ PostUsersByIdImagesByTypeByIndexDelete Method for PostUsersByIdImagesByTypeByInd
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id User Id
- @param index Image Index
- @param type_ Image Type
- @return ApiPostUsersByIdImagesByTypeByIndexDeleteRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id User Id
+	@param index Image Index
+	@param type_ Image Type
+	@return ApiPostUsersByIdImagesByTypeByIndexDeleteRequest
 */
 func (a *ImageServiceAPIService) PostUsersByIdImagesByTypeByIndexDelete(ctx context.Context, id string, index int32, type_ ImageType) ApiPostUsersByIdImagesByTypeByIndexDeleteRequest {
 	return ApiPostUsersByIdImagesByTypeByIndexDeleteRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
-		index: index,
-		type_: type_,
+		ctx:        ctx,
+		id:         id,
+		index:      index,
+		type_:      type_,
 	}
 }
 
 // Execute executes the request
 func (a *ImageServiceAPIService) PostUsersByIdImagesByTypeByIndexDeleteExecute(r ApiPostUsersByIdImagesByTypeByIndexDeleteRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImageServiceAPIService.PostUsersByIdImagesByTypeByIndexDelete")
@@ -10845,11 +10845,11 @@ func (a *ImageServiceAPIService) PostUsersByIdImagesByTypeByIndexDeleteExecute(r
 }
 
 type ApiPostUsersByIdImagesByTypeDeleteRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService ImageServiceAPI
-	id string
-	type_ ImageType
-	index *int32
+	id         string
+	type_      ImageType
+	index      *int32
 }
 
 // Image Index
@@ -10867,26 +10867,26 @@ PostUsersByIdImagesByTypeDelete Method for PostUsersByIdImagesByTypeDelete
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id User Id
- @param type_ Image Type
- @return ApiPostUsersByIdImagesByTypeDeleteRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id User Id
+	@param type_ Image Type
+	@return ApiPostUsersByIdImagesByTypeDeleteRequest
 */
 func (a *ImageServiceAPIService) PostUsersByIdImagesByTypeDelete(ctx context.Context, id string, type_ ImageType) ApiPostUsersByIdImagesByTypeDeleteRequest {
 	return ApiPostUsersByIdImagesByTypeDeleteRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
-		type_: type_,
+		ctx:        ctx,
+		id:         id,
+		type_:      type_,
 	}
 }
 
 // Execute executes the request
 func (a *ImageServiceAPIService) PostUsersByIdImagesByTypeDeleteExecute(r ApiPostUsersByIdImagesByTypeDeleteRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImageServiceAPIService.PostUsersByIdImagesByTypeDelete")

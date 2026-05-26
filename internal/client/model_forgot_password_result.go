@@ -20,9 +20,9 @@ var _ MappedNullable = &ForgotPasswordResult{}
 
 // ForgotPasswordResult struct for ForgotPasswordResult
 type ForgotPasswordResult struct {
-	Action *ForgotPasswordAction `json:"Action,omitempty"`
-	PinFile *string `json:"PinFile,omitempty"`
-	PinExpirationDate NullableTime `json:"PinExpirationDate,omitempty"`
+	Action            *ForgotPasswordAction `json:"Action,omitempty"`
+	PinFile           *string               `json:"PinFile,omitempty"`
+	PinExpirationDate NullableTime          `json:"PinExpirationDate,omitempty"`
 }
 
 // NewForgotPasswordResult instantiates a new ForgotPasswordResult object
@@ -138,6 +138,7 @@ func (o *ForgotPasswordResult) HasPinExpirationDate() bool {
 func (o *ForgotPasswordResult) SetPinExpirationDate(v time.Time) {
 	o.PinExpirationDate.Set(&v)
 }
+
 // SetPinExpirationDateNil sets the value for PinExpirationDate to be an explicit nil
 func (o *ForgotPasswordResult) SetPinExpirationDateNil() {
 	o.PinExpirationDate.Set(nil)
@@ -149,7 +150,7 @@ func (o *ForgotPasswordResult) UnsetPinExpirationDate() {
 }
 
 func (o ForgotPasswordResult) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -205,5 +206,3 @@ func (v *NullableForgotPasswordResult) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

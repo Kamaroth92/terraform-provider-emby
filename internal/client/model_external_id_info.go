@@ -19,11 +19,11 @@ var _ MappedNullable = &ExternalIdInfo{}
 
 // ExternalIdInfo struct for ExternalIdInfo
 type ExternalIdInfo struct {
-	Name *string `json:"Name,omitempty"`
-	Key *string `json:"Key,omitempty"`
-	Website *string `json:"Website,omitempty"`
-	UrlFormatString *string `json:"UrlFormatString,omitempty"`
-	IsSupportedAsIdentifier *bool `json:"IsSupportedAsIdentifier,omitempty"`
+	Name                    *string `json:"Name,omitempty"`
+	Key                     *string `json:"Key,omitempty"`
+	Website                 *string `json:"Website,omitempty"`
+	UrlFormatString         *string `json:"UrlFormatString,omitempty"`
+	IsSupportedAsIdentifier *bool   `json:"IsSupportedAsIdentifier,omitempty"`
 }
 
 // NewExternalIdInfo instantiates a new ExternalIdInfo object
@@ -204,7 +204,7 @@ func (o *ExternalIdInfo) SetIsSupportedAsIdentifier(v bool) {
 }
 
 func (o ExternalIdInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -266,5 +266,3 @@ func (v *NullableExternalIdInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

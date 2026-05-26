@@ -19,16 +19,16 @@ var _ MappedNullable = &TaskInfo{}
 
 // TaskInfo struct for TaskInfo
 type TaskInfo struct {
-	Name *string `json:"Name,omitempty"`
-	State *TaskState `json:"State,omitempty"`
-	CurrentProgressPercentage NullableFloat64 `json:"CurrentProgressPercentage,omitempty"`
-	Id *string `json:"Id,omitempty"`
-	LastExecutionResult *TaskResult `json:"LastExecutionResult,omitempty"`
-	Triggers []TaskTriggerInfo `json:"Triggers,omitempty"`
-	Description *string `json:"Description,omitempty"`
-	Category *string `json:"Category,omitempty"`
-	IsHidden *bool `json:"IsHidden,omitempty"`
-	Key *string `json:"Key,omitempty"`
+	Name                      *string           `json:"Name,omitempty"`
+	State                     *TaskState        `json:"State,omitempty"`
+	CurrentProgressPercentage NullableFloat64   `json:"CurrentProgressPercentage,omitempty"`
+	Id                        *string           `json:"Id,omitempty"`
+	LastExecutionResult       *TaskResult       `json:"LastExecutionResult,omitempty"`
+	Triggers                  []TaskTriggerInfo `json:"Triggers,omitempty"`
+	Description               *string           `json:"Description,omitempty"`
+	Category                  *string           `json:"Category,omitempty"`
+	IsHidden                  *bool             `json:"IsHidden,omitempty"`
+	Key                       *string           `json:"Key,omitempty"`
 }
 
 // NewTaskInfo instantiates a new TaskInfo object
@@ -144,6 +144,7 @@ func (o *TaskInfo) HasCurrentProgressPercentage() bool {
 func (o *TaskInfo) SetCurrentProgressPercentage(v float64) {
 	o.CurrentProgressPercentage.Set(&v)
 }
+
 // SetCurrentProgressPercentageNil sets the value for CurrentProgressPercentage to be an explicit nil
 func (o *TaskInfo) SetCurrentProgressPercentageNil() {
 	o.CurrentProgressPercentage.Set(nil)
@@ -379,7 +380,7 @@ func (o *TaskInfo) SetKey(v string) {
 }
 
 func (o TaskInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -456,5 +457,3 @@ func (v *NullableTaskInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

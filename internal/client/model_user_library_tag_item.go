@@ -20,7 +20,7 @@ var _ MappedNullable = &UserLibraryTagItem{}
 // UserLibraryTagItem struct for UserLibraryTagItem
 type UserLibraryTagItem struct {
 	Name *string `json:"Name,omitempty"`
-	Id *string `json:"Id,omitempty"`
+	Id   *string `json:"Id,omitempty"`
 }
 
 // NewUserLibraryTagItem instantiates a new UserLibraryTagItem object
@@ -105,7 +105,7 @@ func (o *UserLibraryTagItem) SetId(v string) {
 }
 
 func (o UserLibraryTagItem) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -158,5 +158,3 @@ func (v *NullableUserLibraryTagItem) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

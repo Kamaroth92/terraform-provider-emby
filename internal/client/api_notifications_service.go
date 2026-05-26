@@ -18,16 +18,15 @@ import (
 	"net/url"
 )
 
-
 type NotificationsServiceAPI interface {
 
 	/*
-	GetNotificationsTypes Gets notification types
+		GetNotificationsTypes Gets notification types
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetNotificationsTypesRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetNotificationsTypesRequest
 	*/
 	GetNotificationsTypes(ctx context.Context) ApiGetNotificationsTypesRequest
 
@@ -36,12 +35,12 @@ type NotificationsServiceAPI interface {
 	GetNotificationsTypesExecute(r ApiGetNotificationsTypesRequest) ([]NotificationCategoryInfo, *http.Response, error)
 
 	/*
-	PostNotificationsAdmin Sends a notification to all admin users
+		PostNotificationsAdmin Sends a notification to all admin users
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostNotificationsAdminRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostNotificationsAdminRequest
 	*/
 	PostNotificationsAdmin(ctx context.Context) ApiPostNotificationsAdminRequest
 
@@ -53,7 +52,7 @@ type NotificationsServiceAPI interface {
 type NotificationsServiceAPIService service
 
 type ApiGetNotificationsTypesRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService NotificationsServiceAPI
 }
 
@@ -66,24 +65,25 @@ GetNotificationsTypes Gets notification types
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetNotificationsTypesRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetNotificationsTypesRequest
 */
 func (a *NotificationsServiceAPIService) GetNotificationsTypes(ctx context.Context) ApiGetNotificationsTypesRequest {
 	return ApiGetNotificationsTypesRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return []NotificationCategoryInfo
+//
+//	@return []NotificationCategoryInfo
 func (a *NotificationsServiceAPIService) GetNotificationsTypesExecute(r ApiGetNotificationsTypesRequest) ([]NotificationCategoryInfo, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []NotificationCategoryInfo
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue []NotificationCategoryInfo
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "NotificationsServiceAPIService.GetNotificationsTypes")
@@ -166,14 +166,14 @@ func (a *NotificationsServiceAPIService) GetNotificationsTypesExecute(r ApiGetNo
 }
 
 type ApiPostNotificationsAdminRequest struct {
-	ctx context.Context
-	ApiService NotificationsServiceAPI
-	name *string
-	description *string
+	ctx                     context.Context
+	ApiService              NotificationsServiceAPI
+	name                    *string
+	description             *string
 	apiAddAdminNotification *ApiAddAdminNotification
-	imageUrl *string
-	url *string
-	level *string
+	imageUrl                *string
+	url                     *string
+	level                   *string
 }
 
 // The notification&#39;s name
@@ -221,22 +221,22 @@ PostNotificationsAdmin Sends a notification to all admin users
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostNotificationsAdminRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostNotificationsAdminRequest
 */
 func (a *NotificationsServiceAPIService) PostNotificationsAdmin(ctx context.Context) ApiPostNotificationsAdminRequest {
 	return ApiPostNotificationsAdminRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *NotificationsServiceAPIService) PostNotificationsAdminExecute(r ApiPostNotificationsAdminRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "NotificationsServiceAPIService.PostNotificationsAdmin")

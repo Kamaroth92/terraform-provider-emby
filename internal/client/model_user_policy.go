@@ -19,53 +19,53 @@ var _ MappedNullable = &UserPolicy{}
 
 // UserPolicy struct for UserPolicy
 type UserPolicy struct {
-	IsAdministrator *bool `json:"IsAdministrator,omitempty"`
-	IsHidden *bool `json:"IsHidden,omitempty"`
-	IsHiddenRemotely *bool `json:"IsHiddenRemotely,omitempty"`
-	IsHiddenFromUnusedDevices *bool `json:"IsHiddenFromUnusedDevices,omitempty"`
-	IsDisabled *bool `json:"IsDisabled,omitempty"`
-	LockedOutDate *int64 `json:"LockedOutDate,omitempty"`
-	MaxParentalRating NullableInt32 `json:"MaxParentalRating,omitempty"`
-	AllowTagOrRating *bool `json:"AllowTagOrRating,omitempty"`
-	BlockedTags []string `json:"BlockedTags,omitempty"`
-	IsTagBlockingModeInclusive *bool `json:"IsTagBlockingModeInclusive,omitempty"`
-	IncludeTags []string `json:"IncludeTags,omitempty"`
-	EnableUserPreferenceAccess *bool `json:"EnableUserPreferenceAccess,omitempty"`
-	AccessSchedules []AccessSchedule `json:"AccessSchedules,omitempty"`
-	BlockUnratedItems []UnratedItem `json:"BlockUnratedItems,omitempty"`
-	EnableRemoteControlOfOtherUsers *bool `json:"EnableRemoteControlOfOtherUsers,omitempty"`
-	EnableSharedDeviceControl *bool `json:"EnableSharedDeviceControl,omitempty"`
-	EnableRemoteAccess *bool `json:"EnableRemoteAccess,omitempty"`
-	EnableLiveTvManagement *bool `json:"EnableLiveTvManagement,omitempty"`
-	EnableLiveTvAccess *bool `json:"EnableLiveTvAccess,omitempty"`
-	EnableMediaPlayback *bool `json:"EnableMediaPlayback,omitempty"`
-	EnableAudioPlaybackTranscoding *bool `json:"EnableAudioPlaybackTranscoding,omitempty"`
-	EnableVideoPlaybackTranscoding *bool `json:"EnableVideoPlaybackTranscoding,omitempty"`
-	EnableTranscodingQuality *bool `json:"EnableTranscodingQuality,omitempty"`
-	AutoRemoteQuality *int32 `json:"AutoRemoteQuality,omitempty"`
-	EnablePlaybackRemuxing *bool `json:"EnablePlaybackRemuxing,omitempty"`
-	EnableContentDeletion *bool `json:"EnableContentDeletion,omitempty"`
-	RestrictedFeatures []string `json:"RestrictedFeatures,omitempty"`
-	EnableContentDeletionFromFolders []string `json:"EnableContentDeletionFromFolders,omitempty"`
-	EnableContentDownloading *bool `json:"EnableContentDownloading,omitempty"`
-	EnableSubtitleDownloading *bool `json:"EnableSubtitleDownloading,omitempty"`
-	EnableSubtitleManagement *bool `json:"EnableSubtitleManagement,omitempty"`
-	EnableSyncTranscoding *bool `json:"EnableSyncTranscoding,omitempty"`
-	EnableMediaConversion *bool `json:"EnableMediaConversion,omitempty"`
-	EnabledChannels []string `json:"EnabledChannels,omitempty"`
-	EnableAllChannels *bool `json:"EnableAllChannels,omitempty"`
-	EnabledFolders []string `json:"EnabledFolders,omitempty"`
-	EnableAllFolders *bool `json:"EnableAllFolders,omitempty"`
-	InvalidLoginAttemptCount *int32 `json:"InvalidLoginAttemptCount,omitempty"`
-	EnablePublicSharing *bool `json:"EnablePublicSharing,omitempty"`
-	RemoteClientBitrateLimit *int32 `json:"RemoteClientBitrateLimit,omitempty"`
-	AuthenticationProviderId *string `json:"AuthenticationProviderId,omitempty"`
-	ExcludedSubFolders []string `json:"ExcludedSubFolders,omitempty"`
-	SimultaneousStreamLimit *int32 `json:"SimultaneousStreamLimit,omitempty"`
-	EnabledDevices []string `json:"EnabledDevices,omitempty"`
-	EnableAllDevices *bool `json:"EnableAllDevices,omitempty"`
-	AllowCameraUpload *bool `json:"AllowCameraUpload,omitempty"`
-	AllowSharingPersonalItems *bool `json:"AllowSharingPersonalItems,omitempty"`
+	IsAdministrator                  *bool            `json:"IsAdministrator,omitempty"`
+	IsHidden                         *bool            `json:"IsHidden,omitempty"`
+	IsHiddenRemotely                 *bool            `json:"IsHiddenRemotely,omitempty"`
+	IsHiddenFromUnusedDevices        *bool            `json:"IsHiddenFromUnusedDevices,omitempty"`
+	IsDisabled                       *bool            `json:"IsDisabled,omitempty"`
+	LockedOutDate                    *int64           `json:"LockedOutDate,omitempty"`
+	MaxParentalRating                NullableInt32    `json:"MaxParentalRating,omitempty"`
+	AllowTagOrRating                 *bool            `json:"AllowTagOrRating,omitempty"`
+	BlockedTags                      []string         `json:"BlockedTags,omitempty"`
+	IsTagBlockingModeInclusive       *bool            `json:"IsTagBlockingModeInclusive,omitempty"`
+	IncludeTags                      []string         `json:"IncludeTags,omitempty"`
+	EnableUserPreferenceAccess       *bool            `json:"EnableUserPreferenceAccess,omitempty"`
+	AccessSchedules                  []AccessSchedule `json:"AccessSchedules,omitempty"`
+	BlockUnratedItems                []UnratedItem    `json:"BlockUnratedItems,omitempty"`
+	EnableRemoteControlOfOtherUsers  *bool            `json:"EnableRemoteControlOfOtherUsers,omitempty"`
+	EnableSharedDeviceControl        *bool            `json:"EnableSharedDeviceControl,omitempty"`
+	EnableRemoteAccess               *bool            `json:"EnableRemoteAccess,omitempty"`
+	EnableLiveTvManagement           *bool            `json:"EnableLiveTvManagement,omitempty"`
+	EnableLiveTvAccess               *bool            `json:"EnableLiveTvAccess,omitempty"`
+	EnableMediaPlayback              *bool            `json:"EnableMediaPlayback,omitempty"`
+	EnableAudioPlaybackTranscoding   *bool            `json:"EnableAudioPlaybackTranscoding,omitempty"`
+	EnableVideoPlaybackTranscoding   *bool            `json:"EnableVideoPlaybackTranscoding,omitempty"`
+	EnableTranscodingQuality         *bool            `json:"EnableTranscodingQuality,omitempty"`
+	AutoRemoteQuality                *int32           `json:"AutoRemoteQuality,omitempty"`
+	EnablePlaybackRemuxing           *bool            `json:"EnablePlaybackRemuxing,omitempty"`
+	EnableContentDeletion            *bool            `json:"EnableContentDeletion,omitempty"`
+	RestrictedFeatures               []string         `json:"RestrictedFeatures,omitempty"`
+	EnableContentDeletionFromFolders []string         `json:"EnableContentDeletionFromFolders,omitempty"`
+	EnableContentDownloading         *bool            `json:"EnableContentDownloading,omitempty"`
+	EnableSubtitleDownloading        *bool            `json:"EnableSubtitleDownloading,omitempty"`
+	EnableSubtitleManagement         *bool            `json:"EnableSubtitleManagement,omitempty"`
+	EnableSyncTranscoding            *bool            `json:"EnableSyncTranscoding,omitempty"`
+	EnableMediaConversion            *bool            `json:"EnableMediaConversion,omitempty"`
+	EnabledChannels                  []string         `json:"EnabledChannels,omitempty"`
+	EnableAllChannels                *bool            `json:"EnableAllChannels,omitempty"`
+	EnabledFolders                   []string         `json:"EnabledFolders,omitempty"`
+	EnableAllFolders                 *bool            `json:"EnableAllFolders,omitempty"`
+	InvalidLoginAttemptCount         *int32           `json:"InvalidLoginAttemptCount,omitempty"`
+	EnablePublicSharing              *bool            `json:"EnablePublicSharing,omitempty"`
+	RemoteClientBitrateLimit         *int32           `json:"RemoteClientBitrateLimit,omitempty"`
+	AuthenticationProviderId         *string          `json:"AuthenticationProviderId,omitempty"`
+	ExcludedSubFolders               []string         `json:"ExcludedSubFolders,omitempty"`
+	SimultaneousStreamLimit          *int32           `json:"SimultaneousStreamLimit,omitempty"`
+	EnabledDevices                   []string         `json:"EnabledDevices,omitempty"`
+	EnableAllDevices                 *bool            `json:"EnableAllDevices,omitempty"`
+	AllowCameraUpload                *bool            `json:"AllowCameraUpload,omitempty"`
+	AllowSharingPersonalItems        *bool            `json:"AllowSharingPersonalItems,omitempty"`
 }
 
 // NewUserPolicy instantiates a new UserPolicy object
@@ -309,6 +309,7 @@ func (o *UserPolicy) HasMaxParentalRating() bool {
 func (o *UserPolicy) SetMaxParentalRating(v int32) {
 	o.MaxParentalRating.Set(&v)
 }
+
 // SetMaxParentalRatingNil sets the value for MaxParentalRating to be an explicit nil
 func (o *UserPolicy) SetMaxParentalRatingNil() {
 	o.MaxParentalRating.Set(nil)
@@ -1600,7 +1601,7 @@ func (o *UserPolicy) SetAllowSharingPersonalItems(v bool) {
 }
 
 func (o UserPolicy) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -1788,5 +1789,3 @@ func (v *NullableUserPolicy) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

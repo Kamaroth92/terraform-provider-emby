@@ -1,3 +1,5 @@
+// Copyright (c) HashiCorp, Inc.
+
 /*
 Emby Server REST API (BETA)
 
@@ -11,10 +13,10 @@ package embyclient
 
 import (
 	"context"
+	openapiclient "github.com/Kamaroth92/terraform-provider-emby/client"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func Test_embyclient_SubtitleServiceAPIService(t *testing.T) {
@@ -24,7 +26,7 @@ func Test_embyclient_SubtitleServiceAPIService(t *testing.T) {
 
 	t.Run("Test SubtitleServiceAPIService DeleteItemsByIdSubtitlesByIndex", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var index int32
@@ -38,7 +40,7 @@ func Test_embyclient_SubtitleServiceAPIService(t *testing.T) {
 
 	t.Run("Test SubtitleServiceAPIService DeleteVideosByIdSubtitlesByIndex", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var index int32
@@ -52,7 +54,7 @@ func Test_embyclient_SubtitleServiceAPIService(t *testing.T) {
 
 	t.Run("Test SubtitleServiceAPIService GetItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var mediaSourceId string
@@ -69,7 +71,7 @@ func Test_embyclient_SubtitleServiceAPIService(t *testing.T) {
 
 	t.Run("Test SubtitleServiceAPIService GetItemsByIdByMediasourceidSubtitlesByIndexStreamByFormat", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var mediaSourceId string
@@ -85,7 +87,7 @@ func Test_embyclient_SubtitleServiceAPIService(t *testing.T) {
 
 	t.Run("Test SubtitleServiceAPIService GetItemsByIdRemotesearchSubtitlesByLanguage", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var language string
@@ -100,7 +102,7 @@ func Test_embyclient_SubtitleServiceAPIService(t *testing.T) {
 
 	t.Run("Test SubtitleServiceAPIService GetProvidersSubtitlesSubtitlesById", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -113,7 +115,7 @@ func Test_embyclient_SubtitleServiceAPIService(t *testing.T) {
 
 	t.Run("Test SubtitleServiceAPIService GetVideosByIdByMediasourceidAttachmentsByIndexStream", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var mediaSourceId string
@@ -128,7 +130,7 @@ func Test_embyclient_SubtitleServiceAPIService(t *testing.T) {
 
 	t.Run("Test SubtitleServiceAPIService GetVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var mediaSourceId string
@@ -145,7 +147,7 @@ func Test_embyclient_SubtitleServiceAPIService(t *testing.T) {
 
 	t.Run("Test SubtitleServiceAPIService GetVideosByIdByMediasourceidSubtitlesByIndexStreamByFormat", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var mediaSourceId string
@@ -161,7 +163,7 @@ func Test_embyclient_SubtitleServiceAPIService(t *testing.T) {
 
 	t.Run("Test SubtitleServiceAPIService HeadItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var mediaSourceId string
@@ -178,7 +180,7 @@ func Test_embyclient_SubtitleServiceAPIService(t *testing.T) {
 
 	t.Run("Test SubtitleServiceAPIService HeadItemsByIdByMediasourceidSubtitlesByIndexStreamByFormat", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var mediaSourceId string
@@ -194,7 +196,7 @@ func Test_embyclient_SubtitleServiceAPIService(t *testing.T) {
 
 	t.Run("Test SubtitleServiceAPIService HeadVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var mediaSourceId string
@@ -211,7 +213,7 @@ func Test_embyclient_SubtitleServiceAPIService(t *testing.T) {
 
 	t.Run("Test SubtitleServiceAPIService HeadVideosByIdByMediasourceidSubtitlesByIndexStreamByFormat", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var mediaSourceId string
@@ -227,7 +229,7 @@ func Test_embyclient_SubtitleServiceAPIService(t *testing.T) {
 
 	t.Run("Test SubtitleServiceAPIService PostItemsByIdRemotesearchSubtitlesBySubtitleid", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var subtitleId string
@@ -242,7 +244,7 @@ func Test_embyclient_SubtitleServiceAPIService(t *testing.T) {
 
 	t.Run("Test SubtitleServiceAPIService PostItemsByIdSubtitlesByIndexDelete", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var index int32
@@ -256,7 +258,7 @@ func Test_embyclient_SubtitleServiceAPIService(t *testing.T) {
 
 	t.Run("Test SubtitleServiceAPIService PostVideosByIdSubtitlesByIndexDelete", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var index int32

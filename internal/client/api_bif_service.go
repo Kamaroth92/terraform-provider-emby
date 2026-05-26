@@ -19,17 +19,16 @@ import (
 	"strings"
 )
 
-
 type BifServiceAPI interface {
 
 	/*
-	GetItemsByIdThumbnailset Method for GetItemsByIdThumbnailset
+		GetItemsByIdThumbnailset Method for GetItemsByIdThumbnailset
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiGetItemsByIdThumbnailsetRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiGetItemsByIdThumbnailsetRequest
 	*/
 	GetItemsByIdThumbnailset(ctx context.Context, id string) ApiGetItemsByIdThumbnailsetRequest
 
@@ -38,13 +37,13 @@ type BifServiceAPI interface {
 	GetItemsByIdThumbnailsetExecute(r ApiGetItemsByIdThumbnailsetRequest) (*RokuMetadataApiThumbnailSetInfo, *http.Response, error)
 
 	/*
-	GetVideosByIdIndexBif Method for GetVideosByIdIndexBif
+		GetVideosByIdIndexBif Method for GetVideosByIdIndexBif
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiGetVideosByIdIndexBifRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiGetVideosByIdIndexBifRequest
 	*/
 	GetVideosByIdIndexBif(ctx context.Context, id string) ApiGetVideosByIdIndexBifRequest
 
@@ -56,10 +55,10 @@ type BifServiceAPI interface {
 type BifServiceAPIService service
 
 type ApiGetItemsByIdThumbnailsetRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService BifServiceAPI
-	width *int32
-	id string
+	width      *int32
+	id         string
 }
 
 func (r ApiGetItemsByIdThumbnailsetRequest) Width(width int32) ApiGetItemsByIdThumbnailsetRequest {
@@ -76,26 +75,27 @@ GetItemsByIdThumbnailset Method for GetItemsByIdThumbnailset
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiGetItemsByIdThumbnailsetRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiGetItemsByIdThumbnailsetRequest
 */
 func (a *BifServiceAPIService) GetItemsByIdThumbnailset(ctx context.Context, id string) ApiGetItemsByIdThumbnailsetRequest {
 	return ApiGetItemsByIdThumbnailsetRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
-//  @return RokuMetadataApiThumbnailSetInfo
+//
+//	@return RokuMetadataApiThumbnailSetInfo
 func (a *BifServiceAPIService) GetItemsByIdThumbnailsetExecute(r ApiGetItemsByIdThumbnailsetRequest) (*RokuMetadataApiThumbnailSetInfo, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *RokuMetadataApiThumbnailSetInfo
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *RokuMetadataApiThumbnailSetInfo
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "BifServiceAPIService.GetItemsByIdThumbnailset")
@@ -183,10 +183,10 @@ func (a *BifServiceAPIService) GetItemsByIdThumbnailsetExecute(r ApiGetItemsById
 }
 
 type ApiGetVideosByIdIndexBifRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService BifServiceAPI
-	width *int32
-	id string
+	width      *int32
+	id         string
 }
 
 func (r ApiGetVideosByIdIndexBifRequest) Width(width int32) ApiGetVideosByIdIndexBifRequest {
@@ -203,24 +203,24 @@ GetVideosByIdIndexBif Method for GetVideosByIdIndexBif
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiGetVideosByIdIndexBifRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiGetVideosByIdIndexBifRequest
 */
 func (a *BifServiceAPIService) GetVideosByIdIndexBif(ctx context.Context, id string) ApiGetVideosByIdIndexBifRequest {
 	return ApiGetVideosByIdIndexBifRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *BifServiceAPIService) GetVideosByIdIndexBifExecute(r ApiGetVideosByIdIndexBifRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "BifServiceAPIService.GetVideosByIdIndexBif")

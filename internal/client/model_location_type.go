@@ -21,7 +21,7 @@ type LocationType string
 // List of LocationType
 const (
 	LOCATIONTYPE_FILE_SYSTEM LocationType = "FileSystem"
-	LOCATIONTYPE_VIRTUAL LocationType = "Virtual"
+	LOCATIONTYPE_VIRTUAL     LocationType = "Virtual"
 )
 
 // All allowed values of LocationType enum
@@ -108,4 +108,3 @@ func (v *NullableLocationType) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

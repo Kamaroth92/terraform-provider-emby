@@ -19,17 +19,16 @@ import (
 	"strings"
 )
 
-
 type VideosServiceAPI interface {
 
 	/*
-	DeleteVideosByIdAlternatesources Removes alternate video sources.
+		DeleteVideosByIdAlternatesources Removes alternate video sources.
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiDeleteVideosByIdAlternatesourcesRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiDeleteVideosByIdAlternatesourcesRequest
 	*/
 	DeleteVideosByIdAlternatesources(ctx context.Context, id string) ApiDeleteVideosByIdAlternatesourcesRequest
 
@@ -37,13 +36,13 @@ type VideosServiceAPI interface {
 	DeleteVideosByIdAlternatesourcesExecute(r ApiDeleteVideosByIdAlternatesourcesRequest) (*http.Response, error)
 
 	/*
-	PostVideosByIdAlternatesourcesDelete Removes alternate video sources.
+		PostVideosByIdAlternatesourcesDelete Removes alternate video sources.
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiPostVideosByIdAlternatesourcesDeleteRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiPostVideosByIdAlternatesourcesDeleteRequest
 	*/
 	PostVideosByIdAlternatesourcesDelete(ctx context.Context, id string) ApiPostVideosByIdAlternatesourcesDeleteRequest
 
@@ -51,12 +50,12 @@ type VideosServiceAPI interface {
 	PostVideosByIdAlternatesourcesDeleteExecute(r ApiPostVideosByIdAlternatesourcesDeleteRequest) (*http.Response, error)
 
 	/*
-	PostVideosMergeversions Merges videos into a single record
+		PostVideosMergeversions Merges videos into a single record
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostVideosMergeversionsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostVideosMergeversionsRequest
 	*/
 	PostVideosMergeversions(ctx context.Context) ApiPostVideosMergeversionsRequest
 
@@ -68,9 +67,9 @@ type VideosServiceAPI interface {
 type VideosServiceAPIService service
 
 type ApiDeleteVideosByIdAlternatesourcesRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService VideosServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiDeleteVideosByIdAlternatesourcesRequest) Execute() (*http.Response, error) {
@@ -82,24 +81,24 @@ DeleteVideosByIdAlternatesources Removes alternate video sources.
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiDeleteVideosByIdAlternatesourcesRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiDeleteVideosByIdAlternatesourcesRequest
 */
 func (a *VideosServiceAPIService) DeleteVideosByIdAlternatesources(ctx context.Context, id string) ApiDeleteVideosByIdAlternatesourcesRequest {
 	return ApiDeleteVideosByIdAlternatesourcesRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *VideosServiceAPIService) DeleteVideosByIdAlternatesourcesExecute(r ApiDeleteVideosByIdAlternatesourcesRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodDelete
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodDelete
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "VideosServiceAPIService.DeleteVideosByIdAlternatesources")
@@ -174,9 +173,9 @@ func (a *VideosServiceAPIService) DeleteVideosByIdAlternatesourcesExecute(r ApiD
 }
 
 type ApiPostVideosByIdAlternatesourcesDeleteRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService VideosServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiPostVideosByIdAlternatesourcesDeleteRequest) Execute() (*http.Response, error) {
@@ -188,24 +187,24 @@ PostVideosByIdAlternatesourcesDelete Removes alternate video sources.
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiPostVideosByIdAlternatesourcesDeleteRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiPostVideosByIdAlternatesourcesDeleteRequest
 */
 func (a *VideosServiceAPIService) PostVideosByIdAlternatesourcesDelete(ctx context.Context, id string) ApiPostVideosByIdAlternatesourcesDeleteRequest {
 	return ApiPostVideosByIdAlternatesourcesDeleteRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *VideosServiceAPIService) PostVideosByIdAlternatesourcesDeleteExecute(r ApiPostVideosByIdAlternatesourcesDeleteRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "VideosServiceAPIService.PostVideosByIdAlternatesourcesDelete")
@@ -280,9 +279,9 @@ func (a *VideosServiceAPIService) PostVideosByIdAlternatesourcesDeleteExecute(r 
 }
 
 type ApiPostVideosMergeversionsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService VideosServiceAPI
-	ids *string
+	ids        *string
 }
 
 // Item id list. This allows multiple, comma delimited.
@@ -300,22 +299,22 @@ PostVideosMergeversions Merges videos into a single record
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostVideosMergeversionsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostVideosMergeversionsRequest
 */
 func (a *VideosServiceAPIService) PostVideosMergeversions(ctx context.Context) ApiPostVideosMergeversionsRequest {
 	return ApiPostVideosMergeversionsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *VideosServiceAPIService) PostVideosMergeversionsExecute(r ApiPostVideosMergeversionsRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "VideosServiceAPIService.PostVideosMergeversions")

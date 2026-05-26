@@ -19,17 +19,16 @@ import (
 	"strings"
 )
 
-
 type CollectionServiceAPI interface {
 
 	/*
-	DeleteCollectionsByIdItems Removes items from a collection
+		DeleteCollectionsByIdItems Removes items from a collection
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiDeleteCollectionsByIdItemsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id
+		@return ApiDeleteCollectionsByIdItemsRequest
 	*/
 	DeleteCollectionsByIdItems(ctx context.Context, id string) ApiDeleteCollectionsByIdItemsRequest
 
@@ -37,12 +36,12 @@ type CollectionServiceAPI interface {
 	DeleteCollectionsByIdItemsExecute(r ApiDeleteCollectionsByIdItemsRequest) (*http.Response, error)
 
 	/*
-	PostCollections Creates a new collection
+		PostCollections Creates a new collection
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostCollectionsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostCollectionsRequest
 	*/
 	PostCollections(ctx context.Context) ApiPostCollectionsRequest
 
@@ -51,13 +50,13 @@ type CollectionServiceAPI interface {
 	PostCollectionsExecute(r ApiPostCollectionsRequest) (*CollectionsCollectionCreationResult, *http.Response, error)
 
 	/*
-	PostCollectionsByIdItems Adds items to a collection
+		PostCollectionsByIdItems Adds items to a collection
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiPostCollectionsByIdItemsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id
+		@return ApiPostCollectionsByIdItemsRequest
 	*/
 	PostCollectionsByIdItems(ctx context.Context, id string) ApiPostCollectionsByIdItemsRequest
 
@@ -65,13 +64,13 @@ type CollectionServiceAPI interface {
 	PostCollectionsByIdItemsExecute(r ApiPostCollectionsByIdItemsRequest) (*http.Response, error)
 
 	/*
-	PostCollectionsByIdItemsDelete Removes items from a collection
+		PostCollectionsByIdItemsDelete Removes items from a collection
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiPostCollectionsByIdItemsDeleteRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id
+		@return ApiPostCollectionsByIdItemsDeleteRequest
 	*/
 	PostCollectionsByIdItemsDelete(ctx context.Context, id string) ApiPostCollectionsByIdItemsDeleteRequest
 
@@ -83,10 +82,10 @@ type CollectionServiceAPI interface {
 type CollectionServiceAPIService service
 
 type ApiDeleteCollectionsByIdItemsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService CollectionServiceAPI
-	ids *string
-	id string
+	ids        *string
+	id         string
 }
 
 // Item id, comma delimited
@@ -104,24 +103,24 @@ DeleteCollectionsByIdItems Removes items from a collection
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id
- @return ApiDeleteCollectionsByIdItemsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id
+	@return ApiDeleteCollectionsByIdItemsRequest
 */
 func (a *CollectionServiceAPIService) DeleteCollectionsByIdItems(ctx context.Context, id string) ApiDeleteCollectionsByIdItemsRequest {
 	return ApiDeleteCollectionsByIdItemsRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *CollectionServiceAPIService) DeleteCollectionsByIdItemsExecute(r ApiDeleteCollectionsByIdItemsRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodDelete
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodDelete
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CollectionServiceAPIService.DeleteCollectionsByIdItems")
@@ -200,12 +199,12 @@ func (a *CollectionServiceAPIService) DeleteCollectionsByIdItemsExecute(r ApiDel
 }
 
 type ApiPostCollectionsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService CollectionServiceAPI
-	isLocked *bool
-	name *string
-	parentId *string
-	ids *string
+	isLocked   *bool
+	name       *string
+	parentId   *string
+	ids        *string
 }
 
 // Whether or not to lock the new collection.
@@ -241,24 +240,25 @@ PostCollections Creates a new collection
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostCollectionsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostCollectionsRequest
 */
 func (a *CollectionServiceAPIService) PostCollections(ctx context.Context) ApiPostCollectionsRequest {
 	return ApiPostCollectionsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return CollectionsCollectionCreationResult
+//
+//	@return CollectionsCollectionCreationResult
 func (a *CollectionServiceAPIService) PostCollectionsExecute(r ApiPostCollectionsRequest) (*CollectionsCollectionCreationResult, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *CollectionsCollectionCreationResult
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *CollectionsCollectionCreationResult
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CollectionServiceAPIService.PostCollections")
@@ -353,10 +353,10 @@ func (a *CollectionServiceAPIService) PostCollectionsExecute(r ApiPostCollection
 }
 
 type ApiPostCollectionsByIdItemsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService CollectionServiceAPI
-	ids *string
-	id string
+	ids        *string
+	id         string
 }
 
 // Item id, comma delimited
@@ -374,24 +374,24 @@ PostCollectionsByIdItems Adds items to a collection
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id
- @return ApiPostCollectionsByIdItemsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id
+	@return ApiPostCollectionsByIdItemsRequest
 */
 func (a *CollectionServiceAPIService) PostCollectionsByIdItems(ctx context.Context, id string) ApiPostCollectionsByIdItemsRequest {
 	return ApiPostCollectionsByIdItemsRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *CollectionServiceAPIService) PostCollectionsByIdItemsExecute(r ApiPostCollectionsByIdItemsRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CollectionServiceAPIService.PostCollectionsByIdItems")
@@ -470,10 +470,10 @@ func (a *CollectionServiceAPIService) PostCollectionsByIdItemsExecute(r ApiPostC
 }
 
 type ApiPostCollectionsByIdItemsDeleteRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService CollectionServiceAPI
-	ids *string
-	id string
+	ids        *string
+	id         string
 }
 
 // Item id, comma delimited
@@ -491,24 +491,24 @@ PostCollectionsByIdItemsDelete Removes items from a collection
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id
- @return ApiPostCollectionsByIdItemsDeleteRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id
+	@return ApiPostCollectionsByIdItemsDeleteRequest
 */
 func (a *CollectionServiceAPIService) PostCollectionsByIdItemsDelete(ctx context.Context, id string) ApiPostCollectionsByIdItemsDeleteRequest {
 	return ApiPostCollectionsByIdItemsDeleteRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *CollectionServiceAPIService) PostCollectionsByIdItemsDeleteExecute(r ApiPostCollectionsByIdItemsDeleteRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CollectionServiceAPIService.PostCollectionsByIdItemsDelete")

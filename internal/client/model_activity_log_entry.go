@@ -20,16 +20,16 @@ var _ MappedNullable = &ActivityLogEntry{}
 
 // ActivityLogEntry struct for ActivityLogEntry
 type ActivityLogEntry struct {
-	Id *int64 `json:"Id,omitempty"`
-	Name *string `json:"Name,omitempty"`
-	Overview *string `json:"Overview,omitempty"`
-	ShortOverview *string `json:"ShortOverview,omitempty"`
-	Type *string `json:"Type,omitempty"`
-	ItemId *string `json:"ItemId,omitempty"`
-	Date *time.Time `json:"Date,omitempty"`
-	UserId *string `json:"UserId,omitempty"`
-	UserPrimaryImageTag *string `json:"UserPrimaryImageTag,omitempty"`
-	Severity *LoggingLogSeverity `json:"Severity,omitempty"`
+	Id                  *int64              `json:"Id,omitempty"`
+	Name                *string             `json:"Name,omitempty"`
+	Overview            *string             `json:"Overview,omitempty"`
+	ShortOverview       *string             `json:"ShortOverview,omitempty"`
+	Type                *string             `json:"Type,omitempty"`
+	ItemId              *string             `json:"ItemId,omitempty"`
+	Date                *time.Time          `json:"Date,omitempty"`
+	UserId              *string             `json:"UserId,omitempty"`
+	UserPrimaryImageTag *string             `json:"UserPrimaryImageTag,omitempty"`
+	Severity            *LoggingLogSeverity `json:"Severity,omitempty"`
 }
 
 // NewActivityLogEntry instantiates a new ActivityLogEntry object
@@ -370,7 +370,7 @@ func (o *ActivityLogEntry) SetSeverity(v LoggingLogSeverity) {
 }
 
 func (o ActivityLogEntry) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -447,5 +447,3 @@ func (v *NullableActivityLogEntry) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

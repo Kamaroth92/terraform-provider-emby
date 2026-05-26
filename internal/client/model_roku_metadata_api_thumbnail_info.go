@@ -19,8 +19,8 @@ var _ MappedNullable = &RokuMetadataApiThumbnailInfo{}
 
 // RokuMetadataApiThumbnailInfo struct for RokuMetadataApiThumbnailInfo
 type RokuMetadataApiThumbnailInfo struct {
-	PositionTicks *int64 `json:"PositionTicks,omitempty"`
-	ImageTag *string `json:"ImageTag,omitempty"`
+	PositionTicks *int64  `json:"PositionTicks,omitempty"`
+	ImageTag      *string `json:"ImageTag,omitempty"`
 }
 
 // NewRokuMetadataApiThumbnailInfo instantiates a new RokuMetadataApiThumbnailInfo object
@@ -105,7 +105,7 @@ func (o *RokuMetadataApiThumbnailInfo) SetImageTag(v string) {
 }
 
 func (o RokuMetadataApiThumbnailInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -158,5 +158,3 @@ func (v *NullableRokuMetadataApiThumbnailInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

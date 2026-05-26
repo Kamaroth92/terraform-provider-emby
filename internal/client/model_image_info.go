@@ -19,13 +19,13 @@ var _ MappedNullable = &ImageInfo{}
 
 // ImageInfo struct for ImageInfo
 type ImageInfo struct {
-	ImageType *ImageType `json:"ImageType,omitempty"`
+	ImageType  *ImageType    `json:"ImageType,omitempty"`
 	ImageIndex NullableInt32 `json:"ImageIndex,omitempty"`
-	Path *string `json:"Path,omitempty"`
-	Filename *string `json:"Filename,omitempty"`
-	Height NullableInt32 `json:"Height,omitempty"`
-	Width NullableInt32 `json:"Width,omitempty"`
-	Size *int64 `json:"Size,omitempty"`
+	Path       *string       `json:"Path,omitempty"`
+	Filename   *string       `json:"Filename,omitempty"`
+	Height     NullableInt32 `json:"Height,omitempty"`
+	Width      NullableInt32 `json:"Width,omitempty"`
+	Size       *int64        `json:"Size,omitempty"`
 }
 
 // NewImageInfo instantiates a new ImageInfo object
@@ -109,6 +109,7 @@ func (o *ImageInfo) HasImageIndex() bool {
 func (o *ImageInfo) SetImageIndex(v int32) {
 	o.ImageIndex.Set(&v)
 }
+
 // SetImageIndexNil sets the value for ImageIndex to be an explicit nil
 func (o *ImageInfo) SetImageIndexNil() {
 	o.ImageIndex.Set(nil)
@@ -215,6 +216,7 @@ func (o *ImageInfo) HasHeight() bool {
 func (o *ImageInfo) SetHeight(v int32) {
 	o.Height.Set(&v)
 }
+
 // SetHeightNil sets the value for Height to be an explicit nil
 func (o *ImageInfo) SetHeightNil() {
 	o.Height.Set(nil)
@@ -257,6 +259,7 @@ func (o *ImageInfo) HasWidth() bool {
 func (o *ImageInfo) SetWidth(v int32) {
 	o.Width.Set(&v)
 }
+
 // SetWidthNil sets the value for Width to be an explicit nil
 func (o *ImageInfo) SetWidthNil() {
 	o.Width.Set(nil)
@@ -300,7 +303,7 @@ func (o *ImageInfo) SetSize(v int64) {
 }
 
 func (o ImageInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -368,5 +371,3 @@ func (v *NullableImageInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

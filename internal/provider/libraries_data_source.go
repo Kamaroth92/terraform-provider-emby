@@ -1,3 +1,5 @@
+// Copyright (c) HashiCorp, Inc.
+
 package provider
 
 import (
@@ -21,6 +23,7 @@ type LibrariesDataSourceModel struct {
 
 type LibraryModel struct {
 	Id             types.String   `tfsdk:"id"`
+	ItemId         types.String   `tfsdk:"item_id"`
 	Name           types.String   `tfsdk:"name"`
 	CollectionType types.String   `tfsdk:"collection_type"`
 	Locations      []types.String `tfsdk:"locations"`
@@ -46,8 +49,10 @@ func (d *LibrariesDataSource) Schema(_ context.Context, _ datasource.SchemaReque
 						"id": schema.StringAttribute{
 							Computed:            true,
 							MarkdownDescription: "The library ID.",
-						},
-						"name": schema.StringAttribute{
+						}, "item_id": schema.StringAttribute{
+							Computed:            true,
+							MarkdownDescription: "The internal item ID used for policy bindings (e.g. EnabledFolders).",
+						}, "name": schema.StringAttribute{
 							Computed:            true,
 							MarkdownDescription: "The library name.",
 						},
@@ -103,6 +108,7 @@ func (d *LibrariesDataSource) Read(ctx context.Context, _ datasource.ReadRequest
 		libraryName := folder.GetName()
 		state.Libraries[libraryName] = LibraryModel{
 			Id:             types.StringValue(folder.GetId()),
+			ItemId:         types.StringValue(folder.GetItemId()),
 			Name:           types.StringValue(libraryName),
 			CollectionType: types.StringValue(folder.GetCollectionType()),
 			Locations:      locations,

@@ -20,26 +20,26 @@ type TranscodingVpStepTypes string
 
 // List of Transcoding.VpStepTypes
 const (
-	TRANSCODINGVPSTEPTYPES_DECODER TranscodingVpStepTypes = "Decoder"
-	TRANSCODINGVPSTEPTYPES_ENCODER TranscodingVpStepTypes = "Encoder"
-	TRANSCODINGVPSTEPTYPES_SCALING TranscodingVpStepTypes = "Scaling"
-	TRANSCODINGVPSTEPTYPES_DEINTERLACE TranscodingVpStepTypes = "Deinterlace"
-	TRANSCODINGVPSTEPTYPES_SUBTITLE_OVERLAY TranscodingVpStepTypes = "SubtitleOverlay"
-	TRANSCODINGVPSTEPTYPES_TONE_MAPPING TranscodingVpStepTypes = "ToneMapping"
-	TRANSCODINGVPSTEPTYPES_COLOR_CONVERSION TranscodingVpStepTypes = "ColorConversion"
-	TRANSCODINGVPSTEPTYPES_SPLIT_CAPTIONS TranscodingVpStepTypes = "SplitCaptions"
-	TRANSCODINGVPSTEPTYPES_TEXT_SUB2_VIDEO TranscodingVpStepTypes = "TextSub2Video"
-	TRANSCODINGVPSTEPTYPES_GRAPHIC_SUB2_VIDEO TranscodingVpStepTypes = "GraphicSub2Video"
-	TRANSCODINGVPSTEPTYPES_GRAPHIC_SUB2_TEXT TranscodingVpStepTypes = "GraphicSub2Text"
-	TRANSCODINGVPSTEPTYPES_BURN_IN_TEXT_SUBS TranscodingVpStepTypes = "BurnInTextSubs"
+	TRANSCODINGVPSTEPTYPES_DECODER              TranscodingVpStepTypes = "Decoder"
+	TRANSCODINGVPSTEPTYPES_ENCODER              TranscodingVpStepTypes = "Encoder"
+	TRANSCODINGVPSTEPTYPES_SCALING              TranscodingVpStepTypes = "Scaling"
+	TRANSCODINGVPSTEPTYPES_DEINTERLACE          TranscodingVpStepTypes = "Deinterlace"
+	TRANSCODINGVPSTEPTYPES_SUBTITLE_OVERLAY     TranscodingVpStepTypes = "SubtitleOverlay"
+	TRANSCODINGVPSTEPTYPES_TONE_MAPPING         TranscodingVpStepTypes = "ToneMapping"
+	TRANSCODINGVPSTEPTYPES_COLOR_CONVERSION     TranscodingVpStepTypes = "ColorConversion"
+	TRANSCODINGVPSTEPTYPES_SPLIT_CAPTIONS       TranscodingVpStepTypes = "SplitCaptions"
+	TRANSCODINGVPSTEPTYPES_TEXT_SUB2_VIDEO      TranscodingVpStepTypes = "TextSub2Video"
+	TRANSCODINGVPSTEPTYPES_GRAPHIC_SUB2_VIDEO   TranscodingVpStepTypes = "GraphicSub2Video"
+	TRANSCODINGVPSTEPTYPES_GRAPHIC_SUB2_TEXT    TranscodingVpStepTypes = "GraphicSub2Text"
+	TRANSCODINGVPSTEPTYPES_BURN_IN_TEXT_SUBS    TranscodingVpStepTypes = "BurnInTextSubs"
 	TRANSCODINGVPSTEPTYPES_BURN_IN_GRAPHIC_SUBS TranscodingVpStepTypes = "BurnInGraphicSubs"
-	TRANSCODINGVPSTEPTYPES_SCALE_SUBS TranscodingVpStepTypes = "ScaleSubs"
-	TRANSCODINGVPSTEPTYPES_TEXT_MOD TranscodingVpStepTypes = "TextMod"
-	TRANSCODINGVPSTEPTYPES_CENSOR TranscodingVpStepTypes = "Censor"
-	TRANSCODINGVPSTEPTYPES_SHOW_SPEAKER TranscodingVpStepTypes = "ShowSpeaker"
-	TRANSCODINGVPSTEPTYPES_STRIP_STYLES TranscodingVpStepTypes = "StripStyles"
-	TRANSCODINGVPSTEPTYPES_CONNECT_TO TranscodingVpStepTypes = "ConnectTo"
-	TRANSCODINGVPSTEPTYPES_ROTATE TranscodingVpStepTypes = "Rotate"
+	TRANSCODINGVPSTEPTYPES_SCALE_SUBS           TranscodingVpStepTypes = "ScaleSubs"
+	TRANSCODINGVPSTEPTYPES_TEXT_MOD             TranscodingVpStepTypes = "TextMod"
+	TRANSCODINGVPSTEPTYPES_CENSOR               TranscodingVpStepTypes = "Censor"
+	TRANSCODINGVPSTEPTYPES_SHOW_SPEAKER         TranscodingVpStepTypes = "ShowSpeaker"
+	TRANSCODINGVPSTEPTYPES_STRIP_STYLES         TranscodingVpStepTypes = "StripStyles"
+	TRANSCODINGVPSTEPTYPES_CONNECT_TO           TranscodingVpStepTypes = "ConnectTo"
+	TRANSCODINGVPSTEPTYPES_ROTATE               TranscodingVpStepTypes = "Rotate"
 )
 
 // All allowed values of TranscodingVpStepTypes enum
@@ -144,4 +144,3 @@ func (v *NullableTranscodingVpStepTypes) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

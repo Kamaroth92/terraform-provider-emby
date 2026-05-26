@@ -20,19 +20,19 @@ type SecondaryFrameworks string
 
 // List of SecondaryFrameworks
 const (
-	SECONDARYFRAMEWORKS_UNKNOWN SecondaryFrameworks = "Unknown"
-	SECONDARYFRAMEWORKS_NONE SecondaryFrameworks = "None"
-	SECONDARYFRAMEWORKS_AMD_AMF SecondaryFrameworks = "AmdAmf"
-	SECONDARYFRAMEWORKS_MEDIA_CODEC SecondaryFrameworks = "MediaCodec"
-	SECONDARYFRAMEWORKS_NV_ENC_DEC SecondaryFrameworks = "NvEncDec"
-	SECONDARYFRAMEWORKS_OPEN_MAX SecondaryFrameworks = "OpenMax"
-	SECONDARYFRAMEWORKS_QUICK_SYNC SecondaryFrameworks = "QuickSync"
-	SECONDARYFRAMEWORKS_VA_API SecondaryFrameworks = "VaApi"
-	SECONDARYFRAMEWORKS_V4_L2 SecondaryFrameworks = "V4L2"
-	SECONDARYFRAMEWORKS_DX_VA SecondaryFrameworks = "DxVa"
-	SECONDARYFRAMEWORKS_D3D11VA SecondaryFrameworks = "D3d11va"
+	SECONDARYFRAMEWORKS_UNKNOWN       SecondaryFrameworks = "Unknown"
+	SECONDARYFRAMEWORKS_NONE          SecondaryFrameworks = "None"
+	SECONDARYFRAMEWORKS_AMD_AMF       SecondaryFrameworks = "AmdAmf"
+	SECONDARYFRAMEWORKS_MEDIA_CODEC   SecondaryFrameworks = "MediaCodec"
+	SECONDARYFRAMEWORKS_NV_ENC_DEC    SecondaryFrameworks = "NvEncDec"
+	SECONDARYFRAMEWORKS_OPEN_MAX      SecondaryFrameworks = "OpenMax"
+	SECONDARYFRAMEWORKS_QUICK_SYNC    SecondaryFrameworks = "QuickSync"
+	SECONDARYFRAMEWORKS_VA_API        SecondaryFrameworks = "VaApi"
+	SECONDARYFRAMEWORKS_V4_L2         SecondaryFrameworks = "V4L2"
+	SECONDARYFRAMEWORKS_DX_VA         SecondaryFrameworks = "DxVa"
+	SECONDARYFRAMEWORKS_D3D11VA       SecondaryFrameworks = "D3d11va"
 	SECONDARYFRAMEWORKS_VIDEO_TOOLBOX SecondaryFrameworks = "VideoToolbox"
-	SECONDARYFRAMEWORKS_MMAL SecondaryFrameworks = "Mmal"
+	SECONDARYFRAMEWORKS_MMAL          SecondaryFrameworks = "Mmal"
 )
 
 // All allowed values of SecondaryFrameworks enum
@@ -130,4 +130,3 @@ func (v *NullableSecondaryFrameworks) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

@@ -19,23 +19,23 @@ var _ MappedNullable = &UserConfiguration{}
 
 // UserConfiguration struct for UserConfiguration
 type UserConfiguration struct {
-	AudioLanguagePreference *string `json:"AudioLanguagePreference,omitempty"`
-	PlayDefaultAudioTrack *bool `json:"PlayDefaultAudioTrack,omitempty"`
-	SubtitleLanguagePreference *string `json:"SubtitleLanguagePreference,omitempty"`
-	ProfilePin *string `json:"ProfilePin,omitempty"`
-	DisplayMissingEpisodes *bool `json:"DisplayMissingEpisodes,omitempty"`
-	SubtitleMode *SubtitlePlaybackMode `json:"SubtitleMode,omitempty"`
-	OrderedViews []string `json:"OrderedViews,omitempty"`
-	LatestItemsExcludes []string `json:"LatestItemsExcludes,omitempty"`
-	MyMediaExcludes []string `json:"MyMediaExcludes,omitempty"`
-	HidePlayedInLatest *bool `json:"HidePlayedInLatest,omitempty"`
-	HidePlayedInMoreLikeThis *bool `json:"HidePlayedInMoreLikeThis,omitempty"`
-	HidePlayedInSuggestions *bool `json:"HidePlayedInSuggestions,omitempty"`
-	RememberAudioSelections *bool `json:"RememberAudioSelections,omitempty"`
-	RememberSubtitleSelections *bool `json:"RememberSubtitleSelections,omitempty"`
-	EnableNextEpisodeAutoPlay *bool `json:"EnableNextEpisodeAutoPlay,omitempty"`
-	ResumeRewindSeconds *int32 `json:"ResumeRewindSeconds,omitempty"`
-	IntroSkipMode *SegmentSkipMode `json:"IntroSkipMode,omitempty"`
+	AudioLanguagePreference    *string               `json:"AudioLanguagePreference,omitempty"`
+	PlayDefaultAudioTrack      *bool                 `json:"PlayDefaultAudioTrack,omitempty"`
+	SubtitleLanguagePreference *string               `json:"SubtitleLanguagePreference,omitempty"`
+	ProfilePin                 *string               `json:"ProfilePin,omitempty"`
+	DisplayMissingEpisodes     *bool                 `json:"DisplayMissingEpisodes,omitempty"`
+	SubtitleMode               *SubtitlePlaybackMode `json:"SubtitleMode,omitempty"`
+	OrderedViews               []string              `json:"OrderedViews,omitempty"`
+	LatestItemsExcludes        []string              `json:"LatestItemsExcludes,omitempty"`
+	MyMediaExcludes            []string              `json:"MyMediaExcludes,omitempty"`
+	HidePlayedInLatest         *bool                 `json:"HidePlayedInLatest,omitempty"`
+	HidePlayedInMoreLikeThis   *bool                 `json:"HidePlayedInMoreLikeThis,omitempty"`
+	HidePlayedInSuggestions    *bool                 `json:"HidePlayedInSuggestions,omitempty"`
+	RememberAudioSelections    *bool                 `json:"RememberAudioSelections,omitempty"`
+	RememberSubtitleSelections *bool                 `json:"RememberSubtitleSelections,omitempty"`
+	EnableNextEpisodeAutoPlay  *bool                 `json:"EnableNextEpisodeAutoPlay,omitempty"`
+	ResumeRewindSeconds        *int32                `json:"ResumeRewindSeconds,omitempty"`
+	IntroSkipMode              *SegmentSkipMode      `json:"IntroSkipMode,omitempty"`
 	// Deprecated
 	EnableLocalPassword *bool `json:"EnableLocalPassword,omitempty"`
 }
@@ -637,7 +637,7 @@ func (o *UserConfiguration) SetEnableLocalPassword(v bool) {
 }
 
 func (o UserConfiguration) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -738,5 +738,3 @@ func (v *NullableUserConfiguration) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

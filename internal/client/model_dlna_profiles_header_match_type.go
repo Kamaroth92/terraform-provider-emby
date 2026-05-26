@@ -20,8 +20,8 @@ type DlnaProfilesHeaderMatchType string
 
 // List of Dlna.Profiles.HeaderMatchType
 const (
-	DLNAPROFILESHEADERMATCHTYPE_EQUALS DlnaProfilesHeaderMatchType = "Equals"
-	DLNAPROFILESHEADERMATCHTYPE_REGEX DlnaProfilesHeaderMatchType = "Regex"
+	DLNAPROFILESHEADERMATCHTYPE_EQUALS    DlnaProfilesHeaderMatchType = "Equals"
+	DLNAPROFILESHEADERMATCHTYPE_REGEX     DlnaProfilesHeaderMatchType = "Regex"
 	DLNAPROFILESHEADERMATCHTYPE_SUBSTRING DlnaProfilesHeaderMatchType = "Substring"
 )
 
@@ -110,4 +110,3 @@ func (v *NullableDlnaProfilesHeaderMatchType) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

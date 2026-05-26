@@ -20,12 +20,12 @@ type AttributesValueCondition string
 
 // List of Attributes.ValueCondition
 const (
-	ATTRIBUTESVALUECONDITION_IS_EQUAL AttributesValueCondition = "IsEqual"
-	ATTRIBUTESVALUECONDITION_IS_NOT_EQUAL AttributesValueCondition = "IsNotEqual"
-	ATTRIBUTESVALUECONDITION_IS_GREATER AttributesValueCondition = "IsGreater"
+	ATTRIBUTESVALUECONDITION_IS_EQUAL            AttributesValueCondition = "IsEqual"
+	ATTRIBUTESVALUECONDITION_IS_NOT_EQUAL        AttributesValueCondition = "IsNotEqual"
+	ATTRIBUTESVALUECONDITION_IS_GREATER          AttributesValueCondition = "IsGreater"
 	ATTRIBUTESVALUECONDITION_IS_GREATER_OR_EQUAL AttributesValueCondition = "IsGreaterOrEqual"
-	ATTRIBUTESVALUECONDITION_IS_LESS AttributesValueCondition = "IsLess"
-	ATTRIBUTESVALUECONDITION_IS_LESS_OR_EQUAL AttributesValueCondition = "IsLessOrEqual"
+	ATTRIBUTESVALUECONDITION_IS_LESS             AttributesValueCondition = "IsLess"
+	ATTRIBUTESVALUECONDITION_IS_LESS_OR_EQUAL    AttributesValueCondition = "IsLessOrEqual"
 )
 
 // All allowed values of AttributesValueCondition enum
@@ -116,4 +116,3 @@ func (v *NullableAttributesValueCondition) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

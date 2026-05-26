@@ -19,12 +19,12 @@ var _ MappedNullable = &GlobalizationCultureDto{}
 
 // GlobalizationCultureDto struct for GlobalizationCultureDto
 type GlobalizationCultureDto struct {
-	Name *string `json:"Name,omitempty"`
-	DisplayName *string `json:"DisplayName,omitempty"`
-	TwoLetterISOLanguageName *string `json:"TwoLetterISOLanguageName,omitempty"`
-	ThreeLetterISOLanguageName *string `json:"ThreeLetterISOLanguageName,omitempty"`
+	Name                        *string  `json:"Name,omitempty"`
+	DisplayName                 *string  `json:"DisplayName,omitempty"`
+	TwoLetterISOLanguageName    *string  `json:"TwoLetterISOLanguageName,omitempty"`
+	ThreeLetterISOLanguageName  *string  `json:"ThreeLetterISOLanguageName,omitempty"`
 	ThreeLetterISOLanguageNames []string `json:"ThreeLetterISOLanguageNames,omitempty"`
-	TwoLetterISOLanguageNames []string `json:"TwoLetterISOLanguageNames,omitempty"`
+	TwoLetterISOLanguageNames   []string `json:"TwoLetterISOLanguageNames,omitempty"`
 }
 
 // NewGlobalizationCultureDto instantiates a new GlobalizationCultureDto object
@@ -237,7 +237,7 @@ func (o *GlobalizationCultureDto) SetTwoLetterISOLanguageNames(v []string) {
 }
 
 func (o GlobalizationCultureDto) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -302,5 +302,3 @@ func (v *NullableGlobalizationCultureDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

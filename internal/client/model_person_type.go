@@ -20,14 +20,14 @@ type PersonType string
 
 // List of PersonType
 const (
-	PERSONTYPE_ACTOR PersonType = "Actor"
-	PERSONTYPE_DIRECTOR PersonType = "Director"
-	PERSONTYPE_WRITER PersonType = "Writer"
-	PERSONTYPE_PRODUCER PersonType = "Producer"
+	PERSONTYPE_ACTOR      PersonType = "Actor"
+	PERSONTYPE_DIRECTOR   PersonType = "Director"
+	PERSONTYPE_WRITER     PersonType = "Writer"
+	PERSONTYPE_PRODUCER   PersonType = "Producer"
 	PERSONTYPE_GUEST_STAR PersonType = "GuestStar"
-	PERSONTYPE_COMPOSER PersonType = "Composer"
-	PERSONTYPE_CONDUCTOR PersonType = "Conductor"
-	PERSONTYPE_LYRICIST PersonType = "Lyricist"
+	PERSONTYPE_COMPOSER   PersonType = "Composer"
+	PERSONTYPE_CONDUCTOR  PersonType = "Conductor"
+	PERSONTYPE_LYRICIST   PersonType = "Lyricist"
 )
 
 // All allowed values of PersonType enum
@@ -120,4 +120,3 @@ func (v *NullablePersonType) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

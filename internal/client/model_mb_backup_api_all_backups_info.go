@@ -19,8 +19,8 @@ var _ MappedNullable = &MBBackupApiAllBackupsInfo{}
 
 // MBBackupApiAllBackupsInfo struct for MBBackupApiAllBackupsInfo
 type MBBackupApiAllBackupsInfo struct {
-	FullBackupInfo *MBBackupBackupInfo `json:"FullBackupInfo,omitempty"`
-	LightBackups []MBBackupBackupInfo `json:"LightBackups,omitempty"`
+	FullBackupInfo *MBBackupBackupInfo  `json:"FullBackupInfo,omitempty"`
+	LightBackups   []MBBackupBackupInfo `json:"LightBackups,omitempty"`
 }
 
 // NewMBBackupApiAllBackupsInfo instantiates a new MBBackupApiAllBackupsInfo object
@@ -105,7 +105,7 @@ func (o *MBBackupApiAllBackupsInfo) SetLightBackups(v []MBBackupBackupInfo) {
 }
 
 func (o MBBackupApiAllBackupsInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -158,5 +158,3 @@ func (v *NullableMBBackupApiAllBackupsInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

@@ -20,29 +20,29 @@ var _ MappedNullable = &PackageInfo{}
 
 // PackageInfo struct for PackageInfo
 type PackageInfo struct {
-	Id *string `json:"id,omitempty"`
-	Name *string `json:"name,omitempty"`
-	ShortDescription *string `json:"shortDescription,omitempty"`
-	Overview *string `json:"overview,omitempty"`
-	IsPremium *bool `json:"isPremium,omitempty"`
-	Adult *bool `json:"adult,omitempty"`
-	RichDescUrl *string `json:"richDescUrl,omitempty"`
-	ThumbImage *string `json:"thumbImage,omitempty"`
-	PreviewImage *string `json:"previewImage,omitempty"`
-	Type *string `json:"type,omitempty"`
-	TargetFilename *string `json:"targetFilename,omitempty"`
-	Owner *string `json:"owner,omitempty"`
-	Category *string `json:"category,omitempty"`
-	TileColor *string `json:"tileColor,omitempty"`
-	FeatureId *string `json:"featureId,omitempty"`
-	Price NullableFloat32 `json:"price,omitempty"`
-	TargetSystem *PackageTargetSystem `json:"targetSystem,omitempty"`
-	Guid *string `json:"guid,omitempty"`
-	IsRegistered *bool `json:"isRegistered,omitempty"`
-	ExpDate *time.Time `json:"expDate,omitempty"`
-	Versions []PackageVersionInfo `json:"versions,omitempty"`
-	EnableInAppStore *bool `json:"enableInAppStore,omitempty"`
-	Installs *int32 `json:"installs,omitempty"`
+	Id               *string              `json:"id,omitempty"`
+	Name             *string              `json:"name,omitempty"`
+	ShortDescription *string              `json:"shortDescription,omitempty"`
+	Overview         *string              `json:"overview,omitempty"`
+	IsPremium        *bool                `json:"isPremium,omitempty"`
+	Adult            *bool                `json:"adult,omitempty"`
+	RichDescUrl      *string              `json:"richDescUrl,omitempty"`
+	ThumbImage       *string              `json:"thumbImage,omitempty"`
+	PreviewImage     *string              `json:"previewImage,omitempty"`
+	Type             *string              `json:"type,omitempty"`
+	TargetFilename   *string              `json:"targetFilename,omitempty"`
+	Owner            *string              `json:"owner,omitempty"`
+	Category         *string              `json:"category,omitempty"`
+	TileColor        *string              `json:"tileColor,omitempty"`
+	FeatureId        *string              `json:"featureId,omitempty"`
+	Price            NullableFloat32      `json:"price,omitempty"`
+	TargetSystem     *PackageTargetSystem `json:"targetSystem,omitempty"`
+	Guid             *string              `json:"guid,omitempty"`
+	IsRegistered     *bool                `json:"isRegistered,omitempty"`
+	ExpDate          *time.Time           `json:"expDate,omitempty"`
+	Versions         []PackageVersionInfo `json:"versions,omitempty"`
+	EnableInAppStore *bool                `json:"enableInAppStore,omitempty"`
+	Installs         *int32               `json:"installs,omitempty"`
 }
 
 // NewPackageInfo instantiates a new PackageInfo object
@@ -574,6 +574,7 @@ func (o *PackageInfo) HasPrice() bool {
 func (o *PackageInfo) SetPrice(v float32) {
 	o.Price.Set(&v)
 }
+
 // SetPriceNil sets the value for Price to be an explicit nil
 func (o *PackageInfo) SetPriceNil() {
 	o.Price.Set(nil)
@@ -809,7 +810,7 @@ func (o *PackageInfo) SetInstalls(v int32) {
 }
 
 func (o PackageInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -925,5 +926,3 @@ func (v *NullablePackageInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

@@ -19,13 +19,13 @@ var _ MappedNullable = &PublicSystemInfo{}
 
 // PublicSystemInfo struct for PublicSystemInfo
 type PublicSystemInfo struct {
-	LocalAddress *string `json:"LocalAddress,omitempty"`
-	LocalAddresses []string `json:"LocalAddresses,omitempty"`
-	WanAddress *string `json:"WanAddress,omitempty"`
+	LocalAddress    *string  `json:"LocalAddress,omitempty"`
+	LocalAddresses  []string `json:"LocalAddresses,omitempty"`
+	WanAddress      *string  `json:"WanAddress,omitempty"`
 	RemoteAddresses []string `json:"RemoteAddresses,omitempty"`
-	ServerName *string `json:"ServerName,omitempty"`
-	Version *string `json:"Version,omitempty"`
-	Id *string `json:"Id,omitempty"`
+	ServerName      *string  `json:"ServerName,omitempty"`
+	Version         *string  `json:"Version,omitempty"`
+	Id              *string  `json:"Id,omitempty"`
 }
 
 // NewPublicSystemInfo instantiates a new PublicSystemInfo object
@@ -270,7 +270,7 @@ func (o *PublicSystemInfo) SetId(v string) {
 }
 
 func (o PublicSystemInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -338,5 +338,3 @@ func (v *NullablePublicSystemInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

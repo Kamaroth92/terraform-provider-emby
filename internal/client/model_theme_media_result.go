@@ -19,9 +19,9 @@ var _ MappedNullable = &ThemeMediaResult{}
 
 // ThemeMediaResult struct for ThemeMediaResult
 type ThemeMediaResult struct {
-	OwnerId *int64 `json:"OwnerId,omitempty"`
-	Items []BaseItemDto `json:"Items,omitempty"`
-	TotalRecordCount *int32 `json:"TotalRecordCount,omitempty"`
+	OwnerId          *int64        `json:"OwnerId,omitempty"`
+	Items            []BaseItemDto `json:"Items,omitempty"`
+	TotalRecordCount *int32        `json:"TotalRecordCount,omitempty"`
 }
 
 // NewThemeMediaResult instantiates a new ThemeMediaResult object
@@ -138,7 +138,7 @@ func (o *ThemeMediaResult) SetTotalRecordCount(v int32) {
 }
 
 func (o ThemeMediaResult) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -194,5 +194,3 @@ func (v *NullableThemeMediaResult) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

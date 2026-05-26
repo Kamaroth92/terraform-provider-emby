@@ -19,7 +19,7 @@ var _ MappedNullable = &PinRedeemResult{}
 
 // PinRedeemResult struct for PinRedeemResult
 type PinRedeemResult struct {
-	Success *bool `json:"Success,omitempty"`
+	Success    *bool    `json:"Success,omitempty"`
 	UsersReset []string `json:"UsersReset,omitempty"`
 }
 
@@ -105,7 +105,7 @@ func (o *PinRedeemResult) SetUsersReset(v []string) {
 }
 
 func (o PinRedeemResult) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -158,5 +158,3 @@ func (v *NullablePinRedeemResult) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

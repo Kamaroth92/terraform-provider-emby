@@ -71,6 +71,7 @@ func (o *ImagesBaseDownloadRemoteImage) HasImageIndex() bool {
 func (o *ImagesBaseDownloadRemoteImage) SetImageIndex(v int32) {
 	o.ImageIndex.Set(&v)
 }
+
 // SetImageIndexNil sets the value for ImageIndex to be an explicit nil
 func (o *ImagesBaseDownloadRemoteImage) SetImageIndexNil() {
 	o.ImageIndex.Set(nil)
@@ -82,7 +83,7 @@ func (o *ImagesBaseDownloadRemoteImage) UnsetImageIndex() {
 }
 
 func (o ImagesBaseDownloadRemoteImage) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -132,5 +133,3 @@ func (v *NullableImagesBaseDownloadRemoteImage) UnmarshalJSON(src []byte) error 
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

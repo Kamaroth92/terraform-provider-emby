@@ -19,8 +19,8 @@ var _ MappedNullable = &ActionsPostbackAction{}
 
 // ActionsPostbackAction struct for ActionsPostbackAction
 type ActionsPostbackAction struct {
-	TargetEditorId *string `json:"TargetEditorId,omitempty"`
-	PostbackCommandId *string `json:"PostbackCommandId,omitempty"`
+	TargetEditorId             *string `json:"TargetEditorId,omitempty"`
+	PostbackCommandId          *string `json:"PostbackCommandId,omitempty"`
 	CommandParameterPropertyId *string `json:"CommandParameterPropertyId,omitempty"`
 }
 
@@ -138,7 +138,7 @@ func (o *ActionsPostbackAction) SetCommandParameterPropertyId(v string) {
 }
 
 func (o ActionsPostbackAction) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -194,5 +194,3 @@ func (v *NullableActionsPostbackAction) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

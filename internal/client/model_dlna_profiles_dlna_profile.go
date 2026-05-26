@@ -19,46 +19,46 @@ var _ MappedNullable = &DlnaProfilesDlnaProfile{}
 
 // DlnaProfilesDlnaProfile struct for DlnaProfilesDlnaProfile
 type DlnaProfilesDlnaProfile struct {
-	Type *DlnaProfilesDeviceProfileType `json:"Type,omitempty"`
-	Path *string `json:"Path,omitempty"`
-	UserId *string `json:"UserId,omitempty"`
-	AlbumArtPn *string `json:"AlbumArtPn,omitempty"`
-	MaxAlbumArtWidth *int32 `json:"MaxAlbumArtWidth,omitempty"`
-	MaxAlbumArtHeight *int32 `json:"MaxAlbumArtHeight,omitempty"`
-	MaxIconWidth NullableInt32 `json:"MaxIconWidth,omitempty"`
-	MaxIconHeight NullableInt32 `json:"MaxIconHeight,omitempty"`
-	FriendlyName *string `json:"FriendlyName,omitempty"`
-	Manufacturer *string `json:"Manufacturer,omitempty"`
-	ManufacturerUrl *string `json:"ManufacturerUrl,omitempty"`
-	ModelName *string `json:"ModelName,omitempty"`
-	ModelDescription *string `json:"ModelDescription,omitempty"`
-	ModelNumber *string `json:"ModelNumber,omitempty"`
-	ModelUrl *string `json:"ModelUrl,omitempty"`
-	SerialNumber *string `json:"SerialNumber,omitempty"`
-	EnableAlbumArtInDidl *bool `json:"EnableAlbumArtInDidl,omitempty"`
-	EnableSingleAlbumArtLimit *bool `json:"EnableSingleAlbumArtLimit,omitempty"`
-	EnableSingleSubtitleLimit *bool `json:"EnableSingleSubtitleLimit,omitempty"`
-	ProtocolInfo *string `json:"ProtocolInfo,omitempty"`
-	TimelineOffsetSeconds *int32 `json:"TimelineOffsetSeconds,omitempty"`
-	RequiresPlainVideoItems *bool `json:"RequiresPlainVideoItems,omitempty"`
-	RequiresPlainFolders *bool `json:"RequiresPlainFolders,omitempty"`
-	IgnoreTranscodeByteRangeRequests *bool `json:"IgnoreTranscodeByteRangeRequests,omitempty"`
-	SupportsSamsungBookmark *bool `json:"SupportsSamsungBookmark,omitempty"`
-	Identification *DlnaProfilesDeviceIdentification `json:"Identification,omitempty"`
-	ProtocolInfoDetection *DlnaProfilesProtocolInfoDetection `json:"ProtocolInfoDetection,omitempty"`
-	Name *string `json:"Name,omitempty"`
-	Id *string `json:"Id,omitempty"`
-	SupportedMediaTypes *string `json:"SupportedMediaTypes,omitempty"`
-	MaxStreamingBitrate NullableInt64 `json:"MaxStreamingBitrate,omitempty"`
-	MusicStreamingTranscodingBitrate NullableInt32 `json:"MusicStreamingTranscodingBitrate,omitempty"`
-	MaxStaticMusicBitrate NullableInt32 `json:"MaxStaticMusicBitrate,omitempty"`
-	DeclaredFeatures []string `json:"DeclaredFeatures,omitempty"`
-	DirectPlayProfiles []DirectPlayProfile `json:"DirectPlayProfiles,omitempty"`
-	TranscodingProfiles []TranscodingProfile `json:"TranscodingProfiles,omitempty"`
-	ContainerProfiles []ContainerProfile `json:"ContainerProfiles,omitempty"`
-	CodecProfiles []CodecProfile `json:"CodecProfiles,omitempty"`
-	ResponseProfiles []ResponseProfile `json:"ResponseProfiles,omitempty"`
-	SubtitleProfiles []SubtitleProfile `json:"SubtitleProfiles,omitempty"`
+	Type                             *DlnaProfilesDeviceProfileType     `json:"Type,omitempty"`
+	Path                             *string                            `json:"Path,omitempty"`
+	UserId                           *string                            `json:"UserId,omitempty"`
+	AlbumArtPn                       *string                            `json:"AlbumArtPn,omitempty"`
+	MaxAlbumArtWidth                 *int32                             `json:"MaxAlbumArtWidth,omitempty"`
+	MaxAlbumArtHeight                *int32                             `json:"MaxAlbumArtHeight,omitempty"`
+	MaxIconWidth                     NullableInt32                      `json:"MaxIconWidth,omitempty"`
+	MaxIconHeight                    NullableInt32                      `json:"MaxIconHeight,omitempty"`
+	FriendlyName                     *string                            `json:"FriendlyName,omitempty"`
+	Manufacturer                     *string                            `json:"Manufacturer,omitempty"`
+	ManufacturerUrl                  *string                            `json:"ManufacturerUrl,omitempty"`
+	ModelName                        *string                            `json:"ModelName,omitempty"`
+	ModelDescription                 *string                            `json:"ModelDescription,omitempty"`
+	ModelNumber                      *string                            `json:"ModelNumber,omitempty"`
+	ModelUrl                         *string                            `json:"ModelUrl,omitempty"`
+	SerialNumber                     *string                            `json:"SerialNumber,omitempty"`
+	EnableAlbumArtInDidl             *bool                              `json:"EnableAlbumArtInDidl,omitempty"`
+	EnableSingleAlbumArtLimit        *bool                              `json:"EnableSingleAlbumArtLimit,omitempty"`
+	EnableSingleSubtitleLimit        *bool                              `json:"EnableSingleSubtitleLimit,omitempty"`
+	ProtocolInfo                     *string                            `json:"ProtocolInfo,omitempty"`
+	TimelineOffsetSeconds            *int32                             `json:"TimelineOffsetSeconds,omitempty"`
+	RequiresPlainVideoItems          *bool                              `json:"RequiresPlainVideoItems,omitempty"`
+	RequiresPlainFolders             *bool                              `json:"RequiresPlainFolders,omitempty"`
+	IgnoreTranscodeByteRangeRequests *bool                              `json:"IgnoreTranscodeByteRangeRequests,omitempty"`
+	SupportsSamsungBookmark          *bool                              `json:"SupportsSamsungBookmark,omitempty"`
+	Identification                   *DlnaProfilesDeviceIdentification  `json:"Identification,omitempty"`
+	ProtocolInfoDetection            *DlnaProfilesProtocolInfoDetection `json:"ProtocolInfoDetection,omitempty"`
+	Name                             *string                            `json:"Name,omitempty"`
+	Id                               *string                            `json:"Id,omitempty"`
+	SupportedMediaTypes              *string                            `json:"SupportedMediaTypes,omitempty"`
+	MaxStreamingBitrate              NullableInt64                      `json:"MaxStreamingBitrate,omitempty"`
+	MusicStreamingTranscodingBitrate NullableInt32                      `json:"MusicStreamingTranscodingBitrate,omitempty"`
+	MaxStaticMusicBitrate            NullableInt32                      `json:"MaxStaticMusicBitrate,omitempty"`
+	DeclaredFeatures                 []string                           `json:"DeclaredFeatures,omitempty"`
+	DirectPlayProfiles               []DirectPlayProfile                `json:"DirectPlayProfiles,omitempty"`
+	TranscodingProfiles              []TranscodingProfile               `json:"TranscodingProfiles,omitempty"`
+	ContainerProfiles                []ContainerProfile                 `json:"ContainerProfiles,omitempty"`
+	CodecProfiles                    []CodecProfile                     `json:"CodecProfiles,omitempty"`
+	ResponseProfiles                 []ResponseProfile                  `json:"ResponseProfiles,omitempty"`
+	SubtitleProfiles                 []SubtitleProfile                  `json:"SubtitleProfiles,omitempty"`
 }
 
 // NewDlnaProfilesDlnaProfile instantiates a new DlnaProfilesDlnaProfile object
@@ -302,6 +302,7 @@ func (o *DlnaProfilesDlnaProfile) HasMaxIconWidth() bool {
 func (o *DlnaProfilesDlnaProfile) SetMaxIconWidth(v int32) {
 	o.MaxIconWidth.Set(&v)
 }
+
 // SetMaxIconWidthNil sets the value for MaxIconWidth to be an explicit nil
 func (o *DlnaProfilesDlnaProfile) SetMaxIconWidthNil() {
 	o.MaxIconWidth.Set(nil)
@@ -344,6 +345,7 @@ func (o *DlnaProfilesDlnaProfile) HasMaxIconHeight() bool {
 func (o *DlnaProfilesDlnaProfile) SetMaxIconHeight(v int32) {
 	o.MaxIconHeight.Set(&v)
 }
+
 // SetMaxIconHeightNil sets the value for MaxIconHeight to be an explicit nil
 func (o *DlnaProfilesDlnaProfile) SetMaxIconHeightNil() {
 	o.MaxIconHeight.Set(nil)
@@ -1090,6 +1092,7 @@ func (o *DlnaProfilesDlnaProfile) HasMaxStreamingBitrate() bool {
 func (o *DlnaProfilesDlnaProfile) SetMaxStreamingBitrate(v int64) {
 	o.MaxStreamingBitrate.Set(&v)
 }
+
 // SetMaxStreamingBitrateNil sets the value for MaxStreamingBitrate to be an explicit nil
 func (o *DlnaProfilesDlnaProfile) SetMaxStreamingBitrateNil() {
 	o.MaxStreamingBitrate.Set(nil)
@@ -1132,6 +1135,7 @@ func (o *DlnaProfilesDlnaProfile) HasMusicStreamingTranscodingBitrate() bool {
 func (o *DlnaProfilesDlnaProfile) SetMusicStreamingTranscodingBitrate(v int32) {
 	o.MusicStreamingTranscodingBitrate.Set(&v)
 }
+
 // SetMusicStreamingTranscodingBitrateNil sets the value for MusicStreamingTranscodingBitrate to be an explicit nil
 func (o *DlnaProfilesDlnaProfile) SetMusicStreamingTranscodingBitrateNil() {
 	o.MusicStreamingTranscodingBitrate.Set(nil)
@@ -1174,6 +1178,7 @@ func (o *DlnaProfilesDlnaProfile) HasMaxStaticMusicBitrate() bool {
 func (o *DlnaProfilesDlnaProfile) SetMaxStaticMusicBitrate(v int32) {
 	o.MaxStaticMusicBitrate.Set(&v)
 }
+
 // SetMaxStaticMusicBitrateNil sets the value for MaxStaticMusicBitrate to be an explicit nil
 func (o *DlnaProfilesDlnaProfile) SetMaxStaticMusicBitrateNil() {
 	o.MaxStaticMusicBitrate.Set(nil)
@@ -1409,7 +1414,7 @@ func (o *DlnaProfilesDlnaProfile) SetSubtitleProfiles(v []SubtitleProfile) {
 }
 
 func (o DlnaProfilesDlnaProfile) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -1576,5 +1581,3 @@ func (v *NullableDlnaProfilesDlnaProfile) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

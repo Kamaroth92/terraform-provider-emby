@@ -1,3 +1,5 @@
+// Copyright (c) HashiCorp, Inc.
+
 /*
 Emby Server REST API (BETA)
 
@@ -11,10 +13,10 @@ package embyclient
 
 import (
 	"context"
+	openapiclient "github.com/Kamaroth92/terraform-provider-emby/client"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func Test_embyclient_PackageServiceAPIService(t *testing.T) {
@@ -24,7 +26,7 @@ func Test_embyclient_PackageServiceAPIService(t *testing.T) {
 
 	t.Run("Test PackageServiceAPIService DeletePackagesInstallingById", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -37,7 +39,7 @@ func Test_embyclient_PackageServiceAPIService(t *testing.T) {
 
 	t.Run("Test PackageServiceAPIService GetPackages", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.PackageServiceAPI.GetPackages(context.Background()).Execute()
 
@@ -49,7 +51,7 @@ func Test_embyclient_PackageServiceAPIService(t *testing.T) {
 
 	t.Run("Test PackageServiceAPIService GetPackagesByName", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 
@@ -63,7 +65,7 @@ func Test_embyclient_PackageServiceAPIService(t *testing.T) {
 
 	t.Run("Test PackageServiceAPIService GetPackagesUpdates", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.PackageServiceAPI.GetPackagesUpdates(context.Background()).Execute()
 
@@ -75,7 +77,7 @@ func Test_embyclient_PackageServiceAPIService(t *testing.T) {
 
 	t.Run("Test PackageServiceAPIService PostPackagesInstalledByName", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 
@@ -88,7 +90,7 @@ func Test_embyclient_PackageServiceAPIService(t *testing.T) {
 
 	t.Run("Test PackageServiceAPIService PostPackagesInstallingByIdDelete", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 

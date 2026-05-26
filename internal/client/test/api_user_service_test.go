@@ -1,3 +1,5 @@
+// Copyright (c) HashiCorp, Inc.
+
 /*
 Emby Server REST API (BETA)
 
@@ -11,10 +13,10 @@ package embyclient
 
 import (
 	"context"
+	openapiclient "github.com/Kamaroth92/terraform-provider-emby/client"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func Test_embyclient_UserServiceAPIService(t *testing.T) {
@@ -24,7 +26,7 @@ func Test_embyclient_UserServiceAPIService(t *testing.T) {
 
 	t.Run("Test UserServiceAPIService DeleteUsersById", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -37,7 +39,7 @@ func Test_embyclient_UserServiceAPIService(t *testing.T) {
 
 	t.Run("Test UserServiceAPIService DeleteUsersByIdTrackselectionsByTracktype", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var trackType string
@@ -51,7 +53,7 @@ func Test_embyclient_UserServiceAPIService(t *testing.T) {
 
 	t.Run("Test UserServiceAPIService GetUsersById", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -65,7 +67,7 @@ func Test_embyclient_UserServiceAPIService(t *testing.T) {
 
 	t.Run("Test UserServiceAPIService GetUsersByUseridTypedsettingsByKey", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var key string
 		var userId string
@@ -79,7 +81,7 @@ func Test_embyclient_UserServiceAPIService(t *testing.T) {
 
 	t.Run("Test UserServiceAPIService GetUsersItemaccess", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.UserServiceAPI.GetUsersItemaccess(context.Background()).Execute()
 
@@ -91,7 +93,7 @@ func Test_embyclient_UserServiceAPIService(t *testing.T) {
 
 	t.Run("Test UserServiceAPIService GetUsersPrefixes", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.UserServiceAPI.GetUsersPrefixes(context.Background()).Execute()
 
@@ -103,7 +105,7 @@ func Test_embyclient_UserServiceAPIService(t *testing.T) {
 
 	t.Run("Test UserServiceAPIService GetUsersPublic", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.UserServiceAPI.GetUsersPublic(context.Background()).Execute()
 
@@ -115,7 +117,7 @@ func Test_embyclient_UserServiceAPIService(t *testing.T) {
 
 	t.Run("Test UserServiceAPIService GetUsersQuery", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.UserServiceAPI.GetUsersQuery(context.Background()).Execute()
 
@@ -127,7 +129,7 @@ func Test_embyclient_UserServiceAPIService(t *testing.T) {
 
 	t.Run("Test UserServiceAPIService PostUsersAuthenticatebyname", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.UserServiceAPI.PostUsersAuthenticatebyname(context.Background()).Execute()
 
@@ -139,7 +141,7 @@ func Test_embyclient_UserServiceAPIService(t *testing.T) {
 
 	t.Run("Test UserServiceAPIService PostUsersById", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -152,7 +154,7 @@ func Test_embyclient_UserServiceAPIService(t *testing.T) {
 
 	t.Run("Test UserServiceAPIService PostUsersByIdAuthenticate", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -166,7 +168,7 @@ func Test_embyclient_UserServiceAPIService(t *testing.T) {
 
 	t.Run("Test UserServiceAPIService PostUsersByIdConfiguration", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -179,7 +181,7 @@ func Test_embyclient_UserServiceAPIService(t *testing.T) {
 
 	t.Run("Test UserServiceAPIService PostUsersByIdConfigurationPartial", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -192,7 +194,7 @@ func Test_embyclient_UserServiceAPIService(t *testing.T) {
 
 	t.Run("Test UserServiceAPIService PostUsersByIdDelete", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -205,7 +207,7 @@ func Test_embyclient_UserServiceAPIService(t *testing.T) {
 
 	t.Run("Test UserServiceAPIService PostUsersByIdPassword", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -218,7 +220,7 @@ func Test_embyclient_UserServiceAPIService(t *testing.T) {
 
 	t.Run("Test UserServiceAPIService PostUsersByIdPolicy", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -231,7 +233,7 @@ func Test_embyclient_UserServiceAPIService(t *testing.T) {
 
 	t.Run("Test UserServiceAPIService PostUsersByIdTrackselectionsByTracktypeDelete", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var trackType string
@@ -245,7 +247,7 @@ func Test_embyclient_UserServiceAPIService(t *testing.T) {
 
 	t.Run("Test UserServiceAPIService PostUsersByUseridTypedsettingsByKey", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var userId string
 		var key string
@@ -259,7 +261,7 @@ func Test_embyclient_UserServiceAPIService(t *testing.T) {
 
 	t.Run("Test UserServiceAPIService PostUsersForgotpassword", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.UserServiceAPI.PostUsersForgotpassword(context.Background()).Execute()
 
@@ -271,7 +273,7 @@ func Test_embyclient_UserServiceAPIService(t *testing.T) {
 
 	t.Run("Test UserServiceAPIService PostUsersForgotpasswordPin", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.UserServiceAPI.PostUsersForgotpasswordPin(context.Background()).Execute()
 
@@ -283,7 +285,7 @@ func Test_embyclient_UserServiceAPIService(t *testing.T) {
 
 	t.Run("Test UserServiceAPIService PostUsersNew", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.UserServiceAPI.PostUsersNew(context.Background()).Execute()
 

@@ -19,62 +19,62 @@ var _ MappedNullable = &MediaStream{}
 
 // MediaStream struct for MediaStream
 type MediaStream struct {
-	Codec *string `json:"Codec,omitempty"`
-	CodecTag *string `json:"CodecTag,omitempty"`
-	Language *string `json:"Language,omitempty"`
-	ColorTransfer *string `json:"ColorTransfer,omitempty"`
-	ColorPrimaries *string `json:"ColorPrimaries,omitempty"`
-	ColorSpace *string `json:"ColorSpace,omitempty"`
-	Comment *string `json:"Comment,omitempty"`
+	Codec                *string       `json:"Codec,omitempty"`
+	CodecTag             *string       `json:"CodecTag,omitempty"`
+	Language             *string       `json:"Language,omitempty"`
+	ColorTransfer        *string       `json:"ColorTransfer,omitempty"`
+	ColorPrimaries       *string       `json:"ColorPrimaries,omitempty"`
+	ColorSpace           *string       `json:"ColorSpace,omitempty"`
+	Comment              *string       `json:"Comment,omitempty"`
 	StreamStartTimeTicks NullableInt64 `json:"StreamStartTimeTicks,omitempty"`
-	TimeBase *string `json:"TimeBase,omitempty"`
-	Title *string `json:"Title,omitempty"`
-	Extradata *string `json:"Extradata,omitempty"`
-	VideoRange *string `json:"VideoRange,omitempty"`
-	DisplayTitle *string `json:"DisplayTitle,omitempty"`
-	DisplayLanguage *string `json:"DisplayLanguage,omitempty"`
-	NalLengthSize *string `json:"NalLengthSize,omitempty"`
-	IsInterlaced *bool `json:"IsInterlaced,omitempty"`
+	TimeBase             *string       `json:"TimeBase,omitempty"`
+	Title                *string       `json:"Title,omitempty"`
+	Extradata            *string       `json:"Extradata,omitempty"`
+	VideoRange           *string       `json:"VideoRange,omitempty"`
+	DisplayTitle         *string       `json:"DisplayTitle,omitempty"`
+	DisplayLanguage      *string       `json:"DisplayLanguage,omitempty"`
+	NalLengthSize        *string       `json:"NalLengthSize,omitempty"`
+	IsInterlaced         *bool         `json:"IsInterlaced,omitempty"`
 	// Deprecated
-	IsAVC NullableBool `json:"IsAVC,omitempty"`
-	ChannelLayout *string `json:"ChannelLayout,omitempty"`
-	BitRate NullableInt32 `json:"BitRate,omitempty"`
-	BitDepth NullableInt32 `json:"BitDepth,omitempty"`
-	RefFrames NullableInt32 `json:"RefFrames,omitempty"`
-	Rotation NullableInt32 `json:"Rotation,omitempty"`
-	Channels NullableInt32 `json:"Channels,omitempty"`
-	SampleRate NullableInt32 `json:"SampleRate,omitempty"`
-	IsDefault *bool `json:"IsDefault,omitempty"`
-	IsForced *bool `json:"IsForced,omitempty"`
-	IsHearingImpaired *bool `json:"IsHearingImpaired,omitempty"`
-	Height NullableInt32 `json:"Height,omitempty"`
-	Width NullableInt32 `json:"Width,omitempty"`
-	AverageFrameRate NullableFloat32 `json:"AverageFrameRate,omitempty"`
-	RealFrameRate NullableFloat32 `json:"RealFrameRate,omitempty"`
-	Profile *string `json:"Profile,omitempty"`
-	Type *MediaStreamType `json:"Type,omitempty"`
-	AspectRatio *string `json:"AspectRatio,omitempty"`
-	Index *int32 `json:"Index,omitempty"`
-	IsExternal *bool `json:"IsExternal,omitempty"`
-	DeliveryMethod *SubtitleDeliveryMethod `json:"DeliveryMethod,omitempty"`
-	DeliveryUrl *string `json:"DeliveryUrl,omitempty"`
-	IsExternalUrl NullableBool `json:"IsExternalUrl,omitempty"`
-	IsChunkedResponse NullableBool `json:"IsChunkedResponse,omitempty"`
-	IsTextSubtitleStream *bool `json:"IsTextSubtitleStream,omitempty"`
-	SupportsExternalStream *bool `json:"SupportsExternalStream,omitempty"`
-	Path *string `json:"Path,omitempty"`
-	Protocol *MediaProtocol `json:"Protocol,omitempty"`
-	PixelFormat *string `json:"PixelFormat,omitempty"`
-	Level NullableFloat64 `json:"Level,omitempty"`
-	IsAnamorphic NullableBool `json:"IsAnamorphic,omitempty"`
-	ExtendedVideoType *ExtendedVideoTypes `json:"ExtendedVideoType,omitempty"`
-	ExtendedVideoSubType *ExtendedVideoSubTypes `json:"ExtendedVideoSubType,omitempty"`
-	ExtendedVideoSubTypeDescription *string `json:"ExtendedVideoSubTypeDescription,omitempty"`
-	ItemId *string `json:"ItemId,omitempty"`
-	ServerId *string `json:"ServerId,omitempty"`
-	AttachmentSize NullableInt32 `json:"AttachmentSize,omitempty"`
-	MimeType *string `json:"MimeType,omitempty"`
-	SubtitleLocationType *SubtitleLocationType `json:"SubtitleLocationType,omitempty"`
+	IsAVC                           NullableBool            `json:"IsAVC,omitempty"`
+	ChannelLayout                   *string                 `json:"ChannelLayout,omitempty"`
+	BitRate                         NullableInt32           `json:"BitRate,omitempty"`
+	BitDepth                        NullableInt32           `json:"BitDepth,omitempty"`
+	RefFrames                       NullableInt32           `json:"RefFrames,omitempty"`
+	Rotation                        NullableInt32           `json:"Rotation,omitempty"`
+	Channels                        NullableInt32           `json:"Channels,omitempty"`
+	SampleRate                      NullableInt32           `json:"SampleRate,omitempty"`
+	IsDefault                       *bool                   `json:"IsDefault,omitempty"`
+	IsForced                        *bool                   `json:"IsForced,omitempty"`
+	IsHearingImpaired               *bool                   `json:"IsHearingImpaired,omitempty"`
+	Height                          NullableInt32           `json:"Height,omitempty"`
+	Width                           NullableInt32           `json:"Width,omitempty"`
+	AverageFrameRate                NullableFloat32         `json:"AverageFrameRate,omitempty"`
+	RealFrameRate                   NullableFloat32         `json:"RealFrameRate,omitempty"`
+	Profile                         *string                 `json:"Profile,omitempty"`
+	Type                            *MediaStreamType        `json:"Type,omitempty"`
+	AspectRatio                     *string                 `json:"AspectRatio,omitempty"`
+	Index                           *int32                  `json:"Index,omitempty"`
+	IsExternal                      *bool                   `json:"IsExternal,omitempty"`
+	DeliveryMethod                  *SubtitleDeliveryMethod `json:"DeliveryMethod,omitempty"`
+	DeliveryUrl                     *string                 `json:"DeliveryUrl,omitempty"`
+	IsExternalUrl                   NullableBool            `json:"IsExternalUrl,omitempty"`
+	IsChunkedResponse               NullableBool            `json:"IsChunkedResponse,omitempty"`
+	IsTextSubtitleStream            *bool                   `json:"IsTextSubtitleStream,omitempty"`
+	SupportsExternalStream          *bool                   `json:"SupportsExternalStream,omitempty"`
+	Path                            *string                 `json:"Path,omitempty"`
+	Protocol                        *MediaProtocol          `json:"Protocol,omitempty"`
+	PixelFormat                     *string                 `json:"PixelFormat,omitempty"`
+	Level                           NullableFloat64         `json:"Level,omitempty"`
+	IsAnamorphic                    NullableBool            `json:"IsAnamorphic,omitempty"`
+	ExtendedVideoType               *ExtendedVideoTypes     `json:"ExtendedVideoType,omitempty"`
+	ExtendedVideoSubType            *ExtendedVideoSubTypes  `json:"ExtendedVideoSubType,omitempty"`
+	ExtendedVideoSubTypeDescription *string                 `json:"ExtendedVideoSubTypeDescription,omitempty"`
+	ItemId                          *string                 `json:"ItemId,omitempty"`
+	ServerId                        *string                 `json:"ServerId,omitempty"`
+	AttachmentSize                  NullableInt32           `json:"AttachmentSize,omitempty"`
+	MimeType                        *string                 `json:"MimeType,omitempty"`
+	SubtitleLocationType            *SubtitleLocationType   `json:"SubtitleLocationType,omitempty"`
 }
 
 // NewMediaStream instantiates a new MediaStream object
@@ -350,6 +350,7 @@ func (o *MediaStream) HasStreamStartTimeTicks() bool {
 func (o *MediaStream) SetStreamStartTimeTicks(v int64) {
 	o.StreamStartTimeTicks.Set(&v)
 }
+
 // SetStreamStartTimeTicksNil sets the value for StreamStartTimeTicks to be an explicit nil
 func (o *MediaStream) SetStreamStartTimeTicksNil() {
 	o.StreamStartTimeTicks.Set(nil)
@@ -651,6 +652,7 @@ func (o *MediaStream) HasIsAVC() bool {
 func (o *MediaStream) SetIsAVC(v bool) {
 	o.IsAVC.Set(&v)
 }
+
 // SetIsAVCNil sets the value for IsAVC to be an explicit nil
 func (o *MediaStream) SetIsAVCNil() {
 	o.IsAVC.Set(nil)
@@ -725,6 +727,7 @@ func (o *MediaStream) HasBitRate() bool {
 func (o *MediaStream) SetBitRate(v int32) {
 	o.BitRate.Set(&v)
 }
+
 // SetBitRateNil sets the value for BitRate to be an explicit nil
 func (o *MediaStream) SetBitRateNil() {
 	o.BitRate.Set(nil)
@@ -767,6 +770,7 @@ func (o *MediaStream) HasBitDepth() bool {
 func (o *MediaStream) SetBitDepth(v int32) {
 	o.BitDepth.Set(&v)
 }
+
 // SetBitDepthNil sets the value for BitDepth to be an explicit nil
 func (o *MediaStream) SetBitDepthNil() {
 	o.BitDepth.Set(nil)
@@ -809,6 +813,7 @@ func (o *MediaStream) HasRefFrames() bool {
 func (o *MediaStream) SetRefFrames(v int32) {
 	o.RefFrames.Set(&v)
 }
+
 // SetRefFramesNil sets the value for RefFrames to be an explicit nil
 func (o *MediaStream) SetRefFramesNil() {
 	o.RefFrames.Set(nil)
@@ -851,6 +856,7 @@ func (o *MediaStream) HasRotation() bool {
 func (o *MediaStream) SetRotation(v int32) {
 	o.Rotation.Set(&v)
 }
+
 // SetRotationNil sets the value for Rotation to be an explicit nil
 func (o *MediaStream) SetRotationNil() {
 	o.Rotation.Set(nil)
@@ -893,6 +899,7 @@ func (o *MediaStream) HasChannels() bool {
 func (o *MediaStream) SetChannels(v int32) {
 	o.Channels.Set(&v)
 }
+
 // SetChannelsNil sets the value for Channels to be an explicit nil
 func (o *MediaStream) SetChannelsNil() {
 	o.Channels.Set(nil)
@@ -935,6 +942,7 @@ func (o *MediaStream) HasSampleRate() bool {
 func (o *MediaStream) SetSampleRate(v int32) {
 	o.SampleRate.Set(&v)
 }
+
 // SetSampleRateNil sets the value for SampleRate to be an explicit nil
 func (o *MediaStream) SetSampleRateNil() {
 	o.SampleRate.Set(nil)
@@ -1073,6 +1081,7 @@ func (o *MediaStream) HasHeight() bool {
 func (o *MediaStream) SetHeight(v int32) {
 	o.Height.Set(&v)
 }
+
 // SetHeightNil sets the value for Height to be an explicit nil
 func (o *MediaStream) SetHeightNil() {
 	o.Height.Set(nil)
@@ -1115,6 +1124,7 @@ func (o *MediaStream) HasWidth() bool {
 func (o *MediaStream) SetWidth(v int32) {
 	o.Width.Set(&v)
 }
+
 // SetWidthNil sets the value for Width to be an explicit nil
 func (o *MediaStream) SetWidthNil() {
 	o.Width.Set(nil)
@@ -1157,6 +1167,7 @@ func (o *MediaStream) HasAverageFrameRate() bool {
 func (o *MediaStream) SetAverageFrameRate(v float32) {
 	o.AverageFrameRate.Set(&v)
 }
+
 // SetAverageFrameRateNil sets the value for AverageFrameRate to be an explicit nil
 func (o *MediaStream) SetAverageFrameRateNil() {
 	o.AverageFrameRate.Set(nil)
@@ -1199,6 +1210,7 @@ func (o *MediaStream) HasRealFrameRate() bool {
 func (o *MediaStream) SetRealFrameRate(v float32) {
 	o.RealFrameRate.Set(&v)
 }
+
 // SetRealFrameRateNil sets the value for RealFrameRate to be an explicit nil
 func (o *MediaStream) SetRealFrameRateNil() {
 	o.RealFrameRate.Set(nil)
@@ -1465,6 +1477,7 @@ func (o *MediaStream) HasIsExternalUrl() bool {
 func (o *MediaStream) SetIsExternalUrl(v bool) {
 	o.IsExternalUrl.Set(&v)
 }
+
 // SetIsExternalUrlNil sets the value for IsExternalUrl to be an explicit nil
 func (o *MediaStream) SetIsExternalUrlNil() {
 	o.IsExternalUrl.Set(nil)
@@ -1507,6 +1520,7 @@ func (o *MediaStream) HasIsChunkedResponse() bool {
 func (o *MediaStream) SetIsChunkedResponse(v bool) {
 	o.IsChunkedResponse.Set(&v)
 }
+
 // SetIsChunkedResponseNil sets the value for IsChunkedResponse to be an explicit nil
 func (o *MediaStream) SetIsChunkedResponseNil() {
 	o.IsChunkedResponse.Set(nil)
@@ -1709,6 +1723,7 @@ func (o *MediaStream) HasLevel() bool {
 func (o *MediaStream) SetLevel(v float64) {
 	o.Level.Set(&v)
 }
+
 // SetLevelNil sets the value for Level to be an explicit nil
 func (o *MediaStream) SetLevelNil() {
 	o.Level.Set(nil)
@@ -1751,6 +1766,7 @@ func (o *MediaStream) HasIsAnamorphic() bool {
 func (o *MediaStream) SetIsAnamorphic(v bool) {
 	o.IsAnamorphic.Set(&v)
 }
+
 // SetIsAnamorphicNil sets the value for IsAnamorphic to be an explicit nil
 func (o *MediaStream) SetIsAnamorphicNil() {
 	o.IsAnamorphic.Set(nil)
@@ -1953,6 +1969,7 @@ func (o *MediaStream) HasAttachmentSize() bool {
 func (o *MediaStream) SetAttachmentSize(v int32) {
 	o.AttachmentSize.Set(&v)
 }
+
 // SetAttachmentSizeNil sets the value for AttachmentSize to be an explicit nil
 func (o *MediaStream) SetAttachmentSizeNil() {
 	o.AttachmentSize.Set(nil)
@@ -2028,7 +2045,7 @@ func (o *MediaStream) SetSubtitleLocationType(v SubtitleLocationType) {
 }
 
 func (o MediaStream) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -2240,5 +2257,3 @@ func (v *NullableMediaStream) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

@@ -20,167 +20,167 @@ var _ MappedNullable = &BaseItemDto{}
 
 // BaseItemDto struct for BaseItemDto
 type BaseItemDto struct {
-	Name *string `json:"Name,omitempty"`
-	OriginalTitle *string `json:"OriginalTitle,omitempty"`
-	ServerId *string `json:"ServerId,omitempty"`
-	Id *string `json:"Id,omitempty"`
-	Guid *string `json:"Guid,omitempty"`
-	Etag *string `json:"Etag,omitempty"`
-	Prefix *string `json:"Prefix,omitempty"`
-	TunerName *string `json:"TunerName,omitempty"`
-	PlaylistItemId *string `json:"PlaylistItemId,omitempty"`
-	DateCreated NullableTime `json:"DateCreated,omitempty"`
-	DateModified NullableTime `json:"DateModified,omitempty"`
-	VideoCodec *string `json:"VideoCodec,omitempty"`
-	AudioCodec *string `json:"AudioCodec,omitempty"`
-	AverageFrameRate NullableFloat32 `json:"AverageFrameRate,omitempty"`
-	RealFrameRate NullableFloat32 `json:"RealFrameRate,omitempty"`
-	ExtraType *string `json:"ExtraType,omitempty"`
-	SortIndexNumber NullableInt32 `json:"SortIndexNumber,omitempty"`
-	SortParentIndexNumber NullableInt32 `json:"SortParentIndexNumber,omitempty"`
-	CanDelete NullableBool `json:"CanDelete,omitempty"`
-	CanDownload NullableBool `json:"CanDownload,omitempty"`
-	CanEditItems NullableBool `json:"CanEditItems,omitempty"`
-	SupportsResume NullableBool `json:"SupportsResume,omitempty"`
-	PresentationUniqueKey *string `json:"PresentationUniqueKey,omitempty"`
-	PreferredMetadataLanguage *string `json:"PreferredMetadataLanguage,omitempty"`
-	PreferredMetadataCountryCode *string `json:"PreferredMetadataCountryCode,omitempty"`
-	SupportsSync NullableBool `json:"SupportsSync,omitempty"`
-	SyncStatus *SyncJobItemStatus `json:"SyncStatus,omitempty"`
-	CanManageAccess NullableBool `json:"CanManageAccess,omitempty"`
-	CanLeaveContent NullableBool `json:"CanLeaveContent,omitempty"`
-	CanMakePublic NullableBool `json:"CanMakePublic,omitempty"`
-	Container *string `json:"Container,omitempty"`
-	SortName *string `json:"SortName,omitempty"`
-	ForcedSortName *string `json:"ForcedSortName,omitempty"`
-	Video3DFormat *Video3DFormat `json:"Video3DFormat,omitempty"`
-	PremiereDate NullableTime `json:"PremiereDate,omitempty"`
-	ExternalUrls []ExternalUrl `json:"ExternalUrls,omitempty"`
-	MediaSources []MediaSourceInfo `json:"MediaSources,omitempty"`
-	CriticRating NullableFloat32 `json:"CriticRating,omitempty"`
-	GameSystemId NullableInt64 `json:"GameSystemId,omitempty"`
-	AsSeries NullableBool `json:"AsSeries,omitempty"`
-	GameSystem *string `json:"GameSystem,omitempty"`
-	ProductionLocations []string `json:"ProductionLocations,omitempty"`
-	Path *string `json:"Path,omitempty"`
-	OfficialRating *string `json:"OfficialRating,omitempty"`
-	CustomRating *string `json:"CustomRating,omitempty"`
-	ChannelId *string `json:"ChannelId,omitempty"`
-	ChannelName *string `json:"ChannelName,omitempty"`
-	Overview *string `json:"Overview,omitempty"`
-	Taglines []string `json:"Taglines,omitempty"`
-	Genres []string `json:"Genres,omitempty"`
-	CommunityRating NullableFloat32 `json:"CommunityRating,omitempty"`
-	RunTimeTicks NullableInt64 `json:"RunTimeTicks,omitempty"`
-	Size NullableInt64 `json:"Size,omitempty"`
-	FileName *string `json:"FileName,omitempty"`
-	Bitrate NullableInt32 `json:"Bitrate,omitempty"`
-	ProductionYear NullableInt32 `json:"ProductionYear,omitempty"`
-	Number *string `json:"Number,omitempty"`
-	ChannelNumber *string `json:"ChannelNumber,omitempty"`
-	IndexNumber NullableInt32 `json:"IndexNumber,omitempty"`
-	IndexNumberEnd NullableInt32 `json:"IndexNumberEnd,omitempty"`
-	ParentIndexNumber NullableInt32 `json:"ParentIndexNumber,omitempty"`
-	RemoteTrailers []MediaUrl `json:"RemoteTrailers,omitempty"`
-	ProviderIds *map[string]string `json:"ProviderIds,omitempty"`
-	IsFolder NullableBool `json:"IsFolder,omitempty"`
-	ParentId *string `json:"ParentId,omitempty"`
-	Type *string `json:"Type,omitempty"`
-	People []BaseItemPerson `json:"People,omitempty"`
-	Studios []NameLongIdPair `json:"Studios,omitempty"`
-	GenreItems []NameLongIdPair `json:"GenreItems,omitempty"`
-	TagItems []NameLongIdPair `json:"TagItems,omitempty"`
-	ParentLogoItemId *string `json:"ParentLogoItemId,omitempty"`
-	ParentBackdropItemId *string `json:"ParentBackdropItemId,omitempty"`
-	ParentBackdropImageTags []string `json:"ParentBackdropImageTags,omitempty"`
-	LocalTrailerCount NullableInt32 `json:"LocalTrailerCount,omitempty"`
-	UserData *UserItemDataDto `json:"UserData,omitempty"`
-	RecursiveItemCount NullableInt32 `json:"RecursiveItemCount,omitempty"`
-	ChildCount NullableInt32 `json:"ChildCount,omitempty"`
-	SeasonCount NullableInt32 `json:"SeasonCount,omitempty"`
-	SeriesName *string `json:"SeriesName,omitempty"`
-	SeriesId *string `json:"SeriesId,omitempty"`
-	SeasonId *string `json:"SeasonId,omitempty"`
-	SpecialFeatureCount NullableInt32 `json:"SpecialFeatureCount,omitempty"`
-	DisplayPreferencesId *string `json:"DisplayPreferencesId,omitempty"`
-	Status *string `json:"Status,omitempty"`
-	AirDays []DayOfWeek `json:"AirDays,omitempty"`
-	Tags []string `json:"Tags,omitempty"`
-	PrimaryImageAspectRatio NullableFloat64 `json:"PrimaryImageAspectRatio,omitempty"`
-	Artists []string `json:"Artists,omitempty"`
-	ArtistItems []NameIdPair `json:"ArtistItems,omitempty"`
-	Composers []NameIdPair `json:"Composers,omitempty"`
-	Album *string `json:"Album,omitempty"`
-	CollectionType *string `json:"CollectionType,omitempty"`
-	DisplayOrder *string `json:"DisplayOrder,omitempty"`
-	AlbumId *string `json:"AlbumId,omitempty"`
-	AlbumPrimaryImageTag *string `json:"AlbumPrimaryImageTag,omitempty"`
-	SeriesPrimaryImageTag *string `json:"SeriesPrimaryImageTag,omitempty"`
-	AlbumArtist *string `json:"AlbumArtist,omitempty"`
-	AlbumArtists []NameIdPair `json:"AlbumArtists,omitempty"`
-	SeasonName *string `json:"SeasonName,omitempty"`
-	MediaStreams []MediaStream `json:"MediaStreams,omitempty"`
-	PartCount NullableInt32 `json:"PartCount,omitempty"`
-	ImageTags *map[string]string `json:"ImageTags,omitempty"`
-	BackdropImageTags []string `json:"BackdropImageTags,omitempty"`
-	ParentLogoImageTag *string `json:"ParentLogoImageTag,omitempty"`
-	SeriesStudio *string `json:"SeriesStudio,omitempty"`
-	PrimaryImageItemId *string `json:"PrimaryImageItemId,omitempty"`
-	PrimaryImageTag *string `json:"PrimaryImageTag,omitempty"`
-	ParentThumbItemId *string `json:"ParentThumbItemId,omitempty"`
-	ParentThumbImageTag *string `json:"ParentThumbImageTag,omitempty"`
-	Chapters []ChapterInfo `json:"Chapters,omitempty"`
-	LocationType *LocationType `json:"LocationType,omitempty"`
-	MediaType *string `json:"MediaType,omitempty"`
-	EndDate NullableTime `json:"EndDate,omitempty"`
-	LockedFields []MetadataFields `json:"LockedFields,omitempty"`
-	LockData NullableBool `json:"LockData,omitempty"`
-	Width NullableInt32 `json:"Width,omitempty"`
-	Height NullableInt32 `json:"Height,omitempty"`
-	CameraMake *string `json:"CameraMake,omitempty"`
-	CameraModel *string `json:"CameraModel,omitempty"`
-	Software *string `json:"Software,omitempty"`
-	ExposureTime NullableFloat64 `json:"ExposureTime,omitempty"`
-	FocalLength NullableFloat64 `json:"FocalLength,omitempty"`
-	ImageOrientation *DrawingImageOrientation `json:"ImageOrientation,omitempty"`
-	Aperture NullableFloat64 `json:"Aperture,omitempty"`
-	ShutterSpeed NullableFloat64 `json:"ShutterSpeed,omitempty"`
-	Latitude NullableFloat64 `json:"Latitude,omitempty"`
-	Longitude NullableFloat64 `json:"Longitude,omitempty"`
-	Altitude NullableFloat64 `json:"Altitude,omitempty"`
-	IsoSpeedRating NullableInt32 `json:"IsoSpeedRating,omitempty"`
-	SeriesTimerId *string `json:"SeriesTimerId,omitempty"`
-	ChannelPrimaryImageTag *string `json:"ChannelPrimaryImageTag,omitempty"`
-	StartDate NullableTime `json:"StartDate,omitempty"`
-	CompletionPercentage NullableFloat64 `json:"CompletionPercentage,omitempty"`
-	IsRepeat NullableBool `json:"IsRepeat,omitempty"`
-	IsNew NullableBool `json:"IsNew,omitempty"`
-	EpisodeTitle *string `json:"EpisodeTitle,omitempty"`
-	IsMovie NullableBool `json:"IsMovie,omitempty"`
-	IsSports NullableBool `json:"IsSports,omitempty"`
-	IsSeries NullableBool `json:"IsSeries,omitempty"`
-	IsLive NullableBool `json:"IsLive,omitempty"`
-	IsNews NullableBool `json:"IsNews,omitempty"`
-	IsKids NullableBool `json:"IsKids,omitempty"`
-	IsPremiere NullableBool `json:"IsPremiere,omitempty"`
-	TimerType *LiveTvTimerType `json:"TimerType,omitempty"`
-	Disabled NullableBool `json:"Disabled,omitempty"`
-	ManagementId *string `json:"ManagementId,omitempty"`
-	TimerId *string `json:"TimerId,omitempty"`
-	CurrentProgram *BaseItemDto `json:"CurrentProgram,omitempty"`
-	MovieCount NullableInt32 `json:"MovieCount,omitempty"`
-	SeriesCount NullableInt32 `json:"SeriesCount,omitempty"`
-	AlbumCount NullableInt32 `json:"AlbumCount,omitempty"`
-	SongCount NullableInt32 `json:"SongCount,omitempty"`
-	MusicVideoCount NullableInt32 `json:"MusicVideoCount,omitempty"`
-	Subviews []string `json:"Subviews,omitempty"`
-	ListingsProviderId *string `json:"ListingsProviderId,omitempty"`
-	ListingsChannelId *string `json:"ListingsChannelId,omitempty"`
-	ListingsPath *string `json:"ListingsPath,omitempty"`
-	ListingsId *string `json:"ListingsId,omitempty"`
-	ListingsChannelName *string `json:"ListingsChannelName,omitempty"`
-	ListingsChannelNumber *string `json:"ListingsChannelNumber,omitempty"`
-	AffiliateCallSign *string `json:"AffiliateCallSign,omitempty"`
+	Name                         *string                  `json:"Name,omitempty"`
+	OriginalTitle                *string                  `json:"OriginalTitle,omitempty"`
+	ServerId                     *string                  `json:"ServerId,omitempty"`
+	Id                           *string                  `json:"Id,omitempty"`
+	Guid                         *string                  `json:"Guid,omitempty"`
+	Etag                         *string                  `json:"Etag,omitempty"`
+	Prefix                       *string                  `json:"Prefix,omitempty"`
+	TunerName                    *string                  `json:"TunerName,omitempty"`
+	PlaylistItemId               *string                  `json:"PlaylistItemId,omitempty"`
+	DateCreated                  NullableTime             `json:"DateCreated,omitempty"`
+	DateModified                 NullableTime             `json:"DateModified,omitempty"`
+	VideoCodec                   *string                  `json:"VideoCodec,omitempty"`
+	AudioCodec                   *string                  `json:"AudioCodec,omitempty"`
+	AverageFrameRate             NullableFloat32          `json:"AverageFrameRate,omitempty"`
+	RealFrameRate                NullableFloat32          `json:"RealFrameRate,omitempty"`
+	ExtraType                    *string                  `json:"ExtraType,omitempty"`
+	SortIndexNumber              NullableInt32            `json:"SortIndexNumber,omitempty"`
+	SortParentIndexNumber        NullableInt32            `json:"SortParentIndexNumber,omitempty"`
+	CanDelete                    NullableBool             `json:"CanDelete,omitempty"`
+	CanDownload                  NullableBool             `json:"CanDownload,omitempty"`
+	CanEditItems                 NullableBool             `json:"CanEditItems,omitempty"`
+	SupportsResume               NullableBool             `json:"SupportsResume,omitempty"`
+	PresentationUniqueKey        *string                  `json:"PresentationUniqueKey,omitempty"`
+	PreferredMetadataLanguage    *string                  `json:"PreferredMetadataLanguage,omitempty"`
+	PreferredMetadataCountryCode *string                  `json:"PreferredMetadataCountryCode,omitempty"`
+	SupportsSync                 NullableBool             `json:"SupportsSync,omitempty"`
+	SyncStatus                   *SyncJobItemStatus       `json:"SyncStatus,omitempty"`
+	CanManageAccess              NullableBool             `json:"CanManageAccess,omitempty"`
+	CanLeaveContent              NullableBool             `json:"CanLeaveContent,omitempty"`
+	CanMakePublic                NullableBool             `json:"CanMakePublic,omitempty"`
+	Container                    *string                  `json:"Container,omitempty"`
+	SortName                     *string                  `json:"SortName,omitempty"`
+	ForcedSortName               *string                  `json:"ForcedSortName,omitempty"`
+	Video3DFormat                *Video3DFormat           `json:"Video3DFormat,omitempty"`
+	PremiereDate                 NullableTime             `json:"PremiereDate,omitempty"`
+	ExternalUrls                 []ExternalUrl            `json:"ExternalUrls,omitempty"`
+	MediaSources                 []MediaSourceInfo        `json:"MediaSources,omitempty"`
+	CriticRating                 NullableFloat32          `json:"CriticRating,omitempty"`
+	GameSystemId                 NullableInt64            `json:"GameSystemId,omitempty"`
+	AsSeries                     NullableBool             `json:"AsSeries,omitempty"`
+	GameSystem                   *string                  `json:"GameSystem,omitempty"`
+	ProductionLocations          []string                 `json:"ProductionLocations,omitempty"`
+	Path                         *string                  `json:"Path,omitempty"`
+	OfficialRating               *string                  `json:"OfficialRating,omitempty"`
+	CustomRating                 *string                  `json:"CustomRating,omitempty"`
+	ChannelId                    *string                  `json:"ChannelId,omitempty"`
+	ChannelName                  *string                  `json:"ChannelName,omitempty"`
+	Overview                     *string                  `json:"Overview,omitempty"`
+	Taglines                     []string                 `json:"Taglines,omitempty"`
+	Genres                       []string                 `json:"Genres,omitempty"`
+	CommunityRating              NullableFloat32          `json:"CommunityRating,omitempty"`
+	RunTimeTicks                 NullableInt64            `json:"RunTimeTicks,omitempty"`
+	Size                         NullableInt64            `json:"Size,omitempty"`
+	FileName                     *string                  `json:"FileName,omitempty"`
+	Bitrate                      NullableInt32            `json:"Bitrate,omitempty"`
+	ProductionYear               NullableInt32            `json:"ProductionYear,omitempty"`
+	Number                       *string                  `json:"Number,omitempty"`
+	ChannelNumber                *string                  `json:"ChannelNumber,omitempty"`
+	IndexNumber                  NullableInt32            `json:"IndexNumber,omitempty"`
+	IndexNumberEnd               NullableInt32            `json:"IndexNumberEnd,omitempty"`
+	ParentIndexNumber            NullableInt32            `json:"ParentIndexNumber,omitempty"`
+	RemoteTrailers               []MediaUrl               `json:"RemoteTrailers,omitempty"`
+	ProviderIds                  *map[string]string       `json:"ProviderIds,omitempty"`
+	IsFolder                     NullableBool             `json:"IsFolder,omitempty"`
+	ParentId                     *string                  `json:"ParentId,omitempty"`
+	Type                         *string                  `json:"Type,omitempty"`
+	People                       []BaseItemPerson         `json:"People,omitempty"`
+	Studios                      []NameLongIdPair         `json:"Studios,omitempty"`
+	GenreItems                   []NameLongIdPair         `json:"GenreItems,omitempty"`
+	TagItems                     []NameLongIdPair         `json:"TagItems,omitempty"`
+	ParentLogoItemId             *string                  `json:"ParentLogoItemId,omitempty"`
+	ParentBackdropItemId         *string                  `json:"ParentBackdropItemId,omitempty"`
+	ParentBackdropImageTags      []string                 `json:"ParentBackdropImageTags,omitempty"`
+	LocalTrailerCount            NullableInt32            `json:"LocalTrailerCount,omitempty"`
+	UserData                     *UserItemDataDto         `json:"UserData,omitempty"`
+	RecursiveItemCount           NullableInt32            `json:"RecursiveItemCount,omitempty"`
+	ChildCount                   NullableInt32            `json:"ChildCount,omitempty"`
+	SeasonCount                  NullableInt32            `json:"SeasonCount,omitempty"`
+	SeriesName                   *string                  `json:"SeriesName,omitempty"`
+	SeriesId                     *string                  `json:"SeriesId,omitempty"`
+	SeasonId                     *string                  `json:"SeasonId,omitempty"`
+	SpecialFeatureCount          NullableInt32            `json:"SpecialFeatureCount,omitempty"`
+	DisplayPreferencesId         *string                  `json:"DisplayPreferencesId,omitempty"`
+	Status                       *string                  `json:"Status,omitempty"`
+	AirDays                      []DayOfWeek              `json:"AirDays,omitempty"`
+	Tags                         []string                 `json:"Tags,omitempty"`
+	PrimaryImageAspectRatio      NullableFloat64          `json:"PrimaryImageAspectRatio,omitempty"`
+	Artists                      []string                 `json:"Artists,omitempty"`
+	ArtistItems                  []NameIdPair             `json:"ArtistItems,omitempty"`
+	Composers                    []NameIdPair             `json:"Composers,omitempty"`
+	Album                        *string                  `json:"Album,omitempty"`
+	CollectionType               *string                  `json:"CollectionType,omitempty"`
+	DisplayOrder                 *string                  `json:"DisplayOrder,omitempty"`
+	AlbumId                      *string                  `json:"AlbumId,omitempty"`
+	AlbumPrimaryImageTag         *string                  `json:"AlbumPrimaryImageTag,omitempty"`
+	SeriesPrimaryImageTag        *string                  `json:"SeriesPrimaryImageTag,omitempty"`
+	AlbumArtist                  *string                  `json:"AlbumArtist,omitempty"`
+	AlbumArtists                 []NameIdPair             `json:"AlbumArtists,omitempty"`
+	SeasonName                   *string                  `json:"SeasonName,omitempty"`
+	MediaStreams                 []MediaStream            `json:"MediaStreams,omitempty"`
+	PartCount                    NullableInt32            `json:"PartCount,omitempty"`
+	ImageTags                    *map[string]string       `json:"ImageTags,omitempty"`
+	BackdropImageTags            []string                 `json:"BackdropImageTags,omitempty"`
+	ParentLogoImageTag           *string                  `json:"ParentLogoImageTag,omitempty"`
+	SeriesStudio                 *string                  `json:"SeriesStudio,omitempty"`
+	PrimaryImageItemId           *string                  `json:"PrimaryImageItemId,omitempty"`
+	PrimaryImageTag              *string                  `json:"PrimaryImageTag,omitempty"`
+	ParentThumbItemId            *string                  `json:"ParentThumbItemId,omitempty"`
+	ParentThumbImageTag          *string                  `json:"ParentThumbImageTag,omitempty"`
+	Chapters                     []ChapterInfo            `json:"Chapters,omitempty"`
+	LocationType                 *LocationType            `json:"LocationType,omitempty"`
+	MediaType                    *string                  `json:"MediaType,omitempty"`
+	EndDate                      NullableTime             `json:"EndDate,omitempty"`
+	LockedFields                 []MetadataFields         `json:"LockedFields,omitempty"`
+	LockData                     NullableBool             `json:"LockData,omitempty"`
+	Width                        NullableInt32            `json:"Width,omitempty"`
+	Height                       NullableInt32            `json:"Height,omitempty"`
+	CameraMake                   *string                  `json:"CameraMake,omitempty"`
+	CameraModel                  *string                  `json:"CameraModel,omitempty"`
+	Software                     *string                  `json:"Software,omitempty"`
+	ExposureTime                 NullableFloat64          `json:"ExposureTime,omitempty"`
+	FocalLength                  NullableFloat64          `json:"FocalLength,omitempty"`
+	ImageOrientation             *DrawingImageOrientation `json:"ImageOrientation,omitempty"`
+	Aperture                     NullableFloat64          `json:"Aperture,omitempty"`
+	ShutterSpeed                 NullableFloat64          `json:"ShutterSpeed,omitempty"`
+	Latitude                     NullableFloat64          `json:"Latitude,omitempty"`
+	Longitude                    NullableFloat64          `json:"Longitude,omitempty"`
+	Altitude                     NullableFloat64          `json:"Altitude,omitempty"`
+	IsoSpeedRating               NullableInt32            `json:"IsoSpeedRating,omitempty"`
+	SeriesTimerId                *string                  `json:"SeriesTimerId,omitempty"`
+	ChannelPrimaryImageTag       *string                  `json:"ChannelPrimaryImageTag,omitempty"`
+	StartDate                    NullableTime             `json:"StartDate,omitempty"`
+	CompletionPercentage         NullableFloat64          `json:"CompletionPercentage,omitempty"`
+	IsRepeat                     NullableBool             `json:"IsRepeat,omitempty"`
+	IsNew                        NullableBool             `json:"IsNew,omitempty"`
+	EpisodeTitle                 *string                  `json:"EpisodeTitle,omitempty"`
+	IsMovie                      NullableBool             `json:"IsMovie,omitempty"`
+	IsSports                     NullableBool             `json:"IsSports,omitempty"`
+	IsSeries                     NullableBool             `json:"IsSeries,omitempty"`
+	IsLive                       NullableBool             `json:"IsLive,omitempty"`
+	IsNews                       NullableBool             `json:"IsNews,omitempty"`
+	IsKids                       NullableBool             `json:"IsKids,omitempty"`
+	IsPremiere                   NullableBool             `json:"IsPremiere,omitempty"`
+	TimerType                    *LiveTvTimerType         `json:"TimerType,omitempty"`
+	Disabled                     NullableBool             `json:"Disabled,omitempty"`
+	ManagementId                 *string                  `json:"ManagementId,omitempty"`
+	TimerId                      *string                  `json:"TimerId,omitempty"`
+	CurrentProgram               *BaseItemDto             `json:"CurrentProgram,omitempty"`
+	MovieCount                   NullableInt32            `json:"MovieCount,omitempty"`
+	SeriesCount                  NullableInt32            `json:"SeriesCount,omitempty"`
+	AlbumCount                   NullableInt32            `json:"AlbumCount,omitempty"`
+	SongCount                    NullableInt32            `json:"SongCount,omitempty"`
+	MusicVideoCount              NullableInt32            `json:"MusicVideoCount,omitempty"`
+	Subviews                     []string                 `json:"Subviews,omitempty"`
+	ListingsProviderId           *string                  `json:"ListingsProviderId,omitempty"`
+	ListingsChannelId            *string                  `json:"ListingsChannelId,omitempty"`
+	ListingsPath                 *string                  `json:"ListingsPath,omitempty"`
+	ListingsId                   *string                  `json:"ListingsId,omitempty"`
+	ListingsChannelName          *string                  `json:"ListingsChannelName,omitempty"`
+	ListingsChannelNumber        *string                  `json:"ListingsChannelNumber,omitempty"`
+	AffiliateCallSign            *string                  `json:"AffiliateCallSign,omitempty"`
 }
 
 // NewBaseItemDto instantiates a new BaseItemDto object
@@ -520,6 +520,7 @@ func (o *BaseItemDto) HasDateCreated() bool {
 func (o *BaseItemDto) SetDateCreated(v time.Time) {
 	o.DateCreated.Set(&v)
 }
+
 // SetDateCreatedNil sets the value for DateCreated to be an explicit nil
 func (o *BaseItemDto) SetDateCreatedNil() {
 	o.DateCreated.Set(nil)
@@ -562,6 +563,7 @@ func (o *BaseItemDto) HasDateModified() bool {
 func (o *BaseItemDto) SetDateModified(v time.Time) {
 	o.DateModified.Set(&v)
 }
+
 // SetDateModifiedNil sets the value for DateModified to be an explicit nil
 func (o *BaseItemDto) SetDateModifiedNil() {
 	o.DateModified.Set(nil)
@@ -668,6 +670,7 @@ func (o *BaseItemDto) HasAverageFrameRate() bool {
 func (o *BaseItemDto) SetAverageFrameRate(v float32) {
 	o.AverageFrameRate.Set(&v)
 }
+
 // SetAverageFrameRateNil sets the value for AverageFrameRate to be an explicit nil
 func (o *BaseItemDto) SetAverageFrameRateNil() {
 	o.AverageFrameRate.Set(nil)
@@ -710,6 +713,7 @@ func (o *BaseItemDto) HasRealFrameRate() bool {
 func (o *BaseItemDto) SetRealFrameRate(v float32) {
 	o.RealFrameRate.Set(&v)
 }
+
 // SetRealFrameRateNil sets the value for RealFrameRate to be an explicit nil
 func (o *BaseItemDto) SetRealFrameRateNil() {
 	o.RealFrameRate.Set(nil)
@@ -784,6 +788,7 @@ func (o *BaseItemDto) HasSortIndexNumber() bool {
 func (o *BaseItemDto) SetSortIndexNumber(v int32) {
 	o.SortIndexNumber.Set(&v)
 }
+
 // SetSortIndexNumberNil sets the value for SortIndexNumber to be an explicit nil
 func (o *BaseItemDto) SetSortIndexNumberNil() {
 	o.SortIndexNumber.Set(nil)
@@ -826,6 +831,7 @@ func (o *BaseItemDto) HasSortParentIndexNumber() bool {
 func (o *BaseItemDto) SetSortParentIndexNumber(v int32) {
 	o.SortParentIndexNumber.Set(&v)
 }
+
 // SetSortParentIndexNumberNil sets the value for SortParentIndexNumber to be an explicit nil
 func (o *BaseItemDto) SetSortParentIndexNumberNil() {
 	o.SortParentIndexNumber.Set(nil)
@@ -868,6 +874,7 @@ func (o *BaseItemDto) HasCanDelete() bool {
 func (o *BaseItemDto) SetCanDelete(v bool) {
 	o.CanDelete.Set(&v)
 }
+
 // SetCanDeleteNil sets the value for CanDelete to be an explicit nil
 func (o *BaseItemDto) SetCanDeleteNil() {
 	o.CanDelete.Set(nil)
@@ -910,6 +917,7 @@ func (o *BaseItemDto) HasCanDownload() bool {
 func (o *BaseItemDto) SetCanDownload(v bool) {
 	o.CanDownload.Set(&v)
 }
+
 // SetCanDownloadNil sets the value for CanDownload to be an explicit nil
 func (o *BaseItemDto) SetCanDownloadNil() {
 	o.CanDownload.Set(nil)
@@ -952,6 +960,7 @@ func (o *BaseItemDto) HasCanEditItems() bool {
 func (o *BaseItemDto) SetCanEditItems(v bool) {
 	o.CanEditItems.Set(&v)
 }
+
 // SetCanEditItemsNil sets the value for CanEditItems to be an explicit nil
 func (o *BaseItemDto) SetCanEditItemsNil() {
 	o.CanEditItems.Set(nil)
@@ -994,6 +1003,7 @@ func (o *BaseItemDto) HasSupportsResume() bool {
 func (o *BaseItemDto) SetSupportsResume(v bool) {
 	o.SupportsResume.Set(&v)
 }
+
 // SetSupportsResumeNil sets the value for SupportsResume to be an explicit nil
 func (o *BaseItemDto) SetSupportsResumeNil() {
 	o.SupportsResume.Set(nil)
@@ -1132,6 +1142,7 @@ func (o *BaseItemDto) HasSupportsSync() bool {
 func (o *BaseItemDto) SetSupportsSync(v bool) {
 	o.SupportsSync.Set(&v)
 }
+
 // SetSupportsSyncNil sets the value for SupportsSync to be an explicit nil
 func (o *BaseItemDto) SetSupportsSyncNil() {
 	o.SupportsSync.Set(nil)
@@ -1206,6 +1217,7 @@ func (o *BaseItemDto) HasCanManageAccess() bool {
 func (o *BaseItemDto) SetCanManageAccess(v bool) {
 	o.CanManageAccess.Set(&v)
 }
+
 // SetCanManageAccessNil sets the value for CanManageAccess to be an explicit nil
 func (o *BaseItemDto) SetCanManageAccessNil() {
 	o.CanManageAccess.Set(nil)
@@ -1248,6 +1260,7 @@ func (o *BaseItemDto) HasCanLeaveContent() bool {
 func (o *BaseItemDto) SetCanLeaveContent(v bool) {
 	o.CanLeaveContent.Set(&v)
 }
+
 // SetCanLeaveContentNil sets the value for CanLeaveContent to be an explicit nil
 func (o *BaseItemDto) SetCanLeaveContentNil() {
 	o.CanLeaveContent.Set(nil)
@@ -1290,6 +1303,7 @@ func (o *BaseItemDto) HasCanMakePublic() bool {
 func (o *BaseItemDto) SetCanMakePublic(v bool) {
 	o.CanMakePublic.Set(&v)
 }
+
 // SetCanMakePublicNil sets the value for CanMakePublic to be an explicit nil
 func (o *BaseItemDto) SetCanMakePublicNil() {
 	o.CanMakePublic.Set(nil)
@@ -1460,6 +1474,7 @@ func (o *BaseItemDto) HasPremiereDate() bool {
 func (o *BaseItemDto) SetPremiereDate(v time.Time) {
 	o.PremiereDate.Set(&v)
 }
+
 // SetPremiereDateNil sets the value for PremiereDate to be an explicit nil
 func (o *BaseItemDto) SetPremiereDateNil() {
 	o.PremiereDate.Set(nil)
@@ -1566,6 +1581,7 @@ func (o *BaseItemDto) HasCriticRating() bool {
 func (o *BaseItemDto) SetCriticRating(v float32) {
 	o.CriticRating.Set(&v)
 }
+
 // SetCriticRatingNil sets the value for CriticRating to be an explicit nil
 func (o *BaseItemDto) SetCriticRatingNil() {
 	o.CriticRating.Set(nil)
@@ -1608,6 +1624,7 @@ func (o *BaseItemDto) HasGameSystemId() bool {
 func (o *BaseItemDto) SetGameSystemId(v int64) {
 	o.GameSystemId.Set(&v)
 }
+
 // SetGameSystemIdNil sets the value for GameSystemId to be an explicit nil
 func (o *BaseItemDto) SetGameSystemIdNil() {
 	o.GameSystemId.Set(nil)
@@ -1650,6 +1667,7 @@ func (o *BaseItemDto) HasAsSeries() bool {
 func (o *BaseItemDto) SetAsSeries(v bool) {
 	o.AsSeries.Set(&v)
 }
+
 // SetAsSeriesNil sets the value for AsSeries to be an explicit nil
 func (o *BaseItemDto) SetAsSeriesNil() {
 	o.AsSeries.Set(nil)
@@ -2012,6 +2030,7 @@ func (o *BaseItemDto) HasCommunityRating() bool {
 func (o *BaseItemDto) SetCommunityRating(v float32) {
 	o.CommunityRating.Set(&v)
 }
+
 // SetCommunityRatingNil sets the value for CommunityRating to be an explicit nil
 func (o *BaseItemDto) SetCommunityRatingNil() {
 	o.CommunityRating.Set(nil)
@@ -2054,6 +2073,7 @@ func (o *BaseItemDto) HasRunTimeTicks() bool {
 func (o *BaseItemDto) SetRunTimeTicks(v int64) {
 	o.RunTimeTicks.Set(&v)
 }
+
 // SetRunTimeTicksNil sets the value for RunTimeTicks to be an explicit nil
 func (o *BaseItemDto) SetRunTimeTicksNil() {
 	o.RunTimeTicks.Set(nil)
@@ -2096,6 +2116,7 @@ func (o *BaseItemDto) HasSize() bool {
 func (o *BaseItemDto) SetSize(v int64) {
 	o.Size.Set(&v)
 }
+
 // SetSizeNil sets the value for Size to be an explicit nil
 func (o *BaseItemDto) SetSizeNil() {
 	o.Size.Set(nil)
@@ -2170,6 +2191,7 @@ func (o *BaseItemDto) HasBitrate() bool {
 func (o *BaseItemDto) SetBitrate(v int32) {
 	o.Bitrate.Set(&v)
 }
+
 // SetBitrateNil sets the value for Bitrate to be an explicit nil
 func (o *BaseItemDto) SetBitrateNil() {
 	o.Bitrate.Set(nil)
@@ -2212,6 +2234,7 @@ func (o *BaseItemDto) HasProductionYear() bool {
 func (o *BaseItemDto) SetProductionYear(v int32) {
 	o.ProductionYear.Set(&v)
 }
+
 // SetProductionYearNil sets the value for ProductionYear to be an explicit nil
 func (o *BaseItemDto) SetProductionYearNil() {
 	o.ProductionYear.Set(nil)
@@ -2318,6 +2341,7 @@ func (o *BaseItemDto) HasIndexNumber() bool {
 func (o *BaseItemDto) SetIndexNumber(v int32) {
 	o.IndexNumber.Set(&v)
 }
+
 // SetIndexNumberNil sets the value for IndexNumber to be an explicit nil
 func (o *BaseItemDto) SetIndexNumberNil() {
 	o.IndexNumber.Set(nil)
@@ -2360,6 +2384,7 @@ func (o *BaseItemDto) HasIndexNumberEnd() bool {
 func (o *BaseItemDto) SetIndexNumberEnd(v int32) {
 	o.IndexNumberEnd.Set(&v)
 }
+
 // SetIndexNumberEndNil sets the value for IndexNumberEnd to be an explicit nil
 func (o *BaseItemDto) SetIndexNumberEndNil() {
 	o.IndexNumberEnd.Set(nil)
@@ -2402,6 +2427,7 @@ func (o *BaseItemDto) HasParentIndexNumber() bool {
 func (o *BaseItemDto) SetParentIndexNumber(v int32) {
 	o.ParentIndexNumber.Set(&v)
 }
+
 // SetParentIndexNumberNil sets the value for ParentIndexNumber to be an explicit nil
 func (o *BaseItemDto) SetParentIndexNumberNil() {
 	o.ParentIndexNumber.Set(nil)
@@ -2508,6 +2534,7 @@ func (o *BaseItemDto) HasIsFolder() bool {
 func (o *BaseItemDto) SetIsFolder(v bool) {
 	o.IsFolder.Set(&v)
 }
+
 // SetIsFolderNil sets the value for IsFolder to be an explicit nil
 func (o *BaseItemDto) SetIsFolderNil() {
 	o.IsFolder.Set(nil)
@@ -2838,6 +2865,7 @@ func (o *BaseItemDto) HasLocalTrailerCount() bool {
 func (o *BaseItemDto) SetLocalTrailerCount(v int32) {
 	o.LocalTrailerCount.Set(&v)
 }
+
 // SetLocalTrailerCountNil sets the value for LocalTrailerCount to be an explicit nil
 func (o *BaseItemDto) SetLocalTrailerCountNil() {
 	o.LocalTrailerCount.Set(nil)
@@ -2912,6 +2940,7 @@ func (o *BaseItemDto) HasRecursiveItemCount() bool {
 func (o *BaseItemDto) SetRecursiveItemCount(v int32) {
 	o.RecursiveItemCount.Set(&v)
 }
+
 // SetRecursiveItemCountNil sets the value for RecursiveItemCount to be an explicit nil
 func (o *BaseItemDto) SetRecursiveItemCountNil() {
 	o.RecursiveItemCount.Set(nil)
@@ -2954,6 +2983,7 @@ func (o *BaseItemDto) HasChildCount() bool {
 func (o *BaseItemDto) SetChildCount(v int32) {
 	o.ChildCount.Set(&v)
 }
+
 // SetChildCountNil sets the value for ChildCount to be an explicit nil
 func (o *BaseItemDto) SetChildCountNil() {
 	o.ChildCount.Set(nil)
@@ -2996,6 +3026,7 @@ func (o *BaseItemDto) HasSeasonCount() bool {
 func (o *BaseItemDto) SetSeasonCount(v int32) {
 	o.SeasonCount.Set(&v)
 }
+
 // SetSeasonCountNil sets the value for SeasonCount to be an explicit nil
 func (o *BaseItemDto) SetSeasonCountNil() {
 	o.SeasonCount.Set(nil)
@@ -3134,6 +3165,7 @@ func (o *BaseItemDto) HasSpecialFeatureCount() bool {
 func (o *BaseItemDto) SetSpecialFeatureCount(v int32) {
 	o.SpecialFeatureCount.Set(&v)
 }
+
 // SetSpecialFeatureCountNil sets the value for SpecialFeatureCount to be an explicit nil
 func (o *BaseItemDto) SetSpecialFeatureCountNil() {
 	o.SpecialFeatureCount.Set(nil)
@@ -3304,6 +3336,7 @@ func (o *BaseItemDto) HasPrimaryImageAspectRatio() bool {
 func (o *BaseItemDto) SetPrimaryImageAspectRatio(v float64) {
 	o.PrimaryImageAspectRatio.Set(&v)
 }
+
 // SetPrimaryImageAspectRatioNil sets the value for PrimaryImageAspectRatio to be an explicit nil
 func (o *BaseItemDto) SetPrimaryImageAspectRatioNil() {
 	o.PrimaryImageAspectRatio.Set(nil)
@@ -3762,6 +3795,7 @@ func (o *BaseItemDto) HasPartCount() bool {
 func (o *BaseItemDto) SetPartCount(v int32) {
 	o.PartCount.Set(&v)
 }
+
 // SetPartCountNil sets the value for PartCount to be an explicit nil
 func (o *BaseItemDto) SetPartCountNil() {
 	o.PartCount.Set(nil)
@@ -4156,6 +4190,7 @@ func (o *BaseItemDto) HasEndDate() bool {
 func (o *BaseItemDto) SetEndDate(v time.Time) {
 	o.EndDate.Set(&v)
 }
+
 // SetEndDateNil sets the value for EndDate to be an explicit nil
 func (o *BaseItemDto) SetEndDateNil() {
 	o.EndDate.Set(nil)
@@ -4230,6 +4265,7 @@ func (o *BaseItemDto) HasLockData() bool {
 func (o *BaseItemDto) SetLockData(v bool) {
 	o.LockData.Set(&v)
 }
+
 // SetLockDataNil sets the value for LockData to be an explicit nil
 func (o *BaseItemDto) SetLockDataNil() {
 	o.LockData.Set(nil)
@@ -4272,6 +4308,7 @@ func (o *BaseItemDto) HasWidth() bool {
 func (o *BaseItemDto) SetWidth(v int32) {
 	o.Width.Set(&v)
 }
+
 // SetWidthNil sets the value for Width to be an explicit nil
 func (o *BaseItemDto) SetWidthNil() {
 	o.Width.Set(nil)
@@ -4314,6 +4351,7 @@ func (o *BaseItemDto) HasHeight() bool {
 func (o *BaseItemDto) SetHeight(v int32) {
 	o.Height.Set(&v)
 }
+
 // SetHeightNil sets the value for Height to be an explicit nil
 func (o *BaseItemDto) SetHeightNil() {
 	o.Height.Set(nil)
@@ -4452,6 +4490,7 @@ func (o *BaseItemDto) HasExposureTime() bool {
 func (o *BaseItemDto) SetExposureTime(v float64) {
 	o.ExposureTime.Set(&v)
 }
+
 // SetExposureTimeNil sets the value for ExposureTime to be an explicit nil
 func (o *BaseItemDto) SetExposureTimeNil() {
 	o.ExposureTime.Set(nil)
@@ -4494,6 +4533,7 @@ func (o *BaseItemDto) HasFocalLength() bool {
 func (o *BaseItemDto) SetFocalLength(v float64) {
 	o.FocalLength.Set(&v)
 }
+
 // SetFocalLengthNil sets the value for FocalLength to be an explicit nil
 func (o *BaseItemDto) SetFocalLengthNil() {
 	o.FocalLength.Set(nil)
@@ -4568,6 +4608,7 @@ func (o *BaseItemDto) HasAperture() bool {
 func (o *BaseItemDto) SetAperture(v float64) {
 	o.Aperture.Set(&v)
 }
+
 // SetApertureNil sets the value for Aperture to be an explicit nil
 func (o *BaseItemDto) SetApertureNil() {
 	o.Aperture.Set(nil)
@@ -4610,6 +4651,7 @@ func (o *BaseItemDto) HasShutterSpeed() bool {
 func (o *BaseItemDto) SetShutterSpeed(v float64) {
 	o.ShutterSpeed.Set(&v)
 }
+
 // SetShutterSpeedNil sets the value for ShutterSpeed to be an explicit nil
 func (o *BaseItemDto) SetShutterSpeedNil() {
 	o.ShutterSpeed.Set(nil)
@@ -4652,6 +4694,7 @@ func (o *BaseItemDto) HasLatitude() bool {
 func (o *BaseItemDto) SetLatitude(v float64) {
 	o.Latitude.Set(&v)
 }
+
 // SetLatitudeNil sets the value for Latitude to be an explicit nil
 func (o *BaseItemDto) SetLatitudeNil() {
 	o.Latitude.Set(nil)
@@ -4694,6 +4737,7 @@ func (o *BaseItemDto) HasLongitude() bool {
 func (o *BaseItemDto) SetLongitude(v float64) {
 	o.Longitude.Set(&v)
 }
+
 // SetLongitudeNil sets the value for Longitude to be an explicit nil
 func (o *BaseItemDto) SetLongitudeNil() {
 	o.Longitude.Set(nil)
@@ -4736,6 +4780,7 @@ func (o *BaseItemDto) HasAltitude() bool {
 func (o *BaseItemDto) SetAltitude(v float64) {
 	o.Altitude.Set(&v)
 }
+
 // SetAltitudeNil sets the value for Altitude to be an explicit nil
 func (o *BaseItemDto) SetAltitudeNil() {
 	o.Altitude.Set(nil)
@@ -4778,6 +4823,7 @@ func (o *BaseItemDto) HasIsoSpeedRating() bool {
 func (o *BaseItemDto) SetIsoSpeedRating(v int32) {
 	o.IsoSpeedRating.Set(&v)
 }
+
 // SetIsoSpeedRatingNil sets the value for IsoSpeedRating to be an explicit nil
 func (o *BaseItemDto) SetIsoSpeedRatingNil() {
 	o.IsoSpeedRating.Set(nil)
@@ -4884,6 +4930,7 @@ func (o *BaseItemDto) HasStartDate() bool {
 func (o *BaseItemDto) SetStartDate(v time.Time) {
 	o.StartDate.Set(&v)
 }
+
 // SetStartDateNil sets the value for StartDate to be an explicit nil
 func (o *BaseItemDto) SetStartDateNil() {
 	o.StartDate.Set(nil)
@@ -4926,6 +4973,7 @@ func (o *BaseItemDto) HasCompletionPercentage() bool {
 func (o *BaseItemDto) SetCompletionPercentage(v float64) {
 	o.CompletionPercentage.Set(&v)
 }
+
 // SetCompletionPercentageNil sets the value for CompletionPercentage to be an explicit nil
 func (o *BaseItemDto) SetCompletionPercentageNil() {
 	o.CompletionPercentage.Set(nil)
@@ -4968,6 +5016,7 @@ func (o *BaseItemDto) HasIsRepeat() bool {
 func (o *BaseItemDto) SetIsRepeat(v bool) {
 	o.IsRepeat.Set(&v)
 }
+
 // SetIsRepeatNil sets the value for IsRepeat to be an explicit nil
 func (o *BaseItemDto) SetIsRepeatNil() {
 	o.IsRepeat.Set(nil)
@@ -5010,6 +5059,7 @@ func (o *BaseItemDto) HasIsNew() bool {
 func (o *BaseItemDto) SetIsNew(v bool) {
 	o.IsNew.Set(&v)
 }
+
 // SetIsNewNil sets the value for IsNew to be an explicit nil
 func (o *BaseItemDto) SetIsNewNil() {
 	o.IsNew.Set(nil)
@@ -5084,6 +5134,7 @@ func (o *BaseItemDto) HasIsMovie() bool {
 func (o *BaseItemDto) SetIsMovie(v bool) {
 	o.IsMovie.Set(&v)
 }
+
 // SetIsMovieNil sets the value for IsMovie to be an explicit nil
 func (o *BaseItemDto) SetIsMovieNil() {
 	o.IsMovie.Set(nil)
@@ -5126,6 +5177,7 @@ func (o *BaseItemDto) HasIsSports() bool {
 func (o *BaseItemDto) SetIsSports(v bool) {
 	o.IsSports.Set(&v)
 }
+
 // SetIsSportsNil sets the value for IsSports to be an explicit nil
 func (o *BaseItemDto) SetIsSportsNil() {
 	o.IsSports.Set(nil)
@@ -5168,6 +5220,7 @@ func (o *BaseItemDto) HasIsSeries() bool {
 func (o *BaseItemDto) SetIsSeries(v bool) {
 	o.IsSeries.Set(&v)
 }
+
 // SetIsSeriesNil sets the value for IsSeries to be an explicit nil
 func (o *BaseItemDto) SetIsSeriesNil() {
 	o.IsSeries.Set(nil)
@@ -5210,6 +5263,7 @@ func (o *BaseItemDto) HasIsLive() bool {
 func (o *BaseItemDto) SetIsLive(v bool) {
 	o.IsLive.Set(&v)
 }
+
 // SetIsLiveNil sets the value for IsLive to be an explicit nil
 func (o *BaseItemDto) SetIsLiveNil() {
 	o.IsLive.Set(nil)
@@ -5252,6 +5306,7 @@ func (o *BaseItemDto) HasIsNews() bool {
 func (o *BaseItemDto) SetIsNews(v bool) {
 	o.IsNews.Set(&v)
 }
+
 // SetIsNewsNil sets the value for IsNews to be an explicit nil
 func (o *BaseItemDto) SetIsNewsNil() {
 	o.IsNews.Set(nil)
@@ -5294,6 +5349,7 @@ func (o *BaseItemDto) HasIsKids() bool {
 func (o *BaseItemDto) SetIsKids(v bool) {
 	o.IsKids.Set(&v)
 }
+
 // SetIsKidsNil sets the value for IsKids to be an explicit nil
 func (o *BaseItemDto) SetIsKidsNil() {
 	o.IsKids.Set(nil)
@@ -5336,6 +5392,7 @@ func (o *BaseItemDto) HasIsPremiere() bool {
 func (o *BaseItemDto) SetIsPremiere(v bool) {
 	o.IsPremiere.Set(&v)
 }
+
 // SetIsPremiereNil sets the value for IsPremiere to be an explicit nil
 func (o *BaseItemDto) SetIsPremiereNil() {
 	o.IsPremiere.Set(nil)
@@ -5410,6 +5467,7 @@ func (o *BaseItemDto) HasDisabled() bool {
 func (o *BaseItemDto) SetDisabled(v bool) {
 	o.Disabled.Set(&v)
 }
+
 // SetDisabledNil sets the value for Disabled to be an explicit nil
 func (o *BaseItemDto) SetDisabledNil() {
 	o.Disabled.Set(nil)
@@ -5548,6 +5606,7 @@ func (o *BaseItemDto) HasMovieCount() bool {
 func (o *BaseItemDto) SetMovieCount(v int32) {
 	o.MovieCount.Set(&v)
 }
+
 // SetMovieCountNil sets the value for MovieCount to be an explicit nil
 func (o *BaseItemDto) SetMovieCountNil() {
 	o.MovieCount.Set(nil)
@@ -5590,6 +5649,7 @@ func (o *BaseItemDto) HasSeriesCount() bool {
 func (o *BaseItemDto) SetSeriesCount(v int32) {
 	o.SeriesCount.Set(&v)
 }
+
 // SetSeriesCountNil sets the value for SeriesCount to be an explicit nil
 func (o *BaseItemDto) SetSeriesCountNil() {
 	o.SeriesCount.Set(nil)
@@ -5632,6 +5692,7 @@ func (o *BaseItemDto) HasAlbumCount() bool {
 func (o *BaseItemDto) SetAlbumCount(v int32) {
 	o.AlbumCount.Set(&v)
 }
+
 // SetAlbumCountNil sets the value for AlbumCount to be an explicit nil
 func (o *BaseItemDto) SetAlbumCountNil() {
 	o.AlbumCount.Set(nil)
@@ -5674,6 +5735,7 @@ func (o *BaseItemDto) HasSongCount() bool {
 func (o *BaseItemDto) SetSongCount(v int32) {
 	o.SongCount.Set(&v)
 }
+
 // SetSongCountNil sets the value for SongCount to be an explicit nil
 func (o *BaseItemDto) SetSongCountNil() {
 	o.SongCount.Set(nil)
@@ -5716,6 +5778,7 @@ func (o *BaseItemDto) HasMusicVideoCount() bool {
 func (o *BaseItemDto) SetMusicVideoCount(v int32) {
 	o.MusicVideoCount.Set(&v)
 }
+
 // SetMusicVideoCountNil sets the value for MusicVideoCount to be an explicit nil
 func (o *BaseItemDto) SetMusicVideoCountNil() {
 	o.MusicVideoCount.Set(nil)
@@ -5983,7 +6046,7 @@ func (o *BaseItemDto) SetAffiliateCallSign(v string) {
 }
 
 func (o BaseItemDto) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -6513,5 +6576,3 @@ func (v *NullableBaseItemDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

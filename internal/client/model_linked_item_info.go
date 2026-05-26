@@ -20,8 +20,8 @@ var _ MappedNullable = &LinkedItemInfo{}
 // LinkedItemInfo struct for LinkedItemInfo
 type LinkedItemInfo struct {
 	ProviderIds *map[string]string `json:"ProviderIds,omitempty"`
-	Name *string `json:"Name,omitempty"`
-	Id *int64 `json:"Id,omitempty"`
+	Name        *string            `json:"Name,omitempty"`
+	Id          *int64             `json:"Id,omitempty"`
 }
 
 // NewLinkedItemInfo instantiates a new LinkedItemInfo object
@@ -138,7 +138,7 @@ func (o *LinkedItemInfo) SetId(v int64) {
 }
 
 func (o LinkedItemInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -194,5 +194,3 @@ func (v *NullableLinkedItemInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

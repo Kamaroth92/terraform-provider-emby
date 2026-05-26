@@ -20,7 +20,7 @@ type LiveTvChannelType string
 
 // List of LiveTv.ChannelType
 const (
-	LIVETVCHANNELTYPE_TV LiveTvChannelType = "TV"
+	LIVETVCHANNELTYPE_TV    LiveTvChannelType = "TV"
 	LIVETVCHANNELTYPE_RADIO LiveTvChannelType = "Radio"
 )
 
@@ -108,4 +108,3 @@ func (v *NullableLiveTvChannelType) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

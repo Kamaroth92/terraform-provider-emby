@@ -21,9 +21,9 @@ type OperatingSystem string
 // List of OperatingSystem
 const (
 	OPERATINGSYSTEM_WINDOWS OperatingSystem = "Windows"
-	OPERATINGSYSTEM_LINUX OperatingSystem = "Linux"
-	OPERATINGSYSTEM_OSX OperatingSystem = "OSX"
-	OPERATINGSYSTEM_BSD OperatingSystem = "BSD"
+	OPERATINGSYSTEM_LINUX   OperatingSystem = "Linux"
+	OPERATINGSYSTEM_OSX     OperatingSystem = "OSX"
+	OPERATINGSYSTEM_BSD     OperatingSystem = "BSD"
 	OPERATINGSYSTEM_ANDROID OperatingSystem = "Android"
 )
 
@@ -114,4 +114,3 @@ func (v *NullableOperatingSystem) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

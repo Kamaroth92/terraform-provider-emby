@@ -20,7 +20,7 @@ var _ MappedNullable = &LiveTvKeywordInfo{}
 // LiveTvKeywordInfo struct for LiveTvKeywordInfo
 type LiveTvKeywordInfo struct {
 	KeywordType *LiveTvKeywordType `json:"KeywordType,omitempty"`
-	Keyword *string `json:"Keyword,omitempty"`
+	Keyword     *string            `json:"Keyword,omitempty"`
 }
 
 // NewLiveTvKeywordInfo instantiates a new LiveTvKeywordInfo object
@@ -105,7 +105,7 @@ func (o *LiveTvKeywordInfo) SetKeyword(v string) {
 }
 
 func (o LiveTvKeywordInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -158,5 +158,3 @@ func (v *NullableLiveTvKeywordInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

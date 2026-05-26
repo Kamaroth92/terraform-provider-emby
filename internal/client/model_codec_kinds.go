@@ -20,8 +20,8 @@ type CodecKinds string
 
 // List of CodecKinds
 const (
-	CODECKINDS_AUDIO CodecKinds = "Audio"
-	CODECKINDS_VIDEO CodecKinds = "Video"
+	CODECKINDS_AUDIO      CodecKinds = "Audio"
+	CODECKINDS_VIDEO      CodecKinds = "Video"
 	CODECKINDS_SUB_TITLES CodecKinds = "SubTitles"
 )
 
@@ -110,4 +110,3 @@ func (v *NullableCodecKinds) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

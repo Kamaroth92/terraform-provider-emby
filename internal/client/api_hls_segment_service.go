@@ -18,16 +18,15 @@ import (
 	"net/url"
 )
 
-
 type HlsSegmentServiceAPI interface {
 
 	/*
-	DeleteVideosActiveencodings Method for DeleteVideosActiveencodings
+		DeleteVideosActiveencodings Method for DeleteVideosActiveencodings
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiDeleteVideosActiveencodingsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiDeleteVideosActiveencodingsRequest
 	*/
 	DeleteVideosActiveencodings(ctx context.Context) ApiDeleteVideosActiveencodingsRequest
 
@@ -35,12 +34,12 @@ type HlsSegmentServiceAPI interface {
 	DeleteVideosActiveencodingsExecute(r ApiDeleteVideosActiveencodingsRequest) (*http.Response, error)
 
 	/*
-	PostVideosActiveencodingsDelete Method for PostVideosActiveencodingsDelete
+		PostVideosActiveencodingsDelete Method for PostVideosActiveencodingsDelete
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostVideosActiveencodingsDeleteRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostVideosActiveencodingsDeleteRequest
 	*/
 	PostVideosActiveencodingsDelete(ctx context.Context) ApiPostVideosActiveencodingsDeleteRequest
 
@@ -52,9 +51,9 @@ type HlsSegmentServiceAPI interface {
 type HlsSegmentServiceAPIService service
 
 type ApiDeleteVideosActiveencodingsRequest struct {
-	ctx context.Context
-	ApiService HlsSegmentServiceAPI
-	deviceId *string
+	ctx           context.Context
+	ApiService    HlsSegmentServiceAPI
+	deviceId      *string
 	playSessionId *string
 }
 
@@ -79,22 +78,22 @@ DeleteVideosActiveencodings Method for DeleteVideosActiveencodings
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiDeleteVideosActiveencodingsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiDeleteVideosActiveencodingsRequest
 */
 func (a *HlsSegmentServiceAPIService) DeleteVideosActiveencodings(ctx context.Context) ApiDeleteVideosActiveencodingsRequest {
 	return ApiDeleteVideosActiveencodingsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *HlsSegmentServiceAPIService) DeleteVideosActiveencodingsExecute(r ApiDeleteVideosActiveencodingsRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodDelete
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodDelete
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "HlsSegmentServiceAPIService.DeleteVideosActiveencodings")
@@ -176,9 +175,9 @@ func (a *HlsSegmentServiceAPIService) DeleteVideosActiveencodingsExecute(r ApiDe
 }
 
 type ApiPostVideosActiveencodingsDeleteRequest struct {
-	ctx context.Context
-	ApiService HlsSegmentServiceAPI
-	deviceId *string
+	ctx           context.Context
+	ApiService    HlsSegmentServiceAPI
+	deviceId      *string
 	playSessionId *string
 }
 
@@ -203,22 +202,22 @@ PostVideosActiveencodingsDelete Method for PostVideosActiveencodingsDelete
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostVideosActiveencodingsDeleteRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostVideosActiveencodingsDeleteRequest
 */
 func (a *HlsSegmentServiceAPIService) PostVideosActiveencodingsDelete(ctx context.Context) ApiPostVideosActiveencodingsDeleteRequest {
 	return ApiPostVideosActiveencodingsDeleteRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *HlsSegmentServiceAPIService) PostVideosActiveencodingsDeleteExecute(r ApiPostVideosActiveencodingsDeleteRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "HlsSegmentServiceAPIService.PostVideosActiveencodingsDelete")

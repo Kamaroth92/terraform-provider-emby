@@ -20,9 +20,9 @@ type LiveTvTimerType string
 
 // List of LiveTv.TimerType
 const (
-	LIVETVTIMERTYPE_PROGRAM LiveTvTimerType = "Program"
+	LIVETVTIMERTYPE_PROGRAM   LiveTvTimerType = "Program"
 	LIVETVTIMERTYPE_DATE_TIME LiveTvTimerType = "DateTime"
-	LIVETVTIMERTYPE_KEYWORD LiveTvTimerType = "Keyword"
+	LIVETVTIMERTYPE_KEYWORD   LiveTvTimerType = "Keyword"
 )
 
 // All allowed values of LiveTvTimerType enum
@@ -110,4 +110,3 @@ func (v *NullableLiveTvTimerType) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

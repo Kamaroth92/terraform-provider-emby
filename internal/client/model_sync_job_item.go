@@ -20,22 +20,22 @@ var _ MappedNullable = &SyncJobItem{}
 
 // SyncJobItem struct for SyncJobItem
 type SyncJobItem struct {
-	Id *int64 `json:"Id,omitempty"`
-	JobId *int64 `json:"JobId,omitempty"`
-	ItemId *int64 `json:"ItemId,omitempty"`
-	ItemName *string `json:"ItemName,omitempty"`
-	MediaSourceId *string `json:"MediaSourceId,omitempty"`
-	MediaSource *MediaSourceInfo `json:"MediaSource,omitempty"`
-	TargetId *string `json:"TargetId,omitempty"`
-	InternalTargetId *int64 `json:"InternalTargetId,omitempty"`
-	OutputPath *string `json:"OutputPath,omitempty"`
-	Status *SyncJobItemStatus `json:"Status,omitempty"`
-	Progress NullableFloat64 `json:"Progress,omitempty"`
-	DateCreated *time.Time `json:"DateCreated,omitempty"`
-	PrimaryImageItemId *string `json:"PrimaryImageItemId,omitempty"`
-	PrimaryImageTag *string `json:"PrimaryImageTag,omitempty"`
-	TemporaryPath *string `json:"TemporaryPath,omitempty"`
-	AdditionalFiles []ItemFileInfo `json:"AdditionalFiles,omitempty"`
+	Id                 *int64             `json:"Id,omitempty"`
+	JobId              *int64             `json:"JobId,omitempty"`
+	ItemId             *int64             `json:"ItemId,omitempty"`
+	ItemName           *string            `json:"ItemName,omitempty"`
+	MediaSourceId      *string            `json:"MediaSourceId,omitempty"`
+	MediaSource        *MediaSourceInfo   `json:"MediaSource,omitempty"`
+	TargetId           *string            `json:"TargetId,omitempty"`
+	InternalTargetId   *int64             `json:"InternalTargetId,omitempty"`
+	OutputPath         *string            `json:"OutputPath,omitempty"`
+	Status             *SyncJobItemStatus `json:"Status,omitempty"`
+	Progress           NullableFloat64    `json:"Progress,omitempty"`
+	DateCreated        *time.Time         `json:"DateCreated,omitempty"`
+	PrimaryImageItemId *string            `json:"PrimaryImageItemId,omitempty"`
+	PrimaryImageTag    *string            `json:"PrimaryImageTag,omitempty"`
+	TemporaryPath      *string            `json:"TemporaryPath,omitempty"`
+	AdditionalFiles    []ItemFileInfo     `json:"AdditionalFiles,omitempty"`
 }
 
 // NewSyncJobItem instantiates a new SyncJobItem object
@@ -407,6 +407,7 @@ func (o *SyncJobItem) HasProgress() bool {
 func (o *SyncJobItem) SetProgress(v float64) {
 	o.Progress.Set(&v)
 }
+
 // SetProgressNil sets the value for Progress to be an explicit nil
 func (o *SyncJobItem) SetProgressNil() {
 	o.Progress.Set(nil)
@@ -578,7 +579,7 @@ func (o *SyncJobItem) SetAdditionalFiles(v []ItemFileInfo) {
 }
 
 func (o SyncJobItem) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -673,5 +674,3 @@ func (v *NullableSyncJobItem) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

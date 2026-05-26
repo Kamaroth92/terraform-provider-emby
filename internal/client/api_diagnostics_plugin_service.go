@@ -19,16 +19,15 @@ import (
 	"os"
 )
 
-
 type DiagnosticsPluginServiceAPI interface {
 
 	/*
-	GetEncodingdiagnosticsDiagnosticoptions Gets the EncodingDiagnosticOptions for generic editor
+		GetEncodingdiagnosticsDiagnosticoptions Gets the EncodingDiagnosticOptions for generic editor
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetEncodingdiagnosticsDiagnosticoptionsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetEncodingdiagnosticsDiagnosticoptionsRequest
 	*/
 	GetEncodingdiagnosticsDiagnosticoptions(ctx context.Context) ApiGetEncodingdiagnosticsDiagnosticoptionsRequest
 
@@ -37,12 +36,12 @@ type DiagnosticsPluginServiceAPI interface {
 	GetEncodingdiagnosticsDiagnosticoptionsExecute(r ApiGetEncodingdiagnosticsDiagnosticoptionsRequest) (*EditObjectContainer, *http.Response, error)
 
 	/*
-	PostEncodingdiagnosticsDiagnosticoptions Updates EncodingDiagnosticOptions from generic editor
+		PostEncodingdiagnosticsDiagnosticoptions Updates EncodingDiagnosticOptions from generic editor
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostEncodingdiagnosticsDiagnosticoptionsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostEncodingdiagnosticsDiagnosticoptionsRequest
 	*/
 	PostEncodingdiagnosticsDiagnosticoptions(ctx context.Context) ApiPostEncodingdiagnosticsDiagnosticoptionsRequest
 
@@ -54,7 +53,7 @@ type DiagnosticsPluginServiceAPI interface {
 type DiagnosticsPluginServiceAPIService service
 
 type ApiGetEncodingdiagnosticsDiagnosticoptionsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService DiagnosticsPluginServiceAPI
 }
 
@@ -67,24 +66,25 @@ GetEncodingdiagnosticsDiagnosticoptions Gets the EncodingDiagnosticOptions for g
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetEncodingdiagnosticsDiagnosticoptionsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetEncodingdiagnosticsDiagnosticoptionsRequest
 */
 func (a *DiagnosticsPluginServiceAPIService) GetEncodingdiagnosticsDiagnosticoptions(ctx context.Context) ApiGetEncodingdiagnosticsDiagnosticoptionsRequest {
 	return ApiGetEncodingdiagnosticsDiagnosticoptionsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return EditObjectContainer
+//
+//	@return EditObjectContainer
 func (a *DiagnosticsPluginServiceAPIService) GetEncodingdiagnosticsDiagnosticoptionsExecute(r ApiGetEncodingdiagnosticsDiagnosticoptionsRequest) (*EditObjectContainer, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *EditObjectContainer
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *EditObjectContainer
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DiagnosticsPluginServiceAPIService.GetEncodingdiagnosticsDiagnosticoptions")
@@ -167,9 +167,9 @@ func (a *DiagnosticsPluginServiceAPIService) GetEncodingdiagnosticsDiagnosticopt
 }
 
 type ApiPostEncodingdiagnosticsDiagnosticoptionsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService DiagnosticsPluginServiceAPI
-	body *os.File
+	body       *os.File
 }
 
 // Binary stream
@@ -187,22 +187,22 @@ PostEncodingdiagnosticsDiagnosticoptions Updates EncodingDiagnosticOptions from 
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostEncodingdiagnosticsDiagnosticoptionsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostEncodingdiagnosticsDiagnosticoptionsRequest
 */
 func (a *DiagnosticsPluginServiceAPIService) PostEncodingdiagnosticsDiagnosticoptions(ctx context.Context) ApiPostEncodingdiagnosticsDiagnosticoptionsRequest {
 	return ApiPostEncodingdiagnosticsDiagnosticoptionsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *DiagnosticsPluginServiceAPIService) PostEncodingdiagnosticsDiagnosticoptionsExecute(r ApiPostEncodingdiagnosticsDiagnosticoptionsRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DiagnosticsPluginServiceAPIService.PostEncodingdiagnosticsDiagnosticoptions")

@@ -19,17 +19,17 @@ var _ MappedNullable = &TranscodingVpStepInfo{}
 
 // TranscodingVpStepInfo struct for TranscodingVpStepInfo
 type TranscodingVpStepInfo struct {
-	StepType *TranscodingVpStepTypes `json:"StepType,omitempty"`
-	StepTypeName *string `json:"StepTypeName,omitempty"`
-	HardwareContextName *string `json:"HardwareContextName,omitempty"`
-	IsHardwareContext *bool `json:"IsHardwareContext,omitempty"`
-	Name *string `json:"Name,omitempty"`
-	Short *string `json:"Short,omitempty"`
-	FfmpegName *string `json:"FfmpegName,omitempty"`
-	FfmpegDescription *string `json:"FfmpegDescription,omitempty"`
-	FfmpegOptions *string `json:"FfmpegOptions,omitempty"`
-	Param *string `json:"Param,omitempty"`
-	ParamShort *string `json:"ParamShort,omitempty"`
+	StepType            *TranscodingVpStepTypes `json:"StepType,omitempty"`
+	StepTypeName        *string                 `json:"StepTypeName,omitempty"`
+	HardwareContextName *string                 `json:"HardwareContextName,omitempty"`
+	IsHardwareContext   *bool                   `json:"IsHardwareContext,omitempty"`
+	Name                *string                 `json:"Name,omitempty"`
+	Short               *string                 `json:"Short,omitempty"`
+	FfmpegName          *string                 `json:"FfmpegName,omitempty"`
+	FfmpegDescription   *string                 `json:"FfmpegDescription,omitempty"`
+	FfmpegOptions       *string                 `json:"FfmpegOptions,omitempty"`
+	Param               *string                 `json:"Param,omitempty"`
+	ParamShort          *string                 `json:"ParamShort,omitempty"`
 }
 
 // NewTranscodingVpStepInfo instantiates a new TranscodingVpStepInfo object
@@ -402,7 +402,7 @@ func (o *TranscodingVpStepInfo) SetParamShort(v string) {
 }
 
 func (o TranscodingVpStepInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -482,5 +482,3 @@ func (v *NullableTranscodingVpStepInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

@@ -20,13 +20,13 @@ var _ MappedNullable = &MBBackupBackupInfo{}
 
 // MBBackupBackupInfo struct for MBBackupBackupInfo
 type MBBackupBackupInfo struct {
-	ServerVersion *string `json:"ServerVersion,omitempty"`
-	PluginVersion *string `json:"PluginVersion,omitempty"`
-	Name *string `json:"Name,omitempty"`
-	CanRestore *bool `json:"CanRestore,omitempty"`
-	IsFullBackup *bool `json:"IsFullBackup,omitempty"`
-	DateCreated *time.Time `json:"DateCreated,omitempty"`
-	Users []NameIdPair `json:"Users,omitempty"`
+	ServerVersion *string      `json:"ServerVersion,omitempty"`
+	PluginVersion *string      `json:"PluginVersion,omitempty"`
+	Name          *string      `json:"Name,omitempty"`
+	CanRestore    *bool        `json:"CanRestore,omitempty"`
+	IsFullBackup  *bool        `json:"IsFullBackup,omitempty"`
+	DateCreated   *time.Time   `json:"DateCreated,omitempty"`
+	Users         []NameIdPair `json:"Users,omitempty"`
 }
 
 // NewMBBackupBackupInfo instantiates a new MBBackupBackupInfo object
@@ -271,7 +271,7 @@ func (o *MBBackupBackupInfo) SetUsers(v []NameIdPair) {
 }
 
 func (o MBBackupBackupInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -339,5 +339,3 @@ func (v *NullableMBBackupBackupInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

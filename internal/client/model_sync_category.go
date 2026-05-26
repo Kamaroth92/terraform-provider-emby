@@ -20,9 +20,9 @@ type SyncCategory string
 
 // List of SyncCategory
 const (
-	SYNCCATEGORY_LATEST SyncCategory = "Latest"
+	SYNCCATEGORY_LATEST  SyncCategory = "Latest"
 	SYNCCATEGORY_NEXT_UP SyncCategory = "NextUp"
-	SYNCCATEGORY_RESUME SyncCategory = "Resume"
+	SYNCCATEGORY_RESUME  SyncCategory = "Resume"
 )
 
 // All allowed values of SyncCategory enum
@@ -110,4 +110,3 @@ func (v *NullableSyncCategory) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

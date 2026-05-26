@@ -1,10 +1,12 @@
+// Copyright (c) HashiCorp, Inc.
+
 package provider
 
 import (
 	"context"
 	"os"
 
-	embyclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	embyclient "github.com/Kamaroth92/terraform-provider-emby/client"
 	"github.com/hashicorp/terraform-plugin-framework/datasource"
 	"github.com/hashicorp/terraform-plugin-framework/path"
 	"github.com/hashicorp/terraform-plugin-framework/provider"
@@ -113,6 +115,8 @@ func (p *EmbyProvider) Configure(ctx context.Context, req provider.ConfigureRequ
 func (p *EmbyProvider) Resources(_ context.Context) []func() resource.Resource {
 	return []func() resource.Resource{
 		NewUserResource,
+		NewUserLibraryAccessResource,
+		NewApiKeyResource,
 	}
 }
 
@@ -120,6 +124,7 @@ func (p *EmbyProvider) DataSources(_ context.Context) []func() datasource.DataSo
 	return []func() datasource.DataSource{
 		NewLibrariesDataSource,
 		NewLibraryDataSource,
+		NewUserDataSource,
 	}
 }
 

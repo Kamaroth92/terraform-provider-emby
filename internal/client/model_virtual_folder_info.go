@@ -19,17 +19,17 @@ var _ MappedNullable = &VirtualFolderInfo{}
 
 // VirtualFolderInfo struct for VirtualFolderInfo
 type VirtualFolderInfo struct {
-	Name *string `json:"Name,omitempty"`
-	Locations []string `json:"Locations,omitempty"`
-	CollectionType *string `json:"CollectionType,omitempty"`
-	LibraryOptions *LibraryOptions `json:"LibraryOptions,omitempty"`
-	ItemId *string `json:"ItemId,omitempty"`
-	Id *string `json:"Id,omitempty"`
-	Guid *string `json:"Guid,omitempty"`
-	PrimaryImageItemId *string `json:"PrimaryImageItemId,omitempty"`
-	PrimaryImageTag *string `json:"PrimaryImageTag,omitempty"`
-	RefreshProgress NullableFloat64 `json:"RefreshProgress,omitempty"`
-	RefreshStatus *string `json:"RefreshStatus,omitempty"`
+	Name               *string         `json:"Name,omitempty"`
+	Locations          []string        `json:"Locations,omitempty"`
+	CollectionType     *string         `json:"CollectionType,omitempty"`
+	LibraryOptions     *LibraryOptions `json:"LibraryOptions,omitempty"`
+	ItemId             *string         `json:"ItemId,omitempty"`
+	Id                 *string         `json:"Id,omitempty"`
+	Guid               *string         `json:"Guid,omitempty"`
+	PrimaryImageItemId *string         `json:"PrimaryImageItemId,omitempty"`
+	PrimaryImageTag    *string         `json:"PrimaryImageTag,omitempty"`
+	RefreshProgress    NullableFloat64 `json:"RefreshProgress,omitempty"`
+	RefreshStatus      *string         `json:"RefreshStatus,omitempty"`
 }
 
 // NewVirtualFolderInfo instantiates a new VirtualFolderInfo object
@@ -369,6 +369,7 @@ func (o *VirtualFolderInfo) HasRefreshProgress() bool {
 func (o *VirtualFolderInfo) SetRefreshProgress(v float64) {
 	o.RefreshProgress.Set(&v)
 }
+
 // SetRefreshProgressNil sets the value for RefreshProgress to be an explicit nil
 func (o *VirtualFolderInfo) SetRefreshProgressNil() {
 	o.RefreshProgress.Set(nil)
@@ -412,7 +413,7 @@ func (o *VirtualFolderInfo) SetRefreshStatus(v string) {
 }
 
 func (o VirtualFolderInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -492,5 +493,3 @@ func (v *NullableVirtualFolderInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

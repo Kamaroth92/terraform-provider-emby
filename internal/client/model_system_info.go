@@ -19,42 +19,42 @@ var _ MappedNullable = &SystemInfo{}
 
 // SystemInfo struct for SystemInfo
 type SystemInfo struct {
-	SystemUpdateLevel *PackageVersionClass `json:"SystemUpdateLevel,omitempty"`
-	OperatingSystemDisplayName *string `json:"OperatingSystemDisplayName,omitempty"`
-	PackageName *string `json:"PackageName,omitempty"`
-	HasPendingRestart *bool `json:"HasPendingRestart,omitempty"`
-	IsShuttingDown *bool `json:"IsShuttingDown,omitempty"`
-	HasImageEnhancers *bool `json:"HasImageEnhancers,omitempty"`
-	OperatingSystem *string `json:"OperatingSystem,omitempty"`
-	SupportsLibraryMonitor *bool `json:"SupportsLibraryMonitor,omitempty"`
-	SupportsLocalPortConfiguration *bool `json:"SupportsLocalPortConfiguration,omitempty"`
-	SupportsWakeServer *bool `json:"SupportsWakeServer,omitempty"`
-	WebSocketPortNumber *int32 `json:"WebSocketPortNumber,omitempty"`
-	CompletedInstallations []InstallationInfo `json:"CompletedInstallations,omitempty"`
-	CanSelfRestart *bool `json:"CanSelfRestart,omitempty"`
-	CanSelfUpdate *bool `json:"CanSelfUpdate,omitempty"`
-	CanLaunchWebBrowser *bool `json:"CanLaunchWebBrowser,omitempty"`
-	ProgramDataPath *string `json:"ProgramDataPath,omitempty"`
-	ItemsByNamePath *string `json:"ItemsByNamePath,omitempty"`
-	CachePath *string `json:"CachePath,omitempty"`
-	LogPath *string `json:"LogPath,omitempty"`
-	InternalMetadataPath *string `json:"InternalMetadataPath,omitempty"`
-	TranscodingTempPath *string `json:"TranscodingTempPath,omitempty"`
-	HttpServerPortNumber *int32 `json:"HttpServerPortNumber,omitempty"`
-	SupportsHttps *bool `json:"SupportsHttps,omitempty"`
-	HttpsPortNumber *int32 `json:"HttpsPortNumber,omitempty"`
-	HasUpdateAvailable *bool `json:"HasUpdateAvailable,omitempty"`
-	SupportsAutoRunAtStartup *bool `json:"SupportsAutoRunAtStartup,omitempty"`
-	HardwareAccelerationRequiresPremiere *bool `json:"HardwareAccelerationRequiresPremiere,omitempty"`
-	WakeOnLanInfo []WakeOnLanInfo `json:"WakeOnLanInfo,omitempty"`
-	IsInMaintenanceMode *bool `json:"IsInMaintenanceMode,omitempty"`
-	LocalAddress *string `json:"LocalAddress,omitempty"`
-	LocalAddresses []string `json:"LocalAddresses,omitempty"`
-	WanAddress *string `json:"WanAddress,omitempty"`
-	RemoteAddresses []string `json:"RemoteAddresses,omitempty"`
-	ServerName *string `json:"ServerName,omitempty"`
-	Version *string `json:"Version,omitempty"`
-	Id *string `json:"Id,omitempty"`
+	SystemUpdateLevel                    *PackageVersionClass `json:"SystemUpdateLevel,omitempty"`
+	OperatingSystemDisplayName           *string              `json:"OperatingSystemDisplayName,omitempty"`
+	PackageName                          *string              `json:"PackageName,omitempty"`
+	HasPendingRestart                    *bool                `json:"HasPendingRestart,omitempty"`
+	IsShuttingDown                       *bool                `json:"IsShuttingDown,omitempty"`
+	HasImageEnhancers                    *bool                `json:"HasImageEnhancers,omitempty"`
+	OperatingSystem                      *string              `json:"OperatingSystem,omitempty"`
+	SupportsLibraryMonitor               *bool                `json:"SupportsLibraryMonitor,omitempty"`
+	SupportsLocalPortConfiguration       *bool                `json:"SupportsLocalPortConfiguration,omitempty"`
+	SupportsWakeServer                   *bool                `json:"SupportsWakeServer,omitempty"`
+	WebSocketPortNumber                  *int32               `json:"WebSocketPortNumber,omitempty"`
+	CompletedInstallations               []InstallationInfo   `json:"CompletedInstallations,omitempty"`
+	CanSelfRestart                       *bool                `json:"CanSelfRestart,omitempty"`
+	CanSelfUpdate                        *bool                `json:"CanSelfUpdate,omitempty"`
+	CanLaunchWebBrowser                  *bool                `json:"CanLaunchWebBrowser,omitempty"`
+	ProgramDataPath                      *string              `json:"ProgramDataPath,omitempty"`
+	ItemsByNamePath                      *string              `json:"ItemsByNamePath,omitempty"`
+	CachePath                            *string              `json:"CachePath,omitempty"`
+	LogPath                              *string              `json:"LogPath,omitempty"`
+	InternalMetadataPath                 *string              `json:"InternalMetadataPath,omitempty"`
+	TranscodingTempPath                  *string              `json:"TranscodingTempPath,omitempty"`
+	HttpServerPortNumber                 *int32               `json:"HttpServerPortNumber,omitempty"`
+	SupportsHttps                        *bool                `json:"SupportsHttps,omitempty"`
+	HttpsPortNumber                      *int32               `json:"HttpsPortNumber,omitempty"`
+	HasUpdateAvailable                   *bool                `json:"HasUpdateAvailable,omitempty"`
+	SupportsAutoRunAtStartup             *bool                `json:"SupportsAutoRunAtStartup,omitempty"`
+	HardwareAccelerationRequiresPremiere *bool                `json:"HardwareAccelerationRequiresPremiere,omitempty"`
+	WakeOnLanInfo                        []WakeOnLanInfo      `json:"WakeOnLanInfo,omitempty"`
+	IsInMaintenanceMode                  *bool                `json:"IsInMaintenanceMode,omitempty"`
+	LocalAddress                         *string              `json:"LocalAddress,omitempty"`
+	LocalAddresses                       []string             `json:"LocalAddresses,omitempty"`
+	WanAddress                           *string              `json:"WanAddress,omitempty"`
+	RemoteAddresses                      []string             `json:"RemoteAddresses,omitempty"`
+	ServerName                           *string              `json:"ServerName,omitempty"`
+	Version                              *string              `json:"Version,omitempty"`
+	Id                                   *string              `json:"Id,omitempty"`
 }
 
 // NewSystemInfo instantiates a new SystemInfo object
@@ -1227,7 +1227,7 @@ func (o *SystemInfo) SetId(v string) {
 }
 
 func (o SystemInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -1382,5 +1382,3 @@ func (v *NullableSystemInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

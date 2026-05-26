@@ -1,3 +1,5 @@
+// Copyright (c) HashiCorp, Inc.
+
 /*
 Emby Server REST API (BETA)
 
@@ -11,10 +13,10 @@ package embyclient
 
 import (
 	"context"
+	openapiclient "github.com/Kamaroth92/terraform-provider-emby/client"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func Test_embyclient_RemoteImageServiceAPIService(t *testing.T) {
@@ -24,7 +26,7 @@ func Test_embyclient_RemoteImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test RemoteImageServiceAPIService GetImagesRemote", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.RemoteImageServiceAPI.GetImagesRemote(context.Background()).Execute()
 
@@ -35,7 +37,7 @@ func Test_embyclient_RemoteImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test RemoteImageServiceAPIService GetItemsByIdRemoteimages", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -49,7 +51,7 @@ func Test_embyclient_RemoteImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test RemoteImageServiceAPIService GetItemsByIdRemoteimagesProviders", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -63,7 +65,7 @@ func Test_embyclient_RemoteImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test RemoteImageServiceAPIService PostItemsByIdRemoteimagesDownload", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 

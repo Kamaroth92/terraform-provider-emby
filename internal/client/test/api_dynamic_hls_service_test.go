@@ -1,3 +1,5 @@
+// Copyright (c) HashiCorp, Inc.
+
 /*
 Emby Server REST API (BETA)
 
@@ -11,10 +13,10 @@ package embyclient
 
 import (
 	"context"
+	openapiclient "github.com/Kamaroth92/terraform-provider-emby/client"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func Test_embyclient_DynamicHlsServiceAPIService(t *testing.T) {
@@ -24,7 +26,7 @@ func Test_embyclient_DynamicHlsServiceAPIService(t *testing.T) {
 
 	t.Run("Test DynamicHlsServiceAPIService GetAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainer", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var segmentContainer string
 		var segmentId string
@@ -40,7 +42,7 @@ func Test_embyclient_DynamicHlsServiceAPIService(t *testing.T) {
 
 	t.Run("Test DynamicHlsServiceAPIService GetAudioByIdLiveM3u8", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -53,7 +55,7 @@ func Test_embyclient_DynamicHlsServiceAPIService(t *testing.T) {
 
 	t.Run("Test DynamicHlsServiceAPIService GetAudioByIdMainM3u8", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -66,7 +68,7 @@ func Test_embyclient_DynamicHlsServiceAPIService(t *testing.T) {
 
 	t.Run("Test DynamicHlsServiceAPIService GetAudioByIdMasterM3u8", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -79,7 +81,7 @@ func Test_embyclient_DynamicHlsServiceAPIService(t *testing.T) {
 
 	t.Run("Test DynamicHlsServiceAPIService GetVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainer", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var segmentContainer string
 		var segmentId string
@@ -95,7 +97,7 @@ func Test_embyclient_DynamicHlsServiceAPIService(t *testing.T) {
 
 	t.Run("Test DynamicHlsServiceAPIService GetVideosByIdLiveM3u8", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -108,7 +110,7 @@ func Test_embyclient_DynamicHlsServiceAPIService(t *testing.T) {
 
 	t.Run("Test DynamicHlsServiceAPIService GetVideosByIdLiveSubtitlesM3u8", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -121,7 +123,7 @@ func Test_embyclient_DynamicHlsServiceAPIService(t *testing.T) {
 
 	t.Run("Test DynamicHlsServiceAPIService GetVideosByIdMainM3u8", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -134,7 +136,7 @@ func Test_embyclient_DynamicHlsServiceAPIService(t *testing.T) {
 
 	t.Run("Test DynamicHlsServiceAPIService GetVideosByIdMasterM3u8", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -147,7 +149,7 @@ func Test_embyclient_DynamicHlsServiceAPIService(t *testing.T) {
 
 	t.Run("Test DynamicHlsServiceAPIService GetVideosByIdSubtitlesM3u8", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -160,7 +162,7 @@ func Test_embyclient_DynamicHlsServiceAPIService(t *testing.T) {
 
 	t.Run("Test DynamicHlsServiceAPIService HeadAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainer", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var segmentContainer string
 		var segmentId string
@@ -176,7 +178,7 @@ func Test_embyclient_DynamicHlsServiceAPIService(t *testing.T) {
 
 	t.Run("Test DynamicHlsServiceAPIService HeadAudioByIdMasterM3u8", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -189,7 +191,7 @@ func Test_embyclient_DynamicHlsServiceAPIService(t *testing.T) {
 
 	t.Run("Test DynamicHlsServiceAPIService HeadVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainer", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var segmentContainer string
 		var segmentId string
@@ -205,7 +207,7 @@ func Test_embyclient_DynamicHlsServiceAPIService(t *testing.T) {
 
 	t.Run("Test DynamicHlsServiceAPIService HeadVideosByIdMasterM3u8", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 

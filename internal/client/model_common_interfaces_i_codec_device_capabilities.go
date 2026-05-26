@@ -19,11 +19,11 @@ var _ MappedNullable = &CommonInterfacesICodecDeviceCapabilities{}
 
 // CommonInterfacesICodecDeviceCapabilities struct for CommonInterfacesICodecDeviceCapabilities
 type CommonInterfacesICodecDeviceCapabilities struct {
-	SupportsHwUpload *bool `json:"SupportsHwUpload,omitempty"`
-	SupportsHwDownload *bool `json:"SupportsHwDownload,omitempty"`
+	SupportsHwUpload             *bool `json:"SupportsHwUpload,omitempty"`
+	SupportsHwDownload           *bool `json:"SupportsHwDownload,omitempty"`
 	SupportsStandaloneDeviceInit *bool `json:"SupportsStandaloneDeviceInit,omitempty"`
-	Supports10BitProcessing *bool `json:"Supports10BitProcessing,omitempty"`
-	SupportsNativeToneMapping *bool `json:"SupportsNativeToneMapping,omitempty"`
+	Supports10BitProcessing      *bool `json:"Supports10BitProcessing,omitempty"`
+	SupportsNativeToneMapping    *bool `json:"SupportsNativeToneMapping,omitempty"`
 }
 
 // NewCommonInterfacesICodecDeviceCapabilities instantiates a new CommonInterfacesICodecDeviceCapabilities object
@@ -204,7 +204,7 @@ func (o *CommonInterfacesICodecDeviceCapabilities) SetSupportsNativeToneMapping(
 }
 
 func (o CommonInterfacesICodecDeviceCapabilities) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -266,5 +266,3 @@ func (v *NullableCommonInterfacesICodecDeviceCapabilities) UnmarshalJSON(src []b
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

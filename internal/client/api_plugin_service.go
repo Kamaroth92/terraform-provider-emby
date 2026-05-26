@@ -16,21 +16,20 @@ import (
 	"io"
 	"net/http"
 	"net/url"
-	"strings"
 	"os"
+	"strings"
 )
-
 
 type PluginServiceAPI interface {
 
 	/*
-	DeletePluginsById Uninstalls a plugin
+		DeletePluginsById Uninstalls a plugin
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Plugin Id
-	@return ApiDeletePluginsByIdRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Plugin Id
+		@return ApiDeletePluginsByIdRequest
 	*/
 	DeletePluginsById(ctx context.Context, id string) ApiDeletePluginsByIdRequest
 
@@ -38,12 +37,12 @@ type PluginServiceAPI interface {
 	DeletePluginsByIdExecute(r ApiDeletePluginsByIdRequest) (*http.Response, error)
 
 	/*
-	GetPlugins Gets a list of currently installed plugins
+		GetPlugins Gets a list of currently installed plugins
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetPluginsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetPluginsRequest
 	*/
 	GetPlugins(ctx context.Context) ApiGetPluginsRequest
 
@@ -52,13 +51,13 @@ type PluginServiceAPI interface {
 	GetPluginsExecute(r ApiGetPluginsRequest) ([]PluginsPluginInfo, *http.Response, error)
 
 	/*
-	GetPluginsByIdConfiguration Gets a plugin's configuration
+		GetPluginsByIdConfiguration Gets a plugin's configuration
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Plugin Id
-	@return ApiGetPluginsByIdConfigurationRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Plugin Id
+		@return ApiGetPluginsByIdConfigurationRequest
 	*/
 	GetPluginsByIdConfiguration(ctx context.Context, id string) ApiGetPluginsByIdConfigurationRequest
 
@@ -66,13 +65,13 @@ type PluginServiceAPI interface {
 	GetPluginsByIdConfigurationExecute(r ApiGetPluginsByIdConfigurationRequest) (*http.Response, error)
 
 	/*
-	GetPluginsByIdThumb Gets a plugin thumb image
+		GetPluginsByIdThumb Gets a plugin thumb image
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Plugin Id
-	@return ApiGetPluginsByIdThumbRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Plugin Id
+		@return ApiGetPluginsByIdThumbRequest
 	*/
 	GetPluginsByIdThumb(ctx context.Context, id string) ApiGetPluginsByIdThumbRequest
 
@@ -80,13 +79,13 @@ type PluginServiceAPI interface {
 	GetPluginsByIdThumbExecute(r ApiGetPluginsByIdThumbRequest) (*http.Response, error)
 
 	/*
-	PostPluginsByIdConfiguration Updates a plugin's configuration
+		PostPluginsByIdConfiguration Updates a plugin's configuration
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Plugin Id
-	@return ApiPostPluginsByIdConfigurationRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Plugin Id
+		@return ApiPostPluginsByIdConfigurationRequest
 	*/
 	PostPluginsByIdConfiguration(ctx context.Context, id string) ApiPostPluginsByIdConfigurationRequest
 
@@ -94,13 +93,13 @@ type PluginServiceAPI interface {
 	PostPluginsByIdConfigurationExecute(r ApiPostPluginsByIdConfigurationRequest) (*http.Response, error)
 
 	/*
-	PostPluginsByIdDelete Uninstalls a plugin
+		PostPluginsByIdDelete Uninstalls a plugin
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Plugin Id
-	@return ApiPostPluginsByIdDeleteRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Plugin Id
+		@return ApiPostPluginsByIdDeleteRequest
 	*/
 	PostPluginsByIdDelete(ctx context.Context, id string) ApiPostPluginsByIdDeleteRequest
 
@@ -112,9 +111,9 @@ type PluginServiceAPI interface {
 type PluginServiceAPIService service
 
 type ApiDeletePluginsByIdRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService PluginServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiDeletePluginsByIdRequest) Execute() (*http.Response, error) {
@@ -126,24 +125,24 @@ DeletePluginsById Uninstalls a plugin
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Plugin Id
- @return ApiDeletePluginsByIdRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Plugin Id
+	@return ApiDeletePluginsByIdRequest
 */
 func (a *PluginServiceAPIService) DeletePluginsById(ctx context.Context, id string) ApiDeletePluginsByIdRequest {
 	return ApiDeletePluginsByIdRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *PluginServiceAPIService) DeletePluginsByIdExecute(r ApiDeletePluginsByIdRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodDelete
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodDelete
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PluginServiceAPIService.DeletePluginsById")
@@ -218,7 +217,7 @@ func (a *PluginServiceAPIService) DeletePluginsByIdExecute(r ApiDeletePluginsByI
 }
 
 type ApiGetPluginsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService PluginServiceAPI
 }
 
@@ -231,24 +230,25 @@ GetPlugins Gets a list of currently installed plugins
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetPluginsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetPluginsRequest
 */
 func (a *PluginServiceAPIService) GetPlugins(ctx context.Context) ApiGetPluginsRequest {
 	return ApiGetPluginsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return []PluginsPluginInfo
+//
+//	@return []PluginsPluginInfo
 func (a *PluginServiceAPIService) GetPluginsExecute(r ApiGetPluginsRequest) ([]PluginsPluginInfo, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []PluginsPluginInfo
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue []PluginsPluginInfo
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PluginServiceAPIService.GetPlugins")
@@ -331,9 +331,9 @@ func (a *PluginServiceAPIService) GetPluginsExecute(r ApiGetPluginsRequest) ([]P
 }
 
 type ApiGetPluginsByIdConfigurationRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService PluginServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiGetPluginsByIdConfigurationRequest) Execute() (*http.Response, error) {
@@ -345,24 +345,24 @@ GetPluginsByIdConfiguration Gets a plugin's configuration
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Plugin Id
- @return ApiGetPluginsByIdConfigurationRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Plugin Id
+	@return ApiGetPluginsByIdConfigurationRequest
 */
 func (a *PluginServiceAPIService) GetPluginsByIdConfiguration(ctx context.Context, id string) ApiGetPluginsByIdConfigurationRequest {
 	return ApiGetPluginsByIdConfigurationRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *PluginServiceAPIService) GetPluginsByIdConfigurationExecute(r ApiGetPluginsByIdConfigurationRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PluginServiceAPIService.GetPluginsByIdConfiguration")
@@ -437,9 +437,9 @@ func (a *PluginServiceAPIService) GetPluginsByIdConfigurationExecute(r ApiGetPlu
 }
 
 type ApiGetPluginsByIdThumbRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService PluginServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiGetPluginsByIdThumbRequest) Execute() (*http.Response, error) {
@@ -451,24 +451,24 @@ GetPluginsByIdThumb Gets a plugin thumb image
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Plugin Id
- @return ApiGetPluginsByIdThumbRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Plugin Id
+	@return ApiGetPluginsByIdThumbRequest
 */
 func (a *PluginServiceAPIService) GetPluginsByIdThumb(ctx context.Context, id string) ApiGetPluginsByIdThumbRequest {
 	return ApiGetPluginsByIdThumbRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *PluginServiceAPIService) GetPluginsByIdThumbExecute(r ApiGetPluginsByIdThumbRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PluginServiceAPIService.GetPluginsByIdThumb")
@@ -543,10 +543,10 @@ func (a *PluginServiceAPIService) GetPluginsByIdThumbExecute(r ApiGetPluginsById
 }
 
 type ApiPostPluginsByIdConfigurationRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService PluginServiceAPI
-	id string
-	body *os.File
+	id         string
+	body       *os.File
 }
 
 // Binary stream
@@ -564,24 +564,24 @@ PostPluginsByIdConfiguration Updates a plugin's configuration
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Plugin Id
- @return ApiPostPluginsByIdConfigurationRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Plugin Id
+	@return ApiPostPluginsByIdConfigurationRequest
 */
 func (a *PluginServiceAPIService) PostPluginsByIdConfiguration(ctx context.Context, id string) ApiPostPluginsByIdConfigurationRequest {
 	return ApiPostPluginsByIdConfigurationRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *PluginServiceAPIService) PostPluginsByIdConfigurationExecute(r ApiPostPluginsByIdConfigurationRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PluginServiceAPIService.PostPluginsByIdConfiguration")
@@ -661,9 +661,9 @@ func (a *PluginServiceAPIService) PostPluginsByIdConfigurationExecute(r ApiPostP
 }
 
 type ApiPostPluginsByIdDeleteRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService PluginServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiPostPluginsByIdDeleteRequest) Execute() (*http.Response, error) {
@@ -675,24 +675,24 @@ PostPluginsByIdDelete Uninstalls a plugin
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Plugin Id
- @return ApiPostPluginsByIdDeleteRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Plugin Id
+	@return ApiPostPluginsByIdDeleteRequest
 */
 func (a *PluginServiceAPIService) PostPluginsByIdDelete(ctx context.Context, id string) ApiPostPluginsByIdDeleteRequest {
 	return ApiPostPluginsByIdDeleteRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *PluginServiceAPIService) PostPluginsByIdDeleteExecute(r ApiPostPluginsByIdDeleteRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PluginServiceAPIService.PostPluginsByIdDelete")

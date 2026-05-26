@@ -19,16 +19,15 @@ import (
 	"os"
 )
 
-
 type SubtitleOptionsServiceAPI interface {
 
 	/*
-	GetEncodingSubtitleoptions Gets the subtitle options
+		GetEncodingSubtitleoptions Gets the subtitle options
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetEncodingSubtitleoptionsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetEncodingSubtitleoptionsRequest
 	*/
 	GetEncodingSubtitleoptions(ctx context.Context) ApiGetEncodingSubtitleoptionsRequest
 
@@ -37,12 +36,12 @@ type SubtitleOptionsServiceAPI interface {
 	GetEncodingSubtitleoptionsExecute(r ApiGetEncodingSubtitleoptionsRequest) (*EditObjectContainer, *http.Response, error)
 
 	/*
-	PostEncodingSubtitleoptions Updates the subtitle options
+		PostEncodingSubtitleoptions Updates the subtitle options
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostEncodingSubtitleoptionsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostEncodingSubtitleoptionsRequest
 	*/
 	PostEncodingSubtitleoptions(ctx context.Context) ApiPostEncodingSubtitleoptionsRequest
 
@@ -54,7 +53,7 @@ type SubtitleOptionsServiceAPI interface {
 type SubtitleOptionsServiceAPIService service
 
 type ApiGetEncodingSubtitleoptionsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SubtitleOptionsServiceAPI
 }
 
@@ -67,24 +66,25 @@ GetEncodingSubtitleoptions Gets the subtitle options
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetEncodingSubtitleoptionsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetEncodingSubtitleoptionsRequest
 */
 func (a *SubtitleOptionsServiceAPIService) GetEncodingSubtitleoptions(ctx context.Context) ApiGetEncodingSubtitleoptionsRequest {
 	return ApiGetEncodingSubtitleoptionsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return EditObjectContainer
+//
+//	@return EditObjectContainer
 func (a *SubtitleOptionsServiceAPIService) GetEncodingSubtitleoptionsExecute(r ApiGetEncodingSubtitleoptionsRequest) (*EditObjectContainer, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *EditObjectContainer
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *EditObjectContainer
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SubtitleOptionsServiceAPIService.GetEncodingSubtitleoptions")
@@ -167,9 +167,9 @@ func (a *SubtitleOptionsServiceAPIService) GetEncodingSubtitleoptionsExecute(r A
 }
 
 type ApiPostEncodingSubtitleoptionsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SubtitleOptionsServiceAPI
-	body *os.File
+	body       *os.File
 }
 
 // Binary stream
@@ -187,22 +187,22 @@ PostEncodingSubtitleoptions Updates the subtitle options
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostEncodingSubtitleoptionsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostEncodingSubtitleoptionsRequest
 */
 func (a *SubtitleOptionsServiceAPIService) PostEncodingSubtitleoptions(ctx context.Context) ApiPostEncodingSubtitleoptionsRequest {
 	return ApiPostEncodingSubtitleoptionsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *SubtitleOptionsServiceAPIService) PostEncodingSubtitleoptionsExecute(r ApiPostEncodingSubtitleoptionsRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SubtitleOptionsServiceAPIService.PostEncodingSubtitleoptions")

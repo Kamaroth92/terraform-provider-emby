@@ -20,8 +20,8 @@ var _ MappedNullable = &AccessSchedule{}
 // AccessSchedule struct for AccessSchedule
 type AccessSchedule struct {
 	DayOfWeek *DynamicDayOfWeek `json:"DayOfWeek,omitempty"`
-	StartHour *float64 `json:"StartHour,omitempty"`
-	EndHour *float64 `json:"EndHour,omitempty"`
+	StartHour *float64          `json:"StartHour,omitempty"`
+	EndHour   *float64          `json:"EndHour,omitempty"`
 }
 
 // NewAccessSchedule instantiates a new AccessSchedule object
@@ -138,7 +138,7 @@ func (o *AccessSchedule) SetEndHour(v float64) {
 }
 
 func (o AccessSchedule) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -194,5 +194,3 @@ func (v *NullableAccessSchedule) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

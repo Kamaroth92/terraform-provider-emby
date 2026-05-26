@@ -20,32 +20,32 @@ var _ MappedNullable = &SessionSessionInfo{}
 
 // SessionSessionInfo struct for SessionSessionInfo
 type SessionSessionInfo struct {
-	PlayState *PlayerStateInfo `json:"PlayState,omitempty"`
-	AdditionalUsers []SessionUserInfo `json:"AdditionalUsers,omitempty"`
-	RemoteEndPoint *string `json:"RemoteEndPoint,omitempty"`
-	Protocol *string `json:"Protocol,omitempty"`
-	PlayableMediaTypes []string `json:"PlayableMediaTypes,omitempty"`
-	PlaylistItemId *string `json:"PlaylistItemId,omitempty"`
-	PlaylistIndex *int32 `json:"PlaylistIndex,omitempty"`
-	PlaylistLength *int32 `json:"PlaylistLength,omitempty"`
-	Id *string `json:"Id,omitempty"`
-	ServerId *string `json:"ServerId,omitempty"`
-	UserId *string `json:"UserId,omitempty"`
-	PartyId *string `json:"PartyId,omitempty"`
-	UserName *string `json:"UserName,omitempty"`
-	UserPrimaryImageTag *string `json:"UserPrimaryImageTag,omitempty"`
-	Client *string `json:"Client,omitempty"`
-	LastActivityDate *time.Time `json:"LastActivityDate,omitempty"`
-	DeviceName *string `json:"DeviceName,omitempty"`
-	DeviceType *string `json:"DeviceType,omitempty"`
-	NowPlayingItem *BaseItemDto `json:"NowPlayingItem,omitempty"`
-	InternalDeviceId *int64 `json:"InternalDeviceId,omitempty"`
-	DeviceId *string `json:"DeviceId,omitempty"`
-	ApplicationVersion *string `json:"ApplicationVersion,omitempty"`
-	AppIconUrl *string `json:"AppIconUrl,omitempty"`
-	SupportedCommands []string `json:"SupportedCommands,omitempty"`
-	TranscodingInfo *TranscodingInfo `json:"TranscodingInfo,omitempty"`
-	SupportsRemoteControl *bool `json:"SupportsRemoteControl,omitempty"`
+	PlayState             *PlayerStateInfo  `json:"PlayState,omitempty"`
+	AdditionalUsers       []SessionUserInfo `json:"AdditionalUsers,omitempty"`
+	RemoteEndPoint        *string           `json:"RemoteEndPoint,omitempty"`
+	Protocol              *string           `json:"Protocol,omitempty"`
+	PlayableMediaTypes    []string          `json:"PlayableMediaTypes,omitempty"`
+	PlaylistItemId        *string           `json:"PlaylistItemId,omitempty"`
+	PlaylistIndex         *int32            `json:"PlaylistIndex,omitempty"`
+	PlaylistLength        *int32            `json:"PlaylistLength,omitempty"`
+	Id                    *string           `json:"Id,omitempty"`
+	ServerId              *string           `json:"ServerId,omitempty"`
+	UserId                *string           `json:"UserId,omitempty"`
+	PartyId               *string           `json:"PartyId,omitempty"`
+	UserName              *string           `json:"UserName,omitempty"`
+	UserPrimaryImageTag   *string           `json:"UserPrimaryImageTag,omitempty"`
+	Client                *string           `json:"Client,omitempty"`
+	LastActivityDate      *time.Time        `json:"LastActivityDate,omitempty"`
+	DeviceName            *string           `json:"DeviceName,omitempty"`
+	DeviceType            *string           `json:"DeviceType,omitempty"`
+	NowPlayingItem        *BaseItemDto      `json:"NowPlayingItem,omitempty"`
+	InternalDeviceId      *int64            `json:"InternalDeviceId,omitempty"`
+	DeviceId              *string           `json:"DeviceId,omitempty"`
+	ApplicationVersion    *string           `json:"ApplicationVersion,omitempty"`
+	AppIconUrl            *string           `json:"AppIconUrl,omitempty"`
+	SupportedCommands     []string          `json:"SupportedCommands,omitempty"`
+	TranscodingInfo       *TranscodingInfo  `json:"TranscodingInfo,omitempty"`
+	SupportsRemoteControl *bool             `json:"SupportsRemoteControl,omitempty"`
 }
 
 // NewSessionSessionInfo instantiates a new SessionSessionInfo object
@@ -898,7 +898,7 @@ func (o *SessionSessionInfo) SetSupportsRemoteControl(v bool) {
 }
 
 func (o SessionSessionInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -1023,5 +1023,3 @@ func (v *NullableSessionSessionInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

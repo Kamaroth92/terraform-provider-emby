@@ -1,3 +1,5 @@
+// Copyright (c) HashiCorp, Inc.
+
 /*
 Emby Server REST API (BETA)
 
@@ -11,10 +13,10 @@ package embyclient
 
 import (
 	"context"
+	openapiclient "github.com/Kamaroth92/terraform-provider-emby/client"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func Test_embyclient_ConfigurationServiceAPIService(t *testing.T) {
@@ -24,7 +26,7 @@ func Test_embyclient_ConfigurationServiceAPIService(t *testing.T) {
 
 	t.Run("Test ConfigurationServiceAPIService GetSystemConfiguration", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ConfigurationServiceAPI.GetSystemConfiguration(context.Background()).Execute()
 
@@ -36,7 +38,7 @@ func Test_embyclient_ConfigurationServiceAPIService(t *testing.T) {
 
 	t.Run("Test ConfigurationServiceAPIService GetSystemConfigurationByKey", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var key string
 
@@ -49,7 +51,7 @@ func Test_embyclient_ConfigurationServiceAPIService(t *testing.T) {
 
 	t.Run("Test ConfigurationServiceAPIService PostSystemConfiguration", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.ConfigurationServiceAPI.PostSystemConfiguration(context.Background()).Execute()
 
@@ -60,7 +62,7 @@ func Test_embyclient_ConfigurationServiceAPIService(t *testing.T) {
 
 	t.Run("Test ConfigurationServiceAPIService PostSystemConfigurationByKey", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var key string
 
@@ -73,7 +75,7 @@ func Test_embyclient_ConfigurationServiceAPIService(t *testing.T) {
 
 	t.Run("Test ConfigurationServiceAPIService PostSystemConfigurationPartial", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.ConfigurationServiceAPI.PostSystemConfigurationPartial(context.Background()).Execute()
 

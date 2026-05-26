@@ -20,7 +20,7 @@ type MediaEncodingCodecParameterContext string
 
 // List of MediaEncoding.CodecParameterContext
 const (
-	MEDIAENCODINGCODECPARAMETERCONTEXT_PLAYBACK MediaEncodingCodecParameterContext = "Playback"
+	MEDIAENCODINGCODECPARAMETERCONTEXT_PLAYBACK   MediaEncodingCodecParameterContext = "Playback"
 	MEDIAENCODINGCODECPARAMETERCONTEXT_CONVERSION MediaEncodingCodecParameterContext = "Conversion"
 )
 
@@ -108,4 +108,3 @@ func (v *NullableMediaEncodingCodecParameterContext) UnmarshalJSON(src []byte) e
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

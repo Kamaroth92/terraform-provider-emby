@@ -20,10 +20,10 @@ type ProxyHeaderMode string
 
 // List of ProxyHeaderMode
 const (
-	PROXYHEADERMODE_NONE ProxyHeaderMode = "None"
-	PROXYHEADERMODE_LAN_ADDRESSES_ONLY ProxyHeaderMode = "LanAddressesOnly"
+	PROXYHEADERMODE_NONE                  ProxyHeaderMode = "None"
+	PROXYHEADERMODE_LAN_ADDRESSES_ONLY    ProxyHeaderMode = "LanAddressesOnly"
 	PROXYHEADERMODE_REMOTE_ADDRESSES_ONLY ProxyHeaderMode = "RemoteAddressesOnly"
-	PROXYHEADERMODE_ALL_ADDRESSES ProxyHeaderMode = "AllAddresses"
+	PROXYHEADERMODE_ALL_ADDRESSES         ProxyHeaderMode = "AllAddresses"
 )
 
 // All allowed values of ProxyHeaderMode enum
@@ -112,4 +112,3 @@ func (v *NullableProxyHeaderMode) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

@@ -20,15 +20,15 @@ var _ MappedNullable = &SyncedItem{}
 
 // SyncedItem struct for SyncedItem
 type SyncedItem struct {
-	ServerId *string `json:"ServerId,omitempty"`
-	SyncJobId *int64 `json:"SyncJobId,omitempty"`
-	SyncJobName *string `json:"SyncJobName,omitempty"`
-	SyncJobDateCreated *time.Time `json:"SyncJobDateCreated,omitempty"`
-	SyncJobItemId *int64 `json:"SyncJobItemId,omitempty"`
-	OriginalFileName *string `json:"OriginalFileName,omitempty"`
-	Item *BaseItemDto `json:"Item,omitempty"`
-	UserId *string `json:"UserId,omitempty"`
-	AdditionalFiles []ItemFileInfo `json:"AdditionalFiles,omitempty"`
+	ServerId           *string        `json:"ServerId,omitempty"`
+	SyncJobId          *int64         `json:"SyncJobId,omitempty"`
+	SyncJobName        *string        `json:"SyncJobName,omitempty"`
+	SyncJobDateCreated *time.Time     `json:"SyncJobDateCreated,omitempty"`
+	SyncJobItemId      *int64         `json:"SyncJobItemId,omitempty"`
+	OriginalFileName   *string        `json:"OriginalFileName,omitempty"`
+	Item               *BaseItemDto   `json:"Item,omitempty"`
+	UserId             *string        `json:"UserId,omitempty"`
+	AdditionalFiles    []ItemFileInfo `json:"AdditionalFiles,omitempty"`
 }
 
 // NewSyncedItem instantiates a new SyncedItem object
@@ -337,7 +337,7 @@ func (o *SyncedItem) SetAdditionalFiles(v []ItemFileInfo) {
 }
 
 func (o SyncedItem) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -411,5 +411,3 @@ func (v *NullableSyncedItem) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

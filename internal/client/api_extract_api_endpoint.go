@@ -18,16 +18,15 @@ import (
 	"net/url"
 )
 
-
 type ExtractApiEndpointAPI interface {
 
 	/*
-	GetChapterApiExtractTheme Extract the Theme chromaprint
+		GetChapterApiExtractTheme Extract the Theme chromaprint
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetChapterApiExtractThemeRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetChapterApiExtractThemeRequest
 	*/
 	GetChapterApiExtractTheme(ctx context.Context) ApiGetChapterApiExtractThemeRequest
 
@@ -40,10 +39,10 @@ type ExtractApiEndpointAPI interface {
 type ExtractApiEndpointAPIService service
 
 type ApiGetChapterApiExtractThemeRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService ExtractApiEndpointAPI
-	id *int32
-	type_ *int32
+	id         *int32
+	type_      *int32
 }
 
 // item id
@@ -67,24 +66,25 @@ GetChapterApiExtractTheme Extract the Theme chromaprint
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetChapterApiExtractThemeRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetChapterApiExtractThemeRequest
 */
 func (a *ExtractApiEndpointAPIService) GetChapterApiExtractTheme(ctx context.Context) ApiGetChapterApiExtractThemeRequest {
 	return ApiGetChapterApiExtractThemeRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return map[string]interface{}
+//
+//	@return map[string]interface{}
 func (a *ExtractApiEndpointAPIService) GetChapterApiExtractThemeExecute(r ApiGetChapterApiExtractThemeRequest) (map[string]interface{}, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  map[string]interface{}
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue map[string]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ExtractApiEndpointAPIService.GetChapterApiExtractTheme")

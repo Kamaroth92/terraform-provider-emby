@@ -20,17 +20,16 @@ import (
 	"time"
 )
 
-
 type ContentServiceAPI interface {
 
 	/*
-	GetUsersByUseridHomesections Method for GetUsersByUseridHomesections
+		GetUsersByUseridHomesections Method for GetUsersByUseridHomesections
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param userId User Id
-	@return ApiGetUsersByUseridHomesectionsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param userId User Id
+		@return ApiGetUsersByUseridHomesectionsRequest
 	*/
 	GetUsersByUseridHomesections(ctx context.Context, userId string) ApiGetUsersByUseridHomesectionsRequest
 
@@ -39,14 +38,14 @@ type ContentServiceAPI interface {
 	GetUsersByUseridHomesectionsExecute(r ApiGetUsersByUseridHomesectionsRequest) ([]ContentSection, *http.Response, error)
 
 	/*
-	GetUsersByUseridSectionsBySectionidItems Method for GetUsersByUseridSectionsBySectionidItems
+		GetUsersByUseridSectionsBySectionidItems Method for GetUsersByUseridSectionsBySectionidItems
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param sectionId
-	@param userId User Id
-	@return ApiGetUsersByUseridSectionsBySectionidItemsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param sectionId
+		@param userId User Id
+		@return ApiGetUsersByUseridSectionsBySectionidItemsRequest
 	*/
 	GetUsersByUseridSectionsBySectionidItems(ctx context.Context, sectionId string, userId string) ApiGetUsersByUseridSectionsBySectionidItemsRequest
 
@@ -59,9 +58,9 @@ type ContentServiceAPI interface {
 type ContentServiceAPIService service
 
 type ApiGetUsersByUseridHomesectionsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService ContentServiceAPI
-	userId string
+	userId     string
 }
 
 func (r ApiGetUsersByUseridHomesectionsRequest) Execute() ([]ContentSection, *http.Response, error) {
@@ -73,26 +72,27 @@ GetUsersByUseridHomesections Method for GetUsersByUseridHomesections
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param userId User Id
- @return ApiGetUsersByUseridHomesectionsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param userId User Id
+	@return ApiGetUsersByUseridHomesectionsRequest
 */
 func (a *ContentServiceAPIService) GetUsersByUseridHomesections(ctx context.Context, userId string) ApiGetUsersByUseridHomesectionsRequest {
 	return ApiGetUsersByUseridHomesectionsRequest{
 		ApiService: a,
-		ctx: ctx,
-		userId: userId,
+		ctx:        ctx,
+		userId:     userId,
 	}
 }
 
 // Execute executes the request
-//  @return []ContentSection
+//
+//	@return []ContentSection
 func (a *ContentServiceAPIService) GetUsersByUseridHomesectionsExecute(r ApiGetUsersByUseridHomesectionsRequest) ([]ContentSection, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []ContentSection
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue []ContentSection
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ContentServiceAPIService.GetUsersByUseridHomesections")
@@ -176,108 +176,108 @@ func (a *ContentServiceAPIService) GetUsersByUseridHomesectionsExecute(r ApiGetU
 }
 
 type ApiGetUsersByUseridSectionsBySectionidItemsRequest struct {
-	ctx context.Context
-	ApiService ContentServiceAPI
-	sectionId string
-	userId string
-	artistType *string
-	maxOfficialRating *string
-	hasThemeSong *bool
-	hasThemeVideo *bool
-	hasSubtitles *bool
-	hasSpecialFeature *bool
-	hasTrailer *bool
-	isSpecialSeason *bool
-	adjacentTo *string
-	startItemId *string
-	minIndexNumber *int32
-	minStartDate *time.Time
-	maxStartDate *time.Time
-	minEndDate *time.Time
-	maxEndDate *time.Time
-	minPlayers *int32
-	maxPlayers *int32
-	parentIndexNumber *int32
-	hasParentalRating *bool
-	isHD *bool
-	isUnaired *bool
-	minCommunityRating *float64
-	minCriticRating *float64
-	airedDuringSeason *int32
-	minPremiereDate *time.Time
-	minDateLastSaved *time.Time
-	minDateLastSavedForUser *time.Time
-	maxPremiereDate *time.Time
-	hasOverview *bool
-	hasImdbId *bool
-	hasTmdbId *bool
-	hasTvdbId *bool
-	excludeItemIds *string
-	startIndex *int32
-	limit *int32
-	recursive *bool
-	searchTerm *string
-	sortOrder *string
-	parentId *string
-	fields *string
-	excludeItemTypes *string
-	includeItemTypes *string
-	anyProviderIdEquals *string
-	filters *string
-	isFavorite *bool
-	isMovie *bool
-	isSeries *bool
-	isFolder *bool
-	isNews *bool
-	isKids *bool
-	isSports *bool
-	isNew *bool
-	isPremiere *bool
-	isNewOrPremiere *bool
-	isRepeat *bool
-	projectToMedia *bool
-	mediaTypes *string
-	imageTypes *string
-	sortBy *string
-	isPlayed *bool
-	genres *string
-	officialRatings *string
-	tags *string
-	excludeTags *string
-	years *string
-	enableImages *bool
-	enableUserData *bool
-	imageTypeLimit *int32
-	enableImageTypes *string
-	person *string
-	personIds *string
-	personTypes *string
-	studios *string
-	studioIds *string
-	artists *string
-	artistIds *string
-	albums *string
-	ids *string
-	videoTypes *string
-	containers *string
-	audioCodecs *string
-	audioLayouts *string
-	videoCodecs *string
-	extendedVideoTypes *string
-	subtitleCodecs *string
-	path *string
-	minOfficialRating *string
-	isLocked *bool
-	isPlaceHolder *bool
-	hasOfficialRating *bool
-	groupItemsIntoCollections *bool
-	is3D *bool
-	seriesStatus *string
-	nameStartsWithOrGreater *string
-	artistStartsWithOrGreater *string
+	ctx                            context.Context
+	ApiService                     ContentServiceAPI
+	sectionId                      string
+	userId                         string
+	artistType                     *string
+	maxOfficialRating              *string
+	hasThemeSong                   *bool
+	hasThemeVideo                  *bool
+	hasSubtitles                   *bool
+	hasSpecialFeature              *bool
+	hasTrailer                     *bool
+	isSpecialSeason                *bool
+	adjacentTo                     *string
+	startItemId                    *string
+	minIndexNumber                 *int32
+	minStartDate                   *time.Time
+	maxStartDate                   *time.Time
+	minEndDate                     *time.Time
+	maxEndDate                     *time.Time
+	minPlayers                     *int32
+	maxPlayers                     *int32
+	parentIndexNumber              *int32
+	hasParentalRating              *bool
+	isHD                           *bool
+	isUnaired                      *bool
+	minCommunityRating             *float64
+	minCriticRating                *float64
+	airedDuringSeason              *int32
+	minPremiereDate                *time.Time
+	minDateLastSaved               *time.Time
+	minDateLastSavedForUser        *time.Time
+	maxPremiereDate                *time.Time
+	hasOverview                    *bool
+	hasImdbId                      *bool
+	hasTmdbId                      *bool
+	hasTvdbId                      *bool
+	excludeItemIds                 *string
+	startIndex                     *int32
+	limit                          *int32
+	recursive                      *bool
+	searchTerm                     *string
+	sortOrder                      *string
+	parentId                       *string
+	fields                         *string
+	excludeItemTypes               *string
+	includeItemTypes               *string
+	anyProviderIdEquals            *string
+	filters                        *string
+	isFavorite                     *bool
+	isMovie                        *bool
+	isSeries                       *bool
+	isFolder                       *bool
+	isNews                         *bool
+	isKids                         *bool
+	isSports                       *bool
+	isNew                          *bool
+	isPremiere                     *bool
+	isNewOrPremiere                *bool
+	isRepeat                       *bool
+	projectToMedia                 *bool
+	mediaTypes                     *string
+	imageTypes                     *string
+	sortBy                         *string
+	isPlayed                       *bool
+	genres                         *string
+	officialRatings                *string
+	tags                           *string
+	excludeTags                    *string
+	years                          *string
+	enableImages                   *bool
+	enableUserData                 *bool
+	imageTypeLimit                 *int32
+	enableImageTypes               *string
+	person                         *string
+	personIds                      *string
+	personTypes                    *string
+	studios                        *string
+	studioIds                      *string
+	artists                        *string
+	artistIds                      *string
+	albums                         *string
+	ids                            *string
+	videoTypes                     *string
+	containers                     *string
+	audioCodecs                    *string
+	audioLayouts                   *string
+	videoCodecs                    *string
+	extendedVideoTypes             *string
+	subtitleCodecs                 *string
+	path                           *string
+	minOfficialRating              *string
+	isLocked                       *bool
+	isPlaceHolder                  *bool
+	hasOfficialRating              *bool
+	groupItemsIntoCollections      *bool
+	is3D                           *bool
+	seriesStatus                   *string
+	nameStartsWithOrGreater        *string
+	artistStartsWithOrGreater      *string
 	albumArtistStartsWithOrGreater *string
-	nameStartsWith *string
-	nameLessThan *string
+	nameStartsWith                 *string
+	nameLessThan                   *string
 }
 
 // Artist or AlbumArtist
@@ -877,28 +877,29 @@ GetUsersByUseridSectionsBySectionidItems Method for GetUsersByUseridSectionsBySe
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param sectionId
- @param userId User Id
- @return ApiGetUsersByUseridSectionsBySectionidItemsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param sectionId
+	@param userId User Id
+	@return ApiGetUsersByUseridSectionsBySectionidItemsRequest
 */
 func (a *ContentServiceAPIService) GetUsersByUseridSectionsBySectionidItems(ctx context.Context, sectionId string, userId string) ApiGetUsersByUseridSectionsBySectionidItemsRequest {
 	return ApiGetUsersByUseridSectionsBySectionidItemsRequest{
 		ApiService: a,
-		ctx: ctx,
-		sectionId: sectionId,
-		userId: userId,
+		ctx:        ctx,
+		sectionId:  sectionId,
+		userId:     userId,
 	}
 }
 
 // Execute executes the request
-//  @return QueryResultBaseItemDto
+//
+//	@return QueryResultBaseItemDto
 func (a *ContentServiceAPIService) GetUsersByUseridSectionsBySectionidItemsExecute(r ApiGetUsersByUseridSectionsBySectionidItemsRequest) (*QueryResultBaseItemDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *QueryResultBaseItemDto
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *QueryResultBaseItemDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ContentServiceAPIService.GetUsersByUseridSectionsBySectionidItems")

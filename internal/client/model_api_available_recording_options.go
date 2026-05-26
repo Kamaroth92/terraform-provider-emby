@@ -19,8 +19,8 @@ var _ MappedNullable = &ApiAvailableRecordingOptions{}
 
 // ApiAvailableRecordingOptions struct for ApiAvailableRecordingOptions
 type ApiAvailableRecordingOptions struct {
-	RecordingFolders []ApiNameIdDescriptionPair `json:"RecordingFolders,omitempty"`
-	MovieRecordingFolders []ApiNameIdDescriptionPair `json:"MovieRecordingFolders,omitempty"`
+	RecordingFolders       []ApiNameIdDescriptionPair `json:"RecordingFolders,omitempty"`
+	MovieRecordingFolders  []ApiNameIdDescriptionPair `json:"MovieRecordingFolders,omitempty"`
 	SeriesRecordingFolders []ApiNameIdDescriptionPair `json:"SeriesRecordingFolders,omitempty"`
 }
 
@@ -138,7 +138,7 @@ func (o *ApiAvailableRecordingOptions) SetSeriesRecordingFolders(v []ApiNameIdDe
 }
 
 func (o ApiAvailableRecordingOptions) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -194,5 +194,3 @@ func (v *NullableApiAvailableRecordingOptions) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

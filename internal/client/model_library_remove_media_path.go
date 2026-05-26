@@ -19,9 +19,9 @@ var _ MappedNullable = &LibraryRemoveMediaPath{}
 
 // LibraryRemoveMediaPath struct for LibraryRemoveMediaPath
 type LibraryRemoveMediaPath struct {
-	Id *string `json:"Id,omitempty"`
-	Path *string `json:"Path,omitempty"`
-	RefreshLibrary *bool `json:"RefreshLibrary,omitempty"`
+	Id             *string `json:"Id,omitempty"`
+	Path           *string `json:"Path,omitempty"`
+	RefreshLibrary *bool   `json:"RefreshLibrary,omitempty"`
 }
 
 // NewLibraryRemoveMediaPath instantiates a new LibraryRemoveMediaPath object
@@ -138,7 +138,7 @@ func (o *LibraryRemoveMediaPath) SetRefreshLibrary(v bool) {
 }
 
 func (o LibraryRemoveMediaPath) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -194,5 +194,3 @@ func (v *NullableLibraryRemoveMediaPath) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

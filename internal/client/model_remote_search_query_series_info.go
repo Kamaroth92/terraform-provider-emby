@@ -19,11 +19,11 @@ var _ MappedNullable = &RemoteSearchQuerySeriesInfo{}
 
 // RemoteSearchQuerySeriesInfo struct for RemoteSearchQuerySeriesInfo
 type RemoteSearchQuerySeriesInfo struct {
-	SearchInfo *SeriesInfo `json:"SearchInfo,omitempty"`
-	ItemId *int64 `json:"ItemId,omitempty"`
-	SearchProviderName *string `json:"SearchProviderName,omitempty"`
-	Providers []string `json:"Providers,omitempty"`
-	IncludeDisabledProviders *bool `json:"IncludeDisabledProviders,omitempty"`
+	SearchInfo               *SeriesInfo `json:"SearchInfo,omitempty"`
+	ItemId                   *int64      `json:"ItemId,omitempty"`
+	SearchProviderName       *string     `json:"SearchProviderName,omitempty"`
+	Providers                []string    `json:"Providers,omitempty"`
+	IncludeDisabledProviders *bool       `json:"IncludeDisabledProviders,omitempty"`
 }
 
 // NewRemoteSearchQuerySeriesInfo instantiates a new RemoteSearchQuerySeriesInfo object
@@ -204,7 +204,7 @@ func (o *RemoteSearchQuerySeriesInfo) SetIncludeDisabledProviders(v bool) {
 }
 
 func (o RemoteSearchQuerySeriesInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -266,5 +266,3 @@ func (v *NullableRemoteSearchQuerySeriesInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

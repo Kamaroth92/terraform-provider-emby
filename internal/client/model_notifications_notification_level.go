@@ -20,9 +20,9 @@ type NotificationsNotificationLevel string
 
 // List of Notifications.NotificationLevel
 const (
-	NOTIFICATIONSNOTIFICATIONLEVEL_NORMAL NotificationsNotificationLevel = "Normal"
+	NOTIFICATIONSNOTIFICATIONLEVEL_NORMAL  NotificationsNotificationLevel = "Normal"
 	NOTIFICATIONSNOTIFICATIONLEVEL_WARNING NotificationsNotificationLevel = "Warning"
-	NOTIFICATIONSNOTIFICATIONLEVEL_ERROR NotificationsNotificationLevel = "Error"
+	NOTIFICATIONSNOTIFICATIONLEVEL_ERROR   NotificationsNotificationLevel = "Error"
 )
 
 // All allowed values of NotificationsNotificationLevel enum
@@ -110,4 +110,3 @@ func (v *NullableNotificationsNotificationLevel) UnmarshalJSON(src []byte) error
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

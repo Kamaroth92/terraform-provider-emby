@@ -1,3 +1,5 @@
+// Copyright (c) HashiCorp, Inc.
+
 /*
 Emby Server REST API (BETA)
 
@@ -11,10 +13,10 @@ package embyclient
 
 import (
 	"context"
+	openapiclient "github.com/Kamaroth92/terraform-provider-emby/client"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func Test_embyclient_PlaystateServiceAPIService(t *testing.T) {
@@ -24,7 +26,7 @@ func Test_embyclient_PlaystateServiceAPIService(t *testing.T) {
 
 	t.Run("Test PlaystateServiceAPIService DeleteUsersByUseridPlayeditemsById", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var userId string
 		var id string
@@ -39,7 +41,7 @@ func Test_embyclient_PlaystateServiceAPIService(t *testing.T) {
 
 	t.Run("Test PlaystateServiceAPIService DeleteUsersByUseridPlayingitemsById", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var userId string
 		var id string
@@ -53,7 +55,7 @@ func Test_embyclient_PlaystateServiceAPIService(t *testing.T) {
 
 	t.Run("Test PlaystateServiceAPIService PostSessionsPlaying", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.PlaystateServiceAPI.PostSessionsPlaying(context.Background()).Execute()
 
@@ -64,7 +66,7 @@ func Test_embyclient_PlaystateServiceAPIService(t *testing.T) {
 
 	t.Run("Test PlaystateServiceAPIService PostSessionsPlayingPing", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.PlaystateServiceAPI.PostSessionsPlayingPing(context.Background()).Execute()
 
@@ -75,7 +77,7 @@ func Test_embyclient_PlaystateServiceAPIService(t *testing.T) {
 
 	t.Run("Test PlaystateServiceAPIService PostSessionsPlayingProgress", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.PlaystateServiceAPI.PostSessionsPlayingProgress(context.Background()).Execute()
 
@@ -86,7 +88,7 @@ func Test_embyclient_PlaystateServiceAPIService(t *testing.T) {
 
 	t.Run("Test PlaystateServiceAPIService PostSessionsPlayingStopped", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.PlaystateServiceAPI.PostSessionsPlayingStopped(context.Background()).Execute()
 
@@ -97,7 +99,7 @@ func Test_embyclient_PlaystateServiceAPIService(t *testing.T) {
 
 	t.Run("Test PlaystateServiceAPIService PostUsersByUseridItemsByItemidUserdata", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var userId string
 		var itemId string
@@ -111,7 +113,7 @@ func Test_embyclient_PlaystateServiceAPIService(t *testing.T) {
 
 	t.Run("Test PlaystateServiceAPIService PostUsersByUseridPlayeditemsById", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var userId string
 		var id string
@@ -126,7 +128,7 @@ func Test_embyclient_PlaystateServiceAPIService(t *testing.T) {
 
 	t.Run("Test PlaystateServiceAPIService PostUsersByUseridPlayeditemsByIdDelete", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var userId string
 		var id string
@@ -141,7 +143,7 @@ func Test_embyclient_PlaystateServiceAPIService(t *testing.T) {
 
 	t.Run("Test PlaystateServiceAPIService PostUsersByUseridPlayingitemsById", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var userId string
 		var id string
@@ -155,7 +157,7 @@ func Test_embyclient_PlaystateServiceAPIService(t *testing.T) {
 
 	t.Run("Test PlaystateServiceAPIService PostUsersByUseridPlayingitemsByIdDelete", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var userId string
 		var id string
@@ -169,7 +171,7 @@ func Test_embyclient_PlaystateServiceAPIService(t *testing.T) {
 
 	t.Run("Test PlaystateServiceAPIService PostUsersByUseridPlayingitemsByIdProgress", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var userId string
 		var id string

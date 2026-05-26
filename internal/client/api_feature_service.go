@@ -18,16 +18,15 @@ import (
 	"net/url"
 )
 
-
 type FeatureServiceAPI interface {
 
 	/*
-	GetFeatures Gets a list of installed features
+		GetFeatures Gets a list of installed features
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetFeaturesRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetFeaturesRequest
 	*/
 	GetFeatures(ctx context.Context) ApiGetFeaturesRequest
 
@@ -40,7 +39,7 @@ type FeatureServiceAPI interface {
 type FeatureServiceAPIService service
 
 type ApiGetFeaturesRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService FeatureServiceAPI
 }
 
@@ -53,24 +52,25 @@ GetFeatures Gets a list of installed features
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetFeaturesRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetFeaturesRequest
 */
 func (a *FeatureServiceAPIService) GetFeatures(ctx context.Context) ApiGetFeaturesRequest {
 	return ApiGetFeaturesRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return []FeatureInfo
+//
+//	@return []FeatureInfo
 func (a *FeatureServiceAPIService) GetFeaturesExecute(r ApiGetFeaturesRequest) ([]FeatureInfo, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []FeatureInfo
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue []FeatureInfo
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "FeatureServiceAPIService.GetFeatures")

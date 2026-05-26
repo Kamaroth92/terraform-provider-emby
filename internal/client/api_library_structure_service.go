@@ -18,16 +18,15 @@ import (
 	"net/url"
 )
 
-
 type LibraryStructureServiceAPI interface {
 
 	/*
-	DeleteLibraryVirtualfolders Method for DeleteLibraryVirtualfolders
+		DeleteLibraryVirtualfolders Method for DeleteLibraryVirtualfolders
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiDeleteLibraryVirtualfoldersRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiDeleteLibraryVirtualfoldersRequest
 	*/
 	DeleteLibraryVirtualfolders(ctx context.Context) ApiDeleteLibraryVirtualfoldersRequest
 
@@ -35,12 +34,12 @@ type LibraryStructureServiceAPI interface {
 	DeleteLibraryVirtualfoldersExecute(r ApiDeleteLibraryVirtualfoldersRequest) (*http.Response, error)
 
 	/*
-	DeleteLibraryVirtualfoldersPaths Method for DeleteLibraryVirtualfoldersPaths
+		DeleteLibraryVirtualfoldersPaths Method for DeleteLibraryVirtualfoldersPaths
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiDeleteLibraryVirtualfoldersPathsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiDeleteLibraryVirtualfoldersPathsRequest
 	*/
 	DeleteLibraryVirtualfoldersPaths(ctx context.Context) ApiDeleteLibraryVirtualfoldersPathsRequest
 
@@ -48,12 +47,12 @@ type LibraryStructureServiceAPI interface {
 	DeleteLibraryVirtualfoldersPathsExecute(r ApiDeleteLibraryVirtualfoldersPathsRequest) (*http.Response, error)
 
 	/*
-	GetLibraryVirtualfoldersQuery Method for GetLibraryVirtualfoldersQuery
+		GetLibraryVirtualfoldersQuery Method for GetLibraryVirtualfoldersQuery
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetLibraryVirtualfoldersQueryRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetLibraryVirtualfoldersQueryRequest
 	*/
 	GetLibraryVirtualfoldersQuery(ctx context.Context) ApiGetLibraryVirtualfoldersQueryRequest
 
@@ -62,12 +61,12 @@ type LibraryStructureServiceAPI interface {
 	GetLibraryVirtualfoldersQueryExecute(r ApiGetLibraryVirtualfoldersQueryRequest) (*QueryResultVirtualFolderInfo, *http.Response, error)
 
 	/*
-	PostLibraryVirtualfolders Method for PostLibraryVirtualfolders
+		PostLibraryVirtualfolders Method for PostLibraryVirtualfolders
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostLibraryVirtualfoldersRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostLibraryVirtualfoldersRequest
 	*/
 	PostLibraryVirtualfolders(ctx context.Context) ApiPostLibraryVirtualfoldersRequest
 
@@ -75,12 +74,12 @@ type LibraryStructureServiceAPI interface {
 	PostLibraryVirtualfoldersExecute(r ApiPostLibraryVirtualfoldersRequest) (*http.Response, error)
 
 	/*
-	PostLibraryVirtualfoldersDelete Method for PostLibraryVirtualfoldersDelete
+		PostLibraryVirtualfoldersDelete Method for PostLibraryVirtualfoldersDelete
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostLibraryVirtualfoldersDeleteRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostLibraryVirtualfoldersDeleteRequest
 	*/
 	PostLibraryVirtualfoldersDelete(ctx context.Context) ApiPostLibraryVirtualfoldersDeleteRequest
 
@@ -88,12 +87,12 @@ type LibraryStructureServiceAPI interface {
 	PostLibraryVirtualfoldersDeleteExecute(r ApiPostLibraryVirtualfoldersDeleteRequest) (*http.Response, error)
 
 	/*
-	PostLibraryVirtualfoldersLibraryoptions Method for PostLibraryVirtualfoldersLibraryoptions
+		PostLibraryVirtualfoldersLibraryoptions Method for PostLibraryVirtualfoldersLibraryoptions
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostLibraryVirtualfoldersLibraryoptionsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostLibraryVirtualfoldersLibraryoptionsRequest
 	*/
 	PostLibraryVirtualfoldersLibraryoptions(ctx context.Context) ApiPostLibraryVirtualfoldersLibraryoptionsRequest
 
@@ -101,12 +100,12 @@ type LibraryStructureServiceAPI interface {
 	PostLibraryVirtualfoldersLibraryoptionsExecute(r ApiPostLibraryVirtualfoldersLibraryoptionsRequest) (*http.Response, error)
 
 	/*
-	PostLibraryVirtualfoldersName Method for PostLibraryVirtualfoldersName
+		PostLibraryVirtualfoldersName Method for PostLibraryVirtualfoldersName
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostLibraryVirtualfoldersNameRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostLibraryVirtualfoldersNameRequest
 	*/
 	PostLibraryVirtualfoldersName(ctx context.Context) ApiPostLibraryVirtualfoldersNameRequest
 
@@ -114,12 +113,12 @@ type LibraryStructureServiceAPI interface {
 	PostLibraryVirtualfoldersNameExecute(r ApiPostLibraryVirtualfoldersNameRequest) (*http.Response, error)
 
 	/*
-	PostLibraryVirtualfoldersPaths Method for PostLibraryVirtualfoldersPaths
+		PostLibraryVirtualfoldersPaths Method for PostLibraryVirtualfoldersPaths
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostLibraryVirtualfoldersPathsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostLibraryVirtualfoldersPathsRequest
 	*/
 	PostLibraryVirtualfoldersPaths(ctx context.Context) ApiPostLibraryVirtualfoldersPathsRequest
 
@@ -127,12 +126,12 @@ type LibraryStructureServiceAPI interface {
 	PostLibraryVirtualfoldersPathsExecute(r ApiPostLibraryVirtualfoldersPathsRequest) (*http.Response, error)
 
 	/*
-	PostLibraryVirtualfoldersPathsDelete Method for PostLibraryVirtualfoldersPathsDelete
+		PostLibraryVirtualfoldersPathsDelete Method for PostLibraryVirtualfoldersPathsDelete
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostLibraryVirtualfoldersPathsDeleteRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostLibraryVirtualfoldersPathsDeleteRequest
 	*/
 	PostLibraryVirtualfoldersPathsDelete(ctx context.Context) ApiPostLibraryVirtualfoldersPathsDeleteRequest
 
@@ -140,12 +139,12 @@ type LibraryStructureServiceAPI interface {
 	PostLibraryVirtualfoldersPathsDeleteExecute(r ApiPostLibraryVirtualfoldersPathsDeleteRequest) (*http.Response, error)
 
 	/*
-	PostLibraryVirtualfoldersPathsUpdate Method for PostLibraryVirtualfoldersPathsUpdate
+		PostLibraryVirtualfoldersPathsUpdate Method for PostLibraryVirtualfoldersPathsUpdate
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostLibraryVirtualfoldersPathsUpdateRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostLibraryVirtualfoldersPathsUpdateRequest
 	*/
 	PostLibraryVirtualfoldersPathsUpdate(ctx context.Context) ApiPostLibraryVirtualfoldersPathsUpdateRequest
 
@@ -157,7 +156,7 @@ type LibraryStructureServiceAPI interface {
 type LibraryStructureServiceAPIService service
 
 type ApiDeleteLibraryVirtualfoldersRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LibraryStructureServiceAPI
 }
 
@@ -170,22 +169,22 @@ DeleteLibraryVirtualfolders Method for DeleteLibraryVirtualfolders
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiDeleteLibraryVirtualfoldersRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiDeleteLibraryVirtualfoldersRequest
 */
 func (a *LibraryStructureServiceAPIService) DeleteLibraryVirtualfolders(ctx context.Context) ApiDeleteLibraryVirtualfoldersRequest {
 	return ApiDeleteLibraryVirtualfoldersRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *LibraryStructureServiceAPIService) DeleteLibraryVirtualfoldersExecute(r ApiDeleteLibraryVirtualfoldersRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodDelete
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodDelete
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryStructureServiceAPIService.DeleteLibraryVirtualfolders")
@@ -259,7 +258,7 @@ func (a *LibraryStructureServiceAPIService) DeleteLibraryVirtualfoldersExecute(r
 }
 
 type ApiDeleteLibraryVirtualfoldersPathsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LibraryStructureServiceAPI
 }
 
@@ -272,22 +271,22 @@ DeleteLibraryVirtualfoldersPaths Method for DeleteLibraryVirtualfoldersPaths
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiDeleteLibraryVirtualfoldersPathsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiDeleteLibraryVirtualfoldersPathsRequest
 */
 func (a *LibraryStructureServiceAPIService) DeleteLibraryVirtualfoldersPaths(ctx context.Context) ApiDeleteLibraryVirtualfoldersPathsRequest {
 	return ApiDeleteLibraryVirtualfoldersPathsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *LibraryStructureServiceAPIService) DeleteLibraryVirtualfoldersPathsExecute(r ApiDeleteLibraryVirtualfoldersPathsRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodDelete
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodDelete
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryStructureServiceAPIService.DeleteLibraryVirtualfoldersPaths")
@@ -361,10 +360,10 @@ func (a *LibraryStructureServiceAPIService) DeleteLibraryVirtualfoldersPathsExec
 }
 
 type ApiGetLibraryVirtualfoldersQueryRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LibraryStructureServiceAPI
 	startIndex *int32
-	limit *int32
+	limit      *int32
 }
 
 // Optional. The record index to start at. All items with a lower index will be dropped from the results.
@@ -388,24 +387,25 @@ GetLibraryVirtualfoldersQuery Method for GetLibraryVirtualfoldersQuery
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetLibraryVirtualfoldersQueryRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetLibraryVirtualfoldersQueryRequest
 */
 func (a *LibraryStructureServiceAPIService) GetLibraryVirtualfoldersQuery(ctx context.Context) ApiGetLibraryVirtualfoldersQueryRequest {
 	return ApiGetLibraryVirtualfoldersQueryRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return QueryResultVirtualFolderInfo
+//
+//	@return QueryResultVirtualFolderInfo
 func (a *LibraryStructureServiceAPIService) GetLibraryVirtualfoldersQueryExecute(r ApiGetLibraryVirtualfoldersQueryRequest) (*QueryResultVirtualFolderInfo, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *QueryResultVirtualFolderInfo
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *QueryResultVirtualFolderInfo
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryStructureServiceAPIService.GetLibraryVirtualfoldersQuery")
@@ -494,8 +494,8 @@ func (a *LibraryStructureServiceAPIService) GetLibraryVirtualfoldersQueryExecute
 }
 
 type ApiPostLibraryVirtualfoldersRequest struct {
-	ctx context.Context
-	ApiService LibraryStructureServiceAPI
+	ctx                     context.Context
+	ApiService              LibraryStructureServiceAPI
 	libraryAddVirtualFolder *LibraryAddVirtualFolder
 }
 
@@ -514,22 +514,22 @@ PostLibraryVirtualfolders Method for PostLibraryVirtualfolders
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostLibraryVirtualfoldersRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostLibraryVirtualfoldersRequest
 */
 func (a *LibraryStructureServiceAPIService) PostLibraryVirtualfolders(ctx context.Context) ApiPostLibraryVirtualfoldersRequest {
 	return ApiPostLibraryVirtualfoldersRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *LibraryStructureServiceAPIService) PostLibraryVirtualfoldersExecute(r ApiPostLibraryVirtualfoldersRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryStructureServiceAPIService.PostLibraryVirtualfolders")
@@ -608,8 +608,8 @@ func (a *LibraryStructureServiceAPIService) PostLibraryVirtualfoldersExecute(r A
 }
 
 type ApiPostLibraryVirtualfoldersDeleteRequest struct {
-	ctx context.Context
-	ApiService LibraryStructureServiceAPI
+	ctx                        context.Context
+	ApiService                 LibraryStructureServiceAPI
 	libraryRemoveVirtualFolder *LibraryRemoveVirtualFolder
 }
 
@@ -628,22 +628,22 @@ PostLibraryVirtualfoldersDelete Method for PostLibraryVirtualfoldersDelete
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostLibraryVirtualfoldersDeleteRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostLibraryVirtualfoldersDeleteRequest
 */
 func (a *LibraryStructureServiceAPIService) PostLibraryVirtualfoldersDelete(ctx context.Context) ApiPostLibraryVirtualfoldersDeleteRequest {
 	return ApiPostLibraryVirtualfoldersDeleteRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *LibraryStructureServiceAPIService) PostLibraryVirtualfoldersDeleteExecute(r ApiPostLibraryVirtualfoldersDeleteRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryStructureServiceAPIService.PostLibraryVirtualfoldersDelete")
@@ -722,8 +722,8 @@ func (a *LibraryStructureServiceAPIService) PostLibraryVirtualfoldersDeleteExecu
 }
 
 type ApiPostLibraryVirtualfoldersLibraryoptionsRequest struct {
-	ctx context.Context
-	ApiService LibraryStructureServiceAPI
+	ctx                         context.Context
+	ApiService                  LibraryStructureServiceAPI
 	libraryUpdateLibraryOptions *LibraryUpdateLibraryOptions
 }
 
@@ -742,22 +742,22 @@ PostLibraryVirtualfoldersLibraryoptions Method for PostLibraryVirtualfoldersLibr
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostLibraryVirtualfoldersLibraryoptionsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostLibraryVirtualfoldersLibraryoptionsRequest
 */
 func (a *LibraryStructureServiceAPIService) PostLibraryVirtualfoldersLibraryoptions(ctx context.Context) ApiPostLibraryVirtualfoldersLibraryoptionsRequest {
 	return ApiPostLibraryVirtualfoldersLibraryoptionsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *LibraryStructureServiceAPIService) PostLibraryVirtualfoldersLibraryoptionsExecute(r ApiPostLibraryVirtualfoldersLibraryoptionsRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryStructureServiceAPIService.PostLibraryVirtualfoldersLibraryoptions")
@@ -836,8 +836,8 @@ func (a *LibraryStructureServiceAPIService) PostLibraryVirtualfoldersLibraryopti
 }
 
 type ApiPostLibraryVirtualfoldersNameRequest struct {
-	ctx context.Context
-	ApiService LibraryStructureServiceAPI
+	ctx                        context.Context
+	ApiService                 LibraryStructureServiceAPI
 	libraryRenameVirtualFolder *LibraryRenameVirtualFolder
 }
 
@@ -856,22 +856,22 @@ PostLibraryVirtualfoldersName Method for PostLibraryVirtualfoldersName
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostLibraryVirtualfoldersNameRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostLibraryVirtualfoldersNameRequest
 */
 func (a *LibraryStructureServiceAPIService) PostLibraryVirtualfoldersName(ctx context.Context) ApiPostLibraryVirtualfoldersNameRequest {
 	return ApiPostLibraryVirtualfoldersNameRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *LibraryStructureServiceAPIService) PostLibraryVirtualfoldersNameExecute(r ApiPostLibraryVirtualfoldersNameRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryStructureServiceAPIService.PostLibraryVirtualfoldersName")
@@ -950,8 +950,8 @@ func (a *LibraryStructureServiceAPIService) PostLibraryVirtualfoldersNameExecute
 }
 
 type ApiPostLibraryVirtualfoldersPathsRequest struct {
-	ctx context.Context
-	ApiService LibraryStructureServiceAPI
+	ctx                 context.Context
+	ApiService          LibraryStructureServiceAPI
 	libraryAddMediaPath *LibraryAddMediaPath
 }
 
@@ -970,22 +970,22 @@ PostLibraryVirtualfoldersPaths Method for PostLibraryVirtualfoldersPaths
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostLibraryVirtualfoldersPathsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostLibraryVirtualfoldersPathsRequest
 */
 func (a *LibraryStructureServiceAPIService) PostLibraryVirtualfoldersPaths(ctx context.Context) ApiPostLibraryVirtualfoldersPathsRequest {
 	return ApiPostLibraryVirtualfoldersPathsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *LibraryStructureServiceAPIService) PostLibraryVirtualfoldersPathsExecute(r ApiPostLibraryVirtualfoldersPathsRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryStructureServiceAPIService.PostLibraryVirtualfoldersPaths")
@@ -1064,8 +1064,8 @@ func (a *LibraryStructureServiceAPIService) PostLibraryVirtualfoldersPathsExecut
 }
 
 type ApiPostLibraryVirtualfoldersPathsDeleteRequest struct {
-	ctx context.Context
-	ApiService LibraryStructureServiceAPI
+	ctx                    context.Context
+	ApiService             LibraryStructureServiceAPI
 	libraryRemoveMediaPath *LibraryRemoveMediaPath
 }
 
@@ -1084,22 +1084,22 @@ PostLibraryVirtualfoldersPathsDelete Method for PostLibraryVirtualfoldersPathsDe
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostLibraryVirtualfoldersPathsDeleteRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostLibraryVirtualfoldersPathsDeleteRequest
 */
 func (a *LibraryStructureServiceAPIService) PostLibraryVirtualfoldersPathsDelete(ctx context.Context) ApiPostLibraryVirtualfoldersPathsDeleteRequest {
 	return ApiPostLibraryVirtualfoldersPathsDeleteRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *LibraryStructureServiceAPIService) PostLibraryVirtualfoldersPathsDeleteExecute(r ApiPostLibraryVirtualfoldersPathsDeleteRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryStructureServiceAPIService.PostLibraryVirtualfoldersPathsDelete")
@@ -1178,8 +1178,8 @@ func (a *LibraryStructureServiceAPIService) PostLibraryVirtualfoldersPathsDelete
 }
 
 type ApiPostLibraryVirtualfoldersPathsUpdateRequest struct {
-	ctx context.Context
-	ApiService LibraryStructureServiceAPI
+	ctx                    context.Context
+	ApiService             LibraryStructureServiceAPI
 	libraryUpdateMediaPath *LibraryUpdateMediaPath
 }
 
@@ -1198,22 +1198,22 @@ PostLibraryVirtualfoldersPathsUpdate Method for PostLibraryVirtualfoldersPathsUp
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostLibraryVirtualfoldersPathsUpdateRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostLibraryVirtualfoldersPathsUpdateRequest
 */
 func (a *LibraryStructureServiceAPIService) PostLibraryVirtualfoldersPathsUpdate(ctx context.Context) ApiPostLibraryVirtualfoldersPathsUpdateRequest {
 	return ApiPostLibraryVirtualfoldersPathsUpdateRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *LibraryStructureServiceAPIService) PostLibraryVirtualfoldersPathsUpdateExecute(r ApiPostLibraryVirtualfoldersPathsUpdateRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryStructureServiceAPIService.PostLibraryVirtualfoldersPathsUpdate")

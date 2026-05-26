@@ -19,10 +19,10 @@ var _ MappedNullable = &MediaPathInfo{}
 
 // MediaPathInfo struct for MediaPathInfo
 type MediaPathInfo struct {
-	Path *string `json:"Path,omitempty"`
+	Path        *string `json:"Path,omitempty"`
 	NetworkPath *string `json:"NetworkPath,omitempty"`
-	Username *string `json:"Username,omitempty"`
-	Password *string `json:"Password,omitempty"`
+	Username    *string `json:"Username,omitempty"`
+	Password    *string `json:"Password,omitempty"`
 }
 
 // NewMediaPathInfo instantiates a new MediaPathInfo object
@@ -171,7 +171,7 @@ func (o *MediaPathInfo) SetPassword(v string) {
 }
 
 func (o MediaPathInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -230,5 +230,3 @@ func (v *NullableMediaPathInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

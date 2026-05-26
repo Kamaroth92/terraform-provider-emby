@@ -20,36 +20,36 @@ var _ MappedNullable = &PlaybackProgressInfo{}
 
 // PlaybackProgressInfo struct for PlaybackProgressInfo
 type PlaybackProgressInfo struct {
-	CanSeek *bool `json:"CanSeek,omitempty"`
-	NowPlayingQueue []QueueItem `json:"NowPlayingQueue,omitempty"`
-	PlaylistItemId *string `json:"PlaylistItemId,omitempty"`
-	SessionId *string `json:"SessionId,omitempty"`
-	AudioStreamIndex NullableInt32 `json:"AudioStreamIndex,omitempty"`
-	SubtitleStreamIndex NullableInt32 `json:"SubtitleStreamIndex,omitempty"`
-	IsPaused *bool `json:"IsPaused,omitempty"`
-	PlaylistIndex *int32 `json:"PlaylistIndex,omitempty"`
-	PlaylistLength *int32 `json:"PlaylistLength,omitempty"`
-	IsMuted *bool `json:"IsMuted,omitempty"`
-	RunTimeTicks NullableInt64 `json:"RunTimeTicks,omitempty"`
-	PlaybackStartTimeTicks NullableInt64 `json:"PlaybackStartTimeTicks,omitempty"`
-	VolumeLevel NullableInt32 `json:"VolumeLevel,omitempty"`
-	Brightness NullableInt32 `json:"Brightness,omitempty"`
-	AspectRatio *string `json:"AspectRatio,omitempty"`
-	EventName *ProgressEvent `json:"EventName,omitempty"`
-	PlayMethod *PlayMethod `json:"PlayMethod,omitempty"`
-	RepeatMode *RepeatMode `json:"RepeatMode,omitempty"`
-	SleepTimerMode *SleepTimerMode `json:"SleepTimerMode,omitempty"`
-	SleepTimerEndTime NullableTime `json:"SleepTimerEndTime,omitempty"`
-	Shuffle *bool `json:"Shuffle,omitempty"`
-	SubtitleOffset *int32 `json:"SubtitleOffset,omitempty"`
-	PlaybackRate *float64 `json:"PlaybackRate,omitempty"`
-	PlaylistItemIds []string `json:"PlaylistItemIds,omitempty"`
-	PlaySessionId *string `json:"PlaySessionId,omitempty"`
-	ItemId *string `json:"ItemId,omitempty"`
-	LiveStreamId *string `json:"LiveStreamId,omitempty"`
-	MediaSourceId *string `json:"MediaSourceId,omitempty"`
-	Item *BaseItemDto `json:"Item,omitempty"`
-	PositionTicks NullableInt64 `json:"PositionTicks,omitempty"`
+	CanSeek                *bool           `json:"CanSeek,omitempty"`
+	NowPlayingQueue        []QueueItem     `json:"NowPlayingQueue,omitempty"`
+	PlaylistItemId         *string         `json:"PlaylistItemId,omitempty"`
+	SessionId              *string         `json:"SessionId,omitempty"`
+	AudioStreamIndex       NullableInt32   `json:"AudioStreamIndex,omitempty"`
+	SubtitleStreamIndex    NullableInt32   `json:"SubtitleStreamIndex,omitempty"`
+	IsPaused               *bool           `json:"IsPaused,omitempty"`
+	PlaylistIndex          *int32          `json:"PlaylistIndex,omitempty"`
+	PlaylistLength         *int32          `json:"PlaylistLength,omitempty"`
+	IsMuted                *bool           `json:"IsMuted,omitempty"`
+	RunTimeTicks           NullableInt64   `json:"RunTimeTicks,omitempty"`
+	PlaybackStartTimeTicks NullableInt64   `json:"PlaybackStartTimeTicks,omitempty"`
+	VolumeLevel            NullableInt32   `json:"VolumeLevel,omitempty"`
+	Brightness             NullableInt32   `json:"Brightness,omitempty"`
+	AspectRatio            *string         `json:"AspectRatio,omitempty"`
+	EventName              *ProgressEvent  `json:"EventName,omitempty"`
+	PlayMethod             *PlayMethod     `json:"PlayMethod,omitempty"`
+	RepeatMode             *RepeatMode     `json:"RepeatMode,omitempty"`
+	SleepTimerMode         *SleepTimerMode `json:"SleepTimerMode,omitempty"`
+	SleepTimerEndTime      NullableTime    `json:"SleepTimerEndTime,omitempty"`
+	Shuffle                *bool           `json:"Shuffle,omitempty"`
+	SubtitleOffset         *int32          `json:"SubtitleOffset,omitempty"`
+	PlaybackRate           *float64        `json:"PlaybackRate,omitempty"`
+	PlaylistItemIds        []string        `json:"PlaylistItemIds,omitempty"`
+	PlaySessionId          *string         `json:"PlaySessionId,omitempty"`
+	ItemId                 *string         `json:"ItemId,omitempty"`
+	LiveStreamId           *string         `json:"LiveStreamId,omitempty"`
+	MediaSourceId          *string         `json:"MediaSourceId,omitempty"`
+	Item                   *BaseItemDto    `json:"Item,omitempty"`
+	PositionTicks          NullableInt64   `json:"PositionTicks,omitempty"`
 }
 
 // NewPlaybackProgressInfo instantiates a new PlaybackProgressInfo object
@@ -229,6 +229,7 @@ func (o *PlaybackProgressInfo) HasAudioStreamIndex() bool {
 func (o *PlaybackProgressInfo) SetAudioStreamIndex(v int32) {
 	o.AudioStreamIndex.Set(&v)
 }
+
 // SetAudioStreamIndexNil sets the value for AudioStreamIndex to be an explicit nil
 func (o *PlaybackProgressInfo) SetAudioStreamIndexNil() {
 	o.AudioStreamIndex.Set(nil)
@@ -271,6 +272,7 @@ func (o *PlaybackProgressInfo) HasSubtitleStreamIndex() bool {
 func (o *PlaybackProgressInfo) SetSubtitleStreamIndex(v int32) {
 	o.SubtitleStreamIndex.Set(&v)
 }
+
 // SetSubtitleStreamIndexNil sets the value for SubtitleStreamIndex to be an explicit nil
 func (o *PlaybackProgressInfo) SetSubtitleStreamIndexNil() {
 	o.SubtitleStreamIndex.Set(nil)
@@ -441,6 +443,7 @@ func (o *PlaybackProgressInfo) HasRunTimeTicks() bool {
 func (o *PlaybackProgressInfo) SetRunTimeTicks(v int64) {
 	o.RunTimeTicks.Set(&v)
 }
+
 // SetRunTimeTicksNil sets the value for RunTimeTicks to be an explicit nil
 func (o *PlaybackProgressInfo) SetRunTimeTicksNil() {
 	o.RunTimeTicks.Set(nil)
@@ -483,6 +486,7 @@ func (o *PlaybackProgressInfo) HasPlaybackStartTimeTicks() bool {
 func (o *PlaybackProgressInfo) SetPlaybackStartTimeTicks(v int64) {
 	o.PlaybackStartTimeTicks.Set(&v)
 }
+
 // SetPlaybackStartTimeTicksNil sets the value for PlaybackStartTimeTicks to be an explicit nil
 func (o *PlaybackProgressInfo) SetPlaybackStartTimeTicksNil() {
 	o.PlaybackStartTimeTicks.Set(nil)
@@ -525,6 +529,7 @@ func (o *PlaybackProgressInfo) HasVolumeLevel() bool {
 func (o *PlaybackProgressInfo) SetVolumeLevel(v int32) {
 	o.VolumeLevel.Set(&v)
 }
+
 // SetVolumeLevelNil sets the value for VolumeLevel to be an explicit nil
 func (o *PlaybackProgressInfo) SetVolumeLevelNil() {
 	o.VolumeLevel.Set(nil)
@@ -567,6 +572,7 @@ func (o *PlaybackProgressInfo) HasBrightness() bool {
 func (o *PlaybackProgressInfo) SetBrightness(v int32) {
 	o.Brightness.Set(&v)
 }
+
 // SetBrightnessNil sets the value for Brightness to be an explicit nil
 func (o *PlaybackProgressInfo) SetBrightnessNil() {
 	o.Brightness.Set(nil)
@@ -769,6 +775,7 @@ func (o *PlaybackProgressInfo) HasSleepTimerEndTime() bool {
 func (o *PlaybackProgressInfo) SetSleepTimerEndTime(v time.Time) {
 	o.SleepTimerEndTime.Set(&v)
 }
+
 // SetSleepTimerEndTimeNil sets the value for SleepTimerEndTime to be an explicit nil
 func (o *PlaybackProgressInfo) SetSleepTimerEndTimeNil() {
 	o.SleepTimerEndTime.Set(nil)
@@ -1099,6 +1106,7 @@ func (o *PlaybackProgressInfo) HasPositionTicks() bool {
 func (o *PlaybackProgressInfo) SetPositionTicks(v int64) {
 	o.PositionTicks.Set(&v)
 }
+
 // SetPositionTicksNil sets the value for PositionTicks to be an explicit nil
 func (o *PlaybackProgressInfo) SetPositionTicksNil() {
 	o.PositionTicks.Set(nil)
@@ -1110,7 +1118,7 @@ func (o *PlaybackProgressInfo) UnsetPositionTicks() {
 }
 
 func (o PlaybackProgressInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -1247,5 +1255,3 @@ func (v *NullablePlaybackProgressInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

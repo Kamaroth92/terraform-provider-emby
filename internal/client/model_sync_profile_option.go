@@ -19,11 +19,11 @@ var _ MappedNullable = &SyncProfileOption{}
 
 // SyncProfileOption struct for SyncProfileOption
 type SyncProfileOption struct {
-	Name *string `json:"Name,omitempty"`
-	Description *string `json:"Description,omitempty"`
-	Id *string `json:"Id,omitempty"`
-	IsDefault *bool `json:"IsDefault,omitempty"`
-	EnableQualityOptions *bool `json:"EnableQualityOptions,omitempty"`
+	Name                 *string `json:"Name,omitempty"`
+	Description          *string `json:"Description,omitempty"`
+	Id                   *string `json:"Id,omitempty"`
+	IsDefault            *bool   `json:"IsDefault,omitempty"`
+	EnableQualityOptions *bool   `json:"EnableQualityOptions,omitempty"`
 }
 
 // NewSyncProfileOption instantiates a new SyncProfileOption object
@@ -204,7 +204,7 @@ func (o *SyncProfileOption) SetEnableQualityOptions(v bool) {
 }
 
 func (o SyncProfileOption) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -266,5 +266,3 @@ func (v *NullableSyncProfileOption) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

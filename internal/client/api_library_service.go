@@ -20,16 +20,15 @@ import (
 	"time"
 )
 
-
 type LibraryServiceAPI interface {
 
 	/*
-	DeleteItems Deletes an item from the library and file system
+		DeleteItems Deletes an item from the library and file system
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiDeleteItemsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiDeleteItemsRequest
 	*/
 	DeleteItems(ctx context.Context) ApiDeleteItemsRequest
 
@@ -37,13 +36,13 @@ type LibraryServiceAPI interface {
 	DeleteItemsExecute(r ApiDeleteItemsRequest) (*http.Response, error)
 
 	/*
-	DeleteItemsById Deletes an item from the library and file system
+		DeleteItemsById Deletes an item from the library and file system
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiDeleteItemsByIdRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiDeleteItemsByIdRequest
 	*/
 	DeleteItemsById(ctx context.Context, id string) ApiDeleteItemsByIdRequest
 
@@ -51,13 +50,13 @@ type LibraryServiceAPI interface {
 	DeleteItemsByIdExecute(r ApiDeleteItemsByIdRequest) (*http.Response, error)
 
 	/*
-	GetAlbumsByIdSimilar Finds albums similar to a given album.
+		GetAlbumsByIdSimilar Finds albums similar to a given album.
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiGetAlbumsByIdSimilarRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiGetAlbumsByIdSimilarRequest
 	*/
 	GetAlbumsByIdSimilar(ctx context.Context, id string) ApiGetAlbumsByIdSimilarRequest
 
@@ -66,13 +65,13 @@ type LibraryServiceAPI interface {
 	GetAlbumsByIdSimilarExecute(r ApiGetAlbumsByIdSimilarRequest) (*QueryResultBaseItemDto, *http.Response, error)
 
 	/*
-	GetArtistsByIdSimilar Finds albums similar to a given album.
+		GetArtistsByIdSimilar Finds albums similar to a given album.
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiGetArtistsByIdSimilarRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiGetArtistsByIdSimilarRequest
 	*/
 	GetArtistsByIdSimilar(ctx context.Context, id string) ApiGetArtistsByIdSimilarRequest
 
@@ -81,13 +80,13 @@ type LibraryServiceAPI interface {
 	GetArtistsByIdSimilarExecute(r ApiGetArtistsByIdSimilarRequest) (*QueryResultBaseItemDto, *http.Response, error)
 
 	/*
-	GetGamesByIdSimilar Finds games similar to a given game.
+		GetGamesByIdSimilar Finds games similar to a given game.
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiGetGamesByIdSimilarRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiGetGamesByIdSimilarRequest
 	*/
 	GetGamesByIdSimilar(ctx context.Context, id string) ApiGetGamesByIdSimilarRequest
 
@@ -96,13 +95,13 @@ type LibraryServiceAPI interface {
 	GetGamesByIdSimilarExecute(r ApiGetGamesByIdSimilarRequest) (*QueryResultBaseItemDto, *http.Response, error)
 
 	/*
-	GetItemsByIdAncestors Gets all parents of an item
+		GetItemsByIdAncestors Gets all parents of an item
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiGetItemsByIdAncestorsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiGetItemsByIdAncestorsRequest
 	*/
 	GetItemsByIdAncestors(ctx context.Context, id string) ApiGetItemsByIdAncestorsRequest
 
@@ -111,13 +110,13 @@ type LibraryServiceAPI interface {
 	GetItemsByIdAncestorsExecute(r ApiGetItemsByIdAncestorsRequest) ([]BaseItemDto, *http.Response, error)
 
 	/*
-	GetItemsByIdCriticreviews Gets critic reviews for an item
+		GetItemsByIdCriticreviews Gets critic reviews for an item
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiGetItemsByIdCriticreviewsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiGetItemsByIdCriticreviewsRequest
 	*/
 	GetItemsByIdCriticreviews(ctx context.Context, id string) ApiGetItemsByIdCriticreviewsRequest
 
@@ -126,13 +125,13 @@ type LibraryServiceAPI interface {
 	GetItemsByIdCriticreviewsExecute(r ApiGetItemsByIdCriticreviewsRequest) (*QueryResultBaseItemDto, *http.Response, error)
 
 	/*
-	GetItemsByIdDeleteinfo Gets delete info for an item
+		GetItemsByIdDeleteinfo Gets delete info for an item
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiGetItemsByIdDeleteinfoRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiGetItemsByIdDeleteinfoRequest
 	*/
 	GetItemsByIdDeleteinfo(ctx context.Context, id string) ApiGetItemsByIdDeleteinfoRequest
 
@@ -141,13 +140,13 @@ type LibraryServiceAPI interface {
 	GetItemsByIdDeleteinfoExecute(r ApiGetItemsByIdDeleteinfoRequest) (*LibraryDeleteInfo, *http.Response, error)
 
 	/*
-	GetItemsByIdDownload Downloads item media
+		GetItemsByIdDownload Downloads item media
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiGetItemsByIdDownloadRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiGetItemsByIdDownloadRequest
 	*/
 	GetItemsByIdDownload(ctx context.Context, id string) ApiGetItemsByIdDownloadRequest
 
@@ -155,13 +154,13 @@ type LibraryServiceAPI interface {
 	GetItemsByIdDownloadExecute(r ApiGetItemsByIdDownloadRequest) (*http.Response, error)
 
 	/*
-	GetItemsByIdFile Gets the original file of an item
+		GetItemsByIdFile Gets the original file of an item
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiGetItemsByIdFileRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiGetItemsByIdFileRequest
 	*/
 	GetItemsByIdFile(ctx context.Context, id string) ApiGetItemsByIdFileRequest
 
@@ -169,13 +168,13 @@ type LibraryServiceAPI interface {
 	GetItemsByIdFileExecute(r ApiGetItemsByIdFileRequest) (*http.Response, error)
 
 	/*
-	GetItemsByIdSimilar Gets similar items
+		GetItemsByIdSimilar Gets similar items
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiGetItemsByIdSimilarRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiGetItemsByIdSimilarRequest
 	*/
 	GetItemsByIdSimilar(ctx context.Context, id string) ApiGetItemsByIdSimilarRequest
 
@@ -184,13 +183,13 @@ type LibraryServiceAPI interface {
 	GetItemsByIdSimilarExecute(r ApiGetItemsByIdSimilarRequest) (*QueryResultBaseItemDto, *http.Response, error)
 
 	/*
-	GetItemsByIdThememedia Gets theme videos and songs for an item
+		GetItemsByIdThememedia Gets theme videos and songs for an item
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiGetItemsByIdThememediaRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiGetItemsByIdThememediaRequest
 	*/
 	GetItemsByIdThememedia(ctx context.Context, id string) ApiGetItemsByIdThememediaRequest
 
@@ -199,13 +198,13 @@ type LibraryServiceAPI interface {
 	GetItemsByIdThememediaExecute(r ApiGetItemsByIdThememediaRequest) (*AllThemeMediaResult, *http.Response, error)
 
 	/*
-	GetItemsByIdThemesongs Gets theme songs for an item
+		GetItemsByIdThemesongs Gets theme songs for an item
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiGetItemsByIdThemesongsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiGetItemsByIdThemesongsRequest
 	*/
 	GetItemsByIdThemesongs(ctx context.Context, id string) ApiGetItemsByIdThemesongsRequest
 
@@ -214,13 +213,13 @@ type LibraryServiceAPI interface {
 	GetItemsByIdThemesongsExecute(r ApiGetItemsByIdThemesongsRequest) (*ThemeMediaResult, *http.Response, error)
 
 	/*
-	GetItemsByIdThemevideos Gets theme videos for an item
+		GetItemsByIdThemevideos Gets theme videos for an item
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiGetItemsByIdThemevideosRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiGetItemsByIdThemevideosRequest
 	*/
 	GetItemsByIdThemevideos(ctx context.Context, id string) ApiGetItemsByIdThemevideosRequest
 
@@ -229,12 +228,12 @@ type LibraryServiceAPI interface {
 	GetItemsByIdThemevideosExecute(r ApiGetItemsByIdThemevideosRequest) (*ThemeMediaResult, *http.Response, error)
 
 	/*
-	GetItemsCounts Method for GetItemsCounts
+		GetItemsCounts Method for GetItemsCounts
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetItemsCountsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetItemsCountsRequest
 	*/
 	GetItemsCounts(ctx context.Context) ApiGetItemsCountsRequest
 
@@ -243,12 +242,12 @@ type LibraryServiceAPI interface {
 	GetItemsCountsExecute(r ApiGetItemsCountsRequest) (*ItemCounts, *http.Response, error)
 
 	/*
-	GetItemsIntros Gets info to debug intros
+		GetItemsIntros Gets info to debug intros
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetItemsIntrosRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetItemsIntrosRequest
 	*/
 	GetItemsIntros(ctx context.Context) ApiGetItemsIntrosRequest
 
@@ -257,12 +256,12 @@ type LibraryServiceAPI interface {
 	GetItemsIntrosExecute(r ApiGetItemsIntrosRequest) ([]PersistenceIntroDebugInfo, *http.Response, error)
 
 	/*
-	GetLibrariesAvailableoptions Method for GetLibrariesAvailableoptions
+		GetLibrariesAvailableoptions Method for GetLibrariesAvailableoptions
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetLibrariesAvailableoptionsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetLibrariesAvailableoptionsRequest
 	*/
 	GetLibrariesAvailableoptions(ctx context.Context) ApiGetLibrariesAvailableoptionsRequest
 
@@ -271,12 +270,12 @@ type LibraryServiceAPI interface {
 	GetLibrariesAvailableoptionsExecute(r ApiGetLibrariesAvailableoptionsRequest) (*LibraryOptionsResult, *http.Response, error)
 
 	/*
-	GetLibraryMediafolders Gets all user media folders.
+		GetLibraryMediafolders Gets all user media folders.
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetLibraryMediafoldersRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetLibraryMediafoldersRequest
 	*/
 	GetLibraryMediafolders(ctx context.Context) ApiGetLibraryMediafoldersRequest
 
@@ -285,12 +284,12 @@ type LibraryServiceAPI interface {
 	GetLibraryMediafoldersExecute(r ApiGetLibraryMediafoldersRequest) (*QueryResultBaseItemDto, *http.Response, error)
 
 	/*
-	GetLibraryPhysicalpaths Gets a list of physical paths from virtual folders
+		GetLibraryPhysicalpaths Gets a list of physical paths from virtual folders
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetLibraryPhysicalpathsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetLibraryPhysicalpathsRequest
 	*/
 	GetLibraryPhysicalpaths(ctx context.Context) ApiGetLibraryPhysicalpathsRequest
 
@@ -299,12 +298,12 @@ type LibraryServiceAPI interface {
 	GetLibraryPhysicalpathsExecute(r ApiGetLibraryPhysicalpathsRequest) ([]string, *http.Response, error)
 
 	/*
-	GetLibrarySelectablemediafolders Gets all user media folders.
+		GetLibrarySelectablemediafolders Gets all user media folders.
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetLibrarySelectablemediafoldersRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetLibrarySelectablemediafoldersRequest
 	*/
 	GetLibrarySelectablemediafolders(ctx context.Context) ApiGetLibrarySelectablemediafoldersRequest
 
@@ -313,13 +312,13 @@ type LibraryServiceAPI interface {
 	GetLibrarySelectablemediafoldersExecute(r ApiGetLibrarySelectablemediafoldersRequest) ([]LibraryMediaFolder, *http.Response, error)
 
 	/*
-	GetMoviesByIdSimilar Finds movies and trailers similar to a given movie.
+		GetMoviesByIdSimilar Finds movies and trailers similar to a given movie.
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiGetMoviesByIdSimilarRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiGetMoviesByIdSimilarRequest
 	*/
 	GetMoviesByIdSimilar(ctx context.Context, id string) ApiGetMoviesByIdSimilarRequest
 
@@ -328,13 +327,13 @@ type LibraryServiceAPI interface {
 	GetMoviesByIdSimilarExecute(r ApiGetMoviesByIdSimilarRequest) (*QueryResultBaseItemDto, *http.Response, error)
 
 	/*
-	GetShowsByIdSimilar Finds tv shows similar to a given one.
+		GetShowsByIdSimilar Finds tv shows similar to a given one.
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiGetShowsByIdSimilarRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiGetShowsByIdSimilarRequest
 	*/
 	GetShowsByIdSimilar(ctx context.Context, id string) ApiGetShowsByIdSimilarRequest
 
@@ -343,13 +342,13 @@ type LibraryServiceAPI interface {
 	GetShowsByIdSimilarExecute(r ApiGetShowsByIdSimilarRequest) (*QueryResultBaseItemDto, *http.Response, error)
 
 	/*
-	GetTrailersByIdSimilar Finds movies and trailers similar to a given trailer.
+		GetTrailersByIdSimilar Finds movies and trailers similar to a given trailer.
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiGetTrailersByIdSimilarRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiGetTrailersByIdSimilarRequest
 	*/
 	GetTrailersByIdSimilar(ctx context.Context, id string) ApiGetTrailersByIdSimilarRequest
 
@@ -358,13 +357,13 @@ type LibraryServiceAPI interface {
 	GetTrailersByIdSimilarExecute(r ApiGetTrailersByIdSimilarRequest) (*QueryResultBaseItemDto, *http.Response, error)
 
 	/*
-	PostItemsByIdDelete Deletes an item from the library and file system
+		PostItemsByIdDelete Deletes an item from the library and file system
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiPostItemsByIdDeleteRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiPostItemsByIdDeleteRequest
 	*/
 	PostItemsByIdDelete(ctx context.Context, id string) ApiPostItemsByIdDeleteRequest
 
@@ -372,12 +371,12 @@ type LibraryServiceAPI interface {
 	PostItemsByIdDeleteExecute(r ApiPostItemsByIdDeleteRequest) (*http.Response, error)
 
 	/*
-	PostItemsDelete Deletes an item from the library and file system
+		PostItemsDelete Deletes an item from the library and file system
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostItemsDeleteRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostItemsDeleteRequest
 	*/
 	PostItemsDelete(ctx context.Context) ApiPostItemsDeleteRequest
 
@@ -385,12 +384,12 @@ type LibraryServiceAPI interface {
 	PostItemsDeleteExecute(r ApiPostItemsDeleteRequest) (*http.Response, error)
 
 	/*
-	PostLibraryMediaUpdated Reports that new movies have been added by an external source
+		PostLibraryMediaUpdated Reports that new movies have been added by an external source
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostLibraryMediaUpdatedRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostLibraryMediaUpdatedRequest
 	*/
 	PostLibraryMediaUpdated(ctx context.Context) ApiPostLibraryMediaUpdatedRequest
 
@@ -398,12 +397,12 @@ type LibraryServiceAPI interface {
 	PostLibraryMediaUpdatedExecute(r ApiPostLibraryMediaUpdatedRequest) (*http.Response, error)
 
 	/*
-	PostLibraryMoviesAdded Deprecated. Use /Library/Media/Updated
+		PostLibraryMoviesAdded Deprecated. Use /Library/Media/Updated
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostLibraryMoviesAddedRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostLibraryMoviesAddedRequest
 	*/
 	PostLibraryMoviesAdded(ctx context.Context) ApiPostLibraryMoviesAddedRequest
 
@@ -411,12 +410,12 @@ type LibraryServiceAPI interface {
 	PostLibraryMoviesAddedExecute(r ApiPostLibraryMoviesAddedRequest) (*http.Response, error)
 
 	/*
-	PostLibraryMoviesUpdated Deprecated. Use /Library/Media/Updated
+		PostLibraryMoviesUpdated Deprecated. Use /Library/Media/Updated
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostLibraryMoviesUpdatedRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostLibraryMoviesUpdatedRequest
 	*/
 	PostLibraryMoviesUpdated(ctx context.Context) ApiPostLibraryMoviesUpdatedRequest
 
@@ -424,12 +423,12 @@ type LibraryServiceAPI interface {
 	PostLibraryMoviesUpdatedExecute(r ApiPostLibraryMoviesUpdatedRequest) (*http.Response, error)
 
 	/*
-	PostLibraryRefresh Starts a library scan
+		PostLibraryRefresh Starts a library scan
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostLibraryRefreshRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostLibraryRefreshRequest
 	*/
 	PostLibraryRefresh(ctx context.Context) ApiPostLibraryRefreshRequest
 
@@ -437,12 +436,12 @@ type LibraryServiceAPI interface {
 	PostLibraryRefreshExecute(r ApiPostLibraryRefreshRequest) (*http.Response, error)
 
 	/*
-	PostLibrarySeriesAdded Deprecated. Use /Library/Media/Updated
+		PostLibrarySeriesAdded Deprecated. Use /Library/Media/Updated
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostLibrarySeriesAddedRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostLibrarySeriesAddedRequest
 	*/
 	PostLibrarySeriesAdded(ctx context.Context) ApiPostLibrarySeriesAddedRequest
 
@@ -450,12 +449,12 @@ type LibraryServiceAPI interface {
 	PostLibrarySeriesAddedExecute(r ApiPostLibrarySeriesAddedRequest) (*http.Response, error)
 
 	/*
-	PostLibrarySeriesUpdated Deprecated. Use /Library/Media/Updated
+		PostLibrarySeriesUpdated Deprecated. Use /Library/Media/Updated
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostLibrarySeriesUpdatedRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostLibrarySeriesUpdatedRequest
 	*/
 	PostLibrarySeriesUpdated(ctx context.Context) ApiPostLibrarySeriesUpdatedRequest
 
@@ -467,9 +466,9 @@ type LibraryServiceAPI interface {
 type LibraryServiceAPIService service
 
 type ApiDeleteItemsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LibraryServiceAPI
-	ids *string
+	ids        *string
 }
 
 // Ids
@@ -487,22 +486,22 @@ DeleteItems Deletes an item from the library and file system
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiDeleteItemsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiDeleteItemsRequest
 */
 func (a *LibraryServiceAPIService) DeleteItems(ctx context.Context) ApiDeleteItemsRequest {
 	return ApiDeleteItemsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *LibraryServiceAPIService) DeleteItemsExecute(r ApiDeleteItemsRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodDelete
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodDelete
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryServiceAPIService.DeleteItems")
@@ -580,9 +579,9 @@ func (a *LibraryServiceAPIService) DeleteItemsExecute(r ApiDeleteItemsRequest) (
 }
 
 type ApiDeleteItemsByIdRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LibraryServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiDeleteItemsByIdRequest) Execute() (*http.Response, error) {
@@ -594,24 +593,24 @@ DeleteItemsById Deletes an item from the library and file system
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiDeleteItemsByIdRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiDeleteItemsByIdRequest
 */
 func (a *LibraryServiceAPIService) DeleteItemsById(ctx context.Context, id string) ApiDeleteItemsByIdRequest {
 	return ApiDeleteItemsByIdRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *LibraryServiceAPIService) DeleteItemsByIdExecute(r ApiDeleteItemsByIdRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodDelete
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodDelete
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryServiceAPIService.DeleteItemsById")
@@ -686,108 +685,108 @@ func (a *LibraryServiceAPIService) DeleteItemsByIdExecute(r ApiDeleteItemsByIdRe
 }
 
 type ApiGetAlbumsByIdSimilarRequest struct {
-	ctx context.Context
-	ApiService LibraryServiceAPI
-	id string
-	artistType *string
-	maxOfficialRating *string
-	hasThemeSong *bool
-	hasThemeVideo *bool
-	hasSubtitles *bool
-	hasSpecialFeature *bool
-	hasTrailer *bool
-	isSpecialSeason *bool
-	adjacentTo *string
-	startItemId *string
-	minIndexNumber *int32
-	minStartDate *time.Time
-	maxStartDate *time.Time
-	minEndDate *time.Time
-	maxEndDate *time.Time
-	minPlayers *int32
-	maxPlayers *int32
-	parentIndexNumber *int32
-	hasParentalRating *bool
-	isHD *bool
-	isUnaired *bool
-	minCommunityRating *float64
-	minCriticRating *float64
-	airedDuringSeason *int32
-	minPremiereDate *time.Time
-	minDateLastSaved *time.Time
-	minDateLastSavedForUser *time.Time
-	maxPremiereDate *time.Time
-	hasOverview *bool
-	hasImdbId *bool
-	hasTmdbId *bool
-	hasTvdbId *bool
-	excludeItemIds *string
-	startIndex *int32
-	limit *int32
-	recursive *bool
-	searchTerm *string
-	sortOrder *string
-	parentId *string
-	fields *string
-	excludeItemTypes *string
-	includeItemTypes *string
-	anyProviderIdEquals *string
-	filters *string
-	isFavorite *bool
-	isMovie *bool
-	isSeries *bool
-	isFolder *bool
-	isNews *bool
-	isKids *bool
-	isSports *bool
-	isNew *bool
-	isPremiere *bool
-	isNewOrPremiere *bool
-	isRepeat *bool
-	projectToMedia *bool
-	mediaTypes *string
-	imageTypes *string
-	sortBy *string
-	isPlayed *bool
-	genres *string
-	officialRatings *string
-	tags *string
-	excludeTags *string
-	years *string
-	enableImages *bool
-	enableUserData *bool
-	imageTypeLimit *int32
-	enableImageTypes *string
-	person *string
-	personIds *string
-	personTypes *string
-	studios *string
-	studioIds *string
-	artists *string
-	artistIds *string
-	albums *string
-	ids *string
-	videoTypes *string
-	containers *string
-	audioCodecs *string
-	audioLayouts *string
-	videoCodecs *string
-	extendedVideoTypes *string
-	subtitleCodecs *string
-	path *string
-	userId *string
-	minOfficialRating *string
-	isLocked *bool
-	isPlaceHolder *bool
-	hasOfficialRating *bool
-	groupItemsIntoCollections *bool
-	is3D *bool
-	seriesStatus *string
-	nameStartsWithOrGreater *string
-	artistStartsWithOrGreater *string
+	ctx                            context.Context
+	ApiService                     LibraryServiceAPI
+	id                             string
+	artistType                     *string
+	maxOfficialRating              *string
+	hasThemeSong                   *bool
+	hasThemeVideo                  *bool
+	hasSubtitles                   *bool
+	hasSpecialFeature              *bool
+	hasTrailer                     *bool
+	isSpecialSeason                *bool
+	adjacentTo                     *string
+	startItemId                    *string
+	minIndexNumber                 *int32
+	minStartDate                   *time.Time
+	maxStartDate                   *time.Time
+	minEndDate                     *time.Time
+	maxEndDate                     *time.Time
+	minPlayers                     *int32
+	maxPlayers                     *int32
+	parentIndexNumber              *int32
+	hasParentalRating              *bool
+	isHD                           *bool
+	isUnaired                      *bool
+	minCommunityRating             *float64
+	minCriticRating                *float64
+	airedDuringSeason              *int32
+	minPremiereDate                *time.Time
+	minDateLastSaved               *time.Time
+	minDateLastSavedForUser        *time.Time
+	maxPremiereDate                *time.Time
+	hasOverview                    *bool
+	hasImdbId                      *bool
+	hasTmdbId                      *bool
+	hasTvdbId                      *bool
+	excludeItemIds                 *string
+	startIndex                     *int32
+	limit                          *int32
+	recursive                      *bool
+	searchTerm                     *string
+	sortOrder                      *string
+	parentId                       *string
+	fields                         *string
+	excludeItemTypes               *string
+	includeItemTypes               *string
+	anyProviderIdEquals            *string
+	filters                        *string
+	isFavorite                     *bool
+	isMovie                        *bool
+	isSeries                       *bool
+	isFolder                       *bool
+	isNews                         *bool
+	isKids                         *bool
+	isSports                       *bool
+	isNew                          *bool
+	isPremiere                     *bool
+	isNewOrPremiere                *bool
+	isRepeat                       *bool
+	projectToMedia                 *bool
+	mediaTypes                     *string
+	imageTypes                     *string
+	sortBy                         *string
+	isPlayed                       *bool
+	genres                         *string
+	officialRatings                *string
+	tags                           *string
+	excludeTags                    *string
+	years                          *string
+	enableImages                   *bool
+	enableUserData                 *bool
+	imageTypeLimit                 *int32
+	enableImageTypes               *string
+	person                         *string
+	personIds                      *string
+	personTypes                    *string
+	studios                        *string
+	studioIds                      *string
+	artists                        *string
+	artistIds                      *string
+	albums                         *string
+	ids                            *string
+	videoTypes                     *string
+	containers                     *string
+	audioCodecs                    *string
+	audioLayouts                   *string
+	videoCodecs                    *string
+	extendedVideoTypes             *string
+	subtitleCodecs                 *string
+	path                           *string
+	userId                         *string
+	minOfficialRating              *string
+	isLocked                       *bool
+	isPlaceHolder                  *bool
+	hasOfficialRating              *bool
+	groupItemsIntoCollections      *bool
+	is3D                           *bool
+	seriesStatus                   *string
+	nameStartsWithOrGreater        *string
+	artistStartsWithOrGreater      *string
 	albumArtistStartsWithOrGreater *string
-	nameStartsWith *string
-	nameLessThan *string
+	nameStartsWith                 *string
+	nameLessThan                   *string
 }
 
 // Artist or AlbumArtist
@@ -1393,26 +1392,27 @@ GetAlbumsByIdSimilar Finds albums similar to a given album.
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiGetAlbumsByIdSimilarRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiGetAlbumsByIdSimilarRequest
 */
 func (a *LibraryServiceAPIService) GetAlbumsByIdSimilar(ctx context.Context, id string) ApiGetAlbumsByIdSimilarRequest {
 	return ApiGetAlbumsByIdSimilarRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
-//  @return QueryResultBaseItemDto
+//
+//	@return QueryResultBaseItemDto
 func (a *LibraryServiceAPIService) GetAlbumsByIdSimilarExecute(r ApiGetAlbumsByIdSimilarRequest) (*QueryResultBaseItemDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *QueryResultBaseItemDto
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *QueryResultBaseItemDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryServiceAPIService.GetAlbumsByIdSimilar")
@@ -1793,108 +1793,108 @@ func (a *LibraryServiceAPIService) GetAlbumsByIdSimilarExecute(r ApiGetAlbumsByI
 }
 
 type ApiGetArtistsByIdSimilarRequest struct {
-	ctx context.Context
-	ApiService LibraryServiceAPI
-	id string
-	artistType *string
-	maxOfficialRating *string
-	hasThemeSong *bool
-	hasThemeVideo *bool
-	hasSubtitles *bool
-	hasSpecialFeature *bool
-	hasTrailer *bool
-	isSpecialSeason *bool
-	adjacentTo *string
-	startItemId *string
-	minIndexNumber *int32
-	minStartDate *time.Time
-	maxStartDate *time.Time
-	minEndDate *time.Time
-	maxEndDate *time.Time
-	minPlayers *int32
-	maxPlayers *int32
-	parentIndexNumber *int32
-	hasParentalRating *bool
-	isHD *bool
-	isUnaired *bool
-	minCommunityRating *float64
-	minCriticRating *float64
-	airedDuringSeason *int32
-	minPremiereDate *time.Time
-	minDateLastSaved *time.Time
-	minDateLastSavedForUser *time.Time
-	maxPremiereDate *time.Time
-	hasOverview *bool
-	hasImdbId *bool
-	hasTmdbId *bool
-	hasTvdbId *bool
-	excludeItemIds *string
-	startIndex *int32
-	limit *int32
-	recursive *bool
-	searchTerm *string
-	sortOrder *string
-	parentId *string
-	fields *string
-	excludeItemTypes *string
-	includeItemTypes *string
-	anyProviderIdEquals *string
-	filters *string
-	isFavorite *bool
-	isMovie *bool
-	isSeries *bool
-	isFolder *bool
-	isNews *bool
-	isKids *bool
-	isSports *bool
-	isNew *bool
-	isPremiere *bool
-	isNewOrPremiere *bool
-	isRepeat *bool
-	projectToMedia *bool
-	mediaTypes *string
-	imageTypes *string
-	sortBy *string
-	isPlayed *bool
-	genres *string
-	officialRatings *string
-	tags *string
-	excludeTags *string
-	years *string
-	enableImages *bool
-	enableUserData *bool
-	imageTypeLimit *int32
-	enableImageTypes *string
-	person *string
-	personIds *string
-	personTypes *string
-	studios *string
-	studioIds *string
-	artists *string
-	artistIds *string
-	albums *string
-	ids *string
-	videoTypes *string
-	containers *string
-	audioCodecs *string
-	audioLayouts *string
-	videoCodecs *string
-	extendedVideoTypes *string
-	subtitleCodecs *string
-	path *string
-	userId *string
-	minOfficialRating *string
-	isLocked *bool
-	isPlaceHolder *bool
-	hasOfficialRating *bool
-	groupItemsIntoCollections *bool
-	is3D *bool
-	seriesStatus *string
-	nameStartsWithOrGreater *string
-	artistStartsWithOrGreater *string
+	ctx                            context.Context
+	ApiService                     LibraryServiceAPI
+	id                             string
+	artistType                     *string
+	maxOfficialRating              *string
+	hasThemeSong                   *bool
+	hasThemeVideo                  *bool
+	hasSubtitles                   *bool
+	hasSpecialFeature              *bool
+	hasTrailer                     *bool
+	isSpecialSeason                *bool
+	adjacentTo                     *string
+	startItemId                    *string
+	minIndexNumber                 *int32
+	minStartDate                   *time.Time
+	maxStartDate                   *time.Time
+	minEndDate                     *time.Time
+	maxEndDate                     *time.Time
+	minPlayers                     *int32
+	maxPlayers                     *int32
+	parentIndexNumber              *int32
+	hasParentalRating              *bool
+	isHD                           *bool
+	isUnaired                      *bool
+	minCommunityRating             *float64
+	minCriticRating                *float64
+	airedDuringSeason              *int32
+	minPremiereDate                *time.Time
+	minDateLastSaved               *time.Time
+	minDateLastSavedForUser        *time.Time
+	maxPremiereDate                *time.Time
+	hasOverview                    *bool
+	hasImdbId                      *bool
+	hasTmdbId                      *bool
+	hasTvdbId                      *bool
+	excludeItemIds                 *string
+	startIndex                     *int32
+	limit                          *int32
+	recursive                      *bool
+	searchTerm                     *string
+	sortOrder                      *string
+	parentId                       *string
+	fields                         *string
+	excludeItemTypes               *string
+	includeItemTypes               *string
+	anyProviderIdEquals            *string
+	filters                        *string
+	isFavorite                     *bool
+	isMovie                        *bool
+	isSeries                       *bool
+	isFolder                       *bool
+	isNews                         *bool
+	isKids                         *bool
+	isSports                       *bool
+	isNew                          *bool
+	isPremiere                     *bool
+	isNewOrPremiere                *bool
+	isRepeat                       *bool
+	projectToMedia                 *bool
+	mediaTypes                     *string
+	imageTypes                     *string
+	sortBy                         *string
+	isPlayed                       *bool
+	genres                         *string
+	officialRatings                *string
+	tags                           *string
+	excludeTags                    *string
+	years                          *string
+	enableImages                   *bool
+	enableUserData                 *bool
+	imageTypeLimit                 *int32
+	enableImageTypes               *string
+	person                         *string
+	personIds                      *string
+	personTypes                    *string
+	studios                        *string
+	studioIds                      *string
+	artists                        *string
+	artistIds                      *string
+	albums                         *string
+	ids                            *string
+	videoTypes                     *string
+	containers                     *string
+	audioCodecs                    *string
+	audioLayouts                   *string
+	videoCodecs                    *string
+	extendedVideoTypes             *string
+	subtitleCodecs                 *string
+	path                           *string
+	userId                         *string
+	minOfficialRating              *string
+	isLocked                       *bool
+	isPlaceHolder                  *bool
+	hasOfficialRating              *bool
+	groupItemsIntoCollections      *bool
+	is3D                           *bool
+	seriesStatus                   *string
+	nameStartsWithOrGreater        *string
+	artistStartsWithOrGreater      *string
 	albumArtistStartsWithOrGreater *string
-	nameStartsWith *string
-	nameLessThan *string
+	nameStartsWith                 *string
+	nameLessThan                   *string
 }
 
 // Artist or AlbumArtist
@@ -2500,26 +2500,27 @@ GetArtistsByIdSimilar Finds albums similar to a given album.
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiGetArtistsByIdSimilarRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiGetArtistsByIdSimilarRequest
 */
 func (a *LibraryServiceAPIService) GetArtistsByIdSimilar(ctx context.Context, id string) ApiGetArtistsByIdSimilarRequest {
 	return ApiGetArtistsByIdSimilarRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
-//  @return QueryResultBaseItemDto
+//
+//	@return QueryResultBaseItemDto
 func (a *LibraryServiceAPIService) GetArtistsByIdSimilarExecute(r ApiGetArtistsByIdSimilarRequest) (*QueryResultBaseItemDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *QueryResultBaseItemDto
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *QueryResultBaseItemDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryServiceAPIService.GetArtistsByIdSimilar")
@@ -2900,108 +2901,108 @@ func (a *LibraryServiceAPIService) GetArtistsByIdSimilarExecute(r ApiGetArtistsB
 }
 
 type ApiGetGamesByIdSimilarRequest struct {
-	ctx context.Context
-	ApiService LibraryServiceAPI
-	id string
-	artistType *string
-	maxOfficialRating *string
-	hasThemeSong *bool
-	hasThemeVideo *bool
-	hasSubtitles *bool
-	hasSpecialFeature *bool
-	hasTrailer *bool
-	isSpecialSeason *bool
-	adjacentTo *string
-	startItemId *string
-	minIndexNumber *int32
-	minStartDate *time.Time
-	maxStartDate *time.Time
-	minEndDate *time.Time
-	maxEndDate *time.Time
-	minPlayers *int32
-	maxPlayers *int32
-	parentIndexNumber *int32
-	hasParentalRating *bool
-	isHD *bool
-	isUnaired *bool
-	minCommunityRating *float64
-	minCriticRating *float64
-	airedDuringSeason *int32
-	minPremiereDate *time.Time
-	minDateLastSaved *time.Time
-	minDateLastSavedForUser *time.Time
-	maxPremiereDate *time.Time
-	hasOverview *bool
-	hasImdbId *bool
-	hasTmdbId *bool
-	hasTvdbId *bool
-	excludeItemIds *string
-	startIndex *int32
-	limit *int32
-	recursive *bool
-	searchTerm *string
-	sortOrder *string
-	parentId *string
-	fields *string
-	excludeItemTypes *string
-	includeItemTypes *string
-	anyProviderIdEquals *string
-	filters *string
-	isFavorite *bool
-	isMovie *bool
-	isSeries *bool
-	isFolder *bool
-	isNews *bool
-	isKids *bool
-	isSports *bool
-	isNew *bool
-	isPremiere *bool
-	isNewOrPremiere *bool
-	isRepeat *bool
-	projectToMedia *bool
-	mediaTypes *string
-	imageTypes *string
-	sortBy *string
-	isPlayed *bool
-	genres *string
-	officialRatings *string
-	tags *string
-	excludeTags *string
-	years *string
-	enableImages *bool
-	enableUserData *bool
-	imageTypeLimit *int32
-	enableImageTypes *string
-	person *string
-	personIds *string
-	personTypes *string
-	studios *string
-	studioIds *string
-	artists *string
-	artistIds *string
-	albums *string
-	ids *string
-	videoTypes *string
-	containers *string
-	audioCodecs *string
-	audioLayouts *string
-	videoCodecs *string
-	extendedVideoTypes *string
-	subtitleCodecs *string
-	path *string
-	userId *string
-	minOfficialRating *string
-	isLocked *bool
-	isPlaceHolder *bool
-	hasOfficialRating *bool
-	groupItemsIntoCollections *bool
-	is3D *bool
-	seriesStatus *string
-	nameStartsWithOrGreater *string
-	artistStartsWithOrGreater *string
+	ctx                            context.Context
+	ApiService                     LibraryServiceAPI
+	id                             string
+	artistType                     *string
+	maxOfficialRating              *string
+	hasThemeSong                   *bool
+	hasThemeVideo                  *bool
+	hasSubtitles                   *bool
+	hasSpecialFeature              *bool
+	hasTrailer                     *bool
+	isSpecialSeason                *bool
+	adjacentTo                     *string
+	startItemId                    *string
+	minIndexNumber                 *int32
+	minStartDate                   *time.Time
+	maxStartDate                   *time.Time
+	minEndDate                     *time.Time
+	maxEndDate                     *time.Time
+	minPlayers                     *int32
+	maxPlayers                     *int32
+	parentIndexNumber              *int32
+	hasParentalRating              *bool
+	isHD                           *bool
+	isUnaired                      *bool
+	minCommunityRating             *float64
+	minCriticRating                *float64
+	airedDuringSeason              *int32
+	minPremiereDate                *time.Time
+	minDateLastSaved               *time.Time
+	minDateLastSavedForUser        *time.Time
+	maxPremiereDate                *time.Time
+	hasOverview                    *bool
+	hasImdbId                      *bool
+	hasTmdbId                      *bool
+	hasTvdbId                      *bool
+	excludeItemIds                 *string
+	startIndex                     *int32
+	limit                          *int32
+	recursive                      *bool
+	searchTerm                     *string
+	sortOrder                      *string
+	parentId                       *string
+	fields                         *string
+	excludeItemTypes               *string
+	includeItemTypes               *string
+	anyProviderIdEquals            *string
+	filters                        *string
+	isFavorite                     *bool
+	isMovie                        *bool
+	isSeries                       *bool
+	isFolder                       *bool
+	isNews                         *bool
+	isKids                         *bool
+	isSports                       *bool
+	isNew                          *bool
+	isPremiere                     *bool
+	isNewOrPremiere                *bool
+	isRepeat                       *bool
+	projectToMedia                 *bool
+	mediaTypes                     *string
+	imageTypes                     *string
+	sortBy                         *string
+	isPlayed                       *bool
+	genres                         *string
+	officialRatings                *string
+	tags                           *string
+	excludeTags                    *string
+	years                          *string
+	enableImages                   *bool
+	enableUserData                 *bool
+	imageTypeLimit                 *int32
+	enableImageTypes               *string
+	person                         *string
+	personIds                      *string
+	personTypes                    *string
+	studios                        *string
+	studioIds                      *string
+	artists                        *string
+	artistIds                      *string
+	albums                         *string
+	ids                            *string
+	videoTypes                     *string
+	containers                     *string
+	audioCodecs                    *string
+	audioLayouts                   *string
+	videoCodecs                    *string
+	extendedVideoTypes             *string
+	subtitleCodecs                 *string
+	path                           *string
+	userId                         *string
+	minOfficialRating              *string
+	isLocked                       *bool
+	isPlaceHolder                  *bool
+	hasOfficialRating              *bool
+	groupItemsIntoCollections      *bool
+	is3D                           *bool
+	seriesStatus                   *string
+	nameStartsWithOrGreater        *string
+	artistStartsWithOrGreater      *string
 	albumArtistStartsWithOrGreater *string
-	nameStartsWith *string
-	nameLessThan *string
+	nameStartsWith                 *string
+	nameLessThan                   *string
 }
 
 // Artist or AlbumArtist
@@ -3607,26 +3608,27 @@ GetGamesByIdSimilar Finds games similar to a given game.
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiGetGamesByIdSimilarRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiGetGamesByIdSimilarRequest
 */
 func (a *LibraryServiceAPIService) GetGamesByIdSimilar(ctx context.Context, id string) ApiGetGamesByIdSimilarRequest {
 	return ApiGetGamesByIdSimilarRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
-//  @return QueryResultBaseItemDto
+//
+//	@return QueryResultBaseItemDto
 func (a *LibraryServiceAPIService) GetGamesByIdSimilarExecute(r ApiGetGamesByIdSimilarRequest) (*QueryResultBaseItemDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *QueryResultBaseItemDto
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *QueryResultBaseItemDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryServiceAPIService.GetGamesByIdSimilar")
@@ -4007,10 +4009,10 @@ func (a *LibraryServiceAPIService) GetGamesByIdSimilarExecute(r ApiGetGamesByIdS
 }
 
 type ApiGetItemsByIdAncestorsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LibraryServiceAPI
-	id string
-	userId *string
+	id         string
+	userId     *string
 }
 
 // Optional. Filter by user id, and attach user data
@@ -4028,26 +4030,27 @@ GetItemsByIdAncestors Gets all parents of an item
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiGetItemsByIdAncestorsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiGetItemsByIdAncestorsRequest
 */
 func (a *LibraryServiceAPIService) GetItemsByIdAncestors(ctx context.Context, id string) ApiGetItemsByIdAncestorsRequest {
 	return ApiGetItemsByIdAncestorsRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
-//  @return []BaseItemDto
+//
+//	@return []BaseItemDto
 func (a *LibraryServiceAPIService) GetItemsByIdAncestorsExecute(r ApiGetItemsByIdAncestorsRequest) ([]BaseItemDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []BaseItemDto
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue []BaseItemDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryServiceAPIService.GetItemsByIdAncestors")
@@ -4134,11 +4137,11 @@ func (a *LibraryServiceAPIService) GetItemsByIdAncestorsExecute(r ApiGetItemsByI
 }
 
 type ApiGetItemsByIdCriticreviewsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LibraryServiceAPI
-	id string
+	id         string
 	startIndex *int32
-	limit *int32
+	limit      *int32
 }
 
 // Optional. The record index to start at. All items with a lower index will be dropped from the results.
@@ -4162,26 +4165,27 @@ GetItemsByIdCriticreviews Gets critic reviews for an item
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiGetItemsByIdCriticreviewsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiGetItemsByIdCriticreviewsRequest
 */
 func (a *LibraryServiceAPIService) GetItemsByIdCriticreviews(ctx context.Context, id string) ApiGetItemsByIdCriticreviewsRequest {
 	return ApiGetItemsByIdCriticreviewsRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
-//  @return QueryResultBaseItemDto
+//
+//	@return QueryResultBaseItemDto
 func (a *LibraryServiceAPIService) GetItemsByIdCriticreviewsExecute(r ApiGetItemsByIdCriticreviewsRequest) (*QueryResultBaseItemDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *QueryResultBaseItemDto
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *QueryResultBaseItemDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryServiceAPIService.GetItemsByIdCriticreviews")
@@ -4271,9 +4275,9 @@ func (a *LibraryServiceAPIService) GetItemsByIdCriticreviewsExecute(r ApiGetItem
 }
 
 type ApiGetItemsByIdDeleteinfoRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LibraryServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiGetItemsByIdDeleteinfoRequest) Execute() (*LibraryDeleteInfo, *http.Response, error) {
@@ -4285,26 +4289,27 @@ GetItemsByIdDeleteinfo Gets delete info for an item
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiGetItemsByIdDeleteinfoRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiGetItemsByIdDeleteinfoRequest
 */
 func (a *LibraryServiceAPIService) GetItemsByIdDeleteinfo(ctx context.Context, id string) ApiGetItemsByIdDeleteinfoRequest {
 	return ApiGetItemsByIdDeleteinfoRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
-//  @return LibraryDeleteInfo
+//
+//	@return LibraryDeleteInfo
 func (a *LibraryServiceAPIService) GetItemsByIdDeleteinfoExecute(r ApiGetItemsByIdDeleteinfoRequest) (*LibraryDeleteInfo, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *LibraryDeleteInfo
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *LibraryDeleteInfo
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryServiceAPIService.GetItemsByIdDeleteinfo")
@@ -4388,9 +4393,9 @@ func (a *LibraryServiceAPIService) GetItemsByIdDeleteinfoExecute(r ApiGetItemsBy
 }
 
 type ApiGetItemsByIdDownloadRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LibraryServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiGetItemsByIdDownloadRequest) Execute() (*http.Response, error) {
@@ -4402,24 +4407,24 @@ GetItemsByIdDownload Downloads item media
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiGetItemsByIdDownloadRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiGetItemsByIdDownloadRequest
 */
 func (a *LibraryServiceAPIService) GetItemsByIdDownload(ctx context.Context, id string) ApiGetItemsByIdDownloadRequest {
 	return ApiGetItemsByIdDownloadRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *LibraryServiceAPIService) GetItemsByIdDownloadExecute(r ApiGetItemsByIdDownloadRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryServiceAPIService.GetItemsByIdDownload")
@@ -4494,9 +4499,9 @@ func (a *LibraryServiceAPIService) GetItemsByIdDownloadExecute(r ApiGetItemsById
 }
 
 type ApiGetItemsByIdFileRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LibraryServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiGetItemsByIdFileRequest) Execute() (*http.Response, error) {
@@ -4508,24 +4513,24 @@ GetItemsByIdFile Gets the original file of an item
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiGetItemsByIdFileRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiGetItemsByIdFileRequest
 */
 func (a *LibraryServiceAPIService) GetItemsByIdFile(ctx context.Context, id string) ApiGetItemsByIdFileRequest {
 	return ApiGetItemsByIdFileRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *LibraryServiceAPIService) GetItemsByIdFileExecute(r ApiGetItemsByIdFileRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryServiceAPIService.GetItemsByIdFile")
@@ -4600,108 +4605,108 @@ func (a *LibraryServiceAPIService) GetItemsByIdFileExecute(r ApiGetItemsByIdFile
 }
 
 type ApiGetItemsByIdSimilarRequest struct {
-	ctx context.Context
-	ApiService LibraryServiceAPI
-	id string
-	artistType *string
-	maxOfficialRating *string
-	hasThemeSong *bool
-	hasThemeVideo *bool
-	hasSubtitles *bool
-	hasSpecialFeature *bool
-	hasTrailer *bool
-	isSpecialSeason *bool
-	adjacentTo *string
-	startItemId *string
-	minIndexNumber *int32
-	minStartDate *time.Time
-	maxStartDate *time.Time
-	minEndDate *time.Time
-	maxEndDate *time.Time
-	minPlayers *int32
-	maxPlayers *int32
-	parentIndexNumber *int32
-	hasParentalRating *bool
-	isHD *bool
-	isUnaired *bool
-	minCommunityRating *float64
-	minCriticRating *float64
-	airedDuringSeason *int32
-	minPremiereDate *time.Time
-	minDateLastSaved *time.Time
-	minDateLastSavedForUser *time.Time
-	maxPremiereDate *time.Time
-	hasOverview *bool
-	hasImdbId *bool
-	hasTmdbId *bool
-	hasTvdbId *bool
-	excludeItemIds *string
-	startIndex *int32
-	limit *int32
-	recursive *bool
-	searchTerm *string
-	sortOrder *string
-	parentId *string
-	fields *string
-	excludeItemTypes *string
-	includeItemTypes *string
-	anyProviderIdEquals *string
-	filters *string
-	isFavorite *bool
-	isMovie *bool
-	isSeries *bool
-	isFolder *bool
-	isNews *bool
-	isKids *bool
-	isSports *bool
-	isNew *bool
-	isPremiere *bool
-	isNewOrPremiere *bool
-	isRepeat *bool
-	projectToMedia *bool
-	mediaTypes *string
-	imageTypes *string
-	sortBy *string
-	isPlayed *bool
-	genres *string
-	officialRatings *string
-	tags *string
-	excludeTags *string
-	years *string
-	enableImages *bool
-	enableUserData *bool
-	imageTypeLimit *int32
-	enableImageTypes *string
-	person *string
-	personIds *string
-	personTypes *string
-	studios *string
-	studioIds *string
-	artists *string
-	artistIds *string
-	albums *string
-	ids *string
-	videoTypes *string
-	containers *string
-	audioCodecs *string
-	audioLayouts *string
-	videoCodecs *string
-	extendedVideoTypes *string
-	subtitleCodecs *string
-	path *string
-	userId *string
-	minOfficialRating *string
-	isLocked *bool
-	isPlaceHolder *bool
-	hasOfficialRating *bool
-	groupItemsIntoCollections *bool
-	is3D *bool
-	seriesStatus *string
-	nameStartsWithOrGreater *string
-	artistStartsWithOrGreater *string
+	ctx                            context.Context
+	ApiService                     LibraryServiceAPI
+	id                             string
+	artistType                     *string
+	maxOfficialRating              *string
+	hasThemeSong                   *bool
+	hasThemeVideo                  *bool
+	hasSubtitles                   *bool
+	hasSpecialFeature              *bool
+	hasTrailer                     *bool
+	isSpecialSeason                *bool
+	adjacentTo                     *string
+	startItemId                    *string
+	minIndexNumber                 *int32
+	minStartDate                   *time.Time
+	maxStartDate                   *time.Time
+	minEndDate                     *time.Time
+	maxEndDate                     *time.Time
+	minPlayers                     *int32
+	maxPlayers                     *int32
+	parentIndexNumber              *int32
+	hasParentalRating              *bool
+	isHD                           *bool
+	isUnaired                      *bool
+	minCommunityRating             *float64
+	minCriticRating                *float64
+	airedDuringSeason              *int32
+	minPremiereDate                *time.Time
+	minDateLastSaved               *time.Time
+	minDateLastSavedForUser        *time.Time
+	maxPremiereDate                *time.Time
+	hasOverview                    *bool
+	hasImdbId                      *bool
+	hasTmdbId                      *bool
+	hasTvdbId                      *bool
+	excludeItemIds                 *string
+	startIndex                     *int32
+	limit                          *int32
+	recursive                      *bool
+	searchTerm                     *string
+	sortOrder                      *string
+	parentId                       *string
+	fields                         *string
+	excludeItemTypes               *string
+	includeItemTypes               *string
+	anyProviderIdEquals            *string
+	filters                        *string
+	isFavorite                     *bool
+	isMovie                        *bool
+	isSeries                       *bool
+	isFolder                       *bool
+	isNews                         *bool
+	isKids                         *bool
+	isSports                       *bool
+	isNew                          *bool
+	isPremiere                     *bool
+	isNewOrPremiere                *bool
+	isRepeat                       *bool
+	projectToMedia                 *bool
+	mediaTypes                     *string
+	imageTypes                     *string
+	sortBy                         *string
+	isPlayed                       *bool
+	genres                         *string
+	officialRatings                *string
+	tags                           *string
+	excludeTags                    *string
+	years                          *string
+	enableImages                   *bool
+	enableUserData                 *bool
+	imageTypeLimit                 *int32
+	enableImageTypes               *string
+	person                         *string
+	personIds                      *string
+	personTypes                    *string
+	studios                        *string
+	studioIds                      *string
+	artists                        *string
+	artistIds                      *string
+	albums                         *string
+	ids                            *string
+	videoTypes                     *string
+	containers                     *string
+	audioCodecs                    *string
+	audioLayouts                   *string
+	videoCodecs                    *string
+	extendedVideoTypes             *string
+	subtitleCodecs                 *string
+	path                           *string
+	userId                         *string
+	minOfficialRating              *string
+	isLocked                       *bool
+	isPlaceHolder                  *bool
+	hasOfficialRating              *bool
+	groupItemsIntoCollections      *bool
+	is3D                           *bool
+	seriesStatus                   *string
+	nameStartsWithOrGreater        *string
+	artistStartsWithOrGreater      *string
 	albumArtistStartsWithOrGreater *string
-	nameStartsWith *string
-	nameLessThan *string
+	nameStartsWith                 *string
+	nameLessThan                   *string
 }
 
 // Artist or AlbumArtist
@@ -5307,26 +5312,27 @@ GetItemsByIdSimilar Gets similar items
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiGetItemsByIdSimilarRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiGetItemsByIdSimilarRequest
 */
 func (a *LibraryServiceAPIService) GetItemsByIdSimilar(ctx context.Context, id string) ApiGetItemsByIdSimilarRequest {
 	return ApiGetItemsByIdSimilarRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
-//  @return QueryResultBaseItemDto
+//
+//	@return QueryResultBaseItemDto
 func (a *LibraryServiceAPIService) GetItemsByIdSimilarExecute(r ApiGetItemsByIdSimilarRequest) (*QueryResultBaseItemDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *QueryResultBaseItemDto
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *QueryResultBaseItemDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryServiceAPIService.GetItemsByIdSimilar")
@@ -5707,109 +5713,109 @@ func (a *LibraryServiceAPIService) GetItemsByIdSimilarExecute(r ApiGetItemsByIdS
 }
 
 type ApiGetItemsByIdThememediaRequest struct {
-	ctx context.Context
-	ApiService LibraryServiceAPI
-	id string
-	inheritFromParent *bool
-	artistType *string
-	maxOfficialRating *string
-	hasThemeSong *bool
-	hasThemeVideo *bool
-	hasSubtitles *bool
-	hasSpecialFeature *bool
-	hasTrailer *bool
-	isSpecialSeason *bool
-	adjacentTo *string
-	startItemId *string
-	minIndexNumber *int32
-	minStartDate *time.Time
-	maxStartDate *time.Time
-	minEndDate *time.Time
-	maxEndDate *time.Time
-	minPlayers *int32
-	maxPlayers *int32
-	parentIndexNumber *int32
-	hasParentalRating *bool
-	isHD *bool
-	isUnaired *bool
-	minCommunityRating *float64
-	minCriticRating *float64
-	airedDuringSeason *int32
-	minPremiereDate *time.Time
-	minDateLastSaved *time.Time
-	minDateLastSavedForUser *time.Time
-	maxPremiereDate *time.Time
-	hasOverview *bool
-	hasImdbId *bool
-	hasTmdbId *bool
-	hasTvdbId *bool
-	excludeItemIds *string
-	startIndex *int32
-	limit *int32
-	recursive *bool
-	searchTerm *string
-	sortOrder *string
-	parentId *string
-	fields *string
-	excludeItemTypes *string
-	includeItemTypes *string
-	anyProviderIdEquals *string
-	filters *string
-	isFavorite *bool
-	isMovie *bool
-	isSeries *bool
-	isFolder *bool
-	isNews *bool
-	isKids *bool
-	isSports *bool
-	isNew *bool
-	isPremiere *bool
-	isNewOrPremiere *bool
-	isRepeat *bool
-	projectToMedia *bool
-	mediaTypes *string
-	imageTypes *string
-	sortBy *string
-	isPlayed *bool
-	genres *string
-	officialRatings *string
-	tags *string
-	excludeTags *string
-	years *string
-	enableImages *bool
-	enableUserData *bool
-	imageTypeLimit *int32
-	enableImageTypes *string
-	person *string
-	personIds *string
-	personTypes *string
-	studios *string
-	studioIds *string
-	artists *string
-	artistIds *string
-	albums *string
-	ids *string
-	videoTypes *string
-	containers *string
-	audioCodecs *string
-	audioLayouts *string
-	videoCodecs *string
-	extendedVideoTypes *string
-	subtitleCodecs *string
-	path *string
-	userId *string
-	minOfficialRating *string
-	isLocked *bool
-	isPlaceHolder *bool
-	hasOfficialRating *bool
-	groupItemsIntoCollections *bool
-	is3D *bool
-	seriesStatus *string
-	nameStartsWithOrGreater *string
-	artistStartsWithOrGreater *string
+	ctx                            context.Context
+	ApiService                     LibraryServiceAPI
+	id                             string
+	inheritFromParent              *bool
+	artistType                     *string
+	maxOfficialRating              *string
+	hasThemeSong                   *bool
+	hasThemeVideo                  *bool
+	hasSubtitles                   *bool
+	hasSpecialFeature              *bool
+	hasTrailer                     *bool
+	isSpecialSeason                *bool
+	adjacentTo                     *string
+	startItemId                    *string
+	minIndexNumber                 *int32
+	minStartDate                   *time.Time
+	maxStartDate                   *time.Time
+	minEndDate                     *time.Time
+	maxEndDate                     *time.Time
+	minPlayers                     *int32
+	maxPlayers                     *int32
+	parentIndexNumber              *int32
+	hasParentalRating              *bool
+	isHD                           *bool
+	isUnaired                      *bool
+	minCommunityRating             *float64
+	minCriticRating                *float64
+	airedDuringSeason              *int32
+	minPremiereDate                *time.Time
+	minDateLastSaved               *time.Time
+	minDateLastSavedForUser        *time.Time
+	maxPremiereDate                *time.Time
+	hasOverview                    *bool
+	hasImdbId                      *bool
+	hasTmdbId                      *bool
+	hasTvdbId                      *bool
+	excludeItemIds                 *string
+	startIndex                     *int32
+	limit                          *int32
+	recursive                      *bool
+	searchTerm                     *string
+	sortOrder                      *string
+	parentId                       *string
+	fields                         *string
+	excludeItemTypes               *string
+	includeItemTypes               *string
+	anyProviderIdEquals            *string
+	filters                        *string
+	isFavorite                     *bool
+	isMovie                        *bool
+	isSeries                       *bool
+	isFolder                       *bool
+	isNews                         *bool
+	isKids                         *bool
+	isSports                       *bool
+	isNew                          *bool
+	isPremiere                     *bool
+	isNewOrPremiere                *bool
+	isRepeat                       *bool
+	projectToMedia                 *bool
+	mediaTypes                     *string
+	imageTypes                     *string
+	sortBy                         *string
+	isPlayed                       *bool
+	genres                         *string
+	officialRatings                *string
+	tags                           *string
+	excludeTags                    *string
+	years                          *string
+	enableImages                   *bool
+	enableUserData                 *bool
+	imageTypeLimit                 *int32
+	enableImageTypes               *string
+	person                         *string
+	personIds                      *string
+	personTypes                    *string
+	studios                        *string
+	studioIds                      *string
+	artists                        *string
+	artistIds                      *string
+	albums                         *string
+	ids                            *string
+	videoTypes                     *string
+	containers                     *string
+	audioCodecs                    *string
+	audioLayouts                   *string
+	videoCodecs                    *string
+	extendedVideoTypes             *string
+	subtitleCodecs                 *string
+	path                           *string
+	userId                         *string
+	minOfficialRating              *string
+	isLocked                       *bool
+	isPlaceHolder                  *bool
+	hasOfficialRating              *bool
+	groupItemsIntoCollections      *bool
+	is3D                           *bool
+	seriesStatus                   *string
+	nameStartsWithOrGreater        *string
+	artistStartsWithOrGreater      *string
 	albumArtistStartsWithOrGreater *string
-	nameStartsWith *string
-	nameLessThan *string
+	nameStartsWith                 *string
+	nameLessThan                   *string
 }
 
 // Determines whether or not parent items should be searched for theme media.
@@ -6421,26 +6427,27 @@ GetItemsByIdThememedia Gets theme videos and songs for an item
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiGetItemsByIdThememediaRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiGetItemsByIdThememediaRequest
 */
 func (a *LibraryServiceAPIService) GetItemsByIdThememedia(ctx context.Context, id string) ApiGetItemsByIdThememediaRequest {
 	return ApiGetItemsByIdThememediaRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
-//  @return AllThemeMediaResult
+//
+//	@return AllThemeMediaResult
 func (a *LibraryServiceAPIService) GetItemsByIdThememediaExecute(r ApiGetItemsByIdThememediaRequest) (*AllThemeMediaResult, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *AllThemeMediaResult
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *AllThemeMediaResult
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryServiceAPIService.GetItemsByIdThememedia")
@@ -6824,109 +6831,109 @@ func (a *LibraryServiceAPIService) GetItemsByIdThememediaExecute(r ApiGetItemsBy
 }
 
 type ApiGetItemsByIdThemesongsRequest struct {
-	ctx context.Context
-	ApiService LibraryServiceAPI
-	id string
-	inheritFromParent *bool
-	artistType *string
-	maxOfficialRating *string
-	hasThemeSong *bool
-	hasThemeVideo *bool
-	hasSubtitles *bool
-	hasSpecialFeature *bool
-	hasTrailer *bool
-	isSpecialSeason *bool
-	adjacentTo *string
-	startItemId *string
-	minIndexNumber *int32
-	minStartDate *time.Time
-	maxStartDate *time.Time
-	minEndDate *time.Time
-	maxEndDate *time.Time
-	minPlayers *int32
-	maxPlayers *int32
-	parentIndexNumber *int32
-	hasParentalRating *bool
-	isHD *bool
-	isUnaired *bool
-	minCommunityRating *float64
-	minCriticRating *float64
-	airedDuringSeason *int32
-	minPremiereDate *time.Time
-	minDateLastSaved *time.Time
-	minDateLastSavedForUser *time.Time
-	maxPremiereDate *time.Time
-	hasOverview *bool
-	hasImdbId *bool
-	hasTmdbId *bool
-	hasTvdbId *bool
-	excludeItemIds *string
-	startIndex *int32
-	limit *int32
-	recursive *bool
-	searchTerm *string
-	sortOrder *string
-	parentId *string
-	fields *string
-	excludeItemTypes *string
-	includeItemTypes *string
-	anyProviderIdEquals *string
-	filters *string
-	isFavorite *bool
-	isMovie *bool
-	isSeries *bool
-	isFolder *bool
-	isNews *bool
-	isKids *bool
-	isSports *bool
-	isNew *bool
-	isPremiere *bool
-	isNewOrPremiere *bool
-	isRepeat *bool
-	projectToMedia *bool
-	mediaTypes *string
-	imageTypes *string
-	sortBy *string
-	isPlayed *bool
-	genres *string
-	officialRatings *string
-	tags *string
-	excludeTags *string
-	years *string
-	enableImages *bool
-	enableUserData *bool
-	imageTypeLimit *int32
-	enableImageTypes *string
-	person *string
-	personIds *string
-	personTypes *string
-	studios *string
-	studioIds *string
-	artists *string
-	artistIds *string
-	albums *string
-	ids *string
-	videoTypes *string
-	containers *string
-	audioCodecs *string
-	audioLayouts *string
-	videoCodecs *string
-	extendedVideoTypes *string
-	subtitleCodecs *string
-	path *string
-	userId *string
-	minOfficialRating *string
-	isLocked *bool
-	isPlaceHolder *bool
-	hasOfficialRating *bool
-	groupItemsIntoCollections *bool
-	is3D *bool
-	seriesStatus *string
-	nameStartsWithOrGreater *string
-	artistStartsWithOrGreater *string
+	ctx                            context.Context
+	ApiService                     LibraryServiceAPI
+	id                             string
+	inheritFromParent              *bool
+	artistType                     *string
+	maxOfficialRating              *string
+	hasThemeSong                   *bool
+	hasThemeVideo                  *bool
+	hasSubtitles                   *bool
+	hasSpecialFeature              *bool
+	hasTrailer                     *bool
+	isSpecialSeason                *bool
+	adjacentTo                     *string
+	startItemId                    *string
+	minIndexNumber                 *int32
+	minStartDate                   *time.Time
+	maxStartDate                   *time.Time
+	minEndDate                     *time.Time
+	maxEndDate                     *time.Time
+	minPlayers                     *int32
+	maxPlayers                     *int32
+	parentIndexNumber              *int32
+	hasParentalRating              *bool
+	isHD                           *bool
+	isUnaired                      *bool
+	minCommunityRating             *float64
+	minCriticRating                *float64
+	airedDuringSeason              *int32
+	minPremiereDate                *time.Time
+	minDateLastSaved               *time.Time
+	minDateLastSavedForUser        *time.Time
+	maxPremiereDate                *time.Time
+	hasOverview                    *bool
+	hasImdbId                      *bool
+	hasTmdbId                      *bool
+	hasTvdbId                      *bool
+	excludeItemIds                 *string
+	startIndex                     *int32
+	limit                          *int32
+	recursive                      *bool
+	searchTerm                     *string
+	sortOrder                      *string
+	parentId                       *string
+	fields                         *string
+	excludeItemTypes               *string
+	includeItemTypes               *string
+	anyProviderIdEquals            *string
+	filters                        *string
+	isFavorite                     *bool
+	isMovie                        *bool
+	isSeries                       *bool
+	isFolder                       *bool
+	isNews                         *bool
+	isKids                         *bool
+	isSports                       *bool
+	isNew                          *bool
+	isPremiere                     *bool
+	isNewOrPremiere                *bool
+	isRepeat                       *bool
+	projectToMedia                 *bool
+	mediaTypes                     *string
+	imageTypes                     *string
+	sortBy                         *string
+	isPlayed                       *bool
+	genres                         *string
+	officialRatings                *string
+	tags                           *string
+	excludeTags                    *string
+	years                          *string
+	enableImages                   *bool
+	enableUserData                 *bool
+	imageTypeLimit                 *int32
+	enableImageTypes               *string
+	person                         *string
+	personIds                      *string
+	personTypes                    *string
+	studios                        *string
+	studioIds                      *string
+	artists                        *string
+	artistIds                      *string
+	albums                         *string
+	ids                            *string
+	videoTypes                     *string
+	containers                     *string
+	audioCodecs                    *string
+	audioLayouts                   *string
+	videoCodecs                    *string
+	extendedVideoTypes             *string
+	subtitleCodecs                 *string
+	path                           *string
+	userId                         *string
+	minOfficialRating              *string
+	isLocked                       *bool
+	isPlaceHolder                  *bool
+	hasOfficialRating              *bool
+	groupItemsIntoCollections      *bool
+	is3D                           *bool
+	seriesStatus                   *string
+	nameStartsWithOrGreater        *string
+	artistStartsWithOrGreater      *string
 	albumArtistStartsWithOrGreater *string
-	nameStartsWith *string
-	nameLessThan *string
+	nameStartsWith                 *string
+	nameLessThan                   *string
 }
 
 // Determines whether or not parent items should be searched for theme media.
@@ -7538,26 +7545,27 @@ GetItemsByIdThemesongs Gets theme songs for an item
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiGetItemsByIdThemesongsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiGetItemsByIdThemesongsRequest
 */
 func (a *LibraryServiceAPIService) GetItemsByIdThemesongs(ctx context.Context, id string) ApiGetItemsByIdThemesongsRequest {
 	return ApiGetItemsByIdThemesongsRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
-//  @return ThemeMediaResult
+//
+//	@return ThemeMediaResult
 func (a *LibraryServiceAPIService) GetItemsByIdThemesongsExecute(r ApiGetItemsByIdThemesongsRequest) (*ThemeMediaResult, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *ThemeMediaResult
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *ThemeMediaResult
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryServiceAPIService.GetItemsByIdThemesongs")
@@ -7941,109 +7949,109 @@ func (a *LibraryServiceAPIService) GetItemsByIdThemesongsExecute(r ApiGetItemsBy
 }
 
 type ApiGetItemsByIdThemevideosRequest struct {
-	ctx context.Context
-	ApiService LibraryServiceAPI
-	id string
-	inheritFromParent *bool
-	artistType *string
-	maxOfficialRating *string
-	hasThemeSong *bool
-	hasThemeVideo *bool
-	hasSubtitles *bool
-	hasSpecialFeature *bool
-	hasTrailer *bool
-	isSpecialSeason *bool
-	adjacentTo *string
-	startItemId *string
-	minIndexNumber *int32
-	minStartDate *time.Time
-	maxStartDate *time.Time
-	minEndDate *time.Time
-	maxEndDate *time.Time
-	minPlayers *int32
-	maxPlayers *int32
-	parentIndexNumber *int32
-	hasParentalRating *bool
-	isHD *bool
-	isUnaired *bool
-	minCommunityRating *float64
-	minCriticRating *float64
-	airedDuringSeason *int32
-	minPremiereDate *time.Time
-	minDateLastSaved *time.Time
-	minDateLastSavedForUser *time.Time
-	maxPremiereDate *time.Time
-	hasOverview *bool
-	hasImdbId *bool
-	hasTmdbId *bool
-	hasTvdbId *bool
-	excludeItemIds *string
-	startIndex *int32
-	limit *int32
-	recursive *bool
-	searchTerm *string
-	sortOrder *string
-	parentId *string
-	fields *string
-	excludeItemTypes *string
-	includeItemTypes *string
-	anyProviderIdEquals *string
-	filters *string
-	isFavorite *bool
-	isMovie *bool
-	isSeries *bool
-	isFolder *bool
-	isNews *bool
-	isKids *bool
-	isSports *bool
-	isNew *bool
-	isPremiere *bool
-	isNewOrPremiere *bool
-	isRepeat *bool
-	projectToMedia *bool
-	mediaTypes *string
-	imageTypes *string
-	sortBy *string
-	isPlayed *bool
-	genres *string
-	officialRatings *string
-	tags *string
-	excludeTags *string
-	years *string
-	enableImages *bool
-	enableUserData *bool
-	imageTypeLimit *int32
-	enableImageTypes *string
-	person *string
-	personIds *string
-	personTypes *string
-	studios *string
-	studioIds *string
-	artists *string
-	artistIds *string
-	albums *string
-	ids *string
-	videoTypes *string
-	containers *string
-	audioCodecs *string
-	audioLayouts *string
-	videoCodecs *string
-	extendedVideoTypes *string
-	subtitleCodecs *string
-	path *string
-	userId *string
-	minOfficialRating *string
-	isLocked *bool
-	isPlaceHolder *bool
-	hasOfficialRating *bool
-	groupItemsIntoCollections *bool
-	is3D *bool
-	seriesStatus *string
-	nameStartsWithOrGreater *string
-	artistStartsWithOrGreater *string
+	ctx                            context.Context
+	ApiService                     LibraryServiceAPI
+	id                             string
+	inheritFromParent              *bool
+	artistType                     *string
+	maxOfficialRating              *string
+	hasThemeSong                   *bool
+	hasThemeVideo                  *bool
+	hasSubtitles                   *bool
+	hasSpecialFeature              *bool
+	hasTrailer                     *bool
+	isSpecialSeason                *bool
+	adjacentTo                     *string
+	startItemId                    *string
+	minIndexNumber                 *int32
+	minStartDate                   *time.Time
+	maxStartDate                   *time.Time
+	minEndDate                     *time.Time
+	maxEndDate                     *time.Time
+	minPlayers                     *int32
+	maxPlayers                     *int32
+	parentIndexNumber              *int32
+	hasParentalRating              *bool
+	isHD                           *bool
+	isUnaired                      *bool
+	minCommunityRating             *float64
+	minCriticRating                *float64
+	airedDuringSeason              *int32
+	minPremiereDate                *time.Time
+	minDateLastSaved               *time.Time
+	minDateLastSavedForUser        *time.Time
+	maxPremiereDate                *time.Time
+	hasOverview                    *bool
+	hasImdbId                      *bool
+	hasTmdbId                      *bool
+	hasTvdbId                      *bool
+	excludeItemIds                 *string
+	startIndex                     *int32
+	limit                          *int32
+	recursive                      *bool
+	searchTerm                     *string
+	sortOrder                      *string
+	parentId                       *string
+	fields                         *string
+	excludeItemTypes               *string
+	includeItemTypes               *string
+	anyProviderIdEquals            *string
+	filters                        *string
+	isFavorite                     *bool
+	isMovie                        *bool
+	isSeries                       *bool
+	isFolder                       *bool
+	isNews                         *bool
+	isKids                         *bool
+	isSports                       *bool
+	isNew                          *bool
+	isPremiere                     *bool
+	isNewOrPremiere                *bool
+	isRepeat                       *bool
+	projectToMedia                 *bool
+	mediaTypes                     *string
+	imageTypes                     *string
+	sortBy                         *string
+	isPlayed                       *bool
+	genres                         *string
+	officialRatings                *string
+	tags                           *string
+	excludeTags                    *string
+	years                          *string
+	enableImages                   *bool
+	enableUserData                 *bool
+	imageTypeLimit                 *int32
+	enableImageTypes               *string
+	person                         *string
+	personIds                      *string
+	personTypes                    *string
+	studios                        *string
+	studioIds                      *string
+	artists                        *string
+	artistIds                      *string
+	albums                         *string
+	ids                            *string
+	videoTypes                     *string
+	containers                     *string
+	audioCodecs                    *string
+	audioLayouts                   *string
+	videoCodecs                    *string
+	extendedVideoTypes             *string
+	subtitleCodecs                 *string
+	path                           *string
+	userId                         *string
+	minOfficialRating              *string
+	isLocked                       *bool
+	isPlaceHolder                  *bool
+	hasOfficialRating              *bool
+	groupItemsIntoCollections      *bool
+	is3D                           *bool
+	seriesStatus                   *string
+	nameStartsWithOrGreater        *string
+	artistStartsWithOrGreater      *string
 	albumArtistStartsWithOrGreater *string
-	nameStartsWith *string
-	nameLessThan *string
+	nameStartsWith                 *string
+	nameLessThan                   *string
 }
 
 // Determines whether or not parent items should be searched for theme media.
@@ -8655,26 +8663,27 @@ GetItemsByIdThemevideos Gets theme videos for an item
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiGetItemsByIdThemevideosRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiGetItemsByIdThemevideosRequest
 */
 func (a *LibraryServiceAPIService) GetItemsByIdThemevideos(ctx context.Context, id string) ApiGetItemsByIdThemevideosRequest {
 	return ApiGetItemsByIdThemevideosRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
-//  @return ThemeMediaResult
+//
+//	@return ThemeMediaResult
 func (a *LibraryServiceAPIService) GetItemsByIdThemevideosExecute(r ApiGetItemsByIdThemevideosRequest) (*ThemeMediaResult, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *ThemeMediaResult
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *ThemeMediaResult
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryServiceAPIService.GetItemsByIdThemevideos")
@@ -9058,9 +9067,9 @@ func (a *LibraryServiceAPIService) GetItemsByIdThemevideosExecute(r ApiGetItemsB
 }
 
 type ApiGetItemsCountsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LibraryServiceAPI
-	userId *string
+	userId     *string
 	isFavorite *bool
 }
 
@@ -9085,24 +9094,25 @@ GetItemsCounts Method for GetItemsCounts
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetItemsCountsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetItemsCountsRequest
 */
 func (a *LibraryServiceAPIService) GetItemsCounts(ctx context.Context) ApiGetItemsCountsRequest {
 	return ApiGetItemsCountsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return ItemCounts
+//
+//	@return ItemCounts
 func (a *LibraryServiceAPIService) GetItemsCountsExecute(r ApiGetItemsCountsRequest) (*ItemCounts, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *ItemCounts
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *ItemCounts
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryServiceAPIService.GetItemsCounts")
@@ -9191,7 +9201,7 @@ func (a *LibraryServiceAPIService) GetItemsCountsExecute(r ApiGetItemsCountsRequ
 }
 
 type ApiGetItemsIntrosRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LibraryServiceAPI
 }
 
@@ -9204,24 +9214,25 @@ GetItemsIntros Gets info to debug intros
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetItemsIntrosRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetItemsIntrosRequest
 */
 func (a *LibraryServiceAPIService) GetItemsIntros(ctx context.Context) ApiGetItemsIntrosRequest {
 	return ApiGetItemsIntrosRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return []PersistenceIntroDebugInfo
+//
+//	@return []PersistenceIntroDebugInfo
 func (a *LibraryServiceAPIService) GetItemsIntrosExecute(r ApiGetItemsIntrosRequest) ([]PersistenceIntroDebugInfo, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []PersistenceIntroDebugInfo
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue []PersistenceIntroDebugInfo
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryServiceAPIService.GetItemsIntros")
@@ -9304,7 +9315,7 @@ func (a *LibraryServiceAPIService) GetItemsIntrosExecute(r ApiGetItemsIntrosRequ
 }
 
 type ApiGetLibrariesAvailableoptionsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LibraryServiceAPI
 }
 
@@ -9317,24 +9328,25 @@ GetLibrariesAvailableoptions Method for GetLibrariesAvailableoptions
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetLibrariesAvailableoptionsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetLibrariesAvailableoptionsRequest
 */
 func (a *LibraryServiceAPIService) GetLibrariesAvailableoptions(ctx context.Context) ApiGetLibrariesAvailableoptionsRequest {
 	return ApiGetLibrariesAvailableoptionsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return LibraryOptionsResult
+//
+//	@return LibraryOptionsResult
 func (a *LibraryServiceAPIService) GetLibrariesAvailableoptionsExecute(r ApiGetLibrariesAvailableoptionsRequest) (*LibraryOptionsResult, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *LibraryOptionsResult
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *LibraryOptionsResult
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryServiceAPIService.GetLibrariesAvailableoptions")
@@ -9417,9 +9429,9 @@ func (a *LibraryServiceAPIService) GetLibrariesAvailableoptionsExecute(r ApiGetL
 }
 
 type ApiGetLibraryMediafoldersRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LibraryServiceAPI
-	isHidden *bool
+	isHidden   *bool
 }
 
 // Optional. Filter by folders that are marked hidden, or not.
@@ -9437,24 +9449,25 @@ GetLibraryMediafolders Gets all user media folders.
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetLibraryMediafoldersRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetLibraryMediafoldersRequest
 */
 func (a *LibraryServiceAPIService) GetLibraryMediafolders(ctx context.Context) ApiGetLibraryMediafoldersRequest {
 	return ApiGetLibraryMediafoldersRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return QueryResultBaseItemDto
+//
+//	@return QueryResultBaseItemDto
 func (a *LibraryServiceAPIService) GetLibraryMediafoldersExecute(r ApiGetLibraryMediafoldersRequest) (*QueryResultBaseItemDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *QueryResultBaseItemDto
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *QueryResultBaseItemDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryServiceAPIService.GetLibraryMediafolders")
@@ -9540,7 +9553,7 @@ func (a *LibraryServiceAPIService) GetLibraryMediafoldersExecute(r ApiGetLibrary
 }
 
 type ApiGetLibraryPhysicalpathsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LibraryServiceAPI
 }
 
@@ -9553,24 +9566,25 @@ GetLibraryPhysicalpaths Gets a list of physical paths from virtual folders
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetLibraryPhysicalpathsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetLibraryPhysicalpathsRequest
 */
 func (a *LibraryServiceAPIService) GetLibraryPhysicalpaths(ctx context.Context) ApiGetLibraryPhysicalpathsRequest {
 	return ApiGetLibraryPhysicalpathsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return []string
+//
+//	@return []string
 func (a *LibraryServiceAPIService) GetLibraryPhysicalpathsExecute(r ApiGetLibraryPhysicalpathsRequest) ([]string, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []string
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue []string
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryServiceAPIService.GetLibraryPhysicalpaths")
@@ -9653,7 +9667,7 @@ func (a *LibraryServiceAPIService) GetLibraryPhysicalpathsExecute(r ApiGetLibrar
 }
 
 type ApiGetLibrarySelectablemediafoldersRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LibraryServiceAPI
 }
 
@@ -9666,24 +9680,25 @@ GetLibrarySelectablemediafolders Gets all user media folders.
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetLibrarySelectablemediafoldersRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetLibrarySelectablemediafoldersRequest
 */
 func (a *LibraryServiceAPIService) GetLibrarySelectablemediafolders(ctx context.Context) ApiGetLibrarySelectablemediafoldersRequest {
 	return ApiGetLibrarySelectablemediafoldersRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return []LibraryMediaFolder
+//
+//	@return []LibraryMediaFolder
 func (a *LibraryServiceAPIService) GetLibrarySelectablemediafoldersExecute(r ApiGetLibrarySelectablemediafoldersRequest) ([]LibraryMediaFolder, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []LibraryMediaFolder
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue []LibraryMediaFolder
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryServiceAPIService.GetLibrarySelectablemediafolders")
@@ -9766,108 +9781,108 @@ func (a *LibraryServiceAPIService) GetLibrarySelectablemediafoldersExecute(r Api
 }
 
 type ApiGetMoviesByIdSimilarRequest struct {
-	ctx context.Context
-	ApiService LibraryServiceAPI
-	id string
-	artistType *string
-	maxOfficialRating *string
-	hasThemeSong *bool
-	hasThemeVideo *bool
-	hasSubtitles *bool
-	hasSpecialFeature *bool
-	hasTrailer *bool
-	isSpecialSeason *bool
-	adjacentTo *string
-	startItemId *string
-	minIndexNumber *int32
-	minStartDate *time.Time
-	maxStartDate *time.Time
-	minEndDate *time.Time
-	maxEndDate *time.Time
-	minPlayers *int32
-	maxPlayers *int32
-	parentIndexNumber *int32
-	hasParentalRating *bool
-	isHD *bool
-	isUnaired *bool
-	minCommunityRating *float64
-	minCriticRating *float64
-	airedDuringSeason *int32
-	minPremiereDate *time.Time
-	minDateLastSaved *time.Time
-	minDateLastSavedForUser *time.Time
-	maxPremiereDate *time.Time
-	hasOverview *bool
-	hasImdbId *bool
-	hasTmdbId *bool
-	hasTvdbId *bool
-	excludeItemIds *string
-	startIndex *int32
-	limit *int32
-	recursive *bool
-	searchTerm *string
-	sortOrder *string
-	parentId *string
-	fields *string
-	excludeItemTypes *string
-	includeItemTypes *string
-	anyProviderIdEquals *string
-	filters *string
-	isFavorite *bool
-	isMovie *bool
-	isSeries *bool
-	isFolder *bool
-	isNews *bool
-	isKids *bool
-	isSports *bool
-	isNew *bool
-	isPremiere *bool
-	isNewOrPremiere *bool
-	isRepeat *bool
-	projectToMedia *bool
-	mediaTypes *string
-	imageTypes *string
-	sortBy *string
-	isPlayed *bool
-	genres *string
-	officialRatings *string
-	tags *string
-	excludeTags *string
-	years *string
-	enableImages *bool
-	enableUserData *bool
-	imageTypeLimit *int32
-	enableImageTypes *string
-	person *string
-	personIds *string
-	personTypes *string
-	studios *string
-	studioIds *string
-	artists *string
-	artistIds *string
-	albums *string
-	ids *string
-	videoTypes *string
-	containers *string
-	audioCodecs *string
-	audioLayouts *string
-	videoCodecs *string
-	extendedVideoTypes *string
-	subtitleCodecs *string
-	path *string
-	userId *string
-	minOfficialRating *string
-	isLocked *bool
-	isPlaceHolder *bool
-	hasOfficialRating *bool
-	groupItemsIntoCollections *bool
-	is3D *bool
-	seriesStatus *string
-	nameStartsWithOrGreater *string
-	artistStartsWithOrGreater *string
+	ctx                            context.Context
+	ApiService                     LibraryServiceAPI
+	id                             string
+	artistType                     *string
+	maxOfficialRating              *string
+	hasThemeSong                   *bool
+	hasThemeVideo                  *bool
+	hasSubtitles                   *bool
+	hasSpecialFeature              *bool
+	hasTrailer                     *bool
+	isSpecialSeason                *bool
+	adjacentTo                     *string
+	startItemId                    *string
+	minIndexNumber                 *int32
+	minStartDate                   *time.Time
+	maxStartDate                   *time.Time
+	minEndDate                     *time.Time
+	maxEndDate                     *time.Time
+	minPlayers                     *int32
+	maxPlayers                     *int32
+	parentIndexNumber              *int32
+	hasParentalRating              *bool
+	isHD                           *bool
+	isUnaired                      *bool
+	minCommunityRating             *float64
+	minCriticRating                *float64
+	airedDuringSeason              *int32
+	minPremiereDate                *time.Time
+	minDateLastSaved               *time.Time
+	minDateLastSavedForUser        *time.Time
+	maxPremiereDate                *time.Time
+	hasOverview                    *bool
+	hasImdbId                      *bool
+	hasTmdbId                      *bool
+	hasTvdbId                      *bool
+	excludeItemIds                 *string
+	startIndex                     *int32
+	limit                          *int32
+	recursive                      *bool
+	searchTerm                     *string
+	sortOrder                      *string
+	parentId                       *string
+	fields                         *string
+	excludeItemTypes               *string
+	includeItemTypes               *string
+	anyProviderIdEquals            *string
+	filters                        *string
+	isFavorite                     *bool
+	isMovie                        *bool
+	isSeries                       *bool
+	isFolder                       *bool
+	isNews                         *bool
+	isKids                         *bool
+	isSports                       *bool
+	isNew                          *bool
+	isPremiere                     *bool
+	isNewOrPremiere                *bool
+	isRepeat                       *bool
+	projectToMedia                 *bool
+	mediaTypes                     *string
+	imageTypes                     *string
+	sortBy                         *string
+	isPlayed                       *bool
+	genres                         *string
+	officialRatings                *string
+	tags                           *string
+	excludeTags                    *string
+	years                          *string
+	enableImages                   *bool
+	enableUserData                 *bool
+	imageTypeLimit                 *int32
+	enableImageTypes               *string
+	person                         *string
+	personIds                      *string
+	personTypes                    *string
+	studios                        *string
+	studioIds                      *string
+	artists                        *string
+	artistIds                      *string
+	albums                         *string
+	ids                            *string
+	videoTypes                     *string
+	containers                     *string
+	audioCodecs                    *string
+	audioLayouts                   *string
+	videoCodecs                    *string
+	extendedVideoTypes             *string
+	subtitleCodecs                 *string
+	path                           *string
+	userId                         *string
+	minOfficialRating              *string
+	isLocked                       *bool
+	isPlaceHolder                  *bool
+	hasOfficialRating              *bool
+	groupItemsIntoCollections      *bool
+	is3D                           *bool
+	seriesStatus                   *string
+	nameStartsWithOrGreater        *string
+	artistStartsWithOrGreater      *string
 	albumArtistStartsWithOrGreater *string
-	nameStartsWith *string
-	nameLessThan *string
+	nameStartsWith                 *string
+	nameLessThan                   *string
 }
 
 // Artist or AlbumArtist
@@ -10473,26 +10488,27 @@ GetMoviesByIdSimilar Finds movies and trailers similar to a given movie.
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiGetMoviesByIdSimilarRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiGetMoviesByIdSimilarRequest
 */
 func (a *LibraryServiceAPIService) GetMoviesByIdSimilar(ctx context.Context, id string) ApiGetMoviesByIdSimilarRequest {
 	return ApiGetMoviesByIdSimilarRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
-//  @return QueryResultBaseItemDto
+//
+//	@return QueryResultBaseItemDto
 func (a *LibraryServiceAPIService) GetMoviesByIdSimilarExecute(r ApiGetMoviesByIdSimilarRequest) (*QueryResultBaseItemDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *QueryResultBaseItemDto
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *QueryResultBaseItemDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryServiceAPIService.GetMoviesByIdSimilar")
@@ -10873,108 +10889,108 @@ func (a *LibraryServiceAPIService) GetMoviesByIdSimilarExecute(r ApiGetMoviesByI
 }
 
 type ApiGetShowsByIdSimilarRequest struct {
-	ctx context.Context
-	ApiService LibraryServiceAPI
-	id string
-	artistType *string
-	maxOfficialRating *string
-	hasThemeSong *bool
-	hasThemeVideo *bool
-	hasSubtitles *bool
-	hasSpecialFeature *bool
-	hasTrailer *bool
-	isSpecialSeason *bool
-	adjacentTo *string
-	startItemId *string
-	minIndexNumber *int32
-	minStartDate *time.Time
-	maxStartDate *time.Time
-	minEndDate *time.Time
-	maxEndDate *time.Time
-	minPlayers *int32
-	maxPlayers *int32
-	parentIndexNumber *int32
-	hasParentalRating *bool
-	isHD *bool
-	isUnaired *bool
-	minCommunityRating *float64
-	minCriticRating *float64
-	airedDuringSeason *int32
-	minPremiereDate *time.Time
-	minDateLastSaved *time.Time
-	minDateLastSavedForUser *time.Time
-	maxPremiereDate *time.Time
-	hasOverview *bool
-	hasImdbId *bool
-	hasTmdbId *bool
-	hasTvdbId *bool
-	excludeItemIds *string
-	startIndex *int32
-	limit *int32
-	recursive *bool
-	searchTerm *string
-	sortOrder *string
-	parentId *string
-	fields *string
-	excludeItemTypes *string
-	includeItemTypes *string
-	anyProviderIdEquals *string
-	filters *string
-	isFavorite *bool
-	isMovie *bool
-	isSeries *bool
-	isFolder *bool
-	isNews *bool
-	isKids *bool
-	isSports *bool
-	isNew *bool
-	isPremiere *bool
-	isNewOrPremiere *bool
-	isRepeat *bool
-	projectToMedia *bool
-	mediaTypes *string
-	imageTypes *string
-	sortBy *string
-	isPlayed *bool
-	genres *string
-	officialRatings *string
-	tags *string
-	excludeTags *string
-	years *string
-	enableImages *bool
-	enableUserData *bool
-	imageTypeLimit *int32
-	enableImageTypes *string
-	person *string
-	personIds *string
-	personTypes *string
-	studios *string
-	studioIds *string
-	artists *string
-	artistIds *string
-	albums *string
-	ids *string
-	videoTypes *string
-	containers *string
-	audioCodecs *string
-	audioLayouts *string
-	videoCodecs *string
-	extendedVideoTypes *string
-	subtitleCodecs *string
-	path *string
-	userId *string
-	minOfficialRating *string
-	isLocked *bool
-	isPlaceHolder *bool
-	hasOfficialRating *bool
-	groupItemsIntoCollections *bool
-	is3D *bool
-	seriesStatus *string
-	nameStartsWithOrGreater *string
-	artistStartsWithOrGreater *string
+	ctx                            context.Context
+	ApiService                     LibraryServiceAPI
+	id                             string
+	artistType                     *string
+	maxOfficialRating              *string
+	hasThemeSong                   *bool
+	hasThemeVideo                  *bool
+	hasSubtitles                   *bool
+	hasSpecialFeature              *bool
+	hasTrailer                     *bool
+	isSpecialSeason                *bool
+	adjacentTo                     *string
+	startItemId                    *string
+	minIndexNumber                 *int32
+	minStartDate                   *time.Time
+	maxStartDate                   *time.Time
+	minEndDate                     *time.Time
+	maxEndDate                     *time.Time
+	minPlayers                     *int32
+	maxPlayers                     *int32
+	parentIndexNumber              *int32
+	hasParentalRating              *bool
+	isHD                           *bool
+	isUnaired                      *bool
+	minCommunityRating             *float64
+	minCriticRating                *float64
+	airedDuringSeason              *int32
+	minPremiereDate                *time.Time
+	minDateLastSaved               *time.Time
+	minDateLastSavedForUser        *time.Time
+	maxPremiereDate                *time.Time
+	hasOverview                    *bool
+	hasImdbId                      *bool
+	hasTmdbId                      *bool
+	hasTvdbId                      *bool
+	excludeItemIds                 *string
+	startIndex                     *int32
+	limit                          *int32
+	recursive                      *bool
+	searchTerm                     *string
+	sortOrder                      *string
+	parentId                       *string
+	fields                         *string
+	excludeItemTypes               *string
+	includeItemTypes               *string
+	anyProviderIdEquals            *string
+	filters                        *string
+	isFavorite                     *bool
+	isMovie                        *bool
+	isSeries                       *bool
+	isFolder                       *bool
+	isNews                         *bool
+	isKids                         *bool
+	isSports                       *bool
+	isNew                          *bool
+	isPremiere                     *bool
+	isNewOrPremiere                *bool
+	isRepeat                       *bool
+	projectToMedia                 *bool
+	mediaTypes                     *string
+	imageTypes                     *string
+	sortBy                         *string
+	isPlayed                       *bool
+	genres                         *string
+	officialRatings                *string
+	tags                           *string
+	excludeTags                    *string
+	years                          *string
+	enableImages                   *bool
+	enableUserData                 *bool
+	imageTypeLimit                 *int32
+	enableImageTypes               *string
+	person                         *string
+	personIds                      *string
+	personTypes                    *string
+	studios                        *string
+	studioIds                      *string
+	artists                        *string
+	artistIds                      *string
+	albums                         *string
+	ids                            *string
+	videoTypes                     *string
+	containers                     *string
+	audioCodecs                    *string
+	audioLayouts                   *string
+	videoCodecs                    *string
+	extendedVideoTypes             *string
+	subtitleCodecs                 *string
+	path                           *string
+	userId                         *string
+	minOfficialRating              *string
+	isLocked                       *bool
+	isPlaceHolder                  *bool
+	hasOfficialRating              *bool
+	groupItemsIntoCollections      *bool
+	is3D                           *bool
+	seriesStatus                   *string
+	nameStartsWithOrGreater        *string
+	artistStartsWithOrGreater      *string
 	albumArtistStartsWithOrGreater *string
-	nameStartsWith *string
-	nameLessThan *string
+	nameStartsWith                 *string
+	nameLessThan                   *string
 }
 
 // Artist or AlbumArtist
@@ -11580,26 +11596,27 @@ GetShowsByIdSimilar Finds tv shows similar to a given one.
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiGetShowsByIdSimilarRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiGetShowsByIdSimilarRequest
 */
 func (a *LibraryServiceAPIService) GetShowsByIdSimilar(ctx context.Context, id string) ApiGetShowsByIdSimilarRequest {
 	return ApiGetShowsByIdSimilarRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
-//  @return QueryResultBaseItemDto
+//
+//	@return QueryResultBaseItemDto
 func (a *LibraryServiceAPIService) GetShowsByIdSimilarExecute(r ApiGetShowsByIdSimilarRequest) (*QueryResultBaseItemDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *QueryResultBaseItemDto
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *QueryResultBaseItemDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryServiceAPIService.GetShowsByIdSimilar")
@@ -11980,108 +11997,108 @@ func (a *LibraryServiceAPIService) GetShowsByIdSimilarExecute(r ApiGetShowsByIdS
 }
 
 type ApiGetTrailersByIdSimilarRequest struct {
-	ctx context.Context
-	ApiService LibraryServiceAPI
-	id string
-	artistType *string
-	maxOfficialRating *string
-	hasThemeSong *bool
-	hasThemeVideo *bool
-	hasSubtitles *bool
-	hasSpecialFeature *bool
-	hasTrailer *bool
-	isSpecialSeason *bool
-	adjacentTo *string
-	startItemId *string
-	minIndexNumber *int32
-	minStartDate *time.Time
-	maxStartDate *time.Time
-	minEndDate *time.Time
-	maxEndDate *time.Time
-	minPlayers *int32
-	maxPlayers *int32
-	parentIndexNumber *int32
-	hasParentalRating *bool
-	isHD *bool
-	isUnaired *bool
-	minCommunityRating *float64
-	minCriticRating *float64
-	airedDuringSeason *int32
-	minPremiereDate *time.Time
-	minDateLastSaved *time.Time
-	minDateLastSavedForUser *time.Time
-	maxPremiereDate *time.Time
-	hasOverview *bool
-	hasImdbId *bool
-	hasTmdbId *bool
-	hasTvdbId *bool
-	excludeItemIds *string
-	startIndex *int32
-	limit *int32
-	recursive *bool
-	searchTerm *string
-	sortOrder *string
-	parentId *string
-	fields *string
-	excludeItemTypes *string
-	includeItemTypes *string
-	anyProviderIdEquals *string
-	filters *string
-	isFavorite *bool
-	isMovie *bool
-	isSeries *bool
-	isFolder *bool
-	isNews *bool
-	isKids *bool
-	isSports *bool
-	isNew *bool
-	isPremiere *bool
-	isNewOrPremiere *bool
-	isRepeat *bool
-	projectToMedia *bool
-	mediaTypes *string
-	imageTypes *string
-	sortBy *string
-	isPlayed *bool
-	genres *string
-	officialRatings *string
-	tags *string
-	excludeTags *string
-	years *string
-	enableImages *bool
-	enableUserData *bool
-	imageTypeLimit *int32
-	enableImageTypes *string
-	person *string
-	personIds *string
-	personTypes *string
-	studios *string
-	studioIds *string
-	artists *string
-	artistIds *string
-	albums *string
-	ids *string
-	videoTypes *string
-	containers *string
-	audioCodecs *string
-	audioLayouts *string
-	videoCodecs *string
-	extendedVideoTypes *string
-	subtitleCodecs *string
-	path *string
-	userId *string
-	minOfficialRating *string
-	isLocked *bool
-	isPlaceHolder *bool
-	hasOfficialRating *bool
-	groupItemsIntoCollections *bool
-	is3D *bool
-	seriesStatus *string
-	nameStartsWithOrGreater *string
-	artistStartsWithOrGreater *string
+	ctx                            context.Context
+	ApiService                     LibraryServiceAPI
+	id                             string
+	artistType                     *string
+	maxOfficialRating              *string
+	hasThemeSong                   *bool
+	hasThemeVideo                  *bool
+	hasSubtitles                   *bool
+	hasSpecialFeature              *bool
+	hasTrailer                     *bool
+	isSpecialSeason                *bool
+	adjacentTo                     *string
+	startItemId                    *string
+	minIndexNumber                 *int32
+	minStartDate                   *time.Time
+	maxStartDate                   *time.Time
+	minEndDate                     *time.Time
+	maxEndDate                     *time.Time
+	minPlayers                     *int32
+	maxPlayers                     *int32
+	parentIndexNumber              *int32
+	hasParentalRating              *bool
+	isHD                           *bool
+	isUnaired                      *bool
+	minCommunityRating             *float64
+	minCriticRating                *float64
+	airedDuringSeason              *int32
+	minPremiereDate                *time.Time
+	minDateLastSaved               *time.Time
+	minDateLastSavedForUser        *time.Time
+	maxPremiereDate                *time.Time
+	hasOverview                    *bool
+	hasImdbId                      *bool
+	hasTmdbId                      *bool
+	hasTvdbId                      *bool
+	excludeItemIds                 *string
+	startIndex                     *int32
+	limit                          *int32
+	recursive                      *bool
+	searchTerm                     *string
+	sortOrder                      *string
+	parentId                       *string
+	fields                         *string
+	excludeItemTypes               *string
+	includeItemTypes               *string
+	anyProviderIdEquals            *string
+	filters                        *string
+	isFavorite                     *bool
+	isMovie                        *bool
+	isSeries                       *bool
+	isFolder                       *bool
+	isNews                         *bool
+	isKids                         *bool
+	isSports                       *bool
+	isNew                          *bool
+	isPremiere                     *bool
+	isNewOrPremiere                *bool
+	isRepeat                       *bool
+	projectToMedia                 *bool
+	mediaTypes                     *string
+	imageTypes                     *string
+	sortBy                         *string
+	isPlayed                       *bool
+	genres                         *string
+	officialRatings                *string
+	tags                           *string
+	excludeTags                    *string
+	years                          *string
+	enableImages                   *bool
+	enableUserData                 *bool
+	imageTypeLimit                 *int32
+	enableImageTypes               *string
+	person                         *string
+	personIds                      *string
+	personTypes                    *string
+	studios                        *string
+	studioIds                      *string
+	artists                        *string
+	artistIds                      *string
+	albums                         *string
+	ids                            *string
+	videoTypes                     *string
+	containers                     *string
+	audioCodecs                    *string
+	audioLayouts                   *string
+	videoCodecs                    *string
+	extendedVideoTypes             *string
+	subtitleCodecs                 *string
+	path                           *string
+	userId                         *string
+	minOfficialRating              *string
+	isLocked                       *bool
+	isPlaceHolder                  *bool
+	hasOfficialRating              *bool
+	groupItemsIntoCollections      *bool
+	is3D                           *bool
+	seriesStatus                   *string
+	nameStartsWithOrGreater        *string
+	artistStartsWithOrGreater      *string
 	albumArtistStartsWithOrGreater *string
-	nameStartsWith *string
-	nameLessThan *string
+	nameStartsWith                 *string
+	nameLessThan                   *string
 }
 
 // Artist or AlbumArtist
@@ -12687,26 +12704,27 @@ GetTrailersByIdSimilar Finds movies and trailers similar to a given trailer.
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiGetTrailersByIdSimilarRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiGetTrailersByIdSimilarRequest
 */
 func (a *LibraryServiceAPIService) GetTrailersByIdSimilar(ctx context.Context, id string) ApiGetTrailersByIdSimilarRequest {
 	return ApiGetTrailersByIdSimilarRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
-//  @return QueryResultBaseItemDto
+//
+//	@return QueryResultBaseItemDto
 func (a *LibraryServiceAPIService) GetTrailersByIdSimilarExecute(r ApiGetTrailersByIdSimilarRequest) (*QueryResultBaseItemDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *QueryResultBaseItemDto
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *QueryResultBaseItemDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryServiceAPIService.GetTrailersByIdSimilar")
@@ -13087,9 +13105,9 @@ func (a *LibraryServiceAPIService) GetTrailersByIdSimilarExecute(r ApiGetTrailer
 }
 
 type ApiPostItemsByIdDeleteRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LibraryServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiPostItemsByIdDeleteRequest) Execute() (*http.Response, error) {
@@ -13101,24 +13119,24 @@ PostItemsByIdDelete Deletes an item from the library and file system
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiPostItemsByIdDeleteRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiPostItemsByIdDeleteRequest
 */
 func (a *LibraryServiceAPIService) PostItemsByIdDelete(ctx context.Context, id string) ApiPostItemsByIdDeleteRequest {
 	return ApiPostItemsByIdDeleteRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *LibraryServiceAPIService) PostItemsByIdDeleteExecute(r ApiPostItemsByIdDeleteRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryServiceAPIService.PostItemsByIdDelete")
@@ -13193,9 +13211,9 @@ func (a *LibraryServiceAPIService) PostItemsByIdDeleteExecute(r ApiPostItemsById
 }
 
 type ApiPostItemsDeleteRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LibraryServiceAPI
-	ids *string
+	ids        *string
 }
 
 // Ids
@@ -13213,22 +13231,22 @@ PostItemsDelete Deletes an item from the library and file system
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostItemsDeleteRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostItemsDeleteRequest
 */
 func (a *LibraryServiceAPIService) PostItemsDelete(ctx context.Context) ApiPostItemsDeleteRequest {
 	return ApiPostItemsDeleteRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *LibraryServiceAPIService) PostItemsDeleteExecute(r ApiPostItemsDeleteRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryServiceAPIService.PostItemsDelete")
@@ -13306,8 +13324,8 @@ func (a *LibraryServiceAPIService) PostItemsDeleteExecute(r ApiPostItemsDeleteRe
 }
 
 type ApiPostLibraryMediaUpdatedRequest struct {
-	ctx context.Context
-	ApiService LibraryServiceAPI
+	ctx                     context.Context
+	ApiService              LibraryServiceAPI
 	libraryPostUpdatedMedia *LibraryPostUpdatedMedia
 }
 
@@ -13326,22 +13344,22 @@ PostLibraryMediaUpdated Reports that new movies have been added by an external s
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostLibraryMediaUpdatedRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostLibraryMediaUpdatedRequest
 */
 func (a *LibraryServiceAPIService) PostLibraryMediaUpdated(ctx context.Context) ApiPostLibraryMediaUpdatedRequest {
 	return ApiPostLibraryMediaUpdatedRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *LibraryServiceAPIService) PostLibraryMediaUpdatedExecute(r ApiPostLibraryMediaUpdatedRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryServiceAPIService.PostLibraryMediaUpdated")
@@ -13420,7 +13438,7 @@ func (a *LibraryServiceAPIService) PostLibraryMediaUpdatedExecute(r ApiPostLibra
 }
 
 type ApiPostLibraryMoviesAddedRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LibraryServiceAPI
 }
 
@@ -13433,22 +13451,22 @@ PostLibraryMoviesAdded Deprecated. Use /Library/Media/Updated
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostLibraryMoviesAddedRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostLibraryMoviesAddedRequest
 */
 func (a *LibraryServiceAPIService) PostLibraryMoviesAdded(ctx context.Context) ApiPostLibraryMoviesAddedRequest {
 	return ApiPostLibraryMoviesAddedRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *LibraryServiceAPIService) PostLibraryMoviesAddedExecute(r ApiPostLibraryMoviesAddedRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryServiceAPIService.PostLibraryMoviesAdded")
@@ -13522,7 +13540,7 @@ func (a *LibraryServiceAPIService) PostLibraryMoviesAddedExecute(r ApiPostLibrar
 }
 
 type ApiPostLibraryMoviesUpdatedRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LibraryServiceAPI
 }
 
@@ -13535,22 +13553,22 @@ PostLibraryMoviesUpdated Deprecated. Use /Library/Media/Updated
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostLibraryMoviesUpdatedRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostLibraryMoviesUpdatedRequest
 */
 func (a *LibraryServiceAPIService) PostLibraryMoviesUpdated(ctx context.Context) ApiPostLibraryMoviesUpdatedRequest {
 	return ApiPostLibraryMoviesUpdatedRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *LibraryServiceAPIService) PostLibraryMoviesUpdatedExecute(r ApiPostLibraryMoviesUpdatedRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryServiceAPIService.PostLibraryMoviesUpdated")
@@ -13624,7 +13642,7 @@ func (a *LibraryServiceAPIService) PostLibraryMoviesUpdatedExecute(r ApiPostLibr
 }
 
 type ApiPostLibraryRefreshRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LibraryServiceAPI
 }
 
@@ -13637,22 +13655,22 @@ PostLibraryRefresh Starts a library scan
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostLibraryRefreshRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostLibraryRefreshRequest
 */
 func (a *LibraryServiceAPIService) PostLibraryRefresh(ctx context.Context) ApiPostLibraryRefreshRequest {
 	return ApiPostLibraryRefreshRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *LibraryServiceAPIService) PostLibraryRefreshExecute(r ApiPostLibraryRefreshRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryServiceAPIService.PostLibraryRefresh")
@@ -13726,7 +13744,7 @@ func (a *LibraryServiceAPIService) PostLibraryRefreshExecute(r ApiPostLibraryRef
 }
 
 type ApiPostLibrarySeriesAddedRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LibraryServiceAPI
 }
 
@@ -13739,22 +13757,22 @@ PostLibrarySeriesAdded Deprecated. Use /Library/Media/Updated
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostLibrarySeriesAddedRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostLibrarySeriesAddedRequest
 */
 func (a *LibraryServiceAPIService) PostLibrarySeriesAdded(ctx context.Context) ApiPostLibrarySeriesAddedRequest {
 	return ApiPostLibrarySeriesAddedRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *LibraryServiceAPIService) PostLibrarySeriesAddedExecute(r ApiPostLibrarySeriesAddedRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryServiceAPIService.PostLibrarySeriesAdded")
@@ -13828,7 +13846,7 @@ func (a *LibraryServiceAPIService) PostLibrarySeriesAddedExecute(r ApiPostLibrar
 }
 
 type ApiPostLibrarySeriesUpdatedRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LibraryServiceAPI
 }
 
@@ -13841,22 +13859,22 @@ PostLibrarySeriesUpdated Deprecated. Use /Library/Media/Updated
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostLibrarySeriesUpdatedRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostLibrarySeriesUpdatedRequest
 */
 func (a *LibraryServiceAPIService) PostLibrarySeriesUpdated(ctx context.Context) ApiPostLibrarySeriesUpdatedRequest {
 	return ApiPostLibrarySeriesUpdatedRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *LibraryServiceAPIService) PostLibrarySeriesUpdatedExecute(r ApiPostLibrarySeriesUpdatedRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LibraryServiceAPIService.PostLibrarySeriesUpdated")

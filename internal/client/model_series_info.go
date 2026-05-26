@@ -20,20 +20,20 @@ var _ MappedNullable = &SeriesInfo{}
 
 // SeriesInfo struct for SeriesInfo
 type SeriesInfo struct {
-	EpisodeAirDate NullableTime `json:"EpisodeAirDate,omitempty"`
-	DisplayOrder *SeriesDisplayOrder `json:"DisplayOrder,omitempty"`
-	Name *string `json:"Name,omitempty"`
-	Path *string `json:"Path,omitempty"`
-	MetadataLanguage *string `json:"MetadataLanguage,omitempty"`
-	MetadataCountryCode *string `json:"MetadataCountryCode,omitempty"`
-	MetadataLanguages []GlobalizationCultureDto `json:"MetadataLanguages,omitempty"`
-	ProviderIds *map[string]string `json:"ProviderIds,omitempty"`
-	Year NullableInt32 `json:"Year,omitempty"`
-	IndexNumber NullableInt32 `json:"IndexNumber,omitempty"`
-	ParentIndexNumber NullableInt32 `json:"ParentIndexNumber,omitempty"`
-	PremiereDate NullableTime `json:"PremiereDate,omitempty"`
-	IsAutomated *bool `json:"IsAutomated,omitempty"`
-	EnableAdultMetadata *bool `json:"EnableAdultMetadata,omitempty"`
+	EpisodeAirDate      NullableTime              `json:"EpisodeAirDate,omitempty"`
+	DisplayOrder        *SeriesDisplayOrder       `json:"DisplayOrder,omitempty"`
+	Name                *string                   `json:"Name,omitempty"`
+	Path                *string                   `json:"Path,omitempty"`
+	MetadataLanguage    *string                   `json:"MetadataLanguage,omitempty"`
+	MetadataCountryCode *string                   `json:"MetadataCountryCode,omitempty"`
+	MetadataLanguages   []GlobalizationCultureDto `json:"MetadataLanguages,omitempty"`
+	ProviderIds         *map[string]string        `json:"ProviderIds,omitempty"`
+	Year                NullableInt32             `json:"Year,omitempty"`
+	IndexNumber         NullableInt32             `json:"IndexNumber,omitempty"`
+	ParentIndexNumber   NullableInt32             `json:"ParentIndexNumber,omitempty"`
+	PremiereDate        NullableTime              `json:"PremiereDate,omitempty"`
+	IsAutomated         *bool                     `json:"IsAutomated,omitempty"`
+	EnableAdultMetadata *bool                     `json:"EnableAdultMetadata,omitempty"`
 }
 
 // NewSeriesInfo instantiates a new SeriesInfo object
@@ -85,6 +85,7 @@ func (o *SeriesInfo) HasEpisodeAirDate() bool {
 func (o *SeriesInfo) SetEpisodeAirDate(v time.Time) {
 	o.EpisodeAirDate.Set(&v)
 }
+
 // SetEpisodeAirDateNil sets the value for EpisodeAirDate to be an explicit nil
 func (o *SeriesInfo) SetEpisodeAirDateNil() {
 	o.EpisodeAirDate.Set(nil)
@@ -351,6 +352,7 @@ func (o *SeriesInfo) HasYear() bool {
 func (o *SeriesInfo) SetYear(v int32) {
 	o.Year.Set(&v)
 }
+
 // SetYearNil sets the value for Year to be an explicit nil
 func (o *SeriesInfo) SetYearNil() {
 	o.Year.Set(nil)
@@ -393,6 +395,7 @@ func (o *SeriesInfo) HasIndexNumber() bool {
 func (o *SeriesInfo) SetIndexNumber(v int32) {
 	o.IndexNumber.Set(&v)
 }
+
 // SetIndexNumberNil sets the value for IndexNumber to be an explicit nil
 func (o *SeriesInfo) SetIndexNumberNil() {
 	o.IndexNumber.Set(nil)
@@ -435,6 +438,7 @@ func (o *SeriesInfo) HasParentIndexNumber() bool {
 func (o *SeriesInfo) SetParentIndexNumber(v int32) {
 	o.ParentIndexNumber.Set(&v)
 }
+
 // SetParentIndexNumberNil sets the value for ParentIndexNumber to be an explicit nil
 func (o *SeriesInfo) SetParentIndexNumberNil() {
 	o.ParentIndexNumber.Set(nil)
@@ -477,6 +481,7 @@ func (o *SeriesInfo) HasPremiereDate() bool {
 func (o *SeriesInfo) SetPremiereDate(v time.Time) {
 	o.PremiereDate.Set(&v)
 }
+
 // SetPremiereDateNil sets the value for PremiereDate to be an explicit nil
 func (o *SeriesInfo) SetPremiereDateNil() {
 	o.PremiereDate.Set(nil)
@@ -552,7 +557,7 @@ func (o *SeriesInfo) SetEnableAdultMetadata(v bool) {
 }
 
 func (o SeriesInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -641,5 +646,3 @@ func (v *NullableSeriesInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

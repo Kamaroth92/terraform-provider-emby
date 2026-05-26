@@ -19,8 +19,8 @@ var _ MappedNullable = &UserLibraryUpdateUserItemAccess{}
 
 // UserLibraryUpdateUserItemAccess struct for UserLibraryUpdateUserItemAccess
 type UserLibraryUpdateUserItemAccess struct {
-	ItemIds []string `json:"ItemIds,omitempty"`
-	UserIds []string `json:"UserIds,omitempty"`
+	ItemIds    []string            `json:"ItemIds,omitempty"`
+	UserIds    []string            `json:"UserIds,omitempty"`
 	ItemAccess *UserItemShareLevel `json:"ItemAccess,omitempty"`
 }
 
@@ -138,7 +138,7 @@ func (o *UserLibraryUpdateUserItemAccess) SetItemAccess(v UserItemShareLevel) {
 }
 
 func (o UserLibraryUpdateUserItemAccess) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -194,5 +194,3 @@ func (v *NullableUserLibraryUpdateUserItemAccess) UnmarshalJSON(src []byte) erro
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

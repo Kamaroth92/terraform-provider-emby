@@ -20,7 +20,7 @@ var _ MappedNullable = &BrandingBrandingOptions{}
 // BrandingBrandingOptions struct for BrandingBrandingOptions
 type BrandingBrandingOptions struct {
 	LoginDisclaimer *string `json:"LoginDisclaimer,omitempty"`
-	CustomCss *string `json:"CustomCss,omitempty"`
+	CustomCss       *string `json:"CustomCss,omitempty"`
 }
 
 // NewBrandingBrandingOptions instantiates a new BrandingBrandingOptions object
@@ -105,7 +105,7 @@ func (o *BrandingBrandingOptions) SetCustomCss(v string) {
 }
 
 func (o BrandingBrandingOptions) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -158,5 +158,3 @@ func (v *NullableBrandingBrandingOptions) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

@@ -19,21 +19,21 @@ var _ MappedNullable = &UserNotificationInfo{}
 
 // UserNotificationInfo struct for UserNotificationInfo
 type UserNotificationInfo struct {
-	NotifierKey *string `json:"NotifierKey,omitempty"`
-	SetupModuleUrl *string `json:"SetupModuleUrl,omitempty"`
-	ServiceName *string `json:"ServiceName,omitempty"`
-	PluginId *string `json:"PluginId,omitempty"`
-	FriendlyName *string `json:"FriendlyName,omitempty"`
-	Id *string `json:"Id,omitempty"`
-	Enabled *bool `json:"Enabled,omitempty"`
-	UserIds []string `json:"UserIds,omitempty"`
-	DeviceIds []string `json:"DeviceIds,omitempty"`
-	LibraryIds []string `json:"LibraryIds,omitempty"`
-	EventIds []string `json:"EventIds,omitempty"`
-	UserId *string `json:"UserId,omitempty"`
-	IsSelfNotification *bool `json:"IsSelfNotification,omitempty"`
-	GroupItems *bool `json:"GroupItems,omitempty"`
-	Options *map[string]string `json:"Options,omitempty"`
+	NotifierKey        *string            `json:"NotifierKey,omitempty"`
+	SetupModuleUrl     *string            `json:"SetupModuleUrl,omitempty"`
+	ServiceName        *string            `json:"ServiceName,omitempty"`
+	PluginId           *string            `json:"PluginId,omitempty"`
+	FriendlyName       *string            `json:"FriendlyName,omitempty"`
+	Id                 *string            `json:"Id,omitempty"`
+	Enabled            *bool              `json:"Enabled,omitempty"`
+	UserIds            []string           `json:"UserIds,omitempty"`
+	DeviceIds          []string           `json:"DeviceIds,omitempty"`
+	LibraryIds         []string           `json:"LibraryIds,omitempty"`
+	EventIds           []string           `json:"EventIds,omitempty"`
+	UserId             *string            `json:"UserId,omitempty"`
+	IsSelfNotification *bool              `json:"IsSelfNotification,omitempty"`
+	GroupItems         *bool              `json:"GroupItems,omitempty"`
+	Options            *map[string]string `json:"Options,omitempty"`
 }
 
 // NewUserNotificationInfo instantiates a new UserNotificationInfo object
@@ -534,7 +534,7 @@ func (o *UserNotificationInfo) SetOptions(v map[string]string) {
 }
 
 func (o UserNotificationInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -626,5 +626,3 @@ func (v *NullableUserNotificationInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

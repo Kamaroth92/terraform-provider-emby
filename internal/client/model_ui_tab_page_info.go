@@ -19,12 +19,12 @@ var _ MappedNullable = &UITabPageInfo{}
 
 // UITabPageInfo struct for UITabPageInfo
 type UITabPageInfo struct {
-	PageId *string `json:"PageId,omitempty"`
+	PageId      *string `json:"PageId,omitempty"`
 	DisplayName *string `json:"DisplayName,omitempty"`
-	PluginId *string `json:"PluginId,omitempty"`
-	Href *string `json:"Href,omitempty"`
-	NavKey *string `json:"NavKey,omitempty"`
-	Index *int32 `json:"Index,omitempty"`
+	PluginId    *string `json:"PluginId,omitempty"`
+	Href        *string `json:"Href,omitempty"`
+	NavKey      *string `json:"NavKey,omitempty"`
+	Index       *int32  `json:"Index,omitempty"`
 }
 
 // NewUITabPageInfo instantiates a new UITabPageInfo object
@@ -237,7 +237,7 @@ func (o *UITabPageInfo) SetIndex(v int32) {
 }
 
 func (o UITabPageInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -302,5 +302,3 @@ func (v *NullableUITabPageInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

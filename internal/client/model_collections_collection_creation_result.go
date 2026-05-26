@@ -19,7 +19,7 @@ var _ MappedNullable = &CollectionsCollectionCreationResult{}
 
 // CollectionsCollectionCreationResult struct for CollectionsCollectionCreationResult
 type CollectionsCollectionCreationResult struct {
-	Id *string `json:"Id,omitempty"`
+	Id   *string `json:"Id,omitempty"`
 	Name *string `json:"Name,omitempty"`
 }
 
@@ -105,7 +105,7 @@ func (o *CollectionsCollectionCreationResult) SetName(v string) {
 }
 
 func (o CollectionsCollectionCreationResult) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -158,5 +158,3 @@ func (v *NullableCollectionsCollectionCreationResult) UnmarshalJSON(src []byte) 
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

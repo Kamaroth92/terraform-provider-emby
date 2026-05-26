@@ -1,3 +1,5 @@
+// Copyright (c) HashiCorp, Inc.
+
 /*
 Emby Server REST API (BETA)
 
@@ -11,10 +13,10 @@ package embyclient
 
 import (
 	"context"
+	openapiclient "github.com/Kamaroth92/terraform-provider-emby/client"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func Test_embyclient_ConnectServiceAPIService(t *testing.T) {
@@ -24,7 +26,7 @@ func Test_embyclient_ConnectServiceAPIService(t *testing.T) {
 
 	t.Run("Test ConnectServiceAPIService DeleteUsersByIdConnectLink", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -37,7 +39,7 @@ func Test_embyclient_ConnectServiceAPIService(t *testing.T) {
 
 	t.Run("Test ConnectServiceAPIService GetConnectExchange", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ConnectServiceAPI.GetConnectExchange(context.Background()).Execute()
 
@@ -49,7 +51,7 @@ func Test_embyclient_ConnectServiceAPIService(t *testing.T) {
 
 	t.Run("Test ConnectServiceAPIService GetConnectPending", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.ConnectServiceAPI.GetConnectPending(context.Background()).Execute()
 
@@ -60,7 +62,7 @@ func Test_embyclient_ConnectServiceAPIService(t *testing.T) {
 
 	t.Run("Test ConnectServiceAPIService PostUsersByIdConnectLink", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -74,7 +76,7 @@ func Test_embyclient_ConnectServiceAPIService(t *testing.T) {
 
 	t.Run("Test ConnectServiceAPIService PostUsersByIdConnectLinkDelete", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 

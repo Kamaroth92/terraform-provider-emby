@@ -19,16 +19,15 @@ import (
 	"strings"
 )
 
-
 type SystemServiceAPI interface {
 
 	/*
-	GetSystemEndpoint Gets information about the request endpoint
+		GetSystemEndpoint Gets information about the request endpoint
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetSystemEndpointRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetSystemEndpointRequest
 	*/
 	GetSystemEndpoint(ctx context.Context) ApiGetSystemEndpointRequest
 
@@ -37,12 +36,12 @@ type SystemServiceAPI interface {
 	GetSystemEndpointExecute(r ApiGetSystemEndpointRequest) (*NetEndPointInfo, *http.Response, error)
 
 	/*
-	GetSystemInfo Gets information about the server
+		GetSystemInfo Gets information about the server
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetSystemInfoRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetSystemInfoRequest
 	*/
 	GetSystemInfo(ctx context.Context) ApiGetSystemInfoRequest
 
@@ -51,12 +50,12 @@ type SystemServiceAPI interface {
 	GetSystemInfoExecute(r ApiGetSystemInfoRequest) (*SystemInfo, *http.Response, error)
 
 	/*
-	GetSystemInfoPublic Gets public information about the server
+		GetSystemInfoPublic Gets public information about the server
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetSystemInfoPublicRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetSystemInfoPublicRequest
 	*/
 	GetSystemInfoPublic(ctx context.Context) ApiGetSystemInfoPublicRequest
 
@@ -65,13 +64,13 @@ type SystemServiceAPI interface {
 	GetSystemInfoPublicExecute(r ApiGetSystemInfoPublicRequest) (*PublicSystemInfo, *http.Response, error)
 
 	/*
-	GetSystemLogsByName Gets a log file
+		GetSystemLogsByName Gets a log file
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param name The log file name.
-	@return ApiGetSystemLogsByNameRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param name The log file name.
+		@return ApiGetSystemLogsByNameRequest
 	*/
 	GetSystemLogsByName(ctx context.Context, name string) ApiGetSystemLogsByNameRequest
 
@@ -79,13 +78,13 @@ type SystemServiceAPI interface {
 	GetSystemLogsByNameExecute(r ApiGetSystemLogsByNameRequest) (*http.Response, error)
 
 	/*
-	GetSystemLogsByNameLines Gets a log file
+		GetSystemLogsByNameLines Gets a log file
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param name The log file name.
-	@return ApiGetSystemLogsByNameLinesRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param name The log file name.
+		@return ApiGetSystemLogsByNameLinesRequest
 	*/
 	GetSystemLogsByNameLines(ctx context.Context, name string) ApiGetSystemLogsByNameLinesRequest
 
@@ -94,12 +93,12 @@ type SystemServiceAPI interface {
 	GetSystemLogsByNameLinesExecute(r ApiGetSystemLogsByNameLinesRequest) (*QueryResultString, *http.Response, error)
 
 	/*
-	GetSystemLogsQuery Gets a list of available server log files
+		GetSystemLogsQuery Gets a list of available server log files
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetSystemLogsQueryRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetSystemLogsQueryRequest
 	*/
 	GetSystemLogsQuery(ctx context.Context) ApiGetSystemLogsQueryRequest
 
@@ -108,12 +107,12 @@ type SystemServiceAPI interface {
 	GetSystemLogsQueryExecute(r ApiGetSystemLogsQueryRequest) (*QueryResultLogFile, *http.Response, error)
 
 	/*
-	GetSystemPing Method for GetSystemPing
+		GetSystemPing Method for GetSystemPing
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetSystemPingRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetSystemPingRequest
 	*/
 	GetSystemPing(ctx context.Context) ApiGetSystemPingRequest
 
@@ -121,12 +120,12 @@ type SystemServiceAPI interface {
 	GetSystemPingExecute(r ApiGetSystemPingRequest) (*http.Response, error)
 
 	/*
-	GetSystemReleasenotes Gets release notes
+		GetSystemReleasenotes Gets release notes
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetSystemReleasenotesRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetSystemReleasenotesRequest
 	*/
 	GetSystemReleasenotes(ctx context.Context) ApiGetSystemReleasenotesRequest
 
@@ -135,12 +134,12 @@ type SystemServiceAPI interface {
 	GetSystemReleasenotesExecute(r ApiGetSystemReleasenotesRequest) (*PackageVersionInfo, *http.Response, error)
 
 	/*
-	GetSystemReleasenotesVersions Gets release notes
+		GetSystemReleasenotesVersions Gets release notes
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetSystemReleasenotesVersionsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetSystemReleasenotesVersionsRequest
 	*/
 	GetSystemReleasenotesVersions(ctx context.Context) ApiGetSystemReleasenotesVersionsRequest
 
@@ -149,12 +148,12 @@ type SystemServiceAPI interface {
 	GetSystemReleasenotesVersionsExecute(r ApiGetSystemReleasenotesVersionsRequest) ([]PackageVersionInfo, *http.Response, error)
 
 	/*
-	GetSystemWakeonlaninfo Gets wake on lan information
+		GetSystemWakeonlaninfo Gets wake on lan information
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetSystemWakeonlaninfoRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetSystemWakeonlaninfoRequest
 	*/
 	GetSystemWakeonlaninfo(ctx context.Context) ApiGetSystemWakeonlaninfoRequest
 
@@ -163,12 +162,12 @@ type SystemServiceAPI interface {
 	GetSystemWakeonlaninfoExecute(r ApiGetSystemWakeonlaninfoRequest) ([]WakeOnLanInfo, *http.Response, error)
 
 	/*
-	HeadSystemPing Method for HeadSystemPing
+		HeadSystemPing Method for HeadSystemPing
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiHeadSystemPingRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiHeadSystemPingRequest
 	*/
 	HeadSystemPing(ctx context.Context) ApiHeadSystemPingRequest
 
@@ -176,12 +175,12 @@ type SystemServiceAPI interface {
 	HeadSystemPingExecute(r ApiHeadSystemPingRequest) (*http.Response, error)
 
 	/*
-	PostSystemPing Method for PostSystemPing
+		PostSystemPing Method for PostSystemPing
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostSystemPingRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostSystemPingRequest
 	*/
 	PostSystemPing(ctx context.Context) ApiPostSystemPingRequest
 
@@ -189,12 +188,12 @@ type SystemServiceAPI interface {
 	PostSystemPingExecute(r ApiPostSystemPingRequest) (*http.Response, error)
 
 	/*
-	PostSystemRestart Restarts the application, if needed
+		PostSystemRestart Restarts the application, if needed
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostSystemRestartRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostSystemRestartRequest
 	*/
 	PostSystemRestart(ctx context.Context) ApiPostSystemRestartRequest
 
@@ -202,12 +201,12 @@ type SystemServiceAPI interface {
 	PostSystemRestartExecute(r ApiPostSystemRestartRequest) (*http.Response, error)
 
 	/*
-	PostSystemShutdown Shuts down the application
+		PostSystemShutdown Shuts down the application
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostSystemShutdownRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostSystemShutdownRequest
 	*/
 	PostSystemShutdown(ctx context.Context) ApiPostSystemShutdownRequest
 
@@ -219,7 +218,7 @@ type SystemServiceAPI interface {
 type SystemServiceAPIService service
 
 type ApiGetSystemEndpointRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SystemServiceAPI
 }
 
@@ -232,24 +231,25 @@ GetSystemEndpoint Gets information about the request endpoint
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetSystemEndpointRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetSystemEndpointRequest
 */
 func (a *SystemServiceAPIService) GetSystemEndpoint(ctx context.Context) ApiGetSystemEndpointRequest {
 	return ApiGetSystemEndpointRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return NetEndPointInfo
+//
+//	@return NetEndPointInfo
 func (a *SystemServiceAPIService) GetSystemEndpointExecute(r ApiGetSystemEndpointRequest) (*NetEndPointInfo, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *NetEndPointInfo
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *NetEndPointInfo
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SystemServiceAPIService.GetSystemEndpoint")
@@ -332,7 +332,7 @@ func (a *SystemServiceAPIService) GetSystemEndpointExecute(r ApiGetSystemEndpoin
 }
 
 type ApiGetSystemInfoRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SystemServiceAPI
 }
 
@@ -345,24 +345,25 @@ GetSystemInfo Gets information about the server
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetSystemInfoRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetSystemInfoRequest
 */
 func (a *SystemServiceAPIService) GetSystemInfo(ctx context.Context) ApiGetSystemInfoRequest {
 	return ApiGetSystemInfoRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return SystemInfo
+//
+//	@return SystemInfo
 func (a *SystemServiceAPIService) GetSystemInfoExecute(r ApiGetSystemInfoRequest) (*SystemInfo, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *SystemInfo
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *SystemInfo
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SystemServiceAPIService.GetSystemInfo")
@@ -445,7 +446,7 @@ func (a *SystemServiceAPIService) GetSystemInfoExecute(r ApiGetSystemInfoRequest
 }
 
 type ApiGetSystemInfoPublicRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SystemServiceAPI
 }
 
@@ -458,24 +459,25 @@ GetSystemInfoPublic Gets public information about the server
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetSystemInfoPublicRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetSystemInfoPublicRequest
 */
 func (a *SystemServiceAPIService) GetSystemInfoPublic(ctx context.Context) ApiGetSystemInfoPublicRequest {
 	return ApiGetSystemInfoPublicRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return PublicSystemInfo
+//
+//	@return PublicSystemInfo
 func (a *SystemServiceAPIService) GetSystemInfoPublicExecute(r ApiGetSystemInfoPublicRequest) (*PublicSystemInfo, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *PublicSystemInfo
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *PublicSystemInfo
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SystemServiceAPIService.GetSystemInfoPublic")
@@ -558,10 +560,10 @@ func (a *SystemServiceAPIService) GetSystemInfoPublicExecute(r ApiGetSystemInfoP
 }
 
 type ApiGetSystemLogsByNameRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SystemServiceAPI
-	name string
-	sanitize *bool
+	name       string
+	sanitize   *bool
 }
 
 // Return sanitized log
@@ -579,24 +581,24 @@ GetSystemLogsByName Gets a log file
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param name The log file name.
- @return ApiGetSystemLogsByNameRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param name The log file name.
+	@return ApiGetSystemLogsByNameRequest
 */
 func (a *SystemServiceAPIService) GetSystemLogsByName(ctx context.Context, name string) ApiGetSystemLogsByNameRequest {
 	return ApiGetSystemLogsByNameRequest{
 		ApiService: a,
-		ctx: ctx,
-		name: name,
+		ctx:        ctx,
+		name:       name,
 	}
 }
 
 // Execute executes the request
 func (a *SystemServiceAPIService) GetSystemLogsByNameExecute(r ApiGetSystemLogsByNameRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SystemServiceAPIService.GetSystemLogsByName")
@@ -674,9 +676,9 @@ func (a *SystemServiceAPIService) GetSystemLogsByNameExecute(r ApiGetSystemLogsB
 }
 
 type ApiGetSystemLogsByNameLinesRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SystemServiceAPI
-	name string
+	name       string
 }
 
 func (r ApiGetSystemLogsByNameLinesRequest) Execute() (*QueryResultString, *http.Response, error) {
@@ -688,26 +690,27 @@ GetSystemLogsByNameLines Gets a log file
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param name The log file name.
- @return ApiGetSystemLogsByNameLinesRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param name The log file name.
+	@return ApiGetSystemLogsByNameLinesRequest
 */
 func (a *SystemServiceAPIService) GetSystemLogsByNameLines(ctx context.Context, name string) ApiGetSystemLogsByNameLinesRequest {
 	return ApiGetSystemLogsByNameLinesRequest{
 		ApiService: a,
-		ctx: ctx,
-		name: name,
+		ctx:        ctx,
+		name:       name,
 	}
 }
 
 // Execute executes the request
-//  @return QueryResultString
+//
+//	@return QueryResultString
 func (a *SystemServiceAPIService) GetSystemLogsByNameLinesExecute(r ApiGetSystemLogsByNameLinesRequest) (*QueryResultString, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *QueryResultString
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *QueryResultString
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SystemServiceAPIService.GetSystemLogsByNameLines")
@@ -791,10 +794,10 @@ func (a *SystemServiceAPIService) GetSystemLogsByNameLinesExecute(r ApiGetSystem
 }
 
 type ApiGetSystemLogsQueryRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SystemServiceAPI
 	startIndex *int32
-	limit *int32
+	limit      *int32
 }
 
 // Optional. The record index to start at. All items with a lower index will be dropped from the results.
@@ -818,24 +821,25 @@ GetSystemLogsQuery Gets a list of available server log files
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetSystemLogsQueryRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetSystemLogsQueryRequest
 */
 func (a *SystemServiceAPIService) GetSystemLogsQuery(ctx context.Context) ApiGetSystemLogsQueryRequest {
 	return ApiGetSystemLogsQueryRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return QueryResultLogFile
+//
+//	@return QueryResultLogFile
 func (a *SystemServiceAPIService) GetSystemLogsQueryExecute(r ApiGetSystemLogsQueryRequest) (*QueryResultLogFile, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *QueryResultLogFile
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *QueryResultLogFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SystemServiceAPIService.GetSystemLogsQuery")
@@ -924,7 +928,7 @@ func (a *SystemServiceAPIService) GetSystemLogsQueryExecute(r ApiGetSystemLogsQu
 }
 
 type ApiGetSystemPingRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SystemServiceAPI
 }
 
@@ -937,22 +941,22 @@ GetSystemPing Method for GetSystemPing
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetSystemPingRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetSystemPingRequest
 */
 func (a *SystemServiceAPIService) GetSystemPing(ctx context.Context) ApiGetSystemPingRequest {
 	return ApiGetSystemPingRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *SystemServiceAPIService) GetSystemPingExecute(r ApiGetSystemPingRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SystemServiceAPIService.GetSystemPing")
@@ -1026,7 +1030,7 @@ func (a *SystemServiceAPIService) GetSystemPingExecute(r ApiGetSystemPingRequest
 }
 
 type ApiGetSystemReleasenotesRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SystemServiceAPI
 }
 
@@ -1039,24 +1043,25 @@ GetSystemReleasenotes Gets release notes
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetSystemReleasenotesRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetSystemReleasenotesRequest
 */
 func (a *SystemServiceAPIService) GetSystemReleasenotes(ctx context.Context) ApiGetSystemReleasenotesRequest {
 	return ApiGetSystemReleasenotesRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return PackageVersionInfo
+//
+//	@return PackageVersionInfo
 func (a *SystemServiceAPIService) GetSystemReleasenotesExecute(r ApiGetSystemReleasenotesRequest) (*PackageVersionInfo, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *PackageVersionInfo
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *PackageVersionInfo
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SystemServiceAPIService.GetSystemReleasenotes")
@@ -1139,7 +1144,7 @@ func (a *SystemServiceAPIService) GetSystemReleasenotesExecute(r ApiGetSystemRel
 }
 
 type ApiGetSystemReleasenotesVersionsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SystemServiceAPI
 }
 
@@ -1152,24 +1157,25 @@ GetSystemReleasenotesVersions Gets release notes
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetSystemReleasenotesVersionsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetSystemReleasenotesVersionsRequest
 */
 func (a *SystemServiceAPIService) GetSystemReleasenotesVersions(ctx context.Context) ApiGetSystemReleasenotesVersionsRequest {
 	return ApiGetSystemReleasenotesVersionsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return []PackageVersionInfo
+//
+//	@return []PackageVersionInfo
 func (a *SystemServiceAPIService) GetSystemReleasenotesVersionsExecute(r ApiGetSystemReleasenotesVersionsRequest) ([]PackageVersionInfo, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []PackageVersionInfo
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue []PackageVersionInfo
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SystemServiceAPIService.GetSystemReleasenotesVersions")
@@ -1252,7 +1258,7 @@ func (a *SystemServiceAPIService) GetSystemReleasenotesVersionsExecute(r ApiGetS
 }
 
 type ApiGetSystemWakeonlaninfoRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SystemServiceAPI
 }
 
@@ -1265,24 +1271,25 @@ GetSystemWakeonlaninfo Gets wake on lan information
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetSystemWakeonlaninfoRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetSystemWakeonlaninfoRequest
 */
 func (a *SystemServiceAPIService) GetSystemWakeonlaninfo(ctx context.Context) ApiGetSystemWakeonlaninfoRequest {
 	return ApiGetSystemWakeonlaninfoRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return []WakeOnLanInfo
+//
+//	@return []WakeOnLanInfo
 func (a *SystemServiceAPIService) GetSystemWakeonlaninfoExecute(r ApiGetSystemWakeonlaninfoRequest) ([]WakeOnLanInfo, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []WakeOnLanInfo
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue []WakeOnLanInfo
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SystemServiceAPIService.GetSystemWakeonlaninfo")
@@ -1365,7 +1372,7 @@ func (a *SystemServiceAPIService) GetSystemWakeonlaninfoExecute(r ApiGetSystemWa
 }
 
 type ApiHeadSystemPingRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SystemServiceAPI
 }
 
@@ -1378,22 +1385,22 @@ HeadSystemPing Method for HeadSystemPing
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiHeadSystemPingRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiHeadSystemPingRequest
 */
 func (a *SystemServiceAPIService) HeadSystemPing(ctx context.Context) ApiHeadSystemPingRequest {
 	return ApiHeadSystemPingRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *SystemServiceAPIService) HeadSystemPingExecute(r ApiHeadSystemPingRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodHead
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodHead
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SystemServiceAPIService.HeadSystemPing")
@@ -1467,7 +1474,7 @@ func (a *SystemServiceAPIService) HeadSystemPingExecute(r ApiHeadSystemPingReque
 }
 
 type ApiPostSystemPingRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SystemServiceAPI
 }
 
@@ -1480,22 +1487,22 @@ PostSystemPing Method for PostSystemPing
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostSystemPingRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostSystemPingRequest
 */
 func (a *SystemServiceAPIService) PostSystemPing(ctx context.Context) ApiPostSystemPingRequest {
 	return ApiPostSystemPingRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *SystemServiceAPIService) PostSystemPingExecute(r ApiPostSystemPingRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SystemServiceAPIService.PostSystemPing")
@@ -1569,7 +1576,7 @@ func (a *SystemServiceAPIService) PostSystemPingExecute(r ApiPostSystemPingReque
 }
 
 type ApiPostSystemRestartRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SystemServiceAPI
 }
 
@@ -1582,22 +1589,22 @@ PostSystemRestart Restarts the application, if needed
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostSystemRestartRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostSystemRestartRequest
 */
 func (a *SystemServiceAPIService) PostSystemRestart(ctx context.Context) ApiPostSystemRestartRequest {
 	return ApiPostSystemRestartRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *SystemServiceAPIService) PostSystemRestartExecute(r ApiPostSystemRestartRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SystemServiceAPIService.PostSystemRestart")
@@ -1671,7 +1678,7 @@ func (a *SystemServiceAPIService) PostSystemRestartExecute(r ApiPostSystemRestar
 }
 
 type ApiPostSystemShutdownRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SystemServiceAPI
 }
 
@@ -1684,22 +1691,22 @@ PostSystemShutdown Shuts down the application
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostSystemShutdownRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostSystemShutdownRequest
 */
 func (a *SystemServiceAPIService) PostSystemShutdown(ctx context.Context) ApiPostSystemShutdownRequest {
 	return ApiPostSystemShutdownRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *SystemServiceAPIService) PostSystemShutdownExecute(r ApiPostSystemShutdownRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SystemServiceAPIService.PostSystemShutdown")

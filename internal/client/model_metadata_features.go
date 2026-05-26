@@ -20,8 +20,8 @@ type MetadataFeatures string
 
 // List of MetadataFeatures
 const (
-	METADATAFEATURES_COLLECTIONS MetadataFeatures = "Collections"
-	METADATAFEATURES_ADULT MetadataFeatures = "Adult"
+	METADATAFEATURES_COLLECTIONS    MetadataFeatures = "Collections"
+	METADATAFEATURES_ADULT          MetadataFeatures = "Adult"
 	METADATAFEATURES_REQUIRED_SETUP MetadataFeatures = "RequiredSetup"
 )
 
@@ -110,4 +110,3 @@ func (v *NullableMetadataFeatures) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

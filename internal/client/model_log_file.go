@@ -20,10 +20,10 @@ var _ MappedNullable = &LogFile{}
 
 // LogFile struct for LogFile
 type LogFile struct {
-	DateCreated *time.Time `json:"DateCreated,omitempty"`
+	DateCreated  *time.Time `json:"DateCreated,omitempty"`
 	DateModified *time.Time `json:"DateModified,omitempty"`
-	Size *int64 `json:"Size,omitempty"`
-	Name *string `json:"Name,omitempty"`
+	Size         *int64     `json:"Size,omitempty"`
+	Name         *string    `json:"Name,omitempty"`
 }
 
 // NewLogFile instantiates a new LogFile object
@@ -172,7 +172,7 @@ func (o *LogFile) SetName(v string) {
 }
 
 func (o LogFile) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -231,5 +231,3 @@ func (v *NullableLogFile) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

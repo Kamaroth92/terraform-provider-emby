@@ -19,24 +19,24 @@ var _ MappedNullable = &LiveTvTunerHostInfo{}
 
 // LiveTvTunerHostInfo struct for LiveTvTunerHostInfo
 type LiveTvTunerHostInfo struct {
-	Id *string `json:"Id,omitempty"`
-	Url *string `json:"Url,omitempty"`
-	Type *string `json:"Type,omitempty"`
-	DeviceId *string `json:"DeviceId,omitempty"`
-	FriendlyName *string `json:"FriendlyName,omitempty"`
-	SetupUrl *string `json:"SetupUrl,omitempty"`
-	ImportFavoritesOnly *bool `json:"ImportFavoritesOnly,omitempty"`
-	PreferEpgChannelImages *bool `json:"PreferEpgChannelImages,omitempty"`
-	PreferEpgChannelNumbers *bool `json:"PreferEpgChannelNumbers,omitempty"`
-	AllowHWTranscoding *bool `json:"AllowHWTranscoding,omitempty"`
-	AllowMappingByNumber *bool `json:"AllowMappingByNumber,omitempty"`
-	ImportGuideData *bool `json:"ImportGuideData,omitempty"`
-	Source *string `json:"Source,omitempty"`
-	TunerCount *int32 `json:"TunerCount,omitempty"`
-	UserAgent *string `json:"UserAgent,omitempty"`
-	Referrer *string `json:"Referrer,omitempty"`
-	ProviderOptions *string `json:"ProviderOptions,omitempty"`
-	DataVersion *int32 `json:"DataVersion,omitempty"`
+	Id                      *string `json:"Id,omitempty"`
+	Url                     *string `json:"Url,omitempty"`
+	Type                    *string `json:"Type,omitempty"`
+	DeviceId                *string `json:"DeviceId,omitempty"`
+	FriendlyName            *string `json:"FriendlyName,omitempty"`
+	SetupUrl                *string `json:"SetupUrl,omitempty"`
+	ImportFavoritesOnly     *bool   `json:"ImportFavoritesOnly,omitempty"`
+	PreferEpgChannelImages  *bool   `json:"PreferEpgChannelImages,omitempty"`
+	PreferEpgChannelNumbers *bool   `json:"PreferEpgChannelNumbers,omitempty"`
+	AllowHWTranscoding      *bool   `json:"AllowHWTranscoding,omitempty"`
+	AllowMappingByNumber    *bool   `json:"AllowMappingByNumber,omitempty"`
+	ImportGuideData         *bool   `json:"ImportGuideData,omitempty"`
+	Source                  *string `json:"Source,omitempty"`
+	TunerCount              *int32  `json:"TunerCount,omitempty"`
+	UserAgent               *string `json:"UserAgent,omitempty"`
+	Referrer                *string `json:"Referrer,omitempty"`
+	ProviderOptions         *string `json:"ProviderOptions,omitempty"`
+	DataVersion             *int32  `json:"DataVersion,omitempty"`
 }
 
 // NewLiveTvTunerHostInfo instantiates a new LiveTvTunerHostInfo object
@@ -633,7 +633,7 @@ func (o *LiveTvTunerHostInfo) SetDataVersion(v int32) {
 }
 
 func (o LiveTvTunerHostInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -734,5 +734,3 @@ func (v *NullableLiveTvTunerHostInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

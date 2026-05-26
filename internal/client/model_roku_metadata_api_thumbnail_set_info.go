@@ -19,8 +19,8 @@ var _ MappedNullable = &RokuMetadataApiThumbnailSetInfo{}
 
 // RokuMetadataApiThumbnailSetInfo struct for RokuMetadataApiThumbnailSetInfo
 type RokuMetadataApiThumbnailSetInfo struct {
-	AspectRatio NullableFloat64 `json:"AspectRatio,omitempty"`
-	Thumbnails []RokuMetadataApiThumbnailInfo `json:"Thumbnails,omitempty"`
+	AspectRatio NullableFloat64                `json:"AspectRatio,omitempty"`
+	Thumbnails  []RokuMetadataApiThumbnailInfo `json:"Thumbnails,omitempty"`
 }
 
 // NewRokuMetadataApiThumbnailSetInfo instantiates a new RokuMetadataApiThumbnailSetInfo object
@@ -72,6 +72,7 @@ func (o *RokuMetadataApiThumbnailSetInfo) HasAspectRatio() bool {
 func (o *RokuMetadataApiThumbnailSetInfo) SetAspectRatio(v float64) {
 	o.AspectRatio.Set(&v)
 }
+
 // SetAspectRatioNil sets the value for AspectRatio to be an explicit nil
 func (o *RokuMetadataApiThumbnailSetInfo) SetAspectRatioNil() {
 	o.AspectRatio.Set(nil)
@@ -115,7 +116,7 @@ func (o *RokuMetadataApiThumbnailSetInfo) SetThumbnails(v []RokuMetadataApiThumb
 }
 
 func (o RokuMetadataApiThumbnailSetInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -168,5 +169,3 @@ func (v *NullableRokuMetadataApiThumbnailSetInfo) UnmarshalJSON(src []byte) erro
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

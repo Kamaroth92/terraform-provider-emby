@@ -19,8 +19,8 @@ var _ MappedNullable = &SyncDialogOptions{}
 
 // SyncDialogOptions struct for SyncDialogOptions
 type SyncDialogOptions struct {
-	Targets []SyncTarget `json:"Targets,omitempty"`
-	Options []SyncJobOption `json:"Options,omitempty"`
+	Targets        []SyncTarget        `json:"Targets,omitempty"`
+	Options        []SyncJobOption     `json:"Options,omitempty"`
 	QualityOptions []SyncQualityOption `json:"QualityOptions,omitempty"`
 	ProfileOptions []SyncProfileOption `json:"ProfileOptions,omitempty"`
 }
@@ -171,7 +171,7 @@ func (o *SyncDialogOptions) SetProfileOptions(v []SyncProfileOption) {
 }
 
 func (o SyncDialogOptions) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -230,5 +230,3 @@ func (v *NullableSyncDialogOptions) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

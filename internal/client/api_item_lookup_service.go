@@ -19,17 +19,16 @@ import (
 	"strings"
 )
 
-
 type ItemLookupServiceAPI interface {
 
 	/*
-	GetItemsByIdExternalidinfos Gets external id infos for an item
+		GetItemsByIdExternalidinfos Gets external id infos for an item
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiGetItemsByIdExternalidinfosRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiGetItemsByIdExternalidinfosRequest
 	*/
 	GetItemsByIdExternalidinfos(ctx context.Context, id string) ApiGetItemsByIdExternalidinfosRequest
 
@@ -38,12 +37,12 @@ type ItemLookupServiceAPI interface {
 	GetItemsByIdExternalidinfosExecute(r ApiGetItemsByIdExternalidinfosRequest) ([]ExternalIdInfo, *http.Response, error)
 
 	/*
-	GetItemsRemotesearchImage Gets a remote image
+		GetItemsRemotesearchImage Gets a remote image
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetItemsRemotesearchImageRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetItemsRemotesearchImageRequest
 	*/
 	GetItemsRemotesearchImage(ctx context.Context) ApiGetItemsRemotesearchImageRequest
 
@@ -51,12 +50,12 @@ type ItemLookupServiceAPI interface {
 	GetItemsRemotesearchImageExecute(r ApiGetItemsRemotesearchImageRequest) (*http.Response, error)
 
 	/*
-	PostItemsMetadataReset Resets metadata for one or more items
+		PostItemsMetadataReset Resets metadata for one or more items
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostItemsMetadataResetRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostItemsMetadataResetRequest
 	*/
 	PostItemsMetadataReset(ctx context.Context) ApiPostItemsMetadataResetRequest
 
@@ -64,13 +63,13 @@ type ItemLookupServiceAPI interface {
 	PostItemsMetadataResetExecute(r ApiPostItemsMetadataResetRequest) (*http.Response, error)
 
 	/*
-	PostItemsRemotesearchApplyById Applies search criteria to an item and refreshes metadata
+		PostItemsRemotesearchApplyById Applies search criteria to an item and refreshes metadata
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id The item id
-	@return ApiPostItemsRemotesearchApplyByIdRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id The item id
+		@return ApiPostItemsRemotesearchApplyByIdRequest
 	*/
 	PostItemsRemotesearchApplyById(ctx context.Context, id string) ApiPostItemsRemotesearchApplyByIdRequest
 
@@ -78,12 +77,12 @@ type ItemLookupServiceAPI interface {
 	PostItemsRemotesearchApplyByIdExecute(r ApiPostItemsRemotesearchApplyByIdRequest) (*http.Response, error)
 
 	/*
-	PostItemsRemotesearchBook Method for PostItemsRemotesearchBook
+		PostItemsRemotesearchBook Method for PostItemsRemotesearchBook
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostItemsRemotesearchBookRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostItemsRemotesearchBookRequest
 	*/
 	PostItemsRemotesearchBook(ctx context.Context) ApiPostItemsRemotesearchBookRequest
 
@@ -92,12 +91,12 @@ type ItemLookupServiceAPI interface {
 	PostItemsRemotesearchBookExecute(r ApiPostItemsRemotesearchBookRequest) ([]RemoteSearchResult, *http.Response, error)
 
 	/*
-	PostItemsRemotesearchBoxset Method for PostItemsRemotesearchBoxset
+		PostItemsRemotesearchBoxset Method for PostItemsRemotesearchBoxset
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostItemsRemotesearchBoxsetRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostItemsRemotesearchBoxsetRequest
 	*/
 	PostItemsRemotesearchBoxset(ctx context.Context) ApiPostItemsRemotesearchBoxsetRequest
 
@@ -106,12 +105,12 @@ type ItemLookupServiceAPI interface {
 	PostItemsRemotesearchBoxsetExecute(r ApiPostItemsRemotesearchBoxsetRequest) ([]RemoteSearchResult, *http.Response, error)
 
 	/*
-	PostItemsRemotesearchGame Method for PostItemsRemotesearchGame
+		PostItemsRemotesearchGame Method for PostItemsRemotesearchGame
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostItemsRemotesearchGameRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostItemsRemotesearchGameRequest
 	*/
 	PostItemsRemotesearchGame(ctx context.Context) ApiPostItemsRemotesearchGameRequest
 
@@ -120,12 +119,12 @@ type ItemLookupServiceAPI interface {
 	PostItemsRemotesearchGameExecute(r ApiPostItemsRemotesearchGameRequest) ([]RemoteSearchResult, *http.Response, error)
 
 	/*
-	PostItemsRemotesearchMovie Method for PostItemsRemotesearchMovie
+		PostItemsRemotesearchMovie Method for PostItemsRemotesearchMovie
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostItemsRemotesearchMovieRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostItemsRemotesearchMovieRequest
 	*/
 	PostItemsRemotesearchMovie(ctx context.Context) ApiPostItemsRemotesearchMovieRequest
 
@@ -134,12 +133,12 @@ type ItemLookupServiceAPI interface {
 	PostItemsRemotesearchMovieExecute(r ApiPostItemsRemotesearchMovieRequest) ([]RemoteSearchResult, *http.Response, error)
 
 	/*
-	PostItemsRemotesearchMusicalbum Method for PostItemsRemotesearchMusicalbum
+		PostItemsRemotesearchMusicalbum Method for PostItemsRemotesearchMusicalbum
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostItemsRemotesearchMusicalbumRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostItemsRemotesearchMusicalbumRequest
 	*/
 	PostItemsRemotesearchMusicalbum(ctx context.Context) ApiPostItemsRemotesearchMusicalbumRequest
 
@@ -148,12 +147,12 @@ type ItemLookupServiceAPI interface {
 	PostItemsRemotesearchMusicalbumExecute(r ApiPostItemsRemotesearchMusicalbumRequest) ([]RemoteSearchResult, *http.Response, error)
 
 	/*
-	PostItemsRemotesearchMusicartist Method for PostItemsRemotesearchMusicartist
+		PostItemsRemotesearchMusicartist Method for PostItemsRemotesearchMusicartist
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostItemsRemotesearchMusicartistRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostItemsRemotesearchMusicartistRequest
 	*/
 	PostItemsRemotesearchMusicartist(ctx context.Context) ApiPostItemsRemotesearchMusicartistRequest
 
@@ -162,12 +161,12 @@ type ItemLookupServiceAPI interface {
 	PostItemsRemotesearchMusicartistExecute(r ApiPostItemsRemotesearchMusicartistRequest) ([]RemoteSearchResult, *http.Response, error)
 
 	/*
-	PostItemsRemotesearchMusicvideo Method for PostItemsRemotesearchMusicvideo
+		PostItemsRemotesearchMusicvideo Method for PostItemsRemotesearchMusicvideo
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostItemsRemotesearchMusicvideoRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostItemsRemotesearchMusicvideoRequest
 	*/
 	PostItemsRemotesearchMusicvideo(ctx context.Context) ApiPostItemsRemotesearchMusicvideoRequest
 
@@ -176,12 +175,12 @@ type ItemLookupServiceAPI interface {
 	PostItemsRemotesearchMusicvideoExecute(r ApiPostItemsRemotesearchMusicvideoRequest) ([]RemoteSearchResult, *http.Response, error)
 
 	/*
-	PostItemsRemotesearchPerson Method for PostItemsRemotesearchPerson
+		PostItemsRemotesearchPerson Method for PostItemsRemotesearchPerson
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostItemsRemotesearchPersonRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostItemsRemotesearchPersonRequest
 	*/
 	PostItemsRemotesearchPerson(ctx context.Context) ApiPostItemsRemotesearchPersonRequest
 
@@ -190,12 +189,12 @@ type ItemLookupServiceAPI interface {
 	PostItemsRemotesearchPersonExecute(r ApiPostItemsRemotesearchPersonRequest) ([]RemoteSearchResult, *http.Response, error)
 
 	/*
-	PostItemsRemotesearchSeries Method for PostItemsRemotesearchSeries
+		PostItemsRemotesearchSeries Method for PostItemsRemotesearchSeries
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostItemsRemotesearchSeriesRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostItemsRemotesearchSeriesRequest
 	*/
 	PostItemsRemotesearchSeries(ctx context.Context) ApiPostItemsRemotesearchSeriesRequest
 
@@ -204,12 +203,12 @@ type ItemLookupServiceAPI interface {
 	PostItemsRemotesearchSeriesExecute(r ApiPostItemsRemotesearchSeriesRequest) ([]RemoteSearchResult, *http.Response, error)
 
 	/*
-	PostItemsRemotesearchTrailer Method for PostItemsRemotesearchTrailer
+		PostItemsRemotesearchTrailer Method for PostItemsRemotesearchTrailer
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostItemsRemotesearchTrailerRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostItemsRemotesearchTrailerRequest
 	*/
 	PostItemsRemotesearchTrailer(ctx context.Context) ApiPostItemsRemotesearchTrailerRequest
 
@@ -222,9 +221,9 @@ type ItemLookupServiceAPI interface {
 type ItemLookupServiceAPIService service
 
 type ApiGetItemsByIdExternalidinfosRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService ItemLookupServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiGetItemsByIdExternalidinfosRequest) Execute() ([]ExternalIdInfo, *http.Response, error) {
@@ -236,26 +235,27 @@ GetItemsByIdExternalidinfos Gets external id infos for an item
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiGetItemsByIdExternalidinfosRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiGetItemsByIdExternalidinfosRequest
 */
 func (a *ItemLookupServiceAPIService) GetItemsByIdExternalidinfos(ctx context.Context, id string) ApiGetItemsByIdExternalidinfosRequest {
 	return ApiGetItemsByIdExternalidinfosRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
-//  @return []ExternalIdInfo
+//
+//	@return []ExternalIdInfo
 func (a *ItemLookupServiceAPIService) GetItemsByIdExternalidinfosExecute(r ApiGetItemsByIdExternalidinfosRequest) ([]ExternalIdInfo, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []ExternalIdInfo
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue []ExternalIdInfo
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ItemLookupServiceAPIService.GetItemsByIdExternalidinfos")
@@ -339,9 +339,9 @@ func (a *ItemLookupServiceAPIService) GetItemsByIdExternalidinfosExecute(r ApiGe
 }
 
 type ApiGetItemsRemotesearchImageRequest struct {
-	ctx context.Context
-	ApiService ItemLookupServiceAPI
-	imageUrl *string
+	ctx          context.Context
+	ApiService   ItemLookupServiceAPI
+	imageUrl     *string
 	providerName *string
 }
 
@@ -365,22 +365,22 @@ GetItemsRemotesearchImage Gets a remote image
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetItemsRemotesearchImageRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetItemsRemotesearchImageRequest
 */
 func (a *ItemLookupServiceAPIService) GetItemsRemotesearchImage(ctx context.Context) ApiGetItemsRemotesearchImageRequest {
 	return ApiGetItemsRemotesearchImageRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *ItemLookupServiceAPIService) GetItemsRemotesearchImageExecute(r ApiGetItemsRemotesearchImageRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ItemLookupServiceAPIService.GetItemsRemotesearchImage")
@@ -462,9 +462,9 @@ func (a *ItemLookupServiceAPIService) GetItemsRemotesearchImageExecute(r ApiGetI
 }
 
 type ApiPostItemsMetadataResetRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService ItemLookupServiceAPI
-	itemIds *string
+	itemIds    *string
 }
 
 // The item ids
@@ -482,22 +482,22 @@ PostItemsMetadataReset Resets metadata for one or more items
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostItemsMetadataResetRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostItemsMetadataResetRequest
 */
 func (a *ItemLookupServiceAPIService) PostItemsMetadataReset(ctx context.Context) ApiPostItemsMetadataResetRequest {
 	return ApiPostItemsMetadataResetRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *ItemLookupServiceAPIService) PostItemsMetadataResetExecute(r ApiPostItemsMetadataResetRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ItemLookupServiceAPIService.PostItemsMetadataReset")
@@ -575,14 +575,14 @@ func (a *ItemLookupServiceAPIService) PostItemsMetadataResetExecute(r ApiPostIte
 }
 
 type ApiPostItemsRemotesearchApplyByIdRequest struct {
-	ctx context.Context
-	ApiService ItemLookupServiceAPI
-	id string
+	ctx                context.Context
+	ApiService         ItemLookupServiceAPI
+	id                 string
 	remoteSearchResult *RemoteSearchResult
-	replaceAllImages *bool
+	replaceAllImages   *bool
 }
 
-// RemoteSearchResult: 
+// RemoteSearchResult:
 func (r ApiPostItemsRemotesearchApplyByIdRequest) RemoteSearchResult(remoteSearchResult RemoteSearchResult) ApiPostItemsRemotesearchApplyByIdRequest {
 	r.remoteSearchResult = &remoteSearchResult
 	return r
@@ -603,24 +603,24 @@ PostItemsRemotesearchApplyById Applies search criteria to an item and refreshes 
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id The item id
- @return ApiPostItemsRemotesearchApplyByIdRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id The item id
+	@return ApiPostItemsRemotesearchApplyByIdRequest
 */
 func (a *ItemLookupServiceAPIService) PostItemsRemotesearchApplyById(ctx context.Context, id string) ApiPostItemsRemotesearchApplyByIdRequest {
 	return ApiPostItemsRemotesearchApplyByIdRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *ItemLookupServiceAPIService) PostItemsRemotesearchApplyByIdExecute(r ApiPostItemsRemotesearchApplyByIdRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ItemLookupServiceAPIService.PostItemsRemotesearchApplyById")
@@ -703,12 +703,12 @@ func (a *ItemLookupServiceAPIService) PostItemsRemotesearchApplyByIdExecute(r Ap
 }
 
 type ApiPostItemsRemotesearchBookRequest struct {
-	ctx context.Context
-	ApiService ItemLookupServiceAPI
+	ctx                       context.Context
+	ApiService                ItemLookupServiceAPI
 	remoteSearchQueryBookInfo *RemoteSearchQueryBookInfo
 }
 
-// RemoteSearchQuery&#x60;1: 
+// RemoteSearchQuery&#x60;1:
 func (r ApiPostItemsRemotesearchBookRequest) RemoteSearchQueryBookInfo(remoteSearchQueryBookInfo RemoteSearchQueryBookInfo) ApiPostItemsRemotesearchBookRequest {
 	r.remoteSearchQueryBookInfo = &remoteSearchQueryBookInfo
 	return r
@@ -723,24 +723,25 @@ PostItemsRemotesearchBook Method for PostItemsRemotesearchBook
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostItemsRemotesearchBookRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostItemsRemotesearchBookRequest
 */
 func (a *ItemLookupServiceAPIService) PostItemsRemotesearchBook(ctx context.Context) ApiPostItemsRemotesearchBookRequest {
 	return ApiPostItemsRemotesearchBookRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return []RemoteSearchResult
+//
+//	@return []RemoteSearchResult
 func (a *ItemLookupServiceAPIService) PostItemsRemotesearchBookExecute(r ApiPostItemsRemotesearchBookRequest) ([]RemoteSearchResult, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []RemoteSearchResult
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue []RemoteSearchResult
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ItemLookupServiceAPIService.PostItemsRemotesearchBook")
@@ -828,12 +829,12 @@ func (a *ItemLookupServiceAPIService) PostItemsRemotesearchBookExecute(r ApiPost
 }
 
 type ApiPostItemsRemotesearchBoxsetRequest struct {
-	ctx context.Context
-	ApiService ItemLookupServiceAPI
+	ctx                             context.Context
+	ApiService                      ItemLookupServiceAPI
 	remoteSearchQueryItemLookupInfo *RemoteSearchQueryItemLookupInfo
 }
 
-// RemoteSearchQuery&#x60;1: 
+// RemoteSearchQuery&#x60;1:
 func (r ApiPostItemsRemotesearchBoxsetRequest) RemoteSearchQueryItemLookupInfo(remoteSearchQueryItemLookupInfo RemoteSearchQueryItemLookupInfo) ApiPostItemsRemotesearchBoxsetRequest {
 	r.remoteSearchQueryItemLookupInfo = &remoteSearchQueryItemLookupInfo
 	return r
@@ -848,24 +849,25 @@ PostItemsRemotesearchBoxset Method for PostItemsRemotesearchBoxset
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostItemsRemotesearchBoxsetRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostItemsRemotesearchBoxsetRequest
 */
 func (a *ItemLookupServiceAPIService) PostItemsRemotesearchBoxset(ctx context.Context) ApiPostItemsRemotesearchBoxsetRequest {
 	return ApiPostItemsRemotesearchBoxsetRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return []RemoteSearchResult
+//
+//	@return []RemoteSearchResult
 func (a *ItemLookupServiceAPIService) PostItemsRemotesearchBoxsetExecute(r ApiPostItemsRemotesearchBoxsetRequest) ([]RemoteSearchResult, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []RemoteSearchResult
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue []RemoteSearchResult
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ItemLookupServiceAPIService.PostItemsRemotesearchBoxset")
@@ -953,12 +955,12 @@ func (a *ItemLookupServiceAPIService) PostItemsRemotesearchBoxsetExecute(r ApiPo
 }
 
 type ApiPostItemsRemotesearchGameRequest struct {
-	ctx context.Context
-	ApiService ItemLookupServiceAPI
+	ctx                       context.Context
+	ApiService                ItemLookupServiceAPI
 	remoteSearchQueryGameInfo *RemoteSearchQueryGameInfo
 }
 
-// RemoteSearchQuery&#x60;1: 
+// RemoteSearchQuery&#x60;1:
 func (r ApiPostItemsRemotesearchGameRequest) RemoteSearchQueryGameInfo(remoteSearchQueryGameInfo RemoteSearchQueryGameInfo) ApiPostItemsRemotesearchGameRequest {
 	r.remoteSearchQueryGameInfo = &remoteSearchQueryGameInfo
 	return r
@@ -973,24 +975,25 @@ PostItemsRemotesearchGame Method for PostItemsRemotesearchGame
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostItemsRemotesearchGameRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostItemsRemotesearchGameRequest
 */
 func (a *ItemLookupServiceAPIService) PostItemsRemotesearchGame(ctx context.Context) ApiPostItemsRemotesearchGameRequest {
 	return ApiPostItemsRemotesearchGameRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return []RemoteSearchResult
+//
+//	@return []RemoteSearchResult
 func (a *ItemLookupServiceAPIService) PostItemsRemotesearchGameExecute(r ApiPostItemsRemotesearchGameRequest) ([]RemoteSearchResult, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []RemoteSearchResult
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue []RemoteSearchResult
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ItemLookupServiceAPIService.PostItemsRemotesearchGame")
@@ -1078,12 +1081,12 @@ func (a *ItemLookupServiceAPIService) PostItemsRemotesearchGameExecute(r ApiPost
 }
 
 type ApiPostItemsRemotesearchMovieRequest struct {
-	ctx context.Context
-	ApiService ItemLookupServiceAPI
+	ctx                        context.Context
+	ApiService                 ItemLookupServiceAPI
 	remoteSearchQueryMovieInfo *RemoteSearchQueryMovieInfo
 }
 
-// RemoteSearchQuery&#x60;1: 
+// RemoteSearchQuery&#x60;1:
 func (r ApiPostItemsRemotesearchMovieRequest) RemoteSearchQueryMovieInfo(remoteSearchQueryMovieInfo RemoteSearchQueryMovieInfo) ApiPostItemsRemotesearchMovieRequest {
 	r.remoteSearchQueryMovieInfo = &remoteSearchQueryMovieInfo
 	return r
@@ -1098,24 +1101,25 @@ PostItemsRemotesearchMovie Method for PostItemsRemotesearchMovie
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostItemsRemotesearchMovieRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostItemsRemotesearchMovieRequest
 */
 func (a *ItemLookupServiceAPIService) PostItemsRemotesearchMovie(ctx context.Context) ApiPostItemsRemotesearchMovieRequest {
 	return ApiPostItemsRemotesearchMovieRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return []RemoteSearchResult
+//
+//	@return []RemoteSearchResult
 func (a *ItemLookupServiceAPIService) PostItemsRemotesearchMovieExecute(r ApiPostItemsRemotesearchMovieRequest) ([]RemoteSearchResult, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []RemoteSearchResult
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue []RemoteSearchResult
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ItemLookupServiceAPIService.PostItemsRemotesearchMovie")
@@ -1203,12 +1207,12 @@ func (a *ItemLookupServiceAPIService) PostItemsRemotesearchMovieExecute(r ApiPos
 }
 
 type ApiPostItemsRemotesearchMusicalbumRequest struct {
-	ctx context.Context
-	ApiService ItemLookupServiceAPI
+	ctx                        context.Context
+	ApiService                 ItemLookupServiceAPI
 	remoteSearchQueryAlbumInfo *RemoteSearchQueryAlbumInfo
 }
 
-// RemoteSearchQuery&#x60;1: 
+// RemoteSearchQuery&#x60;1:
 func (r ApiPostItemsRemotesearchMusicalbumRequest) RemoteSearchQueryAlbumInfo(remoteSearchQueryAlbumInfo RemoteSearchQueryAlbumInfo) ApiPostItemsRemotesearchMusicalbumRequest {
 	r.remoteSearchQueryAlbumInfo = &remoteSearchQueryAlbumInfo
 	return r
@@ -1223,24 +1227,25 @@ PostItemsRemotesearchMusicalbum Method for PostItemsRemotesearchMusicalbum
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostItemsRemotesearchMusicalbumRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostItemsRemotesearchMusicalbumRequest
 */
 func (a *ItemLookupServiceAPIService) PostItemsRemotesearchMusicalbum(ctx context.Context) ApiPostItemsRemotesearchMusicalbumRequest {
 	return ApiPostItemsRemotesearchMusicalbumRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return []RemoteSearchResult
+//
+//	@return []RemoteSearchResult
 func (a *ItemLookupServiceAPIService) PostItemsRemotesearchMusicalbumExecute(r ApiPostItemsRemotesearchMusicalbumRequest) ([]RemoteSearchResult, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []RemoteSearchResult
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue []RemoteSearchResult
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ItemLookupServiceAPIService.PostItemsRemotesearchMusicalbum")
@@ -1328,12 +1333,12 @@ func (a *ItemLookupServiceAPIService) PostItemsRemotesearchMusicalbumExecute(r A
 }
 
 type ApiPostItemsRemotesearchMusicartistRequest struct {
-	ctx context.Context
-	ApiService ItemLookupServiceAPI
+	ctx                         context.Context
+	ApiService                  ItemLookupServiceAPI
 	remoteSearchQueryArtistInfo *RemoteSearchQueryArtistInfo
 }
 
-// RemoteSearchQuery&#x60;1: 
+// RemoteSearchQuery&#x60;1:
 func (r ApiPostItemsRemotesearchMusicartistRequest) RemoteSearchQueryArtistInfo(remoteSearchQueryArtistInfo RemoteSearchQueryArtistInfo) ApiPostItemsRemotesearchMusicartistRequest {
 	r.remoteSearchQueryArtistInfo = &remoteSearchQueryArtistInfo
 	return r
@@ -1348,24 +1353,25 @@ PostItemsRemotesearchMusicartist Method for PostItemsRemotesearchMusicartist
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostItemsRemotesearchMusicartistRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostItemsRemotesearchMusicartistRequest
 */
 func (a *ItemLookupServiceAPIService) PostItemsRemotesearchMusicartist(ctx context.Context) ApiPostItemsRemotesearchMusicartistRequest {
 	return ApiPostItemsRemotesearchMusicartistRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return []RemoteSearchResult
+//
+//	@return []RemoteSearchResult
 func (a *ItemLookupServiceAPIService) PostItemsRemotesearchMusicartistExecute(r ApiPostItemsRemotesearchMusicartistRequest) ([]RemoteSearchResult, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []RemoteSearchResult
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue []RemoteSearchResult
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ItemLookupServiceAPIService.PostItemsRemotesearchMusicartist")
@@ -1453,12 +1459,12 @@ func (a *ItemLookupServiceAPIService) PostItemsRemotesearchMusicartistExecute(r 
 }
 
 type ApiPostItemsRemotesearchMusicvideoRequest struct {
-	ctx context.Context
-	ApiService ItemLookupServiceAPI
+	ctx                             context.Context
+	ApiService                      ItemLookupServiceAPI
 	remoteSearchQueryMusicVideoInfo *RemoteSearchQueryMusicVideoInfo
 }
 
-// RemoteSearchQuery&#x60;1: 
+// RemoteSearchQuery&#x60;1:
 func (r ApiPostItemsRemotesearchMusicvideoRequest) RemoteSearchQueryMusicVideoInfo(remoteSearchQueryMusicVideoInfo RemoteSearchQueryMusicVideoInfo) ApiPostItemsRemotesearchMusicvideoRequest {
 	r.remoteSearchQueryMusicVideoInfo = &remoteSearchQueryMusicVideoInfo
 	return r
@@ -1473,24 +1479,25 @@ PostItemsRemotesearchMusicvideo Method for PostItemsRemotesearchMusicvideo
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostItemsRemotesearchMusicvideoRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostItemsRemotesearchMusicvideoRequest
 */
 func (a *ItemLookupServiceAPIService) PostItemsRemotesearchMusicvideo(ctx context.Context) ApiPostItemsRemotesearchMusicvideoRequest {
 	return ApiPostItemsRemotesearchMusicvideoRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return []RemoteSearchResult
+//
+//	@return []RemoteSearchResult
 func (a *ItemLookupServiceAPIService) PostItemsRemotesearchMusicvideoExecute(r ApiPostItemsRemotesearchMusicvideoRequest) ([]RemoteSearchResult, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []RemoteSearchResult
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue []RemoteSearchResult
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ItemLookupServiceAPIService.PostItemsRemotesearchMusicvideo")
@@ -1578,12 +1585,12 @@ func (a *ItemLookupServiceAPIService) PostItemsRemotesearchMusicvideoExecute(r A
 }
 
 type ApiPostItemsRemotesearchPersonRequest struct {
-	ctx context.Context
-	ApiService ItemLookupServiceAPI
+	ctx                               context.Context
+	ApiService                        ItemLookupServiceAPI
 	remoteSearchQueryPersonLookupInfo *RemoteSearchQueryPersonLookupInfo
 }
 
-// RemoteSearchQuery&#x60;1: 
+// RemoteSearchQuery&#x60;1:
 func (r ApiPostItemsRemotesearchPersonRequest) RemoteSearchQueryPersonLookupInfo(remoteSearchQueryPersonLookupInfo RemoteSearchQueryPersonLookupInfo) ApiPostItemsRemotesearchPersonRequest {
 	r.remoteSearchQueryPersonLookupInfo = &remoteSearchQueryPersonLookupInfo
 	return r
@@ -1598,24 +1605,25 @@ PostItemsRemotesearchPerson Method for PostItemsRemotesearchPerson
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostItemsRemotesearchPersonRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostItemsRemotesearchPersonRequest
 */
 func (a *ItemLookupServiceAPIService) PostItemsRemotesearchPerson(ctx context.Context) ApiPostItemsRemotesearchPersonRequest {
 	return ApiPostItemsRemotesearchPersonRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return []RemoteSearchResult
+//
+//	@return []RemoteSearchResult
 func (a *ItemLookupServiceAPIService) PostItemsRemotesearchPersonExecute(r ApiPostItemsRemotesearchPersonRequest) ([]RemoteSearchResult, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []RemoteSearchResult
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue []RemoteSearchResult
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ItemLookupServiceAPIService.PostItemsRemotesearchPerson")
@@ -1703,12 +1711,12 @@ func (a *ItemLookupServiceAPIService) PostItemsRemotesearchPersonExecute(r ApiPo
 }
 
 type ApiPostItemsRemotesearchSeriesRequest struct {
-	ctx context.Context
-	ApiService ItemLookupServiceAPI
+	ctx                         context.Context
+	ApiService                  ItemLookupServiceAPI
 	remoteSearchQuerySeriesInfo *RemoteSearchQuerySeriesInfo
 }
 
-// RemoteSearchQuery&#x60;1: 
+// RemoteSearchQuery&#x60;1:
 func (r ApiPostItemsRemotesearchSeriesRequest) RemoteSearchQuerySeriesInfo(remoteSearchQuerySeriesInfo RemoteSearchQuerySeriesInfo) ApiPostItemsRemotesearchSeriesRequest {
 	r.remoteSearchQuerySeriesInfo = &remoteSearchQuerySeriesInfo
 	return r
@@ -1723,24 +1731,25 @@ PostItemsRemotesearchSeries Method for PostItemsRemotesearchSeries
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostItemsRemotesearchSeriesRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostItemsRemotesearchSeriesRequest
 */
 func (a *ItemLookupServiceAPIService) PostItemsRemotesearchSeries(ctx context.Context) ApiPostItemsRemotesearchSeriesRequest {
 	return ApiPostItemsRemotesearchSeriesRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return []RemoteSearchResult
+//
+//	@return []RemoteSearchResult
 func (a *ItemLookupServiceAPIService) PostItemsRemotesearchSeriesExecute(r ApiPostItemsRemotesearchSeriesRequest) ([]RemoteSearchResult, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []RemoteSearchResult
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue []RemoteSearchResult
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ItemLookupServiceAPIService.PostItemsRemotesearchSeries")
@@ -1828,12 +1837,12 @@ func (a *ItemLookupServiceAPIService) PostItemsRemotesearchSeriesExecute(r ApiPo
 }
 
 type ApiPostItemsRemotesearchTrailerRequest struct {
-	ctx context.Context
-	ApiService ItemLookupServiceAPI
+	ctx                          context.Context
+	ApiService                   ItemLookupServiceAPI
 	remoteSearchQueryTrailerInfo *RemoteSearchQueryTrailerInfo
 }
 
-// RemoteSearchQuery&#x60;1: 
+// RemoteSearchQuery&#x60;1:
 func (r ApiPostItemsRemotesearchTrailerRequest) RemoteSearchQueryTrailerInfo(remoteSearchQueryTrailerInfo RemoteSearchQueryTrailerInfo) ApiPostItemsRemotesearchTrailerRequest {
 	r.remoteSearchQueryTrailerInfo = &remoteSearchQueryTrailerInfo
 	return r
@@ -1848,24 +1857,25 @@ PostItemsRemotesearchTrailer Method for PostItemsRemotesearchTrailer
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostItemsRemotesearchTrailerRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostItemsRemotesearchTrailerRequest
 */
 func (a *ItemLookupServiceAPIService) PostItemsRemotesearchTrailer(ctx context.Context) ApiPostItemsRemotesearchTrailerRequest {
 	return ApiPostItemsRemotesearchTrailerRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return []RemoteSearchResult
+//
+//	@return []RemoteSearchResult
 func (a *ItemLookupServiceAPIService) PostItemsRemotesearchTrailerExecute(r ApiPostItemsRemotesearchTrailerRequest) ([]RemoteSearchResult, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []RemoteSearchResult
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue []RemoteSearchResult
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ItemLookupServiceAPIService.PostItemsRemotesearchTrailer")

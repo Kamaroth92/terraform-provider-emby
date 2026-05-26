@@ -21,7 +21,7 @@ type ConnectUserLinkType string
 // List of Connect.UserLinkType
 const (
 	CONNECTUSERLINKTYPE_LINKED_USER ConnectUserLinkType = "LinkedUser"
-	CONNECTUSERLINKTYPE_GUEST ConnectUserLinkType = "Guest"
+	CONNECTUSERLINKTYPE_GUEST       ConnectUserLinkType = "Guest"
 )
 
 // All allowed values of ConnectUserLinkType enum
@@ -108,4 +108,3 @@ func (v *NullableConnectUserLinkType) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

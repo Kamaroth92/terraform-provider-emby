@@ -19,7 +19,7 @@ var _ MappedNullable = &LiveTvLiveTvInfo{}
 
 // LiveTvLiveTvInfo struct for LiveTvLiveTvInfo
 type LiveTvLiveTvInfo struct {
-	IsEnabled *bool `json:"IsEnabled,omitempty"`
+	IsEnabled    *bool    `json:"IsEnabled,omitempty"`
 	EnabledUsers []string `json:"EnabledUsers,omitempty"`
 }
 
@@ -105,7 +105,7 @@ func (o *LiveTvLiveTvInfo) SetEnabledUsers(v []string) {
 }
 
 func (o LiveTvLiveTvInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -158,5 +158,3 @@ func (v *NullableLiveTvLiveTvInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

@@ -20,16 +20,16 @@ type UnratedItem string
 
 // List of UnratedItem
 const (
-	UNRATEDITEM_MOVIE UnratedItem = "Movie"
-	UNRATEDITEM_TRAILER UnratedItem = "Trailer"
-	UNRATEDITEM_SERIES UnratedItem = "Series"
-	UNRATEDITEM_MUSIC UnratedItem = "Music"
-	UNRATEDITEM_GAME UnratedItem = "Game"
-	UNRATEDITEM_BOOK UnratedItem = "Book"
+	UNRATEDITEM_MOVIE           UnratedItem = "Movie"
+	UNRATEDITEM_TRAILER         UnratedItem = "Trailer"
+	UNRATEDITEM_SERIES          UnratedItem = "Series"
+	UNRATEDITEM_MUSIC           UnratedItem = "Music"
+	UNRATEDITEM_GAME            UnratedItem = "Game"
+	UNRATEDITEM_BOOK            UnratedItem = "Book"
 	UNRATEDITEM_LIVE_TV_CHANNEL UnratedItem = "LiveTvChannel"
 	UNRATEDITEM_LIVE_TV_PROGRAM UnratedItem = "LiveTvProgram"
 	UNRATEDITEM_CHANNEL_CONTENT UnratedItem = "ChannelContent"
-	UNRATEDITEM_OTHER UnratedItem = "Other"
+	UNRATEDITEM_OTHER           UnratedItem = "Other"
 )
 
 // All allowed values of UnratedItem enum
@@ -124,4 +124,3 @@ func (v *NullableUnratedItem) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

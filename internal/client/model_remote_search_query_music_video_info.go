@@ -19,11 +19,11 @@ var _ MappedNullable = &RemoteSearchQueryMusicVideoInfo{}
 
 // RemoteSearchQueryMusicVideoInfo struct for RemoteSearchQueryMusicVideoInfo
 type RemoteSearchQueryMusicVideoInfo struct {
-	SearchInfo *MusicVideoInfo `json:"SearchInfo,omitempty"`
-	ItemId *int64 `json:"ItemId,omitempty"`
-	SearchProviderName *string `json:"SearchProviderName,omitempty"`
-	Providers []string `json:"Providers,omitempty"`
-	IncludeDisabledProviders *bool `json:"IncludeDisabledProviders,omitempty"`
+	SearchInfo               *MusicVideoInfo `json:"SearchInfo,omitempty"`
+	ItemId                   *int64          `json:"ItemId,omitempty"`
+	SearchProviderName       *string         `json:"SearchProviderName,omitempty"`
+	Providers                []string        `json:"Providers,omitempty"`
+	IncludeDisabledProviders *bool           `json:"IncludeDisabledProviders,omitempty"`
 }
 
 // NewRemoteSearchQueryMusicVideoInfo instantiates a new RemoteSearchQueryMusicVideoInfo object
@@ -204,7 +204,7 @@ func (o *RemoteSearchQueryMusicVideoInfo) SetIncludeDisabledProviders(v bool) {
 }
 
 func (o RemoteSearchQueryMusicVideoInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -266,5 +266,3 @@ func (v *NullableRemoteSearchQueryMusicVideoInfo) UnmarshalJSON(src []byte) erro
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

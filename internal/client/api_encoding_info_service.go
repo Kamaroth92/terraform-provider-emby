@@ -18,16 +18,15 @@ import (
 	"net/url"
 )
 
-
 type EncodingInfoServiceAPI interface {
 
 	/*
-	GetEncodingCodecconfigurationDefaults Gets default codec configurations
+		GetEncodingCodecconfigurationDefaults Gets default codec configurations
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetEncodingCodecconfigurationDefaultsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetEncodingCodecconfigurationDefaultsRequest
 	*/
 	GetEncodingCodecconfigurationDefaults(ctx context.Context) ApiGetEncodingCodecconfigurationDefaultsRequest
 
@@ -36,12 +35,12 @@ type EncodingInfoServiceAPI interface {
 	GetEncodingCodecconfigurationDefaultsExecute(r ApiGetEncodingCodecconfigurationDefaultsRequest) ([]CodecConfiguration, *http.Response, error)
 
 	/*
-	GetEncodingCodecinformationVideo Gets details about available video encoders and decoders
+		GetEncodingCodecinformationVideo Gets details about available video encoders and decoders
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetEncodingCodecinformationVideoRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetEncodingCodecinformationVideoRequest
 	*/
 	GetEncodingCodecinformationVideo(ctx context.Context) ApiGetEncodingCodecinformationVideoRequest
 
@@ -50,12 +49,12 @@ type EncodingInfoServiceAPI interface {
 	GetEncodingCodecinformationVideoExecute(r ApiGetEncodingCodecinformationVideoRequest) ([]VideoCodecBase, *http.Response, error)
 
 	/*
-	GetEncodingTonemapoptions Gets available tone mapping options
+		GetEncodingTonemapoptions Gets available tone mapping options
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetEncodingTonemapoptionsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetEncodingTonemapoptionsRequest
 	*/
 	GetEncodingTonemapoptions(ctx context.Context) ApiGetEncodingTonemapoptionsRequest
 
@@ -68,7 +67,7 @@ type EncodingInfoServiceAPI interface {
 type EncodingInfoServiceAPIService service
 
 type ApiGetEncodingCodecconfigurationDefaultsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService EncodingInfoServiceAPI
 }
 
@@ -81,24 +80,25 @@ GetEncodingCodecconfigurationDefaults Gets default codec configurations
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetEncodingCodecconfigurationDefaultsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetEncodingCodecconfigurationDefaultsRequest
 */
 func (a *EncodingInfoServiceAPIService) GetEncodingCodecconfigurationDefaults(ctx context.Context) ApiGetEncodingCodecconfigurationDefaultsRequest {
 	return ApiGetEncodingCodecconfigurationDefaultsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return []CodecConfiguration
+//
+//	@return []CodecConfiguration
 func (a *EncodingInfoServiceAPIService) GetEncodingCodecconfigurationDefaultsExecute(r ApiGetEncodingCodecconfigurationDefaultsRequest) ([]CodecConfiguration, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []CodecConfiguration
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue []CodecConfiguration
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "EncodingInfoServiceAPIService.GetEncodingCodecconfigurationDefaults")
@@ -181,7 +181,7 @@ func (a *EncodingInfoServiceAPIService) GetEncodingCodecconfigurationDefaultsExe
 }
 
 type ApiGetEncodingCodecinformationVideoRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService EncodingInfoServiceAPI
 }
 
@@ -194,24 +194,25 @@ GetEncodingCodecinformationVideo Gets details about available video encoders and
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetEncodingCodecinformationVideoRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetEncodingCodecinformationVideoRequest
 */
 func (a *EncodingInfoServiceAPIService) GetEncodingCodecinformationVideo(ctx context.Context) ApiGetEncodingCodecinformationVideoRequest {
 	return ApiGetEncodingCodecinformationVideoRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return []VideoCodecBase
+//
+//	@return []VideoCodecBase
 func (a *EncodingInfoServiceAPIService) GetEncodingCodecinformationVideoExecute(r ApiGetEncodingCodecinformationVideoRequest) ([]VideoCodecBase, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []VideoCodecBase
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue []VideoCodecBase
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "EncodingInfoServiceAPIService.GetEncodingCodecinformationVideo")
@@ -294,7 +295,7 @@ func (a *EncodingInfoServiceAPIService) GetEncodingCodecinformationVideoExecute(
 }
 
 type ApiGetEncodingTonemapoptionsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService EncodingInfoServiceAPI
 }
 
@@ -307,24 +308,25 @@ GetEncodingTonemapoptions Gets available tone mapping options
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetEncodingTonemapoptionsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetEncodingTonemapoptionsRequest
 */
 func (a *EncodingInfoServiceAPIService) GetEncodingTonemapoptions(ctx context.Context) ApiGetEncodingTonemapoptionsRequest {
 	return ApiGetEncodingTonemapoptionsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return ConfigurationToneMappingToneMapOptionsVisibility
+//
+//	@return ConfigurationToneMappingToneMapOptionsVisibility
 func (a *EncodingInfoServiceAPIService) GetEncodingTonemapoptionsExecute(r ApiGetEncodingTonemapoptionsRequest) (*ConfigurationToneMappingToneMapOptionsVisibility, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *ConfigurationToneMappingToneMapOptionsVisibility
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *ConfigurationToneMappingToneMapOptionsVisibility
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "EncodingInfoServiceAPIService.GetEncodingTonemapoptions")

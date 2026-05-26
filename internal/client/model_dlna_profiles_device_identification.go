@@ -19,16 +19,16 @@ var _ MappedNullable = &DlnaProfilesDeviceIdentification{}
 
 // DlnaProfilesDeviceIdentification struct for DlnaProfilesDeviceIdentification
 type DlnaProfilesDeviceIdentification struct {
-	FriendlyName *string `json:"FriendlyName,omitempty"`
-	ModelNumber *string `json:"ModelNumber,omitempty"`
-	SerialNumber *string `json:"SerialNumber,omitempty"`
-	ModelName *string `json:"ModelName,omitempty"`
-	ModelDescription *string `json:"ModelDescription,omitempty"`
-	DeviceDescription *string `json:"DeviceDescription,omitempty"`
-	ModelUrl *string `json:"ModelUrl,omitempty"`
-	Manufacturer *string `json:"Manufacturer,omitempty"`
-	ManufacturerUrl *string `json:"ManufacturerUrl,omitempty"`
-	Headers []DlnaProfilesHttpHeaderInfo `json:"Headers,omitempty"`
+	FriendlyName      *string                      `json:"FriendlyName,omitempty"`
+	ModelNumber       *string                      `json:"ModelNumber,omitempty"`
+	SerialNumber      *string                      `json:"SerialNumber,omitempty"`
+	ModelName         *string                      `json:"ModelName,omitempty"`
+	ModelDescription  *string                      `json:"ModelDescription,omitempty"`
+	DeviceDescription *string                      `json:"DeviceDescription,omitempty"`
+	ModelUrl          *string                      `json:"ModelUrl,omitempty"`
+	Manufacturer      *string                      `json:"Manufacturer,omitempty"`
+	ManufacturerUrl   *string                      `json:"ManufacturerUrl,omitempty"`
+	Headers           []DlnaProfilesHttpHeaderInfo `json:"Headers,omitempty"`
 }
 
 // NewDlnaProfilesDeviceIdentification instantiates a new DlnaProfilesDeviceIdentification object
@@ -369,7 +369,7 @@ func (o *DlnaProfilesDeviceIdentification) SetHeaders(v []DlnaProfilesHttpHeader
 }
 
 func (o DlnaProfilesDeviceIdentification) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -446,5 +446,3 @@ func (v *NullableDlnaProfilesDeviceIdentification) UnmarshalJSON(src []byte) err
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

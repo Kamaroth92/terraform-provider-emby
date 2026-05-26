@@ -1,3 +1,5 @@
+// Copyright (c) HashiCorp, Inc.
+
 /*
 Emby Server REST API (BETA)
 
@@ -11,10 +13,10 @@ package embyclient
 
 import (
 	"context"
+	openapiclient "github.com/Kamaroth92/terraform-provider-emby/client"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func Test_embyclient_EnvironmentServiceAPIService(t *testing.T) {
@@ -24,7 +26,7 @@ func Test_embyclient_EnvironmentServiceAPIService(t *testing.T) {
 
 	t.Run("Test EnvironmentServiceAPIService GetEnvironmentDefaultdirectorybrowser", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.EnvironmentServiceAPI.GetEnvironmentDefaultdirectorybrowser(context.Background()).Execute()
 
@@ -36,7 +38,7 @@ func Test_embyclient_EnvironmentServiceAPIService(t *testing.T) {
 
 	t.Run("Test EnvironmentServiceAPIService GetEnvironmentDirectorycontents", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.EnvironmentServiceAPI.GetEnvironmentDirectorycontents(context.Background()).Execute()
 
@@ -48,7 +50,7 @@ func Test_embyclient_EnvironmentServiceAPIService(t *testing.T) {
 
 	t.Run("Test EnvironmentServiceAPIService GetEnvironmentDrives", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.EnvironmentServiceAPI.GetEnvironmentDrives(context.Background()).Execute()
 
@@ -60,7 +62,7 @@ func Test_embyclient_EnvironmentServiceAPIService(t *testing.T) {
 
 	t.Run("Test EnvironmentServiceAPIService GetEnvironmentNetworkdevices", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.EnvironmentServiceAPI.GetEnvironmentNetworkdevices(context.Background()).Execute()
 
@@ -72,7 +74,7 @@ func Test_embyclient_EnvironmentServiceAPIService(t *testing.T) {
 
 	t.Run("Test EnvironmentServiceAPIService GetEnvironmentNetworkshares", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.EnvironmentServiceAPI.GetEnvironmentNetworkshares(context.Background()).Execute()
 
@@ -84,7 +86,7 @@ func Test_embyclient_EnvironmentServiceAPIService(t *testing.T) {
 
 	t.Run("Test EnvironmentServiceAPIService GetEnvironmentParentpath", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.EnvironmentServiceAPI.GetEnvironmentParentpath(context.Background()).Execute()
 
@@ -96,7 +98,7 @@ func Test_embyclient_EnvironmentServiceAPIService(t *testing.T) {
 
 	t.Run("Test EnvironmentServiceAPIService PostEnvironmentDirectorycontents", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.EnvironmentServiceAPI.PostEnvironmentDirectorycontents(context.Background()).Execute()
 
@@ -108,7 +110,7 @@ func Test_embyclient_EnvironmentServiceAPIService(t *testing.T) {
 
 	t.Run("Test EnvironmentServiceAPIService PostEnvironmentValidatepath", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.EnvironmentServiceAPI.PostEnvironmentValidatepath(context.Background()).Execute()
 

@@ -19,9 +19,9 @@ var _ MappedNullable = &ConnectUserLinkResult{}
 
 // ConnectUserLinkResult struct for ConnectUserLinkResult
 type ConnectUserLinkResult struct {
-	IsPending *bool `json:"IsPending,omitempty"`
-	IsNewUserInvitation *bool `json:"IsNewUserInvitation,omitempty"`
-	GuestDisplayName *string `json:"GuestDisplayName,omitempty"`
+	IsPending           *bool   `json:"IsPending,omitempty"`
+	IsNewUserInvitation *bool   `json:"IsNewUserInvitation,omitempty"`
+	GuestDisplayName    *string `json:"GuestDisplayName,omitempty"`
 }
 
 // NewConnectUserLinkResult instantiates a new ConnectUserLinkResult object
@@ -138,7 +138,7 @@ func (o *ConnectUserLinkResult) SetGuestDisplayName(v string) {
 }
 
 func (o ConnectUserLinkResult) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -194,5 +194,3 @@ func (v *NullableConnectUserLinkResult) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

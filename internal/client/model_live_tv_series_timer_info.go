@@ -20,33 +20,33 @@ var _ MappedNullable = &LiveTvSeriesTimerInfo{}
 
 // LiveTvSeriesTimerInfo struct for LiveTvSeriesTimerInfo
 type LiveTvSeriesTimerInfo struct {
-	Id *string `json:"Id,omitempty"`
-	ChannelId *string `json:"ChannelId,omitempty"`
-	ChannelIds []string `json:"ChannelIds,omitempty"`
-	ParentFolderId *int64 `json:"ParentFolderId,omitempty"`
-	ProgramId *string `json:"ProgramId,omitempty"`
-	ServiceName *string `json:"ServiceName,omitempty"`
-	Overview *string `json:"Overview,omitempty"`
-	StartDate *time.Time `json:"StartDate,omitempty"`
-	EndDate *time.Time `json:"EndDate,omitempty"`
-	RecordAnyTime *bool `json:"RecordAnyTime,omitempty"`
-	KeepUpTo *int32 `json:"KeepUpTo,omitempty"`
-	KeepUntil *LiveTvKeepUntil `json:"KeepUntil,omitempty"`
-	SkipEpisodesInLibrary *bool `json:"SkipEpisodesInLibrary,omitempty"`
-	MatchExistingItemsWithAnyLibrary *bool `json:"MatchExistingItemsWithAnyLibrary,omitempty"`
-	RecordNewOnly *bool `json:"RecordNewOnly,omitempty"`
-	Days []DayOfWeek `json:"Days,omitempty"`
-	Priority *int32 `json:"Priority,omitempty"`
-	PrePaddingSeconds *int32 `json:"PrePaddingSeconds,omitempty"`
-	PostPaddingSeconds *int32 `json:"PostPaddingSeconds,omitempty"`
-	IsPrePaddingRequired *bool `json:"IsPrePaddingRequired,omitempty"`
-	IsPostPaddingRequired *bool `json:"IsPostPaddingRequired,omitempty"`
-	SeriesId *string `json:"SeriesId,omitempty"`
-	ProviderIds *map[string]string `json:"ProviderIds,omitempty"`
-	MaxRecordingSeconds *int32 `json:"MaxRecordingSeconds,omitempty"`
-	Keywords []LiveTvKeywordInfo `json:"Keywords,omitempty"`
-	TimerType *LiveTvTimerType `json:"TimerType,omitempty"`
-	Name *string `json:"Name,omitempty"`
+	Id                               *string             `json:"Id,omitempty"`
+	ChannelId                        *string             `json:"ChannelId,omitempty"`
+	ChannelIds                       []string            `json:"ChannelIds,omitempty"`
+	ParentFolderId                   *int64              `json:"ParentFolderId,omitempty"`
+	ProgramId                        *string             `json:"ProgramId,omitempty"`
+	ServiceName                      *string             `json:"ServiceName,omitempty"`
+	Overview                         *string             `json:"Overview,omitempty"`
+	StartDate                        *time.Time          `json:"StartDate,omitempty"`
+	EndDate                          *time.Time          `json:"EndDate,omitempty"`
+	RecordAnyTime                    *bool               `json:"RecordAnyTime,omitempty"`
+	KeepUpTo                         *int32              `json:"KeepUpTo,omitempty"`
+	KeepUntil                        *LiveTvKeepUntil    `json:"KeepUntil,omitempty"`
+	SkipEpisodesInLibrary            *bool               `json:"SkipEpisodesInLibrary,omitempty"`
+	MatchExistingItemsWithAnyLibrary *bool               `json:"MatchExistingItemsWithAnyLibrary,omitempty"`
+	RecordNewOnly                    *bool               `json:"RecordNewOnly,omitempty"`
+	Days                             []DayOfWeek         `json:"Days,omitempty"`
+	Priority                         *int32              `json:"Priority,omitempty"`
+	PrePaddingSeconds                *int32              `json:"PrePaddingSeconds,omitempty"`
+	PostPaddingSeconds               *int32              `json:"PostPaddingSeconds,omitempty"`
+	IsPrePaddingRequired             *bool               `json:"IsPrePaddingRequired,omitempty"`
+	IsPostPaddingRequired            *bool               `json:"IsPostPaddingRequired,omitempty"`
+	SeriesId                         *string             `json:"SeriesId,omitempty"`
+	ProviderIds                      *map[string]string  `json:"ProviderIds,omitempty"`
+	MaxRecordingSeconds              *int32              `json:"MaxRecordingSeconds,omitempty"`
+	Keywords                         []LiveTvKeywordInfo `json:"Keywords,omitempty"`
+	TimerType                        *LiveTvTimerType    `json:"TimerType,omitempty"`
+	Name                             *string             `json:"Name,omitempty"`
 }
 
 // NewLiveTvSeriesTimerInfo instantiates a new LiveTvSeriesTimerInfo object
@@ -931,7 +931,7 @@ func (o *LiveTvSeriesTimerInfo) SetName(v string) {
 }
 
 func (o LiveTvSeriesTimerInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -1059,5 +1059,3 @@ func (v *NullableLiveTvSeriesTimerInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

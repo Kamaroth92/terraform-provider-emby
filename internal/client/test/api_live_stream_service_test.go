@@ -1,3 +1,5 @@
+// Copyright (c) HashiCorp, Inc.
+
 /*
 Emby Server REST API (BETA)
 
@@ -11,10 +13,10 @@ package embyclient
 
 import (
 	"context"
+	openapiclient "github.com/Kamaroth92/terraform-provider-emby/client"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func Test_embyclient_LiveStreamServiceAPIService(t *testing.T) {
@@ -24,7 +26,7 @@ func Test_embyclient_LiveStreamServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveStreamServiceAPIService GetLivetvLiverecordingsByIdHlsBySegment", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var segment string
@@ -38,7 +40,7 @@ func Test_embyclient_LiveStreamServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveStreamServiceAPIService GetLivetvLiverecordingsByIdHlsLiveM3u8", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -51,7 +53,7 @@ func Test_embyclient_LiveStreamServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveStreamServiceAPIService GetLivetvLiverecordingsByIdHlsMasterM3u8", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -64,7 +66,7 @@ func Test_embyclient_LiveStreamServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveStreamServiceAPIService GetLivetvLiverecordingsByIdStream", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -77,7 +79,7 @@ func Test_embyclient_LiveStreamServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveStreamServiceAPIService GetLivetvLivestreamfilesByIdHlsBySegment", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var segment string
@@ -91,7 +93,7 @@ func Test_embyclient_LiveStreamServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveStreamServiceAPIService GetLivetvLivestreamfilesByIdHlsLiveM3u8", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -104,7 +106,7 @@ func Test_embyclient_LiveStreamServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveStreamServiceAPIService GetLivetvLivestreamfilesByIdHlsMasterM3u8", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -117,7 +119,7 @@ func Test_embyclient_LiveStreamServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveStreamServiceAPIService GetLivetvLivestreamfilesByIdStreamByContainer", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var container string
@@ -131,7 +133,7 @@ func Test_embyclient_LiveStreamServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveStreamServiceAPIService HeadLivetvLiverecordingsByIdHlsBySegment", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var segment string
@@ -145,7 +147,7 @@ func Test_embyclient_LiveStreamServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveStreamServiceAPIService HeadLivetvLiverecordingsByIdHlsLiveM3u8", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -158,7 +160,7 @@ func Test_embyclient_LiveStreamServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveStreamServiceAPIService HeadLivetvLiverecordingsByIdHlsMasterM3u8", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -171,7 +173,7 @@ func Test_embyclient_LiveStreamServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveStreamServiceAPIService HeadLivetvLivestreamfilesByIdHlsBySegment", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var segment string
@@ -185,7 +187,7 @@ func Test_embyclient_LiveStreamServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveStreamServiceAPIService HeadLivetvLivestreamfilesByIdHlsLiveM3u8", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -198,7 +200,7 @@ func Test_embyclient_LiveStreamServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveStreamServiceAPIService HeadLivetvLivestreamfilesByIdHlsMasterM3u8", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 

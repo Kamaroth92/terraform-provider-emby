@@ -19,18 +19,17 @@ import (
 	"strings"
 )
 
-
 type VideoServiceAPI interface {
 
 	/*
-	GetVideosByIdByStreamfilename Gets a video stream
+		GetVideosByIdByStreamfilename Gets a video stream
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param streamFileName
-	@param id Item Id
-	@return ApiGetVideosByIdByStreamfilenameRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param streamFileName
+		@param id Item Id
+		@return ApiGetVideosByIdByStreamfilenameRequest
 	*/
 	GetVideosByIdByStreamfilename(ctx context.Context, streamFileName string, id string) ApiGetVideosByIdByStreamfilenameRequest
 
@@ -38,13 +37,13 @@ type VideoServiceAPI interface {
 	GetVideosByIdByStreamfilenameExecute(r ApiGetVideosByIdByStreamfilenameRequest) (*http.Response, error)
 
 	/*
-	GetVideosByIdStream Gets a video stream
+		GetVideosByIdStream Gets a video stream
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiGetVideosByIdStreamRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiGetVideosByIdStreamRequest
 	*/
 	GetVideosByIdStream(ctx context.Context, id string) ApiGetVideosByIdStreamRequest
 
@@ -52,14 +51,14 @@ type VideoServiceAPI interface {
 	GetVideosByIdStreamExecute(r ApiGetVideosByIdStreamRequest) (*http.Response, error)
 
 	/*
-	GetVideosByIdStreamByContainer Gets a video stream
+		GetVideosByIdStreamByContainer Gets a video stream
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@param container Container
-	@return ApiGetVideosByIdStreamByContainerRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@param container Container
+		@return ApiGetVideosByIdStreamByContainerRequest
 	*/
 	GetVideosByIdStreamByContainer(ctx context.Context, id string, container string) ApiGetVideosByIdStreamByContainerRequest
 
@@ -67,14 +66,14 @@ type VideoServiceAPI interface {
 	GetVideosByIdStreamByContainerExecute(r ApiGetVideosByIdStreamByContainerRequest) (*http.Response, error)
 
 	/*
-	HeadVideosByIdByStreamfilename Gets a video stream
+		HeadVideosByIdByStreamfilename Gets a video stream
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param streamFileName
-	@param id Item Id
-	@return ApiHeadVideosByIdByStreamfilenameRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param streamFileName
+		@param id Item Id
+		@return ApiHeadVideosByIdByStreamfilenameRequest
 	*/
 	HeadVideosByIdByStreamfilename(ctx context.Context, streamFileName string, id string) ApiHeadVideosByIdByStreamfilenameRequest
 
@@ -82,13 +81,13 @@ type VideoServiceAPI interface {
 	HeadVideosByIdByStreamfilenameExecute(r ApiHeadVideosByIdByStreamfilenameRequest) (*http.Response, error)
 
 	/*
-	HeadVideosByIdStream Gets a video stream
+		HeadVideosByIdStream Gets a video stream
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiHeadVideosByIdStreamRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiHeadVideosByIdStreamRequest
 	*/
 	HeadVideosByIdStream(ctx context.Context, id string) ApiHeadVideosByIdStreamRequest
 
@@ -96,14 +95,14 @@ type VideoServiceAPI interface {
 	HeadVideosByIdStreamExecute(r ApiHeadVideosByIdStreamRequest) (*http.Response, error)
 
 	/*
-	HeadVideosByIdStreamByContainer Gets a video stream
+		HeadVideosByIdStreamByContainer Gets a video stream
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@param container Container
-	@return ApiHeadVideosByIdStreamByContainerRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@param container Container
+		@return ApiHeadVideosByIdStreamByContainerRequest
 	*/
 	HeadVideosByIdStreamByContainer(ctx context.Context, id string, container string) ApiHeadVideosByIdStreamByContainerRequest
 
@@ -115,33 +114,33 @@ type VideoServiceAPI interface {
 type VideoServiceAPIService service
 
 type ApiGetVideosByIdByStreamfilenameRequest struct {
-	ctx context.Context
-	ApiService VideoServiceAPI
-	streamFileName string
-	id string
-	container *string
-	deviceProfileId *string
-	deviceId *string
-	audioCodec *string
+	ctx                  context.Context
+	ApiService           VideoServiceAPI
+	streamFileName       string
+	id                   string
+	container            *string
+	deviceProfileId      *string
+	deviceId             *string
+	audioCodec           *string
 	enableAutoStreamCopy *bool
-	audioSampleRate *int32
-	audioBitRate *int32
-	audioChannels *int32
-	maxAudioChannels *int32
-	static *bool
-	copyTimestamps *bool
-	startTimeTicks *int64
-	width *int32
-	height *int32
-	maxWidth *int32
-	maxHeight *int32
-	videoBitRate *int32
-	subtitleStreamIndex *int32
-	subtitleMethod *SubtitleDeliveryMethod
-	maxVideoBitDepth *int32
-	videoCodec *string
-	audioStreamIndex *int32
-	videoStreamIndex *int32
+	audioSampleRate      *int32
+	audioBitRate         *int32
+	audioChannels        *int32
+	maxAudioChannels     *int32
+	static               *bool
+	copyTimestamps       *bool
+	startTimeTicks       *int64
+	width                *int32
+	height               *int32
+	maxWidth             *int32
+	maxHeight            *int32
+	videoBitRate         *int32
+	subtitleStreamIndex  *int32
+	subtitleMethod       *SubtitleDeliveryMethod
+	maxVideoBitDepth     *int32
+	videoCodec           *string
+	audioStreamIndex     *int32
+	videoStreamIndex     *int32
 }
 
 // Container
@@ -291,26 +290,26 @@ GetVideosByIdByStreamfilename Gets a video stream
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param streamFileName
- @param id Item Id
- @return ApiGetVideosByIdByStreamfilenameRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param streamFileName
+	@param id Item Id
+	@return ApiGetVideosByIdByStreamfilenameRequest
 */
 func (a *VideoServiceAPIService) GetVideosByIdByStreamfilename(ctx context.Context, streamFileName string, id string) ApiGetVideosByIdByStreamfilenameRequest {
 	return ApiGetVideosByIdByStreamfilenameRequest{
-		ApiService: a,
-		ctx: ctx,
+		ApiService:     a,
+		ctx:            ctx,
 		streamFileName: streamFileName,
-		id: id,
+		id:             id,
 	}
 }
 
 // Execute executes the request
 func (a *VideoServiceAPIService) GetVideosByIdByStreamfilenameExecute(r ApiGetVideosByIdByStreamfilenameRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "VideoServiceAPIService.GetVideosByIdByStreamfilename")
@@ -456,32 +455,32 @@ func (a *VideoServiceAPIService) GetVideosByIdByStreamfilenameExecute(r ApiGetVi
 }
 
 type ApiGetVideosByIdStreamRequest struct {
-	ctx context.Context
-	ApiService VideoServiceAPI
-	id string
-	container *string
-	deviceProfileId *string
-	deviceId *string
-	audioCodec *string
+	ctx                  context.Context
+	ApiService           VideoServiceAPI
+	id                   string
+	container            *string
+	deviceProfileId      *string
+	deviceId             *string
+	audioCodec           *string
 	enableAutoStreamCopy *bool
-	audioSampleRate *int32
-	audioBitRate *int32
-	audioChannels *int32
-	maxAudioChannels *int32
-	static *bool
-	copyTimestamps *bool
-	startTimeTicks *int64
-	width *int32
-	height *int32
-	maxWidth *int32
-	maxHeight *int32
-	videoBitRate *int32
-	subtitleStreamIndex *int32
-	subtitleMethod *SubtitleDeliveryMethod
-	maxVideoBitDepth *int32
-	videoCodec *string
-	audioStreamIndex *int32
-	videoStreamIndex *int32
+	audioSampleRate      *int32
+	audioBitRate         *int32
+	audioChannels        *int32
+	maxAudioChannels     *int32
+	static               *bool
+	copyTimestamps       *bool
+	startTimeTicks       *int64
+	width                *int32
+	height               *int32
+	maxWidth             *int32
+	maxHeight            *int32
+	videoBitRate         *int32
+	subtitleStreamIndex  *int32
+	subtitleMethod       *SubtitleDeliveryMethod
+	maxVideoBitDepth     *int32
+	videoCodec           *string
+	audioStreamIndex     *int32
+	videoStreamIndex     *int32
 }
 
 // Container
@@ -631,24 +630,24 @@ GetVideosByIdStream Gets a video stream
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiGetVideosByIdStreamRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiGetVideosByIdStreamRequest
 */
 func (a *VideoServiceAPIService) GetVideosByIdStream(ctx context.Context, id string) ApiGetVideosByIdStreamRequest {
 	return ApiGetVideosByIdStreamRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *VideoServiceAPIService) GetVideosByIdStreamExecute(r ApiGetVideosByIdStreamRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "VideoServiceAPIService.GetVideosByIdStream")
@@ -793,32 +792,32 @@ func (a *VideoServiceAPIService) GetVideosByIdStreamExecute(r ApiGetVideosByIdSt
 }
 
 type ApiGetVideosByIdStreamByContainerRequest struct {
-	ctx context.Context
-	ApiService VideoServiceAPI
-	id string
-	container string
-	deviceProfileId *string
-	deviceId *string
-	audioCodec *string
+	ctx                  context.Context
+	ApiService           VideoServiceAPI
+	id                   string
+	container            string
+	deviceProfileId      *string
+	deviceId             *string
+	audioCodec           *string
 	enableAutoStreamCopy *bool
-	audioSampleRate *int32
-	audioBitRate *int32
-	audioChannels *int32
-	maxAudioChannels *int32
-	static *bool
-	copyTimestamps *bool
-	startTimeTicks *int64
-	width *int32
-	height *int32
-	maxWidth *int32
-	maxHeight *int32
-	videoBitRate *int32
-	subtitleStreamIndex *int32
-	subtitleMethod *SubtitleDeliveryMethod
-	maxVideoBitDepth *int32
-	videoCodec *string
-	audioStreamIndex *int32
-	videoStreamIndex *int32
+	audioSampleRate      *int32
+	audioBitRate         *int32
+	audioChannels        *int32
+	maxAudioChannels     *int32
+	static               *bool
+	copyTimestamps       *bool
+	startTimeTicks       *int64
+	width                *int32
+	height               *int32
+	maxWidth             *int32
+	maxHeight            *int32
+	videoBitRate         *int32
+	subtitleStreamIndex  *int32
+	subtitleMethod       *SubtitleDeliveryMethod
+	maxVideoBitDepth     *int32
+	videoCodec           *string
+	audioStreamIndex     *int32
+	videoStreamIndex     *int32
 }
 
 // Optional. The dlna device profile id to utilize.
@@ -962,26 +961,26 @@ GetVideosByIdStreamByContainer Gets a video stream
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @param container Container
- @return ApiGetVideosByIdStreamByContainerRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@param container Container
+	@return ApiGetVideosByIdStreamByContainerRequest
 */
 func (a *VideoServiceAPIService) GetVideosByIdStreamByContainer(ctx context.Context, id string, container string) ApiGetVideosByIdStreamByContainerRequest {
 	return ApiGetVideosByIdStreamByContainerRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
-		container: container,
+		ctx:        ctx,
+		id:         id,
+		container:  container,
 	}
 }
 
 // Execute executes the request
 func (a *VideoServiceAPIService) GetVideosByIdStreamByContainerExecute(r ApiGetVideosByIdStreamByContainerRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "VideoServiceAPIService.GetVideosByIdStreamByContainer")
@@ -1123,33 +1122,33 @@ func (a *VideoServiceAPIService) GetVideosByIdStreamByContainerExecute(r ApiGetV
 }
 
 type ApiHeadVideosByIdByStreamfilenameRequest struct {
-	ctx context.Context
-	ApiService VideoServiceAPI
-	streamFileName string
-	id string
-	container *string
-	deviceProfileId *string
-	deviceId *string
-	audioCodec *string
+	ctx                  context.Context
+	ApiService           VideoServiceAPI
+	streamFileName       string
+	id                   string
+	container            *string
+	deviceProfileId      *string
+	deviceId             *string
+	audioCodec           *string
 	enableAutoStreamCopy *bool
-	audioSampleRate *int32
-	audioBitRate *int32
-	audioChannels *int32
-	maxAudioChannels *int32
-	static *bool
-	copyTimestamps *bool
-	startTimeTicks *int64
-	width *int32
-	height *int32
-	maxWidth *int32
-	maxHeight *int32
-	videoBitRate *int32
-	subtitleStreamIndex *int32
-	subtitleMethod *SubtitleDeliveryMethod
-	maxVideoBitDepth *int32
-	videoCodec *string
-	audioStreamIndex *int32
-	videoStreamIndex *int32
+	audioSampleRate      *int32
+	audioBitRate         *int32
+	audioChannels        *int32
+	maxAudioChannels     *int32
+	static               *bool
+	copyTimestamps       *bool
+	startTimeTicks       *int64
+	width                *int32
+	height               *int32
+	maxWidth             *int32
+	maxHeight            *int32
+	videoBitRate         *int32
+	subtitleStreamIndex  *int32
+	subtitleMethod       *SubtitleDeliveryMethod
+	maxVideoBitDepth     *int32
+	videoCodec           *string
+	audioStreamIndex     *int32
+	videoStreamIndex     *int32
 }
 
 // Container
@@ -1299,26 +1298,26 @@ HeadVideosByIdByStreamfilename Gets a video stream
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param streamFileName
- @param id Item Id
- @return ApiHeadVideosByIdByStreamfilenameRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param streamFileName
+	@param id Item Id
+	@return ApiHeadVideosByIdByStreamfilenameRequest
 */
 func (a *VideoServiceAPIService) HeadVideosByIdByStreamfilename(ctx context.Context, streamFileName string, id string) ApiHeadVideosByIdByStreamfilenameRequest {
 	return ApiHeadVideosByIdByStreamfilenameRequest{
-		ApiService: a,
-		ctx: ctx,
+		ApiService:     a,
+		ctx:            ctx,
 		streamFileName: streamFileName,
-		id: id,
+		id:             id,
 	}
 }
 
 // Execute executes the request
 func (a *VideoServiceAPIService) HeadVideosByIdByStreamfilenameExecute(r ApiHeadVideosByIdByStreamfilenameRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodHead
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodHead
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "VideoServiceAPIService.HeadVideosByIdByStreamfilename")
@@ -1464,32 +1463,32 @@ func (a *VideoServiceAPIService) HeadVideosByIdByStreamfilenameExecute(r ApiHead
 }
 
 type ApiHeadVideosByIdStreamRequest struct {
-	ctx context.Context
-	ApiService VideoServiceAPI
-	id string
-	container *string
-	deviceProfileId *string
-	deviceId *string
-	audioCodec *string
+	ctx                  context.Context
+	ApiService           VideoServiceAPI
+	id                   string
+	container            *string
+	deviceProfileId      *string
+	deviceId             *string
+	audioCodec           *string
 	enableAutoStreamCopy *bool
-	audioSampleRate *int32
-	audioBitRate *int32
-	audioChannels *int32
-	maxAudioChannels *int32
-	static *bool
-	copyTimestamps *bool
-	startTimeTicks *int64
-	width *int32
-	height *int32
-	maxWidth *int32
-	maxHeight *int32
-	videoBitRate *int32
-	subtitleStreamIndex *int32
-	subtitleMethod *SubtitleDeliveryMethod
-	maxVideoBitDepth *int32
-	videoCodec *string
-	audioStreamIndex *int32
-	videoStreamIndex *int32
+	audioSampleRate      *int32
+	audioBitRate         *int32
+	audioChannels        *int32
+	maxAudioChannels     *int32
+	static               *bool
+	copyTimestamps       *bool
+	startTimeTicks       *int64
+	width                *int32
+	height               *int32
+	maxWidth             *int32
+	maxHeight            *int32
+	videoBitRate         *int32
+	subtitleStreamIndex  *int32
+	subtitleMethod       *SubtitleDeliveryMethod
+	maxVideoBitDepth     *int32
+	videoCodec           *string
+	audioStreamIndex     *int32
+	videoStreamIndex     *int32
 }
 
 // Container
@@ -1639,24 +1638,24 @@ HeadVideosByIdStream Gets a video stream
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiHeadVideosByIdStreamRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiHeadVideosByIdStreamRequest
 */
 func (a *VideoServiceAPIService) HeadVideosByIdStream(ctx context.Context, id string) ApiHeadVideosByIdStreamRequest {
 	return ApiHeadVideosByIdStreamRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *VideoServiceAPIService) HeadVideosByIdStreamExecute(r ApiHeadVideosByIdStreamRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodHead
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodHead
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "VideoServiceAPIService.HeadVideosByIdStream")
@@ -1801,32 +1800,32 @@ func (a *VideoServiceAPIService) HeadVideosByIdStreamExecute(r ApiHeadVideosById
 }
 
 type ApiHeadVideosByIdStreamByContainerRequest struct {
-	ctx context.Context
-	ApiService VideoServiceAPI
-	id string
-	container string
-	deviceProfileId *string
-	deviceId *string
-	audioCodec *string
+	ctx                  context.Context
+	ApiService           VideoServiceAPI
+	id                   string
+	container            string
+	deviceProfileId      *string
+	deviceId             *string
+	audioCodec           *string
 	enableAutoStreamCopy *bool
-	audioSampleRate *int32
-	audioBitRate *int32
-	audioChannels *int32
-	maxAudioChannels *int32
-	static *bool
-	copyTimestamps *bool
-	startTimeTicks *int64
-	width *int32
-	height *int32
-	maxWidth *int32
-	maxHeight *int32
-	videoBitRate *int32
-	subtitleStreamIndex *int32
-	subtitleMethod *SubtitleDeliveryMethod
-	maxVideoBitDepth *int32
-	videoCodec *string
-	audioStreamIndex *int32
-	videoStreamIndex *int32
+	audioSampleRate      *int32
+	audioBitRate         *int32
+	audioChannels        *int32
+	maxAudioChannels     *int32
+	static               *bool
+	copyTimestamps       *bool
+	startTimeTicks       *int64
+	width                *int32
+	height               *int32
+	maxWidth             *int32
+	maxHeight            *int32
+	videoBitRate         *int32
+	subtitleStreamIndex  *int32
+	subtitleMethod       *SubtitleDeliveryMethod
+	maxVideoBitDepth     *int32
+	videoCodec           *string
+	audioStreamIndex     *int32
+	videoStreamIndex     *int32
 }
 
 // Optional. The dlna device profile id to utilize.
@@ -1970,26 +1969,26 @@ HeadVideosByIdStreamByContainer Gets a video stream
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @param container Container
- @return ApiHeadVideosByIdStreamByContainerRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@param container Container
+	@return ApiHeadVideosByIdStreamByContainerRequest
 */
 func (a *VideoServiceAPIService) HeadVideosByIdStreamByContainer(ctx context.Context, id string, container string) ApiHeadVideosByIdStreamByContainerRequest {
 	return ApiHeadVideosByIdStreamByContainerRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
-		container: container,
+		ctx:        ctx,
+		id:         id,
+		container:  container,
 	}
 }
 
 // Execute executes the request
 func (a *VideoServiceAPIService) HeadVideosByIdStreamByContainerExecute(r ApiHeadVideosByIdStreamByContainerRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodHead
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodHead
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "VideoServiceAPIService.HeadVideosByIdStreamByContainer")

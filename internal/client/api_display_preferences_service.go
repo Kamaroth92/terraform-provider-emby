@@ -16,21 +16,20 @@ import (
 	"io"
 	"net/http"
 	"net/url"
-	"strings"
 	"os"
+	"strings"
 )
-
 
 type DisplayPreferencesServiceAPI interface {
 
 	/*
-	GetDisplaypreferencesById Gets a user's display preferences for an item
+		GetDisplaypreferencesById Gets a user's display preferences for an item
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiGetDisplaypreferencesByIdRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiGetDisplaypreferencesByIdRequest
 	*/
 	GetDisplaypreferencesById(ctx context.Context, id string) ApiGetDisplaypreferencesByIdRequest
 
@@ -39,13 +38,13 @@ type DisplayPreferencesServiceAPI interface {
 	GetDisplaypreferencesByIdExecute(r ApiGetDisplaypreferencesByIdRequest) (*DisplayPreferences, *http.Response, error)
 
 	/*
-	GetUsersettingsByUserid Gets user settings
+		GetUsersettingsByUserid Gets user settings
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param userId User Id
-	@return ApiGetUsersettingsByUseridRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param userId User Id
+		@return ApiGetUsersettingsByUseridRequest
 	*/
 	GetUsersettingsByUserid(ctx context.Context, userId string) ApiGetUsersettingsByUseridRequest
 
@@ -54,13 +53,13 @@ type DisplayPreferencesServiceAPI interface {
 	GetUsersettingsByUseridExecute(r ApiGetUsersettingsByUseridRequest) (map[string]string, *http.Response, error)
 
 	/*
-	PostDisplaypreferencesByDisplaypreferencesid Updates a user's display preferences for an item
+		PostDisplaypreferencesByDisplaypreferencesid Updates a user's display preferences for an item
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param displayPreferencesId DisplayPreferences Id
-	@return ApiPostDisplaypreferencesByDisplaypreferencesidRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param displayPreferencesId DisplayPreferences Id
+		@return ApiPostDisplaypreferencesByDisplaypreferencesidRequest
 	*/
 	PostDisplaypreferencesByDisplaypreferencesid(ctx context.Context, displayPreferencesId string) ApiPostDisplaypreferencesByDisplaypreferencesidRequest
 
@@ -68,13 +67,13 @@ type DisplayPreferencesServiceAPI interface {
 	PostDisplaypreferencesByDisplaypreferencesidExecute(r ApiPostDisplaypreferencesByDisplaypreferencesidRequest) (*http.Response, error)
 
 	/*
-	PostUsersettingsByUserid Updates a user's display preferences for an item
+		PostUsersettingsByUserid Updates a user's display preferences for an item
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param userId User Id
-	@return ApiPostUsersettingsByUseridRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param userId User Id
+		@return ApiPostUsersettingsByUseridRequest
 	*/
 	PostUsersettingsByUserid(ctx context.Context, userId string) ApiPostUsersettingsByUseridRequest
 
@@ -82,13 +81,13 @@ type DisplayPreferencesServiceAPI interface {
 	PostUsersettingsByUseridExecute(r ApiPostUsersettingsByUseridRequest) (*http.Response, error)
 
 	/*
-	PostUsersettingsByUseridPartial Updates a user's display preferences for an item
+		PostUsersettingsByUseridPartial Updates a user's display preferences for an item
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param userId User Id
-	@return ApiPostUsersettingsByUseridPartialRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param userId User Id
+		@return ApiPostUsersettingsByUseridPartialRequest
 	*/
 	PostUsersettingsByUseridPartial(ctx context.Context, userId string) ApiPostUsersettingsByUseridPartialRequest
 
@@ -100,11 +99,11 @@ type DisplayPreferencesServiceAPI interface {
 type DisplayPreferencesServiceAPIService service
 
 type ApiGetDisplaypreferencesByIdRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService DisplayPreferencesServiceAPI
-	id string
-	userId *string
-	client *string
+	id         string
+	userId     *string
+	client     *string
 }
 
 // User Id
@@ -128,26 +127,27 @@ GetDisplaypreferencesById Gets a user's display preferences for an item
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiGetDisplaypreferencesByIdRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiGetDisplaypreferencesByIdRequest
 */
 func (a *DisplayPreferencesServiceAPIService) GetDisplaypreferencesById(ctx context.Context, id string) ApiGetDisplaypreferencesByIdRequest {
 	return ApiGetDisplaypreferencesByIdRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
-//  @return DisplayPreferences
+//
+//	@return DisplayPreferences
 func (a *DisplayPreferencesServiceAPIService) GetDisplaypreferencesByIdExecute(r ApiGetDisplaypreferencesByIdRequest) (*DisplayPreferences, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *DisplayPreferences
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *DisplayPreferences
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DisplayPreferencesServiceAPIService.GetDisplaypreferencesById")
@@ -239,9 +239,9 @@ func (a *DisplayPreferencesServiceAPIService) GetDisplaypreferencesByIdExecute(r
 }
 
 type ApiGetUsersettingsByUseridRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService DisplayPreferencesServiceAPI
-	userId string
+	userId     string
 }
 
 func (r ApiGetUsersettingsByUseridRequest) Execute() (map[string]string, *http.Response, error) {
@@ -253,26 +253,27 @@ GetUsersettingsByUserid Gets user settings
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param userId User Id
- @return ApiGetUsersettingsByUseridRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param userId User Id
+	@return ApiGetUsersettingsByUseridRequest
 */
 func (a *DisplayPreferencesServiceAPIService) GetUsersettingsByUserid(ctx context.Context, userId string) ApiGetUsersettingsByUseridRequest {
 	return ApiGetUsersettingsByUseridRequest{
 		ApiService: a,
-		ctx: ctx,
-		userId: userId,
+		ctx:        ctx,
+		userId:     userId,
 	}
 }
 
 // Execute executes the request
-//  @return map[string]string
+//
+//	@return map[string]string
 func (a *DisplayPreferencesServiceAPIService) GetUsersettingsByUseridExecute(r ApiGetUsersettingsByUseridRequest) (map[string]string, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  map[string]string
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue map[string]string
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DisplayPreferencesServiceAPIService.GetUsersettingsByUserid")
@@ -356,11 +357,11 @@ func (a *DisplayPreferencesServiceAPIService) GetUsersettingsByUseridExecute(r A
 }
 
 type ApiPostDisplaypreferencesByDisplaypreferencesidRequest struct {
-	ctx context.Context
-	ApiService DisplayPreferencesServiceAPI
+	ctx                  context.Context
+	ApiService           DisplayPreferencesServiceAPI
 	displayPreferencesId string
-	userId *string
-	displayPreferences *DisplayPreferences
+	userId               *string
+	displayPreferences   *DisplayPreferences
 }
 
 // User Id
@@ -369,7 +370,7 @@ func (r ApiPostDisplaypreferencesByDisplaypreferencesidRequest) UserId(userId st
 	return r
 }
 
-// DisplayPreferences: 
+// DisplayPreferences:
 func (r ApiPostDisplaypreferencesByDisplaypreferencesidRequest) DisplayPreferences(displayPreferences DisplayPreferences) ApiPostDisplaypreferencesByDisplaypreferencesidRequest {
 	r.displayPreferences = &displayPreferences
 	return r
@@ -384,14 +385,14 @@ PostDisplaypreferencesByDisplaypreferencesid Updates a user's display preference
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param displayPreferencesId DisplayPreferences Id
- @return ApiPostDisplaypreferencesByDisplaypreferencesidRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param displayPreferencesId DisplayPreferences Id
+	@return ApiPostDisplaypreferencesByDisplaypreferencesidRequest
 */
 func (a *DisplayPreferencesServiceAPIService) PostDisplaypreferencesByDisplaypreferencesid(ctx context.Context, displayPreferencesId string) ApiPostDisplaypreferencesByDisplaypreferencesidRequest {
 	return ApiPostDisplaypreferencesByDisplaypreferencesidRequest{
-		ApiService: a,
-		ctx: ctx,
+		ApiService:           a,
+		ctx:                  ctx,
 		displayPreferencesId: displayPreferencesId,
 	}
 }
@@ -399,9 +400,9 @@ func (a *DisplayPreferencesServiceAPIService) PostDisplaypreferencesByDisplaypre
 // Execute executes the request
 func (a *DisplayPreferencesServiceAPIService) PostDisplaypreferencesByDisplaypreferencesidExecute(r ApiPostDisplaypreferencesByDisplaypreferencesidRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DisplayPreferencesServiceAPIService.PostDisplaypreferencesByDisplaypreferencesid")
@@ -485,13 +486,13 @@ func (a *DisplayPreferencesServiceAPIService) PostDisplaypreferencesByDisplaypre
 }
 
 type ApiPostUsersettingsByUseridRequest struct {
-	ctx context.Context
-	ApiService DisplayPreferencesServiceAPI
-	userId string
+	ctx         context.Context
+	ApiService  DisplayPreferencesServiceAPI
+	userId      string
 	requestBody *[]string
 }
 
-// UserSettings: 
+// UserSettings:
 func (r ApiPostUsersettingsByUseridRequest) RequestBody(requestBody []string) ApiPostUsersettingsByUseridRequest {
 	r.requestBody = &requestBody
 	return r
@@ -506,24 +507,24 @@ PostUsersettingsByUserid Updates a user's display preferences for an item
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param userId User Id
- @return ApiPostUsersettingsByUseridRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param userId User Id
+	@return ApiPostUsersettingsByUseridRequest
 */
 func (a *DisplayPreferencesServiceAPIService) PostUsersettingsByUserid(ctx context.Context, userId string) ApiPostUsersettingsByUseridRequest {
 	return ApiPostUsersettingsByUseridRequest{
 		ApiService: a,
-		ctx: ctx,
-		userId: userId,
+		ctx:        ctx,
+		userId:     userId,
 	}
 }
 
 // Execute executes the request
 func (a *DisplayPreferencesServiceAPIService) PostUsersettingsByUseridExecute(r ApiPostUsersettingsByUseridRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DisplayPreferencesServiceAPIService.PostUsersettingsByUserid")
@@ -603,10 +604,10 @@ func (a *DisplayPreferencesServiceAPIService) PostUsersettingsByUseridExecute(r 
 }
 
 type ApiPostUsersettingsByUseridPartialRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService DisplayPreferencesServiceAPI
-	userId string
-	body *os.File
+	userId     string
+	body       *os.File
 }
 
 // Binary stream
@@ -624,24 +625,24 @@ PostUsersettingsByUseridPartial Updates a user's display preferences for an item
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param userId User Id
- @return ApiPostUsersettingsByUseridPartialRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param userId User Id
+	@return ApiPostUsersettingsByUseridPartialRequest
 */
 func (a *DisplayPreferencesServiceAPIService) PostUsersettingsByUseridPartial(ctx context.Context, userId string) ApiPostUsersettingsByUseridPartialRequest {
 	return ApiPostUsersettingsByUseridPartialRequest{
 		ApiService: a,
-		ctx: ctx,
-		userId: userId,
+		ctx:        ctx,
+		userId:     userId,
 	}
 }
 
 // Execute executes the request
 func (a *DisplayPreferencesServiceAPIService) PostUsersettingsByUseridPartialExecute(r ApiPostUsersettingsByUseridPartialRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DisplayPreferencesServiceAPIService.PostUsersettingsByUseridPartial")

@@ -19,19 +19,19 @@ var _ MappedNullable = &UIViewInfo{}
 
 // UIViewInfo struct for UIViewInfo
 type UIViewInfo struct {
-	ViewId *string `json:"ViewId,omitempty"`
-	PageId *string `json:"PageId,omitempty"`
-	Caption *string `json:"Caption,omitempty"`
-	SubCaption *string `json:"SubCaption,omitempty"`
-	PluginId *string `json:"PluginId,omitempty"`
-	ViewType *EnumsUIViewType `json:"ViewType,omitempty"`
-	ShowDialogFullScreen *bool `json:"ShowDialogFullScreen,omitempty"`
-	IsInSequence *bool `json:"IsInSequence,omitempty"`
-	RedirectViewUrl *string `json:"RedirectViewUrl,omitempty"`
-	EditObjectContainer *GenericEditIEditObjectContainer `json:"EditObjectContainer,omitempty"`
-	Commands []UICommand `json:"Commands,omitempty"`
-	TabPageInfos []UITabPageInfo `json:"TabPageInfos,omitempty"`
-	IsPageChangeInfo *bool `json:"IsPageChangeInfo,omitempty"`
+	ViewId               *string                          `json:"ViewId,omitempty"`
+	PageId               *string                          `json:"PageId,omitempty"`
+	Caption              *string                          `json:"Caption,omitempty"`
+	SubCaption           *string                          `json:"SubCaption,omitempty"`
+	PluginId             *string                          `json:"PluginId,omitempty"`
+	ViewType             *EnumsUIViewType                 `json:"ViewType,omitempty"`
+	ShowDialogFullScreen *bool                            `json:"ShowDialogFullScreen,omitempty"`
+	IsInSequence         *bool                            `json:"IsInSequence,omitempty"`
+	RedirectViewUrl      *string                          `json:"RedirectViewUrl,omitempty"`
+	EditObjectContainer  *GenericEditIEditObjectContainer `json:"EditObjectContainer,omitempty"`
+	Commands             []UICommand                      `json:"Commands,omitempty"`
+	TabPageInfos         []UITabPageInfo                  `json:"TabPageInfos,omitempty"`
+	IsPageChangeInfo     *bool                            `json:"IsPageChangeInfo,omitempty"`
 }
 
 // NewUIViewInfo instantiates a new UIViewInfo object
@@ -468,7 +468,7 @@ func (o *UIViewInfo) SetIsPageChangeInfo(v bool) {
 }
 
 func (o UIViewInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -554,5 +554,3 @@ func (v *NullableUIViewInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

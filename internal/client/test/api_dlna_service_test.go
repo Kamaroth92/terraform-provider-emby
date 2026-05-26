@@ -1,3 +1,5 @@
+// Copyright (c) HashiCorp, Inc.
+
 /*
 Emby Server REST API (BETA)
 
@@ -11,10 +13,10 @@ package embyclient
 
 import (
 	"context"
+	openapiclient "github.com/Kamaroth92/terraform-provider-emby/client"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func Test_embyclient_DlnaServiceAPIService(t *testing.T) {
@@ -24,7 +26,7 @@ func Test_embyclient_DlnaServiceAPIService(t *testing.T) {
 
 	t.Run("Test DlnaServiceAPIService DeleteDlnaProfilesById", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -37,7 +39,7 @@ func Test_embyclient_DlnaServiceAPIService(t *testing.T) {
 
 	t.Run("Test DlnaServiceAPIService GetDlnaProfileinfos", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.DlnaServiceAPI.GetDlnaProfileinfos(context.Background()).Execute()
 
@@ -49,7 +51,7 @@ func Test_embyclient_DlnaServiceAPIService(t *testing.T) {
 
 	t.Run("Test DlnaServiceAPIService GetDlnaProfilesById", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -63,7 +65,7 @@ func Test_embyclient_DlnaServiceAPIService(t *testing.T) {
 
 	t.Run("Test DlnaServiceAPIService GetDlnaProfilesDefault", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.DlnaServiceAPI.GetDlnaProfilesDefault(context.Background()).Execute()
 
@@ -75,7 +77,7 @@ func Test_embyclient_DlnaServiceAPIService(t *testing.T) {
 
 	t.Run("Test DlnaServiceAPIService PostDlnaProfiles", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.DlnaServiceAPI.PostDlnaProfiles(context.Background()).Execute()
 
@@ -86,7 +88,7 @@ func Test_embyclient_DlnaServiceAPIService(t *testing.T) {
 
 	t.Run("Test DlnaServiceAPIService PostDlnaProfilesById", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 

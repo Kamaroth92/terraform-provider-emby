@@ -19,8 +19,8 @@ var _ MappedNullable = &QueryResultLiveTvSeriesTimerInfoDto{}
 
 // QueryResultLiveTvSeriesTimerInfoDto struct for QueryResultLiveTvSeriesTimerInfoDto
 type QueryResultLiveTvSeriesTimerInfoDto struct {
-	Items []LiveTvSeriesTimerInfoDto `json:"Items,omitempty"`
-	TotalRecordCount *int32 `json:"TotalRecordCount,omitempty"`
+	Items            []LiveTvSeriesTimerInfoDto `json:"Items,omitempty"`
+	TotalRecordCount *int32                     `json:"TotalRecordCount,omitempty"`
 }
 
 // NewQueryResultLiveTvSeriesTimerInfoDto instantiates a new QueryResultLiveTvSeriesTimerInfoDto object
@@ -105,7 +105,7 @@ func (o *QueryResultLiveTvSeriesTimerInfoDto) SetTotalRecordCount(v int32) {
 }
 
 func (o QueryResultLiveTvSeriesTimerInfoDto) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -158,5 +158,3 @@ func (v *NullableQueryResultLiveTvSeriesTimerInfoDto) UnmarshalJSON(src []byte) 
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

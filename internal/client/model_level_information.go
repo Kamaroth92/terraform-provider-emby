@@ -19,15 +19,15 @@ var _ MappedNullable = &LevelInformation{}
 
 // LevelInformation struct for LevelInformation
 type LevelInformation struct {
-	ShortName *string `json:"ShortName,omitempty"`
-	Description *string `json:"Description,omitempty"`
-	Ordinal NullableInt32 `json:"Ordinal,omitempty"`
-	MaxBitRate *BitRate `json:"MaxBitRate,omitempty"`
-	MaxBitRateDisplay *string `json:"MaxBitRateDisplay,omitempty"`
-	Id *string `json:"Id,omitempty"`
-	ResolutionRates []ResolutionWithRate `json:"ResolutionRates,omitempty"`
-	ResolutionRateStrings []string `json:"ResolutionRateStrings,omitempty"`
-	ResolutionRatesDisplay *string `json:"ResolutionRatesDisplay,omitempty"`
+	ShortName              *string              `json:"ShortName,omitempty"`
+	Description            *string              `json:"Description,omitempty"`
+	Ordinal                NullableInt32        `json:"Ordinal,omitempty"`
+	MaxBitRate             *BitRate             `json:"MaxBitRate,omitempty"`
+	MaxBitRateDisplay      *string              `json:"MaxBitRateDisplay,omitempty"`
+	Id                     *string              `json:"Id,omitempty"`
+	ResolutionRates        []ResolutionWithRate `json:"ResolutionRates,omitempty"`
+	ResolutionRateStrings  []string             `json:"ResolutionRateStrings,omitempty"`
+	ResolutionRatesDisplay *string              `json:"ResolutionRatesDisplay,omitempty"`
 }
 
 // NewLevelInformation instantiates a new LevelInformation object
@@ -143,6 +143,7 @@ func (o *LevelInformation) HasOrdinal() bool {
 func (o *LevelInformation) SetOrdinal(v int32) {
 	o.Ordinal.Set(&v)
 }
+
 // SetOrdinalNil sets the value for Ordinal to be an explicit nil
 func (o *LevelInformation) SetOrdinalNil() {
 	o.Ordinal.Set(nil)
@@ -346,7 +347,7 @@ func (o *LevelInformation) SetResolutionRatesDisplay(v string) {
 }
 
 func (o LevelInformation) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -420,5 +421,3 @@ func (v *NullableLevelInformation) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

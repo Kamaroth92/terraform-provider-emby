@@ -20,24 +20,24 @@ var _ MappedNullable = &UserDto{}
 
 // UserDto struct for UserDto
 type UserDto struct {
-	Name *string `json:"Name,omitempty"`
-	ServerId *string `json:"ServerId,omitempty"`
-	ServerName *string `json:"ServerName,omitempty"`
-	Prefix *string `json:"Prefix,omitempty"`
-	ConnectUserName *string `json:"ConnectUserName,omitempty"`
-	DateCreated NullableTime `json:"DateCreated,omitempty"`
-	ConnectLinkType *ConnectUserLinkType `json:"ConnectLinkType,omitempty"`
-	Id *string `json:"Id,omitempty"`
-	PrimaryImageTag *string `json:"PrimaryImageTag,omitempty"`
-	HasPassword NullableBool `json:"HasPassword,omitempty"`
-	HasConfiguredPassword NullableBool `json:"HasConfiguredPassword,omitempty"`
-	EnableAutoLogin NullableBool `json:"EnableAutoLogin,omitempty"`
-	LastLoginDate NullableTime `json:"LastLoginDate,omitempty"`
-	LastActivityDate NullableTime `json:"LastActivityDate,omitempty"`
-	Configuration *UserConfiguration `json:"Configuration,omitempty"`
-	Policy *UserPolicy `json:"Policy,omitempty"`
-	PrimaryImageAspectRatio NullableFloat64 `json:"PrimaryImageAspectRatio,omitempty"`
-	UserItemShareLevel *UserItemShareLevel `json:"UserItemShareLevel,omitempty"`
+	Name                    *string              `json:"Name,omitempty"`
+	ServerId                *string              `json:"ServerId,omitempty"`
+	ServerName              *string              `json:"ServerName,omitempty"`
+	Prefix                  *string              `json:"Prefix,omitempty"`
+	ConnectUserName         *string              `json:"ConnectUserName,omitempty"`
+	DateCreated             NullableTime         `json:"DateCreated,omitempty"`
+	ConnectLinkType         *ConnectUserLinkType `json:"ConnectLinkType,omitempty"`
+	Id                      *string              `json:"Id,omitempty"`
+	PrimaryImageTag         *string              `json:"PrimaryImageTag,omitempty"`
+	HasPassword             NullableBool         `json:"HasPassword,omitempty"`
+	HasConfiguredPassword   NullableBool         `json:"HasConfiguredPassword,omitempty"`
+	EnableAutoLogin         NullableBool         `json:"EnableAutoLogin,omitempty"`
+	LastLoginDate           NullableTime         `json:"LastLoginDate,omitempty"`
+	LastActivityDate        NullableTime         `json:"LastActivityDate,omitempty"`
+	Configuration           *UserConfiguration   `json:"Configuration,omitempty"`
+	Policy                  *UserPolicy          `json:"Policy,omitempty"`
+	PrimaryImageAspectRatio NullableFloat64      `json:"PrimaryImageAspectRatio,omitempty"`
+	UserItemShareLevel      *UserItemShareLevel  `json:"UserItemShareLevel,omitempty"`
 }
 
 // NewUserDto instantiates a new UserDto object
@@ -249,6 +249,7 @@ func (o *UserDto) HasDateCreated() bool {
 func (o *UserDto) SetDateCreated(v time.Time) {
 	o.DateCreated.Set(&v)
 }
+
 // SetDateCreatedNil sets the value for DateCreated to be an explicit nil
 func (o *UserDto) SetDateCreatedNil() {
 	o.DateCreated.Set(nil)
@@ -387,6 +388,7 @@ func (o *UserDto) HasHasPassword() bool {
 func (o *UserDto) SetHasPassword(v bool) {
 	o.HasPassword.Set(&v)
 }
+
 // SetHasPasswordNil sets the value for HasPassword to be an explicit nil
 func (o *UserDto) SetHasPasswordNil() {
 	o.HasPassword.Set(nil)
@@ -429,6 +431,7 @@ func (o *UserDto) HasHasConfiguredPassword() bool {
 func (o *UserDto) SetHasConfiguredPassword(v bool) {
 	o.HasConfiguredPassword.Set(&v)
 }
+
 // SetHasConfiguredPasswordNil sets the value for HasConfiguredPassword to be an explicit nil
 func (o *UserDto) SetHasConfiguredPasswordNil() {
 	o.HasConfiguredPassword.Set(nil)
@@ -471,6 +474,7 @@ func (o *UserDto) HasEnableAutoLogin() bool {
 func (o *UserDto) SetEnableAutoLogin(v bool) {
 	o.EnableAutoLogin.Set(&v)
 }
+
 // SetEnableAutoLoginNil sets the value for EnableAutoLogin to be an explicit nil
 func (o *UserDto) SetEnableAutoLoginNil() {
 	o.EnableAutoLogin.Set(nil)
@@ -513,6 +517,7 @@ func (o *UserDto) HasLastLoginDate() bool {
 func (o *UserDto) SetLastLoginDate(v time.Time) {
 	o.LastLoginDate.Set(&v)
 }
+
 // SetLastLoginDateNil sets the value for LastLoginDate to be an explicit nil
 func (o *UserDto) SetLastLoginDateNil() {
 	o.LastLoginDate.Set(nil)
@@ -555,6 +560,7 @@ func (o *UserDto) HasLastActivityDate() bool {
 func (o *UserDto) SetLastActivityDate(v time.Time) {
 	o.LastActivityDate.Set(&v)
 }
+
 // SetLastActivityDateNil sets the value for LastActivityDate to be an explicit nil
 func (o *UserDto) SetLastActivityDateNil() {
 	o.LastActivityDate.Set(nil)
@@ -661,6 +667,7 @@ func (o *UserDto) HasPrimaryImageAspectRatio() bool {
 func (o *UserDto) SetPrimaryImageAspectRatio(v float64) {
 	o.PrimaryImageAspectRatio.Set(&v)
 }
+
 // SetPrimaryImageAspectRatioNil sets the value for PrimaryImageAspectRatio to be an explicit nil
 func (o *UserDto) SetPrimaryImageAspectRatioNil() {
 	o.PrimaryImageAspectRatio.Set(nil)
@@ -704,7 +711,7 @@ func (o *UserDto) SetUserItemShareLevel(v UserItemShareLevel) {
 }
 
 func (o UserDto) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -805,5 +812,3 @@ func (v *NullableUserDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

@@ -20,10 +20,10 @@ type LiveTvKeepUntil string
 
 // List of LiveTv.KeepUntil
 const (
-	LIVETVKEEPUNTIL_UNTIL_DELETED LiveTvKeepUntil = "UntilDeleted"
+	LIVETVKEEPUNTIL_UNTIL_DELETED      LiveTvKeepUntil = "UntilDeleted"
 	LIVETVKEEPUNTIL_UNTIL_SPACE_NEEDED LiveTvKeepUntil = "UntilSpaceNeeded"
-	LIVETVKEEPUNTIL_UNTIL_WATCHED LiveTvKeepUntil = "UntilWatched"
-	LIVETVKEEPUNTIL_UNTIL_DATE LiveTvKeepUntil = "UntilDate"
+	LIVETVKEEPUNTIL_UNTIL_WATCHED      LiveTvKeepUntil = "UntilWatched"
+	LIVETVKEEPUNTIL_UNTIL_DATE         LiveTvKeepUntil = "UntilDate"
 )
 
 // All allowed values of LiveTvKeepUntil enum
@@ -112,4 +112,3 @@ func (v *NullableLiveTvKeepUntil) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

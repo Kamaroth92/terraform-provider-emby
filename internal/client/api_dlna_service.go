@@ -19,17 +19,16 @@ import (
 	"strings"
 )
 
-
 type DlnaServiceAPI interface {
 
 	/*
-	DeleteDlnaProfilesById Deletes a profile
+		DeleteDlnaProfilesById Deletes a profile
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Profile Id
-	@return ApiDeleteDlnaProfilesByIdRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Profile Id
+		@return ApiDeleteDlnaProfilesByIdRequest
 	*/
 	DeleteDlnaProfilesById(ctx context.Context, id string) ApiDeleteDlnaProfilesByIdRequest
 
@@ -37,12 +36,12 @@ type DlnaServiceAPI interface {
 	DeleteDlnaProfilesByIdExecute(r ApiDeleteDlnaProfilesByIdRequest) (*http.Response, error)
 
 	/*
-	GetDlnaProfileinfos Gets a list of profiles
+		GetDlnaProfileinfos Gets a list of profiles
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetDlnaProfileinfosRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetDlnaProfileinfosRequest
 	*/
 	GetDlnaProfileinfos(ctx context.Context) ApiGetDlnaProfileinfosRequest
 
@@ -51,13 +50,13 @@ type DlnaServiceAPI interface {
 	GetDlnaProfileinfosExecute(r ApiGetDlnaProfileinfosRequest) ([]DlnaProfilesDlnaProfile, *http.Response, error)
 
 	/*
-	GetDlnaProfilesById Gets a single profile
+		GetDlnaProfilesById Gets a single profile
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Profile Id
-	@return ApiGetDlnaProfilesByIdRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Profile Id
+		@return ApiGetDlnaProfilesByIdRequest
 	*/
 	GetDlnaProfilesById(ctx context.Context, id string) ApiGetDlnaProfilesByIdRequest
 
@@ -66,12 +65,12 @@ type DlnaServiceAPI interface {
 	GetDlnaProfilesByIdExecute(r ApiGetDlnaProfilesByIdRequest) (*DlnaProfilesDlnaProfile, *http.Response, error)
 
 	/*
-	GetDlnaProfilesDefault Gets the default profile
+		GetDlnaProfilesDefault Gets the default profile
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetDlnaProfilesDefaultRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetDlnaProfilesDefaultRequest
 	*/
 	GetDlnaProfilesDefault(ctx context.Context) ApiGetDlnaProfilesDefaultRequest
 
@@ -80,12 +79,12 @@ type DlnaServiceAPI interface {
 	GetDlnaProfilesDefaultExecute(r ApiGetDlnaProfilesDefaultRequest) (*DlnaProfilesDlnaProfile, *http.Response, error)
 
 	/*
-	PostDlnaProfiles Creates a profile
+		PostDlnaProfiles Creates a profile
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostDlnaProfilesRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostDlnaProfilesRequest
 	*/
 	PostDlnaProfiles(ctx context.Context) ApiPostDlnaProfilesRequest
 
@@ -93,13 +92,13 @@ type DlnaServiceAPI interface {
 	PostDlnaProfilesExecute(r ApiPostDlnaProfilesRequest) (*http.Response, error)
 
 	/*
-	PostDlnaProfilesById Updates a profile
+		PostDlnaProfilesById Updates a profile
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiPostDlnaProfilesByIdRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id
+		@return ApiPostDlnaProfilesByIdRequest
 	*/
 	PostDlnaProfilesById(ctx context.Context, id string) ApiPostDlnaProfilesByIdRequest
 
@@ -111,9 +110,9 @@ type DlnaServiceAPI interface {
 type DlnaServiceAPIService service
 
 type ApiDeleteDlnaProfilesByIdRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService DlnaServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiDeleteDlnaProfilesByIdRequest) Execute() (*http.Response, error) {
@@ -125,24 +124,24 @@ DeleteDlnaProfilesById Deletes a profile
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Profile Id
- @return ApiDeleteDlnaProfilesByIdRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Profile Id
+	@return ApiDeleteDlnaProfilesByIdRequest
 */
 func (a *DlnaServiceAPIService) DeleteDlnaProfilesById(ctx context.Context, id string) ApiDeleteDlnaProfilesByIdRequest {
 	return ApiDeleteDlnaProfilesByIdRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *DlnaServiceAPIService) DeleteDlnaProfilesByIdExecute(r ApiDeleteDlnaProfilesByIdRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodDelete
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodDelete
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DlnaServiceAPIService.DeleteDlnaProfilesById")
@@ -217,7 +216,7 @@ func (a *DlnaServiceAPIService) DeleteDlnaProfilesByIdExecute(r ApiDeleteDlnaPro
 }
 
 type ApiGetDlnaProfileinfosRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService DlnaServiceAPI
 }
 
@@ -230,24 +229,25 @@ GetDlnaProfileinfos Gets a list of profiles
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetDlnaProfileinfosRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetDlnaProfileinfosRequest
 */
 func (a *DlnaServiceAPIService) GetDlnaProfileinfos(ctx context.Context) ApiGetDlnaProfileinfosRequest {
 	return ApiGetDlnaProfileinfosRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return []DlnaProfilesDlnaProfile
+//
+//	@return []DlnaProfilesDlnaProfile
 func (a *DlnaServiceAPIService) GetDlnaProfileinfosExecute(r ApiGetDlnaProfileinfosRequest) ([]DlnaProfilesDlnaProfile, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []DlnaProfilesDlnaProfile
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue []DlnaProfilesDlnaProfile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DlnaServiceAPIService.GetDlnaProfileinfos")
@@ -330,9 +330,9 @@ func (a *DlnaServiceAPIService) GetDlnaProfileinfosExecute(r ApiGetDlnaProfilein
 }
 
 type ApiGetDlnaProfilesByIdRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService DlnaServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiGetDlnaProfilesByIdRequest) Execute() (*DlnaProfilesDlnaProfile, *http.Response, error) {
@@ -344,26 +344,27 @@ GetDlnaProfilesById Gets a single profile
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Profile Id
- @return ApiGetDlnaProfilesByIdRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Profile Id
+	@return ApiGetDlnaProfilesByIdRequest
 */
 func (a *DlnaServiceAPIService) GetDlnaProfilesById(ctx context.Context, id string) ApiGetDlnaProfilesByIdRequest {
 	return ApiGetDlnaProfilesByIdRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
-//  @return DlnaProfilesDlnaProfile
+//
+//	@return DlnaProfilesDlnaProfile
 func (a *DlnaServiceAPIService) GetDlnaProfilesByIdExecute(r ApiGetDlnaProfilesByIdRequest) (*DlnaProfilesDlnaProfile, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *DlnaProfilesDlnaProfile
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *DlnaProfilesDlnaProfile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DlnaServiceAPIService.GetDlnaProfilesById")
@@ -447,7 +448,7 @@ func (a *DlnaServiceAPIService) GetDlnaProfilesByIdExecute(r ApiGetDlnaProfilesB
 }
 
 type ApiGetDlnaProfilesDefaultRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService DlnaServiceAPI
 }
 
@@ -460,24 +461,25 @@ GetDlnaProfilesDefault Gets the default profile
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetDlnaProfilesDefaultRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetDlnaProfilesDefaultRequest
 */
 func (a *DlnaServiceAPIService) GetDlnaProfilesDefault(ctx context.Context) ApiGetDlnaProfilesDefaultRequest {
 	return ApiGetDlnaProfilesDefaultRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return DlnaProfilesDlnaProfile
+//
+//	@return DlnaProfilesDlnaProfile
 func (a *DlnaServiceAPIService) GetDlnaProfilesDefaultExecute(r ApiGetDlnaProfilesDefaultRequest) (*DlnaProfilesDlnaProfile, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *DlnaProfilesDlnaProfile
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *DlnaProfilesDlnaProfile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DlnaServiceAPIService.GetDlnaProfilesDefault")
@@ -560,12 +562,12 @@ func (a *DlnaServiceAPIService) GetDlnaProfilesDefaultExecute(r ApiGetDlnaProfil
 }
 
 type ApiPostDlnaProfilesRequest struct {
-	ctx context.Context
-	ApiService DlnaServiceAPI
+	ctx                     context.Context
+	ApiService              DlnaServiceAPI
 	dlnaProfilesDlnaProfile *DlnaProfilesDlnaProfile
 }
 
-// DlnaProfile: 
+// DlnaProfile:
 func (r ApiPostDlnaProfilesRequest) DlnaProfilesDlnaProfile(dlnaProfilesDlnaProfile DlnaProfilesDlnaProfile) ApiPostDlnaProfilesRequest {
 	r.dlnaProfilesDlnaProfile = &dlnaProfilesDlnaProfile
 	return r
@@ -580,22 +582,22 @@ PostDlnaProfiles Creates a profile
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostDlnaProfilesRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostDlnaProfilesRequest
 */
 func (a *DlnaServiceAPIService) PostDlnaProfiles(ctx context.Context) ApiPostDlnaProfilesRequest {
 	return ApiPostDlnaProfilesRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *DlnaServiceAPIService) PostDlnaProfilesExecute(r ApiPostDlnaProfilesRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DlnaServiceAPIService.PostDlnaProfiles")
@@ -674,13 +676,13 @@ func (a *DlnaServiceAPIService) PostDlnaProfilesExecute(r ApiPostDlnaProfilesReq
 }
 
 type ApiPostDlnaProfilesByIdRequest struct {
-	ctx context.Context
-	ApiService DlnaServiceAPI
-	id string
+	ctx                     context.Context
+	ApiService              DlnaServiceAPI
+	id                      string
 	dlnaProfilesDlnaProfile *DlnaProfilesDlnaProfile
 }
 
-// DlnaProfile: 
+// DlnaProfile:
 func (r ApiPostDlnaProfilesByIdRequest) DlnaProfilesDlnaProfile(dlnaProfilesDlnaProfile DlnaProfilesDlnaProfile) ApiPostDlnaProfilesByIdRequest {
 	r.dlnaProfilesDlnaProfile = &dlnaProfilesDlnaProfile
 	return r
@@ -695,24 +697,24 @@ PostDlnaProfilesById Updates a profile
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id
- @return ApiPostDlnaProfilesByIdRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id
+	@return ApiPostDlnaProfilesByIdRequest
 */
 func (a *DlnaServiceAPIService) PostDlnaProfilesById(ctx context.Context, id string) ApiPostDlnaProfilesByIdRequest {
 	return ApiPostDlnaProfilesByIdRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *DlnaServiceAPIService) PostDlnaProfilesByIdExecute(r ApiPostDlnaProfilesByIdRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DlnaServiceAPIService.PostDlnaProfilesById")

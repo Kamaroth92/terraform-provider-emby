@@ -19,20 +19,19 @@ import (
 	"strings"
 )
 
-
 type VideoHlsServiceAPI interface {
 
 	/*
-	GetAudioByIdHlsByPlaylistidBySegmentidBySegmentcontainer Method for GetAudioByIdHlsByPlaylistidBySegmentidBySegmentcontainer
+		GetAudioByIdHlsByPlaylistidBySegmentidBySegmentcontainer Method for GetAudioByIdHlsByPlaylistidBySegmentidBySegmentcontainer
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param segmentContainer
-	@param segmentId
-	@param id
-	@param playlistId
-	@return ApiGetAudioByIdHlsByPlaylistidBySegmentidBySegmentcontainerRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param segmentContainer
+		@param segmentId
+		@param id
+		@param playlistId
+		@return ApiGetAudioByIdHlsByPlaylistidBySegmentidBySegmentcontainerRequest
 	*/
 	GetAudioByIdHlsByPlaylistidBySegmentidBySegmentcontainer(ctx context.Context, segmentContainer string, segmentId string, id string, playlistId string) ApiGetAudioByIdHlsByPlaylistidBySegmentidBySegmentcontainerRequest
 
@@ -40,16 +39,16 @@ type VideoHlsServiceAPI interface {
 	GetAudioByIdHlsByPlaylistidBySegmentidBySegmentcontainerExecute(r ApiGetAudioByIdHlsByPlaylistidBySegmentidBySegmentcontainerRequest) (*http.Response, error)
 
 	/*
-	GetVideosByIdHlsByPlaylistidBySegmentidBySegmentcontainer Method for GetVideosByIdHlsByPlaylistidBySegmentidBySegmentcontainer
+		GetVideosByIdHlsByPlaylistidBySegmentidBySegmentcontainer Method for GetVideosByIdHlsByPlaylistidBySegmentidBySegmentcontainer
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param segmentContainer
-	@param segmentId
-	@param id
-	@param playlistId
-	@return ApiGetVideosByIdHlsByPlaylistidBySegmentidBySegmentcontainerRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param segmentContainer
+		@param segmentId
+		@param id
+		@param playlistId
+		@return ApiGetVideosByIdHlsByPlaylistidBySegmentidBySegmentcontainerRequest
 	*/
 	GetVideosByIdHlsByPlaylistidBySegmentidBySegmentcontainer(ctx context.Context, segmentContainer string, segmentId string, id string, playlistId string) ApiGetVideosByIdHlsByPlaylistidBySegmentidBySegmentcontainerRequest
 
@@ -61,12 +60,12 @@ type VideoHlsServiceAPI interface {
 type VideoHlsServiceAPIService service
 
 type ApiGetAudioByIdHlsByPlaylistidBySegmentidBySegmentcontainerRequest struct {
-	ctx context.Context
-	ApiService VideoHlsServiceAPI
+	ctx              context.Context
+	ApiService       VideoHlsServiceAPI
 	segmentContainer string
-	segmentId string
-	id string
-	playlistId string
+	segmentId        string
+	id               string
+	playlistId       string
 }
 
 func (r ApiGetAudioByIdHlsByPlaylistidBySegmentidBySegmentcontainerRequest) Execute() (*http.Response, error) {
@@ -78,30 +77,30 @@ GetAudioByIdHlsByPlaylistidBySegmentidBySegmentcontainer Method for GetAudioById
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param segmentContainer
- @param segmentId
- @param id
- @param playlistId
- @return ApiGetAudioByIdHlsByPlaylistidBySegmentidBySegmentcontainerRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param segmentContainer
+	@param segmentId
+	@param id
+	@param playlistId
+	@return ApiGetAudioByIdHlsByPlaylistidBySegmentidBySegmentcontainerRequest
 */
 func (a *VideoHlsServiceAPIService) GetAudioByIdHlsByPlaylistidBySegmentidBySegmentcontainer(ctx context.Context, segmentContainer string, segmentId string, id string, playlistId string) ApiGetAudioByIdHlsByPlaylistidBySegmentidBySegmentcontainerRequest {
 	return ApiGetAudioByIdHlsByPlaylistidBySegmentidBySegmentcontainerRequest{
-		ApiService: a,
-		ctx: ctx,
+		ApiService:       a,
+		ctx:              ctx,
 		segmentContainer: segmentContainer,
-		segmentId: segmentId,
-		id: id,
-		playlistId: playlistId,
+		segmentId:        segmentId,
+		id:               id,
+		playlistId:       playlistId,
 	}
 }
 
 // Execute executes the request
 func (a *VideoHlsServiceAPIService) GetAudioByIdHlsByPlaylistidBySegmentidBySegmentcontainerExecute(r ApiGetAudioByIdHlsByPlaylistidBySegmentidBySegmentcontainerRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "VideoHlsServiceAPIService.GetAudioByIdHlsByPlaylistidBySegmentidBySegmentcontainer")
@@ -179,12 +178,12 @@ func (a *VideoHlsServiceAPIService) GetAudioByIdHlsByPlaylistidBySegmentidBySegm
 }
 
 type ApiGetVideosByIdHlsByPlaylistidBySegmentidBySegmentcontainerRequest struct {
-	ctx context.Context
-	ApiService VideoHlsServiceAPI
+	ctx              context.Context
+	ApiService       VideoHlsServiceAPI
 	segmentContainer string
-	segmentId string
-	id string
-	playlistId string
+	segmentId        string
+	id               string
+	playlistId       string
 }
 
 func (r ApiGetVideosByIdHlsByPlaylistidBySegmentidBySegmentcontainerRequest) Execute() (*http.Response, error) {
@@ -196,30 +195,30 @@ GetVideosByIdHlsByPlaylistidBySegmentidBySegmentcontainer Method for GetVideosBy
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param segmentContainer
- @param segmentId
- @param id
- @param playlistId
- @return ApiGetVideosByIdHlsByPlaylistidBySegmentidBySegmentcontainerRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param segmentContainer
+	@param segmentId
+	@param id
+	@param playlistId
+	@return ApiGetVideosByIdHlsByPlaylistidBySegmentidBySegmentcontainerRequest
 */
 func (a *VideoHlsServiceAPIService) GetVideosByIdHlsByPlaylistidBySegmentidBySegmentcontainer(ctx context.Context, segmentContainer string, segmentId string, id string, playlistId string) ApiGetVideosByIdHlsByPlaylistidBySegmentidBySegmentcontainerRequest {
 	return ApiGetVideosByIdHlsByPlaylistidBySegmentidBySegmentcontainerRequest{
-		ApiService: a,
-		ctx: ctx,
+		ApiService:       a,
+		ctx:              ctx,
 		segmentContainer: segmentContainer,
-		segmentId: segmentId,
-		id: id,
-		playlistId: playlistId,
+		segmentId:        segmentId,
+		id:               id,
+		playlistId:       playlistId,
 	}
 }
 
 // Execute executes the request
 func (a *VideoHlsServiceAPIService) GetVideosByIdHlsByPlaylistidBySegmentidBySegmentcontainerExecute(r ApiGetVideosByIdHlsByPlaylistidBySegmentidBySegmentcontainerRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "VideoHlsServiceAPIService.GetVideosByIdHlsByPlaylistidBySegmentidBySegmentcontainer")

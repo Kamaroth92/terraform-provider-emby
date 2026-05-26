@@ -18,16 +18,15 @@ import (
 	"net/url"
 )
 
-
 type GenericUIApiServiceAPI interface {
 
 	/*
-	GetUIView Gets UI view data
+		GetUIView Gets UI view data
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetUIViewRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetUIViewRequest
 	*/
 	GetUIView(ctx context.Context) ApiGetUIViewRequest
 
@@ -36,12 +35,12 @@ type GenericUIApiServiceAPI interface {
 	GetUIViewExecute(r ApiGetUIViewRequest) (*UIViewInfo, *http.Response, error)
 
 	/*
-	PostUICommand Execute a command in the context of tv setup
+		PostUICommand Execute a command in the context of tv setup
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostUICommandRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostUICommandRequest
 	*/
 	PostUICommand(ctx context.Context) ApiPostUICommandRequest
 
@@ -54,9 +53,9 @@ type GenericUIApiServiceAPI interface {
 type GenericUIApiServiceAPIService service
 
 type ApiGetUIViewRequest struct {
-	ctx context.Context
-	ApiService GenericUIApiServiceAPI
-	pageId *string
+	ctx          context.Context
+	ApiService   GenericUIApiServiceAPI
+	pageId       *string
 	clientLocale *string
 }
 
@@ -81,24 +80,25 @@ GetUIView Gets UI view data
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetUIViewRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetUIViewRequest
 */
 func (a *GenericUIApiServiceAPIService) GetUIView(ctx context.Context) ApiGetUIViewRequest {
 	return ApiGetUIViewRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return UIViewInfo
+//
+//	@return UIViewInfo
 func (a *GenericUIApiServiceAPIService) GetUIViewExecute(r ApiGetUIViewRequest) (*UIViewInfo, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *UIViewInfo
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *UIViewInfo
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "GenericUIApiServiceAPIService.GetUIView")
@@ -189,8 +189,8 @@ func (a *GenericUIApiServiceAPIService) GetUIViewExecute(r ApiGetUIViewRequest) 
 }
 
 type ApiPostUICommandRequest struct {
-	ctx context.Context
-	ApiService GenericUIApiServiceAPI
+	ctx          context.Context
+	ApiService   GenericUIApiServiceAPI
 	runUICommand *RunUICommand
 }
 
@@ -209,24 +209,25 @@ PostUICommand Execute a command in the context of tv setup
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostUICommandRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostUICommandRequest
 */
 func (a *GenericUIApiServiceAPIService) PostUICommand(ctx context.Context) ApiPostUICommandRequest {
 	return ApiPostUICommandRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return UIViewInfo
+//
+//	@return UIViewInfo
 func (a *GenericUIApiServiceAPIService) PostUICommandExecute(r ApiPostUICommandRequest) (*UIViewInfo, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *UIViewInfo
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *UIViewInfo
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "GenericUIApiServiceAPIService.PostUICommand")

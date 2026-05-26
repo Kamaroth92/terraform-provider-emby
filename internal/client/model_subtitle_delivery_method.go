@@ -20,10 +20,10 @@ type SubtitleDeliveryMethod string
 
 // List of SubtitleDeliveryMethod
 const (
-	SUBTITLEDELIVERYMETHOD_ENCODE SubtitleDeliveryMethod = "Encode"
-	SUBTITLEDELIVERYMETHOD_EMBED SubtitleDeliveryMethod = "Embed"
-	SUBTITLEDELIVERYMETHOD_EXTERNAL SubtitleDeliveryMethod = "External"
-	SUBTITLEDELIVERYMETHOD_HLS SubtitleDeliveryMethod = "Hls"
+	SUBTITLEDELIVERYMETHOD_ENCODE          SubtitleDeliveryMethod = "Encode"
+	SUBTITLEDELIVERYMETHOD_EMBED           SubtitleDeliveryMethod = "Embed"
+	SUBTITLEDELIVERYMETHOD_EXTERNAL        SubtitleDeliveryMethod = "External"
+	SUBTITLEDELIVERYMETHOD_HLS             SubtitleDeliveryMethod = "Hls"
 	SUBTITLEDELIVERYMETHOD_VIDEO_SIDE_DATA SubtitleDeliveryMethod = "VideoSideData"
 )
 
@@ -114,4 +114,3 @@ func (v *NullableSubtitleDeliveryMethod) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

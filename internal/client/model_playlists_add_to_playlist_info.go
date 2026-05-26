@@ -19,8 +19,8 @@ var _ MappedNullable = &PlaylistsAddToPlaylistInfo{}
 
 // PlaylistsAddToPlaylistInfo struct for PlaylistsAddToPlaylistInfo
 type PlaylistsAddToPlaylistInfo struct {
-	ItemCount *int32 `json:"ItemCount,omitempty"`
-	ContainsDuplicates *bool `json:"ContainsDuplicates,omitempty"`
+	ItemCount          *int32 `json:"ItemCount,omitempty"`
+	ContainsDuplicates *bool  `json:"ContainsDuplicates,omitempty"`
 }
 
 // NewPlaylistsAddToPlaylistInfo instantiates a new PlaylistsAddToPlaylistInfo object
@@ -105,7 +105,7 @@ func (o *PlaylistsAddToPlaylistInfo) SetContainsDuplicates(v bool) {
 }
 
 func (o PlaylistsAddToPlaylistInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -158,5 +158,3 @@ func (v *NullablePlaylistsAddToPlaylistInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

@@ -1,3 +1,5 @@
+// Copyright (c) HashiCorp, Inc.
+
 /*
 Emby Server REST API (BETA)
 
@@ -11,10 +13,10 @@ package embyclient
 
 import (
 	"context"
+	openapiclient "github.com/Kamaroth92/terraform-provider-emby/client"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func Test_embyclient_ItemUpdateServiceAPIService(t *testing.T) {
@@ -24,7 +26,7 @@ func Test_embyclient_ItemUpdateServiceAPIService(t *testing.T) {
 
 	t.Run("Test ItemUpdateServiceAPIService GetItemsByItemidMetadataeditor", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var itemId string
 
@@ -38,7 +40,7 @@ func Test_embyclient_ItemUpdateServiceAPIService(t *testing.T) {
 
 	t.Run("Test ItemUpdateServiceAPIService PostItemsByItemid", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var itemId string
 

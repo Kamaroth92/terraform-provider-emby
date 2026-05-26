@@ -19,10 +19,10 @@ var _ MappedNullable = &LibraryOptionInfo{}
 
 // LibraryOptionInfo struct for LibraryOptionInfo
 type LibraryOptionInfo struct {
-	Name *string `json:"Name,omitempty"`
-	SetupUrl *string `json:"SetupUrl,omitempty"`
-	DefaultEnabled *bool `json:"DefaultEnabled,omitempty"`
-	Features []MetadataFeatures `json:"Features,omitempty"`
+	Name           *string            `json:"Name,omitempty"`
+	SetupUrl       *string            `json:"SetupUrl,omitempty"`
+	DefaultEnabled *bool              `json:"DefaultEnabled,omitempty"`
+	Features       []MetadataFeatures `json:"Features,omitempty"`
 }
 
 // NewLibraryOptionInfo instantiates a new LibraryOptionInfo object
@@ -171,7 +171,7 @@ func (o *LibraryOptionInfo) SetFeatures(v []MetadataFeatures) {
 }
 
 func (o LibraryOptionInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -230,5 +230,3 @@ func (v *NullableLibraryOptionInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

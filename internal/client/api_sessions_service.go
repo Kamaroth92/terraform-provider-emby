@@ -16,21 +16,20 @@ import (
 	"io"
 	"net/http"
 	"net/url"
-	"strings"
 	"reflect"
+	"strings"
 )
-
 
 type SessionsServiceAPI interface {
 
 	/*
-	DeleteAuthKeysByKey Method for DeleteAuthKeysByKey
+		DeleteAuthKeysByKey Method for DeleteAuthKeysByKey
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param key Auth Key
-	@return ApiDeleteAuthKeysByKeyRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param key Auth Key
+		@return ApiDeleteAuthKeysByKeyRequest
 	*/
 	DeleteAuthKeysByKey(ctx context.Context, key string) ApiDeleteAuthKeysByKeyRequest
 
@@ -38,14 +37,14 @@ type SessionsServiceAPI interface {
 	DeleteAuthKeysByKeyExecute(r ApiDeleteAuthKeysByKeyRequest) (*http.Response, error)
 
 	/*
-	DeleteSessionsByIdUsersByUserid Removes an additional user from a session
+		DeleteSessionsByIdUsersByUserid Removes an additional user from a session
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Session Id
-	@param userId UserId Id
-	@return ApiDeleteSessionsByIdUsersByUseridRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Session Id
+		@param userId UserId Id
+		@return ApiDeleteSessionsByIdUsersByUseridRequest
 	*/
 	DeleteSessionsByIdUsersByUserid(ctx context.Context, id string, userId string) ApiDeleteSessionsByIdUsersByUseridRequest
 
@@ -53,12 +52,12 @@ type SessionsServiceAPI interface {
 	DeleteSessionsByIdUsersByUseridExecute(r ApiDeleteSessionsByIdUsersByUseridRequest) (*http.Response, error)
 
 	/*
-	GetAuthKeys Method for GetAuthKeys
+		GetAuthKeys Method for GetAuthKeys
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetAuthKeysRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetAuthKeysRequest
 	*/
 	GetAuthKeys(ctx context.Context) ApiGetAuthKeysRequest
 
@@ -66,12 +65,12 @@ type SessionsServiceAPI interface {
 	GetAuthKeysExecute(r ApiGetAuthKeysRequest) (*http.Response, error)
 
 	/*
-	GetAuthProviders Method for GetAuthProviders
+		GetAuthProviders Method for GetAuthProviders
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetAuthProvidersRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetAuthProvidersRequest
 	*/
 	GetAuthProviders(ctx context.Context) ApiGetAuthProvidersRequest
 
@@ -80,12 +79,12 @@ type SessionsServiceAPI interface {
 	GetAuthProvidersExecute(r ApiGetAuthProvidersRequest) ([]NameIdPair, *http.Response, error)
 
 	/*
-	GetSessions Gets a list of sessions
+		GetSessions Gets a list of sessions
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetSessionsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetSessionsRequest
 	*/
 	GetSessions(ctx context.Context) ApiGetSessionsRequest
 
@@ -94,12 +93,12 @@ type SessionsServiceAPI interface {
 	GetSessionsExecute(r ApiGetSessionsRequest) ([]SessionSessionInfo, *http.Response, error)
 
 	/*
-	GetSessionsPlayqueue Gets a the current play queue from a session
+		GetSessionsPlayqueue Gets a the current play queue from a session
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetSessionsPlayqueueRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetSessionsPlayqueueRequest
 	*/
 	GetSessionsPlayqueue(ctx context.Context) ApiGetSessionsPlayqueueRequest
 
@@ -108,12 +107,12 @@ type SessionsServiceAPI interface {
 	GetSessionsPlayqueueExecute(r ApiGetSessionsPlayqueueRequest) (*QueryResultBaseItemDto, *http.Response, error)
 
 	/*
-	PostAuthKeys Method for PostAuthKeys
+		PostAuthKeys Method for PostAuthKeys
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostAuthKeysRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostAuthKeysRequest
 	*/
 	PostAuthKeys(ctx context.Context) ApiPostAuthKeysRequest
 
@@ -121,13 +120,13 @@ type SessionsServiceAPI interface {
 	PostAuthKeysExecute(r ApiPostAuthKeysRequest) (*http.Response, error)
 
 	/*
-	PostAuthKeysByKeyDelete Method for PostAuthKeysByKeyDelete
+		PostAuthKeysByKeyDelete Method for PostAuthKeysByKeyDelete
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param key Auth Key
-	@return ApiPostAuthKeysByKeyDeleteRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param key Auth Key
+		@return ApiPostAuthKeysByKeyDeleteRequest
 	*/
 	PostAuthKeysByKeyDelete(ctx context.Context, key string) ApiPostAuthKeysByKeyDeleteRequest
 
@@ -135,13 +134,13 @@ type SessionsServiceAPI interface {
 	PostAuthKeysByKeyDeleteExecute(r ApiPostAuthKeysByKeyDeleteRequest) (*http.Response, error)
 
 	/*
-	PostSessionsByIdCommand Issues a system command to a client
+		PostSessionsByIdCommand Issues a system command to a client
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Session Id
-	@return ApiPostSessionsByIdCommandRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Session Id
+		@return ApiPostSessionsByIdCommandRequest
 	*/
 	PostSessionsByIdCommand(ctx context.Context, id string) ApiPostSessionsByIdCommandRequest
 
@@ -149,14 +148,14 @@ type SessionsServiceAPI interface {
 	PostSessionsByIdCommandExecute(r ApiPostSessionsByIdCommandRequest) (*http.Response, error)
 
 	/*
-	PostSessionsByIdCommandByCommand Issues a system command to a client
+		PostSessionsByIdCommandByCommand Issues a system command to a client
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Session Id
-	@param command The command to send.
-	@return ApiPostSessionsByIdCommandByCommandRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Session Id
+		@param command The command to send.
+		@return ApiPostSessionsByIdCommandByCommandRequest
 	*/
 	PostSessionsByIdCommandByCommand(ctx context.Context, id string, command string) ApiPostSessionsByIdCommandByCommandRequest
 
@@ -164,13 +163,13 @@ type SessionsServiceAPI interface {
 	PostSessionsByIdCommandByCommandExecute(r ApiPostSessionsByIdCommandByCommandRequest) (*http.Response, error)
 
 	/*
-	PostSessionsByIdMessage Issues a command to a client to display a message to the user
+		PostSessionsByIdMessage Issues a command to a client to display a message to the user
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Session Id
-	@return ApiPostSessionsByIdMessageRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Session Id
+		@return ApiPostSessionsByIdMessageRequest
 	*/
 	PostSessionsByIdMessage(ctx context.Context, id string) ApiPostSessionsByIdMessageRequest
 
@@ -178,13 +177,13 @@ type SessionsServiceAPI interface {
 	PostSessionsByIdMessageExecute(r ApiPostSessionsByIdMessageRequest) (*http.Response, error)
 
 	/*
-	PostSessionsByIdPlaying Instructs a session to play an item
+		PostSessionsByIdPlaying Instructs a session to play an item
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Session Id
-	@return ApiPostSessionsByIdPlayingRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Session Id
+		@return ApiPostSessionsByIdPlayingRequest
 	*/
 	PostSessionsByIdPlaying(ctx context.Context, id string) ApiPostSessionsByIdPlayingRequest
 
@@ -192,14 +191,14 @@ type SessionsServiceAPI interface {
 	PostSessionsByIdPlayingExecute(r ApiPostSessionsByIdPlayingRequest) (*http.Response, error)
 
 	/*
-	PostSessionsByIdPlayingByCommand Issues a playstate command to a client
+		PostSessionsByIdPlayingByCommand Issues a playstate command to a client
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Session Id
-	@param command
-	@return ApiPostSessionsByIdPlayingByCommandRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Session Id
+		@param command
+		@return ApiPostSessionsByIdPlayingByCommandRequest
 	*/
 	PostSessionsByIdPlayingByCommand(ctx context.Context, id string, command PlaystateCommand) ApiPostSessionsByIdPlayingByCommandRequest
 
@@ -207,14 +206,14 @@ type SessionsServiceAPI interface {
 	PostSessionsByIdPlayingByCommandExecute(r ApiPostSessionsByIdPlayingByCommandRequest) (*http.Response, error)
 
 	/*
-	PostSessionsByIdSystemByCommand Issues a system command to a client
+		PostSessionsByIdSystemByCommand Issues a system command to a client
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Session Id
-	@param command The command to send.
-	@return ApiPostSessionsByIdSystemByCommandRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Session Id
+		@param command The command to send.
+		@return ApiPostSessionsByIdSystemByCommandRequest
 	*/
 	PostSessionsByIdSystemByCommand(ctx context.Context, id string, command string) ApiPostSessionsByIdSystemByCommandRequest
 
@@ -222,14 +221,14 @@ type SessionsServiceAPI interface {
 	PostSessionsByIdSystemByCommandExecute(r ApiPostSessionsByIdSystemByCommandRequest) (*http.Response, error)
 
 	/*
-	PostSessionsByIdUsersByUserid Adds an additional user to a session
+		PostSessionsByIdUsersByUserid Adds an additional user to a session
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Session Id
-	@param userId UserId Id
-	@return ApiPostSessionsByIdUsersByUseridRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Session Id
+		@param userId UserId Id
+		@return ApiPostSessionsByIdUsersByUseridRequest
 	*/
 	PostSessionsByIdUsersByUserid(ctx context.Context, id string, userId string) ApiPostSessionsByIdUsersByUseridRequest
 
@@ -237,14 +236,14 @@ type SessionsServiceAPI interface {
 	PostSessionsByIdUsersByUseridExecute(r ApiPostSessionsByIdUsersByUseridRequest) (*http.Response, error)
 
 	/*
-	PostSessionsByIdUsersByUseridDelete Removes an additional user from a session
+		PostSessionsByIdUsersByUseridDelete Removes an additional user from a session
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Session Id
-	@param userId UserId Id
-	@return ApiPostSessionsByIdUsersByUseridDeleteRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Session Id
+		@param userId UserId Id
+		@return ApiPostSessionsByIdUsersByUseridDeleteRequest
 	*/
 	PostSessionsByIdUsersByUseridDelete(ctx context.Context, id string, userId string) ApiPostSessionsByIdUsersByUseridDeleteRequest
 
@@ -252,13 +251,13 @@ type SessionsServiceAPI interface {
 	PostSessionsByIdUsersByUseridDeleteExecute(r ApiPostSessionsByIdUsersByUseridDeleteRequest) (*http.Response, error)
 
 	/*
-	PostSessionsByIdViewing Instructs a session to browse to an item or view
+		PostSessionsByIdViewing Instructs a session to browse to an item or view
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Session Id
-	@return ApiPostSessionsByIdViewingRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Session Id
+		@return ApiPostSessionsByIdViewingRequest
 	*/
 	PostSessionsByIdViewing(ctx context.Context, id string) ApiPostSessionsByIdViewingRequest
 
@@ -266,12 +265,12 @@ type SessionsServiceAPI interface {
 	PostSessionsByIdViewingExecute(r ApiPostSessionsByIdViewingRequest) (*http.Response, error)
 
 	/*
-	PostSessionsCapabilities Updates capabilities for a device
+		PostSessionsCapabilities Updates capabilities for a device
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostSessionsCapabilitiesRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostSessionsCapabilitiesRequest
 	*/
 	PostSessionsCapabilities(ctx context.Context) ApiPostSessionsCapabilitiesRequest
 
@@ -279,12 +278,12 @@ type SessionsServiceAPI interface {
 	PostSessionsCapabilitiesExecute(r ApiPostSessionsCapabilitiesRequest) (*http.Response, error)
 
 	/*
-	PostSessionsCapabilitiesFull Updates capabilities for a device
+		PostSessionsCapabilitiesFull Updates capabilities for a device
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostSessionsCapabilitiesFullRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostSessionsCapabilitiesFullRequest
 	*/
 	PostSessionsCapabilitiesFull(ctx context.Context) ApiPostSessionsCapabilitiesFullRequest
 
@@ -292,12 +291,12 @@ type SessionsServiceAPI interface {
 	PostSessionsCapabilitiesFullExecute(r ApiPostSessionsCapabilitiesFullRequest) (*http.Response, error)
 
 	/*
-	PostSessionsLogout Reports that a session has ended
+		PostSessionsLogout Reports that a session has ended
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostSessionsLogoutRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostSessionsLogoutRequest
 	*/
 	PostSessionsLogout(ctx context.Context) ApiPostSessionsLogoutRequest
 
@@ -309,9 +308,9 @@ type SessionsServiceAPI interface {
 type SessionsServiceAPIService service
 
 type ApiDeleteAuthKeysByKeyRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SessionsServiceAPI
-	key string
+	key        string
 }
 
 func (r ApiDeleteAuthKeysByKeyRequest) Execute() (*http.Response, error) {
@@ -323,24 +322,24 @@ DeleteAuthKeysByKey Method for DeleteAuthKeysByKey
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param key Auth Key
- @return ApiDeleteAuthKeysByKeyRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param key Auth Key
+	@return ApiDeleteAuthKeysByKeyRequest
 */
 func (a *SessionsServiceAPIService) DeleteAuthKeysByKey(ctx context.Context, key string) ApiDeleteAuthKeysByKeyRequest {
 	return ApiDeleteAuthKeysByKeyRequest{
 		ApiService: a,
-		ctx: ctx,
-		key: key,
+		ctx:        ctx,
+		key:        key,
 	}
 }
 
 // Execute executes the request
 func (a *SessionsServiceAPIService) DeleteAuthKeysByKeyExecute(r ApiDeleteAuthKeysByKeyRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodDelete
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodDelete
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SessionsServiceAPIService.DeleteAuthKeysByKey")
@@ -415,10 +414,10 @@ func (a *SessionsServiceAPIService) DeleteAuthKeysByKeyExecute(r ApiDeleteAuthKe
 }
 
 type ApiDeleteSessionsByIdUsersByUseridRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SessionsServiceAPI
-	id string
-	userId string
+	id         string
+	userId     string
 }
 
 func (r ApiDeleteSessionsByIdUsersByUseridRequest) Execute() (*http.Response, error) {
@@ -430,26 +429,26 @@ DeleteSessionsByIdUsersByUserid Removes an additional user from a session
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Session Id
- @param userId UserId Id
- @return ApiDeleteSessionsByIdUsersByUseridRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Session Id
+	@param userId UserId Id
+	@return ApiDeleteSessionsByIdUsersByUseridRequest
 */
 func (a *SessionsServiceAPIService) DeleteSessionsByIdUsersByUserid(ctx context.Context, id string, userId string) ApiDeleteSessionsByIdUsersByUseridRequest {
 	return ApiDeleteSessionsByIdUsersByUseridRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
-		userId: userId,
+		ctx:        ctx,
+		id:         id,
+		userId:     userId,
 	}
 }
 
 // Execute executes the request
 func (a *SessionsServiceAPIService) DeleteSessionsByIdUsersByUseridExecute(r ApiDeleteSessionsByIdUsersByUseridRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodDelete
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodDelete
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SessionsServiceAPIService.DeleteSessionsByIdUsersByUserid")
@@ -525,10 +524,10 @@ func (a *SessionsServiceAPIService) DeleteSessionsByIdUsersByUseridExecute(r Api
 }
 
 type ApiGetAuthKeysRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SessionsServiceAPI
 	startIndex *int32
-	limit *int32
+	limit      *int32
 }
 
 // Optional. The record index to start at. All items with a lower index will be dropped from the results.
@@ -552,22 +551,22 @@ GetAuthKeys Method for GetAuthKeys
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetAuthKeysRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetAuthKeysRequest
 */
 func (a *SessionsServiceAPIService) GetAuthKeys(ctx context.Context) ApiGetAuthKeysRequest {
 	return ApiGetAuthKeysRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *SessionsServiceAPIService) GetAuthKeysExecute(r ApiGetAuthKeysRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SessionsServiceAPIService.GetAuthKeys")
@@ -647,7 +646,7 @@ func (a *SessionsServiceAPIService) GetAuthKeysExecute(r ApiGetAuthKeysRequest) 
 }
 
 type ApiGetAuthProvidersRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SessionsServiceAPI
 }
 
@@ -660,24 +659,25 @@ GetAuthProviders Method for GetAuthProviders
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetAuthProvidersRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetAuthProvidersRequest
 */
 func (a *SessionsServiceAPIService) GetAuthProviders(ctx context.Context) ApiGetAuthProvidersRequest {
 	return ApiGetAuthProvidersRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return []NameIdPair
+//
+//	@return []NameIdPair
 func (a *SessionsServiceAPIService) GetAuthProvidersExecute(r ApiGetAuthProvidersRequest) ([]NameIdPair, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []NameIdPair
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue []NameIdPair
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SessionsServiceAPIService.GetAuthProviders")
@@ -760,11 +760,11 @@ func (a *SessionsServiceAPIService) GetAuthProvidersExecute(r ApiGetAuthProvider
 }
 
 type ApiGetSessionsRequest struct {
-	ctx context.Context
-	ApiService SessionsServiceAPI
+	ctx                  context.Context
+	ApiService           SessionsServiceAPI
 	controllableByUserId *string
-	deviceId *string
-	id *string
+	deviceId             *string
+	id                   *string
 }
 
 // Optional. Filter by sessions that a given user is allowed to remote control.
@@ -794,24 +794,25 @@ GetSessions Gets a list of sessions
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetSessionsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetSessionsRequest
 */
 func (a *SessionsServiceAPIService) GetSessions(ctx context.Context) ApiGetSessionsRequest {
 	return ApiGetSessionsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return []SessionSessionInfo
+//
+//	@return []SessionSessionInfo
 func (a *SessionsServiceAPIService) GetSessionsExecute(r ApiGetSessionsRequest) ([]SessionSessionInfo, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []SessionSessionInfo
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue []SessionSessionInfo
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SessionsServiceAPIService.GetSessions")
@@ -903,10 +904,10 @@ func (a *SessionsServiceAPIService) GetSessionsExecute(r ApiGetSessionsRequest) 
 }
 
 type ApiGetSessionsPlayqueueRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SessionsServiceAPI
-	id *string
-	deviceId *string
+	id         *string
+	deviceId   *string
 }
 
 // Optional. Filter by session id.
@@ -930,24 +931,25 @@ GetSessionsPlayqueue Gets a the current play queue from a session
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetSessionsPlayqueueRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetSessionsPlayqueueRequest
 */
 func (a *SessionsServiceAPIService) GetSessionsPlayqueue(ctx context.Context) ApiGetSessionsPlayqueueRequest {
 	return ApiGetSessionsPlayqueueRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return QueryResultBaseItemDto
+//
+//	@return QueryResultBaseItemDto
 func (a *SessionsServiceAPIService) GetSessionsPlayqueueExecute(r ApiGetSessionsPlayqueueRequest) (*QueryResultBaseItemDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *QueryResultBaseItemDto
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *QueryResultBaseItemDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SessionsServiceAPIService.GetSessionsPlayqueue")
@@ -1036,9 +1038,9 @@ func (a *SessionsServiceAPIService) GetSessionsPlayqueueExecute(r ApiGetSessions
 }
 
 type ApiPostAuthKeysRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SessionsServiceAPI
-	app *string
+	app        *string
 }
 
 // App
@@ -1056,22 +1058,22 @@ PostAuthKeys Method for PostAuthKeys
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostAuthKeysRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostAuthKeysRequest
 */
 func (a *SessionsServiceAPIService) PostAuthKeys(ctx context.Context) ApiPostAuthKeysRequest {
 	return ApiPostAuthKeysRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *SessionsServiceAPIService) PostAuthKeysExecute(r ApiPostAuthKeysRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SessionsServiceAPIService.PostAuthKeys")
@@ -1149,9 +1151,9 @@ func (a *SessionsServiceAPIService) PostAuthKeysExecute(r ApiPostAuthKeysRequest
 }
 
 type ApiPostAuthKeysByKeyDeleteRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SessionsServiceAPI
-	key string
+	key        string
 }
 
 func (r ApiPostAuthKeysByKeyDeleteRequest) Execute() (*http.Response, error) {
@@ -1163,24 +1165,24 @@ PostAuthKeysByKeyDelete Method for PostAuthKeysByKeyDelete
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param key Auth Key
- @return ApiPostAuthKeysByKeyDeleteRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param key Auth Key
+	@return ApiPostAuthKeysByKeyDeleteRequest
 */
 func (a *SessionsServiceAPIService) PostAuthKeysByKeyDelete(ctx context.Context, key string) ApiPostAuthKeysByKeyDeleteRequest {
 	return ApiPostAuthKeysByKeyDeleteRequest{
 		ApiService: a,
-		ctx: ctx,
-		key: key,
+		ctx:        ctx,
+		key:        key,
 	}
 }
 
 // Execute executes the request
 func (a *SessionsServiceAPIService) PostAuthKeysByKeyDeleteExecute(r ApiPostAuthKeysByKeyDeleteRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SessionsServiceAPIService.PostAuthKeysByKeyDelete")
@@ -1255,13 +1257,13 @@ func (a *SessionsServiceAPIService) PostAuthKeysByKeyDeleteExecute(r ApiPostAuth
 }
 
 type ApiPostSessionsByIdCommandRequest struct {
-	ctx context.Context
-	ApiService SessionsServiceAPI
-	id string
+	ctx            context.Context
+	ApiService     SessionsServiceAPI
+	id             string
 	generalCommand *GeneralCommand
 }
 
-// GeneralCommand: 
+// GeneralCommand:
 func (r ApiPostSessionsByIdCommandRequest) GeneralCommand(generalCommand GeneralCommand) ApiPostSessionsByIdCommandRequest {
 	r.generalCommand = &generalCommand
 	return r
@@ -1276,24 +1278,24 @@ PostSessionsByIdCommand Issues a system command to a client
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Session Id
- @return ApiPostSessionsByIdCommandRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Session Id
+	@return ApiPostSessionsByIdCommandRequest
 */
 func (a *SessionsServiceAPIService) PostSessionsByIdCommand(ctx context.Context, id string) ApiPostSessionsByIdCommandRequest {
 	return ApiPostSessionsByIdCommandRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *SessionsServiceAPIService) PostSessionsByIdCommandExecute(r ApiPostSessionsByIdCommandRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SessionsServiceAPIService.PostSessionsByIdCommand")
@@ -1373,10 +1375,10 @@ func (a *SessionsServiceAPIService) PostSessionsByIdCommandExecute(r ApiPostSess
 }
 
 type ApiPostSessionsByIdCommandByCommandRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SessionsServiceAPI
-	id string
-	command string
+	id         string
+	command    string
 }
 
 func (r ApiPostSessionsByIdCommandByCommandRequest) Execute() (*http.Response, error) {
@@ -1388,26 +1390,26 @@ PostSessionsByIdCommandByCommand Issues a system command to a client
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Session Id
- @param command The command to send.
- @return ApiPostSessionsByIdCommandByCommandRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Session Id
+	@param command The command to send.
+	@return ApiPostSessionsByIdCommandByCommandRequest
 */
 func (a *SessionsServiceAPIService) PostSessionsByIdCommandByCommand(ctx context.Context, id string, command string) ApiPostSessionsByIdCommandByCommandRequest {
 	return ApiPostSessionsByIdCommandByCommandRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
-		command: command,
+		ctx:        ctx,
+		id:         id,
+		command:    command,
 	}
 }
 
 // Execute executes the request
 func (a *SessionsServiceAPIService) PostSessionsByIdCommandByCommandExecute(r ApiPostSessionsByIdCommandByCommandRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SessionsServiceAPIService.PostSessionsByIdCommandByCommand")
@@ -1483,12 +1485,12 @@ func (a *SessionsServiceAPIService) PostSessionsByIdCommandByCommandExecute(r Ap
 }
 
 type ApiPostSessionsByIdMessageRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SessionsServiceAPI
-	id string
-	text *string
-	header *string
-	timeoutMs *int64
+	id         string
+	text       *string
+	header     *string
+	timeoutMs  *int64
 }
 
 // The message text.
@@ -1518,24 +1520,24 @@ PostSessionsByIdMessage Issues a command to a client to display a message to the
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Session Id
- @return ApiPostSessionsByIdMessageRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Session Id
+	@return ApiPostSessionsByIdMessageRequest
 */
 func (a *SessionsServiceAPIService) PostSessionsByIdMessage(ctx context.Context, id string) ApiPostSessionsByIdMessageRequest {
 	return ApiPostSessionsByIdMessageRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *SessionsServiceAPIService) PostSessionsByIdMessageExecute(r ApiPostSessionsByIdMessageRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SessionsServiceAPIService.PostSessionsByIdMessage")
@@ -1621,12 +1623,12 @@ func (a *SessionsServiceAPIService) PostSessionsByIdMessageExecute(r ApiPostSess
 }
 
 type ApiPostSessionsByIdPlayingRequest struct {
-	ctx context.Context
-	ApiService SessionsServiceAPI
-	id string
-	itemIds *[]int64
-	playCommand *PlayCommand
-	playRequest *PlayRequest
+	ctx                context.Context
+	ApiService         SessionsServiceAPI
+	id                 string
+	itemIds            *[]int64
+	playCommand        *PlayCommand
+	playRequest        *PlayRequest
 	startPositionTicks *int64
 }
 
@@ -1642,7 +1644,7 @@ func (r ApiPostSessionsByIdPlayingRequest) PlayCommand(playCommand PlayCommand) 
 	return r
 }
 
-// PlayRequest: 
+// PlayRequest:
 func (r ApiPostSessionsByIdPlayingRequest) PlayRequest(playRequest PlayRequest) ApiPostSessionsByIdPlayingRequest {
 	r.playRequest = &playRequest
 	return r
@@ -1663,24 +1665,24 @@ PostSessionsByIdPlaying Instructs a session to play an item
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Session Id
- @return ApiPostSessionsByIdPlayingRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Session Id
+	@return ApiPostSessionsByIdPlayingRequest
 */
 func (a *SessionsServiceAPIService) PostSessionsByIdPlaying(ctx context.Context, id string) ApiPostSessionsByIdPlayingRequest {
 	return ApiPostSessionsByIdPlayingRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *SessionsServiceAPIService) PostSessionsByIdPlayingExecute(r ApiPostSessionsByIdPlayingRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SessionsServiceAPIService.PostSessionsByIdPlaying")
@@ -1781,14 +1783,14 @@ func (a *SessionsServiceAPIService) PostSessionsByIdPlayingExecute(r ApiPostSess
 }
 
 type ApiPostSessionsByIdPlayingByCommandRequest struct {
-	ctx context.Context
-	ApiService SessionsServiceAPI
-	id string
-	command PlaystateCommand
+	ctx              context.Context
+	ApiService       SessionsServiceAPI
+	id               string
+	command          PlaystateCommand
 	playstateRequest *PlaystateRequest
 }
 
-// PlaystateRequest: 
+// PlaystateRequest:
 func (r ApiPostSessionsByIdPlayingByCommandRequest) PlaystateRequest(playstateRequest PlaystateRequest) ApiPostSessionsByIdPlayingByCommandRequest {
 	r.playstateRequest = &playstateRequest
 	return r
@@ -1803,26 +1805,26 @@ PostSessionsByIdPlayingByCommand Issues a playstate command to a client
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Session Id
- @param command
- @return ApiPostSessionsByIdPlayingByCommandRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Session Id
+	@param command
+	@return ApiPostSessionsByIdPlayingByCommandRequest
 */
 func (a *SessionsServiceAPIService) PostSessionsByIdPlayingByCommand(ctx context.Context, id string, command PlaystateCommand) ApiPostSessionsByIdPlayingByCommandRequest {
 	return ApiPostSessionsByIdPlayingByCommandRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
-		command: command,
+		ctx:        ctx,
+		id:         id,
+		command:    command,
 	}
 }
 
 // Execute executes the request
 func (a *SessionsServiceAPIService) PostSessionsByIdPlayingByCommandExecute(r ApiPostSessionsByIdPlayingByCommandRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SessionsServiceAPIService.PostSessionsByIdPlayingByCommand")
@@ -1903,10 +1905,10 @@ func (a *SessionsServiceAPIService) PostSessionsByIdPlayingByCommandExecute(r Ap
 }
 
 type ApiPostSessionsByIdSystemByCommandRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SessionsServiceAPI
-	id string
-	command string
+	id         string
+	command    string
 }
 
 func (r ApiPostSessionsByIdSystemByCommandRequest) Execute() (*http.Response, error) {
@@ -1918,26 +1920,26 @@ PostSessionsByIdSystemByCommand Issues a system command to a client
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Session Id
- @param command The command to send.
- @return ApiPostSessionsByIdSystemByCommandRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Session Id
+	@param command The command to send.
+	@return ApiPostSessionsByIdSystemByCommandRequest
 */
 func (a *SessionsServiceAPIService) PostSessionsByIdSystemByCommand(ctx context.Context, id string, command string) ApiPostSessionsByIdSystemByCommandRequest {
 	return ApiPostSessionsByIdSystemByCommandRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
-		command: command,
+		ctx:        ctx,
+		id:         id,
+		command:    command,
 	}
 }
 
 // Execute executes the request
 func (a *SessionsServiceAPIService) PostSessionsByIdSystemByCommandExecute(r ApiPostSessionsByIdSystemByCommandRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SessionsServiceAPIService.PostSessionsByIdSystemByCommand")
@@ -2013,10 +2015,10 @@ func (a *SessionsServiceAPIService) PostSessionsByIdSystemByCommandExecute(r Api
 }
 
 type ApiPostSessionsByIdUsersByUseridRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SessionsServiceAPI
-	id string
-	userId string
+	id         string
+	userId     string
 }
 
 func (r ApiPostSessionsByIdUsersByUseridRequest) Execute() (*http.Response, error) {
@@ -2028,26 +2030,26 @@ PostSessionsByIdUsersByUserid Adds an additional user to a session
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Session Id
- @param userId UserId Id
- @return ApiPostSessionsByIdUsersByUseridRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Session Id
+	@param userId UserId Id
+	@return ApiPostSessionsByIdUsersByUseridRequest
 */
 func (a *SessionsServiceAPIService) PostSessionsByIdUsersByUserid(ctx context.Context, id string, userId string) ApiPostSessionsByIdUsersByUseridRequest {
 	return ApiPostSessionsByIdUsersByUseridRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
-		userId: userId,
+		ctx:        ctx,
+		id:         id,
+		userId:     userId,
 	}
 }
 
 // Execute executes the request
 func (a *SessionsServiceAPIService) PostSessionsByIdUsersByUseridExecute(r ApiPostSessionsByIdUsersByUseridRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SessionsServiceAPIService.PostSessionsByIdUsersByUserid")
@@ -2123,10 +2125,10 @@ func (a *SessionsServiceAPIService) PostSessionsByIdUsersByUseridExecute(r ApiPo
 }
 
 type ApiPostSessionsByIdUsersByUseridDeleteRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SessionsServiceAPI
-	id string
-	userId string
+	id         string
+	userId     string
 }
 
 func (r ApiPostSessionsByIdUsersByUseridDeleteRequest) Execute() (*http.Response, error) {
@@ -2138,26 +2140,26 @@ PostSessionsByIdUsersByUseridDelete Removes an additional user from a session
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Session Id
- @param userId UserId Id
- @return ApiPostSessionsByIdUsersByUseridDeleteRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Session Id
+	@param userId UserId Id
+	@return ApiPostSessionsByIdUsersByUseridDeleteRequest
 */
 func (a *SessionsServiceAPIService) PostSessionsByIdUsersByUseridDelete(ctx context.Context, id string, userId string) ApiPostSessionsByIdUsersByUseridDeleteRequest {
 	return ApiPostSessionsByIdUsersByUseridDeleteRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
-		userId: userId,
+		ctx:        ctx,
+		id:         id,
+		userId:     userId,
 	}
 }
 
 // Execute executes the request
 func (a *SessionsServiceAPIService) PostSessionsByIdUsersByUseridDeleteExecute(r ApiPostSessionsByIdUsersByUseridDeleteRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SessionsServiceAPIService.PostSessionsByIdUsersByUseridDelete")
@@ -2233,12 +2235,12 @@ func (a *SessionsServiceAPIService) PostSessionsByIdUsersByUseridDeleteExecute(r
 }
 
 type ApiPostSessionsByIdViewingRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SessionsServiceAPI
-	id string
-	itemType *string
-	itemId *string
-	itemName *string
+	id         string
+	itemType   *string
+	itemId     *string
+	itemName   *string
 }
 
 // The type of item to browse to.
@@ -2268,24 +2270,24 @@ PostSessionsByIdViewing Instructs a session to browse to an item or view
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Session Id
- @return ApiPostSessionsByIdViewingRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Session Id
+	@return ApiPostSessionsByIdViewingRequest
 */
 func (a *SessionsServiceAPIService) PostSessionsByIdViewing(ctx context.Context, id string) ApiPostSessionsByIdViewingRequest {
 	return ApiPostSessionsByIdViewingRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *SessionsServiceAPIService) PostSessionsByIdViewingExecute(r ApiPostSessionsByIdViewingRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SessionsServiceAPIService.PostSessionsByIdViewing")
@@ -2372,13 +2374,13 @@ func (a *SessionsServiceAPIService) PostSessionsByIdViewingExecute(r ApiPostSess
 }
 
 type ApiPostSessionsCapabilitiesRequest struct {
-	ctx context.Context
-	ApiService SessionsServiceAPI
-	id *string
-	playableMediaTypes *string
-	supportedCommands *string
+	ctx                  context.Context
+	ApiService           SessionsServiceAPI
+	id                   *string
+	playableMediaTypes   *string
+	supportedCommands    *string
 	supportsMediaControl *bool
-	supportsSync *bool
+	supportsSync         *bool
 }
 
 // Session Id
@@ -2420,22 +2422,22 @@ PostSessionsCapabilities Updates capabilities for a device
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostSessionsCapabilitiesRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostSessionsCapabilitiesRequest
 */
 func (a *SessionsServiceAPIService) PostSessionsCapabilities(ctx context.Context) ApiPostSessionsCapabilitiesRequest {
 	return ApiPostSessionsCapabilitiesRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *SessionsServiceAPIService) PostSessionsCapabilitiesExecute(r ApiPostSessionsCapabilitiesRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SessionsServiceAPIService.PostSessionsCapabilities")
@@ -2525,9 +2527,9 @@ func (a *SessionsServiceAPIService) PostSessionsCapabilitiesExecute(r ApiPostSes
 }
 
 type ApiPostSessionsCapabilitiesFullRequest struct {
-	ctx context.Context
-	ApiService SessionsServiceAPI
-	id *string
+	ctx                context.Context
+	ApiService         SessionsServiceAPI
+	id                 *string
 	clientCapabilities *ClientCapabilities
 }
 
@@ -2537,7 +2539,7 @@ func (r ApiPostSessionsCapabilitiesFullRequest) Id(id string) ApiPostSessionsCap
 	return r
 }
 
-// ClientCapabilities: 
+// ClientCapabilities:
 func (r ApiPostSessionsCapabilitiesFullRequest) ClientCapabilities(clientCapabilities ClientCapabilities) ApiPostSessionsCapabilitiesFullRequest {
 	r.clientCapabilities = &clientCapabilities
 	return r
@@ -2552,22 +2554,22 @@ PostSessionsCapabilitiesFull Updates capabilities for a device
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostSessionsCapabilitiesFullRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostSessionsCapabilitiesFullRequest
 */
 func (a *SessionsServiceAPIService) PostSessionsCapabilitiesFull(ctx context.Context) ApiPostSessionsCapabilitiesFullRequest {
 	return ApiPostSessionsCapabilitiesFullRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *SessionsServiceAPIService) PostSessionsCapabilitiesFullExecute(r ApiPostSessionsCapabilitiesFullRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SessionsServiceAPIService.PostSessionsCapabilitiesFull")
@@ -2650,7 +2652,7 @@ func (a *SessionsServiceAPIService) PostSessionsCapabilitiesFullExecute(r ApiPos
 }
 
 type ApiPostSessionsLogoutRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SessionsServiceAPI
 }
 
@@ -2663,22 +2665,22 @@ PostSessionsLogout Reports that a session has ended
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostSessionsLogoutRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostSessionsLogoutRequest
 */
 func (a *SessionsServiceAPIService) PostSessionsLogout(ctx context.Context) ApiPostSessionsLogoutRequest {
 	return ApiPostSessionsLogoutRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *SessionsServiceAPIService) PostSessionsLogoutExecute(r ApiPostSessionsLogoutRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SessionsServiceAPIService.PostSessionsLogout")

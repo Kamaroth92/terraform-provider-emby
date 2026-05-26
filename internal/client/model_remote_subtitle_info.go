@@ -22,20 +22,20 @@ var _ MappedNullable = &RemoteSubtitleInfo{}
 type RemoteSubtitleInfo struct {
 	// Use language instead to return the language specified by the subtitle provider
 	// Deprecated
-	ThreeLetterISOLanguageName *string `json:"ThreeLetterISOLanguageName,omitempty"`
-	Id *string `json:"Id,omitempty"`
-	ProviderName *string `json:"ProviderName,omitempty"`
-	Name *string `json:"Name,omitempty"`
-	Format *string `json:"Format,omitempty"`
-	Author *string `json:"Author,omitempty"`
-	Comment *string `json:"Comment,omitempty"`
-	DateCreated NullableTime `json:"DateCreated,omitempty"`
-	CommunityRating NullableFloat32 `json:"CommunityRating,omitempty"`
-	DownloadCount NullableInt32 `json:"DownloadCount,omitempty"`
-	IsHashMatch NullableBool `json:"IsHashMatch,omitempty"`
-	IsForced NullableBool `json:"IsForced,omitempty"`
-	IsHearingImpaired NullableBool `json:"IsHearingImpaired,omitempty"`
-	Language *string `json:"Language,omitempty"`
+	ThreeLetterISOLanguageName *string         `json:"ThreeLetterISOLanguageName,omitempty"`
+	Id                         *string         `json:"Id,omitempty"`
+	ProviderName               *string         `json:"ProviderName,omitempty"`
+	Name                       *string         `json:"Name,omitempty"`
+	Format                     *string         `json:"Format,omitempty"`
+	Author                     *string         `json:"Author,omitempty"`
+	Comment                    *string         `json:"Comment,omitempty"`
+	DateCreated                NullableTime    `json:"DateCreated,omitempty"`
+	CommunityRating            NullableFloat32 `json:"CommunityRating,omitempty"`
+	DownloadCount              NullableInt32   `json:"DownloadCount,omitempty"`
+	IsHashMatch                NullableBool    `json:"IsHashMatch,omitempty"`
+	IsForced                   NullableBool    `json:"IsForced,omitempty"`
+	IsHearingImpaired          NullableBool    `json:"IsHearingImpaired,omitempty"`
+	Language                   *string         `json:"Language,omitempty"`
 }
 
 // NewRemoteSubtitleInfo instantiates a new RemoteSubtitleInfo object
@@ -314,6 +314,7 @@ func (o *RemoteSubtitleInfo) HasDateCreated() bool {
 func (o *RemoteSubtitleInfo) SetDateCreated(v time.Time) {
 	o.DateCreated.Set(&v)
 }
+
 // SetDateCreatedNil sets the value for DateCreated to be an explicit nil
 func (o *RemoteSubtitleInfo) SetDateCreatedNil() {
 	o.DateCreated.Set(nil)
@@ -356,6 +357,7 @@ func (o *RemoteSubtitleInfo) HasCommunityRating() bool {
 func (o *RemoteSubtitleInfo) SetCommunityRating(v float32) {
 	o.CommunityRating.Set(&v)
 }
+
 // SetCommunityRatingNil sets the value for CommunityRating to be an explicit nil
 func (o *RemoteSubtitleInfo) SetCommunityRatingNil() {
 	o.CommunityRating.Set(nil)
@@ -398,6 +400,7 @@ func (o *RemoteSubtitleInfo) HasDownloadCount() bool {
 func (o *RemoteSubtitleInfo) SetDownloadCount(v int32) {
 	o.DownloadCount.Set(&v)
 }
+
 // SetDownloadCountNil sets the value for DownloadCount to be an explicit nil
 func (o *RemoteSubtitleInfo) SetDownloadCountNil() {
 	o.DownloadCount.Set(nil)
@@ -440,6 +443,7 @@ func (o *RemoteSubtitleInfo) HasIsHashMatch() bool {
 func (o *RemoteSubtitleInfo) SetIsHashMatch(v bool) {
 	o.IsHashMatch.Set(&v)
 }
+
 // SetIsHashMatchNil sets the value for IsHashMatch to be an explicit nil
 func (o *RemoteSubtitleInfo) SetIsHashMatchNil() {
 	o.IsHashMatch.Set(nil)
@@ -482,6 +486,7 @@ func (o *RemoteSubtitleInfo) HasIsForced() bool {
 func (o *RemoteSubtitleInfo) SetIsForced(v bool) {
 	o.IsForced.Set(&v)
 }
+
 // SetIsForcedNil sets the value for IsForced to be an explicit nil
 func (o *RemoteSubtitleInfo) SetIsForcedNil() {
 	o.IsForced.Set(nil)
@@ -524,6 +529,7 @@ func (o *RemoteSubtitleInfo) HasIsHearingImpaired() bool {
 func (o *RemoteSubtitleInfo) SetIsHearingImpaired(v bool) {
 	o.IsHearingImpaired.Set(&v)
 }
+
 // SetIsHearingImpairedNil sets the value for IsHearingImpaired to be an explicit nil
 func (o *RemoteSubtitleInfo) SetIsHearingImpairedNil() {
 	o.IsHearingImpaired.Set(nil)
@@ -567,7 +573,7 @@ func (o *RemoteSubtitleInfo) SetLanguage(v string) {
 }
 
 func (o RemoteSubtitleInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -656,5 +662,3 @@ func (v *NullableRemoteSubtitleInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

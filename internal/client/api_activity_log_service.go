@@ -19,16 +19,15 @@ import (
 	"time"
 )
 
-
 type ActivityLogServiceAPI interface {
 
 	/*
-	GetSystemActivitylogEntries Gets activity log entries
+		GetSystemActivitylogEntries Gets activity log entries
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetSystemActivitylogEntriesRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetSystemActivitylogEntriesRequest
 	*/
 	GetSystemActivitylogEntries(ctx context.Context) ApiGetSystemActivitylogEntriesRequest
 
@@ -41,11 +40,11 @@ type ActivityLogServiceAPI interface {
 type ActivityLogServiceAPIService service
 
 type ApiGetSystemActivitylogEntriesRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService ActivityLogServiceAPI
 	startIndex *int32
-	limit *int32
-	minDate *time.Time
+	limit      *int32
+	minDate    *time.Time
 }
 
 // Optional. The record index to start at. All items with a lower index will be dropped from the results.
@@ -75,24 +74,25 @@ GetSystemActivitylogEntries Gets activity log entries
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetSystemActivitylogEntriesRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetSystemActivitylogEntriesRequest
 */
 func (a *ActivityLogServiceAPIService) GetSystemActivitylogEntries(ctx context.Context) ApiGetSystemActivitylogEntriesRequest {
 	return ApiGetSystemActivitylogEntriesRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return QueryResultActivityLogEntry
+//
+//	@return QueryResultActivityLogEntry
 func (a *ActivityLogServiceAPIService) GetSystemActivitylogEntriesExecute(r ApiGetSystemActivitylogEntriesRequest) (*QueryResultActivityLogEntry, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *QueryResultActivityLogEntry
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *QueryResultActivityLogEntry
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ActivityLogServiceAPIService.GetSystemActivitylogEntries")

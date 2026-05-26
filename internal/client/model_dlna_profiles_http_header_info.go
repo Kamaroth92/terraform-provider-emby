@@ -19,8 +19,8 @@ var _ MappedNullable = &DlnaProfilesHttpHeaderInfo{}
 
 // DlnaProfilesHttpHeaderInfo struct for DlnaProfilesHttpHeaderInfo
 type DlnaProfilesHttpHeaderInfo struct {
-	Name *string `json:"Name,omitempty"`
-	Value *string `json:"Value,omitempty"`
+	Name  *string                      `json:"Name,omitempty"`
+	Value *string                      `json:"Value,omitempty"`
 	Match *DlnaProfilesHeaderMatchType `json:"Match,omitempty"`
 }
 
@@ -138,7 +138,7 @@ func (o *DlnaProfilesHttpHeaderInfo) SetMatch(v DlnaProfilesHeaderMatchType) {
 }
 
 func (o DlnaProfilesHttpHeaderInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -194,5 +194,3 @@ func (v *NullableDlnaProfilesHttpHeaderInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

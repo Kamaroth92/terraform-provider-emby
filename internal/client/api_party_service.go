@@ -19,16 +19,15 @@ import (
 	"strings"
 )
 
-
 type PartyServiceAPI interface {
 
 	/*
-	GetParties Gets a list of active parties
+		GetParties Gets a list of active parties
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetPartiesRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetPartiesRequest
 	*/
 	GetParties(ctx context.Context) ApiGetPartiesRequest
 
@@ -36,12 +35,12 @@ type PartyServiceAPI interface {
 	GetPartiesExecute(r ApiGetPartiesRequest) (*http.Response, error)
 
 	/*
-	GetPartiesInfo Gets info about the session's current party
+		GetPartiesInfo Gets info about the session's current party
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetPartiesInfoRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetPartiesInfoRequest
 	*/
 	GetPartiesInfo(ctx context.Context) ApiGetPartiesInfoRequest
 
@@ -50,12 +49,12 @@ type PartyServiceAPI interface {
 	GetPartiesInfoExecute(r ApiGetPartiesInfoRequest) (*SessionPartyInfoResult, *http.Response, error)
 
 	/*
-	PostParties Creates a party
+		PostParties Creates a party
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostPartiesRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostPartiesRequest
 	*/
 	PostParties(ctx context.Context) ApiPostPartiesRequest
 
@@ -64,13 +63,13 @@ type PartyServiceAPI interface {
 	PostPartiesExecute(r ApiPostPartiesRequest) (*SessionPartyInfoResult, *http.Response, error)
 
 	/*
-	PostPartiesByIdJoin Joins a party
+		PostPartiesByIdJoin Joins a party
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Name
-	@return ApiPostPartiesByIdJoinRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Name
+		@return ApiPostPartiesByIdJoinRequest
 	*/
 	PostPartiesByIdJoin(ctx context.Context, id string) ApiPostPartiesByIdJoinRequest
 
@@ -79,12 +78,12 @@ type PartyServiceAPI interface {
 	PostPartiesByIdJoinExecute(r ApiPostPartiesByIdJoinRequest) (*SessionPartyInfoResult, *http.Response, error)
 
 	/*
-	PostPartiesLeave Leaves a party
+		PostPartiesLeave Leaves a party
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostPartiesLeaveRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostPartiesLeaveRequest
 	*/
 	PostPartiesLeave(ctx context.Context) ApiPostPartiesLeaveRequest
 
@@ -96,7 +95,7 @@ type PartyServiceAPI interface {
 type PartyServiceAPIService service
 
 type ApiGetPartiesRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService PartyServiceAPI
 }
 
@@ -109,22 +108,22 @@ GetParties Gets a list of active parties
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetPartiesRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetPartiesRequest
 */
 func (a *PartyServiceAPIService) GetParties(ctx context.Context) ApiGetPartiesRequest {
 	return ApiGetPartiesRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *PartyServiceAPIService) GetPartiesExecute(r ApiGetPartiesRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PartyServiceAPIService.GetParties")
@@ -198,7 +197,7 @@ func (a *PartyServiceAPIService) GetPartiesExecute(r ApiGetPartiesRequest) (*htt
 }
 
 type ApiGetPartiesInfoRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService PartyServiceAPI
 }
 
@@ -211,24 +210,25 @@ GetPartiesInfo Gets info about the session's current party
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetPartiesInfoRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetPartiesInfoRequest
 */
 func (a *PartyServiceAPIService) GetPartiesInfo(ctx context.Context) ApiGetPartiesInfoRequest {
 	return ApiGetPartiesInfoRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return SessionPartyInfoResult
+//
+//	@return SessionPartyInfoResult
 func (a *PartyServiceAPIService) GetPartiesInfoExecute(r ApiGetPartiesInfoRequest) (*SessionPartyInfoResult, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *SessionPartyInfoResult
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *SessionPartyInfoResult
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PartyServiceAPIService.GetPartiesInfo")
@@ -311,7 +311,7 @@ func (a *PartyServiceAPIService) GetPartiesInfoExecute(r ApiGetPartiesInfoReques
 }
 
 type ApiPostPartiesRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService PartyServiceAPI
 }
 
@@ -324,24 +324,25 @@ PostParties Creates a party
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostPartiesRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostPartiesRequest
 */
 func (a *PartyServiceAPIService) PostParties(ctx context.Context) ApiPostPartiesRequest {
 	return ApiPostPartiesRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return SessionPartyInfoResult
+//
+//	@return SessionPartyInfoResult
 func (a *PartyServiceAPIService) PostPartiesExecute(r ApiPostPartiesRequest) (*SessionPartyInfoResult, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *SessionPartyInfoResult
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *SessionPartyInfoResult
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PartyServiceAPIService.PostParties")
@@ -424,9 +425,9 @@ func (a *PartyServiceAPIService) PostPartiesExecute(r ApiPostPartiesRequest) (*S
 }
 
 type ApiPostPartiesByIdJoinRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService PartyServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiPostPartiesByIdJoinRequest) Execute() (*SessionPartyInfoResult, *http.Response, error) {
@@ -438,26 +439,27 @@ PostPartiesByIdJoin Joins a party
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Name
- @return ApiPostPartiesByIdJoinRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Name
+	@return ApiPostPartiesByIdJoinRequest
 */
 func (a *PartyServiceAPIService) PostPartiesByIdJoin(ctx context.Context, id string) ApiPostPartiesByIdJoinRequest {
 	return ApiPostPartiesByIdJoinRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
-//  @return SessionPartyInfoResult
+//
+//	@return SessionPartyInfoResult
 func (a *PartyServiceAPIService) PostPartiesByIdJoinExecute(r ApiPostPartiesByIdJoinRequest) (*SessionPartyInfoResult, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *SessionPartyInfoResult
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *SessionPartyInfoResult
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PartyServiceAPIService.PostPartiesByIdJoin")
@@ -541,7 +543,7 @@ func (a *PartyServiceAPIService) PostPartiesByIdJoinExecute(r ApiPostPartiesById
 }
 
 type ApiPostPartiesLeaveRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService PartyServiceAPI
 }
 
@@ -554,22 +556,22 @@ PostPartiesLeave Leaves a party
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostPartiesLeaveRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostPartiesLeaveRequest
 */
 func (a *PartyServiceAPIService) PostPartiesLeave(ctx context.Context) ApiPostPartiesLeaveRequest {
 	return ApiPostPartiesLeaveRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *PartyServiceAPIService) PostPartiesLeaveExecute(r ApiPostPartiesLeaveRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PartyServiceAPIService.PostPartiesLeave")

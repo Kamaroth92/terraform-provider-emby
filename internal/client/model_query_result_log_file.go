@@ -19,8 +19,8 @@ var _ MappedNullable = &QueryResultLogFile{}
 
 // QueryResultLogFile struct for QueryResultLogFile
 type QueryResultLogFile struct {
-	Items []LogFile `json:"Items,omitempty"`
-	TotalRecordCount *int32 `json:"TotalRecordCount,omitempty"`
+	Items            []LogFile `json:"Items,omitempty"`
+	TotalRecordCount *int32    `json:"TotalRecordCount,omitempty"`
 }
 
 // NewQueryResultLogFile instantiates a new QueryResultLogFile object
@@ -105,7 +105,7 @@ func (o *QueryResultLogFile) SetTotalRecordCount(v int32) {
 }
 
 func (o QueryResultLogFile) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -158,5 +158,3 @@ func (v *NullableQueryResultLogFile) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

@@ -20,11 +20,11 @@ type LiveTvKeywordType string
 
 // List of LiveTv.KeywordType
 const (
-	LIVETVKEYWORDTYPE_NAME LiveTvKeywordType = "Name"
+	LIVETVKEYWORDTYPE_NAME          LiveTvKeywordType = "Name"
 	LIVETVKEYWORDTYPE_EPISODE_TITLE LiveTvKeywordType = "EpisodeTitle"
-	LIVETVKEYWORDTYPE_OVERVIEW LiveTvKeywordType = "Overview"
-	LIVETVKEYWORDTYPE_ACTOR LiveTvKeywordType = "Actor"
-	LIVETVKEYWORDTYPE_DIRECTOR LiveTvKeywordType = "Director"
+	LIVETVKEYWORDTYPE_OVERVIEW      LiveTvKeywordType = "Overview"
+	LIVETVKEYWORDTYPE_ACTOR         LiveTvKeywordType = "Actor"
+	LIVETVKEYWORDTYPE_DIRECTOR      LiveTvKeywordType = "Director"
 )
 
 // All allowed values of LiveTvKeywordType enum
@@ -114,4 +114,3 @@ func (v *NullableLiveTvKeywordType) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

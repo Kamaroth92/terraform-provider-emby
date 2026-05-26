@@ -19,8 +19,8 @@ var _ MappedNullable = &AllThemeMediaResult{}
 
 // AllThemeMediaResult struct for AllThemeMediaResult
 type AllThemeMediaResult struct {
-	ThemeVideosResult *ThemeMediaResult `json:"ThemeVideosResult,omitempty"`
-	ThemeSongsResult *ThemeMediaResult `json:"ThemeSongsResult,omitempty"`
+	ThemeVideosResult     *ThemeMediaResult `json:"ThemeVideosResult,omitempty"`
+	ThemeSongsResult      *ThemeMediaResult `json:"ThemeSongsResult,omitempty"`
 	SoundtrackSongsResult *ThemeMediaResult `json:"SoundtrackSongsResult,omitempty"`
 }
 
@@ -138,7 +138,7 @@ func (o *AllThemeMediaResult) SetSoundtrackSongsResult(v ThemeMediaResult) {
 }
 
 func (o AllThemeMediaResult) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -194,5 +194,3 @@ func (v *NullableAllThemeMediaResult) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

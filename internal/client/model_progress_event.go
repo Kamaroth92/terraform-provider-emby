@@ -20,22 +20,22 @@ type ProgressEvent string
 
 // List of ProgressEvent
 const (
-	PROGRESSEVENT_TIME_UPDATE ProgressEvent = "TimeUpdate"
-	PROGRESSEVENT_PAUSE ProgressEvent = "Pause"
-	PROGRESSEVENT_UNPAUSE ProgressEvent = "Unpause"
-	PROGRESSEVENT_VOLUME_CHANGE ProgressEvent = "VolumeChange"
-	PROGRESSEVENT_REPEAT_MODE_CHANGE ProgressEvent = "RepeatModeChange"
-	PROGRESSEVENT_AUDIO_TRACK_CHANGE ProgressEvent = "AudioTrackChange"
-	PROGRESSEVENT_SUBTITLE_TRACK_CHANGE ProgressEvent = "SubtitleTrackChange"
-	PROGRESSEVENT_PLAYLIST_ITEM_MOVE ProgressEvent = "PlaylistItemMove"
-	PROGRESSEVENT_PLAYLIST_ITEM_REMOVE ProgressEvent = "PlaylistItemRemove"
-	PROGRESSEVENT_PLAYLIST_ITEM_ADD ProgressEvent = "PlaylistItemAdd"
-	PROGRESSEVENT_QUALITY_CHANGE ProgressEvent = "QualityChange"
-	PROGRESSEVENT_STATE_CHANGE ProgressEvent = "StateChange"
+	PROGRESSEVENT_TIME_UPDATE            ProgressEvent = "TimeUpdate"
+	PROGRESSEVENT_PAUSE                  ProgressEvent = "Pause"
+	PROGRESSEVENT_UNPAUSE                ProgressEvent = "Unpause"
+	PROGRESSEVENT_VOLUME_CHANGE          ProgressEvent = "VolumeChange"
+	PROGRESSEVENT_REPEAT_MODE_CHANGE     ProgressEvent = "RepeatModeChange"
+	PROGRESSEVENT_AUDIO_TRACK_CHANGE     ProgressEvent = "AudioTrackChange"
+	PROGRESSEVENT_SUBTITLE_TRACK_CHANGE  ProgressEvent = "SubtitleTrackChange"
+	PROGRESSEVENT_PLAYLIST_ITEM_MOVE     ProgressEvent = "PlaylistItemMove"
+	PROGRESSEVENT_PLAYLIST_ITEM_REMOVE   ProgressEvent = "PlaylistItemRemove"
+	PROGRESSEVENT_PLAYLIST_ITEM_ADD      ProgressEvent = "PlaylistItemAdd"
+	PROGRESSEVENT_QUALITY_CHANGE         ProgressEvent = "QualityChange"
+	PROGRESSEVENT_STATE_CHANGE           ProgressEvent = "StateChange"
 	PROGRESSEVENT_SUBTITLE_OFFSET_CHANGE ProgressEvent = "SubtitleOffsetChange"
-	PROGRESSEVENT_PLAYBACK_RATE_CHANGE ProgressEvent = "PlaybackRateChange"
-	PROGRESSEVENT_SHUFFLE_CHANGE ProgressEvent = "ShuffleChange"
-	PROGRESSEVENT_SLEEP_TIMER_CHANGE ProgressEvent = "SleepTimerChange"
+	PROGRESSEVENT_PLAYBACK_RATE_CHANGE   ProgressEvent = "PlaybackRateChange"
+	PROGRESSEVENT_SHUFFLE_CHANGE         ProgressEvent = "ShuffleChange"
+	PROGRESSEVENT_SLEEP_TIMER_CHANGE     ProgressEvent = "SleepTimerChange"
 )
 
 // All allowed values of ProgressEvent enum
@@ -136,4 +136,3 @@ func (v *NullableProgressEvent) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

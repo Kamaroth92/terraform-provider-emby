@@ -16,21 +16,20 @@ import (
 	"io"
 	"net/http"
 	"net/url"
-	"strings"
 	"os"
+	"strings"
 )
-
 
 type DlnaServerServiceAPI interface {
 
 	/*
-	GetDlnaByUuidConnectionmanagerConnectionmanager Gets dlna connection manager xml
+		GetDlnaByUuidConnectionmanagerConnectionmanager Gets dlna connection manager xml
 
-	No authentication required
+		No authentication required
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param uuId Server UuId
-	@return ApiGetDlnaByUuidConnectionmanagerConnectionmanagerRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param uuId Server UuId
+		@return ApiGetDlnaByUuidConnectionmanagerConnectionmanagerRequest
 	*/
 	GetDlnaByUuidConnectionmanagerConnectionmanager(ctx context.Context, uuId string) ApiGetDlnaByUuidConnectionmanagerConnectionmanagerRequest
 
@@ -38,13 +37,13 @@ type DlnaServerServiceAPI interface {
 	GetDlnaByUuidConnectionmanagerConnectionmanagerExecute(r ApiGetDlnaByUuidConnectionmanagerConnectionmanagerRequest) (*http.Response, error)
 
 	/*
-	GetDlnaByUuidConnectionmanagerConnectionmanagerXml Gets dlna connection manager xml
+		GetDlnaByUuidConnectionmanagerConnectionmanagerXml Gets dlna connection manager xml
 
-	No authentication required
+		No authentication required
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param uuId Server UuId
-	@return ApiGetDlnaByUuidConnectionmanagerConnectionmanagerXmlRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param uuId Server UuId
+		@return ApiGetDlnaByUuidConnectionmanagerConnectionmanagerXmlRequest
 	*/
 	GetDlnaByUuidConnectionmanagerConnectionmanagerXml(ctx context.Context, uuId string) ApiGetDlnaByUuidConnectionmanagerConnectionmanagerXmlRequest
 
@@ -52,13 +51,13 @@ type DlnaServerServiceAPI interface {
 	GetDlnaByUuidConnectionmanagerConnectionmanagerXmlExecute(r ApiGetDlnaByUuidConnectionmanagerConnectionmanagerXmlRequest) (*http.Response, error)
 
 	/*
-	GetDlnaByUuidContentdirectoryContentdirectory Gets dlna content directory xml
+		GetDlnaByUuidContentdirectoryContentdirectory Gets dlna content directory xml
 
-	No authentication required
+		No authentication required
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param uuId Server UuId
-	@return ApiGetDlnaByUuidContentdirectoryContentdirectoryRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param uuId Server UuId
+		@return ApiGetDlnaByUuidContentdirectoryContentdirectoryRequest
 	*/
 	GetDlnaByUuidContentdirectoryContentdirectory(ctx context.Context, uuId string) ApiGetDlnaByUuidContentdirectoryContentdirectoryRequest
 
@@ -66,13 +65,13 @@ type DlnaServerServiceAPI interface {
 	GetDlnaByUuidContentdirectoryContentdirectoryExecute(r ApiGetDlnaByUuidContentdirectoryContentdirectoryRequest) (*http.Response, error)
 
 	/*
-	GetDlnaByUuidContentdirectoryContentdirectoryXml Gets dlna content directory xml
+		GetDlnaByUuidContentdirectoryContentdirectoryXml Gets dlna content directory xml
 
-	No authentication required
+		No authentication required
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param uuId Server UuId
-	@return ApiGetDlnaByUuidContentdirectoryContentdirectoryXmlRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param uuId Server UuId
+		@return ApiGetDlnaByUuidContentdirectoryContentdirectoryXmlRequest
 	*/
 	GetDlnaByUuidContentdirectoryContentdirectoryXml(ctx context.Context, uuId string) ApiGetDlnaByUuidContentdirectoryContentdirectoryXmlRequest
 
@@ -80,13 +79,13 @@ type DlnaServerServiceAPI interface {
 	GetDlnaByUuidContentdirectoryContentdirectoryXmlExecute(r ApiGetDlnaByUuidContentdirectoryContentdirectoryXmlRequest) (*http.Response, error)
 
 	/*
-	GetDlnaByUuidDescription Gets dlna server info
+		GetDlnaByUuidDescription Gets dlna server info
 
-	No authentication required
+		No authentication required
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param uuId Server UuId
-	@return ApiGetDlnaByUuidDescriptionRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param uuId Server UuId
+		@return ApiGetDlnaByUuidDescriptionRequest
 	*/
 	GetDlnaByUuidDescription(ctx context.Context, uuId string) ApiGetDlnaByUuidDescriptionRequest
 
@@ -94,13 +93,13 @@ type DlnaServerServiceAPI interface {
 	GetDlnaByUuidDescriptionExecute(r ApiGetDlnaByUuidDescriptionRequest) (*http.Response, error)
 
 	/*
-	GetDlnaByUuidDescriptionXml Gets dlna server info
+		GetDlnaByUuidDescriptionXml Gets dlna server info
 
-	No authentication required
+		No authentication required
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param uuId Server UuId
-	@return ApiGetDlnaByUuidDescriptionXmlRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param uuId Server UuId
+		@return ApiGetDlnaByUuidDescriptionXmlRequest
 	*/
 	GetDlnaByUuidDescriptionXml(ctx context.Context, uuId string) ApiGetDlnaByUuidDescriptionXmlRequest
 
@@ -108,14 +107,14 @@ type DlnaServerServiceAPI interface {
 	GetDlnaByUuidDescriptionXmlExecute(r ApiGetDlnaByUuidDescriptionXmlRequest) (*http.Response, error)
 
 	/*
-	GetDlnaByUuidIconsByFilename Gets a server icon
+		GetDlnaByUuidIconsByFilename Gets a server icon
 
-	No authentication required
+		No authentication required
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param uuId Server UuId
-	@param filename The icon filename
-	@return ApiGetDlnaByUuidIconsByFilenameRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param uuId Server UuId
+		@param filename The icon filename
+		@return ApiGetDlnaByUuidIconsByFilenameRequest
 	*/
 	GetDlnaByUuidIconsByFilename(ctx context.Context, uuId string, filename string) ApiGetDlnaByUuidIconsByFilenameRequest
 
@@ -123,13 +122,13 @@ type DlnaServerServiceAPI interface {
 	GetDlnaByUuidIconsByFilenameExecute(r ApiGetDlnaByUuidIconsByFilenameRequest) (*http.Response, error)
 
 	/*
-	GetDlnaIconsByFilename Gets a server icon
+		GetDlnaIconsByFilename Gets a server icon
 
-	No authentication required
+		No authentication required
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param filename The icon filename
-	@return ApiGetDlnaIconsByFilenameRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param filename The icon filename
+		@return ApiGetDlnaIconsByFilenameRequest
 	*/
 	GetDlnaIconsByFilename(ctx context.Context, filename string) ApiGetDlnaIconsByFilenameRequest
 
@@ -137,13 +136,13 @@ type DlnaServerServiceAPI interface {
 	GetDlnaIconsByFilenameExecute(r ApiGetDlnaIconsByFilenameRequest) (*http.Response, error)
 
 	/*
-	HeadDlnaByUuidConnectionmanagerConnectionmanager Gets dlna connection manager xml
+		HeadDlnaByUuidConnectionmanagerConnectionmanager Gets dlna connection manager xml
 
-	No authentication required
+		No authentication required
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param uuId Server UuId
-	@return ApiHeadDlnaByUuidConnectionmanagerConnectionmanagerRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param uuId Server UuId
+		@return ApiHeadDlnaByUuidConnectionmanagerConnectionmanagerRequest
 	*/
 	HeadDlnaByUuidConnectionmanagerConnectionmanager(ctx context.Context, uuId string) ApiHeadDlnaByUuidConnectionmanagerConnectionmanagerRequest
 
@@ -151,13 +150,13 @@ type DlnaServerServiceAPI interface {
 	HeadDlnaByUuidConnectionmanagerConnectionmanagerExecute(r ApiHeadDlnaByUuidConnectionmanagerConnectionmanagerRequest) (*http.Response, error)
 
 	/*
-	HeadDlnaByUuidConnectionmanagerConnectionmanagerXml Gets dlna connection manager xml
+		HeadDlnaByUuidConnectionmanagerConnectionmanagerXml Gets dlna connection manager xml
 
-	No authentication required
+		No authentication required
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param uuId Server UuId
-	@return ApiHeadDlnaByUuidConnectionmanagerConnectionmanagerXmlRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param uuId Server UuId
+		@return ApiHeadDlnaByUuidConnectionmanagerConnectionmanagerXmlRequest
 	*/
 	HeadDlnaByUuidConnectionmanagerConnectionmanagerXml(ctx context.Context, uuId string) ApiHeadDlnaByUuidConnectionmanagerConnectionmanagerXmlRequest
 
@@ -165,13 +164,13 @@ type DlnaServerServiceAPI interface {
 	HeadDlnaByUuidConnectionmanagerConnectionmanagerXmlExecute(r ApiHeadDlnaByUuidConnectionmanagerConnectionmanagerXmlRequest) (*http.Response, error)
 
 	/*
-	HeadDlnaByUuidContentdirectoryContentdirectory Gets dlna content directory xml
+		HeadDlnaByUuidContentdirectoryContentdirectory Gets dlna content directory xml
 
-	No authentication required
+		No authentication required
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param uuId Server UuId
-	@return ApiHeadDlnaByUuidContentdirectoryContentdirectoryRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param uuId Server UuId
+		@return ApiHeadDlnaByUuidContentdirectoryContentdirectoryRequest
 	*/
 	HeadDlnaByUuidContentdirectoryContentdirectory(ctx context.Context, uuId string) ApiHeadDlnaByUuidContentdirectoryContentdirectoryRequest
 
@@ -179,13 +178,13 @@ type DlnaServerServiceAPI interface {
 	HeadDlnaByUuidContentdirectoryContentdirectoryExecute(r ApiHeadDlnaByUuidContentdirectoryContentdirectoryRequest) (*http.Response, error)
 
 	/*
-	HeadDlnaByUuidContentdirectoryContentdirectoryXml Gets dlna content directory xml
+		HeadDlnaByUuidContentdirectoryContentdirectoryXml Gets dlna content directory xml
 
-	No authentication required
+		No authentication required
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param uuId Server UuId
-	@return ApiHeadDlnaByUuidContentdirectoryContentdirectoryXmlRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param uuId Server UuId
+		@return ApiHeadDlnaByUuidContentdirectoryContentdirectoryXmlRequest
 	*/
 	HeadDlnaByUuidContentdirectoryContentdirectoryXml(ctx context.Context, uuId string) ApiHeadDlnaByUuidContentdirectoryContentdirectoryXmlRequest
 
@@ -193,13 +192,13 @@ type DlnaServerServiceAPI interface {
 	HeadDlnaByUuidContentdirectoryContentdirectoryXmlExecute(r ApiHeadDlnaByUuidContentdirectoryContentdirectoryXmlRequest) (*http.Response, error)
 
 	/*
-	HeadDlnaByUuidDescription Gets dlna server info
+		HeadDlnaByUuidDescription Gets dlna server info
 
-	No authentication required
+		No authentication required
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param uuId Server UuId
-	@return ApiHeadDlnaByUuidDescriptionRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param uuId Server UuId
+		@return ApiHeadDlnaByUuidDescriptionRequest
 	*/
 	HeadDlnaByUuidDescription(ctx context.Context, uuId string) ApiHeadDlnaByUuidDescriptionRequest
 
@@ -207,13 +206,13 @@ type DlnaServerServiceAPI interface {
 	HeadDlnaByUuidDescriptionExecute(r ApiHeadDlnaByUuidDescriptionRequest) (*http.Response, error)
 
 	/*
-	HeadDlnaByUuidDescriptionXml Gets dlna server info
+		HeadDlnaByUuidDescriptionXml Gets dlna server info
 
-	No authentication required
+		No authentication required
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param uuId Server UuId
-	@return ApiHeadDlnaByUuidDescriptionXmlRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param uuId Server UuId
+		@return ApiHeadDlnaByUuidDescriptionXmlRequest
 	*/
 	HeadDlnaByUuidDescriptionXml(ctx context.Context, uuId string) ApiHeadDlnaByUuidDescriptionXmlRequest
 
@@ -221,13 +220,13 @@ type DlnaServerServiceAPI interface {
 	HeadDlnaByUuidDescriptionXmlExecute(r ApiHeadDlnaByUuidDescriptionXmlRequest) (*http.Response, error)
 
 	/*
-	PostDlnaByUuidConnectionmanagerControl Processes a control request
+		PostDlnaByUuidConnectionmanagerControl Processes a control request
 
-	No authentication required
+		No authentication required
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param uuId Server UuId
-	@return ApiPostDlnaByUuidConnectionmanagerControlRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param uuId Server UuId
+		@return ApiPostDlnaByUuidConnectionmanagerControlRequest
 	*/
 	PostDlnaByUuidConnectionmanagerControl(ctx context.Context, uuId string) ApiPostDlnaByUuidConnectionmanagerControlRequest
 
@@ -235,13 +234,13 @@ type DlnaServerServiceAPI interface {
 	PostDlnaByUuidConnectionmanagerControlExecute(r ApiPostDlnaByUuidConnectionmanagerControlRequest) (*http.Response, error)
 
 	/*
-	PostDlnaByUuidContentdirectoryControl Processes a control request
+		PostDlnaByUuidContentdirectoryControl Processes a control request
 
-	No authentication required
+		No authentication required
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param uuId Server UuId
-	@return ApiPostDlnaByUuidContentdirectoryControlRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param uuId Server UuId
+		@return ApiPostDlnaByUuidContentdirectoryControlRequest
 	*/
 	PostDlnaByUuidContentdirectoryControl(ctx context.Context, uuId string) ApiPostDlnaByUuidContentdirectoryControlRequest
 
@@ -253,9 +252,9 @@ type DlnaServerServiceAPI interface {
 type DlnaServerServiceAPIService service
 
 type ApiGetDlnaByUuidConnectionmanagerConnectionmanagerRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService DlnaServerServiceAPI
-	uuId string
+	uuId       string
 }
 
 func (r ApiGetDlnaByUuidConnectionmanagerConnectionmanagerRequest) Execute() (*http.Response, error) {
@@ -267,24 +266,24 @@ GetDlnaByUuidConnectionmanagerConnectionmanager Gets dlna connection manager xml
 
 No authentication required
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param uuId Server UuId
- @return ApiGetDlnaByUuidConnectionmanagerConnectionmanagerRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param uuId Server UuId
+	@return ApiGetDlnaByUuidConnectionmanagerConnectionmanagerRequest
 */
 func (a *DlnaServerServiceAPIService) GetDlnaByUuidConnectionmanagerConnectionmanager(ctx context.Context, uuId string) ApiGetDlnaByUuidConnectionmanagerConnectionmanagerRequest {
 	return ApiGetDlnaByUuidConnectionmanagerConnectionmanagerRequest{
 		ApiService: a,
-		ctx: ctx,
-		uuId: uuId,
+		ctx:        ctx,
+		uuId:       uuId,
 	}
 }
 
 // Execute executes the request
 func (a *DlnaServerServiceAPIService) GetDlnaByUuidConnectionmanagerConnectionmanagerExecute(r ApiGetDlnaByUuidConnectionmanagerConnectionmanagerRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DlnaServerServiceAPIService.GetDlnaByUuidConnectionmanagerConnectionmanager")
@@ -345,9 +344,9 @@ func (a *DlnaServerServiceAPIService) GetDlnaByUuidConnectionmanagerConnectionma
 }
 
 type ApiGetDlnaByUuidConnectionmanagerConnectionmanagerXmlRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService DlnaServerServiceAPI
-	uuId string
+	uuId       string
 }
 
 func (r ApiGetDlnaByUuidConnectionmanagerConnectionmanagerXmlRequest) Execute() (*http.Response, error) {
@@ -359,24 +358,24 @@ GetDlnaByUuidConnectionmanagerConnectionmanagerXml Gets dlna connection manager 
 
 No authentication required
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param uuId Server UuId
- @return ApiGetDlnaByUuidConnectionmanagerConnectionmanagerXmlRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param uuId Server UuId
+	@return ApiGetDlnaByUuidConnectionmanagerConnectionmanagerXmlRequest
 */
 func (a *DlnaServerServiceAPIService) GetDlnaByUuidConnectionmanagerConnectionmanagerXml(ctx context.Context, uuId string) ApiGetDlnaByUuidConnectionmanagerConnectionmanagerXmlRequest {
 	return ApiGetDlnaByUuidConnectionmanagerConnectionmanagerXmlRequest{
 		ApiService: a,
-		ctx: ctx,
-		uuId: uuId,
+		ctx:        ctx,
+		uuId:       uuId,
 	}
 }
 
 // Execute executes the request
 func (a *DlnaServerServiceAPIService) GetDlnaByUuidConnectionmanagerConnectionmanagerXmlExecute(r ApiGetDlnaByUuidConnectionmanagerConnectionmanagerXmlRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DlnaServerServiceAPIService.GetDlnaByUuidConnectionmanagerConnectionmanagerXml")
@@ -437,9 +436,9 @@ func (a *DlnaServerServiceAPIService) GetDlnaByUuidConnectionmanagerConnectionma
 }
 
 type ApiGetDlnaByUuidContentdirectoryContentdirectoryRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService DlnaServerServiceAPI
-	uuId string
+	uuId       string
 }
 
 func (r ApiGetDlnaByUuidContentdirectoryContentdirectoryRequest) Execute() (*http.Response, error) {
@@ -451,24 +450,24 @@ GetDlnaByUuidContentdirectoryContentdirectory Gets dlna content directory xml
 
 No authentication required
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param uuId Server UuId
- @return ApiGetDlnaByUuidContentdirectoryContentdirectoryRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param uuId Server UuId
+	@return ApiGetDlnaByUuidContentdirectoryContentdirectoryRequest
 */
 func (a *DlnaServerServiceAPIService) GetDlnaByUuidContentdirectoryContentdirectory(ctx context.Context, uuId string) ApiGetDlnaByUuidContentdirectoryContentdirectoryRequest {
 	return ApiGetDlnaByUuidContentdirectoryContentdirectoryRequest{
 		ApiService: a,
-		ctx: ctx,
-		uuId: uuId,
+		ctx:        ctx,
+		uuId:       uuId,
 	}
 }
 
 // Execute executes the request
 func (a *DlnaServerServiceAPIService) GetDlnaByUuidContentdirectoryContentdirectoryExecute(r ApiGetDlnaByUuidContentdirectoryContentdirectoryRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DlnaServerServiceAPIService.GetDlnaByUuidContentdirectoryContentdirectory")
@@ -529,9 +528,9 @@ func (a *DlnaServerServiceAPIService) GetDlnaByUuidContentdirectoryContentdirect
 }
 
 type ApiGetDlnaByUuidContentdirectoryContentdirectoryXmlRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService DlnaServerServiceAPI
-	uuId string
+	uuId       string
 }
 
 func (r ApiGetDlnaByUuidContentdirectoryContentdirectoryXmlRequest) Execute() (*http.Response, error) {
@@ -543,24 +542,24 @@ GetDlnaByUuidContentdirectoryContentdirectoryXml Gets dlna content directory xml
 
 No authentication required
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param uuId Server UuId
- @return ApiGetDlnaByUuidContentdirectoryContentdirectoryXmlRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param uuId Server UuId
+	@return ApiGetDlnaByUuidContentdirectoryContentdirectoryXmlRequest
 */
 func (a *DlnaServerServiceAPIService) GetDlnaByUuidContentdirectoryContentdirectoryXml(ctx context.Context, uuId string) ApiGetDlnaByUuidContentdirectoryContentdirectoryXmlRequest {
 	return ApiGetDlnaByUuidContentdirectoryContentdirectoryXmlRequest{
 		ApiService: a,
-		ctx: ctx,
-		uuId: uuId,
+		ctx:        ctx,
+		uuId:       uuId,
 	}
 }
 
 // Execute executes the request
 func (a *DlnaServerServiceAPIService) GetDlnaByUuidContentdirectoryContentdirectoryXmlExecute(r ApiGetDlnaByUuidContentdirectoryContentdirectoryXmlRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DlnaServerServiceAPIService.GetDlnaByUuidContentdirectoryContentdirectoryXml")
@@ -621,9 +620,9 @@ func (a *DlnaServerServiceAPIService) GetDlnaByUuidContentdirectoryContentdirect
 }
 
 type ApiGetDlnaByUuidDescriptionRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService DlnaServerServiceAPI
-	uuId string
+	uuId       string
 }
 
 func (r ApiGetDlnaByUuidDescriptionRequest) Execute() (*http.Response, error) {
@@ -635,24 +634,24 @@ GetDlnaByUuidDescription Gets dlna server info
 
 No authentication required
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param uuId Server UuId
- @return ApiGetDlnaByUuidDescriptionRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param uuId Server UuId
+	@return ApiGetDlnaByUuidDescriptionRequest
 */
 func (a *DlnaServerServiceAPIService) GetDlnaByUuidDescription(ctx context.Context, uuId string) ApiGetDlnaByUuidDescriptionRequest {
 	return ApiGetDlnaByUuidDescriptionRequest{
 		ApiService: a,
-		ctx: ctx,
-		uuId: uuId,
+		ctx:        ctx,
+		uuId:       uuId,
 	}
 }
 
 // Execute executes the request
 func (a *DlnaServerServiceAPIService) GetDlnaByUuidDescriptionExecute(r ApiGetDlnaByUuidDescriptionRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DlnaServerServiceAPIService.GetDlnaByUuidDescription")
@@ -713,9 +712,9 @@ func (a *DlnaServerServiceAPIService) GetDlnaByUuidDescriptionExecute(r ApiGetDl
 }
 
 type ApiGetDlnaByUuidDescriptionXmlRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService DlnaServerServiceAPI
-	uuId string
+	uuId       string
 }
 
 func (r ApiGetDlnaByUuidDescriptionXmlRequest) Execute() (*http.Response, error) {
@@ -727,24 +726,24 @@ GetDlnaByUuidDescriptionXml Gets dlna server info
 
 No authentication required
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param uuId Server UuId
- @return ApiGetDlnaByUuidDescriptionXmlRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param uuId Server UuId
+	@return ApiGetDlnaByUuidDescriptionXmlRequest
 */
 func (a *DlnaServerServiceAPIService) GetDlnaByUuidDescriptionXml(ctx context.Context, uuId string) ApiGetDlnaByUuidDescriptionXmlRequest {
 	return ApiGetDlnaByUuidDescriptionXmlRequest{
 		ApiService: a,
-		ctx: ctx,
-		uuId: uuId,
+		ctx:        ctx,
+		uuId:       uuId,
 	}
 }
 
 // Execute executes the request
 func (a *DlnaServerServiceAPIService) GetDlnaByUuidDescriptionXmlExecute(r ApiGetDlnaByUuidDescriptionXmlRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DlnaServerServiceAPIService.GetDlnaByUuidDescriptionXml")
@@ -805,10 +804,10 @@ func (a *DlnaServerServiceAPIService) GetDlnaByUuidDescriptionXmlExecute(r ApiGe
 }
 
 type ApiGetDlnaByUuidIconsByFilenameRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService DlnaServerServiceAPI
-	uuId string
-	filename string
+	uuId       string
+	filename   string
 }
 
 func (r ApiGetDlnaByUuidIconsByFilenameRequest) Execute() (*http.Response, error) {
@@ -820,26 +819,26 @@ GetDlnaByUuidIconsByFilename Gets a server icon
 
 No authentication required
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param uuId Server UuId
- @param filename The icon filename
- @return ApiGetDlnaByUuidIconsByFilenameRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param uuId Server UuId
+	@param filename The icon filename
+	@return ApiGetDlnaByUuidIconsByFilenameRequest
 */
 func (a *DlnaServerServiceAPIService) GetDlnaByUuidIconsByFilename(ctx context.Context, uuId string, filename string) ApiGetDlnaByUuidIconsByFilenameRequest {
 	return ApiGetDlnaByUuidIconsByFilenameRequest{
 		ApiService: a,
-		ctx: ctx,
-		uuId: uuId,
-		filename: filename,
+		ctx:        ctx,
+		uuId:       uuId,
+		filename:   filename,
 	}
 }
 
 // Execute executes the request
 func (a *DlnaServerServiceAPIService) GetDlnaByUuidIconsByFilenameExecute(r ApiGetDlnaByUuidIconsByFilenameRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DlnaServerServiceAPIService.GetDlnaByUuidIconsByFilename")
@@ -901,10 +900,10 @@ func (a *DlnaServerServiceAPIService) GetDlnaByUuidIconsByFilenameExecute(r ApiG
 }
 
 type ApiGetDlnaIconsByFilenameRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService DlnaServerServiceAPI
-	filename string
-	uuId *string
+	filename   string
+	uuId       *string
 }
 
 // Server UuId
@@ -922,24 +921,24 @@ GetDlnaIconsByFilename Gets a server icon
 
 No authentication required
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param filename The icon filename
- @return ApiGetDlnaIconsByFilenameRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param filename The icon filename
+	@return ApiGetDlnaIconsByFilenameRequest
 */
 func (a *DlnaServerServiceAPIService) GetDlnaIconsByFilename(ctx context.Context, filename string) ApiGetDlnaIconsByFilenameRequest {
 	return ApiGetDlnaIconsByFilenameRequest{
 		ApiService: a,
-		ctx: ctx,
-		filename: filename,
+		ctx:        ctx,
+		filename:   filename,
 	}
 }
 
 // Execute executes the request
 func (a *DlnaServerServiceAPIService) GetDlnaIconsByFilenameExecute(r ApiGetDlnaIconsByFilenameRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DlnaServerServiceAPIService.GetDlnaIconsByFilename")
@@ -1003,9 +1002,9 @@ func (a *DlnaServerServiceAPIService) GetDlnaIconsByFilenameExecute(r ApiGetDlna
 }
 
 type ApiHeadDlnaByUuidConnectionmanagerConnectionmanagerRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService DlnaServerServiceAPI
-	uuId string
+	uuId       string
 }
 
 func (r ApiHeadDlnaByUuidConnectionmanagerConnectionmanagerRequest) Execute() (*http.Response, error) {
@@ -1017,24 +1016,24 @@ HeadDlnaByUuidConnectionmanagerConnectionmanager Gets dlna connection manager xm
 
 No authentication required
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param uuId Server UuId
- @return ApiHeadDlnaByUuidConnectionmanagerConnectionmanagerRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param uuId Server UuId
+	@return ApiHeadDlnaByUuidConnectionmanagerConnectionmanagerRequest
 */
 func (a *DlnaServerServiceAPIService) HeadDlnaByUuidConnectionmanagerConnectionmanager(ctx context.Context, uuId string) ApiHeadDlnaByUuidConnectionmanagerConnectionmanagerRequest {
 	return ApiHeadDlnaByUuidConnectionmanagerConnectionmanagerRequest{
 		ApiService: a,
-		ctx: ctx,
-		uuId: uuId,
+		ctx:        ctx,
+		uuId:       uuId,
 	}
 }
 
 // Execute executes the request
 func (a *DlnaServerServiceAPIService) HeadDlnaByUuidConnectionmanagerConnectionmanagerExecute(r ApiHeadDlnaByUuidConnectionmanagerConnectionmanagerRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodHead
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodHead
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DlnaServerServiceAPIService.HeadDlnaByUuidConnectionmanagerConnectionmanager")
@@ -1095,9 +1094,9 @@ func (a *DlnaServerServiceAPIService) HeadDlnaByUuidConnectionmanagerConnectionm
 }
 
 type ApiHeadDlnaByUuidConnectionmanagerConnectionmanagerXmlRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService DlnaServerServiceAPI
-	uuId string
+	uuId       string
 }
 
 func (r ApiHeadDlnaByUuidConnectionmanagerConnectionmanagerXmlRequest) Execute() (*http.Response, error) {
@@ -1109,24 +1108,24 @@ HeadDlnaByUuidConnectionmanagerConnectionmanagerXml Gets dlna connection manager
 
 No authentication required
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param uuId Server UuId
- @return ApiHeadDlnaByUuidConnectionmanagerConnectionmanagerXmlRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param uuId Server UuId
+	@return ApiHeadDlnaByUuidConnectionmanagerConnectionmanagerXmlRequest
 */
 func (a *DlnaServerServiceAPIService) HeadDlnaByUuidConnectionmanagerConnectionmanagerXml(ctx context.Context, uuId string) ApiHeadDlnaByUuidConnectionmanagerConnectionmanagerXmlRequest {
 	return ApiHeadDlnaByUuidConnectionmanagerConnectionmanagerXmlRequest{
 		ApiService: a,
-		ctx: ctx,
-		uuId: uuId,
+		ctx:        ctx,
+		uuId:       uuId,
 	}
 }
 
 // Execute executes the request
 func (a *DlnaServerServiceAPIService) HeadDlnaByUuidConnectionmanagerConnectionmanagerXmlExecute(r ApiHeadDlnaByUuidConnectionmanagerConnectionmanagerXmlRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodHead
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodHead
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DlnaServerServiceAPIService.HeadDlnaByUuidConnectionmanagerConnectionmanagerXml")
@@ -1187,9 +1186,9 @@ func (a *DlnaServerServiceAPIService) HeadDlnaByUuidConnectionmanagerConnectionm
 }
 
 type ApiHeadDlnaByUuidContentdirectoryContentdirectoryRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService DlnaServerServiceAPI
-	uuId string
+	uuId       string
 }
 
 func (r ApiHeadDlnaByUuidContentdirectoryContentdirectoryRequest) Execute() (*http.Response, error) {
@@ -1201,24 +1200,24 @@ HeadDlnaByUuidContentdirectoryContentdirectory Gets dlna content directory xml
 
 No authentication required
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param uuId Server UuId
- @return ApiHeadDlnaByUuidContentdirectoryContentdirectoryRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param uuId Server UuId
+	@return ApiHeadDlnaByUuidContentdirectoryContentdirectoryRequest
 */
 func (a *DlnaServerServiceAPIService) HeadDlnaByUuidContentdirectoryContentdirectory(ctx context.Context, uuId string) ApiHeadDlnaByUuidContentdirectoryContentdirectoryRequest {
 	return ApiHeadDlnaByUuidContentdirectoryContentdirectoryRequest{
 		ApiService: a,
-		ctx: ctx,
-		uuId: uuId,
+		ctx:        ctx,
+		uuId:       uuId,
 	}
 }
 
 // Execute executes the request
 func (a *DlnaServerServiceAPIService) HeadDlnaByUuidContentdirectoryContentdirectoryExecute(r ApiHeadDlnaByUuidContentdirectoryContentdirectoryRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodHead
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodHead
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DlnaServerServiceAPIService.HeadDlnaByUuidContentdirectoryContentdirectory")
@@ -1279,9 +1278,9 @@ func (a *DlnaServerServiceAPIService) HeadDlnaByUuidContentdirectoryContentdirec
 }
 
 type ApiHeadDlnaByUuidContentdirectoryContentdirectoryXmlRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService DlnaServerServiceAPI
-	uuId string
+	uuId       string
 }
 
 func (r ApiHeadDlnaByUuidContentdirectoryContentdirectoryXmlRequest) Execute() (*http.Response, error) {
@@ -1293,24 +1292,24 @@ HeadDlnaByUuidContentdirectoryContentdirectoryXml Gets dlna content directory xm
 
 No authentication required
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param uuId Server UuId
- @return ApiHeadDlnaByUuidContentdirectoryContentdirectoryXmlRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param uuId Server UuId
+	@return ApiHeadDlnaByUuidContentdirectoryContentdirectoryXmlRequest
 */
 func (a *DlnaServerServiceAPIService) HeadDlnaByUuidContentdirectoryContentdirectoryXml(ctx context.Context, uuId string) ApiHeadDlnaByUuidContentdirectoryContentdirectoryXmlRequest {
 	return ApiHeadDlnaByUuidContentdirectoryContentdirectoryXmlRequest{
 		ApiService: a,
-		ctx: ctx,
-		uuId: uuId,
+		ctx:        ctx,
+		uuId:       uuId,
 	}
 }
 
 // Execute executes the request
 func (a *DlnaServerServiceAPIService) HeadDlnaByUuidContentdirectoryContentdirectoryXmlExecute(r ApiHeadDlnaByUuidContentdirectoryContentdirectoryXmlRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodHead
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodHead
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DlnaServerServiceAPIService.HeadDlnaByUuidContentdirectoryContentdirectoryXml")
@@ -1371,9 +1370,9 @@ func (a *DlnaServerServiceAPIService) HeadDlnaByUuidContentdirectoryContentdirec
 }
 
 type ApiHeadDlnaByUuidDescriptionRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService DlnaServerServiceAPI
-	uuId string
+	uuId       string
 }
 
 func (r ApiHeadDlnaByUuidDescriptionRequest) Execute() (*http.Response, error) {
@@ -1385,24 +1384,24 @@ HeadDlnaByUuidDescription Gets dlna server info
 
 No authentication required
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param uuId Server UuId
- @return ApiHeadDlnaByUuidDescriptionRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param uuId Server UuId
+	@return ApiHeadDlnaByUuidDescriptionRequest
 */
 func (a *DlnaServerServiceAPIService) HeadDlnaByUuidDescription(ctx context.Context, uuId string) ApiHeadDlnaByUuidDescriptionRequest {
 	return ApiHeadDlnaByUuidDescriptionRequest{
 		ApiService: a,
-		ctx: ctx,
-		uuId: uuId,
+		ctx:        ctx,
+		uuId:       uuId,
 	}
 }
 
 // Execute executes the request
 func (a *DlnaServerServiceAPIService) HeadDlnaByUuidDescriptionExecute(r ApiHeadDlnaByUuidDescriptionRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodHead
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodHead
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DlnaServerServiceAPIService.HeadDlnaByUuidDescription")
@@ -1463,9 +1462,9 @@ func (a *DlnaServerServiceAPIService) HeadDlnaByUuidDescriptionExecute(r ApiHead
 }
 
 type ApiHeadDlnaByUuidDescriptionXmlRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService DlnaServerServiceAPI
-	uuId string
+	uuId       string
 }
 
 func (r ApiHeadDlnaByUuidDescriptionXmlRequest) Execute() (*http.Response, error) {
@@ -1477,24 +1476,24 @@ HeadDlnaByUuidDescriptionXml Gets dlna server info
 
 No authentication required
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param uuId Server UuId
- @return ApiHeadDlnaByUuidDescriptionXmlRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param uuId Server UuId
+	@return ApiHeadDlnaByUuidDescriptionXmlRequest
 */
 func (a *DlnaServerServiceAPIService) HeadDlnaByUuidDescriptionXml(ctx context.Context, uuId string) ApiHeadDlnaByUuidDescriptionXmlRequest {
 	return ApiHeadDlnaByUuidDescriptionXmlRequest{
 		ApiService: a,
-		ctx: ctx,
-		uuId: uuId,
+		ctx:        ctx,
+		uuId:       uuId,
 	}
 }
 
 // Execute executes the request
 func (a *DlnaServerServiceAPIService) HeadDlnaByUuidDescriptionXmlExecute(r ApiHeadDlnaByUuidDescriptionXmlRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodHead
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodHead
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DlnaServerServiceAPIService.HeadDlnaByUuidDescriptionXml")
@@ -1555,10 +1554,10 @@ func (a *DlnaServerServiceAPIService) HeadDlnaByUuidDescriptionXmlExecute(r ApiH
 }
 
 type ApiPostDlnaByUuidConnectionmanagerControlRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService DlnaServerServiceAPI
-	uuId string
-	body *os.File
+	uuId       string
+	body       *os.File
 }
 
 // Binary stream
@@ -1576,24 +1575,24 @@ PostDlnaByUuidConnectionmanagerControl Processes a control request
 
 No authentication required
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param uuId Server UuId
- @return ApiPostDlnaByUuidConnectionmanagerControlRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param uuId Server UuId
+	@return ApiPostDlnaByUuidConnectionmanagerControlRequest
 */
 func (a *DlnaServerServiceAPIService) PostDlnaByUuidConnectionmanagerControl(ctx context.Context, uuId string) ApiPostDlnaByUuidConnectionmanagerControlRequest {
 	return ApiPostDlnaByUuidConnectionmanagerControlRequest{
 		ApiService: a,
-		ctx: ctx,
-		uuId: uuId,
+		ctx:        ctx,
+		uuId:       uuId,
 	}
 }
 
 // Execute executes the request
 func (a *DlnaServerServiceAPIService) PostDlnaByUuidConnectionmanagerControlExecute(r ApiPostDlnaByUuidConnectionmanagerControlRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DlnaServerServiceAPIService.PostDlnaByUuidConnectionmanagerControl")
@@ -1659,10 +1658,10 @@ func (a *DlnaServerServiceAPIService) PostDlnaByUuidConnectionmanagerControlExec
 }
 
 type ApiPostDlnaByUuidContentdirectoryControlRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService DlnaServerServiceAPI
-	uuId string
-	body *os.File
+	uuId       string
+	body       *os.File
 }
 
 // Binary stream
@@ -1680,24 +1679,24 @@ PostDlnaByUuidContentdirectoryControl Processes a control request
 
 No authentication required
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param uuId Server UuId
- @return ApiPostDlnaByUuidContentdirectoryControlRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param uuId Server UuId
+	@return ApiPostDlnaByUuidContentdirectoryControlRequest
 */
 func (a *DlnaServerServiceAPIService) PostDlnaByUuidContentdirectoryControl(ctx context.Context, uuId string) ApiPostDlnaByUuidContentdirectoryControlRequest {
 	return ApiPostDlnaByUuidContentdirectoryControlRequest{
 		ApiService: a,
-		ctx: ctx,
-		uuId: uuId,
+		ctx:        ctx,
+		uuId:       uuId,
 	}
 }
 
 // Execute executes the request
 func (a *DlnaServerServiceAPIService) PostDlnaByUuidContentdirectoryControlExecute(r ApiPostDlnaByUuidContentdirectoryControlRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DlnaServerServiceAPIService.PostDlnaByUuidContentdirectoryControl")

@@ -19,7 +19,7 @@ var _ MappedNullable = &BitRate{}
 
 // BitRate struct for BitRate
 type BitRate struct {
-	Bps *int64 `json:"bps,omitempty"`
+	Bps  *int64   `json:"bps,omitempty"`
 	Kbps *float64 `json:"kbps,omitempty"`
 	Mbps *float64 `json:"Mbps,omitempty"`
 }
@@ -138,7 +138,7 @@ func (o *BitRate) SetMbps(v float64) {
 }
 
 func (o BitRate) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -194,5 +194,3 @@ func (v *NullableBitRate) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

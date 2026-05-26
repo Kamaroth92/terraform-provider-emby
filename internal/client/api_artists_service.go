@@ -20,16 +20,15 @@ import (
 	"time"
 )
 
-
 type ArtistsServiceAPI interface {
 
 	/*
-	GetArtists Gets all artists from a given item, folder, or the entire library
+		GetArtists Gets all artists from a given item, folder, or the entire library
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetArtistsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetArtistsRequest
 	*/
 	GetArtists(ctx context.Context) ApiGetArtistsRequest
 
@@ -38,12 +37,12 @@ type ArtistsServiceAPI interface {
 	GetArtistsExecute(r ApiGetArtistsRequest) (*QueryResultBaseItemDto, *http.Response, error)
 
 	/*
-	GetArtistsAlbumartists Gets all album artists from a given item, folder, or the entire library
+		GetArtistsAlbumartists Gets all album artists from a given item, folder, or the entire library
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetArtistsAlbumartistsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetArtistsAlbumartistsRequest
 	*/
 	GetArtistsAlbumartists(ctx context.Context) ApiGetArtistsAlbumartistsRequest
 
@@ -52,13 +51,13 @@ type ArtistsServiceAPI interface {
 	GetArtistsAlbumartistsExecute(r ApiGetArtistsAlbumartistsRequest) (*QueryResultBaseItemDto, *http.Response, error)
 
 	/*
-	GetArtistsByName Gets an artist, by name
+		GetArtistsByName Gets an artist, by name
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param name The artist name
-	@return ApiGetArtistsByNameRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param name The artist name
+		@return ApiGetArtistsByNameRequest
 	*/
 	GetArtistsByName(ctx context.Context, name string) ApiGetArtistsByNameRequest
 
@@ -71,107 +70,107 @@ type ArtistsServiceAPI interface {
 type ArtistsServiceAPIService service
 
 type ApiGetArtistsRequest struct {
-	ctx context.Context
-	ApiService ArtistsServiceAPI
-	artistType *string
-	maxOfficialRating *string
-	hasThemeSong *bool
-	hasThemeVideo *bool
-	hasSubtitles *bool
-	hasSpecialFeature *bool
-	hasTrailer *bool
-	isSpecialSeason *bool
-	adjacentTo *string
-	startItemId *string
-	minIndexNumber *int32
-	minStartDate *time.Time
-	maxStartDate *time.Time
-	minEndDate *time.Time
-	maxEndDate *time.Time
-	minPlayers *int32
-	maxPlayers *int32
-	parentIndexNumber *int32
-	hasParentalRating *bool
-	isHD *bool
-	isUnaired *bool
-	minCommunityRating *float64
-	minCriticRating *float64
-	airedDuringSeason *int32
-	minPremiereDate *time.Time
-	minDateLastSaved *time.Time
-	minDateLastSavedForUser *time.Time
-	maxPremiereDate *time.Time
-	hasOverview *bool
-	hasImdbId *bool
-	hasTmdbId *bool
-	hasTvdbId *bool
-	excludeItemIds *string
-	startIndex *int32
-	limit *int32
-	recursive *bool
-	searchTerm *string
-	sortOrder *string
-	parentId *string
-	fields *string
-	excludeItemTypes *string
-	includeItemTypes *string
-	anyProviderIdEquals *string
-	filters *string
-	isFavorite *bool
-	isMovie *bool
-	isSeries *bool
-	isFolder *bool
-	isNews *bool
-	isKids *bool
-	isSports *bool
-	isNew *bool
-	isPremiere *bool
-	isNewOrPremiere *bool
-	isRepeat *bool
-	projectToMedia *bool
-	mediaTypes *string
-	imageTypes *string
-	sortBy *string
-	isPlayed *bool
-	genres *string
-	officialRatings *string
-	tags *string
-	excludeTags *string
-	years *string
-	enableImages *bool
-	enableUserData *bool
-	imageTypeLimit *int32
-	enableImageTypes *string
-	person *string
-	personIds *string
-	personTypes *string
-	studios *string
-	studioIds *string
-	artists *string
-	artistIds *string
-	albums *string
-	ids *string
-	videoTypes *string
-	containers *string
-	audioCodecs *string
-	audioLayouts *string
-	videoCodecs *string
-	extendedVideoTypes *string
-	subtitleCodecs *string
-	path *string
-	userId *string
-	minOfficialRating *string
-	isLocked *bool
-	isPlaceHolder *bool
-	hasOfficialRating *bool
-	groupItemsIntoCollections *bool
-	is3D *bool
-	seriesStatus *string
-	nameStartsWithOrGreater *string
-	artistStartsWithOrGreater *string
+	ctx                            context.Context
+	ApiService                     ArtistsServiceAPI
+	artistType                     *string
+	maxOfficialRating              *string
+	hasThemeSong                   *bool
+	hasThemeVideo                  *bool
+	hasSubtitles                   *bool
+	hasSpecialFeature              *bool
+	hasTrailer                     *bool
+	isSpecialSeason                *bool
+	adjacentTo                     *string
+	startItemId                    *string
+	minIndexNumber                 *int32
+	minStartDate                   *time.Time
+	maxStartDate                   *time.Time
+	minEndDate                     *time.Time
+	maxEndDate                     *time.Time
+	minPlayers                     *int32
+	maxPlayers                     *int32
+	parentIndexNumber              *int32
+	hasParentalRating              *bool
+	isHD                           *bool
+	isUnaired                      *bool
+	minCommunityRating             *float64
+	minCriticRating                *float64
+	airedDuringSeason              *int32
+	minPremiereDate                *time.Time
+	minDateLastSaved               *time.Time
+	minDateLastSavedForUser        *time.Time
+	maxPremiereDate                *time.Time
+	hasOverview                    *bool
+	hasImdbId                      *bool
+	hasTmdbId                      *bool
+	hasTvdbId                      *bool
+	excludeItemIds                 *string
+	startIndex                     *int32
+	limit                          *int32
+	recursive                      *bool
+	searchTerm                     *string
+	sortOrder                      *string
+	parentId                       *string
+	fields                         *string
+	excludeItemTypes               *string
+	includeItemTypes               *string
+	anyProviderIdEquals            *string
+	filters                        *string
+	isFavorite                     *bool
+	isMovie                        *bool
+	isSeries                       *bool
+	isFolder                       *bool
+	isNews                         *bool
+	isKids                         *bool
+	isSports                       *bool
+	isNew                          *bool
+	isPremiere                     *bool
+	isNewOrPremiere                *bool
+	isRepeat                       *bool
+	projectToMedia                 *bool
+	mediaTypes                     *string
+	imageTypes                     *string
+	sortBy                         *string
+	isPlayed                       *bool
+	genres                         *string
+	officialRatings                *string
+	tags                           *string
+	excludeTags                    *string
+	years                          *string
+	enableImages                   *bool
+	enableUserData                 *bool
+	imageTypeLimit                 *int32
+	enableImageTypes               *string
+	person                         *string
+	personIds                      *string
+	personTypes                    *string
+	studios                        *string
+	studioIds                      *string
+	artists                        *string
+	artistIds                      *string
+	albums                         *string
+	ids                            *string
+	videoTypes                     *string
+	containers                     *string
+	audioCodecs                    *string
+	audioLayouts                   *string
+	videoCodecs                    *string
+	extendedVideoTypes             *string
+	subtitleCodecs                 *string
+	path                           *string
+	userId                         *string
+	minOfficialRating              *string
+	isLocked                       *bool
+	isPlaceHolder                  *bool
+	hasOfficialRating              *bool
+	groupItemsIntoCollections      *bool
+	is3D                           *bool
+	seriesStatus                   *string
+	nameStartsWithOrGreater        *string
+	artistStartsWithOrGreater      *string
 	albumArtistStartsWithOrGreater *string
-	nameStartsWith *string
-	nameLessThan *string
+	nameStartsWith                 *string
+	nameLessThan                   *string
 }
 
 // Artist or AlbumArtist
@@ -777,24 +776,25 @@ GetArtists Gets all artists from a given item, folder, or the entire library
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetArtistsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetArtistsRequest
 */
 func (a *ArtistsServiceAPIService) GetArtists(ctx context.Context) ApiGetArtistsRequest {
 	return ApiGetArtistsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return QueryResultBaseItemDto
+//
+//	@return QueryResultBaseItemDto
 func (a *ArtistsServiceAPIService) GetArtistsExecute(r ApiGetArtistsRequest) (*QueryResultBaseItemDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *QueryResultBaseItemDto
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *QueryResultBaseItemDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ArtistsServiceAPIService.GetArtists")
@@ -1174,107 +1174,107 @@ func (a *ArtistsServiceAPIService) GetArtistsExecute(r ApiGetArtistsRequest) (*Q
 }
 
 type ApiGetArtistsAlbumartistsRequest struct {
-	ctx context.Context
-	ApiService ArtistsServiceAPI
-	artistType *string
-	maxOfficialRating *string
-	hasThemeSong *bool
-	hasThemeVideo *bool
-	hasSubtitles *bool
-	hasSpecialFeature *bool
-	hasTrailer *bool
-	isSpecialSeason *bool
-	adjacentTo *string
-	startItemId *string
-	minIndexNumber *int32
-	minStartDate *time.Time
-	maxStartDate *time.Time
-	minEndDate *time.Time
-	maxEndDate *time.Time
-	minPlayers *int32
-	maxPlayers *int32
-	parentIndexNumber *int32
-	hasParentalRating *bool
-	isHD *bool
-	isUnaired *bool
-	minCommunityRating *float64
-	minCriticRating *float64
-	airedDuringSeason *int32
-	minPremiereDate *time.Time
-	minDateLastSaved *time.Time
-	minDateLastSavedForUser *time.Time
-	maxPremiereDate *time.Time
-	hasOverview *bool
-	hasImdbId *bool
-	hasTmdbId *bool
-	hasTvdbId *bool
-	excludeItemIds *string
-	startIndex *int32
-	limit *int32
-	recursive *bool
-	searchTerm *string
-	sortOrder *string
-	parentId *string
-	fields *string
-	excludeItemTypes *string
-	includeItemTypes *string
-	anyProviderIdEquals *string
-	filters *string
-	isFavorite *bool
-	isMovie *bool
-	isSeries *bool
-	isFolder *bool
-	isNews *bool
-	isKids *bool
-	isSports *bool
-	isNew *bool
-	isPremiere *bool
-	isNewOrPremiere *bool
-	isRepeat *bool
-	projectToMedia *bool
-	mediaTypes *string
-	imageTypes *string
-	sortBy *string
-	isPlayed *bool
-	genres *string
-	officialRatings *string
-	tags *string
-	excludeTags *string
-	years *string
-	enableImages *bool
-	enableUserData *bool
-	imageTypeLimit *int32
-	enableImageTypes *string
-	person *string
-	personIds *string
-	personTypes *string
-	studios *string
-	studioIds *string
-	artists *string
-	artistIds *string
-	albums *string
-	ids *string
-	videoTypes *string
-	containers *string
-	audioCodecs *string
-	audioLayouts *string
-	videoCodecs *string
-	extendedVideoTypes *string
-	subtitleCodecs *string
-	path *string
-	userId *string
-	minOfficialRating *string
-	isLocked *bool
-	isPlaceHolder *bool
-	hasOfficialRating *bool
-	groupItemsIntoCollections *bool
-	is3D *bool
-	seriesStatus *string
-	nameStartsWithOrGreater *string
-	artistStartsWithOrGreater *string
+	ctx                            context.Context
+	ApiService                     ArtistsServiceAPI
+	artistType                     *string
+	maxOfficialRating              *string
+	hasThemeSong                   *bool
+	hasThemeVideo                  *bool
+	hasSubtitles                   *bool
+	hasSpecialFeature              *bool
+	hasTrailer                     *bool
+	isSpecialSeason                *bool
+	adjacentTo                     *string
+	startItemId                    *string
+	minIndexNumber                 *int32
+	minStartDate                   *time.Time
+	maxStartDate                   *time.Time
+	minEndDate                     *time.Time
+	maxEndDate                     *time.Time
+	minPlayers                     *int32
+	maxPlayers                     *int32
+	parentIndexNumber              *int32
+	hasParentalRating              *bool
+	isHD                           *bool
+	isUnaired                      *bool
+	minCommunityRating             *float64
+	minCriticRating                *float64
+	airedDuringSeason              *int32
+	minPremiereDate                *time.Time
+	minDateLastSaved               *time.Time
+	minDateLastSavedForUser        *time.Time
+	maxPremiereDate                *time.Time
+	hasOverview                    *bool
+	hasImdbId                      *bool
+	hasTmdbId                      *bool
+	hasTvdbId                      *bool
+	excludeItemIds                 *string
+	startIndex                     *int32
+	limit                          *int32
+	recursive                      *bool
+	searchTerm                     *string
+	sortOrder                      *string
+	parentId                       *string
+	fields                         *string
+	excludeItemTypes               *string
+	includeItemTypes               *string
+	anyProviderIdEquals            *string
+	filters                        *string
+	isFavorite                     *bool
+	isMovie                        *bool
+	isSeries                       *bool
+	isFolder                       *bool
+	isNews                         *bool
+	isKids                         *bool
+	isSports                       *bool
+	isNew                          *bool
+	isPremiere                     *bool
+	isNewOrPremiere                *bool
+	isRepeat                       *bool
+	projectToMedia                 *bool
+	mediaTypes                     *string
+	imageTypes                     *string
+	sortBy                         *string
+	isPlayed                       *bool
+	genres                         *string
+	officialRatings                *string
+	tags                           *string
+	excludeTags                    *string
+	years                          *string
+	enableImages                   *bool
+	enableUserData                 *bool
+	imageTypeLimit                 *int32
+	enableImageTypes               *string
+	person                         *string
+	personIds                      *string
+	personTypes                    *string
+	studios                        *string
+	studioIds                      *string
+	artists                        *string
+	artistIds                      *string
+	albums                         *string
+	ids                            *string
+	videoTypes                     *string
+	containers                     *string
+	audioCodecs                    *string
+	audioLayouts                   *string
+	videoCodecs                    *string
+	extendedVideoTypes             *string
+	subtitleCodecs                 *string
+	path                           *string
+	userId                         *string
+	minOfficialRating              *string
+	isLocked                       *bool
+	isPlaceHolder                  *bool
+	hasOfficialRating              *bool
+	groupItemsIntoCollections      *bool
+	is3D                           *bool
+	seriesStatus                   *string
+	nameStartsWithOrGreater        *string
+	artistStartsWithOrGreater      *string
 	albumArtistStartsWithOrGreater *string
-	nameStartsWith *string
-	nameLessThan *string
+	nameStartsWith                 *string
+	nameLessThan                   *string
 }
 
 // Artist or AlbumArtist
@@ -1880,24 +1880,25 @@ GetArtistsAlbumartists Gets all album artists from a given item, folder, or the 
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetArtistsAlbumartistsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetArtistsAlbumartistsRequest
 */
 func (a *ArtistsServiceAPIService) GetArtistsAlbumartists(ctx context.Context) ApiGetArtistsAlbumartistsRequest {
 	return ApiGetArtistsAlbumartistsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return QueryResultBaseItemDto
+//
+//	@return QueryResultBaseItemDto
 func (a *ArtistsServiceAPIService) GetArtistsAlbumartistsExecute(r ApiGetArtistsAlbumartistsRequest) (*QueryResultBaseItemDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *QueryResultBaseItemDto
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *QueryResultBaseItemDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ArtistsServiceAPIService.GetArtistsAlbumartists")
@@ -2277,10 +2278,10 @@ func (a *ArtistsServiceAPIService) GetArtistsAlbumartistsExecute(r ApiGetArtists
 }
 
 type ApiGetArtistsByNameRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService ArtistsServiceAPI
-	name string
-	userId *string
+	name       string
+	userId     *string
 }
 
 // Optional. Filter by user id, and attach user data
@@ -2298,26 +2299,27 @@ GetArtistsByName Gets an artist, by name
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param name The artist name
- @return ApiGetArtistsByNameRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param name The artist name
+	@return ApiGetArtistsByNameRequest
 */
 func (a *ArtistsServiceAPIService) GetArtistsByName(ctx context.Context, name string) ApiGetArtistsByNameRequest {
 	return ApiGetArtistsByNameRequest{
 		ApiService: a,
-		ctx: ctx,
-		name: name,
+		ctx:        ctx,
+		name:       name,
 	}
 }
 
 // Execute executes the request
-//  @return BaseItemDto
+//
+//	@return BaseItemDto
 func (a *ArtistsServiceAPIService) GetArtistsByNameExecute(r ApiGetArtistsByNameRequest) (*BaseItemDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *BaseItemDto
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *BaseItemDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ArtistsServiceAPIService.GetArtistsByName")

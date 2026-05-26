@@ -19,11 +19,11 @@ var _ MappedNullable = &CodecProfile{}
 
 // CodecProfile struct for CodecProfile
 type CodecProfile struct {
-	Type *CodecType `json:"Type,omitempty"`
-	Conditions []ProfileCondition `json:"Conditions,omitempty"`
+	Type            *CodecType         `json:"Type,omitempty"`
+	Conditions      []ProfileCondition `json:"Conditions,omitempty"`
 	ApplyConditions []ProfileCondition `json:"ApplyConditions,omitempty"`
-	Codec *string `json:"Codec,omitempty"`
-	Container *string `json:"Container,omitempty"`
+	Codec           *string            `json:"Codec,omitempty"`
+	Container       *string            `json:"Container,omitempty"`
 }
 
 // NewCodecProfile instantiates a new CodecProfile object
@@ -204,7 +204,7 @@ func (o *CodecProfile) SetContainer(v string) {
 }
 
 func (o CodecProfile) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -266,5 +266,3 @@ func (v *NullableCodecProfile) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

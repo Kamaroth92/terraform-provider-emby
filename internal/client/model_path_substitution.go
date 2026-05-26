@@ -20,7 +20,7 @@ var _ MappedNullable = &PathSubstitution{}
 // PathSubstitution struct for PathSubstitution
 type PathSubstitution struct {
 	From *string `json:"From,omitempty"`
-	To *string `json:"To,omitempty"`
+	To   *string `json:"To,omitempty"`
 }
 
 // NewPathSubstitution instantiates a new PathSubstitution object
@@ -105,7 +105,7 @@ func (o *PathSubstitution) SetTo(v string) {
 }
 
 func (o PathSubstitution) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -158,5 +158,3 @@ func (v *NullablePathSubstitution) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

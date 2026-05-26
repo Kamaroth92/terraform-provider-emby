@@ -19,8 +19,8 @@ var _ MappedNullable = &SyncedItemProgress{}
 
 // SyncedItemProgress struct for SyncedItemProgress
 type SyncedItemProgress struct {
-	Progress NullableFloat64 `json:"Progress,omitempty"`
-	Status *SyncJobItemStatus `json:"Status,omitempty"`
+	Progress NullableFloat64    `json:"Progress,omitempty"`
+	Status   *SyncJobItemStatus `json:"Status,omitempty"`
 }
 
 // NewSyncedItemProgress instantiates a new SyncedItemProgress object
@@ -72,6 +72,7 @@ func (o *SyncedItemProgress) HasProgress() bool {
 func (o *SyncedItemProgress) SetProgress(v float64) {
 	o.Progress.Set(&v)
 }
+
 // SetProgressNil sets the value for Progress to be an explicit nil
 func (o *SyncedItemProgress) SetProgressNil() {
 	o.Progress.Set(nil)
@@ -115,7 +116,7 @@ func (o *SyncedItemProgress) SetStatus(v SyncJobItemStatus) {
 }
 
 func (o SyncedItemProgress) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -168,5 +169,3 @@ func (v *NullableSyncedItemProgress) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

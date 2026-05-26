@@ -19,7 +19,7 @@ var _ MappedNullable = &GlobalizationLocalizatonOption{}
 
 // GlobalizationLocalizatonOption struct for GlobalizationLocalizatonOption
 type GlobalizationLocalizatonOption struct {
-	Name *string `json:"Name,omitempty"`
+	Name  *string `json:"Name,omitempty"`
 	Value *string `json:"Value,omitempty"`
 }
 
@@ -105,7 +105,7 @@ func (o *GlobalizationLocalizatonOption) SetValue(v string) {
 }
 
 func (o GlobalizationLocalizatonOption) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -158,5 +158,3 @@ func (v *NullableGlobalizationLocalizatonOption) UnmarshalJSON(src []byte) error
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

@@ -19,16 +19,15 @@ import (
 	"os"
 )
 
-
 type CodecParameterServiceAPI interface {
 
 	/*
-	GetEncodingCodecparameters Gets the parameters for a specified codec.
+		GetEncodingCodecparameters Gets the parameters for a specified codec.
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetEncodingCodecparametersRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetEncodingCodecparametersRequest
 	*/
 	GetEncodingCodecparameters(ctx context.Context) ApiGetEncodingCodecparametersRequest
 
@@ -37,12 +36,12 @@ type CodecParameterServiceAPI interface {
 	GetEncodingCodecparametersExecute(r ApiGetEncodingCodecparametersRequest) (*EditObjectContainer, *http.Response, error)
 
 	/*
-	GetEncodingdiagnosticsCodecparameters Gets the parameters for a specified codec.
+		GetEncodingdiagnosticsCodecparameters Gets the parameters for a specified codec.
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetEncodingdiagnosticsCodecparametersRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetEncodingdiagnosticsCodecparametersRequest
 	*/
 	GetEncodingdiagnosticsCodecparameters(ctx context.Context) ApiGetEncodingdiagnosticsCodecparametersRequest
 
@@ -51,12 +50,12 @@ type CodecParameterServiceAPI interface {
 	GetEncodingdiagnosticsCodecparametersExecute(r ApiGetEncodingdiagnosticsCodecparametersRequest) (*EditObjectContainer, *http.Response, error)
 
 	/*
-	PostEncodingCodecparameters Updates the parameters for a specified codec.
+		PostEncodingCodecparameters Updates the parameters for a specified codec.
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostEncodingCodecparametersRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostEncodingCodecparametersRequest
 	*/
 	PostEncodingCodecparameters(ctx context.Context) ApiPostEncodingCodecparametersRequest
 
@@ -64,12 +63,12 @@ type CodecParameterServiceAPI interface {
 	PostEncodingCodecparametersExecute(r ApiPostEncodingCodecparametersRequest) (*http.Response, error)
 
 	/*
-	PostEncodingdiagnosticsCodecparameters Updates the parameters for a specified codec.
+		PostEncodingdiagnosticsCodecparameters Updates the parameters for a specified codec.
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostEncodingdiagnosticsCodecparametersRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostEncodingdiagnosticsCodecparametersRequest
 	*/
 	PostEncodingdiagnosticsCodecparameters(ctx context.Context) ApiPostEncodingdiagnosticsCodecparametersRequest
 
@@ -81,9 +80,9 @@ type CodecParameterServiceAPI interface {
 type CodecParameterServiceAPIService service
 
 type ApiGetEncodingCodecparametersRequest struct {
-	ctx context.Context
-	ApiService CodecParameterServiceAPI
-	codecId *string
+	ctx              context.Context
+	ApiService       CodecParameterServiceAPI
+	codecId          *string
 	parameterContext *MediaEncodingCodecParameterContext
 }
 
@@ -108,24 +107,25 @@ GetEncodingCodecparameters Gets the parameters for a specified codec.
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetEncodingCodecparametersRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetEncodingCodecparametersRequest
 */
 func (a *CodecParameterServiceAPIService) GetEncodingCodecparameters(ctx context.Context) ApiGetEncodingCodecparametersRequest {
 	return ApiGetEncodingCodecparametersRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return EditObjectContainer
+//
+//	@return EditObjectContainer
 func (a *CodecParameterServiceAPIService) GetEncodingCodecparametersExecute(r ApiGetEncodingCodecparametersRequest) (*EditObjectContainer, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *EditObjectContainer
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *EditObjectContainer
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CodecParameterServiceAPIService.GetEncodingCodecparameters")
@@ -216,9 +216,9 @@ func (a *CodecParameterServiceAPIService) GetEncodingCodecparametersExecute(r Ap
 }
 
 type ApiGetEncodingdiagnosticsCodecparametersRequest struct {
-	ctx context.Context
-	ApiService CodecParameterServiceAPI
-	codecId *string
+	ctx              context.Context
+	ApiService       CodecParameterServiceAPI
+	codecId          *string
 	parameterContext *MediaEncodingCodecParameterContext
 }
 
@@ -243,24 +243,25 @@ GetEncodingdiagnosticsCodecparameters Gets the parameters for a specified codec.
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetEncodingdiagnosticsCodecparametersRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetEncodingdiagnosticsCodecparametersRequest
 */
 func (a *CodecParameterServiceAPIService) GetEncodingdiagnosticsCodecparameters(ctx context.Context) ApiGetEncodingdiagnosticsCodecparametersRequest {
 	return ApiGetEncodingdiagnosticsCodecparametersRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return EditObjectContainer
+//
+//	@return EditObjectContainer
 func (a *CodecParameterServiceAPIService) GetEncodingdiagnosticsCodecparametersExecute(r ApiGetEncodingdiagnosticsCodecparametersRequest) (*EditObjectContainer, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *EditObjectContainer
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *EditObjectContainer
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CodecParameterServiceAPIService.GetEncodingdiagnosticsCodecparameters")
@@ -351,11 +352,11 @@ func (a *CodecParameterServiceAPIService) GetEncodingdiagnosticsCodecparametersE
 }
 
 type ApiPostEncodingCodecparametersRequest struct {
-	ctx context.Context
-	ApiService CodecParameterServiceAPI
-	codecId *string
+	ctx              context.Context
+	ApiService       CodecParameterServiceAPI
+	codecId          *string
 	parameterContext *MediaEncodingCodecParameterContext
-	body *os.File
+	body             *os.File
 }
 
 // Codec Id
@@ -385,22 +386,22 @@ PostEncodingCodecparameters Updates the parameters for a specified codec.
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostEncodingCodecparametersRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostEncodingCodecparametersRequest
 */
 func (a *CodecParameterServiceAPIService) PostEncodingCodecparameters(ctx context.Context) ApiPostEncodingCodecparametersRequest {
 	return ApiPostEncodingCodecparametersRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *CodecParameterServiceAPIService) PostEncodingCodecparametersExecute(r ApiPostEncodingCodecparametersRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CodecParameterServiceAPIService.PostEncodingCodecparameters")
@@ -487,11 +488,11 @@ func (a *CodecParameterServiceAPIService) PostEncodingCodecparametersExecute(r A
 }
 
 type ApiPostEncodingdiagnosticsCodecparametersRequest struct {
-	ctx context.Context
-	ApiService CodecParameterServiceAPI
-	codecId *string
+	ctx              context.Context
+	ApiService       CodecParameterServiceAPI
+	codecId          *string
 	parameterContext *MediaEncodingCodecParameterContext
-	body *os.File
+	body             *os.File
 }
 
 // Codec Id
@@ -521,22 +522,22 @@ PostEncodingdiagnosticsCodecparameters Updates the parameters for a specified co
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostEncodingdiagnosticsCodecparametersRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostEncodingdiagnosticsCodecparametersRequest
 */
 func (a *CodecParameterServiceAPIService) PostEncodingdiagnosticsCodecparameters(ctx context.Context) ApiPostEncodingdiagnosticsCodecparametersRequest {
 	return ApiPostEncodingdiagnosticsCodecparametersRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *CodecParameterServiceAPIService) PostEncodingdiagnosticsCodecparametersExecute(r ApiPostEncodingdiagnosticsCodecparametersRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CodecParameterServiceAPIService.PostEncodingdiagnosticsCodecparameters")

@@ -20,14 +20,14 @@ type DrawingImageOrientation string
 
 // List of Drawing.ImageOrientation
 const (
-	DRAWINGIMAGEORIENTATION_TOP_LEFT DrawingImageOrientation = "TopLeft"
-	DRAWINGIMAGEORIENTATION_TOP_RIGHT DrawingImageOrientation = "TopRight"
+	DRAWINGIMAGEORIENTATION_TOP_LEFT     DrawingImageOrientation = "TopLeft"
+	DRAWINGIMAGEORIENTATION_TOP_RIGHT    DrawingImageOrientation = "TopRight"
 	DRAWINGIMAGEORIENTATION_BOTTOM_RIGHT DrawingImageOrientation = "BottomRight"
-	DRAWINGIMAGEORIENTATION_BOTTOM_LEFT DrawingImageOrientation = "BottomLeft"
-	DRAWINGIMAGEORIENTATION_LEFT_TOP DrawingImageOrientation = "LeftTop"
-	DRAWINGIMAGEORIENTATION_RIGHT_TOP DrawingImageOrientation = "RightTop"
+	DRAWINGIMAGEORIENTATION_BOTTOM_LEFT  DrawingImageOrientation = "BottomLeft"
+	DRAWINGIMAGEORIENTATION_LEFT_TOP     DrawingImageOrientation = "LeftTop"
+	DRAWINGIMAGEORIENTATION_RIGHT_TOP    DrawingImageOrientation = "RightTop"
 	DRAWINGIMAGEORIENTATION_RIGHT_BOTTOM DrawingImageOrientation = "RightBottom"
-	DRAWINGIMAGEORIENTATION_LEFT_BOTTOM DrawingImageOrientation = "LeftBottom"
+	DRAWINGIMAGEORIENTATION_LEFT_BOTTOM  DrawingImageOrientation = "LeftBottom"
 )
 
 // All allowed values of DrawingImageOrientation enum
@@ -120,4 +120,3 @@ func (v *NullableDrawingImageOrientation) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

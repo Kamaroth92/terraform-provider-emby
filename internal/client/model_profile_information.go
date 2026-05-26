@@ -19,11 +19,11 @@ var _ MappedNullable = &ProfileInformation{}
 
 // ProfileInformation struct for ProfileInformation
 type ProfileInformation struct {
-	ShortName *string `json:"ShortName,omitempty"`
+	ShortName   *string `json:"ShortName,omitempty"`
 	Description *string `json:"Description,omitempty"`
-	Details *string `json:"Details,omitempty"`
-	Id *string `json:"Id,omitempty"`
-	BitDepths []int32 `json:"BitDepths,omitempty"`
+	Details     *string `json:"Details,omitempty"`
+	Id          *string `json:"Id,omitempty"`
+	BitDepths   []int32 `json:"BitDepths,omitempty"`
 }
 
 // NewProfileInformation instantiates a new ProfileInformation object
@@ -204,7 +204,7 @@ func (o *ProfileInformation) SetBitDepths(v []int32) {
 }
 
 func (o ProfileInformation) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -266,5 +266,3 @@ func (v *NullableProfileInformation) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

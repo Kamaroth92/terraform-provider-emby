@@ -19,12 +19,12 @@ var _ MappedNullable = &InstallationInfo{}
 
 // InstallationInfo struct for InstallationInfo
 type InstallationInfo struct {
-	Id *string `json:"Id,omitempty"`
-	Name *string `json:"Name,omitempty"`
-	AssemblyGuid *string `json:"AssemblyGuid,omitempty"`
-	Version *string `json:"Version,omitempty"`
-	UpdateClass *PackageVersionClass `json:"UpdateClass,omitempty"`
-	PercentComplete NullableFloat64 `json:"PercentComplete,omitempty"`
+	Id              *string              `json:"Id,omitempty"`
+	Name            *string              `json:"Name,omitempty"`
+	AssemblyGuid    *string              `json:"AssemblyGuid,omitempty"`
+	Version         *string              `json:"Version,omitempty"`
+	UpdateClass     *PackageVersionClass `json:"UpdateClass,omitempty"`
+	PercentComplete NullableFloat64      `json:"PercentComplete,omitempty"`
 }
 
 // NewInstallationInfo instantiates a new InstallationInfo object
@@ -236,6 +236,7 @@ func (o *InstallationInfo) HasPercentComplete() bool {
 func (o *InstallationInfo) SetPercentComplete(v float64) {
 	o.PercentComplete.Set(&v)
 }
+
 // SetPercentCompleteNil sets the value for PercentComplete to be an explicit nil
 func (o *InstallationInfo) SetPercentCompleteNil() {
 	o.PercentComplete.Set(nil)
@@ -247,7 +248,7 @@ func (o *InstallationInfo) UnsetPercentComplete() {
 }
 
 func (o InstallationInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -312,5 +313,3 @@ func (v *NullableInstallationInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

@@ -19,17 +19,16 @@ import (
 	"strings"
 )
 
-
 type PlaylistServiceAPI interface {
 
 	/*
-	DeletePlaylistsByIdItems Removes items from a playlist
+		DeletePlaylistsByIdItems Removes items from a playlist
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiDeletePlaylistsByIdItemsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id
+		@return ApiDeletePlaylistsByIdItemsRequest
 	*/
 	DeletePlaylistsByIdItems(ctx context.Context, id string) ApiDeletePlaylistsByIdItemsRequest
 
@@ -37,13 +36,13 @@ type PlaylistServiceAPI interface {
 	DeletePlaylistsByIdItemsExecute(r ApiDeletePlaylistsByIdItemsRequest) (*http.Response, error)
 
 	/*
-	GetPlaylistsByIdAddtoplaylistinfo Gets add to playlist info
+		GetPlaylistsByIdAddtoplaylistinfo Gets add to playlist info
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiGetPlaylistsByIdAddtoplaylistinfoRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id
+		@return ApiGetPlaylistsByIdAddtoplaylistinfoRequest
 	*/
 	GetPlaylistsByIdAddtoplaylistinfo(ctx context.Context, id string) ApiGetPlaylistsByIdAddtoplaylistinfoRequest
 
@@ -52,13 +51,13 @@ type PlaylistServiceAPI interface {
 	GetPlaylistsByIdAddtoplaylistinfoExecute(r ApiGetPlaylistsByIdAddtoplaylistinfoRequest) (*PlaylistsAddToPlaylistInfo, *http.Response, error)
 
 	/*
-	GetPlaylistsByIdItems Gets the original items of a playlist
+		GetPlaylistsByIdItems Gets the original items of a playlist
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiGetPlaylistsByIdItemsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id
+		@return ApiGetPlaylistsByIdItemsRequest
 	*/
 	GetPlaylistsByIdItems(ctx context.Context, id string) ApiGetPlaylistsByIdItemsRequest
 
@@ -67,12 +66,12 @@ type PlaylistServiceAPI interface {
 	GetPlaylistsByIdItemsExecute(r ApiGetPlaylistsByIdItemsRequest) (*QueryResultBaseItemDto, *http.Response, error)
 
 	/*
-	PostPlaylists Creates a new playlist
+		PostPlaylists Creates a new playlist
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostPlaylistsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostPlaylistsRequest
 	*/
 	PostPlaylists(ctx context.Context) ApiPostPlaylistsRequest
 
@@ -81,13 +80,13 @@ type PlaylistServiceAPI interface {
 	PostPlaylistsExecute(r ApiPostPlaylistsRequest) (*PlaylistsPlaylistCreationResult, *http.Response, error)
 
 	/*
-	PostPlaylistsByIdItems Adds items to a playlist
+		PostPlaylistsByIdItems Adds items to a playlist
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiPostPlaylistsByIdItemsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id
+		@return ApiPostPlaylistsByIdItemsRequest
 	*/
 	PostPlaylistsByIdItems(ctx context.Context, id string) ApiPostPlaylistsByIdItemsRequest
 
@@ -96,15 +95,15 @@ type PlaylistServiceAPI interface {
 	PostPlaylistsByIdItemsExecute(r ApiPostPlaylistsByIdItemsRequest) (*PlaylistsAddToPlaylistResult, *http.Response, error)
 
 	/*
-	PostPlaylistsByIdItemsByItemidMoveByNewindex Moves a playlist item
+		PostPlaylistsByIdItemsByItemidMoveByNewindex Moves a playlist item
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param itemId ItemId
-	@param id
-	@param newIndex NewIndex
-	@return ApiPostPlaylistsByIdItemsByItemidMoveByNewindexRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param itemId ItemId
+		@param id
+		@param newIndex NewIndex
+		@return ApiPostPlaylistsByIdItemsByItemidMoveByNewindexRequest
 	*/
 	PostPlaylistsByIdItemsByItemidMoveByNewindex(ctx context.Context, itemId int64, id string, newIndex int32) ApiPostPlaylistsByIdItemsByItemidMoveByNewindexRequest
 
@@ -112,13 +111,13 @@ type PlaylistServiceAPI interface {
 	PostPlaylistsByIdItemsByItemidMoveByNewindexExecute(r ApiPostPlaylistsByIdItemsByItemidMoveByNewindexRequest) (*http.Response, error)
 
 	/*
-	PostPlaylistsByIdItemsDelete Removes items from a playlist
+		PostPlaylistsByIdItemsDelete Removes items from a playlist
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiPostPlaylistsByIdItemsDeleteRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id
+		@return ApiPostPlaylistsByIdItemsDeleteRequest
 	*/
 	PostPlaylistsByIdItemsDelete(ctx context.Context, id string) ApiPostPlaylistsByIdItemsDeleteRequest
 
@@ -130,10 +129,10 @@ type PlaylistServiceAPI interface {
 type PlaylistServiceAPIService service
 
 type ApiDeletePlaylistsByIdItemsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService PlaylistServiceAPI
-	id string
-	entryIds *string
+	id         string
+	entryIds   *string
 }
 
 func (r ApiDeletePlaylistsByIdItemsRequest) EntryIds(entryIds string) ApiDeletePlaylistsByIdItemsRequest {
@@ -150,24 +149,24 @@ DeletePlaylistsByIdItems Removes items from a playlist
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id
- @return ApiDeletePlaylistsByIdItemsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id
+	@return ApiDeletePlaylistsByIdItemsRequest
 */
 func (a *PlaylistServiceAPIService) DeletePlaylistsByIdItems(ctx context.Context, id string) ApiDeletePlaylistsByIdItemsRequest {
 	return ApiDeletePlaylistsByIdItemsRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *PlaylistServiceAPIService) DeletePlaylistsByIdItemsExecute(r ApiDeletePlaylistsByIdItemsRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodDelete
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodDelete
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PlaylistServiceAPIService.DeletePlaylistsByIdItems")
@@ -246,11 +245,11 @@ func (a *PlaylistServiceAPIService) DeletePlaylistsByIdItemsExecute(r ApiDeleteP
 }
 
 type ApiGetPlaylistsByIdAddtoplaylistinfoRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService PlaylistServiceAPI
-	ids *string
-	id string
-	userId *string
+	ids        *string
+	id         string
+	userId     *string
 }
 
 // Item id, comma delimited
@@ -274,26 +273,27 @@ GetPlaylistsByIdAddtoplaylistinfo Gets add to playlist info
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id
- @return ApiGetPlaylistsByIdAddtoplaylistinfoRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id
+	@return ApiGetPlaylistsByIdAddtoplaylistinfoRequest
 */
 func (a *PlaylistServiceAPIService) GetPlaylistsByIdAddtoplaylistinfo(ctx context.Context, id string) ApiGetPlaylistsByIdAddtoplaylistinfoRequest {
 	return ApiGetPlaylistsByIdAddtoplaylistinfoRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
-//  @return PlaylistsAddToPlaylistInfo
+//
+//	@return PlaylistsAddToPlaylistInfo
 func (a *PlaylistServiceAPIService) GetPlaylistsByIdAddtoplaylistinfoExecute(r ApiGetPlaylistsByIdAddtoplaylistinfoRequest) (*PlaylistsAddToPlaylistInfo, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *PlaylistsAddToPlaylistInfo
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *PlaylistsAddToPlaylistInfo
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PlaylistServiceAPIService.GetPlaylistsByIdAddtoplaylistinfo")
@@ -384,16 +384,16 @@ func (a *PlaylistServiceAPIService) GetPlaylistsByIdAddtoplaylistinfoExecute(r A
 }
 
 type ApiGetPlaylistsByIdItemsRequest struct {
-	ctx context.Context
-	ApiService PlaylistServiceAPI
-	id string
-	userId *string
-	startIndex *int32
-	limit *int32
-	fields *string
-	enableImages *bool
-	enableUserData *bool
-	imageTypeLimit *int32
+	ctx              context.Context
+	ApiService       PlaylistServiceAPI
+	id               string
+	userId           *string
+	startIndex       *int32
+	limit            *int32
+	fields           *string
+	enableImages     *bool
+	enableUserData   *bool
+	imageTypeLimit   *int32
 	enableImageTypes *string
 }
 
@@ -454,26 +454,27 @@ GetPlaylistsByIdItems Gets the original items of a playlist
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id
- @return ApiGetPlaylistsByIdItemsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id
+	@return ApiGetPlaylistsByIdItemsRequest
 */
 func (a *PlaylistServiceAPIService) GetPlaylistsByIdItems(ctx context.Context, id string) ApiGetPlaylistsByIdItemsRequest {
 	return ApiGetPlaylistsByIdItemsRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
-//  @return QueryResultBaseItemDto
+//
+//	@return QueryResultBaseItemDto
 func (a *PlaylistServiceAPIService) GetPlaylistsByIdItemsExecute(r ApiGetPlaylistsByIdItemsRequest) (*QueryResultBaseItemDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *QueryResultBaseItemDto
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *QueryResultBaseItemDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PlaylistServiceAPIService.GetPlaylistsByIdItems")
@@ -581,11 +582,11 @@ func (a *PlaylistServiceAPIService) GetPlaylistsByIdItemsExecute(r ApiGetPlaylis
 }
 
 type ApiPostPlaylistsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService PlaylistServiceAPI
-	name *string
-	ids *string
-	mediaType *string
+	name       *string
+	ids        *string
+	mediaType  *string
 }
 
 // The name of the new playlist.
@@ -615,24 +616,25 @@ PostPlaylists Creates a new playlist
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostPlaylistsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostPlaylistsRequest
 */
 func (a *PlaylistServiceAPIService) PostPlaylists(ctx context.Context) ApiPostPlaylistsRequest {
 	return ApiPostPlaylistsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return PlaylistsPlaylistCreationResult
+//
+//	@return PlaylistsPlaylistCreationResult
 func (a *PlaylistServiceAPIService) PostPlaylistsExecute(r ApiPostPlaylistsRequest) (*PlaylistsPlaylistCreationResult, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *PlaylistsPlaylistCreationResult
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *PlaylistsPlaylistCreationResult
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PlaylistServiceAPIService.PostPlaylists")
@@ -724,11 +726,11 @@ func (a *PlaylistServiceAPIService) PostPlaylistsExecute(r ApiPostPlaylistsReque
 }
 
 type ApiPostPlaylistsByIdItemsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService PlaylistServiceAPI
-	ids *string
-	id string
-	userId *string
+	ids        *string
+	id         string
+	userId     *string
 }
 
 // Item id, comma delimited
@@ -752,26 +754,27 @@ PostPlaylistsByIdItems Adds items to a playlist
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id
- @return ApiPostPlaylistsByIdItemsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id
+	@return ApiPostPlaylistsByIdItemsRequest
 */
 func (a *PlaylistServiceAPIService) PostPlaylistsByIdItems(ctx context.Context, id string) ApiPostPlaylistsByIdItemsRequest {
 	return ApiPostPlaylistsByIdItemsRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
-//  @return PlaylistsAddToPlaylistResult
+//
+//	@return PlaylistsAddToPlaylistResult
 func (a *PlaylistServiceAPIService) PostPlaylistsByIdItemsExecute(r ApiPostPlaylistsByIdItemsRequest) (*PlaylistsAddToPlaylistResult, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *PlaylistsAddToPlaylistResult
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *PlaylistsAddToPlaylistResult
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PlaylistServiceAPIService.PostPlaylistsByIdItems")
@@ -862,11 +865,11 @@ func (a *PlaylistServiceAPIService) PostPlaylistsByIdItemsExecute(r ApiPostPlayl
 }
 
 type ApiPostPlaylistsByIdItemsByItemidMoveByNewindexRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService PlaylistServiceAPI
-	itemId int64
-	id string
-	newIndex int32
+	itemId     int64
+	id         string
+	newIndex   int32
 }
 
 func (r ApiPostPlaylistsByIdItemsByItemidMoveByNewindexRequest) Execute() (*http.Response, error) {
@@ -878,28 +881,28 @@ PostPlaylistsByIdItemsByItemidMoveByNewindex Moves a playlist item
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param itemId ItemId
- @param id
- @param newIndex NewIndex
- @return ApiPostPlaylistsByIdItemsByItemidMoveByNewindexRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param itemId ItemId
+	@param id
+	@param newIndex NewIndex
+	@return ApiPostPlaylistsByIdItemsByItemidMoveByNewindexRequest
 */
 func (a *PlaylistServiceAPIService) PostPlaylistsByIdItemsByItemidMoveByNewindex(ctx context.Context, itemId int64, id string, newIndex int32) ApiPostPlaylistsByIdItemsByItemidMoveByNewindexRequest {
 	return ApiPostPlaylistsByIdItemsByItemidMoveByNewindexRequest{
 		ApiService: a,
-		ctx: ctx,
-		itemId: itemId,
-		id: id,
-		newIndex: newIndex,
+		ctx:        ctx,
+		itemId:     itemId,
+		id:         id,
+		newIndex:   newIndex,
 	}
 }
 
 // Execute executes the request
 func (a *PlaylistServiceAPIService) PostPlaylistsByIdItemsByItemidMoveByNewindexExecute(r ApiPostPlaylistsByIdItemsByItemidMoveByNewindexRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PlaylistServiceAPIService.PostPlaylistsByIdItemsByItemidMoveByNewindex")
@@ -976,10 +979,10 @@ func (a *PlaylistServiceAPIService) PostPlaylistsByIdItemsByItemidMoveByNewindex
 }
 
 type ApiPostPlaylistsByIdItemsDeleteRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService PlaylistServiceAPI
-	id string
-	entryIds *string
+	id         string
+	entryIds   *string
 }
 
 func (r ApiPostPlaylistsByIdItemsDeleteRequest) EntryIds(entryIds string) ApiPostPlaylistsByIdItemsDeleteRequest {
@@ -996,24 +999,24 @@ PostPlaylistsByIdItemsDelete Removes items from a playlist
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id
- @return ApiPostPlaylistsByIdItemsDeleteRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id
+	@return ApiPostPlaylistsByIdItemsDeleteRequest
 */
 func (a *PlaylistServiceAPIService) PostPlaylistsByIdItemsDelete(ctx context.Context, id string) ApiPostPlaylistsByIdItemsDeleteRequest {
 	return ApiPostPlaylistsByIdItemsDeleteRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *PlaylistServiceAPIService) PostPlaylistsByIdItemsDeleteExecute(r ApiPostPlaylistsByIdItemsDeleteRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PlaylistServiceAPIService.PostPlaylistsByIdItemsDelete")

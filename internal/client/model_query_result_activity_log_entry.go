@@ -19,8 +19,8 @@ var _ MappedNullable = &QueryResultActivityLogEntry{}
 
 // QueryResultActivityLogEntry struct for QueryResultActivityLogEntry
 type QueryResultActivityLogEntry struct {
-	Items []ActivityLogEntry `json:"Items,omitempty"`
-	TotalRecordCount *int32 `json:"TotalRecordCount,omitempty"`
+	Items            []ActivityLogEntry `json:"Items,omitempty"`
+	TotalRecordCount *int32             `json:"TotalRecordCount,omitempty"`
 }
 
 // NewQueryResultActivityLogEntry instantiates a new QueryResultActivityLogEntry object
@@ -105,7 +105,7 @@ func (o *QueryResultActivityLogEntry) SetTotalRecordCount(v int32) {
 }
 
 func (o QueryResultActivityLogEntry) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -158,5 +158,3 @@ func (v *NullableQueryResultActivityLogEntry) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

@@ -19,17 +19,16 @@ import (
 	"strings"
 )
 
-
 type ItemUpdateServiceAPI interface {
 
 	/*
-	GetItemsByItemidMetadataeditor Gets metadata editor info for an item
+		GetItemsByItemidMetadataeditor Gets metadata editor info for an item
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param itemId The id of the item
-	@return ApiGetItemsByItemidMetadataeditorRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param itemId The id of the item
+		@return ApiGetItemsByItemidMetadataeditorRequest
 	*/
 	GetItemsByItemidMetadataeditor(ctx context.Context, itemId string) ApiGetItemsByItemidMetadataeditorRequest
 
@@ -38,13 +37,13 @@ type ItemUpdateServiceAPI interface {
 	GetItemsByItemidMetadataeditorExecute(r ApiGetItemsByItemidMetadataeditorRequest) (*MetadataEditorInfo, *http.Response, error)
 
 	/*
-	PostItemsByItemid Updates an item
+		PostItemsByItemid Updates an item
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param itemId The id of the item
-	@return ApiPostItemsByItemidRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param itemId The id of the item
+		@return ApiPostItemsByItemidRequest
 	*/
 	PostItemsByItemid(ctx context.Context, itemId string) ApiPostItemsByItemidRequest
 
@@ -56,9 +55,9 @@ type ItemUpdateServiceAPI interface {
 type ItemUpdateServiceAPIService service
 
 type ApiGetItemsByItemidMetadataeditorRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService ItemUpdateServiceAPI
-	itemId string
+	itemId     string
 }
 
 func (r ApiGetItemsByItemidMetadataeditorRequest) Execute() (*MetadataEditorInfo, *http.Response, error) {
@@ -70,26 +69,27 @@ GetItemsByItemidMetadataeditor Gets metadata editor info for an item
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param itemId The id of the item
- @return ApiGetItemsByItemidMetadataeditorRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param itemId The id of the item
+	@return ApiGetItemsByItemidMetadataeditorRequest
 */
 func (a *ItemUpdateServiceAPIService) GetItemsByItemidMetadataeditor(ctx context.Context, itemId string) ApiGetItemsByItemidMetadataeditorRequest {
 	return ApiGetItemsByItemidMetadataeditorRequest{
 		ApiService: a,
-		ctx: ctx,
-		itemId: itemId,
+		ctx:        ctx,
+		itemId:     itemId,
 	}
 }
 
 // Execute executes the request
-//  @return MetadataEditorInfo
+//
+//	@return MetadataEditorInfo
 func (a *ItemUpdateServiceAPIService) GetItemsByItemidMetadataeditorExecute(r ApiGetItemsByItemidMetadataeditorRequest) (*MetadataEditorInfo, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *MetadataEditorInfo
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *MetadataEditorInfo
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ItemUpdateServiceAPIService.GetItemsByItemidMetadataeditor")
@@ -173,13 +173,13 @@ func (a *ItemUpdateServiceAPIService) GetItemsByItemidMetadataeditorExecute(r Ap
 }
 
 type ApiPostItemsByItemidRequest struct {
-	ctx context.Context
-	ApiService ItemUpdateServiceAPI
-	itemId string
+	ctx         context.Context
+	ApiService  ItemUpdateServiceAPI
+	itemId      string
 	baseItemDto *BaseItemDto
 }
 
-// BaseItemDto: 
+// BaseItemDto:
 func (r ApiPostItemsByItemidRequest) BaseItemDto(baseItemDto BaseItemDto) ApiPostItemsByItemidRequest {
 	r.baseItemDto = &baseItemDto
 	return r
@@ -194,24 +194,24 @@ PostItemsByItemid Updates an item
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param itemId The id of the item
- @return ApiPostItemsByItemidRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param itemId The id of the item
+	@return ApiPostItemsByItemidRequest
 */
 func (a *ItemUpdateServiceAPIService) PostItemsByItemid(ctx context.Context, itemId string) ApiPostItemsByItemidRequest {
 	return ApiPostItemsByItemidRequest{
 		ApiService: a,
-		ctx: ctx,
-		itemId: itemId,
+		ctx:        ctx,
+		itemId:     itemId,
 	}
 }
 
 // Execute executes the request
 func (a *ItemUpdateServiceAPIService) PostItemsByItemidExecute(r ApiPostItemsByItemidRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ItemUpdateServiceAPIService.PostItemsByItemid")

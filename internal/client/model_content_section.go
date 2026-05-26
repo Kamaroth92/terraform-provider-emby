@@ -19,20 +19,20 @@ var _ MappedNullable = &ContentSection{}
 
 // ContentSection struct for ContentSection
 type ContentSection struct {
-	Name *string `json:"Name,omitempty"`
-	Subtitle *string `json:"Subtitle,omitempty"`
-	Id *string `json:"Id,omitempty"`
-	SectionType *string `json:"SectionType,omitempty"`
-	CollectionType *string `json:"CollectionType,omitempty"`
-	ViewType *string `json:"ViewType,omitempty"`
-	Monitor []string `json:"Monitor,omitempty"`
-	CardSizeOffset *int32 `json:"CardSizeOffset,omitempty"`
+	Name            *string          `json:"Name,omitempty"`
+	Subtitle        *string          `json:"Subtitle,omitempty"`
+	Id              *string          `json:"Id,omitempty"`
+	SectionType     *string          `json:"SectionType,omitempty"`
+	CollectionType  *string          `json:"CollectionType,omitempty"`
+	ViewType        *string          `json:"ViewType,omitempty"`
+	Monitor         []string         `json:"Monitor,omitempty"`
+	CardSizeOffset  *int32           `json:"CardSizeOffset,omitempty"`
 	ScrollDirection *ScrollDirection `json:"ScrollDirection,omitempty"`
-	ParentItem *BaseItemDto `json:"ParentItem,omitempty"`
-	TextInfo *TextSectionInfo `json:"TextInfo,omitempty"`
-	PremiumFeature *string `json:"PremiumFeature,omitempty"`
-	PremiumMessage *string `json:"PremiumMessage,omitempty"`
-	RefreshInterval NullableInt32 `json:"RefreshInterval,omitempty"`
+	ParentItem      *BaseItemDto     `json:"ParentItem,omitempty"`
+	TextInfo        *TextSectionInfo `json:"TextInfo,omitempty"`
+	PremiumFeature  *string          `json:"PremiumFeature,omitempty"`
+	PremiumMessage  *string          `json:"PremiumMessage,omitempty"`
+	RefreshInterval NullableInt32    `json:"RefreshInterval,omitempty"`
 }
 
 // NewContentSection instantiates a new ContentSection object
@@ -500,6 +500,7 @@ func (o *ContentSection) HasRefreshInterval() bool {
 func (o *ContentSection) SetRefreshInterval(v int32) {
 	o.RefreshInterval.Set(&v)
 }
+
 // SetRefreshIntervalNil sets the value for RefreshInterval to be an explicit nil
 func (o *ContentSection) SetRefreshIntervalNil() {
 	o.RefreshInterval.Set(nil)
@@ -511,7 +512,7 @@ func (o *ContentSection) UnsetRefreshInterval() {
 }
 
 func (o ContentSection) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -600,5 +601,3 @@ func (v *NullableContentSection) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

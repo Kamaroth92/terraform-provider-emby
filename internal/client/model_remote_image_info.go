@@ -19,17 +19,17 @@ var _ MappedNullable = &RemoteImageInfo{}
 
 // RemoteImageInfo struct for RemoteImageInfo
 type RemoteImageInfo struct {
-	ProviderName *string `json:"ProviderName,omitempty"`
-	Url *string `json:"Url,omitempty"`
-	ThumbnailUrl *string `json:"ThumbnailUrl,omitempty"`
-	Height NullableInt32 `json:"Height,omitempty"`
-	Width NullableInt32 `json:"Width,omitempty"`
+	ProviderName    *string         `json:"ProviderName,omitempty"`
+	Url             *string         `json:"Url,omitempty"`
+	ThumbnailUrl    *string         `json:"ThumbnailUrl,omitempty"`
+	Height          NullableInt32   `json:"Height,omitempty"`
+	Width           NullableInt32   `json:"Width,omitempty"`
 	CommunityRating NullableFloat64 `json:"CommunityRating,omitempty"`
-	VoteCount NullableInt32 `json:"VoteCount,omitempty"`
-	Language *string `json:"Language,omitempty"`
-	DisplayLanguage *string `json:"DisplayLanguage,omitempty"`
-	Type *ImageType `json:"Type,omitempty"`
-	RatingType *RatingType `json:"RatingType,omitempty"`
+	VoteCount       NullableInt32   `json:"VoteCount,omitempty"`
+	Language        *string         `json:"Language,omitempty"`
+	DisplayLanguage *string         `json:"DisplayLanguage,omitempty"`
+	Type            *ImageType      `json:"Type,omitempty"`
+	RatingType      *RatingType     `json:"RatingType,omitempty"`
 }
 
 // NewRemoteImageInfo instantiates a new RemoteImageInfo object
@@ -177,6 +177,7 @@ func (o *RemoteImageInfo) HasHeight() bool {
 func (o *RemoteImageInfo) SetHeight(v int32) {
 	o.Height.Set(&v)
 }
+
 // SetHeightNil sets the value for Height to be an explicit nil
 func (o *RemoteImageInfo) SetHeightNil() {
 	o.Height.Set(nil)
@@ -219,6 +220,7 @@ func (o *RemoteImageInfo) HasWidth() bool {
 func (o *RemoteImageInfo) SetWidth(v int32) {
 	o.Width.Set(&v)
 }
+
 // SetWidthNil sets the value for Width to be an explicit nil
 func (o *RemoteImageInfo) SetWidthNil() {
 	o.Width.Set(nil)
@@ -261,6 +263,7 @@ func (o *RemoteImageInfo) HasCommunityRating() bool {
 func (o *RemoteImageInfo) SetCommunityRating(v float64) {
 	o.CommunityRating.Set(&v)
 }
+
 // SetCommunityRatingNil sets the value for CommunityRating to be an explicit nil
 func (o *RemoteImageInfo) SetCommunityRatingNil() {
 	o.CommunityRating.Set(nil)
@@ -303,6 +306,7 @@ func (o *RemoteImageInfo) HasVoteCount() bool {
 func (o *RemoteImageInfo) SetVoteCount(v int32) {
 	o.VoteCount.Set(&v)
 }
+
 // SetVoteCountNil sets the value for VoteCount to be an explicit nil
 func (o *RemoteImageInfo) SetVoteCountNil() {
 	o.VoteCount.Set(nil)
@@ -442,7 +446,7 @@ func (o *RemoteImageInfo) SetRatingType(v RatingType) {
 }
 
 func (o RemoteImageInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -522,5 +526,3 @@ func (v *NullableRemoteImageInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

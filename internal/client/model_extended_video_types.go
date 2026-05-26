@@ -20,11 +20,11 @@ type ExtendedVideoTypes string
 
 // List of ExtendedVideoTypes
 const (
-	EXTENDEDVIDEOTYPES_NONE ExtendedVideoTypes = "None"
-	EXTENDEDVIDEOTYPES_HDR10 ExtendedVideoTypes = "Hdr10"
-	EXTENDEDVIDEOTYPES_HDR10_PLUS ExtendedVideoTypes = "Hdr10Plus"
+	EXTENDEDVIDEOTYPES_NONE            ExtendedVideoTypes = "None"
+	EXTENDEDVIDEOTYPES_HDR10           ExtendedVideoTypes = "Hdr10"
+	EXTENDEDVIDEOTYPES_HDR10_PLUS      ExtendedVideoTypes = "Hdr10Plus"
 	EXTENDEDVIDEOTYPES_HYPER_LOG_GAMMA ExtendedVideoTypes = "HyperLogGamma"
-	EXTENDEDVIDEOTYPES_DOLBY_VISION ExtendedVideoTypes = "DolbyVision"
+	EXTENDEDVIDEOTYPES_DOLBY_VISION    ExtendedVideoTypes = "DolbyVision"
 )
 
 // All allowed values of ExtendedVideoTypes enum
@@ -114,4 +114,3 @@ func (v *NullableExtendedVideoTypes) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

@@ -21,7 +21,7 @@ type PluginsConfigurationPageType string
 // List of Plugins.ConfigurationPageType
 const (
 	PLUGINSCONFIGURATIONPAGETYPE_PLUGIN_CONFIGURATION PluginsConfigurationPageType = "PluginConfiguration"
-	PLUGINSCONFIGURATIONPAGETYPE_NONE PluginsConfigurationPageType = "None"
+	PLUGINSCONFIGURATIONPAGETYPE_NONE                 PluginsConfigurationPageType = "None"
 )
 
 // All allowed values of PluginsConfigurationPageType enum
@@ -108,4 +108,3 @@ func (v *NullablePluginsConfigurationPageType) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

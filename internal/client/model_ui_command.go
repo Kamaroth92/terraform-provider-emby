@@ -19,13 +19,13 @@ var _ MappedNullable = &UICommand{}
 
 // UICommand struct for UICommand
 type UICommand struct {
-	CommandType *EnumsUICommandType `json:"CommandType,omitempty"`
-	CommandId *string `json:"CommandId,omitempty"`
-	IsVisible *bool `json:"IsVisible,omitempty"`
-	IsEnabled *bool `json:"IsEnabled,omitempty"`
-	Caption *string `json:"Caption,omitempty"`
-	SetFocus *bool `json:"SetFocus,omitempty"`
-	ConfirmationPrompt *string `json:"ConfirmationPrompt,omitempty"`
+	CommandType        *EnumsUICommandType `json:"CommandType,omitempty"`
+	CommandId          *string             `json:"CommandId,omitempty"`
+	IsVisible          *bool               `json:"IsVisible,omitempty"`
+	IsEnabled          *bool               `json:"IsEnabled,omitempty"`
+	Caption            *string             `json:"Caption,omitempty"`
+	SetFocus           *bool               `json:"SetFocus,omitempty"`
+	ConfirmationPrompt *string             `json:"ConfirmationPrompt,omitempty"`
 }
 
 // NewUICommand instantiates a new UICommand object
@@ -270,7 +270,7 @@ func (o *UICommand) SetConfirmationPrompt(v string) {
 }
 
 func (o UICommand) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -338,5 +338,3 @@ func (v *NullableUICommand) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

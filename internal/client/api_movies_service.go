@@ -18,16 +18,15 @@ import (
 	"net/url"
 )
 
-
 type MoviesServiceAPI interface {
 
 	/*
-	GetMoviesRecommendations Gets movie recommendations
+		GetMoviesRecommendations Gets movie recommendations
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetMoviesRecommendationsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetMoviesRecommendationsRequest
 	*/
 	GetMoviesRecommendations(ctx context.Context) ApiGetMoviesRecommendationsRequest
 
@@ -40,15 +39,15 @@ type MoviesServiceAPI interface {
 type MoviesServiceAPIService service
 
 type ApiGetMoviesRecommendationsRequest struct {
-	ctx context.Context
-	ApiService MoviesServiceAPI
-	categoryLimit *int32
-	itemLimit *int32
-	userId *string
-	parentId *string
-	enableImages *bool
-	enableUserData *bool
-	imageTypeLimit *int32
+	ctx              context.Context
+	ApiService       MoviesServiceAPI
+	categoryLimit    *int32
+	itemLimit        *int32
+	userId           *string
+	parentId         *string
+	enableImages     *bool
+	enableUserData   *bool
+	imageTypeLimit   *int32
 	enableImageTypes *string
 }
 
@@ -109,24 +108,25 @@ GetMoviesRecommendations Gets movie recommendations
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetMoviesRecommendationsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetMoviesRecommendationsRequest
 */
 func (a *MoviesServiceAPIService) GetMoviesRecommendations(ctx context.Context) ApiGetMoviesRecommendationsRequest {
 	return ApiGetMoviesRecommendationsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return []RecommendationDto
+//
+//	@return []RecommendationDto
 func (a *MoviesServiceAPIService) GetMoviesRecommendationsExecute(r ApiGetMoviesRecommendationsRequest) ([]RecommendationDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []RecommendationDto
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue []RecommendationDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "MoviesServiceAPIService.GetMoviesRecommendations")

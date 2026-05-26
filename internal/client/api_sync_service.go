@@ -19,17 +19,16 @@ import (
 	"strings"
 )
 
-
 type SyncServiceAPI interface {
 
 	/*
-	DeleteSyncByTargetidItems Cancels items from a sync target
+		DeleteSyncByTargetidItems Cancels items from a sync target
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param targetId TargetId
-	@return ApiDeleteSyncByTargetidItemsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param targetId TargetId
+		@return ApiDeleteSyncByTargetidItemsRequest
 	*/
 	DeleteSyncByTargetidItems(ctx context.Context, targetId string) ApiDeleteSyncByTargetidItemsRequest
 
@@ -37,13 +36,13 @@ type SyncServiceAPI interface {
 	DeleteSyncByTargetidItemsExecute(r ApiDeleteSyncByTargetidItemsRequest) (*http.Response, error)
 
 	/*
-	DeleteSyncJobitemsById Cancels a sync job item
+		DeleteSyncJobitemsById Cancels a sync job item
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Id
-	@return ApiDeleteSyncJobitemsByIdRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Id
+		@return ApiDeleteSyncJobitemsByIdRequest
 	*/
 	DeleteSyncJobitemsById(ctx context.Context, id string) ApiDeleteSyncJobitemsByIdRequest
 
@@ -51,13 +50,13 @@ type SyncServiceAPI interface {
 	DeleteSyncJobitemsByIdExecute(r ApiDeleteSyncJobitemsByIdRequest) (*http.Response, error)
 
 	/*
-	DeleteSyncJobsById Cancels a sync job.
+		DeleteSyncJobsById Cancels a sync job.
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Id
-	@return ApiDeleteSyncJobsByIdRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Id
+		@return ApiDeleteSyncJobsByIdRequest
 	*/
 	DeleteSyncJobsById(ctx context.Context, id string) ApiDeleteSyncJobsByIdRequest
 
@@ -65,12 +64,12 @@ type SyncServiceAPI interface {
 	DeleteSyncJobsByIdExecute(r ApiDeleteSyncJobsByIdRequest) (*http.Response, error)
 
 	/*
-	GetSyncItemsReady Gets ready to download sync items.
+		GetSyncItemsReady Gets ready to download sync items.
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetSyncItemsReadyRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetSyncItemsReadyRequest
 	*/
 	GetSyncItemsReady(ctx context.Context) ApiGetSyncItemsReadyRequest
 
@@ -79,12 +78,12 @@ type SyncServiceAPI interface {
 	GetSyncItemsReadyExecute(r ApiGetSyncItemsReadyRequest) ([]SyncedItem, *http.Response, error)
 
 	/*
-	GetSyncJobitems Gets sync job items.
+		GetSyncJobitems Gets sync job items.
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetSyncJobitemsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetSyncJobitemsRequest
 	*/
 	GetSyncJobitems(ctx context.Context) ApiGetSyncJobitemsRequest
 
@@ -93,13 +92,13 @@ type SyncServiceAPI interface {
 	GetSyncJobitemsExecute(r ApiGetSyncJobitemsRequest) (*QueryResultSyncJobItem, *http.Response, error)
 
 	/*
-	GetSyncJobitemsByIdAdditionalfiles Gets a sync job item file
+		GetSyncJobitemsByIdAdditionalfiles Gets a sync job item file
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Id
-	@return ApiGetSyncJobitemsByIdAdditionalfilesRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Id
+		@return ApiGetSyncJobitemsByIdAdditionalfilesRequest
 	*/
 	GetSyncJobitemsByIdAdditionalfiles(ctx context.Context, id string) ApiGetSyncJobitemsByIdAdditionalfilesRequest
 
@@ -107,13 +106,13 @@ type SyncServiceAPI interface {
 	GetSyncJobitemsByIdAdditionalfilesExecute(r ApiGetSyncJobitemsByIdAdditionalfilesRequest) (*http.Response, error)
 
 	/*
-	GetSyncJobitemsByIdFile Gets a sync job item file
+		GetSyncJobitemsByIdFile Gets a sync job item file
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Id
-	@return ApiGetSyncJobitemsByIdFileRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Id
+		@return ApiGetSyncJobitemsByIdFileRequest
 	*/
 	GetSyncJobitemsByIdFile(ctx context.Context, id string) ApiGetSyncJobitemsByIdFileRequest
 
@@ -121,12 +120,12 @@ type SyncServiceAPI interface {
 	GetSyncJobitemsByIdFileExecute(r ApiGetSyncJobitemsByIdFileRequest) (*http.Response, error)
 
 	/*
-	GetSyncJobs Gets sync jobs.
+		GetSyncJobs Gets sync jobs.
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetSyncJobsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetSyncJobsRequest
 	*/
 	GetSyncJobs(ctx context.Context) ApiGetSyncJobsRequest
 
@@ -135,13 +134,13 @@ type SyncServiceAPI interface {
 	GetSyncJobsExecute(r ApiGetSyncJobsRequest) (*QueryResultSyncJob, *http.Response, error)
 
 	/*
-	GetSyncJobsById Gets a sync job.
+		GetSyncJobsById Gets a sync job.
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Id
-	@return ApiGetSyncJobsByIdRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Id
+		@return ApiGetSyncJobsByIdRequest
 	*/
 	GetSyncJobsById(ctx context.Context, id string) ApiGetSyncJobsByIdRequest
 
@@ -150,12 +149,12 @@ type SyncServiceAPI interface {
 	GetSyncJobsByIdExecute(r ApiGetSyncJobsByIdRequest) (*SyncJob, *http.Response, error)
 
 	/*
-	GetSyncOptions Gets a list of available sync targets.
+		GetSyncOptions Gets a list of available sync targets.
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetSyncOptionsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetSyncOptionsRequest
 	*/
 	GetSyncOptions(ctx context.Context) ApiGetSyncOptionsRequest
 
@@ -164,12 +163,12 @@ type SyncServiceAPI interface {
 	GetSyncOptionsExecute(r ApiGetSyncOptionsRequest) (*SyncDialogOptions, *http.Response, error)
 
 	/*
-	GetSyncTargets Gets a list of available sync targets.
+		GetSyncTargets Gets a list of available sync targets.
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetSyncTargetsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetSyncTargetsRequest
 	*/
 	GetSyncTargets(ctx context.Context) ApiGetSyncTargetsRequest
 
@@ -178,13 +177,13 @@ type SyncServiceAPI interface {
 	GetSyncTargetsExecute(r ApiGetSyncTargetsRequest) ([]SyncTarget, *http.Response, error)
 
 	/*
-	HeadSyncJobitemsByIdFile Gets a sync job item file
+		HeadSyncJobitemsByIdFile Gets a sync job item file
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Id
-	@return ApiHeadSyncJobitemsByIdFileRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Id
+		@return ApiHeadSyncJobitemsByIdFileRequest
 	*/
 	HeadSyncJobitemsByIdFile(ctx context.Context, id string) ApiHeadSyncJobitemsByIdFileRequest
 
@@ -192,13 +191,13 @@ type SyncServiceAPI interface {
 	HeadSyncJobitemsByIdFileExecute(r ApiHeadSyncJobitemsByIdFileRequest) (*http.Response, error)
 
 	/*
-	PostSyncByItemidStatus Gets sync status for an item.
+		PostSyncByItemidStatus Gets sync status for an item.
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param itemId
-	@return ApiPostSyncByItemidStatusRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param itemId
+		@return ApiPostSyncByItemidStatusRequest
 	*/
 	PostSyncByItemidStatus(ctx context.Context, itemId string) ApiPostSyncByItemidStatusRequest
 
@@ -206,13 +205,13 @@ type SyncServiceAPI interface {
 	PostSyncByItemidStatusExecute(r ApiPostSyncByItemidStatusRequest) (*http.Response, error)
 
 	/*
-	PostSyncByTargetidItemsDelete Cancels items from a sync target
+		PostSyncByTargetidItemsDelete Cancels items from a sync target
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param targetId TargetId
-	@return ApiPostSyncByTargetidItemsDeleteRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param targetId TargetId
+		@return ApiPostSyncByTargetidItemsDeleteRequest
 	*/
 	PostSyncByTargetidItemsDelete(ctx context.Context, targetId string) ApiPostSyncByTargetidItemsDeleteRequest
 
@@ -220,12 +219,12 @@ type SyncServiceAPI interface {
 	PostSyncByTargetidItemsDeleteExecute(r ApiPostSyncByTargetidItemsDeleteRequest) (*http.Response, error)
 
 	/*
-	PostSyncData Syncs data between device and server
+		PostSyncData Syncs data between device and server
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostSyncDataRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostSyncDataRequest
 	*/
 	PostSyncData(ctx context.Context) ApiPostSyncDataRequest
 
@@ -234,12 +233,12 @@ type SyncServiceAPI interface {
 	PostSyncDataExecute(r ApiPostSyncDataRequest) (*SyncDataResponse, *http.Response, error)
 
 	/*
-	PostSyncItemsCancel Cancels items from a sync target
+		PostSyncItemsCancel Cancels items from a sync target
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostSyncItemsCancelRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostSyncItemsCancelRequest
 	*/
 	PostSyncItemsCancel(ctx context.Context) ApiPostSyncItemsCancelRequest
 
@@ -247,13 +246,13 @@ type SyncServiceAPI interface {
 	PostSyncItemsCancelExecute(r ApiPostSyncItemsCancelRequest) (*http.Response, error)
 
 	/*
-	PostSyncJobitemsByIdDelete Cancels a sync job item
+		PostSyncJobitemsByIdDelete Cancels a sync job item
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Id
-	@return ApiPostSyncJobitemsByIdDeleteRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Id
+		@return ApiPostSyncJobitemsByIdDeleteRequest
 	*/
 	PostSyncJobitemsByIdDelete(ctx context.Context, id string) ApiPostSyncJobitemsByIdDeleteRequest
 
@@ -261,13 +260,13 @@ type SyncServiceAPI interface {
 	PostSyncJobitemsByIdDeleteExecute(r ApiPostSyncJobitemsByIdDeleteRequest) (*http.Response, error)
 
 	/*
-	PostSyncJobitemsByIdEnable Enables a cancelled or queued sync job item
+		PostSyncJobitemsByIdEnable Enables a cancelled or queued sync job item
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Id
-	@return ApiPostSyncJobitemsByIdEnableRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Id
+		@return ApiPostSyncJobitemsByIdEnableRequest
 	*/
 	PostSyncJobitemsByIdEnable(ctx context.Context, id string) ApiPostSyncJobitemsByIdEnableRequest
 
@@ -275,13 +274,13 @@ type SyncServiceAPI interface {
 	PostSyncJobitemsByIdEnableExecute(r ApiPostSyncJobitemsByIdEnableRequest) (*http.Response, error)
 
 	/*
-	PostSyncJobitemsByIdMarkforremoval Marks a job item for removal
+		PostSyncJobitemsByIdMarkforremoval Marks a job item for removal
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Id
-	@return ApiPostSyncJobitemsByIdMarkforremovalRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Id
+		@return ApiPostSyncJobitemsByIdMarkforremovalRequest
 	*/
 	PostSyncJobitemsByIdMarkforremoval(ctx context.Context, id string) ApiPostSyncJobitemsByIdMarkforremovalRequest
 
@@ -289,13 +288,13 @@ type SyncServiceAPI interface {
 	PostSyncJobitemsByIdMarkforremovalExecute(r ApiPostSyncJobitemsByIdMarkforremovalRequest) (*http.Response, error)
 
 	/*
-	PostSyncJobitemsByIdTransferred Reports that a sync job item has successfully been transferred.
+		PostSyncJobitemsByIdTransferred Reports that a sync job item has successfully been transferred.
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Id
-	@return ApiPostSyncJobitemsByIdTransferredRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Id
+		@return ApiPostSyncJobitemsByIdTransferredRequest
 	*/
 	PostSyncJobitemsByIdTransferred(ctx context.Context, id string) ApiPostSyncJobitemsByIdTransferredRequest
 
@@ -303,13 +302,13 @@ type SyncServiceAPI interface {
 	PostSyncJobitemsByIdTransferredExecute(r ApiPostSyncJobitemsByIdTransferredRequest) (*http.Response, error)
 
 	/*
-	PostSyncJobitemsByIdUnmarkforremoval Unmarks a job item for removal
+		PostSyncJobitemsByIdUnmarkforremoval Unmarks a job item for removal
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Id
-	@return ApiPostSyncJobitemsByIdUnmarkforremovalRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Id
+		@return ApiPostSyncJobitemsByIdUnmarkforremovalRequest
 	*/
 	PostSyncJobitemsByIdUnmarkforremoval(ctx context.Context, id string) ApiPostSyncJobitemsByIdUnmarkforremovalRequest
 
@@ -317,12 +316,12 @@ type SyncServiceAPI interface {
 	PostSyncJobitemsByIdUnmarkforremovalExecute(r ApiPostSyncJobitemsByIdUnmarkforremovalRequest) (*http.Response, error)
 
 	/*
-	PostSyncJobs Gets sync jobs.
+		PostSyncJobs Gets sync jobs.
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostSyncJobsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostSyncJobsRequest
 	*/
 	PostSyncJobs(ctx context.Context) ApiPostSyncJobsRequest
 
@@ -331,13 +330,13 @@ type SyncServiceAPI interface {
 	PostSyncJobsExecute(r ApiPostSyncJobsRequest) (*SyncJobCreationResult, *http.Response, error)
 
 	/*
-	PostSyncJobsById Updates a sync job.
+		PostSyncJobsById Updates a sync job.
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiPostSyncJobsByIdRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id
+		@return ApiPostSyncJobsByIdRequest
 	*/
 	PostSyncJobsById(ctx context.Context, id int64) ApiPostSyncJobsByIdRequest
 
@@ -345,13 +344,13 @@ type SyncServiceAPI interface {
 	PostSyncJobsByIdExecute(r ApiPostSyncJobsByIdRequest) (*http.Response, error)
 
 	/*
-	PostSyncJobsByIdDelete Cancels a sync job.
+		PostSyncJobsByIdDelete Cancels a sync job.
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Id
-	@return ApiPostSyncJobsByIdDeleteRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Id
+		@return ApiPostSyncJobsByIdDeleteRequest
 	*/
 	PostSyncJobsByIdDelete(ctx context.Context, id string) ApiPostSyncJobsByIdDeleteRequest
 
@@ -359,12 +358,12 @@ type SyncServiceAPI interface {
 	PostSyncJobsByIdDeleteExecute(r ApiPostSyncJobsByIdDeleteRequest) (*http.Response, error)
 
 	/*
-	PostSyncOfflineactions Reports an action that occurred while offline.
+		PostSyncOfflineactions Reports an action that occurred while offline.
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostSyncOfflineactionsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostSyncOfflineactionsRequest
 	*/
 	PostSyncOfflineactions(ctx context.Context) ApiPostSyncOfflineactionsRequest
 
@@ -376,10 +375,10 @@ type SyncServiceAPI interface {
 type SyncServiceAPIService service
 
 type ApiDeleteSyncByTargetidItemsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SyncServiceAPI
-	targetId string
-	itemIds *string
+	targetId   string
+	itemIds    *string
 }
 
 // ItemIds
@@ -397,24 +396,24 @@ DeleteSyncByTargetidItems Cancels items from a sync target
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param targetId TargetId
- @return ApiDeleteSyncByTargetidItemsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param targetId TargetId
+	@return ApiDeleteSyncByTargetidItemsRequest
 */
 func (a *SyncServiceAPIService) DeleteSyncByTargetidItems(ctx context.Context, targetId string) ApiDeleteSyncByTargetidItemsRequest {
 	return ApiDeleteSyncByTargetidItemsRequest{
 		ApiService: a,
-		ctx: ctx,
-		targetId: targetId,
+		ctx:        ctx,
+		targetId:   targetId,
 	}
 }
 
 // Execute executes the request
 func (a *SyncServiceAPIService) DeleteSyncByTargetidItemsExecute(r ApiDeleteSyncByTargetidItemsRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodDelete
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodDelete
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SyncServiceAPIService.DeleteSyncByTargetidItems")
@@ -492,9 +491,9 @@ func (a *SyncServiceAPIService) DeleteSyncByTargetidItemsExecute(r ApiDeleteSync
 }
 
 type ApiDeleteSyncJobitemsByIdRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SyncServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiDeleteSyncJobitemsByIdRequest) Execute() (*http.Response, error) {
@@ -506,24 +505,24 @@ DeleteSyncJobitemsById Cancels a sync job item
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Id
- @return ApiDeleteSyncJobitemsByIdRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Id
+	@return ApiDeleteSyncJobitemsByIdRequest
 */
 func (a *SyncServiceAPIService) DeleteSyncJobitemsById(ctx context.Context, id string) ApiDeleteSyncJobitemsByIdRequest {
 	return ApiDeleteSyncJobitemsByIdRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *SyncServiceAPIService) DeleteSyncJobitemsByIdExecute(r ApiDeleteSyncJobitemsByIdRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodDelete
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodDelete
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SyncServiceAPIService.DeleteSyncJobitemsById")
@@ -598,9 +597,9 @@ func (a *SyncServiceAPIService) DeleteSyncJobitemsByIdExecute(r ApiDeleteSyncJob
 }
 
 type ApiDeleteSyncJobsByIdRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SyncServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiDeleteSyncJobsByIdRequest) Execute() (*http.Response, error) {
@@ -612,24 +611,24 @@ DeleteSyncJobsById Cancels a sync job.
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Id
- @return ApiDeleteSyncJobsByIdRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Id
+	@return ApiDeleteSyncJobsByIdRequest
 */
 func (a *SyncServiceAPIService) DeleteSyncJobsById(ctx context.Context, id string) ApiDeleteSyncJobsByIdRequest {
 	return ApiDeleteSyncJobsByIdRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *SyncServiceAPIService) DeleteSyncJobsByIdExecute(r ApiDeleteSyncJobsByIdRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodDelete
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodDelete
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SyncServiceAPIService.DeleteSyncJobsById")
@@ -704,9 +703,9 @@ func (a *SyncServiceAPIService) DeleteSyncJobsByIdExecute(r ApiDeleteSyncJobsByI
 }
 
 type ApiGetSyncItemsReadyRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SyncServiceAPI
-	targetId *string
+	targetId   *string
 }
 
 // TargetId
@@ -724,24 +723,25 @@ GetSyncItemsReady Gets ready to download sync items.
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetSyncItemsReadyRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetSyncItemsReadyRequest
 */
 func (a *SyncServiceAPIService) GetSyncItemsReady(ctx context.Context) ApiGetSyncItemsReadyRequest {
 	return ApiGetSyncItemsReadyRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return []SyncedItem
+//
+//	@return []SyncedItem
 func (a *SyncServiceAPIService) GetSyncItemsReadyExecute(r ApiGetSyncItemsReadyRequest) ([]SyncedItem, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []SyncedItem
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue []SyncedItem
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SyncServiceAPIService.GetSyncItemsReady")
@@ -828,9 +828,9 @@ func (a *SyncServiceAPIService) GetSyncItemsReadyExecute(r ApiGetSyncItemsReadyR
 }
 
 type ApiGetSyncJobitemsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SyncServiceAPI
-	targetId *string
+	targetId   *string
 }
 
 // TargetId
@@ -848,24 +848,25 @@ GetSyncJobitems Gets sync job items.
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetSyncJobitemsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetSyncJobitemsRequest
 */
 func (a *SyncServiceAPIService) GetSyncJobitems(ctx context.Context) ApiGetSyncJobitemsRequest {
 	return ApiGetSyncJobitemsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return QueryResultSyncJobItem
+//
+//	@return QueryResultSyncJobItem
 func (a *SyncServiceAPIService) GetSyncJobitemsExecute(r ApiGetSyncJobitemsRequest) (*QueryResultSyncJobItem, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *QueryResultSyncJobItem
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *QueryResultSyncJobItem
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SyncServiceAPIService.GetSyncJobitems")
@@ -952,10 +953,10 @@ func (a *SyncServiceAPIService) GetSyncJobitemsExecute(r ApiGetSyncJobitemsReque
 }
 
 type ApiGetSyncJobitemsByIdAdditionalfilesRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SyncServiceAPI
-	id string
-	name *string
+	id         string
+	name       *string
 }
 
 // Name
@@ -973,24 +974,24 @@ GetSyncJobitemsByIdAdditionalfiles Gets a sync job item file
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Id
- @return ApiGetSyncJobitemsByIdAdditionalfilesRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Id
+	@return ApiGetSyncJobitemsByIdAdditionalfilesRequest
 */
 func (a *SyncServiceAPIService) GetSyncJobitemsByIdAdditionalfiles(ctx context.Context, id string) ApiGetSyncJobitemsByIdAdditionalfilesRequest {
 	return ApiGetSyncJobitemsByIdAdditionalfilesRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *SyncServiceAPIService) GetSyncJobitemsByIdAdditionalfilesExecute(r ApiGetSyncJobitemsByIdAdditionalfilesRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SyncServiceAPIService.GetSyncJobitemsByIdAdditionalfiles")
@@ -1069,9 +1070,9 @@ func (a *SyncServiceAPIService) GetSyncJobitemsByIdAdditionalfilesExecute(r ApiG
 }
 
 type ApiGetSyncJobitemsByIdFileRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SyncServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiGetSyncJobitemsByIdFileRequest) Execute() (*http.Response, error) {
@@ -1083,24 +1084,24 @@ GetSyncJobitemsByIdFile Gets a sync job item file
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Id
- @return ApiGetSyncJobitemsByIdFileRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Id
+	@return ApiGetSyncJobitemsByIdFileRequest
 */
 func (a *SyncServiceAPIService) GetSyncJobitemsByIdFile(ctx context.Context, id string) ApiGetSyncJobitemsByIdFileRequest {
 	return ApiGetSyncJobitemsByIdFileRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *SyncServiceAPIService) GetSyncJobitemsByIdFileExecute(r ApiGetSyncJobitemsByIdFileRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SyncServiceAPIService.GetSyncJobitemsByIdFile")
@@ -1175,7 +1176,7 @@ func (a *SyncServiceAPIService) GetSyncJobitemsByIdFileExecute(r ApiGetSyncJobit
 }
 
 type ApiGetSyncJobsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SyncServiceAPI
 }
 
@@ -1188,24 +1189,25 @@ GetSyncJobs Gets sync jobs.
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetSyncJobsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetSyncJobsRequest
 */
 func (a *SyncServiceAPIService) GetSyncJobs(ctx context.Context) ApiGetSyncJobsRequest {
 	return ApiGetSyncJobsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return QueryResultSyncJob
+//
+//	@return QueryResultSyncJob
 func (a *SyncServiceAPIService) GetSyncJobsExecute(r ApiGetSyncJobsRequest) (*QueryResultSyncJob, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *QueryResultSyncJob
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *QueryResultSyncJob
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SyncServiceAPIService.GetSyncJobs")
@@ -1288,9 +1290,9 @@ func (a *SyncServiceAPIService) GetSyncJobsExecute(r ApiGetSyncJobsRequest) (*Qu
 }
 
 type ApiGetSyncJobsByIdRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SyncServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiGetSyncJobsByIdRequest) Execute() (*SyncJob, *http.Response, error) {
@@ -1302,26 +1304,27 @@ GetSyncJobsById Gets a sync job.
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Id
- @return ApiGetSyncJobsByIdRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Id
+	@return ApiGetSyncJobsByIdRequest
 */
 func (a *SyncServiceAPIService) GetSyncJobsById(ctx context.Context, id string) ApiGetSyncJobsByIdRequest {
 	return ApiGetSyncJobsByIdRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
-//  @return SyncJob
+//
+//	@return SyncJob
 func (a *SyncServiceAPIService) GetSyncJobsByIdExecute(r ApiGetSyncJobsByIdRequest) (*SyncJob, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *SyncJob
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *SyncJob
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SyncServiceAPIService.GetSyncJobsById")
@@ -1405,13 +1408,13 @@ func (a *SyncServiceAPIService) GetSyncJobsByIdExecute(r ApiGetSyncJobsByIdReque
 }
 
 type ApiGetSyncOptionsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SyncServiceAPI
-	userId *string
-	itemIds *string
-	parentId *string
-	targetId *string
-	category *SyncCategory
+	userId     *string
+	itemIds    *string
+	parentId   *string
+	targetId   *string
+	category   *SyncCategory
 }
 
 // UserId
@@ -1453,24 +1456,25 @@ GetSyncOptions Gets a list of available sync targets.
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetSyncOptionsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetSyncOptionsRequest
 */
 func (a *SyncServiceAPIService) GetSyncOptions(ctx context.Context) ApiGetSyncOptionsRequest {
 	return ApiGetSyncOptionsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return SyncDialogOptions
+//
+//	@return SyncDialogOptions
 func (a *SyncServiceAPIService) GetSyncOptionsExecute(r ApiGetSyncOptionsRequest) (*SyncDialogOptions, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *SyncDialogOptions
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *SyncDialogOptions
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SyncServiceAPIService.GetSyncOptions")
@@ -1569,9 +1573,9 @@ func (a *SyncServiceAPIService) GetSyncOptionsExecute(r ApiGetSyncOptionsRequest
 }
 
 type ApiGetSyncTargetsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SyncServiceAPI
-	userId *string
+	userId     *string
 }
 
 // UserId
@@ -1589,24 +1593,25 @@ GetSyncTargets Gets a list of available sync targets.
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetSyncTargetsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetSyncTargetsRequest
 */
 func (a *SyncServiceAPIService) GetSyncTargets(ctx context.Context) ApiGetSyncTargetsRequest {
 	return ApiGetSyncTargetsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return []SyncTarget
+//
+//	@return []SyncTarget
 func (a *SyncServiceAPIService) GetSyncTargetsExecute(r ApiGetSyncTargetsRequest) ([]SyncTarget, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []SyncTarget
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue []SyncTarget
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SyncServiceAPIService.GetSyncTargets")
@@ -1693,9 +1698,9 @@ func (a *SyncServiceAPIService) GetSyncTargetsExecute(r ApiGetSyncTargetsRequest
 }
 
 type ApiHeadSyncJobitemsByIdFileRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SyncServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiHeadSyncJobitemsByIdFileRequest) Execute() (*http.Response, error) {
@@ -1707,24 +1712,24 @@ HeadSyncJobitemsByIdFile Gets a sync job item file
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Id
- @return ApiHeadSyncJobitemsByIdFileRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Id
+	@return ApiHeadSyncJobitemsByIdFileRequest
 */
 func (a *SyncServiceAPIService) HeadSyncJobitemsByIdFile(ctx context.Context, id string) ApiHeadSyncJobitemsByIdFileRequest {
 	return ApiHeadSyncJobitemsByIdFileRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *SyncServiceAPIService) HeadSyncJobitemsByIdFileExecute(r ApiHeadSyncJobitemsByIdFileRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodHead
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodHead
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SyncServiceAPIService.HeadSyncJobitemsByIdFile")
@@ -1799,13 +1804,13 @@ func (a *SyncServiceAPIService) HeadSyncJobitemsByIdFileExecute(r ApiHeadSyncJob
 }
 
 type ApiPostSyncByItemidStatusRequest struct {
-	ctx context.Context
-	ApiService SyncServiceAPI
-	itemId string
+	ctx                context.Context
+	ApiService         SyncServiceAPI
+	itemId             string
 	syncedItemProgress *SyncedItemProgress
 }
 
-// SyncedItemProgress: 
+// SyncedItemProgress:
 func (r ApiPostSyncByItemidStatusRequest) SyncedItemProgress(syncedItemProgress SyncedItemProgress) ApiPostSyncByItemidStatusRequest {
 	r.syncedItemProgress = &syncedItemProgress
 	return r
@@ -1820,24 +1825,24 @@ PostSyncByItemidStatus Gets sync status for an item.
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param itemId
- @return ApiPostSyncByItemidStatusRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param itemId
+	@return ApiPostSyncByItemidStatusRequest
 */
 func (a *SyncServiceAPIService) PostSyncByItemidStatus(ctx context.Context, itemId string) ApiPostSyncByItemidStatusRequest {
 	return ApiPostSyncByItemidStatusRequest{
 		ApiService: a,
-		ctx: ctx,
-		itemId: itemId,
+		ctx:        ctx,
+		itemId:     itemId,
 	}
 }
 
 // Execute executes the request
 func (a *SyncServiceAPIService) PostSyncByItemidStatusExecute(r ApiPostSyncByItemidStatusRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SyncServiceAPIService.PostSyncByItemidStatus")
@@ -1917,10 +1922,10 @@ func (a *SyncServiceAPIService) PostSyncByItemidStatusExecute(r ApiPostSyncByIte
 }
 
 type ApiPostSyncByTargetidItemsDeleteRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SyncServiceAPI
-	targetId string
-	itemIds *string
+	targetId   string
+	itemIds    *string
 }
 
 // ItemIds
@@ -1938,24 +1943,24 @@ PostSyncByTargetidItemsDelete Cancels items from a sync target
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param targetId TargetId
- @return ApiPostSyncByTargetidItemsDeleteRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param targetId TargetId
+	@return ApiPostSyncByTargetidItemsDeleteRequest
 */
 func (a *SyncServiceAPIService) PostSyncByTargetidItemsDelete(ctx context.Context, targetId string) ApiPostSyncByTargetidItemsDeleteRequest {
 	return ApiPostSyncByTargetidItemsDeleteRequest{
 		ApiService: a,
-		ctx: ctx,
-		targetId: targetId,
+		ctx:        ctx,
+		targetId:   targetId,
 	}
 }
 
 // Execute executes the request
 func (a *SyncServiceAPIService) PostSyncByTargetidItemsDeleteExecute(r ApiPostSyncByTargetidItemsDeleteRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SyncServiceAPIService.PostSyncByTargetidItemsDelete")
@@ -2033,9 +2038,9 @@ func (a *SyncServiceAPIService) PostSyncByTargetidItemsDeleteExecute(r ApiPostSy
 }
 
 type ApiPostSyncDataRequest struct {
-	ctx context.Context
-	ApiService SyncServiceAPI
-	targetId *string
+	ctx             context.Context
+	ApiService      SyncServiceAPI
+	targetId        *string
 	syncDataRequest *SyncDataRequest
 }
 
@@ -2045,7 +2050,7 @@ func (r ApiPostSyncDataRequest) TargetId(targetId string) ApiPostSyncDataRequest
 	return r
 }
 
-// SyncDataRequest: 
+// SyncDataRequest:
 func (r ApiPostSyncDataRequest) SyncDataRequest(syncDataRequest SyncDataRequest) ApiPostSyncDataRequest {
 	r.syncDataRequest = &syncDataRequest
 	return r
@@ -2060,24 +2065,25 @@ PostSyncData Syncs data between device and server
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostSyncDataRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostSyncDataRequest
 */
 func (a *SyncServiceAPIService) PostSyncData(ctx context.Context) ApiPostSyncDataRequest {
 	return ApiPostSyncDataRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return SyncDataResponse
+//
+//	@return SyncDataResponse
 func (a *SyncServiceAPIService) PostSyncDataExecute(r ApiPostSyncDataRequest) (*SyncDataResponse, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *SyncDataResponse
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *SyncDataResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SyncServiceAPIService.PostSyncData")
@@ -2169,9 +2175,9 @@ func (a *SyncServiceAPIService) PostSyncDataExecute(r ApiPostSyncDataRequest) (*
 }
 
 type ApiPostSyncItemsCancelRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SyncServiceAPI
-	itemIds *string
+	itemIds    *string
 }
 
 // ItemIds
@@ -2189,22 +2195,22 @@ PostSyncItemsCancel Cancels items from a sync target
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostSyncItemsCancelRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostSyncItemsCancelRequest
 */
 func (a *SyncServiceAPIService) PostSyncItemsCancel(ctx context.Context) ApiPostSyncItemsCancelRequest {
 	return ApiPostSyncItemsCancelRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *SyncServiceAPIService) PostSyncItemsCancelExecute(r ApiPostSyncItemsCancelRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SyncServiceAPIService.PostSyncItemsCancel")
@@ -2281,9 +2287,9 @@ func (a *SyncServiceAPIService) PostSyncItemsCancelExecute(r ApiPostSyncItemsCan
 }
 
 type ApiPostSyncJobitemsByIdDeleteRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SyncServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiPostSyncJobitemsByIdDeleteRequest) Execute() (*http.Response, error) {
@@ -2295,24 +2301,24 @@ PostSyncJobitemsByIdDelete Cancels a sync job item
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Id
- @return ApiPostSyncJobitemsByIdDeleteRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Id
+	@return ApiPostSyncJobitemsByIdDeleteRequest
 */
 func (a *SyncServiceAPIService) PostSyncJobitemsByIdDelete(ctx context.Context, id string) ApiPostSyncJobitemsByIdDeleteRequest {
 	return ApiPostSyncJobitemsByIdDeleteRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *SyncServiceAPIService) PostSyncJobitemsByIdDeleteExecute(r ApiPostSyncJobitemsByIdDeleteRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SyncServiceAPIService.PostSyncJobitemsByIdDelete")
@@ -2387,9 +2393,9 @@ func (a *SyncServiceAPIService) PostSyncJobitemsByIdDeleteExecute(r ApiPostSyncJ
 }
 
 type ApiPostSyncJobitemsByIdEnableRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SyncServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiPostSyncJobitemsByIdEnableRequest) Execute() (*http.Response, error) {
@@ -2401,24 +2407,24 @@ PostSyncJobitemsByIdEnable Enables a cancelled or queued sync job item
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Id
- @return ApiPostSyncJobitemsByIdEnableRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Id
+	@return ApiPostSyncJobitemsByIdEnableRequest
 */
 func (a *SyncServiceAPIService) PostSyncJobitemsByIdEnable(ctx context.Context, id string) ApiPostSyncJobitemsByIdEnableRequest {
 	return ApiPostSyncJobitemsByIdEnableRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *SyncServiceAPIService) PostSyncJobitemsByIdEnableExecute(r ApiPostSyncJobitemsByIdEnableRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SyncServiceAPIService.PostSyncJobitemsByIdEnable")
@@ -2493,9 +2499,9 @@ func (a *SyncServiceAPIService) PostSyncJobitemsByIdEnableExecute(r ApiPostSyncJ
 }
 
 type ApiPostSyncJobitemsByIdMarkforremovalRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SyncServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiPostSyncJobitemsByIdMarkforremovalRequest) Execute() (*http.Response, error) {
@@ -2507,24 +2513,24 @@ PostSyncJobitemsByIdMarkforremoval Marks a job item for removal
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Id
- @return ApiPostSyncJobitemsByIdMarkforremovalRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Id
+	@return ApiPostSyncJobitemsByIdMarkforremovalRequest
 */
 func (a *SyncServiceAPIService) PostSyncJobitemsByIdMarkforremoval(ctx context.Context, id string) ApiPostSyncJobitemsByIdMarkforremovalRequest {
 	return ApiPostSyncJobitemsByIdMarkforremovalRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *SyncServiceAPIService) PostSyncJobitemsByIdMarkforremovalExecute(r ApiPostSyncJobitemsByIdMarkforremovalRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SyncServiceAPIService.PostSyncJobitemsByIdMarkforremoval")
@@ -2599,9 +2605,9 @@ func (a *SyncServiceAPIService) PostSyncJobitemsByIdMarkforremovalExecute(r ApiP
 }
 
 type ApiPostSyncJobitemsByIdTransferredRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SyncServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiPostSyncJobitemsByIdTransferredRequest) Execute() (*http.Response, error) {
@@ -2613,24 +2619,24 @@ PostSyncJobitemsByIdTransferred Reports that a sync job item has successfully be
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Id
- @return ApiPostSyncJobitemsByIdTransferredRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Id
+	@return ApiPostSyncJobitemsByIdTransferredRequest
 */
 func (a *SyncServiceAPIService) PostSyncJobitemsByIdTransferred(ctx context.Context, id string) ApiPostSyncJobitemsByIdTransferredRequest {
 	return ApiPostSyncJobitemsByIdTransferredRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *SyncServiceAPIService) PostSyncJobitemsByIdTransferredExecute(r ApiPostSyncJobitemsByIdTransferredRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SyncServiceAPIService.PostSyncJobitemsByIdTransferred")
@@ -2705,9 +2711,9 @@ func (a *SyncServiceAPIService) PostSyncJobitemsByIdTransferredExecute(r ApiPost
 }
 
 type ApiPostSyncJobitemsByIdUnmarkforremovalRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SyncServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiPostSyncJobitemsByIdUnmarkforremovalRequest) Execute() (*http.Response, error) {
@@ -2719,24 +2725,24 @@ PostSyncJobitemsByIdUnmarkforremoval Unmarks a job item for removal
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Id
- @return ApiPostSyncJobitemsByIdUnmarkforremovalRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Id
+	@return ApiPostSyncJobitemsByIdUnmarkforremovalRequest
 */
 func (a *SyncServiceAPIService) PostSyncJobitemsByIdUnmarkforremoval(ctx context.Context, id string) ApiPostSyncJobitemsByIdUnmarkforremovalRequest {
 	return ApiPostSyncJobitemsByIdUnmarkforremovalRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *SyncServiceAPIService) PostSyncJobitemsByIdUnmarkforremovalExecute(r ApiPostSyncJobitemsByIdUnmarkforremovalRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SyncServiceAPIService.PostSyncJobitemsByIdUnmarkforremoval")
@@ -2811,12 +2817,12 @@ func (a *SyncServiceAPIService) PostSyncJobitemsByIdUnmarkforremovalExecute(r Ap
 }
 
 type ApiPostSyncJobsRequest struct {
-	ctx context.Context
-	ApiService SyncServiceAPI
+	ctx            context.Context
+	ApiService     SyncServiceAPI
 	syncJobRequest *SyncJobRequest
 }
 
-// SyncJobRequest: 
+// SyncJobRequest:
 func (r ApiPostSyncJobsRequest) SyncJobRequest(syncJobRequest SyncJobRequest) ApiPostSyncJobsRequest {
 	r.syncJobRequest = &syncJobRequest
 	return r
@@ -2831,24 +2837,25 @@ PostSyncJobs Gets sync jobs.
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostSyncJobsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostSyncJobsRequest
 */
 func (a *SyncServiceAPIService) PostSyncJobs(ctx context.Context) ApiPostSyncJobsRequest {
 	return ApiPostSyncJobsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return SyncJobCreationResult
+//
+//	@return SyncJobCreationResult
 func (a *SyncServiceAPIService) PostSyncJobsExecute(r ApiPostSyncJobsRequest) (*SyncJobCreationResult, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *SyncJobCreationResult
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *SyncJobCreationResult
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SyncServiceAPIService.PostSyncJobs")
@@ -2936,13 +2943,13 @@ func (a *SyncServiceAPIService) PostSyncJobsExecute(r ApiPostSyncJobsRequest) (*
 }
 
 type ApiPostSyncJobsByIdRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SyncServiceAPI
-	id int64
-	syncJob *SyncJob
+	id         int64
+	syncJob    *SyncJob
 }
 
-// SyncJob: 
+// SyncJob:
 func (r ApiPostSyncJobsByIdRequest) SyncJob(syncJob SyncJob) ApiPostSyncJobsByIdRequest {
 	r.syncJob = &syncJob
 	return r
@@ -2957,24 +2964,24 @@ PostSyncJobsById Updates a sync job.
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id
- @return ApiPostSyncJobsByIdRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id
+	@return ApiPostSyncJobsByIdRequest
 */
 func (a *SyncServiceAPIService) PostSyncJobsById(ctx context.Context, id int64) ApiPostSyncJobsByIdRequest {
 	return ApiPostSyncJobsByIdRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *SyncServiceAPIService) PostSyncJobsByIdExecute(r ApiPostSyncJobsByIdRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SyncServiceAPIService.PostSyncJobsById")
@@ -3054,9 +3061,9 @@ func (a *SyncServiceAPIService) PostSyncJobsByIdExecute(r ApiPostSyncJobsByIdReq
 }
 
 type ApiPostSyncJobsByIdDeleteRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SyncServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiPostSyncJobsByIdDeleteRequest) Execute() (*http.Response, error) {
@@ -3068,24 +3075,24 @@ PostSyncJobsByIdDelete Cancels a sync job.
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Id
- @return ApiPostSyncJobsByIdDeleteRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Id
+	@return ApiPostSyncJobsByIdDeleteRequest
 */
 func (a *SyncServiceAPIService) PostSyncJobsByIdDelete(ctx context.Context, id string) ApiPostSyncJobsByIdDeleteRequest {
 	return ApiPostSyncJobsByIdDeleteRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *SyncServiceAPIService) PostSyncJobsByIdDeleteExecute(r ApiPostSyncJobsByIdDeleteRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SyncServiceAPIService.PostSyncJobsByIdDelete")
@@ -3160,12 +3167,12 @@ func (a *SyncServiceAPIService) PostSyncJobsByIdDeleteExecute(r ApiPostSyncJobsB
 }
 
 type ApiPostSyncOfflineactionsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SyncServiceAPI
 	userAction *[]UserAction
 }
 
-// List&#x60;1: 
+// List&#x60;1:
 func (r ApiPostSyncOfflineactionsRequest) UserAction(userAction []UserAction) ApiPostSyncOfflineactionsRequest {
 	r.userAction = &userAction
 	return r
@@ -3180,22 +3187,22 @@ PostSyncOfflineactions Reports an action that occurred while offline.
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostSyncOfflineactionsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostSyncOfflineactionsRequest
 */
 func (a *SyncServiceAPIService) PostSyncOfflineactions(ctx context.Context) ApiPostSyncOfflineactionsRequest {
 	return ApiPostSyncOfflineactionsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *SyncServiceAPIService) PostSyncOfflineactionsExecute(r ApiPostSyncOfflineactionsRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SyncServiceAPIService.PostSyncOfflineactions")

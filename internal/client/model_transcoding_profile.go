@@ -19,26 +19,26 @@ var _ MappedNullable = &TranscodingProfile{}
 
 // TranscodingProfile struct for TranscodingProfile
 type TranscodingProfile struct {
-	Container *string `json:"Container,omitempty"`
-	Type *DlnaProfileType `json:"Type,omitempty"`
-	VideoCodec *string `json:"VideoCodec,omitempty"`
-	AudioCodec *string `json:"AudioCodec,omitempty"`
-	Protocol *string `json:"Protocol,omitempty"`
-	EstimateContentLength *bool `json:"EstimateContentLength,omitempty"`
-	EnableMpegtsM2TsMode *bool `json:"EnableMpegtsM2TsMode,omitempty"`
-	TranscodeSeekInfo *TranscodeSeekInfo `json:"TranscodeSeekInfo,omitempty"`
-	CopyTimestamps *bool `json:"CopyTimestamps,omitempty"`
-	Context *EncodingContext `json:"Context,omitempty"`
-	MaxAudioChannels *string `json:"MaxAudioChannels,omitempty"`
-	MinSegments *int32 `json:"MinSegments,omitempty"`
-	SegmentLength *int32 `json:"SegmentLength,omitempty"`
-	BreakOnNonKeyFrames *bool `json:"BreakOnNonKeyFrames,omitempty"`
-	AllowInterlacedVideoStreamCopy *bool `json:"AllowInterlacedVideoStreamCopy,omitempty"`
-	ManifestSubtitles *string `json:"ManifestSubtitles,omitempty"`
-	MaxManifestSubtitles *int32 `json:"MaxManifestSubtitles,omitempty"`
-	MaxWidth *int32 `json:"MaxWidth,omitempty"`
-	MaxHeight *int32 `json:"MaxHeight,omitempty"`
-	FillEmptySubtitleSegments *bool `json:"FillEmptySubtitleSegments,omitempty"`
+	Container                      *string            `json:"Container,omitempty"`
+	Type                           *DlnaProfileType   `json:"Type,omitempty"`
+	VideoCodec                     *string            `json:"VideoCodec,omitempty"`
+	AudioCodec                     *string            `json:"AudioCodec,omitempty"`
+	Protocol                       *string            `json:"Protocol,omitempty"`
+	EstimateContentLength          *bool              `json:"EstimateContentLength,omitempty"`
+	EnableMpegtsM2TsMode           *bool              `json:"EnableMpegtsM2TsMode,omitempty"`
+	TranscodeSeekInfo              *TranscodeSeekInfo `json:"TranscodeSeekInfo,omitempty"`
+	CopyTimestamps                 *bool              `json:"CopyTimestamps,omitempty"`
+	Context                        *EncodingContext   `json:"Context,omitempty"`
+	MaxAudioChannels               *string            `json:"MaxAudioChannels,omitempty"`
+	MinSegments                    *int32             `json:"MinSegments,omitempty"`
+	SegmentLength                  *int32             `json:"SegmentLength,omitempty"`
+	BreakOnNonKeyFrames            *bool              `json:"BreakOnNonKeyFrames,omitempty"`
+	AllowInterlacedVideoStreamCopy *bool              `json:"AllowInterlacedVideoStreamCopy,omitempty"`
+	ManifestSubtitles              *string            `json:"ManifestSubtitles,omitempty"`
+	MaxManifestSubtitles           *int32             `json:"MaxManifestSubtitles,omitempty"`
+	MaxWidth                       *int32             `json:"MaxWidth,omitempty"`
+	MaxHeight                      *int32             `json:"MaxHeight,omitempty"`
+	FillEmptySubtitleSegments      *bool              `json:"FillEmptySubtitleSegments,omitempty"`
 }
 
 // NewTranscodingProfile instantiates a new TranscodingProfile object
@@ -699,7 +699,7 @@ func (o *TranscodingProfile) SetFillEmptySubtitleSegments(v bool) {
 }
 
 func (o TranscodingProfile) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -806,5 +806,3 @@ func (v *NullableTranscodingProfile) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

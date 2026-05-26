@@ -19,11 +19,11 @@ var _ MappedNullable = &LibraryTypeOptions{}
 
 // LibraryTypeOptions struct for LibraryTypeOptions
 type LibraryTypeOptions struct {
-	Type *string `json:"Type,omitempty"`
-	MetadataFetchers []LibraryOptionInfo `json:"MetadataFetchers,omitempty"`
-	ImageFetchers []LibraryOptionInfo `json:"ImageFetchers,omitempty"`
-	SupportedImageTypes []ImageType `json:"SupportedImageTypes,omitempty"`
-	DefaultImageOptions []ImageOption `json:"DefaultImageOptions,omitempty"`
+	Type                *string             `json:"Type,omitempty"`
+	MetadataFetchers    []LibraryOptionInfo `json:"MetadataFetchers,omitempty"`
+	ImageFetchers       []LibraryOptionInfo `json:"ImageFetchers,omitempty"`
+	SupportedImageTypes []ImageType         `json:"SupportedImageTypes,omitempty"`
+	DefaultImageOptions []ImageOption       `json:"DefaultImageOptions,omitempty"`
 }
 
 // NewLibraryTypeOptions instantiates a new LibraryTypeOptions object
@@ -204,7 +204,7 @@ func (o *LibraryTypeOptions) SetDefaultImageOptions(v []ImageOption) {
 }
 
 func (o LibraryTypeOptions) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -266,5 +266,3 @@ func (v *NullableLibraryTypeOptions) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

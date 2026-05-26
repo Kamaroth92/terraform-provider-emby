@@ -19,8 +19,8 @@ var _ MappedNullable = &QueryResultDevicesDeviceInfo{}
 
 // QueryResultDevicesDeviceInfo struct for QueryResultDevicesDeviceInfo
 type QueryResultDevicesDeviceInfo struct {
-	Items []DevicesDeviceInfo `json:"Items,omitempty"`
-	TotalRecordCount *int32 `json:"TotalRecordCount,omitempty"`
+	Items            []DevicesDeviceInfo `json:"Items,omitempty"`
+	TotalRecordCount *int32              `json:"TotalRecordCount,omitempty"`
 }
 
 // NewQueryResultDevicesDeviceInfo instantiates a new QueryResultDevicesDeviceInfo object
@@ -105,7 +105,7 @@ func (o *QueryResultDevicesDeviceInfo) SetTotalRecordCount(v int32) {
 }
 
 func (o QueryResultDevicesDeviceInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -158,5 +158,3 @@ func (v *NullableQueryResultDevicesDeviceInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

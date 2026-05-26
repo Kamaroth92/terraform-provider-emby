@@ -20,13 +20,13 @@ type SyncJobStatus string
 
 // List of SyncJobStatus
 const (
-	SYNCJOBSTATUS_QUEUED SyncJobStatus = "Queued"
-	SYNCJOBSTATUS_CONVERTING SyncJobStatus = "Converting"
-	SYNCJOBSTATUS_READY_TO_TRANSFER SyncJobStatus = "ReadyToTransfer"
-	SYNCJOBSTATUS_TRANSFERRING SyncJobStatus = "Transferring"
-	SYNCJOBSTATUS_COMPLETED SyncJobStatus = "Completed"
+	SYNCJOBSTATUS_QUEUED               SyncJobStatus = "Queued"
+	SYNCJOBSTATUS_CONVERTING           SyncJobStatus = "Converting"
+	SYNCJOBSTATUS_READY_TO_TRANSFER    SyncJobStatus = "ReadyToTransfer"
+	SYNCJOBSTATUS_TRANSFERRING         SyncJobStatus = "Transferring"
+	SYNCJOBSTATUS_COMPLETED            SyncJobStatus = "Completed"
 	SYNCJOBSTATUS_COMPLETED_WITH_ERROR SyncJobStatus = "CompletedWithError"
-	SYNCJOBSTATUS_FAILED SyncJobStatus = "Failed"
+	SYNCJOBSTATUS_FAILED               SyncJobStatus = "Failed"
 )
 
 // All allowed values of SyncJobStatus enum
@@ -118,4 +118,3 @@ func (v *NullableSyncJobStatus) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

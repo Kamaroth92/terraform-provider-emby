@@ -19,11 +19,11 @@ var _ MappedNullable = &ChapterInfo{}
 
 // ChapterInfo struct for ChapterInfo
 type ChapterInfo struct {
-	StartPositionTicks *int64 `json:"StartPositionTicks,omitempty"`
-	Name *string `json:"Name,omitempty"`
-	ImageTag *string `json:"ImageTag,omitempty"`
-	MarkerType *MarkerType `json:"MarkerType,omitempty"`
-	ChapterIndex *int32 `json:"ChapterIndex,omitempty"`
+	StartPositionTicks *int64      `json:"StartPositionTicks,omitempty"`
+	Name               *string     `json:"Name,omitempty"`
+	ImageTag           *string     `json:"ImageTag,omitempty"`
+	MarkerType         *MarkerType `json:"MarkerType,omitempty"`
+	ChapterIndex       *int32      `json:"ChapterIndex,omitempty"`
 }
 
 // NewChapterInfo instantiates a new ChapterInfo object
@@ -204,7 +204,7 @@ func (o *ChapterInfo) SetChapterIndex(v int32) {
 }
 
 func (o ChapterInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -266,5 +266,3 @@ func (v *NullableChapterInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

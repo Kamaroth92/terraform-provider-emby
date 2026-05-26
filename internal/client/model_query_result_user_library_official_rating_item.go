@@ -19,8 +19,8 @@ var _ MappedNullable = &QueryResultUserLibraryOfficialRatingItem{}
 
 // QueryResultUserLibraryOfficialRatingItem struct for QueryResultUserLibraryOfficialRatingItem
 type QueryResultUserLibraryOfficialRatingItem struct {
-	Items []UserLibraryOfficialRatingItem `json:"Items,omitempty"`
-	TotalRecordCount *int32 `json:"TotalRecordCount,omitempty"`
+	Items            []UserLibraryOfficialRatingItem `json:"Items,omitempty"`
+	TotalRecordCount *int32                          `json:"TotalRecordCount,omitempty"`
 }
 
 // NewQueryResultUserLibraryOfficialRatingItem instantiates a new QueryResultUserLibraryOfficialRatingItem object
@@ -105,7 +105,7 @@ func (o *QueryResultUserLibraryOfficialRatingItem) SetTotalRecordCount(v int32) 
 }
 
 func (o QueryResultUserLibraryOfficialRatingItem) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -158,5 +158,3 @@ func (v *NullableQueryResultUserLibraryOfficialRatingItem) UnmarshalJSON(src []b
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

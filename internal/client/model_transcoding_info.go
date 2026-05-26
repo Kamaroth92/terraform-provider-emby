@@ -19,23 +19,23 @@ var _ MappedNullable = &TranscodingInfo{}
 
 // TranscodingInfo struct for TranscodingInfo
 type TranscodingInfo struct {
-	AudioCodec *string `json:"AudioCodec,omitempty"`
-	VideoCodec *string `json:"VideoCodec,omitempty"`
-	SubProtocol *string `json:"SubProtocol,omitempty"`
-	Container *string `json:"Container,omitempty"`
-	IsVideoDirect *bool `json:"IsVideoDirect,omitempty"`
-	IsAudioDirect *bool `json:"IsAudioDirect,omitempty"`
-	Bitrate NullableInt32 `json:"Bitrate,omitempty"`
-	AudioBitrate NullableInt32 `json:"AudioBitrate,omitempty"`
-	VideoBitrate NullableInt32 `json:"VideoBitrate,omitempty"`
-	Framerate NullableFloat32 `json:"Framerate,omitempty"`
-	CompletionPercentage NullableFloat64 `json:"CompletionPercentage,omitempty"`
-	TranscodingPositionTicks NullableFloat64 `json:"TranscodingPositionTicks,omitempty"`
-	TranscodingStartPositionTicks NullableFloat64 `json:"TranscodingStartPositionTicks,omitempty"`
-	Width NullableInt32 `json:"Width,omitempty"`
-	Height NullableInt32 `json:"Height,omitempty"`
-	AudioChannels NullableInt32 `json:"AudioChannels,omitempty"`
-	TranscodeReasons []TranscodeReason `json:"TranscodeReasons,omitempty"`
+	AudioCodec                    *string           `json:"AudioCodec,omitempty"`
+	VideoCodec                    *string           `json:"VideoCodec,omitempty"`
+	SubProtocol                   *string           `json:"SubProtocol,omitempty"`
+	Container                     *string           `json:"Container,omitempty"`
+	IsVideoDirect                 *bool             `json:"IsVideoDirect,omitempty"`
+	IsAudioDirect                 *bool             `json:"IsAudioDirect,omitempty"`
+	Bitrate                       NullableInt32     `json:"Bitrate,omitempty"`
+	AudioBitrate                  NullableInt32     `json:"AudioBitrate,omitempty"`
+	VideoBitrate                  NullableInt32     `json:"VideoBitrate,omitempty"`
+	Framerate                     NullableFloat32   `json:"Framerate,omitempty"`
+	CompletionPercentage          NullableFloat64   `json:"CompletionPercentage,omitempty"`
+	TranscodingPositionTicks      NullableFloat64   `json:"TranscodingPositionTicks,omitempty"`
+	TranscodingStartPositionTicks NullableFloat64   `json:"TranscodingStartPositionTicks,omitempty"`
+	Width                         NullableInt32     `json:"Width,omitempty"`
+	Height                        NullableInt32     `json:"Height,omitempty"`
+	AudioChannels                 NullableInt32     `json:"AudioChannels,omitempty"`
+	TranscodeReasons              []TranscodeReason `json:"TranscodeReasons,omitempty"`
 	// Deprecated, please use ProcessStatistics instead
 	// Deprecated
 	CurrentCpuUsage NullableFloat64 `json:"CurrentCpuUsage,omitempty"`
@@ -44,19 +44,19 @@ type TranscodingInfo struct {
 	AverageCpuUsage NullableFloat64 `json:"AverageCpuUsage,omitempty"`
 	// Deprecated, please use ProcessStatistics instead
 	// Deprecated
-	CpuHistory []TupleDoubleDouble `json:"CpuHistory,omitempty"`
-	ProcessStatistics *ProcessRunMetricsProcessStatistics `json:"ProcessStatistics,omitempty"`
-	CurrentThrottle NullableInt32 `json:"CurrentThrottle,omitempty"`
-	VideoDecoder *string `json:"VideoDecoder,omitempty"`
-	VideoDecoderIsHardware *bool `json:"VideoDecoderIsHardware,omitempty"`
-	VideoDecoderMediaType *string `json:"VideoDecoderMediaType,omitempty"`
-	VideoDecoderHwAccel *string `json:"VideoDecoderHwAccel,omitempty"`
-	VideoEncoder *string `json:"VideoEncoder,omitempty"`
-	VideoEncoderIsHardware *bool `json:"VideoEncoderIsHardware,omitempty"`
-	VideoEncoderMediaType *string `json:"VideoEncoderMediaType,omitempty"`
-	VideoEncoderHwAccel *string `json:"VideoEncoderHwAccel,omitempty"`
-	VideoPipelineInfo []TranscodingVpStepInfo `json:"VideoPipelineInfo,omitempty"`
-	SubtitlePipelineInfos [][]TranscodingVpStepInfo `json:"SubtitlePipelineInfos,omitempty"`
+	CpuHistory             []TupleDoubleDouble                 `json:"CpuHistory,omitempty"`
+	ProcessStatistics      *ProcessRunMetricsProcessStatistics `json:"ProcessStatistics,omitempty"`
+	CurrentThrottle        NullableInt32                       `json:"CurrentThrottle,omitempty"`
+	VideoDecoder           *string                             `json:"VideoDecoder,omitempty"`
+	VideoDecoderIsHardware *bool                               `json:"VideoDecoderIsHardware,omitempty"`
+	VideoDecoderMediaType  *string                             `json:"VideoDecoderMediaType,omitempty"`
+	VideoDecoderHwAccel    *string                             `json:"VideoDecoderHwAccel,omitempty"`
+	VideoEncoder           *string                             `json:"VideoEncoder,omitempty"`
+	VideoEncoderIsHardware *bool                               `json:"VideoEncoderIsHardware,omitempty"`
+	VideoEncoderMediaType  *string                             `json:"VideoEncoderMediaType,omitempty"`
+	VideoEncoderHwAccel    *string                             `json:"VideoEncoderHwAccel,omitempty"`
+	VideoPipelineInfo      []TranscodingVpStepInfo             `json:"VideoPipelineInfo,omitempty"`
+	SubtitlePipelineInfos  [][]TranscodingVpStepInfo           `json:"SubtitlePipelineInfos,omitempty"`
 }
 
 // NewTranscodingInfo instantiates a new TranscodingInfo object
@@ -300,6 +300,7 @@ func (o *TranscodingInfo) HasBitrate() bool {
 func (o *TranscodingInfo) SetBitrate(v int32) {
 	o.Bitrate.Set(&v)
 }
+
 // SetBitrateNil sets the value for Bitrate to be an explicit nil
 func (o *TranscodingInfo) SetBitrateNil() {
 	o.Bitrate.Set(nil)
@@ -342,6 +343,7 @@ func (o *TranscodingInfo) HasAudioBitrate() bool {
 func (o *TranscodingInfo) SetAudioBitrate(v int32) {
 	o.AudioBitrate.Set(&v)
 }
+
 // SetAudioBitrateNil sets the value for AudioBitrate to be an explicit nil
 func (o *TranscodingInfo) SetAudioBitrateNil() {
 	o.AudioBitrate.Set(nil)
@@ -384,6 +386,7 @@ func (o *TranscodingInfo) HasVideoBitrate() bool {
 func (o *TranscodingInfo) SetVideoBitrate(v int32) {
 	o.VideoBitrate.Set(&v)
 }
+
 // SetVideoBitrateNil sets the value for VideoBitrate to be an explicit nil
 func (o *TranscodingInfo) SetVideoBitrateNil() {
 	o.VideoBitrate.Set(nil)
@@ -426,6 +429,7 @@ func (o *TranscodingInfo) HasFramerate() bool {
 func (o *TranscodingInfo) SetFramerate(v float32) {
 	o.Framerate.Set(&v)
 }
+
 // SetFramerateNil sets the value for Framerate to be an explicit nil
 func (o *TranscodingInfo) SetFramerateNil() {
 	o.Framerate.Set(nil)
@@ -468,6 +472,7 @@ func (o *TranscodingInfo) HasCompletionPercentage() bool {
 func (o *TranscodingInfo) SetCompletionPercentage(v float64) {
 	o.CompletionPercentage.Set(&v)
 }
+
 // SetCompletionPercentageNil sets the value for CompletionPercentage to be an explicit nil
 func (o *TranscodingInfo) SetCompletionPercentageNil() {
 	o.CompletionPercentage.Set(nil)
@@ -510,6 +515,7 @@ func (o *TranscodingInfo) HasTranscodingPositionTicks() bool {
 func (o *TranscodingInfo) SetTranscodingPositionTicks(v float64) {
 	o.TranscodingPositionTicks.Set(&v)
 }
+
 // SetTranscodingPositionTicksNil sets the value for TranscodingPositionTicks to be an explicit nil
 func (o *TranscodingInfo) SetTranscodingPositionTicksNil() {
 	o.TranscodingPositionTicks.Set(nil)
@@ -552,6 +558,7 @@ func (o *TranscodingInfo) HasTranscodingStartPositionTicks() bool {
 func (o *TranscodingInfo) SetTranscodingStartPositionTicks(v float64) {
 	o.TranscodingStartPositionTicks.Set(&v)
 }
+
 // SetTranscodingStartPositionTicksNil sets the value for TranscodingStartPositionTicks to be an explicit nil
 func (o *TranscodingInfo) SetTranscodingStartPositionTicksNil() {
 	o.TranscodingStartPositionTicks.Set(nil)
@@ -594,6 +601,7 @@ func (o *TranscodingInfo) HasWidth() bool {
 func (o *TranscodingInfo) SetWidth(v int32) {
 	o.Width.Set(&v)
 }
+
 // SetWidthNil sets the value for Width to be an explicit nil
 func (o *TranscodingInfo) SetWidthNil() {
 	o.Width.Set(nil)
@@ -636,6 +644,7 @@ func (o *TranscodingInfo) HasHeight() bool {
 func (o *TranscodingInfo) SetHeight(v int32) {
 	o.Height.Set(&v)
 }
+
 // SetHeightNil sets the value for Height to be an explicit nil
 func (o *TranscodingInfo) SetHeightNil() {
 	o.Height.Set(nil)
@@ -678,6 +687,7 @@ func (o *TranscodingInfo) HasAudioChannels() bool {
 func (o *TranscodingInfo) SetAudioChannels(v int32) {
 	o.AudioChannels.Set(&v)
 }
+
 // SetAudioChannelsNil sets the value for AudioChannels to be an explicit nil
 func (o *TranscodingInfo) SetAudioChannelsNil() {
 	o.AudioChannels.Set(nil)
@@ -755,6 +765,7 @@ func (o *TranscodingInfo) HasCurrentCpuUsage() bool {
 func (o *TranscodingInfo) SetCurrentCpuUsage(v float64) {
 	o.CurrentCpuUsage.Set(&v)
 }
+
 // SetCurrentCpuUsageNil sets the value for CurrentCpuUsage to be an explicit nil
 func (o *TranscodingInfo) SetCurrentCpuUsageNil() {
 	o.CurrentCpuUsage.Set(nil)
@@ -800,6 +811,7 @@ func (o *TranscodingInfo) HasAverageCpuUsage() bool {
 func (o *TranscodingInfo) SetAverageCpuUsage(v float64) {
 	o.AverageCpuUsage.Set(&v)
 }
+
 // SetAverageCpuUsageNil sets the value for AverageCpuUsage to be an explicit nil
 func (o *TranscodingInfo) SetAverageCpuUsageNil() {
 	o.AverageCpuUsage.Set(nil)
@@ -909,6 +921,7 @@ func (o *TranscodingInfo) HasCurrentThrottle() bool {
 func (o *TranscodingInfo) SetCurrentThrottle(v int32) {
 	o.CurrentThrottle.Set(&v)
 }
+
 // SetCurrentThrottleNil sets the value for CurrentThrottle to be an explicit nil
 func (o *TranscodingInfo) SetCurrentThrottleNil() {
 	o.CurrentThrottle.Set(nil)
@@ -1240,7 +1253,7 @@ func (o *TranscodingInfo) SetSubtitlePipelineInfos(v [][]TranscodingVpStepInfo) 
 }
 
 func (o TranscodingInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -1383,5 +1396,3 @@ func (v *NullableTranscodingInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

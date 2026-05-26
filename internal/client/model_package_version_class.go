@@ -21,8 +21,8 @@ type PackageVersionClass string
 // List of PackageVersionClass
 const (
 	PACKAGEVERSIONCLASS_RELEASE PackageVersionClass = "Release"
-	PACKAGEVERSIONCLASS_BETA PackageVersionClass = "Beta"
-	PACKAGEVERSIONCLASS_DEV PackageVersionClass = "Dev"
+	PACKAGEVERSIONCLASS_BETA    PackageVersionClass = "Beta"
+	PACKAGEVERSIONCLASS_DEV     PackageVersionClass = "Dev"
 )
 
 // All allowed values of PackageVersionClass enum
@@ -110,4 +110,3 @@ func (v *NullablePackageVersionClass) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

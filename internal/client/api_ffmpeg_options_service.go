@@ -19,16 +19,15 @@ import (
 	"os"
 )
 
-
 type FfmpegOptionsServiceAPI interface {
 
 	/*
-	GetEncodingFfmpegoptions Gets the ffmpeg options
+		GetEncodingFfmpegoptions Gets the ffmpeg options
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetEncodingFfmpegoptionsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetEncodingFfmpegoptionsRequest
 	*/
 	GetEncodingFfmpegoptions(ctx context.Context) ApiGetEncodingFfmpegoptionsRequest
 
@@ -37,12 +36,12 @@ type FfmpegOptionsServiceAPI interface {
 	GetEncodingFfmpegoptionsExecute(r ApiGetEncodingFfmpegoptionsRequest) (*EditObjectContainer, *http.Response, error)
 
 	/*
-	PostEncodingFfmpegoptions Updates the ffmpeg options
+		PostEncodingFfmpegoptions Updates the ffmpeg options
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostEncodingFfmpegoptionsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostEncodingFfmpegoptionsRequest
 	*/
 	PostEncodingFfmpegoptions(ctx context.Context) ApiPostEncodingFfmpegoptionsRequest
 
@@ -54,7 +53,7 @@ type FfmpegOptionsServiceAPI interface {
 type FfmpegOptionsServiceAPIService service
 
 type ApiGetEncodingFfmpegoptionsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService FfmpegOptionsServiceAPI
 }
 
@@ -67,24 +66,25 @@ GetEncodingFfmpegoptions Gets the ffmpeg options
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetEncodingFfmpegoptionsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetEncodingFfmpegoptionsRequest
 */
 func (a *FfmpegOptionsServiceAPIService) GetEncodingFfmpegoptions(ctx context.Context) ApiGetEncodingFfmpegoptionsRequest {
 	return ApiGetEncodingFfmpegoptionsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return EditObjectContainer
+//
+//	@return EditObjectContainer
 func (a *FfmpegOptionsServiceAPIService) GetEncodingFfmpegoptionsExecute(r ApiGetEncodingFfmpegoptionsRequest) (*EditObjectContainer, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *EditObjectContainer
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *EditObjectContainer
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "FfmpegOptionsServiceAPIService.GetEncodingFfmpegoptions")
@@ -167,9 +167,9 @@ func (a *FfmpegOptionsServiceAPIService) GetEncodingFfmpegoptionsExecute(r ApiGe
 }
 
 type ApiPostEncodingFfmpegoptionsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService FfmpegOptionsServiceAPI
-	body *os.File
+	body       *os.File
 }
 
 // Binary stream
@@ -187,22 +187,22 @@ PostEncodingFfmpegoptions Updates the ffmpeg options
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostEncodingFfmpegoptionsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostEncodingFfmpegoptionsRequest
 */
 func (a *FfmpegOptionsServiceAPIService) PostEncodingFfmpegoptions(ctx context.Context) ApiPostEncodingFfmpegoptionsRequest {
 	return ApiPostEncodingFfmpegoptionsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *FfmpegOptionsServiceAPIService) PostEncodingFfmpegoptionsExecute(r ApiPostEncodingFfmpegoptionsRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "FfmpegOptionsServiceAPIService.PostEncodingFfmpegoptions")

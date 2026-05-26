@@ -19,17 +19,16 @@ import (
 	"strings"
 )
 
-
 type PackageServiceAPI interface {
 
 	/*
-	DeletePackagesInstallingById Cancels a package installation
+		DeletePackagesInstallingById Cancels a package installation
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Installation Id
-	@return ApiDeletePackagesInstallingByIdRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Installation Id
+		@return ApiDeletePackagesInstallingByIdRequest
 	*/
 	DeletePackagesInstallingById(ctx context.Context, id string) ApiDeletePackagesInstallingByIdRequest
 
@@ -37,12 +36,12 @@ type PackageServiceAPI interface {
 	DeletePackagesInstallingByIdExecute(r ApiDeletePackagesInstallingByIdRequest) (*http.Response, error)
 
 	/*
-	GetPackages Gets available packages
+		GetPackages Gets available packages
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetPackagesRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetPackagesRequest
 	*/
 	GetPackages(ctx context.Context) ApiGetPackagesRequest
 
@@ -51,13 +50,13 @@ type PackageServiceAPI interface {
 	GetPackagesExecute(r ApiGetPackagesRequest) ([]PackageInfo, *http.Response, error)
 
 	/*
-	GetPackagesByName Gets a package, by name or assembly guid
+		GetPackagesByName Gets a package, by name or assembly guid
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param name The name of the package
-	@return ApiGetPackagesByNameRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param name The name of the package
+		@return ApiGetPackagesByNameRequest
 	*/
 	GetPackagesByName(ctx context.Context, name string) ApiGetPackagesByNameRequest
 
@@ -66,12 +65,12 @@ type PackageServiceAPI interface {
 	GetPackagesByNameExecute(r ApiGetPackagesByNameRequest) (*PackageInfo, *http.Response, error)
 
 	/*
-	GetPackagesUpdates Gets available package updates for currently installed packages
+		GetPackagesUpdates Gets available package updates for currently installed packages
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetPackagesUpdatesRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetPackagesUpdatesRequest
 	*/
 	GetPackagesUpdates(ctx context.Context) ApiGetPackagesUpdatesRequest
 
@@ -80,13 +79,13 @@ type PackageServiceAPI interface {
 	GetPackagesUpdatesExecute(r ApiGetPackagesUpdatesRequest) ([]PackageVersionInfo, *http.Response, error)
 
 	/*
-	PostPackagesInstalledByName Installs a package
+		PostPackagesInstalledByName Installs a package
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param name Package name
-	@return ApiPostPackagesInstalledByNameRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param name Package name
+		@return ApiPostPackagesInstalledByNameRequest
 	*/
 	PostPackagesInstalledByName(ctx context.Context, name string) ApiPostPackagesInstalledByNameRequest
 
@@ -94,13 +93,13 @@ type PackageServiceAPI interface {
 	PostPackagesInstalledByNameExecute(r ApiPostPackagesInstalledByNameRequest) (*http.Response, error)
 
 	/*
-	PostPackagesInstallingByIdDelete Cancels a package installation
+		PostPackagesInstallingByIdDelete Cancels a package installation
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Installation Id
-	@return ApiPostPackagesInstallingByIdDeleteRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Installation Id
+		@return ApiPostPackagesInstallingByIdDeleteRequest
 	*/
 	PostPackagesInstallingByIdDelete(ctx context.Context, id string) ApiPostPackagesInstallingByIdDeleteRequest
 
@@ -112,9 +111,9 @@ type PackageServiceAPI interface {
 type PackageServiceAPIService service
 
 type ApiDeletePackagesInstallingByIdRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService PackageServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiDeletePackagesInstallingByIdRequest) Execute() (*http.Response, error) {
@@ -126,24 +125,24 @@ DeletePackagesInstallingById Cancels a package installation
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Installation Id
- @return ApiDeletePackagesInstallingByIdRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Installation Id
+	@return ApiDeletePackagesInstallingByIdRequest
 */
 func (a *PackageServiceAPIService) DeletePackagesInstallingById(ctx context.Context, id string) ApiDeletePackagesInstallingByIdRequest {
 	return ApiDeletePackagesInstallingByIdRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *PackageServiceAPIService) DeletePackagesInstallingByIdExecute(r ApiDeletePackagesInstallingByIdRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodDelete
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodDelete
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PackageServiceAPIService.DeletePackagesInstallingById")
@@ -218,12 +217,12 @@ func (a *PackageServiceAPIService) DeletePackagesInstallingByIdExecute(r ApiDele
 }
 
 type ApiGetPackagesRequest struct {
-	ctx context.Context
-	ApiService PackageServiceAPI
-	packageType *string
+	ctx           context.Context
+	ApiService    PackageServiceAPI
+	packageType   *string
 	targetSystems *string
-	isPremium *bool
-	isAdult *bool
+	isPremium     *bool
+	isAdult       *bool
 }
 
 // Optional package type filter (System/UserInstalled)
@@ -259,24 +258,25 @@ GetPackages Gets available packages
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetPackagesRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetPackagesRequest
 */
 func (a *PackageServiceAPIService) GetPackages(ctx context.Context) ApiGetPackagesRequest {
 	return ApiGetPackagesRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return []PackageInfo
+//
+//	@return []PackageInfo
 func (a *PackageServiceAPIService) GetPackagesExecute(r ApiGetPackagesRequest) ([]PackageInfo, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []PackageInfo
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue []PackageInfo
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PackageServiceAPIService.GetPackages")
@@ -371,9 +371,9 @@ func (a *PackageServiceAPIService) GetPackagesExecute(r ApiGetPackagesRequest) (
 }
 
 type ApiGetPackagesByNameRequest struct {
-	ctx context.Context
-	ApiService PackageServiceAPI
-	name string
+	ctx          context.Context
+	ApiService   PackageServiceAPI
+	name         string
 	assemblyGuid *string
 }
 
@@ -392,26 +392,27 @@ GetPackagesByName Gets a package, by name or assembly guid
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param name The name of the package
- @return ApiGetPackagesByNameRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param name The name of the package
+	@return ApiGetPackagesByNameRequest
 */
 func (a *PackageServiceAPIService) GetPackagesByName(ctx context.Context, name string) ApiGetPackagesByNameRequest {
 	return ApiGetPackagesByNameRequest{
 		ApiService: a,
-		ctx: ctx,
-		name: name,
+		ctx:        ctx,
+		name:       name,
 	}
 }
 
 // Execute executes the request
-//  @return PackageInfo
+//
+//	@return PackageInfo
 func (a *PackageServiceAPIService) GetPackagesByNameExecute(r ApiGetPackagesByNameRequest) (*PackageInfo, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *PackageInfo
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *PackageInfo
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PackageServiceAPIService.GetPackagesByName")
@@ -498,8 +499,8 @@ func (a *PackageServiceAPIService) GetPackagesByNameExecute(r ApiGetPackagesByNa
 }
 
 type ApiGetPackagesUpdatesRequest struct {
-	ctx context.Context
-	ApiService PackageServiceAPI
+	ctx         context.Context
+	ApiService  PackageServiceAPI
 	packageType *string
 }
 
@@ -518,24 +519,25 @@ GetPackagesUpdates Gets available package updates for currently installed packag
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetPackagesUpdatesRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetPackagesUpdatesRequest
 */
 func (a *PackageServiceAPIService) GetPackagesUpdates(ctx context.Context) ApiGetPackagesUpdatesRequest {
 	return ApiGetPackagesUpdatesRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return []PackageVersionInfo
+//
+//	@return []PackageVersionInfo
 func (a *PackageServiceAPIService) GetPackagesUpdatesExecute(r ApiGetPackagesUpdatesRequest) ([]PackageVersionInfo, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []PackageVersionInfo
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue []PackageVersionInfo
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PackageServiceAPIService.GetPackagesUpdates")
@@ -622,12 +624,12 @@ func (a *PackageServiceAPIService) GetPackagesUpdatesExecute(r ApiGetPackagesUpd
 }
 
 type ApiPostPackagesInstalledByNameRequest struct {
-	ctx context.Context
-	ApiService PackageServiceAPI
-	name string
+	ctx          context.Context
+	ApiService   PackageServiceAPI
+	name         string
 	assemblyGuid *string
-	version *string
-	updateClass *PackageVersionClass
+	version      *string
+	updateClass  *PackageVersionClass
 }
 
 // Guid of the associated assembly
@@ -657,24 +659,24 @@ PostPackagesInstalledByName Installs a package
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param name Package name
- @return ApiPostPackagesInstalledByNameRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param name Package name
+	@return ApiPostPackagesInstalledByNameRequest
 */
 func (a *PackageServiceAPIService) PostPackagesInstalledByName(ctx context.Context, name string) ApiPostPackagesInstalledByNameRequest {
 	return ApiPostPackagesInstalledByNameRequest{
 		ApiService: a,
-		ctx: ctx,
-		name: name,
+		ctx:        ctx,
+		name:       name,
 	}
 }
 
 // Execute executes the request
 func (a *PackageServiceAPIService) PostPackagesInstalledByNameExecute(r ApiPostPackagesInstalledByNameRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PackageServiceAPIService.PostPackagesInstalledByName")
@@ -758,9 +760,9 @@ func (a *PackageServiceAPIService) PostPackagesInstalledByNameExecute(r ApiPostP
 }
 
 type ApiPostPackagesInstallingByIdDeleteRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService PackageServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiPostPackagesInstallingByIdDeleteRequest) Execute() (*http.Response, error) {
@@ -772,24 +774,24 @@ PostPackagesInstallingByIdDelete Cancels a package installation
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Installation Id
- @return ApiPostPackagesInstallingByIdDeleteRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Installation Id
+	@return ApiPostPackagesInstallingByIdDeleteRequest
 */
 func (a *PackageServiceAPIService) PostPackagesInstallingByIdDelete(ctx context.Context, id string) ApiPostPackagesInstallingByIdDeleteRequest {
 	return ApiPostPackagesInstallingByIdDeleteRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *PackageServiceAPIService) PostPackagesInstallingByIdDeleteExecute(r ApiPostPackagesInstallingByIdDeleteRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PackageServiceAPIService.PostPackagesInstallingByIdDelete")

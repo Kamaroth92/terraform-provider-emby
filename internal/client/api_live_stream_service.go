@@ -19,18 +19,17 @@ import (
 	"strings"
 )
 
-
 type LiveStreamServiceAPI interface {
 
 	/*
-	GetLivetvLiverecordingsByIdHlsBySegment Gets a live recording
+		GetLivetvLiverecordingsByIdHlsBySegment Gets a live recording
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@param segment
-	@return ApiGetLivetvLiverecordingsByIdHlsBySegmentRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id
+		@param segment
+		@return ApiGetLivetvLiverecordingsByIdHlsBySegmentRequest
 	*/
 	GetLivetvLiverecordingsByIdHlsBySegment(ctx context.Context, id string, segment string) ApiGetLivetvLiverecordingsByIdHlsBySegmentRequest
 
@@ -38,13 +37,13 @@ type LiveStreamServiceAPI interface {
 	GetLivetvLiverecordingsByIdHlsBySegmentExecute(r ApiGetLivetvLiverecordingsByIdHlsBySegmentRequest) (*http.Response, error)
 
 	/*
-	GetLivetvLiverecordingsByIdHlsLiveM3u8 Gets a live recording
+		GetLivetvLiverecordingsByIdHlsLiveM3u8 Gets a live recording
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiGetLivetvLiverecordingsByIdHlsLiveM3u8Request
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id
+		@return ApiGetLivetvLiverecordingsByIdHlsLiveM3u8Request
 	*/
 	GetLivetvLiverecordingsByIdHlsLiveM3u8(ctx context.Context, id string) ApiGetLivetvLiverecordingsByIdHlsLiveM3u8Request
 
@@ -52,13 +51,13 @@ type LiveStreamServiceAPI interface {
 	GetLivetvLiverecordingsByIdHlsLiveM3u8Execute(r ApiGetLivetvLiverecordingsByIdHlsLiveM3u8Request) (*http.Response, error)
 
 	/*
-	GetLivetvLiverecordingsByIdHlsMasterM3u8 Gets a live recording
+		GetLivetvLiverecordingsByIdHlsMasterM3u8 Gets a live recording
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiGetLivetvLiverecordingsByIdHlsMasterM3u8Request
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id
+		@return ApiGetLivetvLiverecordingsByIdHlsMasterM3u8Request
 	*/
 	GetLivetvLiverecordingsByIdHlsMasterM3u8(ctx context.Context, id string) ApiGetLivetvLiverecordingsByIdHlsMasterM3u8Request
 
@@ -66,13 +65,13 @@ type LiveStreamServiceAPI interface {
 	GetLivetvLiverecordingsByIdHlsMasterM3u8Execute(r ApiGetLivetvLiverecordingsByIdHlsMasterM3u8Request) (*http.Response, error)
 
 	/*
-	GetLivetvLiverecordingsByIdStream Gets a live tv channel
+		GetLivetvLiverecordingsByIdStream Gets a live tv channel
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiGetLivetvLiverecordingsByIdStreamRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id
+		@return ApiGetLivetvLiverecordingsByIdStreamRequest
 	*/
 	GetLivetvLiverecordingsByIdStream(ctx context.Context, id string) ApiGetLivetvLiverecordingsByIdStreamRequest
 
@@ -80,14 +79,14 @@ type LiveStreamServiceAPI interface {
 	GetLivetvLiverecordingsByIdStreamExecute(r ApiGetLivetvLiverecordingsByIdStreamRequest) (*http.Response, error)
 
 	/*
-	GetLivetvLivestreamfilesByIdHlsBySegment Gets a live tv channel
+		GetLivetvLivestreamfilesByIdHlsBySegment Gets a live tv channel
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@param segment
-	@return ApiGetLivetvLivestreamfilesByIdHlsBySegmentRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id
+		@param segment
+		@return ApiGetLivetvLivestreamfilesByIdHlsBySegmentRequest
 	*/
 	GetLivetvLivestreamfilesByIdHlsBySegment(ctx context.Context, id string, segment string) ApiGetLivetvLivestreamfilesByIdHlsBySegmentRequest
 
@@ -95,13 +94,13 @@ type LiveStreamServiceAPI interface {
 	GetLivetvLivestreamfilesByIdHlsBySegmentExecute(r ApiGetLivetvLivestreamfilesByIdHlsBySegmentRequest) (*http.Response, error)
 
 	/*
-	GetLivetvLivestreamfilesByIdHlsLiveM3u8 Gets a live tv channel
+		GetLivetvLivestreamfilesByIdHlsLiveM3u8 Gets a live tv channel
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiGetLivetvLivestreamfilesByIdHlsLiveM3u8Request
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id
+		@return ApiGetLivetvLivestreamfilesByIdHlsLiveM3u8Request
 	*/
 	GetLivetvLivestreamfilesByIdHlsLiveM3u8(ctx context.Context, id string) ApiGetLivetvLivestreamfilesByIdHlsLiveM3u8Request
 
@@ -109,13 +108,13 @@ type LiveStreamServiceAPI interface {
 	GetLivetvLivestreamfilesByIdHlsLiveM3u8Execute(r ApiGetLivetvLivestreamfilesByIdHlsLiveM3u8Request) (*http.Response, error)
 
 	/*
-	GetLivetvLivestreamfilesByIdHlsMasterM3u8 Gets a live tv channel
+		GetLivetvLivestreamfilesByIdHlsMasterM3u8 Gets a live tv channel
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiGetLivetvLivestreamfilesByIdHlsMasterM3u8Request
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id
+		@return ApiGetLivetvLivestreamfilesByIdHlsMasterM3u8Request
 	*/
 	GetLivetvLivestreamfilesByIdHlsMasterM3u8(ctx context.Context, id string) ApiGetLivetvLivestreamfilesByIdHlsMasterM3u8Request
 
@@ -123,14 +122,14 @@ type LiveStreamServiceAPI interface {
 	GetLivetvLivestreamfilesByIdHlsMasterM3u8Execute(r ApiGetLivetvLivestreamfilesByIdHlsMasterM3u8Request) (*http.Response, error)
 
 	/*
-	GetLivetvLivestreamfilesByIdStreamByContainer Gets a live tv channel
+		GetLivetvLivestreamfilesByIdStreamByContainer Gets a live tv channel
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@param container
-	@return ApiGetLivetvLivestreamfilesByIdStreamByContainerRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id
+		@param container
+		@return ApiGetLivetvLivestreamfilesByIdStreamByContainerRequest
 	*/
 	GetLivetvLivestreamfilesByIdStreamByContainer(ctx context.Context, id string, container string) ApiGetLivetvLivestreamfilesByIdStreamByContainerRequest
 
@@ -138,14 +137,14 @@ type LiveStreamServiceAPI interface {
 	GetLivetvLivestreamfilesByIdStreamByContainerExecute(r ApiGetLivetvLivestreamfilesByIdStreamByContainerRequest) (*http.Response, error)
 
 	/*
-	HeadLivetvLiverecordingsByIdHlsBySegment Gets a live recording
+		HeadLivetvLiverecordingsByIdHlsBySegment Gets a live recording
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@param segment
-	@return ApiHeadLivetvLiverecordingsByIdHlsBySegmentRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id
+		@param segment
+		@return ApiHeadLivetvLiverecordingsByIdHlsBySegmentRequest
 	*/
 	HeadLivetvLiverecordingsByIdHlsBySegment(ctx context.Context, id string, segment string) ApiHeadLivetvLiverecordingsByIdHlsBySegmentRequest
 
@@ -153,13 +152,13 @@ type LiveStreamServiceAPI interface {
 	HeadLivetvLiverecordingsByIdHlsBySegmentExecute(r ApiHeadLivetvLiverecordingsByIdHlsBySegmentRequest) (*http.Response, error)
 
 	/*
-	HeadLivetvLiverecordingsByIdHlsLiveM3u8 Gets a live recording
+		HeadLivetvLiverecordingsByIdHlsLiveM3u8 Gets a live recording
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiHeadLivetvLiverecordingsByIdHlsLiveM3u8Request
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id
+		@return ApiHeadLivetvLiverecordingsByIdHlsLiveM3u8Request
 	*/
 	HeadLivetvLiverecordingsByIdHlsLiveM3u8(ctx context.Context, id string) ApiHeadLivetvLiverecordingsByIdHlsLiveM3u8Request
 
@@ -167,13 +166,13 @@ type LiveStreamServiceAPI interface {
 	HeadLivetvLiverecordingsByIdHlsLiveM3u8Execute(r ApiHeadLivetvLiverecordingsByIdHlsLiveM3u8Request) (*http.Response, error)
 
 	/*
-	HeadLivetvLiverecordingsByIdHlsMasterM3u8 Gets a live recording
+		HeadLivetvLiverecordingsByIdHlsMasterM3u8 Gets a live recording
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiHeadLivetvLiverecordingsByIdHlsMasterM3u8Request
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id
+		@return ApiHeadLivetvLiverecordingsByIdHlsMasterM3u8Request
 	*/
 	HeadLivetvLiverecordingsByIdHlsMasterM3u8(ctx context.Context, id string) ApiHeadLivetvLiverecordingsByIdHlsMasterM3u8Request
 
@@ -181,14 +180,14 @@ type LiveStreamServiceAPI interface {
 	HeadLivetvLiverecordingsByIdHlsMasterM3u8Execute(r ApiHeadLivetvLiverecordingsByIdHlsMasterM3u8Request) (*http.Response, error)
 
 	/*
-	HeadLivetvLivestreamfilesByIdHlsBySegment Gets a live tv channel
+		HeadLivetvLivestreamfilesByIdHlsBySegment Gets a live tv channel
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@param segment
-	@return ApiHeadLivetvLivestreamfilesByIdHlsBySegmentRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id
+		@param segment
+		@return ApiHeadLivetvLivestreamfilesByIdHlsBySegmentRequest
 	*/
 	HeadLivetvLivestreamfilesByIdHlsBySegment(ctx context.Context, id string, segment string) ApiHeadLivetvLivestreamfilesByIdHlsBySegmentRequest
 
@@ -196,13 +195,13 @@ type LiveStreamServiceAPI interface {
 	HeadLivetvLivestreamfilesByIdHlsBySegmentExecute(r ApiHeadLivetvLivestreamfilesByIdHlsBySegmentRequest) (*http.Response, error)
 
 	/*
-	HeadLivetvLivestreamfilesByIdHlsLiveM3u8 Gets a live tv channel
+		HeadLivetvLivestreamfilesByIdHlsLiveM3u8 Gets a live tv channel
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiHeadLivetvLivestreamfilesByIdHlsLiveM3u8Request
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id
+		@return ApiHeadLivetvLivestreamfilesByIdHlsLiveM3u8Request
 	*/
 	HeadLivetvLivestreamfilesByIdHlsLiveM3u8(ctx context.Context, id string) ApiHeadLivetvLivestreamfilesByIdHlsLiveM3u8Request
 
@@ -210,13 +209,13 @@ type LiveStreamServiceAPI interface {
 	HeadLivetvLivestreamfilesByIdHlsLiveM3u8Execute(r ApiHeadLivetvLivestreamfilesByIdHlsLiveM3u8Request) (*http.Response, error)
 
 	/*
-	HeadLivetvLivestreamfilesByIdHlsMasterM3u8 Gets a live tv channel
+		HeadLivetvLivestreamfilesByIdHlsMasterM3u8 Gets a live tv channel
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiHeadLivetvLivestreamfilesByIdHlsMasterM3u8Request
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id
+		@return ApiHeadLivetvLivestreamfilesByIdHlsMasterM3u8Request
 	*/
 	HeadLivetvLivestreamfilesByIdHlsMasterM3u8(ctx context.Context, id string) ApiHeadLivetvLivestreamfilesByIdHlsMasterM3u8Request
 
@@ -228,10 +227,10 @@ type LiveStreamServiceAPI interface {
 type LiveStreamServiceAPIService service
 
 type ApiGetLivetvLiverecordingsByIdHlsBySegmentRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveStreamServiceAPI
-	id string
-	segment string
+	id         string
+	segment    string
 }
 
 func (r ApiGetLivetvLiverecordingsByIdHlsBySegmentRequest) Execute() (*http.Response, error) {
@@ -243,26 +242,26 @@ GetLivetvLiverecordingsByIdHlsBySegment Gets a live recording
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id
- @param segment
- @return ApiGetLivetvLiverecordingsByIdHlsBySegmentRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id
+	@param segment
+	@return ApiGetLivetvLiverecordingsByIdHlsBySegmentRequest
 */
 func (a *LiveStreamServiceAPIService) GetLivetvLiverecordingsByIdHlsBySegment(ctx context.Context, id string, segment string) ApiGetLivetvLiverecordingsByIdHlsBySegmentRequest {
 	return ApiGetLivetvLiverecordingsByIdHlsBySegmentRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
-		segment: segment,
+		ctx:        ctx,
+		id:         id,
+		segment:    segment,
 	}
 }
 
 // Execute executes the request
 func (a *LiveStreamServiceAPIService) GetLivetvLiverecordingsByIdHlsBySegmentExecute(r ApiGetLivetvLiverecordingsByIdHlsBySegmentRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveStreamServiceAPIService.GetLivetvLiverecordingsByIdHlsBySegment")
@@ -338,9 +337,9 @@ func (a *LiveStreamServiceAPIService) GetLivetvLiverecordingsByIdHlsBySegmentExe
 }
 
 type ApiGetLivetvLiverecordingsByIdHlsLiveM3u8Request struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveStreamServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiGetLivetvLiverecordingsByIdHlsLiveM3u8Request) Execute() (*http.Response, error) {
@@ -352,24 +351,24 @@ GetLivetvLiverecordingsByIdHlsLiveM3u8 Gets a live recording
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id
- @return ApiGetLivetvLiverecordingsByIdHlsLiveM3u8Request
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id
+	@return ApiGetLivetvLiverecordingsByIdHlsLiveM3u8Request
 */
 func (a *LiveStreamServiceAPIService) GetLivetvLiverecordingsByIdHlsLiveM3u8(ctx context.Context, id string) ApiGetLivetvLiverecordingsByIdHlsLiveM3u8Request {
 	return ApiGetLivetvLiverecordingsByIdHlsLiveM3u8Request{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *LiveStreamServiceAPIService) GetLivetvLiverecordingsByIdHlsLiveM3u8Execute(r ApiGetLivetvLiverecordingsByIdHlsLiveM3u8Request) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveStreamServiceAPIService.GetLivetvLiverecordingsByIdHlsLiveM3u8")
@@ -444,9 +443,9 @@ func (a *LiveStreamServiceAPIService) GetLivetvLiverecordingsByIdHlsLiveM3u8Exec
 }
 
 type ApiGetLivetvLiverecordingsByIdHlsMasterM3u8Request struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveStreamServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiGetLivetvLiverecordingsByIdHlsMasterM3u8Request) Execute() (*http.Response, error) {
@@ -458,24 +457,24 @@ GetLivetvLiverecordingsByIdHlsMasterM3u8 Gets a live recording
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id
- @return ApiGetLivetvLiverecordingsByIdHlsMasterM3u8Request
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id
+	@return ApiGetLivetvLiverecordingsByIdHlsMasterM3u8Request
 */
 func (a *LiveStreamServiceAPIService) GetLivetvLiverecordingsByIdHlsMasterM3u8(ctx context.Context, id string) ApiGetLivetvLiverecordingsByIdHlsMasterM3u8Request {
 	return ApiGetLivetvLiverecordingsByIdHlsMasterM3u8Request{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *LiveStreamServiceAPIService) GetLivetvLiverecordingsByIdHlsMasterM3u8Execute(r ApiGetLivetvLiverecordingsByIdHlsMasterM3u8Request) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveStreamServiceAPIService.GetLivetvLiverecordingsByIdHlsMasterM3u8")
@@ -550,9 +549,9 @@ func (a *LiveStreamServiceAPIService) GetLivetvLiverecordingsByIdHlsMasterM3u8Ex
 }
 
 type ApiGetLivetvLiverecordingsByIdStreamRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveStreamServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiGetLivetvLiverecordingsByIdStreamRequest) Execute() (*http.Response, error) {
@@ -564,24 +563,24 @@ GetLivetvLiverecordingsByIdStream Gets a live tv channel
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id
- @return ApiGetLivetvLiverecordingsByIdStreamRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id
+	@return ApiGetLivetvLiverecordingsByIdStreamRequest
 */
 func (a *LiveStreamServiceAPIService) GetLivetvLiverecordingsByIdStream(ctx context.Context, id string) ApiGetLivetvLiverecordingsByIdStreamRequest {
 	return ApiGetLivetvLiverecordingsByIdStreamRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *LiveStreamServiceAPIService) GetLivetvLiverecordingsByIdStreamExecute(r ApiGetLivetvLiverecordingsByIdStreamRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveStreamServiceAPIService.GetLivetvLiverecordingsByIdStream")
@@ -656,10 +655,10 @@ func (a *LiveStreamServiceAPIService) GetLivetvLiverecordingsByIdStreamExecute(r
 }
 
 type ApiGetLivetvLivestreamfilesByIdHlsBySegmentRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveStreamServiceAPI
-	id string
-	segment string
+	id         string
+	segment    string
 }
 
 func (r ApiGetLivetvLivestreamfilesByIdHlsBySegmentRequest) Execute() (*http.Response, error) {
@@ -671,26 +670,26 @@ GetLivetvLivestreamfilesByIdHlsBySegment Gets a live tv channel
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id
- @param segment
- @return ApiGetLivetvLivestreamfilesByIdHlsBySegmentRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id
+	@param segment
+	@return ApiGetLivetvLivestreamfilesByIdHlsBySegmentRequest
 */
 func (a *LiveStreamServiceAPIService) GetLivetvLivestreamfilesByIdHlsBySegment(ctx context.Context, id string, segment string) ApiGetLivetvLivestreamfilesByIdHlsBySegmentRequest {
 	return ApiGetLivetvLivestreamfilesByIdHlsBySegmentRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
-		segment: segment,
+		ctx:        ctx,
+		id:         id,
+		segment:    segment,
 	}
 }
 
 // Execute executes the request
 func (a *LiveStreamServiceAPIService) GetLivetvLivestreamfilesByIdHlsBySegmentExecute(r ApiGetLivetvLivestreamfilesByIdHlsBySegmentRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveStreamServiceAPIService.GetLivetvLivestreamfilesByIdHlsBySegment")
@@ -766,9 +765,9 @@ func (a *LiveStreamServiceAPIService) GetLivetvLivestreamfilesByIdHlsBySegmentEx
 }
 
 type ApiGetLivetvLivestreamfilesByIdHlsLiveM3u8Request struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveStreamServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiGetLivetvLivestreamfilesByIdHlsLiveM3u8Request) Execute() (*http.Response, error) {
@@ -780,24 +779,24 @@ GetLivetvLivestreamfilesByIdHlsLiveM3u8 Gets a live tv channel
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id
- @return ApiGetLivetvLivestreamfilesByIdHlsLiveM3u8Request
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id
+	@return ApiGetLivetvLivestreamfilesByIdHlsLiveM3u8Request
 */
 func (a *LiveStreamServiceAPIService) GetLivetvLivestreamfilesByIdHlsLiveM3u8(ctx context.Context, id string) ApiGetLivetvLivestreamfilesByIdHlsLiveM3u8Request {
 	return ApiGetLivetvLivestreamfilesByIdHlsLiveM3u8Request{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *LiveStreamServiceAPIService) GetLivetvLivestreamfilesByIdHlsLiveM3u8Execute(r ApiGetLivetvLivestreamfilesByIdHlsLiveM3u8Request) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveStreamServiceAPIService.GetLivetvLivestreamfilesByIdHlsLiveM3u8")
@@ -872,9 +871,9 @@ func (a *LiveStreamServiceAPIService) GetLivetvLivestreamfilesByIdHlsLiveM3u8Exe
 }
 
 type ApiGetLivetvLivestreamfilesByIdHlsMasterM3u8Request struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveStreamServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiGetLivetvLivestreamfilesByIdHlsMasterM3u8Request) Execute() (*http.Response, error) {
@@ -886,24 +885,24 @@ GetLivetvLivestreamfilesByIdHlsMasterM3u8 Gets a live tv channel
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id
- @return ApiGetLivetvLivestreamfilesByIdHlsMasterM3u8Request
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id
+	@return ApiGetLivetvLivestreamfilesByIdHlsMasterM3u8Request
 */
 func (a *LiveStreamServiceAPIService) GetLivetvLivestreamfilesByIdHlsMasterM3u8(ctx context.Context, id string) ApiGetLivetvLivestreamfilesByIdHlsMasterM3u8Request {
 	return ApiGetLivetvLivestreamfilesByIdHlsMasterM3u8Request{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *LiveStreamServiceAPIService) GetLivetvLivestreamfilesByIdHlsMasterM3u8Execute(r ApiGetLivetvLivestreamfilesByIdHlsMasterM3u8Request) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveStreamServiceAPIService.GetLivetvLivestreamfilesByIdHlsMasterM3u8")
@@ -978,10 +977,10 @@ func (a *LiveStreamServiceAPIService) GetLivetvLivestreamfilesByIdHlsMasterM3u8E
 }
 
 type ApiGetLivetvLivestreamfilesByIdStreamByContainerRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveStreamServiceAPI
-	id string
-	container string
+	id         string
+	container  string
 }
 
 func (r ApiGetLivetvLivestreamfilesByIdStreamByContainerRequest) Execute() (*http.Response, error) {
@@ -993,26 +992,26 @@ GetLivetvLivestreamfilesByIdStreamByContainer Gets a live tv channel
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id
- @param container
- @return ApiGetLivetvLivestreamfilesByIdStreamByContainerRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id
+	@param container
+	@return ApiGetLivetvLivestreamfilesByIdStreamByContainerRequest
 */
 func (a *LiveStreamServiceAPIService) GetLivetvLivestreamfilesByIdStreamByContainer(ctx context.Context, id string, container string) ApiGetLivetvLivestreamfilesByIdStreamByContainerRequest {
 	return ApiGetLivetvLivestreamfilesByIdStreamByContainerRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
-		container: container,
+		ctx:        ctx,
+		id:         id,
+		container:  container,
 	}
 }
 
 // Execute executes the request
 func (a *LiveStreamServiceAPIService) GetLivetvLivestreamfilesByIdStreamByContainerExecute(r ApiGetLivetvLivestreamfilesByIdStreamByContainerRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveStreamServiceAPIService.GetLivetvLivestreamfilesByIdStreamByContainer")
@@ -1088,10 +1087,10 @@ func (a *LiveStreamServiceAPIService) GetLivetvLivestreamfilesByIdStreamByContai
 }
 
 type ApiHeadLivetvLiverecordingsByIdHlsBySegmentRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveStreamServiceAPI
-	id string
-	segment string
+	id         string
+	segment    string
 }
 
 func (r ApiHeadLivetvLiverecordingsByIdHlsBySegmentRequest) Execute() (*http.Response, error) {
@@ -1103,26 +1102,26 @@ HeadLivetvLiverecordingsByIdHlsBySegment Gets a live recording
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id
- @param segment
- @return ApiHeadLivetvLiverecordingsByIdHlsBySegmentRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id
+	@param segment
+	@return ApiHeadLivetvLiverecordingsByIdHlsBySegmentRequest
 */
 func (a *LiveStreamServiceAPIService) HeadLivetvLiverecordingsByIdHlsBySegment(ctx context.Context, id string, segment string) ApiHeadLivetvLiverecordingsByIdHlsBySegmentRequest {
 	return ApiHeadLivetvLiverecordingsByIdHlsBySegmentRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
-		segment: segment,
+		ctx:        ctx,
+		id:         id,
+		segment:    segment,
 	}
 }
 
 // Execute executes the request
 func (a *LiveStreamServiceAPIService) HeadLivetvLiverecordingsByIdHlsBySegmentExecute(r ApiHeadLivetvLiverecordingsByIdHlsBySegmentRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodHead
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodHead
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveStreamServiceAPIService.HeadLivetvLiverecordingsByIdHlsBySegment")
@@ -1198,9 +1197,9 @@ func (a *LiveStreamServiceAPIService) HeadLivetvLiverecordingsByIdHlsBySegmentEx
 }
 
 type ApiHeadLivetvLiverecordingsByIdHlsLiveM3u8Request struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveStreamServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiHeadLivetvLiverecordingsByIdHlsLiveM3u8Request) Execute() (*http.Response, error) {
@@ -1212,24 +1211,24 @@ HeadLivetvLiverecordingsByIdHlsLiveM3u8 Gets a live recording
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id
- @return ApiHeadLivetvLiverecordingsByIdHlsLiveM3u8Request
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id
+	@return ApiHeadLivetvLiverecordingsByIdHlsLiveM3u8Request
 */
 func (a *LiveStreamServiceAPIService) HeadLivetvLiverecordingsByIdHlsLiveM3u8(ctx context.Context, id string) ApiHeadLivetvLiverecordingsByIdHlsLiveM3u8Request {
 	return ApiHeadLivetvLiverecordingsByIdHlsLiveM3u8Request{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *LiveStreamServiceAPIService) HeadLivetvLiverecordingsByIdHlsLiveM3u8Execute(r ApiHeadLivetvLiverecordingsByIdHlsLiveM3u8Request) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodHead
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodHead
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveStreamServiceAPIService.HeadLivetvLiverecordingsByIdHlsLiveM3u8")
@@ -1304,9 +1303,9 @@ func (a *LiveStreamServiceAPIService) HeadLivetvLiverecordingsByIdHlsLiveM3u8Exe
 }
 
 type ApiHeadLivetvLiverecordingsByIdHlsMasterM3u8Request struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveStreamServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiHeadLivetvLiverecordingsByIdHlsMasterM3u8Request) Execute() (*http.Response, error) {
@@ -1318,24 +1317,24 @@ HeadLivetvLiverecordingsByIdHlsMasterM3u8 Gets a live recording
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id
- @return ApiHeadLivetvLiverecordingsByIdHlsMasterM3u8Request
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id
+	@return ApiHeadLivetvLiverecordingsByIdHlsMasterM3u8Request
 */
 func (a *LiveStreamServiceAPIService) HeadLivetvLiverecordingsByIdHlsMasterM3u8(ctx context.Context, id string) ApiHeadLivetvLiverecordingsByIdHlsMasterM3u8Request {
 	return ApiHeadLivetvLiverecordingsByIdHlsMasterM3u8Request{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *LiveStreamServiceAPIService) HeadLivetvLiverecordingsByIdHlsMasterM3u8Execute(r ApiHeadLivetvLiverecordingsByIdHlsMasterM3u8Request) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodHead
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodHead
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveStreamServiceAPIService.HeadLivetvLiverecordingsByIdHlsMasterM3u8")
@@ -1410,10 +1409,10 @@ func (a *LiveStreamServiceAPIService) HeadLivetvLiverecordingsByIdHlsMasterM3u8E
 }
 
 type ApiHeadLivetvLivestreamfilesByIdHlsBySegmentRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveStreamServiceAPI
-	id string
-	segment string
+	id         string
+	segment    string
 }
 
 func (r ApiHeadLivetvLivestreamfilesByIdHlsBySegmentRequest) Execute() (*http.Response, error) {
@@ -1425,26 +1424,26 @@ HeadLivetvLivestreamfilesByIdHlsBySegment Gets a live tv channel
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id
- @param segment
- @return ApiHeadLivetvLivestreamfilesByIdHlsBySegmentRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id
+	@param segment
+	@return ApiHeadLivetvLivestreamfilesByIdHlsBySegmentRequest
 */
 func (a *LiveStreamServiceAPIService) HeadLivetvLivestreamfilesByIdHlsBySegment(ctx context.Context, id string, segment string) ApiHeadLivetvLivestreamfilesByIdHlsBySegmentRequest {
 	return ApiHeadLivetvLivestreamfilesByIdHlsBySegmentRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
-		segment: segment,
+		ctx:        ctx,
+		id:         id,
+		segment:    segment,
 	}
 }
 
 // Execute executes the request
 func (a *LiveStreamServiceAPIService) HeadLivetvLivestreamfilesByIdHlsBySegmentExecute(r ApiHeadLivetvLivestreamfilesByIdHlsBySegmentRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodHead
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodHead
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveStreamServiceAPIService.HeadLivetvLivestreamfilesByIdHlsBySegment")
@@ -1520,9 +1519,9 @@ func (a *LiveStreamServiceAPIService) HeadLivetvLivestreamfilesByIdHlsBySegmentE
 }
 
 type ApiHeadLivetvLivestreamfilesByIdHlsLiveM3u8Request struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveStreamServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiHeadLivetvLivestreamfilesByIdHlsLiveM3u8Request) Execute() (*http.Response, error) {
@@ -1534,24 +1533,24 @@ HeadLivetvLivestreamfilesByIdHlsLiveM3u8 Gets a live tv channel
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id
- @return ApiHeadLivetvLivestreamfilesByIdHlsLiveM3u8Request
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id
+	@return ApiHeadLivetvLivestreamfilesByIdHlsLiveM3u8Request
 */
 func (a *LiveStreamServiceAPIService) HeadLivetvLivestreamfilesByIdHlsLiveM3u8(ctx context.Context, id string) ApiHeadLivetvLivestreamfilesByIdHlsLiveM3u8Request {
 	return ApiHeadLivetvLivestreamfilesByIdHlsLiveM3u8Request{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *LiveStreamServiceAPIService) HeadLivetvLivestreamfilesByIdHlsLiveM3u8Execute(r ApiHeadLivetvLivestreamfilesByIdHlsLiveM3u8Request) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodHead
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodHead
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveStreamServiceAPIService.HeadLivetvLivestreamfilesByIdHlsLiveM3u8")
@@ -1626,9 +1625,9 @@ func (a *LiveStreamServiceAPIService) HeadLivetvLivestreamfilesByIdHlsLiveM3u8Ex
 }
 
 type ApiHeadLivetvLivestreamfilesByIdHlsMasterM3u8Request struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService LiveStreamServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiHeadLivetvLivestreamfilesByIdHlsMasterM3u8Request) Execute() (*http.Response, error) {
@@ -1640,24 +1639,24 @@ HeadLivetvLivestreamfilesByIdHlsMasterM3u8 Gets a live tv channel
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id
- @return ApiHeadLivetvLivestreamfilesByIdHlsMasterM3u8Request
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id
+	@return ApiHeadLivetvLivestreamfilesByIdHlsMasterM3u8Request
 */
 func (a *LiveStreamServiceAPIService) HeadLivetvLivestreamfilesByIdHlsMasterM3u8(ctx context.Context, id string) ApiHeadLivetvLivestreamfilesByIdHlsMasterM3u8Request {
 	return ApiHeadLivetvLivestreamfilesByIdHlsMasterM3u8Request{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *LiveStreamServiceAPIService) HeadLivetvLivestreamfilesByIdHlsMasterM3u8Execute(r ApiHeadLivetvLivestreamfilesByIdHlsMasterM3u8Request) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodHead
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodHead
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LiveStreamServiceAPIService.HeadLivetvLivestreamfilesByIdHlsMasterM3u8")

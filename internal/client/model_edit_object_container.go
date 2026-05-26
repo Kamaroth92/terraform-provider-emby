@@ -19,10 +19,10 @@ var _ MappedNullable = &EditObjectContainer{}
 
 // EditObjectContainer struct for EditObjectContainer
 type EditObjectContainer struct {
-	Object map[string]interface{} `json:"Object,omitempty"`
+	Object        map[string]interface{} `json:"Object,omitempty"`
 	DefaultObject map[string]interface{} `json:"DefaultObject,omitempty"`
-	TypeName *string `json:"TypeName,omitempty"`
-	EditorRoot *EditorsEditorRoot `json:"EditorRoot,omitempty"`
+	TypeName      *string                `json:"TypeName,omitempty"`
+	EditorRoot    *EditorsEditorRoot     `json:"EditorRoot,omitempty"`
 }
 
 // NewEditObjectContainer instantiates a new EditObjectContainer object
@@ -171,7 +171,7 @@ func (o *EditObjectContainer) SetEditorRoot(v EditorsEditorRoot) {
 }
 
 func (o EditObjectContainer) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -230,5 +230,3 @@ func (v *NullableEditObjectContainer) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

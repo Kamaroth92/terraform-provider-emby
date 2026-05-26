@@ -19,15 +19,15 @@ var _ MappedNullable = &ClientCapabilities{}
 
 // ClientCapabilities struct for ClientCapabilities
 type ClientCapabilities struct {
-	PlayableMediaTypes []string `json:"PlayableMediaTypes,omitempty"`
-	SupportedCommands []string `json:"SupportedCommands,omitempty"`
-	SupportsMediaControl *bool `json:"SupportsMediaControl,omitempty"`
-	PushToken *string `json:"PushToken,omitempty"`
-	PushTokenType *string `json:"PushTokenType,omitempty"`
-	SupportsSync *bool `json:"SupportsSync,omitempty"`
-	DeviceProfile *DeviceProfile `json:"DeviceProfile,omitempty"`
-	IconUrl *string `json:"IconUrl,omitempty"`
-	AppId *string `json:"AppId,omitempty"`
+	PlayableMediaTypes   []string       `json:"PlayableMediaTypes,omitempty"`
+	SupportedCommands    []string       `json:"SupportedCommands,omitempty"`
+	SupportsMediaControl *bool          `json:"SupportsMediaControl,omitempty"`
+	PushToken            *string        `json:"PushToken,omitempty"`
+	PushTokenType        *string        `json:"PushTokenType,omitempty"`
+	SupportsSync         *bool          `json:"SupportsSync,omitempty"`
+	DeviceProfile        *DeviceProfile `json:"DeviceProfile,omitempty"`
+	IconUrl              *string        `json:"IconUrl,omitempty"`
+	AppId                *string        `json:"AppId,omitempty"`
 }
 
 // NewClientCapabilities instantiates a new ClientCapabilities object
@@ -336,7 +336,7 @@ func (o *ClientCapabilities) SetAppId(v string) {
 }
 
 func (o ClientCapabilities) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -410,5 +410,3 @@ func (v *NullableClientCapabilities) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

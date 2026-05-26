@@ -19,17 +19,16 @@ import (
 	"strings"
 )
 
-
 type ScheduledTaskServiceAPI interface {
 
 	/*
-	DeleteScheduledtasksRunningById Stops a scheduled task
+		DeleteScheduledtasksRunningById Stops a scheduled task
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiDeleteScheduledtasksRunningByIdRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id
+		@return ApiDeleteScheduledtasksRunningByIdRequest
 	*/
 	DeleteScheduledtasksRunningById(ctx context.Context, id string) ApiDeleteScheduledtasksRunningByIdRequest
 
@@ -37,12 +36,12 @@ type ScheduledTaskServiceAPI interface {
 	DeleteScheduledtasksRunningByIdExecute(r ApiDeleteScheduledtasksRunningByIdRequest) (*http.Response, error)
 
 	/*
-	GetScheduledtasks Gets scheduled tasks
+		GetScheduledtasks Gets scheduled tasks
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetScheduledtasksRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetScheduledtasksRequest
 	*/
 	GetScheduledtasks(ctx context.Context) ApiGetScheduledtasksRequest
 
@@ -51,13 +50,13 @@ type ScheduledTaskServiceAPI interface {
 	GetScheduledtasksExecute(r ApiGetScheduledtasksRequest) ([]TaskInfo, *http.Response, error)
 
 	/*
-	GetScheduledtasksById Gets a scheduled task, by Id
+		GetScheduledtasksById Gets a scheduled task, by Id
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiGetScheduledtasksByIdRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id
+		@return ApiGetScheduledtasksByIdRequest
 	*/
 	GetScheduledtasksById(ctx context.Context, id string) ApiGetScheduledtasksByIdRequest
 
@@ -66,13 +65,13 @@ type ScheduledTaskServiceAPI interface {
 	GetScheduledtasksByIdExecute(r ApiGetScheduledtasksByIdRequest) (*TaskInfo, *http.Response, error)
 
 	/*
-	PostScheduledtasksByIdTriggers Updates the triggers for a scheduled task
+		PostScheduledtasksByIdTriggers Updates the triggers for a scheduled task
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiPostScheduledtasksByIdTriggersRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id
+		@return ApiPostScheduledtasksByIdTriggersRequest
 	*/
 	PostScheduledtasksByIdTriggers(ctx context.Context, id string) ApiPostScheduledtasksByIdTriggersRequest
 
@@ -80,13 +79,13 @@ type ScheduledTaskServiceAPI interface {
 	PostScheduledtasksByIdTriggersExecute(r ApiPostScheduledtasksByIdTriggersRequest) (*http.Response, error)
 
 	/*
-	PostScheduledtasksRunningById Starts a scheduled task
+		PostScheduledtasksRunningById Starts a scheduled task
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiPostScheduledtasksRunningByIdRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id
+		@return ApiPostScheduledtasksRunningByIdRequest
 	*/
 	PostScheduledtasksRunningById(ctx context.Context, id string) ApiPostScheduledtasksRunningByIdRequest
 
@@ -94,13 +93,13 @@ type ScheduledTaskServiceAPI interface {
 	PostScheduledtasksRunningByIdExecute(r ApiPostScheduledtasksRunningByIdRequest) (*http.Response, error)
 
 	/*
-	PostScheduledtasksRunningByIdDelete Stops a scheduled task
+		PostScheduledtasksRunningByIdDelete Stops a scheduled task
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiPostScheduledtasksRunningByIdDeleteRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id
+		@return ApiPostScheduledtasksRunningByIdDeleteRequest
 	*/
 	PostScheduledtasksRunningByIdDelete(ctx context.Context, id string) ApiPostScheduledtasksRunningByIdDeleteRequest
 
@@ -112,9 +111,9 @@ type ScheduledTaskServiceAPI interface {
 type ScheduledTaskServiceAPIService service
 
 type ApiDeleteScheduledtasksRunningByIdRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService ScheduledTaskServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiDeleteScheduledtasksRunningByIdRequest) Execute() (*http.Response, error) {
@@ -126,24 +125,24 @@ DeleteScheduledtasksRunningById Stops a scheduled task
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id
- @return ApiDeleteScheduledtasksRunningByIdRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id
+	@return ApiDeleteScheduledtasksRunningByIdRequest
 */
 func (a *ScheduledTaskServiceAPIService) DeleteScheduledtasksRunningById(ctx context.Context, id string) ApiDeleteScheduledtasksRunningByIdRequest {
 	return ApiDeleteScheduledtasksRunningByIdRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *ScheduledTaskServiceAPIService) DeleteScheduledtasksRunningByIdExecute(r ApiDeleteScheduledtasksRunningByIdRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodDelete
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodDelete
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ScheduledTaskServiceAPIService.DeleteScheduledtasksRunningById")
@@ -218,10 +217,10 @@ func (a *ScheduledTaskServiceAPIService) DeleteScheduledtasksRunningByIdExecute(
 }
 
 type ApiGetScheduledtasksRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService ScheduledTaskServiceAPI
-	isHidden *bool
-	isEnabled *bool
+	isHidden   *bool
+	isEnabled  *bool
 }
 
 // Optional filter tasks that are hidden, or not.
@@ -245,24 +244,25 @@ GetScheduledtasks Gets scheduled tasks
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetScheduledtasksRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetScheduledtasksRequest
 */
 func (a *ScheduledTaskServiceAPIService) GetScheduledtasks(ctx context.Context) ApiGetScheduledtasksRequest {
 	return ApiGetScheduledtasksRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return []TaskInfo
+//
+//	@return []TaskInfo
 func (a *ScheduledTaskServiceAPIService) GetScheduledtasksExecute(r ApiGetScheduledtasksRequest) ([]TaskInfo, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []TaskInfo
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue []TaskInfo
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ScheduledTaskServiceAPIService.GetScheduledtasks")
@@ -351,9 +351,9 @@ func (a *ScheduledTaskServiceAPIService) GetScheduledtasksExecute(r ApiGetSchedu
 }
 
 type ApiGetScheduledtasksByIdRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService ScheduledTaskServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiGetScheduledtasksByIdRequest) Execute() (*TaskInfo, *http.Response, error) {
@@ -365,26 +365,27 @@ GetScheduledtasksById Gets a scheduled task, by Id
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id
- @return ApiGetScheduledtasksByIdRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id
+	@return ApiGetScheduledtasksByIdRequest
 */
 func (a *ScheduledTaskServiceAPIService) GetScheduledtasksById(ctx context.Context, id string) ApiGetScheduledtasksByIdRequest {
 	return ApiGetScheduledtasksByIdRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
-//  @return TaskInfo
+//
+//	@return TaskInfo
 func (a *ScheduledTaskServiceAPIService) GetScheduledtasksByIdExecute(r ApiGetScheduledtasksByIdRequest) (*TaskInfo, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *TaskInfo
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *TaskInfo
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ScheduledTaskServiceAPIService.GetScheduledtasksById")
@@ -468,13 +469,13 @@ func (a *ScheduledTaskServiceAPIService) GetScheduledtasksByIdExecute(r ApiGetSc
 }
 
 type ApiPostScheduledtasksByIdTriggersRequest struct {
-	ctx context.Context
-	ApiService ScheduledTaskServiceAPI
-	id string
+	ctx             context.Context
+	ApiService      ScheduledTaskServiceAPI
+	id              string
 	taskTriggerInfo *[]TaskTriggerInfo
 }
 
-// List&#x60;1: 
+// List&#x60;1:
 func (r ApiPostScheduledtasksByIdTriggersRequest) TaskTriggerInfo(taskTriggerInfo []TaskTriggerInfo) ApiPostScheduledtasksByIdTriggersRequest {
 	r.taskTriggerInfo = &taskTriggerInfo
 	return r
@@ -489,24 +490,24 @@ PostScheduledtasksByIdTriggers Updates the triggers for a scheduled task
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id
- @return ApiPostScheduledtasksByIdTriggersRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id
+	@return ApiPostScheduledtasksByIdTriggersRequest
 */
 func (a *ScheduledTaskServiceAPIService) PostScheduledtasksByIdTriggers(ctx context.Context, id string) ApiPostScheduledtasksByIdTriggersRequest {
 	return ApiPostScheduledtasksByIdTriggersRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *ScheduledTaskServiceAPIService) PostScheduledtasksByIdTriggersExecute(r ApiPostScheduledtasksByIdTriggersRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ScheduledTaskServiceAPIService.PostScheduledtasksByIdTriggers")
@@ -586,9 +587,9 @@ func (a *ScheduledTaskServiceAPIService) PostScheduledtasksByIdTriggersExecute(r
 }
 
 type ApiPostScheduledtasksRunningByIdRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService ScheduledTaskServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiPostScheduledtasksRunningByIdRequest) Execute() (*http.Response, error) {
@@ -600,24 +601,24 @@ PostScheduledtasksRunningById Starts a scheduled task
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id
- @return ApiPostScheduledtasksRunningByIdRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id
+	@return ApiPostScheduledtasksRunningByIdRequest
 */
 func (a *ScheduledTaskServiceAPIService) PostScheduledtasksRunningById(ctx context.Context, id string) ApiPostScheduledtasksRunningByIdRequest {
 	return ApiPostScheduledtasksRunningByIdRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *ScheduledTaskServiceAPIService) PostScheduledtasksRunningByIdExecute(r ApiPostScheduledtasksRunningByIdRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ScheduledTaskServiceAPIService.PostScheduledtasksRunningById")
@@ -692,9 +693,9 @@ func (a *ScheduledTaskServiceAPIService) PostScheduledtasksRunningByIdExecute(r 
 }
 
 type ApiPostScheduledtasksRunningByIdDeleteRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService ScheduledTaskServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiPostScheduledtasksRunningByIdDeleteRequest) Execute() (*http.Response, error) {
@@ -706,24 +707,24 @@ PostScheduledtasksRunningByIdDelete Stops a scheduled task
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id
- @return ApiPostScheduledtasksRunningByIdDeleteRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id
+	@return ApiPostScheduledtasksRunningByIdDeleteRequest
 */
 func (a *ScheduledTaskServiceAPIService) PostScheduledtasksRunningByIdDelete(ctx context.Context, id string) ApiPostScheduledtasksRunningByIdDeleteRequest {
 	return ApiPostScheduledtasksRunningByIdDeleteRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *ScheduledTaskServiceAPIService) PostScheduledtasksRunningByIdDeleteExecute(r ApiPostScheduledtasksRunningByIdDeleteRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ScheduledTaskServiceAPIService.PostScheduledtasksRunningByIdDelete")

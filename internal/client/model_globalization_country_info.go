@@ -19,10 +19,10 @@ var _ MappedNullable = &GlobalizationCountryInfo{}
 
 // GlobalizationCountryInfo struct for GlobalizationCountryInfo
 type GlobalizationCountryInfo struct {
-	Name *string `json:"Name,omitempty"`
-	DisplayName *string `json:"DisplayName,omitempty"`
-	EnglishName *string `json:"EnglishName,omitempty"`
-	TwoLetterISORegionName *string `json:"TwoLetterISORegionName,omitempty"`
+	Name                     *string `json:"Name,omitempty"`
+	DisplayName              *string `json:"DisplayName,omitempty"`
+	EnglishName              *string `json:"EnglishName,omitempty"`
+	TwoLetterISORegionName   *string `json:"TwoLetterISORegionName,omitempty"`
 	ThreeLetterISORegionName *string `json:"ThreeLetterISORegionName,omitempty"`
 }
 
@@ -204,7 +204,7 @@ func (o *GlobalizationCountryInfo) SetThreeLetterISORegionName(v string) {
 }
 
 func (o GlobalizationCountryInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -266,5 +266,3 @@ func (v *NullableGlobalizationCountryInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

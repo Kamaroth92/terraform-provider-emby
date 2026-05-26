@@ -16,21 +16,20 @@ import (
 	"io"
 	"net/http"
 	"net/url"
-	"strings"
 	"os"
+	"strings"
 )
-
 
 type UserActivityAPIAPI interface {
 
 	/*
-	GetUserUsageStatsByBreakdowntypeBreakdownreport Gets a breakdown of a usage metric
+		GetUserUsageStatsByBreakdowntypeBreakdownreport Gets a breakdown of a usage metric
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param breakdownType Breakdown type
-	@return ApiGetUserUsageStatsByBreakdowntypeBreakdownreportRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param breakdownType Breakdown type
+		@return ApiGetUserUsageStatsByBreakdowntypeBreakdownreportRequest
 	*/
 	GetUserUsageStatsByBreakdowntypeBreakdownreport(ctx context.Context, breakdownType string) ApiGetUserUsageStatsByBreakdowntypeBreakdownreportRequest
 
@@ -39,14 +38,14 @@ type UserActivityAPIAPI interface {
 	GetUserUsageStatsByBreakdowntypeBreakdownreportExecute(r ApiGetUserUsageStatsByBreakdowntypeBreakdownreportRequest) (map[string]interface{}, *http.Response, error)
 
 	/*
-	GetUserUsageStatsByUseridByDateGetitems Gets activity for {USER} for {Date} formatted as yyyy-MM-dd
+		GetUserUsageStatsByUseridByDateGetitems Gets activity for {USER} for {Date} formatted as yyyy-MM-dd
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param userID User Id
-	@param date UTC DateTime, Format yyyy-MM-dd
-	@return ApiGetUserUsageStatsByUseridByDateGetitemsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param userID User Id
+		@param date UTC DateTime, Format yyyy-MM-dd
+		@return ApiGetUserUsageStatsByUseridByDateGetitemsRequest
 	*/
 	GetUserUsageStatsByUseridByDateGetitems(ctx context.Context, userID string, date string) ApiGetUserUsageStatsByUseridByDateGetitemsRequest
 
@@ -55,12 +54,12 @@ type UserActivityAPIAPI interface {
 	GetUserUsageStatsByUseridByDateGetitemsExecute(r ApiGetUserUsageStatsByUseridByDateGetitemsRequest) (map[string]interface{}, *http.Response, error)
 
 	/*
-	GetUserUsageStatsGetItemPath Get a list of items for type and filtered
+		GetUserUsageStatsGetItemPath Get a list of items for type and filtered
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetUserUsageStatsGetItemPathRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetUserUsageStatsGetItemPathRequest
 	*/
 	GetUserUsageStatsGetItemPath(ctx context.Context) ApiGetUserUsageStatsGetItemPathRequest
 
@@ -69,12 +68,12 @@ type UserActivityAPIAPI interface {
 	GetUserUsageStatsGetItemPathExecute(r ApiGetUserUsageStatsGetItemPathRequest) (map[string]interface{}, *http.Response, error)
 
 	/*
-	GetUserUsageStatsGetItemStats Get a list of items for type and filtered
+		GetUserUsageStatsGetItemStats Get a list of items for type and filtered
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetUserUsageStatsGetItemStatsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetUserUsageStatsGetItemStatsRequest
 	*/
 	GetUserUsageStatsGetItemStats(ctx context.Context) ApiGetUserUsageStatsGetItemStatsRequest
 
@@ -83,12 +82,12 @@ type UserActivityAPIAPI interface {
 	GetUserUsageStatsGetItemStatsExecute(r ApiGetUserUsageStatsGetItemStatsRequest) (map[string]interface{}, *http.Response, error)
 
 	/*
-	GetUserUsageStatsGetItems Get a list of items for type and filtered
+		GetUserUsageStatsGetItems Get a list of items for type and filtered
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetUserUsageStatsGetItemsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetUserUsageStatsGetItemsRequest
 	*/
 	GetUserUsageStatsGetItems(ctx context.Context) ApiGetUserUsageStatsGetItemsRequest
 
@@ -97,12 +96,12 @@ type UserActivityAPIAPI interface {
 	GetUserUsageStatsGetItemsExecute(r ApiGetUserUsageStatsGetItemsRequest) (map[string]interface{}, *http.Response, error)
 
 	/*
-	GetUserUsageStatsHourlyreport Gets a report of the available activity per hour
+		GetUserUsageStatsHourlyreport Gets a report of the available activity per hour
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetUserUsageStatsHourlyreportRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetUserUsageStatsHourlyreportRequest
 	*/
 	GetUserUsageStatsHourlyreport(ctx context.Context) ApiGetUserUsageStatsHourlyreportRequest
 
@@ -111,12 +110,12 @@ type UserActivityAPIAPI interface {
 	GetUserUsageStatsHourlyreportExecute(r ApiGetUserUsageStatsHourlyreportRequest) (map[string]interface{}, *http.Response, error)
 
 	/*
-	GetUserUsageStatsLoadBackup Loads a backup from a file
+		GetUserUsageStatsLoadBackup Loads a backup from a file
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetUserUsageStatsLoadBackupRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetUserUsageStatsLoadBackupRequest
 	*/
 	GetUserUsageStatsLoadBackup(ctx context.Context) ApiGetUserUsageStatsLoadBackupRequest
 
@@ -125,12 +124,12 @@ type UserActivityAPIAPI interface {
 	GetUserUsageStatsLoadBackupExecute(r ApiGetUserUsageStatsLoadBackupRequest) (map[string]interface{}, *http.Response, error)
 
 	/*
-	GetUserUsageStatsMoviesreport Gets Movies counts
+		GetUserUsageStatsMoviesreport Gets Movies counts
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetUserUsageStatsMoviesreportRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetUserUsageStatsMoviesreportRequest
 	*/
 	GetUserUsageStatsMoviesreport(ctx context.Context) ApiGetUserUsageStatsMoviesreportRequest
 
@@ -139,12 +138,12 @@ type UserActivityAPIAPI interface {
 	GetUserUsageStatsMoviesreportExecute(r ApiGetUserUsageStatsMoviesreportRequest) (map[string]interface{}, *http.Response, error)
 
 	/*
-	GetUserUsageStatsPlayactivity Gets play activity for number of days
+		GetUserUsageStatsPlayactivity Gets play activity for number of days
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetUserUsageStatsPlayactivityRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetUserUsageStatsPlayactivityRequest
 	*/
 	GetUserUsageStatsPlayactivity(ctx context.Context) ApiGetUserUsageStatsPlayactivityRequest
 
@@ -153,12 +152,12 @@ type UserActivityAPIAPI interface {
 	GetUserUsageStatsPlayactivityExecute(r ApiGetUserUsageStatsPlayactivityRequest) (map[string]interface{}, *http.Response, error)
 
 	/*
-	GetUserUsageStatsSaveBackup Saves a backup of the playback report data to the backup path
+		GetUserUsageStatsSaveBackup Saves a backup of the playback report data to the backup path
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetUserUsageStatsSaveBackupRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetUserUsageStatsSaveBackupRequest
 	*/
 	GetUserUsageStatsSaveBackup(ctx context.Context) ApiGetUserUsageStatsSaveBackupRequest
 
@@ -167,12 +166,12 @@ type UserActivityAPIAPI interface {
 	GetUserUsageStatsSaveBackupExecute(r ApiGetUserUsageStatsSaveBackupRequest) (map[string]interface{}, *http.Response, error)
 
 	/*
-	GetUserUsageStatsSessionList Gets Session Info
+		GetUserUsageStatsSessionList Gets Session Info
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetUserUsageStatsSessionListRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetUserUsageStatsSessionListRequest
 	*/
 	GetUserUsageStatsSessionList(ctx context.Context) ApiGetUserUsageStatsSessionListRequest
 
@@ -181,12 +180,12 @@ type UserActivityAPIAPI interface {
 	GetUserUsageStatsSessionListExecute(r ApiGetUserUsageStatsSessionListRequest) (map[string]interface{}, *http.Response, error)
 
 	/*
-	GetUserUsageStatsTvshowsreport Gets TV Shows counts
+		GetUserUsageStatsTvshowsreport Gets TV Shows counts
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetUserUsageStatsTvshowsreportRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetUserUsageStatsTvshowsreportRequest
 	*/
 	GetUserUsageStatsTvshowsreport(ctx context.Context) ApiGetUserUsageStatsTvshowsreportRequest
 
@@ -195,12 +194,12 @@ type UserActivityAPIAPI interface {
 	GetUserUsageStatsTvshowsreportExecute(r ApiGetUserUsageStatsTvshowsreportRequest) (map[string]interface{}, *http.Response, error)
 
 	/*
-	GetUserUsageStatsTypeFilterList Gets types filter list items
+		GetUserUsageStatsTypeFilterList Gets types filter list items
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetUserUsageStatsTypeFilterListRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetUserUsageStatsTypeFilterListRequest
 	*/
 	GetUserUsageStatsTypeFilterList(ctx context.Context) ApiGetUserUsageStatsTypeFilterListRequest
 
@@ -209,12 +208,12 @@ type UserActivityAPIAPI interface {
 	GetUserUsageStatsTypeFilterListExecute(r ApiGetUserUsageStatsTypeFilterListRequest) (map[string]interface{}, *http.Response, error)
 
 	/*
-	GetUserUsageStatsUserActivity Gets a report of the available activity per hour
+		GetUserUsageStatsUserActivity Gets a report of the available activity per hour
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetUserUsageStatsUserActivityRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetUserUsageStatsUserActivityRequest
 	*/
 	GetUserUsageStatsUserActivity(ctx context.Context) ApiGetUserUsageStatsUserActivityRequest
 
@@ -223,12 +222,12 @@ type UserActivityAPIAPI interface {
 	GetUserUsageStatsUserActivityExecute(r ApiGetUserUsageStatsUserActivityRequest) (map[string]interface{}, *http.Response, error)
 
 	/*
-	GetUserUsageStatsUserList Get users
+		GetUserUsageStatsUserList Get users
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetUserUsageStatsUserListRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetUserUsageStatsUserListRequest
 	*/
 	GetUserUsageStatsUserList(ctx context.Context) ApiGetUserUsageStatsUserListRequest
 
@@ -237,14 +236,14 @@ type UserActivityAPIAPI interface {
 	GetUserUsageStatsUserListExecute(r ApiGetUserUsageStatsUserListRequest) (map[string]interface{}, *http.Response, error)
 
 	/*
-	GetUserUsageStatsUserManageByActionById Get users
+		GetUserUsageStatsUserManageByActionById Get users
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param action action to perform
-	@param id user Id to perform the action on
-	@return ApiGetUserUsageStatsUserManageByActionByIdRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param action action to perform
+		@param id user Id to perform the action on
+		@return ApiGetUserUsageStatsUserManageByActionByIdRequest
 	*/
 	GetUserUsageStatsUserManageByActionById(ctx context.Context, action string, id string) ApiGetUserUsageStatsUserManageByActionByIdRequest
 
@@ -253,12 +252,12 @@ type UserActivityAPIAPI interface {
 	GetUserUsageStatsUserManageByActionByIdExecute(r ApiGetUserUsageStatsUserManageByActionByIdRequest) (map[string]interface{}, *http.Response, error)
 
 	/*
-	GetUserUsageStatsUserplaylist Gets a report of all played items for a user in a date period
+		GetUserUsageStatsUserplaylist Gets a report of all played items for a user in a date period
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetUserUsageStatsUserplaylistRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetUserUsageStatsUserplaylistRequest
 	*/
 	GetUserUsageStatsUserplaylist(ctx context.Context) ApiGetUserUsageStatsUserplaylistRequest
 
@@ -267,12 +266,12 @@ type UserActivityAPIAPI interface {
 	GetUserUsageStatsUserplaylistExecute(r ApiGetUserUsageStatsUserplaylistRequest) (map[string]interface{}, *http.Response, error)
 
 	/*
-	PostUserUsageStatsImportBackup Post a backup for importing
+		PostUserUsageStatsImportBackup Post a backup for importing
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostUserUsageStatsImportBackupRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostUserUsageStatsImportBackupRequest
 	*/
 	PostUserUsageStatsImportBackup(ctx context.Context) ApiPostUserUsageStatsImportBackupRequest
 
@@ -280,12 +279,12 @@ type UserActivityAPIAPI interface {
 	PostUserUsageStatsImportBackupExecute(r ApiPostUserUsageStatsImportBackupRequest) (*http.Response, error)
 
 	/*
-	PostUserUsageStatsSubmitCustomQuery Submit an SQL query
+		PostUserUsageStatsSubmitCustomQuery Submit an SQL query
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostUserUsageStatsSubmitCustomQueryRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostUserUsageStatsSubmitCustomQueryRequest
 	*/
 	PostUserUsageStatsSubmitCustomQuery(ctx context.Context) ApiPostUserUsageStatsSubmitCustomQueryRequest
 
@@ -298,12 +297,12 @@ type UserActivityAPIAPI interface {
 type UserActivityAPIAPIService service
 
 type ApiGetUserUsageStatsByBreakdowntypeBreakdownreportRequest struct {
-	ctx context.Context
-	ApiService UserActivityAPIAPI
+	ctx           context.Context
+	ApiService    UserActivityAPIAPI
 	breakdownType string
-	userId *string
-	days *int32
-	endDate *string
+	userId        *string
+	days          *int32
+	endDate       *string
 }
 
 // User Id
@@ -333,26 +332,27 @@ GetUserUsageStatsByBreakdowntypeBreakdownreport Gets a breakdown of a usage metr
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param breakdownType Breakdown type
- @return ApiGetUserUsageStatsByBreakdowntypeBreakdownreportRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param breakdownType Breakdown type
+	@return ApiGetUserUsageStatsByBreakdowntypeBreakdownreportRequest
 */
 func (a *UserActivityAPIAPIService) GetUserUsageStatsByBreakdowntypeBreakdownreport(ctx context.Context, breakdownType string) ApiGetUserUsageStatsByBreakdowntypeBreakdownreportRequest {
 	return ApiGetUserUsageStatsByBreakdowntypeBreakdownreportRequest{
-		ApiService: a,
-		ctx: ctx,
+		ApiService:    a,
+		ctx:           ctx,
 		breakdownType: breakdownType,
 	}
 }
 
 // Execute executes the request
-//  @return map[string]interface{}
+//
+//	@return map[string]interface{}
 func (a *UserActivityAPIAPIService) GetUserUsageStatsByBreakdowntypeBreakdownreportExecute(r ApiGetUserUsageStatsByBreakdowntypeBreakdownreportRequest) (map[string]interface{}, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  map[string]interface{}
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue map[string]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserActivityAPIAPIService.GetUserUsageStatsByBreakdowntypeBreakdownreport")
@@ -445,11 +445,11 @@ func (a *UserActivityAPIAPIService) GetUserUsageStatsByBreakdowntypeBreakdownrep
 }
 
 type ApiGetUserUsageStatsByUseridByDateGetitemsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService UserActivityAPIAPI
-	userID string
-	date string
-	filter *string
+	userID     string
+	date       string
+	filter     *string
 }
 
 // Comma separated list of media types to filter (movies,series)
@@ -467,28 +467,29 @@ GetUserUsageStatsByUseridByDateGetitems Gets activity for {USER} for {Date} form
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param userID User Id
- @param date UTC DateTime, Format yyyy-MM-dd
- @return ApiGetUserUsageStatsByUseridByDateGetitemsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param userID User Id
+	@param date UTC DateTime, Format yyyy-MM-dd
+	@return ApiGetUserUsageStatsByUseridByDateGetitemsRequest
 */
 func (a *UserActivityAPIAPIService) GetUserUsageStatsByUseridByDateGetitems(ctx context.Context, userID string, date string) ApiGetUserUsageStatsByUseridByDateGetitemsRequest {
 	return ApiGetUserUsageStatsByUseridByDateGetitemsRequest{
 		ApiService: a,
-		ctx: ctx,
-		userID: userID,
-		date: date,
+		ctx:        ctx,
+		userID:     userID,
+		date:       date,
 	}
 }
 
 // Execute executes the request
-//  @return map[string]interface{}
+//
+//	@return map[string]interface{}
 func (a *UserActivityAPIAPIService) GetUserUsageStatsByUseridByDateGetitemsExecute(r ApiGetUserUsageStatsByUseridByDateGetitemsRequest) (map[string]interface{}, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  map[string]interface{}
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue map[string]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserActivityAPIAPIService.GetUserUsageStatsByUseridByDateGetitems")
@@ -576,9 +577,9 @@ func (a *UserActivityAPIAPIService) GetUserUsageStatsByUseridByDateGetitemsExecu
 }
 
 type ApiGetUserUsageStatsGetItemPathRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService UserActivityAPIAPI
-	id *int32
+	id         *int32
 }
 
 // item id
@@ -596,24 +597,25 @@ GetUserUsageStatsGetItemPath Get a list of items for type and filtered
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetUserUsageStatsGetItemPathRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetUserUsageStatsGetItemPathRequest
 */
 func (a *UserActivityAPIAPIService) GetUserUsageStatsGetItemPath(ctx context.Context) ApiGetUserUsageStatsGetItemPathRequest {
 	return ApiGetUserUsageStatsGetItemPathRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return map[string]interface{}
+//
+//	@return map[string]interface{}
 func (a *UserActivityAPIAPIService) GetUserUsageStatsGetItemPathExecute(r ApiGetUserUsageStatsGetItemPathRequest) (map[string]interface{}, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  map[string]interface{}
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue map[string]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserActivityAPIAPIService.GetUserUsageStatsGetItemPath")
@@ -700,9 +702,9 @@ func (a *UserActivityAPIAPIService) GetUserUsageStatsGetItemPathExecute(r ApiGet
 }
 
 type ApiGetUserUsageStatsGetItemStatsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService UserActivityAPIAPI
-	id *int32
+	id         *int32
 }
 
 // item id
@@ -720,24 +722,25 @@ GetUserUsageStatsGetItemStats Get a list of items for type and filtered
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetUserUsageStatsGetItemStatsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetUserUsageStatsGetItemStatsRequest
 */
 func (a *UserActivityAPIAPIService) GetUserUsageStatsGetItemStats(ctx context.Context) ApiGetUserUsageStatsGetItemStatsRequest {
 	return ApiGetUserUsageStatsGetItemStatsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return map[string]interface{}
+//
+//	@return map[string]interface{}
 func (a *UserActivityAPIAPIService) GetUserUsageStatsGetItemStatsExecute(r ApiGetUserUsageStatsGetItemStatsRequest) (map[string]interface{}, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  map[string]interface{}
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue map[string]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserActivityAPIAPIService.GetUserUsageStatsGetItemStats")
@@ -824,11 +827,11 @@ func (a *UserActivityAPIAPIService) GetUserUsageStatsGetItemStatsExecute(r ApiGe
 }
 
 type ApiGetUserUsageStatsGetItemsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService UserActivityAPIAPI
-	filter *string
-	itemType *string
-	parent *int32
+	filter     *string
+	itemType   *string
+	parent     *int32
 }
 
 // filter string
@@ -858,24 +861,25 @@ GetUserUsageStatsGetItems Get a list of items for type and filtered
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetUserUsageStatsGetItemsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetUserUsageStatsGetItemsRequest
 */
 func (a *UserActivityAPIAPIService) GetUserUsageStatsGetItems(ctx context.Context) ApiGetUserUsageStatsGetItemsRequest {
 	return ApiGetUserUsageStatsGetItemsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return map[string]interface{}
+//
+//	@return map[string]interface{}
 func (a *UserActivityAPIAPIService) GetUserUsageStatsGetItemsExecute(r ApiGetUserUsageStatsGetItemsRequest) (map[string]interface{}, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  map[string]interface{}
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue map[string]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserActivityAPIAPIService.GetUserUsageStatsGetItems")
@@ -967,12 +971,12 @@ func (a *UserActivityAPIAPIService) GetUserUsageStatsGetItemsExecute(r ApiGetUse
 }
 
 type ApiGetUserUsageStatsHourlyreportRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService UserActivityAPIAPI
-	userId *string
-	days *int32
-	endDate *string
-	filter *string
+	userId     *string
+	days       *int32
+	endDate    *string
+	filter     *string
 }
 
 // User Id
@@ -1008,24 +1012,25 @@ GetUserUsageStatsHourlyreport Gets a report of the available activity per hour
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetUserUsageStatsHourlyreportRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetUserUsageStatsHourlyreportRequest
 */
 func (a *UserActivityAPIAPIService) GetUserUsageStatsHourlyreport(ctx context.Context) ApiGetUserUsageStatsHourlyreportRequest {
 	return ApiGetUserUsageStatsHourlyreportRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return map[string]interface{}
+//
+//	@return map[string]interface{}
 func (a *UserActivityAPIAPIService) GetUserUsageStatsHourlyreportExecute(r ApiGetUserUsageStatsHourlyreportRequest) (map[string]interface{}, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  map[string]interface{}
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue map[string]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserActivityAPIAPIService.GetUserUsageStatsHourlyreport")
@@ -1120,7 +1125,7 @@ func (a *UserActivityAPIAPIService) GetUserUsageStatsHourlyreportExecute(r ApiGe
 }
 
 type ApiGetUserUsageStatsLoadBackupRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService UserActivityAPIAPI
 	backupfile *string
 }
@@ -1140,24 +1145,25 @@ GetUserUsageStatsLoadBackup Loads a backup from a file
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetUserUsageStatsLoadBackupRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetUserUsageStatsLoadBackupRequest
 */
 func (a *UserActivityAPIAPIService) GetUserUsageStatsLoadBackup(ctx context.Context) ApiGetUserUsageStatsLoadBackupRequest {
 	return ApiGetUserUsageStatsLoadBackupRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return map[string]interface{}
+//
+//	@return map[string]interface{}
 func (a *UserActivityAPIAPIService) GetUserUsageStatsLoadBackupExecute(r ApiGetUserUsageStatsLoadBackupRequest) (map[string]interface{}, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  map[string]interface{}
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue map[string]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserActivityAPIAPIService.GetUserUsageStatsLoadBackup")
@@ -1244,11 +1250,11 @@ func (a *UserActivityAPIAPIService) GetUserUsageStatsLoadBackupExecute(r ApiGetU
 }
 
 type ApiGetUserUsageStatsMoviesreportRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService UserActivityAPIAPI
-	userId *string
-	days *int32
-	endDate *string
+	userId     *string
+	days       *int32
+	endDate    *string
 }
 
 // User Id
@@ -1278,24 +1284,25 @@ GetUserUsageStatsMoviesreport Gets Movies counts
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetUserUsageStatsMoviesreportRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetUserUsageStatsMoviesreportRequest
 */
 func (a *UserActivityAPIAPIService) GetUserUsageStatsMoviesreport(ctx context.Context) ApiGetUserUsageStatsMoviesreportRequest {
 	return ApiGetUserUsageStatsMoviesreportRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return map[string]interface{}
+//
+//	@return map[string]interface{}
 func (a *UserActivityAPIAPIService) GetUserUsageStatsMoviesreportExecute(r ApiGetUserUsageStatsMoviesreportRequest) (map[string]interface{}, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  map[string]interface{}
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue map[string]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserActivityAPIAPIService.GetUserUsageStatsMoviesreport")
@@ -1387,12 +1394,12 @@ func (a *UserActivityAPIAPIService) GetUserUsageStatsMoviesreportExecute(r ApiGe
 }
 
 type ApiGetUserUsageStatsPlayactivityRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService UserActivityAPIAPI
-	days *int32
-	endDate *string
-	filter *string
-	dataType *string
+	days       *int32
+	endDate    *string
+	filter     *string
+	dataType   *string
 }
 
 // Number of Days
@@ -1428,24 +1435,25 @@ GetUserUsageStatsPlayactivity Gets play activity for number of days
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetUserUsageStatsPlayactivityRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetUserUsageStatsPlayactivityRequest
 */
 func (a *UserActivityAPIAPIService) GetUserUsageStatsPlayactivity(ctx context.Context) ApiGetUserUsageStatsPlayactivityRequest {
 	return ApiGetUserUsageStatsPlayactivityRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return map[string]interface{}
+//
+//	@return map[string]interface{}
 func (a *UserActivityAPIAPIService) GetUserUsageStatsPlayactivityExecute(r ApiGetUserUsageStatsPlayactivityRequest) (map[string]interface{}, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  map[string]interface{}
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue map[string]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserActivityAPIAPIService.GetUserUsageStatsPlayactivity")
@@ -1540,7 +1548,7 @@ func (a *UserActivityAPIAPIService) GetUserUsageStatsPlayactivityExecute(r ApiGe
 }
 
 type ApiGetUserUsageStatsSaveBackupRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService UserActivityAPIAPI
 }
 
@@ -1553,24 +1561,25 @@ GetUserUsageStatsSaveBackup Saves a backup of the playback report data to the ba
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetUserUsageStatsSaveBackupRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetUserUsageStatsSaveBackupRequest
 */
 func (a *UserActivityAPIAPIService) GetUserUsageStatsSaveBackup(ctx context.Context) ApiGetUserUsageStatsSaveBackupRequest {
 	return ApiGetUserUsageStatsSaveBackupRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return map[string]interface{}
+//
+//	@return map[string]interface{}
 func (a *UserActivityAPIAPIService) GetUserUsageStatsSaveBackupExecute(r ApiGetUserUsageStatsSaveBackupRequest) (map[string]interface{}, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  map[string]interface{}
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue map[string]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserActivityAPIAPIService.GetUserUsageStatsSaveBackup")
@@ -1653,7 +1662,7 @@ func (a *UserActivityAPIAPIService) GetUserUsageStatsSaveBackupExecute(r ApiGetU
 }
 
 type ApiGetUserUsageStatsSessionListRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService UserActivityAPIAPI
 }
 
@@ -1666,24 +1675,25 @@ GetUserUsageStatsSessionList Gets Session Info
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetUserUsageStatsSessionListRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetUserUsageStatsSessionListRequest
 */
 func (a *UserActivityAPIAPIService) GetUserUsageStatsSessionList(ctx context.Context) ApiGetUserUsageStatsSessionListRequest {
 	return ApiGetUserUsageStatsSessionListRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return map[string]interface{}
+//
+//	@return map[string]interface{}
 func (a *UserActivityAPIAPIService) GetUserUsageStatsSessionListExecute(r ApiGetUserUsageStatsSessionListRequest) (map[string]interface{}, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  map[string]interface{}
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue map[string]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserActivityAPIAPIService.GetUserUsageStatsSessionList")
@@ -1766,11 +1776,11 @@ func (a *UserActivityAPIAPIService) GetUserUsageStatsSessionListExecute(r ApiGet
 }
 
 type ApiGetUserUsageStatsTvshowsreportRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService UserActivityAPIAPI
-	userId *string
-	days *int32
-	endDate *string
+	userId     *string
+	days       *int32
+	endDate    *string
 }
 
 // User Id
@@ -1800,24 +1810,25 @@ GetUserUsageStatsTvshowsreport Gets TV Shows counts
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetUserUsageStatsTvshowsreportRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetUserUsageStatsTvshowsreportRequest
 */
 func (a *UserActivityAPIAPIService) GetUserUsageStatsTvshowsreport(ctx context.Context) ApiGetUserUsageStatsTvshowsreportRequest {
 	return ApiGetUserUsageStatsTvshowsreportRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return map[string]interface{}
+//
+//	@return map[string]interface{}
 func (a *UserActivityAPIAPIService) GetUserUsageStatsTvshowsreportExecute(r ApiGetUserUsageStatsTvshowsreportRequest) (map[string]interface{}, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  map[string]interface{}
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue map[string]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserActivityAPIAPIService.GetUserUsageStatsTvshowsreport")
@@ -1909,7 +1920,7 @@ func (a *UserActivityAPIAPIService) GetUserUsageStatsTvshowsreportExecute(r ApiG
 }
 
 type ApiGetUserUsageStatsTypeFilterListRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService UserActivityAPIAPI
 }
 
@@ -1922,24 +1933,25 @@ GetUserUsageStatsTypeFilterList Gets types filter list items
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetUserUsageStatsTypeFilterListRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetUserUsageStatsTypeFilterListRequest
 */
 func (a *UserActivityAPIAPIService) GetUserUsageStatsTypeFilterList(ctx context.Context) ApiGetUserUsageStatsTypeFilterListRequest {
 	return ApiGetUserUsageStatsTypeFilterListRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return map[string]interface{}
+//
+//	@return map[string]interface{}
 func (a *UserActivityAPIAPIService) GetUserUsageStatsTypeFilterListExecute(r ApiGetUserUsageStatsTypeFilterListRequest) (map[string]interface{}, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  map[string]interface{}
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue map[string]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserActivityAPIAPIService.GetUserUsageStatsTypeFilterList")
@@ -2022,10 +2034,10 @@ func (a *UserActivityAPIAPIService) GetUserUsageStatsTypeFilterListExecute(r Api
 }
 
 type ApiGetUserUsageStatsUserActivityRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService UserActivityAPIAPI
-	days *int32
-	endDate *string
+	days       *int32
+	endDate    *string
 }
 
 // Number of Days
@@ -2049,24 +2061,25 @@ GetUserUsageStatsUserActivity Gets a report of the available activity per hour
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetUserUsageStatsUserActivityRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetUserUsageStatsUserActivityRequest
 */
 func (a *UserActivityAPIAPIService) GetUserUsageStatsUserActivity(ctx context.Context) ApiGetUserUsageStatsUserActivityRequest {
 	return ApiGetUserUsageStatsUserActivityRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return map[string]interface{}
+//
+//	@return map[string]interface{}
 func (a *UserActivityAPIAPIService) GetUserUsageStatsUserActivityExecute(r ApiGetUserUsageStatsUserActivityRequest) (map[string]interface{}, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  map[string]interface{}
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue map[string]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserActivityAPIAPIService.GetUserUsageStatsUserActivity")
@@ -2155,7 +2168,7 @@ func (a *UserActivityAPIAPIService) GetUserUsageStatsUserActivityExecute(r ApiGe
 }
 
 type ApiGetUserUsageStatsUserListRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService UserActivityAPIAPI
 }
 
@@ -2168,24 +2181,25 @@ GetUserUsageStatsUserList Get users
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetUserUsageStatsUserListRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetUserUsageStatsUserListRequest
 */
 func (a *UserActivityAPIAPIService) GetUserUsageStatsUserList(ctx context.Context) ApiGetUserUsageStatsUserListRequest {
 	return ApiGetUserUsageStatsUserListRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return map[string]interface{}
+//
+//	@return map[string]interface{}
 func (a *UserActivityAPIAPIService) GetUserUsageStatsUserListExecute(r ApiGetUserUsageStatsUserListRequest) (map[string]interface{}, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  map[string]interface{}
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue map[string]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserActivityAPIAPIService.GetUserUsageStatsUserList")
@@ -2268,10 +2282,10 @@ func (a *UserActivityAPIAPIService) GetUserUsageStatsUserListExecute(r ApiGetUse
 }
 
 type ApiGetUserUsageStatsUserManageByActionByIdRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService UserActivityAPIAPI
-	action string
-	id string
+	action     string
+	id         string
 }
 
 func (r ApiGetUserUsageStatsUserManageByActionByIdRequest) Execute() (map[string]interface{}, *http.Response, error) {
@@ -2283,28 +2297,29 @@ GetUserUsageStatsUserManageByActionById Get users
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param action action to perform
- @param id user Id to perform the action on
- @return ApiGetUserUsageStatsUserManageByActionByIdRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param action action to perform
+	@param id user Id to perform the action on
+	@return ApiGetUserUsageStatsUserManageByActionByIdRequest
 */
 func (a *UserActivityAPIAPIService) GetUserUsageStatsUserManageByActionById(ctx context.Context, action string, id string) ApiGetUserUsageStatsUserManageByActionByIdRequest {
 	return ApiGetUserUsageStatsUserManageByActionByIdRequest{
 		ApiService: a,
-		ctx: ctx,
-		action: action,
-		id: id,
+		ctx:        ctx,
+		action:     action,
+		id:         id,
 	}
 }
 
 // Execute executes the request
-//  @return map[string]interface{}
+//
+//	@return map[string]interface{}
 func (a *UserActivityAPIAPIService) GetUserUsageStatsUserManageByActionByIdExecute(r ApiGetUserUsageStatsUserManageByActionByIdRequest) (map[string]interface{}, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  map[string]interface{}
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue map[string]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserActivityAPIAPIService.GetUserUsageStatsUserManageByActionById")
@@ -2389,14 +2404,14 @@ func (a *UserActivityAPIAPIService) GetUserUsageStatsUserManageByActionByIdExecu
 }
 
 type ApiGetUserUsageStatsUserplaylistRequest struct {
-	ctx context.Context
-	ApiService UserActivityAPIAPI
-	userId *string
+	ctx           context.Context
+	ApiService    UserActivityAPIAPI
+	userId        *string
 	aggregateData *bool
-	filterName *string
-	days *int32
-	endDate *string
-	filter *string
+	filterName    *string
+	days          *int32
+	endDate       *string
+	filter        *string
 }
 
 // User Id
@@ -2444,24 +2459,25 @@ GetUserUsageStatsUserplaylist Gets a report of all played items for a user in a 
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetUserUsageStatsUserplaylistRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetUserUsageStatsUserplaylistRequest
 */
 func (a *UserActivityAPIAPIService) GetUserUsageStatsUserplaylist(ctx context.Context) ApiGetUserUsageStatsUserplaylistRequest {
 	return ApiGetUserUsageStatsUserplaylistRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return map[string]interface{}
+//
+//	@return map[string]interface{}
 func (a *UserActivityAPIAPIService) GetUserUsageStatsUserplaylistExecute(r ApiGetUserUsageStatsUserplaylistRequest) (map[string]interface{}, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  map[string]interface{}
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue map[string]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserActivityAPIAPIService.GetUserUsageStatsUserplaylist")
@@ -2564,9 +2580,9 @@ func (a *UserActivityAPIAPIService) GetUserUsageStatsUserplaylistExecute(r ApiGe
 }
 
 type ApiPostUserUsageStatsImportBackupRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService UserActivityAPIAPI
-	body *os.File
+	body       *os.File
 }
 
 // Binary stream
@@ -2584,22 +2600,22 @@ PostUserUsageStatsImportBackup Post a backup for importing
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostUserUsageStatsImportBackupRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostUserUsageStatsImportBackupRequest
 */
 func (a *UserActivityAPIAPIService) PostUserUsageStatsImportBackup(ctx context.Context) ApiPostUserUsageStatsImportBackupRequest {
 	return ApiPostUserUsageStatsImportBackupRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *UserActivityAPIAPIService) PostUserUsageStatsImportBackupExecute(r ApiPostUserUsageStatsImportBackupRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserActivityAPIAPIService.PostUserUsageStatsImportBackup")
@@ -2678,8 +2694,8 @@ func (a *UserActivityAPIAPIService) PostUserUsageStatsImportBackupExecute(r ApiP
 }
 
 type ApiPostUserUsageStatsSubmitCustomQueryRequest struct {
-	ctx context.Context
-	ApiService UserActivityAPIAPI
+	ctx                             context.Context
+	ApiService                      UserActivityAPIAPI
 	playbackReportingApiCustomQuery *PlaybackReportingApiCustomQuery
 }
 
@@ -2698,24 +2714,25 @@ PostUserUsageStatsSubmitCustomQuery Submit an SQL query
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostUserUsageStatsSubmitCustomQueryRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostUserUsageStatsSubmitCustomQueryRequest
 */
 func (a *UserActivityAPIAPIService) PostUserUsageStatsSubmitCustomQuery(ctx context.Context) ApiPostUserUsageStatsSubmitCustomQueryRequest {
 	return ApiPostUserUsageStatsSubmitCustomQueryRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return map[string]interface{}
+//
+//	@return map[string]interface{}
 func (a *UserActivityAPIAPIService) PostUserUsageStatsSubmitCustomQueryExecute(r ApiPostUserUsageStatsSubmitCustomQueryRequest) (map[string]interface{}, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  map[string]interface{}
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue map[string]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserActivityAPIAPIService.PostUserUsageStatsSubmitCustomQuery")

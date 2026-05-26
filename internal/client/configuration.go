@@ -68,9 +68,9 @@ type ServerVariable struct {
 
 // ServerConfiguration stores the information about a server
 type OAPIServerConfig struct {
-	URL string
+	URL         string
 	Description string
-	Variables map[string]ServerVariable
+	Variables   map[string]ServerVariable
 }
 
 // OAPIServerConfigs stores multiple ServerConfiguration items
@@ -91,17 +91,16 @@ type Configuration struct {
 // NewConfiguration returns a new Configuration object
 func NewConfiguration() *Configuration {
 	cfg := &Configuration{
-		DefaultHeader:    make(map[string]string),
-		UserAgent:        "OpenAPI-Generator/1.0.0/go",
-		Debug:            false,
-		Servers:          OAPIServerConfigs{
+		DefaultHeader: make(map[string]string),
+		UserAgent:     "OpenAPI-Generator/1.0.0/go",
+		Debug:         false,
+		Servers: OAPIServerConfigs{
 			{
-				URL: "http://emby.home.barriball.id.au/emby",
+				URL:         "http://emby.home.barriball.id.au/emby",
 				Description: "Taneflix",
 			},
 		},
-		OperationServers: map[string]OAPIServerConfigs{
-		},
+		OperationServers: map[string]OAPIServerConfigs{},
 	}
 	return cfg
 }
@@ -219,4 +218,3 @@ func (c *Configuration) ServerURLWithContext(ctx context.Context, endpoint strin
 
 	return sc.URL(index, variables)
 }
-

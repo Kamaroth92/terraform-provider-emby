@@ -18,16 +18,15 @@ import (
 	"net/url"
 )
 
-
 type DetectApiEndpointAPI interface {
 
 	/*
-	GetChapterApiCancelJob Cancel a job
+		GetChapterApiCancelJob Cancel a job
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetChapterApiCancelJobRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetChapterApiCancelJobRequest
 	*/
 	GetChapterApiCancelJob(ctx context.Context) ApiGetChapterApiCancelJobRequest
 
@@ -36,12 +35,12 @@ type DetectApiEndpointAPI interface {
 	GetChapterApiCancelJobExecute(r ApiGetChapterApiCancelJobRequest) (map[string]interface{}, *http.Response, error)
 
 	/*
-	GetChapterApiDownloadIntroData Intro DB download
+		GetChapterApiDownloadIntroData Intro DB download
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetChapterApiDownloadIntroDataRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetChapterApiDownloadIntroDataRequest
 	*/
 	GetChapterApiDownloadIntroData(ctx context.Context) ApiGetChapterApiDownloadIntroDataRequest
 
@@ -50,12 +49,12 @@ type DetectApiEndpointAPI interface {
 	GetChapterApiDownloadIntroDataExecute(r ApiGetChapterApiDownloadIntroDataRequest) (map[string]interface{}, *http.Response, error)
 
 	/*
-	GetChapterApiGetEpisodeList Get list of episodes
+		GetChapterApiGetEpisodeList Get list of episodes
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetChapterApiGetEpisodeListRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetChapterApiGetEpisodeListRequest
 	*/
 	GetChapterApiGetEpisodeList(ctx context.Context) ApiGetChapterApiGetEpisodeListRequest
 
@@ -64,12 +63,12 @@ type DetectApiEndpointAPI interface {
 	GetChapterApiGetEpisodeListExecute(r ApiGetChapterApiGetEpisodeListRequest) (map[string]interface{}, *http.Response, error)
 
 	/*
-	GetChapterApiGetJobInfo Get job info
+		GetChapterApiGetJobInfo Get job info
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetChapterApiGetJobInfoRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetChapterApiGetJobInfoRequest
 	*/
 	GetChapterApiGetJobInfo(ctx context.Context) ApiGetChapterApiGetJobInfoRequest
 
@@ -78,12 +77,12 @@ type DetectApiEndpointAPI interface {
 	GetChapterApiGetJobInfoExecute(r ApiGetChapterApiGetJobInfoRequest) (map[string]interface{}, *http.Response, error)
 
 	/*
-	GetChapterApiGetJobItem Gets info for a job work item
+		GetChapterApiGetJobItem Gets info for a job work item
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetChapterApiGetJobItemRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetChapterApiGetJobItemRequest
 	*/
 	GetChapterApiGetJobItem(ctx context.Context) ApiGetChapterApiGetJobItemRequest
 
@@ -92,12 +91,12 @@ type DetectApiEndpointAPI interface {
 	GetChapterApiGetJobItemExecute(r ApiGetChapterApiGetJobItemRequest) (map[string]interface{}, *http.Response, error)
 
 	/*
-	GetChapterApiGetJobList Get list of jobs
+		GetChapterApiGetJobList Get list of jobs
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetChapterApiGetJobListRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetChapterApiGetJobListRequest
 	*/
 	GetChapterApiGetJobList(ctx context.Context) ApiGetChapterApiGetJobListRequest
 
@@ -106,12 +105,12 @@ type DetectApiEndpointAPI interface {
 	GetChapterApiGetJobListExecute(r ApiGetChapterApiGetJobListRequest) (map[string]interface{}, *http.Response, error)
 
 	/*
-	GetChapterApiGetSeasonList Get list of seasons
+		GetChapterApiGetSeasonList Get list of seasons
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetChapterApiGetSeasonListRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetChapterApiGetSeasonListRequest
 	*/
 	GetChapterApiGetSeasonList(ctx context.Context) ApiGetChapterApiGetSeasonListRequest
 
@@ -120,12 +119,12 @@ type DetectApiEndpointAPI interface {
 	GetChapterApiGetSeasonListExecute(r ApiGetChapterApiGetSeasonListRequest) (map[string]interface{}, *http.Response, error)
 
 	/*
-	GetChapterApiGetSeriesList Get list of series
+		GetChapterApiGetSeriesList Get list of series
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetChapterApiGetSeriesListRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetChapterApiGetSeriesListRequest
 	*/
 	GetChapterApiGetSeriesList(ctx context.Context) ApiGetChapterApiGetSeriesListRequest
 
@@ -134,12 +133,12 @@ type DetectApiEndpointAPI interface {
 	GetChapterApiGetSeriesListExecute(r ApiGetChapterApiGetSeriesListRequest) (map[string]interface{}, *http.Response, error)
 
 	/*
-	GetChapterApiInsertChapters Insert detected chapters
+		GetChapterApiInsertChapters Insert detected chapters
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetChapterApiInsertChaptersRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetChapterApiInsertChaptersRequest
 	*/
 	GetChapterApiInsertChapters(ctx context.Context) ApiGetChapterApiInsertChaptersRequest
 
@@ -148,12 +147,12 @@ type DetectApiEndpointAPI interface {
 	GetChapterApiInsertChaptersExecute(r ApiGetChapterApiInsertChaptersRequest) (map[string]interface{}, *http.Response, error)
 
 	/*
-	GetChapterApiIntroDataStats Intro DB stats
+		GetChapterApiIntroDataStats Intro DB stats
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetChapterApiIntroDataStatsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetChapterApiIntroDataStatsRequest
 	*/
 	GetChapterApiIntroDataStats(ctx context.Context) ApiGetChapterApiIntroDataStatsRequest
 
@@ -162,12 +161,12 @@ type DetectApiEndpointAPI interface {
 	GetChapterApiIntroDataStatsExecute(r ApiGetChapterApiIntroDataStatsRequest) (map[string]interface{}, *http.Response, error)
 
 	/*
-	GetChapterApiReloadIntroData Reloads the intro DB form the data path
+		GetChapterApiReloadIntroData Reloads the intro DB form the data path
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetChapterApiReloadIntroDataRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetChapterApiReloadIntroDataRequest
 	*/
 	GetChapterApiReloadIntroData(ctx context.Context) ApiGetChapterApiReloadIntroDataRequest
 
@@ -176,12 +175,12 @@ type DetectApiEndpointAPI interface {
 	GetChapterApiReloadIntroDataExecute(r ApiGetChapterApiReloadIntroDataRequest) (map[string]interface{}, *http.Response, error)
 
 	/*
-	GetChapterApiRemoveJob Remove a job
+		GetChapterApiRemoveJob Remove a job
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetChapterApiRemoveJobRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetChapterApiRemoveJobRequest
 	*/
 	GetChapterApiRemoveJob(ctx context.Context) ApiGetChapterApiRemoveJobRequest
 
@@ -190,12 +189,12 @@ type DetectApiEndpointAPI interface {
 	GetChapterApiRemoveJobExecute(r ApiGetChapterApiRemoveJobRequest) (map[string]interface{}, *http.Response, error)
 
 	/*
-	PostChapterApiAddDetectionJob Add detection job
+		PostChapterApiAddDetectionJob Add detection job
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostChapterApiAddDetectionJobRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostChapterApiAddDetectionJobRequest
 	*/
 	PostChapterApiAddDetectionJob(ctx context.Context) ApiPostChapterApiAddDetectionJobRequest
 
@@ -208,7 +207,7 @@ type DetectApiEndpointAPI interface {
 type DetectApiEndpointAPIService service
 
 type ApiGetChapterApiCancelJobRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService DetectApiEndpointAPI
 }
 
@@ -221,24 +220,25 @@ GetChapterApiCancelJob Cancel a job
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetChapterApiCancelJobRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetChapterApiCancelJobRequest
 */
 func (a *DetectApiEndpointAPIService) GetChapterApiCancelJob(ctx context.Context) ApiGetChapterApiCancelJobRequest {
 	return ApiGetChapterApiCancelJobRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return map[string]interface{}
+//
+//	@return map[string]interface{}
 func (a *DetectApiEndpointAPIService) GetChapterApiCancelJobExecute(r ApiGetChapterApiCancelJobRequest) (map[string]interface{}, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  map[string]interface{}
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue map[string]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DetectApiEndpointAPIService.GetChapterApiCancelJob")
@@ -321,7 +321,7 @@ func (a *DetectApiEndpointAPIService) GetChapterApiCancelJobExecute(r ApiGetChap
 }
 
 type ApiGetChapterApiDownloadIntroDataRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService DetectApiEndpointAPI
 }
 
@@ -334,24 +334,25 @@ GetChapterApiDownloadIntroData Intro DB download
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetChapterApiDownloadIntroDataRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetChapterApiDownloadIntroDataRequest
 */
 func (a *DetectApiEndpointAPIService) GetChapterApiDownloadIntroData(ctx context.Context) ApiGetChapterApiDownloadIntroDataRequest {
 	return ApiGetChapterApiDownloadIntroDataRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return map[string]interface{}
+//
+//	@return map[string]interface{}
 func (a *DetectApiEndpointAPIService) GetChapterApiDownloadIntroDataExecute(r ApiGetChapterApiDownloadIntroDataRequest) (map[string]interface{}, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  map[string]interface{}
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue map[string]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DetectApiEndpointAPIService.GetChapterApiDownloadIntroData")
@@ -434,7 +435,7 @@ func (a *DetectApiEndpointAPIService) GetChapterApiDownloadIntroDataExecute(r Ap
 }
 
 type ApiGetChapterApiGetEpisodeListRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService DetectApiEndpointAPI
 }
 
@@ -447,24 +448,25 @@ GetChapterApiGetEpisodeList Get list of episodes
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetChapterApiGetEpisodeListRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetChapterApiGetEpisodeListRequest
 */
 func (a *DetectApiEndpointAPIService) GetChapterApiGetEpisodeList(ctx context.Context) ApiGetChapterApiGetEpisodeListRequest {
 	return ApiGetChapterApiGetEpisodeListRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return map[string]interface{}
+//
+//	@return map[string]interface{}
 func (a *DetectApiEndpointAPIService) GetChapterApiGetEpisodeListExecute(r ApiGetChapterApiGetEpisodeListRequest) (map[string]interface{}, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  map[string]interface{}
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue map[string]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DetectApiEndpointAPIService.GetChapterApiGetEpisodeList")
@@ -547,7 +549,7 @@ func (a *DetectApiEndpointAPIService) GetChapterApiGetEpisodeListExecute(r ApiGe
 }
 
 type ApiGetChapterApiGetJobInfoRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService DetectApiEndpointAPI
 }
 
@@ -560,24 +562,25 @@ GetChapterApiGetJobInfo Get job info
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetChapterApiGetJobInfoRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetChapterApiGetJobInfoRequest
 */
 func (a *DetectApiEndpointAPIService) GetChapterApiGetJobInfo(ctx context.Context) ApiGetChapterApiGetJobInfoRequest {
 	return ApiGetChapterApiGetJobInfoRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return map[string]interface{}
+//
+//	@return map[string]interface{}
 func (a *DetectApiEndpointAPIService) GetChapterApiGetJobInfoExecute(r ApiGetChapterApiGetJobInfoRequest) (map[string]interface{}, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  map[string]interface{}
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue map[string]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DetectApiEndpointAPIService.GetChapterApiGetJobInfo")
@@ -660,7 +663,7 @@ func (a *DetectApiEndpointAPIService) GetChapterApiGetJobInfoExecute(r ApiGetCha
 }
 
 type ApiGetChapterApiGetJobItemRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService DetectApiEndpointAPI
 }
 
@@ -673,24 +676,25 @@ GetChapterApiGetJobItem Gets info for a job work item
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetChapterApiGetJobItemRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetChapterApiGetJobItemRequest
 */
 func (a *DetectApiEndpointAPIService) GetChapterApiGetJobItem(ctx context.Context) ApiGetChapterApiGetJobItemRequest {
 	return ApiGetChapterApiGetJobItemRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return map[string]interface{}
+//
+//	@return map[string]interface{}
 func (a *DetectApiEndpointAPIService) GetChapterApiGetJobItemExecute(r ApiGetChapterApiGetJobItemRequest) (map[string]interface{}, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  map[string]interface{}
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue map[string]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DetectApiEndpointAPIService.GetChapterApiGetJobItem")
@@ -773,7 +777,7 @@ func (a *DetectApiEndpointAPIService) GetChapterApiGetJobItemExecute(r ApiGetCha
 }
 
 type ApiGetChapterApiGetJobListRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService DetectApiEndpointAPI
 }
 
@@ -786,24 +790,25 @@ GetChapterApiGetJobList Get list of jobs
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetChapterApiGetJobListRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetChapterApiGetJobListRequest
 */
 func (a *DetectApiEndpointAPIService) GetChapterApiGetJobList(ctx context.Context) ApiGetChapterApiGetJobListRequest {
 	return ApiGetChapterApiGetJobListRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return map[string]interface{}
+//
+//	@return map[string]interface{}
 func (a *DetectApiEndpointAPIService) GetChapterApiGetJobListExecute(r ApiGetChapterApiGetJobListRequest) (map[string]interface{}, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  map[string]interface{}
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue map[string]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DetectApiEndpointAPIService.GetChapterApiGetJobList")
@@ -886,7 +891,7 @@ func (a *DetectApiEndpointAPIService) GetChapterApiGetJobListExecute(r ApiGetCha
 }
 
 type ApiGetChapterApiGetSeasonListRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService DetectApiEndpointAPI
 }
 
@@ -899,24 +904,25 @@ GetChapterApiGetSeasonList Get list of seasons
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetChapterApiGetSeasonListRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetChapterApiGetSeasonListRequest
 */
 func (a *DetectApiEndpointAPIService) GetChapterApiGetSeasonList(ctx context.Context) ApiGetChapterApiGetSeasonListRequest {
 	return ApiGetChapterApiGetSeasonListRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return map[string]interface{}
+//
+//	@return map[string]interface{}
 func (a *DetectApiEndpointAPIService) GetChapterApiGetSeasonListExecute(r ApiGetChapterApiGetSeasonListRequest) (map[string]interface{}, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  map[string]interface{}
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue map[string]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DetectApiEndpointAPIService.GetChapterApiGetSeasonList")
@@ -999,7 +1005,7 @@ func (a *DetectApiEndpointAPIService) GetChapterApiGetSeasonListExecute(r ApiGet
 }
 
 type ApiGetChapterApiGetSeriesListRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService DetectApiEndpointAPI
 }
 
@@ -1012,24 +1018,25 @@ GetChapterApiGetSeriesList Get list of series
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetChapterApiGetSeriesListRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetChapterApiGetSeriesListRequest
 */
 func (a *DetectApiEndpointAPIService) GetChapterApiGetSeriesList(ctx context.Context) ApiGetChapterApiGetSeriesListRequest {
 	return ApiGetChapterApiGetSeriesListRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return map[string]interface{}
+//
+//	@return map[string]interface{}
 func (a *DetectApiEndpointAPIService) GetChapterApiGetSeriesListExecute(r ApiGetChapterApiGetSeriesListRequest) (map[string]interface{}, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  map[string]interface{}
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue map[string]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DetectApiEndpointAPIService.GetChapterApiGetSeriesList")
@@ -1112,7 +1119,7 @@ func (a *DetectApiEndpointAPIService) GetChapterApiGetSeriesListExecute(r ApiGet
 }
 
 type ApiGetChapterApiInsertChaptersRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService DetectApiEndpointAPI
 }
 
@@ -1125,24 +1132,25 @@ GetChapterApiInsertChapters Insert detected chapters
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetChapterApiInsertChaptersRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetChapterApiInsertChaptersRequest
 */
 func (a *DetectApiEndpointAPIService) GetChapterApiInsertChapters(ctx context.Context) ApiGetChapterApiInsertChaptersRequest {
 	return ApiGetChapterApiInsertChaptersRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return map[string]interface{}
+//
+//	@return map[string]interface{}
 func (a *DetectApiEndpointAPIService) GetChapterApiInsertChaptersExecute(r ApiGetChapterApiInsertChaptersRequest) (map[string]interface{}, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  map[string]interface{}
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue map[string]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DetectApiEndpointAPIService.GetChapterApiInsertChapters")
@@ -1225,7 +1233,7 @@ func (a *DetectApiEndpointAPIService) GetChapterApiInsertChaptersExecute(r ApiGe
 }
 
 type ApiGetChapterApiIntroDataStatsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService DetectApiEndpointAPI
 }
 
@@ -1238,24 +1246,25 @@ GetChapterApiIntroDataStats Intro DB stats
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetChapterApiIntroDataStatsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetChapterApiIntroDataStatsRequest
 */
 func (a *DetectApiEndpointAPIService) GetChapterApiIntroDataStats(ctx context.Context) ApiGetChapterApiIntroDataStatsRequest {
 	return ApiGetChapterApiIntroDataStatsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return map[string]interface{}
+//
+//	@return map[string]interface{}
 func (a *DetectApiEndpointAPIService) GetChapterApiIntroDataStatsExecute(r ApiGetChapterApiIntroDataStatsRequest) (map[string]interface{}, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  map[string]interface{}
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue map[string]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DetectApiEndpointAPIService.GetChapterApiIntroDataStats")
@@ -1338,7 +1347,7 @@ func (a *DetectApiEndpointAPIService) GetChapterApiIntroDataStatsExecute(r ApiGe
 }
 
 type ApiGetChapterApiReloadIntroDataRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService DetectApiEndpointAPI
 }
 
@@ -1351,24 +1360,25 @@ GetChapterApiReloadIntroData Reloads the intro DB form the data path
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetChapterApiReloadIntroDataRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetChapterApiReloadIntroDataRequest
 */
 func (a *DetectApiEndpointAPIService) GetChapterApiReloadIntroData(ctx context.Context) ApiGetChapterApiReloadIntroDataRequest {
 	return ApiGetChapterApiReloadIntroDataRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return map[string]interface{}
+//
+//	@return map[string]interface{}
 func (a *DetectApiEndpointAPIService) GetChapterApiReloadIntroDataExecute(r ApiGetChapterApiReloadIntroDataRequest) (map[string]interface{}, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  map[string]interface{}
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue map[string]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DetectApiEndpointAPIService.GetChapterApiReloadIntroData")
@@ -1451,7 +1461,7 @@ func (a *DetectApiEndpointAPIService) GetChapterApiReloadIntroDataExecute(r ApiG
 }
 
 type ApiGetChapterApiRemoveJobRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService DetectApiEndpointAPI
 }
 
@@ -1464,24 +1474,25 @@ GetChapterApiRemoveJob Remove a job
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetChapterApiRemoveJobRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetChapterApiRemoveJobRequest
 */
 func (a *DetectApiEndpointAPIService) GetChapterApiRemoveJob(ctx context.Context) ApiGetChapterApiRemoveJobRequest {
 	return ApiGetChapterApiRemoveJobRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return map[string]interface{}
+//
+//	@return map[string]interface{}
 func (a *DetectApiEndpointAPIService) GetChapterApiRemoveJobExecute(r ApiGetChapterApiRemoveJobRequest) (map[string]interface{}, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  map[string]interface{}
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue map[string]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DetectApiEndpointAPIService.GetChapterApiRemoveJob")
@@ -1564,8 +1575,8 @@ func (a *DetectApiEndpointAPIService) GetChapterApiRemoveJobExecute(r ApiGetChap
 }
 
 type ApiPostChapterApiAddDetectionJobRequest struct {
-	ctx context.Context
-	ApiService DetectApiEndpointAPI
+	ctx                       context.Context
+	ApiService                DetectApiEndpointAPI
 	chapterApiAddDetectionJob *ChapterApiAddDetectionJob
 }
 
@@ -1584,24 +1595,25 @@ PostChapterApiAddDetectionJob Add detection job
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostChapterApiAddDetectionJobRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostChapterApiAddDetectionJobRequest
 */
 func (a *DetectApiEndpointAPIService) PostChapterApiAddDetectionJob(ctx context.Context) ApiPostChapterApiAddDetectionJobRequest {
 	return ApiPostChapterApiAddDetectionJobRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return map[string]interface{}
+//
+//	@return map[string]interface{}
 func (a *DetectApiEndpointAPIService) PostChapterApiAddDetectionJobExecute(r ApiPostChapterApiAddDetectionJobRequest) (map[string]interface{}, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  map[string]interface{}
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue map[string]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DetectApiEndpointAPIService.PostChapterApiAddDetectionJob")

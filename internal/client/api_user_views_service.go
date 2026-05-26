@@ -19,17 +19,16 @@ import (
 	"strings"
 )
 
-
 type UserViewsServiceAPI interface {
 
 	/*
-	GetUsersByUseridViews Method for GetUsersByUseridViews
+		GetUsersByUseridViews Method for GetUsersByUseridViews
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param userId User Id
-	@return ApiGetUsersByUseridViewsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param userId User Id
+		@return ApiGetUsersByUseridViewsRequest
 	*/
 	GetUsersByUseridViews(ctx context.Context, userId string) ApiGetUsersByUseridViewsRequest
 
@@ -42,9 +41,9 @@ type UserViewsServiceAPI interface {
 type UserViewsServiceAPIService service
 
 type ApiGetUsersByUseridViewsRequest struct {
-	ctx context.Context
-	ApiService UserViewsServiceAPI
-	userId string
+	ctx                    context.Context
+	ApiService             UserViewsServiceAPI
+	userId                 string
 	includeExternalContent *bool
 }
 
@@ -63,26 +62,27 @@ GetUsersByUseridViews Method for GetUsersByUseridViews
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param userId User Id
- @return ApiGetUsersByUseridViewsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param userId User Id
+	@return ApiGetUsersByUseridViewsRequest
 */
 func (a *UserViewsServiceAPIService) GetUsersByUseridViews(ctx context.Context, userId string) ApiGetUsersByUseridViewsRequest {
 	return ApiGetUsersByUseridViewsRequest{
 		ApiService: a,
-		ctx: ctx,
-		userId: userId,
+		ctx:        ctx,
+		userId:     userId,
 	}
 }
 
 // Execute executes the request
-//  @return QueryResultBaseItemDto
+//
+//	@return QueryResultBaseItemDto
 func (a *UserViewsServiceAPIService) GetUsersByUseridViewsExecute(r ApiGetUsersByUseridViewsRequest) (*QueryResultBaseItemDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *QueryResultBaseItemDto
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *QueryResultBaseItemDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserViewsServiceAPIService.GetUsersByUseridViews")

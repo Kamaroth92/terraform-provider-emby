@@ -19,8 +19,8 @@ var _ MappedNullable = &QueryResultChannelManagementInfo{}
 
 // QueryResultChannelManagementInfo struct for QueryResultChannelManagementInfo
 type QueryResultChannelManagementInfo struct {
-	Items []ChannelManagementInfo `json:"Items,omitempty"`
-	TotalRecordCount *int32 `json:"TotalRecordCount,omitempty"`
+	Items            []ChannelManagementInfo `json:"Items,omitempty"`
+	TotalRecordCount *int32                  `json:"TotalRecordCount,omitempty"`
 }
 
 // NewQueryResultChannelManagementInfo instantiates a new QueryResultChannelManagementInfo object
@@ -105,7 +105,7 @@ func (o *QueryResultChannelManagementInfo) SetTotalRecordCount(v int32) {
 }
 
 func (o QueryResultChannelManagementInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -158,5 +158,3 @@ func (v *NullableQueryResultChannelManagementInfo) UnmarshalJSON(src []byte) err
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

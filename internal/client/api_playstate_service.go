@@ -19,18 +19,17 @@ import (
 	"strings"
 )
 
-
 type PlaystateServiceAPI interface {
 
 	/*
-	DeleteUsersByUseridPlayeditemsById Marks an item as unplayed
+		DeleteUsersByUseridPlayeditemsById Marks an item as unplayed
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param userId User Id
-	@param id Item Id
-	@return ApiDeleteUsersByUseridPlayeditemsByIdRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param userId User Id
+		@param id Item Id
+		@return ApiDeleteUsersByUseridPlayeditemsByIdRequest
 	*/
 	DeleteUsersByUseridPlayeditemsById(ctx context.Context, userId string, id string) ApiDeleteUsersByUseridPlayeditemsByIdRequest
 
@@ -39,14 +38,14 @@ type PlaystateServiceAPI interface {
 	DeleteUsersByUseridPlayeditemsByIdExecute(r ApiDeleteUsersByUseridPlayeditemsByIdRequest) (*UserItemDataDto, *http.Response, error)
 
 	/*
-	DeleteUsersByUseridPlayingitemsById Reports that a user has stopped playing an item
+		DeleteUsersByUseridPlayingitemsById Reports that a user has stopped playing an item
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param userId User Id
-	@param id Item Id
-	@return ApiDeleteUsersByUseridPlayingitemsByIdRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param userId User Id
+		@param id Item Id
+		@return ApiDeleteUsersByUseridPlayingitemsByIdRequest
 	*/
 	DeleteUsersByUseridPlayingitemsById(ctx context.Context, userId string, id string) ApiDeleteUsersByUseridPlayingitemsByIdRequest
 
@@ -54,12 +53,12 @@ type PlaystateServiceAPI interface {
 	DeleteUsersByUseridPlayingitemsByIdExecute(r ApiDeleteUsersByUseridPlayingitemsByIdRequest) (*http.Response, error)
 
 	/*
-	PostSessionsPlaying Reports playback has started within a session
+		PostSessionsPlaying Reports playback has started within a session
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostSessionsPlayingRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostSessionsPlayingRequest
 	*/
 	PostSessionsPlaying(ctx context.Context) ApiPostSessionsPlayingRequest
 
@@ -67,12 +66,12 @@ type PlaystateServiceAPI interface {
 	PostSessionsPlayingExecute(r ApiPostSessionsPlayingRequest) (*http.Response, error)
 
 	/*
-	PostSessionsPlayingPing Pings a playback session
+		PostSessionsPlayingPing Pings a playback session
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostSessionsPlayingPingRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostSessionsPlayingPingRequest
 	*/
 	PostSessionsPlayingPing(ctx context.Context) ApiPostSessionsPlayingPingRequest
 
@@ -80,12 +79,12 @@ type PlaystateServiceAPI interface {
 	PostSessionsPlayingPingExecute(r ApiPostSessionsPlayingPingRequest) (*http.Response, error)
 
 	/*
-	PostSessionsPlayingProgress Reports playback progress within a session
+		PostSessionsPlayingProgress Reports playback progress within a session
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostSessionsPlayingProgressRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostSessionsPlayingProgressRequest
 	*/
 	PostSessionsPlayingProgress(ctx context.Context) ApiPostSessionsPlayingProgressRequest
 
@@ -93,12 +92,12 @@ type PlaystateServiceAPI interface {
 	PostSessionsPlayingProgressExecute(r ApiPostSessionsPlayingProgressRequest) (*http.Response, error)
 
 	/*
-	PostSessionsPlayingStopped Reports playback has stopped within a session
+		PostSessionsPlayingStopped Reports playback has stopped within a session
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostSessionsPlayingStoppedRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostSessionsPlayingStoppedRequest
 	*/
 	PostSessionsPlayingStopped(ctx context.Context) ApiPostSessionsPlayingStoppedRequest
 
@@ -106,14 +105,14 @@ type PlaystateServiceAPI interface {
 	PostSessionsPlayingStoppedExecute(r ApiPostSessionsPlayingStoppedRequest) (*http.Response, error)
 
 	/*
-	PostUsersByUseridItemsByItemidUserdata Updates userdata for an item
+		PostUsersByUseridItemsByItemidUserdata Updates userdata for an item
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param userId User Id
-	@param itemId
-	@return ApiPostUsersByUseridItemsByItemidUserdataRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param userId User Id
+		@param itemId
+		@return ApiPostUsersByUseridItemsByItemidUserdataRequest
 	*/
 	PostUsersByUseridItemsByItemidUserdata(ctx context.Context, userId string, itemId string) ApiPostUsersByUseridItemsByItemidUserdataRequest
 
@@ -121,14 +120,14 @@ type PlaystateServiceAPI interface {
 	PostUsersByUseridItemsByItemidUserdataExecute(r ApiPostUsersByUseridItemsByItemidUserdataRequest) (*http.Response, error)
 
 	/*
-	PostUsersByUseridPlayeditemsById Marks an item as played
+		PostUsersByUseridPlayeditemsById Marks an item as played
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param userId User Id
-	@param id Item Id
-	@return ApiPostUsersByUseridPlayeditemsByIdRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param userId User Id
+		@param id Item Id
+		@return ApiPostUsersByUseridPlayeditemsByIdRequest
 	*/
 	PostUsersByUseridPlayeditemsById(ctx context.Context, userId string, id string) ApiPostUsersByUseridPlayeditemsByIdRequest
 
@@ -137,14 +136,14 @@ type PlaystateServiceAPI interface {
 	PostUsersByUseridPlayeditemsByIdExecute(r ApiPostUsersByUseridPlayeditemsByIdRequest) (*UserItemDataDto, *http.Response, error)
 
 	/*
-	PostUsersByUseridPlayeditemsByIdDelete Marks an item as unplayed
+		PostUsersByUseridPlayeditemsByIdDelete Marks an item as unplayed
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param userId User Id
-	@param id Item Id
-	@return ApiPostUsersByUseridPlayeditemsByIdDeleteRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param userId User Id
+		@param id Item Id
+		@return ApiPostUsersByUseridPlayeditemsByIdDeleteRequest
 	*/
 	PostUsersByUseridPlayeditemsByIdDelete(ctx context.Context, userId string, id string) ApiPostUsersByUseridPlayeditemsByIdDeleteRequest
 
@@ -153,14 +152,14 @@ type PlaystateServiceAPI interface {
 	PostUsersByUseridPlayeditemsByIdDeleteExecute(r ApiPostUsersByUseridPlayeditemsByIdDeleteRequest) (*UserItemDataDto, *http.Response, error)
 
 	/*
-	PostUsersByUseridPlayingitemsById Reports that a user has begun playing an item
+		PostUsersByUseridPlayingitemsById Reports that a user has begun playing an item
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param userId User Id
-	@param id Item Id
-	@return ApiPostUsersByUseridPlayingitemsByIdRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param userId User Id
+		@param id Item Id
+		@return ApiPostUsersByUseridPlayingitemsByIdRequest
 	*/
 	PostUsersByUseridPlayingitemsById(ctx context.Context, userId string, id string) ApiPostUsersByUseridPlayingitemsByIdRequest
 
@@ -168,14 +167,14 @@ type PlaystateServiceAPI interface {
 	PostUsersByUseridPlayingitemsByIdExecute(r ApiPostUsersByUseridPlayingitemsByIdRequest) (*http.Response, error)
 
 	/*
-	PostUsersByUseridPlayingitemsByIdDelete Reports that a user has stopped playing an item
+		PostUsersByUseridPlayingitemsByIdDelete Reports that a user has stopped playing an item
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param userId User Id
-	@param id Item Id
-	@return ApiPostUsersByUseridPlayingitemsByIdDeleteRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param userId User Id
+		@param id Item Id
+		@return ApiPostUsersByUseridPlayingitemsByIdDeleteRequest
 	*/
 	PostUsersByUseridPlayingitemsByIdDelete(ctx context.Context, userId string, id string) ApiPostUsersByUseridPlayingitemsByIdDeleteRequest
 
@@ -183,14 +182,14 @@ type PlaystateServiceAPI interface {
 	PostUsersByUseridPlayingitemsByIdDeleteExecute(r ApiPostUsersByUseridPlayingitemsByIdDeleteRequest) (*http.Response, error)
 
 	/*
-	PostUsersByUseridPlayingitemsByIdProgress Reports a user's playback progress
+		PostUsersByUseridPlayingitemsByIdProgress Reports a user's playback progress
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param userId User Id
-	@param id Item Id
-	@return ApiPostUsersByUseridPlayingitemsByIdProgressRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param userId User Id
+		@param id Item Id
+		@return ApiPostUsersByUseridPlayingitemsByIdProgressRequest
 	*/
 	PostUsersByUseridPlayingitemsByIdProgress(ctx context.Context, userId string, id string) ApiPostUsersByUseridPlayingitemsByIdProgressRequest
 
@@ -202,10 +201,10 @@ type PlaystateServiceAPI interface {
 type PlaystateServiceAPIService service
 
 type ApiDeleteUsersByUseridPlayeditemsByIdRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService PlaystateServiceAPI
-	userId string
-	id string
+	userId     string
+	id         string
 }
 
 func (r ApiDeleteUsersByUseridPlayeditemsByIdRequest) Execute() (*UserItemDataDto, *http.Response, error) {
@@ -217,28 +216,29 @@ DeleteUsersByUseridPlayeditemsById Marks an item as unplayed
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param userId User Id
- @param id Item Id
- @return ApiDeleteUsersByUseridPlayeditemsByIdRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param userId User Id
+	@param id Item Id
+	@return ApiDeleteUsersByUseridPlayeditemsByIdRequest
 */
 func (a *PlaystateServiceAPIService) DeleteUsersByUseridPlayeditemsById(ctx context.Context, userId string, id string) ApiDeleteUsersByUseridPlayeditemsByIdRequest {
 	return ApiDeleteUsersByUseridPlayeditemsByIdRequest{
 		ApiService: a,
-		ctx: ctx,
-		userId: userId,
-		id: id,
+		ctx:        ctx,
+		userId:     userId,
+		id:         id,
 	}
 }
 
 // Execute executes the request
-//  @return UserItemDataDto
+//
+//	@return UserItemDataDto
 func (a *PlaystateServiceAPIService) DeleteUsersByUseridPlayeditemsByIdExecute(r ApiDeleteUsersByUseridPlayeditemsByIdRequest) (*UserItemDataDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodDelete
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *UserItemDataDto
+		localVarHTTPMethod  = http.MethodDelete
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *UserItemDataDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PlaystateServiceAPIService.DeleteUsersByUseridPlayeditemsById")
@@ -323,14 +323,14 @@ func (a *PlaystateServiceAPIService) DeleteUsersByUseridPlayeditemsByIdExecute(r
 }
 
 type ApiDeleteUsersByUseridPlayingitemsByIdRequest struct {
-	ctx context.Context
-	ApiService PlaystateServiceAPI
-	userId string
-	id string
+	ctx           context.Context
+	ApiService    PlaystateServiceAPI
+	userId        string
+	id            string
 	mediaSourceId *string
 	nextMediaType *string
 	positionTicks *int64
-	liveStreamId *string
+	liveStreamId  *string
 	playSessionId *string
 }
 
@@ -371,26 +371,26 @@ DeleteUsersByUseridPlayingitemsById Reports that a user has stopped playing an i
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param userId User Id
- @param id Item Id
- @return ApiDeleteUsersByUseridPlayingitemsByIdRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param userId User Id
+	@param id Item Id
+	@return ApiDeleteUsersByUseridPlayingitemsByIdRequest
 */
 func (a *PlaystateServiceAPIService) DeleteUsersByUseridPlayingitemsById(ctx context.Context, userId string, id string) ApiDeleteUsersByUseridPlayingitemsByIdRequest {
 	return ApiDeleteUsersByUseridPlayingitemsByIdRequest{
 		ApiService: a,
-		ctx: ctx,
-		userId: userId,
-		id: id,
+		ctx:        ctx,
+		userId:     userId,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *PlaystateServiceAPIService) DeleteUsersByUseridPlayingitemsByIdExecute(r ApiDeleteUsersByUseridPlayingitemsByIdRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodDelete
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodDelete
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PlaystateServiceAPIService.DeleteUsersByUseridPlayingitemsById")
@@ -483,12 +483,12 @@ func (a *PlaystateServiceAPIService) DeleteUsersByUseridPlayingitemsByIdExecute(
 }
 
 type ApiPostSessionsPlayingRequest struct {
-	ctx context.Context
-	ApiService PlaystateServiceAPI
+	ctx               context.Context
+	ApiService        PlaystateServiceAPI
 	playbackStartInfo *PlaybackStartInfo
 }
 
-// PlaybackStartInfo: 
+// PlaybackStartInfo:
 func (r ApiPostSessionsPlayingRequest) PlaybackStartInfo(playbackStartInfo PlaybackStartInfo) ApiPostSessionsPlayingRequest {
 	r.playbackStartInfo = &playbackStartInfo
 	return r
@@ -503,22 +503,22 @@ PostSessionsPlaying Reports playback has started within a session
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostSessionsPlayingRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostSessionsPlayingRequest
 */
 func (a *PlaystateServiceAPIService) PostSessionsPlaying(ctx context.Context) ApiPostSessionsPlayingRequest {
 	return ApiPostSessionsPlayingRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *PlaystateServiceAPIService) PostSessionsPlayingExecute(r ApiPostSessionsPlayingRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PlaystateServiceAPIService.PostSessionsPlaying")
@@ -597,8 +597,8 @@ func (a *PlaystateServiceAPIService) PostSessionsPlayingExecute(r ApiPostSession
 }
 
 type ApiPostSessionsPlayingPingRequest struct {
-	ctx context.Context
-	ApiService PlaystateServiceAPI
+	ctx           context.Context
+	ApiService    PlaystateServiceAPI
 	playSessionId *string
 }
 
@@ -616,22 +616,22 @@ PostSessionsPlayingPing Pings a playback session
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostSessionsPlayingPingRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostSessionsPlayingPingRequest
 */
 func (a *PlaystateServiceAPIService) PostSessionsPlayingPing(ctx context.Context) ApiPostSessionsPlayingPingRequest {
 	return ApiPostSessionsPlayingPingRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *PlaystateServiceAPIService) PostSessionsPlayingPingExecute(r ApiPostSessionsPlayingPingRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PlaystateServiceAPIService.PostSessionsPlayingPing")
@@ -708,12 +708,12 @@ func (a *PlaystateServiceAPIService) PostSessionsPlayingPingExecute(r ApiPostSes
 }
 
 type ApiPostSessionsPlayingProgressRequest struct {
-	ctx context.Context
-	ApiService PlaystateServiceAPI
+	ctx                  context.Context
+	ApiService           PlaystateServiceAPI
 	playbackProgressInfo *PlaybackProgressInfo
 }
 
-// PlaybackProgressInfo: 
+// PlaybackProgressInfo:
 func (r ApiPostSessionsPlayingProgressRequest) PlaybackProgressInfo(playbackProgressInfo PlaybackProgressInfo) ApiPostSessionsPlayingProgressRequest {
 	r.playbackProgressInfo = &playbackProgressInfo
 	return r
@@ -728,22 +728,22 @@ PostSessionsPlayingProgress Reports playback progress within a session
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostSessionsPlayingProgressRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostSessionsPlayingProgressRequest
 */
 func (a *PlaystateServiceAPIService) PostSessionsPlayingProgress(ctx context.Context) ApiPostSessionsPlayingProgressRequest {
 	return ApiPostSessionsPlayingProgressRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *PlaystateServiceAPIService) PostSessionsPlayingProgressExecute(r ApiPostSessionsPlayingProgressRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PlaystateServiceAPIService.PostSessionsPlayingProgress")
@@ -822,12 +822,12 @@ func (a *PlaystateServiceAPIService) PostSessionsPlayingProgressExecute(r ApiPos
 }
 
 type ApiPostSessionsPlayingStoppedRequest struct {
-	ctx context.Context
-	ApiService PlaystateServiceAPI
+	ctx              context.Context
+	ApiService       PlaystateServiceAPI
 	playbackStopInfo *PlaybackStopInfo
 }
 
-// PlaybackStopInfo: 
+// PlaybackStopInfo:
 func (r ApiPostSessionsPlayingStoppedRequest) PlaybackStopInfo(playbackStopInfo PlaybackStopInfo) ApiPostSessionsPlayingStoppedRequest {
 	r.playbackStopInfo = &playbackStopInfo
 	return r
@@ -842,22 +842,22 @@ PostSessionsPlayingStopped Reports playback has stopped within a session
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostSessionsPlayingStoppedRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostSessionsPlayingStoppedRequest
 */
 func (a *PlaystateServiceAPIService) PostSessionsPlayingStopped(ctx context.Context) ApiPostSessionsPlayingStoppedRequest {
 	return ApiPostSessionsPlayingStoppedRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *PlaystateServiceAPIService) PostSessionsPlayingStoppedExecute(r ApiPostSessionsPlayingStoppedRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PlaystateServiceAPIService.PostSessionsPlayingStopped")
@@ -936,14 +936,14 @@ func (a *PlaystateServiceAPIService) PostSessionsPlayingStoppedExecute(r ApiPost
 }
 
 type ApiPostUsersByUseridItemsByItemidUserdataRequest struct {
-	ctx context.Context
-	ApiService PlaystateServiceAPI
-	userId string
-	itemId string
+	ctx             context.Context
+	ApiService      PlaystateServiceAPI
+	userId          string
+	itemId          string
 	userItemDataDto *UserItemDataDto
 }
 
-// UserItemDataDto: 
+// UserItemDataDto:
 func (r ApiPostUsersByUseridItemsByItemidUserdataRequest) UserItemDataDto(userItemDataDto UserItemDataDto) ApiPostUsersByUseridItemsByItemidUserdataRequest {
 	r.userItemDataDto = &userItemDataDto
 	return r
@@ -958,26 +958,26 @@ PostUsersByUseridItemsByItemidUserdata Updates userdata for an item
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param userId User Id
- @param itemId
- @return ApiPostUsersByUseridItemsByItemidUserdataRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param userId User Id
+	@param itemId
+	@return ApiPostUsersByUseridItemsByItemidUserdataRequest
 */
 func (a *PlaystateServiceAPIService) PostUsersByUseridItemsByItemidUserdata(ctx context.Context, userId string, itemId string) ApiPostUsersByUseridItemsByItemidUserdataRequest {
 	return ApiPostUsersByUseridItemsByItemidUserdataRequest{
 		ApiService: a,
-		ctx: ctx,
-		userId: userId,
-		itemId: itemId,
+		ctx:        ctx,
+		userId:     userId,
+		itemId:     itemId,
 	}
 }
 
 // Execute executes the request
 func (a *PlaystateServiceAPIService) PostUsersByUseridItemsByItemidUserdataExecute(r ApiPostUsersByUseridItemsByItemidUserdataRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PlaystateServiceAPIService.PostUsersByUseridItemsByItemidUserdata")
@@ -1058,10 +1058,10 @@ func (a *PlaystateServiceAPIService) PostUsersByUseridItemsByItemidUserdataExecu
 }
 
 type ApiPostUsersByUseridPlayeditemsByIdRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService PlaystateServiceAPI
-	userId string
-	id string
+	userId     string
+	id         string
 	datePlayed *string
 }
 
@@ -1080,28 +1080,29 @@ PostUsersByUseridPlayeditemsById Marks an item as played
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param userId User Id
- @param id Item Id
- @return ApiPostUsersByUseridPlayeditemsByIdRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param userId User Id
+	@param id Item Id
+	@return ApiPostUsersByUseridPlayeditemsByIdRequest
 */
 func (a *PlaystateServiceAPIService) PostUsersByUseridPlayeditemsById(ctx context.Context, userId string, id string) ApiPostUsersByUseridPlayeditemsByIdRequest {
 	return ApiPostUsersByUseridPlayeditemsByIdRequest{
 		ApiService: a,
-		ctx: ctx,
-		userId: userId,
-		id: id,
+		ctx:        ctx,
+		userId:     userId,
+		id:         id,
 	}
 }
 
 // Execute executes the request
-//  @return UserItemDataDto
+//
+//	@return UserItemDataDto
 func (a *PlaystateServiceAPIService) PostUsersByUseridPlayeditemsByIdExecute(r ApiPostUsersByUseridPlayeditemsByIdRequest) (*UserItemDataDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *UserItemDataDto
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *UserItemDataDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PlaystateServiceAPIService.PostUsersByUseridPlayeditemsById")
@@ -1189,10 +1190,10 @@ func (a *PlaystateServiceAPIService) PostUsersByUseridPlayeditemsByIdExecute(r A
 }
 
 type ApiPostUsersByUseridPlayeditemsByIdDeleteRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService PlaystateServiceAPI
-	userId string
-	id string
+	userId     string
+	id         string
 }
 
 func (r ApiPostUsersByUseridPlayeditemsByIdDeleteRequest) Execute() (*UserItemDataDto, *http.Response, error) {
@@ -1204,28 +1205,29 @@ PostUsersByUseridPlayeditemsByIdDelete Marks an item as unplayed
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param userId User Id
- @param id Item Id
- @return ApiPostUsersByUseridPlayeditemsByIdDeleteRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param userId User Id
+	@param id Item Id
+	@return ApiPostUsersByUseridPlayeditemsByIdDeleteRequest
 */
 func (a *PlaystateServiceAPIService) PostUsersByUseridPlayeditemsByIdDelete(ctx context.Context, userId string, id string) ApiPostUsersByUseridPlayeditemsByIdDeleteRequest {
 	return ApiPostUsersByUseridPlayeditemsByIdDeleteRequest{
 		ApiService: a,
-		ctx: ctx,
-		userId: userId,
-		id: id,
+		ctx:        ctx,
+		userId:     userId,
+		id:         id,
 	}
 }
 
 // Execute executes the request
-//  @return UserItemDataDto
+//
+//	@return UserItemDataDto
 func (a *PlaystateServiceAPIService) PostUsersByUseridPlayeditemsByIdDeleteExecute(r ApiPostUsersByUseridPlayeditemsByIdDeleteRequest) (*UserItemDataDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *UserItemDataDto
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *UserItemDataDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PlaystateServiceAPIService.PostUsersByUseridPlayeditemsByIdDelete")
@@ -1310,17 +1312,17 @@ func (a *PlaystateServiceAPIService) PostUsersByUseridPlayeditemsByIdDeleteExecu
 }
 
 type ApiPostUsersByUseridPlayingitemsByIdRequest struct {
-	ctx context.Context
-	ApiService PlaystateServiceAPI
-	userId string
-	id string
-	mediaSourceId *string
-	canSeek *bool
-	audioStreamIndex *int32
+	ctx                 context.Context
+	ApiService          PlaystateServiceAPI
+	userId              string
+	id                  string
+	mediaSourceId       *string
+	canSeek             *bool
+	audioStreamIndex    *int32
 	subtitleStreamIndex *int32
-	playMethod *PlayMethod
-	liveStreamId *string
-	playSessionId *string
+	playMethod          *PlayMethod
+	liveStreamId        *string
+	playSessionId       *string
 }
 
 // The id of the MediaSource
@@ -1369,26 +1371,26 @@ PostUsersByUseridPlayingitemsById Reports that a user has begun playing an item
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param userId User Id
- @param id Item Id
- @return ApiPostUsersByUseridPlayingitemsByIdRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param userId User Id
+	@param id Item Id
+	@return ApiPostUsersByUseridPlayingitemsByIdRequest
 */
 func (a *PlaystateServiceAPIService) PostUsersByUseridPlayingitemsById(ctx context.Context, userId string, id string) ApiPostUsersByUseridPlayingitemsByIdRequest {
 	return ApiPostUsersByUseridPlayingitemsByIdRequest{
 		ApiService: a,
-		ctx: ctx,
-		userId: userId,
-		id: id,
+		ctx:        ctx,
+		userId:     userId,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *PlaystateServiceAPIService) PostUsersByUseridPlayingitemsByIdExecute(r ApiPostUsersByUseridPlayingitemsByIdRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PlaystateServiceAPIService.PostUsersByUseridPlayingitemsById")
@@ -1486,14 +1488,14 @@ func (a *PlaystateServiceAPIService) PostUsersByUseridPlayingitemsByIdExecute(r 
 }
 
 type ApiPostUsersByUseridPlayingitemsByIdDeleteRequest struct {
-	ctx context.Context
-	ApiService PlaystateServiceAPI
-	userId string
-	id string
+	ctx           context.Context
+	ApiService    PlaystateServiceAPI
+	userId        string
+	id            string
 	mediaSourceId *string
 	nextMediaType *string
 	positionTicks *int64
-	liveStreamId *string
+	liveStreamId  *string
 	playSessionId *string
 }
 
@@ -1534,26 +1536,26 @@ PostUsersByUseridPlayingitemsByIdDelete Reports that a user has stopped playing 
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param userId User Id
- @param id Item Id
- @return ApiPostUsersByUseridPlayingitemsByIdDeleteRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param userId User Id
+	@param id Item Id
+	@return ApiPostUsersByUseridPlayingitemsByIdDeleteRequest
 */
 func (a *PlaystateServiceAPIService) PostUsersByUseridPlayingitemsByIdDelete(ctx context.Context, userId string, id string) ApiPostUsersByUseridPlayingitemsByIdDeleteRequest {
 	return ApiPostUsersByUseridPlayingitemsByIdDeleteRequest{
 		ApiService: a,
-		ctx: ctx,
-		userId: userId,
-		id: id,
+		ctx:        ctx,
+		userId:     userId,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *PlaystateServiceAPIService) PostUsersByUseridPlayingitemsByIdDeleteExecute(r ApiPostUsersByUseridPlayingitemsByIdDeleteRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PlaystateServiceAPIService.PostUsersByUseridPlayingitemsByIdDelete")
@@ -1646,24 +1648,24 @@ func (a *PlaystateServiceAPIService) PostUsersByUseridPlayingitemsByIdDeleteExec
 }
 
 type ApiPostUsersByUseridPlayingitemsByIdProgressRequest struct {
-	ctx context.Context
-	ApiService PlaystateServiceAPI
-	userId string
-	id string
-	mediaSourceId *string
+	ctx                   context.Context
+	ApiService            PlaystateServiceAPI
+	userId                string
+	id                    string
+	mediaSourceId         *string
 	apiOnPlaybackProgress *ApiOnPlaybackProgress
-	positionTicks *int64
-	isPaused *bool
-	isMuted *bool
-	audioStreamIndex *int32
-	subtitleStreamIndex *int32
-	volumeLevel *int32
-	playMethod *PlayMethod
-	liveStreamId *string
-	playSessionId *string
-	repeatMode *RepeatMode
-	subtitleOffset *int32
-	playbackRate *float64
+	positionTicks         *int64
+	isPaused              *bool
+	isMuted               *bool
+	audioStreamIndex      *int32
+	subtitleStreamIndex   *int32
+	volumeLevel           *int32
+	playMethod            *PlayMethod
+	liveStreamId          *string
+	playSessionId         *string
+	repeatMode            *RepeatMode
+	subtitleOffset        *int32
+	playbackRate          *float64
 }
 
 // The id of the MediaSource
@@ -1751,26 +1753,26 @@ PostUsersByUseridPlayingitemsByIdProgress Reports a user's playback progress
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param userId User Id
- @param id Item Id
- @return ApiPostUsersByUseridPlayingitemsByIdProgressRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param userId User Id
+	@param id Item Id
+	@return ApiPostUsersByUseridPlayingitemsByIdProgressRequest
 */
 func (a *PlaystateServiceAPIService) PostUsersByUseridPlayingitemsByIdProgress(ctx context.Context, userId string, id string) ApiPostUsersByUseridPlayingitemsByIdProgressRequest {
 	return ApiPostUsersByUseridPlayingitemsByIdProgressRequest{
 		ApiService: a,
-		ctx: ctx,
-		userId: userId,
-		id: id,
+		ctx:        ctx,
+		userId:     userId,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *PlaystateServiceAPIService) PostUsersByUseridPlayingitemsByIdProgressExecute(r ApiPostUsersByUseridPlayingitemsByIdProgressRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PlaystateServiceAPIService.PostUsersByUseridPlayingitemsByIdProgress")

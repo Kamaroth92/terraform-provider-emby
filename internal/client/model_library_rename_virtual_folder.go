@@ -19,7 +19,7 @@ var _ MappedNullable = &LibraryRenameVirtualFolder{}
 
 // LibraryRenameVirtualFolder struct for LibraryRenameVirtualFolder
 type LibraryRenameVirtualFolder struct {
-	Id *string `json:"Id,omitempty"`
+	Id      *string `json:"Id,omitempty"`
 	NewName *string `json:"NewName,omitempty"`
 }
 
@@ -105,7 +105,7 @@ func (o *LibraryRenameVirtualFolder) SetNewName(v string) {
 }
 
 func (o LibraryRenameVirtualFolder) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -158,5 +158,3 @@ func (v *NullableLibraryRenameVirtualFolder) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

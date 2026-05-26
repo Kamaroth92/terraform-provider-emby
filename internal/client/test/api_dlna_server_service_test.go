@@ -1,3 +1,5 @@
+// Copyright (c) HashiCorp, Inc.
+
 /*
 Emby Server REST API (BETA)
 
@@ -11,10 +13,10 @@ package embyclient
 
 import (
 	"context"
+	openapiclient "github.com/Kamaroth92/terraform-provider-emby/client"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func Test_embyclient_DlnaServerServiceAPIService(t *testing.T) {
@@ -24,7 +26,7 @@ func Test_embyclient_DlnaServerServiceAPIService(t *testing.T) {
 
 	t.Run("Test DlnaServerServiceAPIService GetDlnaByUuidConnectionmanagerConnectionmanager", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var uuId string
 
@@ -37,7 +39,7 @@ func Test_embyclient_DlnaServerServiceAPIService(t *testing.T) {
 
 	t.Run("Test DlnaServerServiceAPIService GetDlnaByUuidConnectionmanagerConnectionmanagerXml", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var uuId string
 
@@ -50,7 +52,7 @@ func Test_embyclient_DlnaServerServiceAPIService(t *testing.T) {
 
 	t.Run("Test DlnaServerServiceAPIService GetDlnaByUuidContentdirectoryContentdirectory", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var uuId string
 
@@ -63,7 +65,7 @@ func Test_embyclient_DlnaServerServiceAPIService(t *testing.T) {
 
 	t.Run("Test DlnaServerServiceAPIService GetDlnaByUuidContentdirectoryContentdirectoryXml", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var uuId string
 
@@ -76,7 +78,7 @@ func Test_embyclient_DlnaServerServiceAPIService(t *testing.T) {
 
 	t.Run("Test DlnaServerServiceAPIService GetDlnaByUuidDescription", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var uuId string
 
@@ -89,7 +91,7 @@ func Test_embyclient_DlnaServerServiceAPIService(t *testing.T) {
 
 	t.Run("Test DlnaServerServiceAPIService GetDlnaByUuidDescriptionXml", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var uuId string
 
@@ -102,7 +104,7 @@ func Test_embyclient_DlnaServerServiceAPIService(t *testing.T) {
 
 	t.Run("Test DlnaServerServiceAPIService GetDlnaByUuidIconsByFilename", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var uuId string
 		var filename string
@@ -116,7 +118,7 @@ func Test_embyclient_DlnaServerServiceAPIService(t *testing.T) {
 
 	t.Run("Test DlnaServerServiceAPIService GetDlnaIconsByFilename", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var filename string
 
@@ -129,7 +131,7 @@ func Test_embyclient_DlnaServerServiceAPIService(t *testing.T) {
 
 	t.Run("Test DlnaServerServiceAPIService HeadDlnaByUuidConnectionmanagerConnectionmanager", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var uuId string
 
@@ -142,7 +144,7 @@ func Test_embyclient_DlnaServerServiceAPIService(t *testing.T) {
 
 	t.Run("Test DlnaServerServiceAPIService HeadDlnaByUuidConnectionmanagerConnectionmanagerXml", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var uuId string
 
@@ -155,7 +157,7 @@ func Test_embyclient_DlnaServerServiceAPIService(t *testing.T) {
 
 	t.Run("Test DlnaServerServiceAPIService HeadDlnaByUuidContentdirectoryContentdirectory", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var uuId string
 
@@ -168,7 +170,7 @@ func Test_embyclient_DlnaServerServiceAPIService(t *testing.T) {
 
 	t.Run("Test DlnaServerServiceAPIService HeadDlnaByUuidContentdirectoryContentdirectoryXml", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var uuId string
 
@@ -181,7 +183,7 @@ func Test_embyclient_DlnaServerServiceAPIService(t *testing.T) {
 
 	t.Run("Test DlnaServerServiceAPIService HeadDlnaByUuidDescription", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var uuId string
 
@@ -194,7 +196,7 @@ func Test_embyclient_DlnaServerServiceAPIService(t *testing.T) {
 
 	t.Run("Test DlnaServerServiceAPIService HeadDlnaByUuidDescriptionXml", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var uuId string
 
@@ -207,7 +209,7 @@ func Test_embyclient_DlnaServerServiceAPIService(t *testing.T) {
 
 	t.Run("Test DlnaServerServiceAPIService PostDlnaByUuidConnectionmanagerControl", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var uuId string
 
@@ -220,7 +222,7 @@ func Test_embyclient_DlnaServerServiceAPIService(t *testing.T) {
 
 	t.Run("Test DlnaServerServiceAPIService PostDlnaByUuidContentdirectoryControl", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var uuId string
 

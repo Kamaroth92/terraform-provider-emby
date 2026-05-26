@@ -19,9 +19,9 @@ var _ MappedNullable = &ApiSetChannelSortIndex{}
 
 // ApiSetChannelSortIndex struct for ApiSetChannelSortIndex
 type ApiSetChannelSortIndex struct {
-	Id *string `json:"Id,omitempty"`
+	Id           *string `json:"Id,omitempty"`
 	ManagementId *string `json:"ManagementId,omitempty"`
-	NewIndex *int32 `json:"NewIndex,omitempty"`
+	NewIndex     *int32  `json:"NewIndex,omitempty"`
 }
 
 // NewApiSetChannelSortIndex instantiates a new ApiSetChannelSortIndex object
@@ -138,7 +138,7 @@ func (o *ApiSetChannelSortIndex) SetNewIndex(v int32) {
 }
 
 func (o ApiSetChannelSortIndex) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -194,5 +194,3 @@ func (v *NullableApiSetChannelSortIndex) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

@@ -19,18 +19,17 @@ import (
 	"strings"
 )
 
-
 type SubtitleServiceAPI interface {
 
 	/*
-	DeleteItemsByIdSubtitlesByIndex Deletes an external subtitle file
+		DeleteItemsByIdSubtitlesByIndex Deletes an external subtitle file
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@param index The subtitle stream index
-	@return ApiDeleteItemsByIdSubtitlesByIndexRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@param index The subtitle stream index
+		@return ApiDeleteItemsByIdSubtitlesByIndexRequest
 	*/
 	DeleteItemsByIdSubtitlesByIndex(ctx context.Context, id string, index int32) ApiDeleteItemsByIdSubtitlesByIndexRequest
 
@@ -38,14 +37,14 @@ type SubtitleServiceAPI interface {
 	DeleteItemsByIdSubtitlesByIndexExecute(r ApiDeleteItemsByIdSubtitlesByIndexRequest) (*http.Response, error)
 
 	/*
-	DeleteVideosByIdSubtitlesByIndex Deletes an external subtitle file
+		DeleteVideosByIdSubtitlesByIndex Deletes an external subtitle file
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@param index The subtitle stream index
-	@return ApiDeleteVideosByIdSubtitlesByIndexRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@param index The subtitle stream index
+		@return ApiDeleteVideosByIdSubtitlesByIndexRequest
 	*/
 	DeleteVideosByIdSubtitlesByIndex(ctx context.Context, id string, index int32) ApiDeleteVideosByIdSubtitlesByIndexRequest
 
@@ -53,17 +52,17 @@ type SubtitleServiceAPI interface {
 	DeleteVideosByIdSubtitlesByIndexExecute(r ApiDeleteVideosByIdSubtitlesByIndexRequest) (*http.Response, error)
 
 	/*
-	GetItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat Gets subtitles in a specified format.
+		GetItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat Gets subtitles in a specified format.
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@param mediaSourceId MediaSourceId
-	@param index The subtitle stream index
-	@param format Format
-	@param startPositionTicks StartPositionTicks
-	@return ApiGetItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@param mediaSourceId MediaSourceId
+		@param index The subtitle stream index
+		@param format Format
+		@param startPositionTicks StartPositionTicks
+		@return ApiGetItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatRequest
 	*/
 	GetItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat(ctx context.Context, id string, mediaSourceId string, index int32, format string, startPositionTicks int64) ApiGetItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatRequest
 
@@ -71,16 +70,16 @@ type SubtitleServiceAPI interface {
 	GetItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatExecute(r ApiGetItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatRequest) (*http.Response, error)
 
 	/*
-	GetItemsByIdByMediasourceidSubtitlesByIndexStreamByFormat Gets subtitles in a specified format.
+		GetItemsByIdByMediasourceidSubtitlesByIndexStreamByFormat Gets subtitles in a specified format.
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@param mediaSourceId MediaSourceId
-	@param index The subtitle stream index
-	@param format Format
-	@return ApiGetItemsByIdByMediasourceidSubtitlesByIndexStreamByFormatRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@param mediaSourceId MediaSourceId
+		@param index The subtitle stream index
+		@param format Format
+		@return ApiGetItemsByIdByMediasourceidSubtitlesByIndexStreamByFormatRequest
 	*/
 	GetItemsByIdByMediasourceidSubtitlesByIndexStreamByFormat(ctx context.Context, id string, mediaSourceId string, index int32, format string) ApiGetItemsByIdByMediasourceidSubtitlesByIndexStreamByFormatRequest
 
@@ -88,14 +87,14 @@ type SubtitleServiceAPI interface {
 	GetItemsByIdByMediasourceidSubtitlesByIndexStreamByFormatExecute(r ApiGetItemsByIdByMediasourceidSubtitlesByIndexStreamByFormatRequest) (*http.Response, error)
 
 	/*
-	GetItemsByIdRemotesearchSubtitlesByLanguage Method for GetItemsByIdRemotesearchSubtitlesByLanguage
+		GetItemsByIdRemotesearchSubtitlesByLanguage Method for GetItemsByIdRemotesearchSubtitlesByLanguage
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@param language Language
-	@return ApiGetItemsByIdRemotesearchSubtitlesByLanguageRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@param language Language
+		@return ApiGetItemsByIdRemotesearchSubtitlesByLanguageRequest
 	*/
 	GetItemsByIdRemotesearchSubtitlesByLanguage(ctx context.Context, id string, language string) ApiGetItemsByIdRemotesearchSubtitlesByLanguageRequest
 
@@ -104,13 +103,13 @@ type SubtitleServiceAPI interface {
 	GetItemsByIdRemotesearchSubtitlesByLanguageExecute(r ApiGetItemsByIdRemotesearchSubtitlesByLanguageRequest) ([]RemoteSubtitleInfo, *http.Response, error)
 
 	/*
-	GetProvidersSubtitlesSubtitlesById Method for GetProvidersSubtitlesSubtitlesById
+		GetProvidersSubtitlesSubtitlesById Method for GetProvidersSubtitlesSubtitlesById
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiGetProvidersSubtitlesSubtitlesByIdRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiGetProvidersSubtitlesSubtitlesByIdRequest
 	*/
 	GetProvidersSubtitlesSubtitlesById(ctx context.Context, id string) ApiGetProvidersSubtitlesSubtitlesByIdRequest
 
@@ -118,15 +117,15 @@ type SubtitleServiceAPI interface {
 	GetProvidersSubtitlesSubtitlesByIdExecute(r ApiGetProvidersSubtitlesSubtitlesByIdRequest) (*http.Response, error)
 
 	/*
-	GetVideosByIdByMediasourceidAttachmentsByIndexStream Gets subtitles in a specified format.
+		GetVideosByIdByMediasourceidAttachmentsByIndexStream Gets subtitles in a specified format.
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@param mediaSourceId MediaSourceId
-	@param index The subtitle stream index
-	@return ApiGetVideosByIdByMediasourceidAttachmentsByIndexStreamRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@param mediaSourceId MediaSourceId
+		@param index The subtitle stream index
+		@return ApiGetVideosByIdByMediasourceidAttachmentsByIndexStreamRequest
 	*/
 	GetVideosByIdByMediasourceidAttachmentsByIndexStream(ctx context.Context, id string, mediaSourceId string, index int32) ApiGetVideosByIdByMediasourceidAttachmentsByIndexStreamRequest
 
@@ -134,17 +133,17 @@ type SubtitleServiceAPI interface {
 	GetVideosByIdByMediasourceidAttachmentsByIndexStreamExecute(r ApiGetVideosByIdByMediasourceidAttachmentsByIndexStreamRequest) (*http.Response, error)
 
 	/*
-	GetVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat Gets subtitles in a specified format.
+		GetVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat Gets subtitles in a specified format.
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@param mediaSourceId MediaSourceId
-	@param index The subtitle stream index
-	@param format Format
-	@param startPositionTicks StartPositionTicks
-	@return ApiGetVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@param mediaSourceId MediaSourceId
+		@param index The subtitle stream index
+		@param format Format
+		@param startPositionTicks StartPositionTicks
+		@return ApiGetVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatRequest
 	*/
 	GetVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat(ctx context.Context, id string, mediaSourceId string, index int32, format string, startPositionTicks int64) ApiGetVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatRequest
 
@@ -152,16 +151,16 @@ type SubtitleServiceAPI interface {
 	GetVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatExecute(r ApiGetVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatRequest) (*http.Response, error)
 
 	/*
-	GetVideosByIdByMediasourceidSubtitlesByIndexStreamByFormat Gets subtitles in a specified format.
+		GetVideosByIdByMediasourceidSubtitlesByIndexStreamByFormat Gets subtitles in a specified format.
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@param mediaSourceId MediaSourceId
-	@param index The subtitle stream index
-	@param format Format
-	@return ApiGetVideosByIdByMediasourceidSubtitlesByIndexStreamByFormatRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@param mediaSourceId MediaSourceId
+		@param index The subtitle stream index
+		@param format Format
+		@return ApiGetVideosByIdByMediasourceidSubtitlesByIndexStreamByFormatRequest
 	*/
 	GetVideosByIdByMediasourceidSubtitlesByIndexStreamByFormat(ctx context.Context, id string, mediaSourceId string, index int32, format string) ApiGetVideosByIdByMediasourceidSubtitlesByIndexStreamByFormatRequest
 
@@ -169,17 +168,17 @@ type SubtitleServiceAPI interface {
 	GetVideosByIdByMediasourceidSubtitlesByIndexStreamByFormatExecute(r ApiGetVideosByIdByMediasourceidSubtitlesByIndexStreamByFormatRequest) (*http.Response, error)
 
 	/*
-	HeadItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat Gets subtitles in a specified format.
+		HeadItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat Gets subtitles in a specified format.
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@param mediaSourceId MediaSourceId
-	@param index The subtitle stream index
-	@param format Format
-	@param startPositionTicks StartPositionTicks
-	@return ApiHeadItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@param mediaSourceId MediaSourceId
+		@param index The subtitle stream index
+		@param format Format
+		@param startPositionTicks StartPositionTicks
+		@return ApiHeadItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatRequest
 	*/
 	HeadItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat(ctx context.Context, id string, mediaSourceId string, index int32, format string, startPositionTicks int64) ApiHeadItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatRequest
 
@@ -187,16 +186,16 @@ type SubtitleServiceAPI interface {
 	HeadItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatExecute(r ApiHeadItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatRequest) (*http.Response, error)
 
 	/*
-	HeadItemsByIdByMediasourceidSubtitlesByIndexStreamByFormat Gets subtitles in a specified format.
+		HeadItemsByIdByMediasourceidSubtitlesByIndexStreamByFormat Gets subtitles in a specified format.
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@param mediaSourceId MediaSourceId
-	@param index The subtitle stream index
-	@param format Format
-	@return ApiHeadItemsByIdByMediasourceidSubtitlesByIndexStreamByFormatRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@param mediaSourceId MediaSourceId
+		@param index The subtitle stream index
+		@param format Format
+		@return ApiHeadItemsByIdByMediasourceidSubtitlesByIndexStreamByFormatRequest
 	*/
 	HeadItemsByIdByMediasourceidSubtitlesByIndexStreamByFormat(ctx context.Context, id string, mediaSourceId string, index int32, format string) ApiHeadItemsByIdByMediasourceidSubtitlesByIndexStreamByFormatRequest
 
@@ -204,17 +203,17 @@ type SubtitleServiceAPI interface {
 	HeadItemsByIdByMediasourceidSubtitlesByIndexStreamByFormatExecute(r ApiHeadItemsByIdByMediasourceidSubtitlesByIndexStreamByFormatRequest) (*http.Response, error)
 
 	/*
-	HeadVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat Gets subtitles in a specified format.
+		HeadVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat Gets subtitles in a specified format.
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@param mediaSourceId MediaSourceId
-	@param index The subtitle stream index
-	@param format Format
-	@param startPositionTicks StartPositionTicks
-	@return ApiHeadVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@param mediaSourceId MediaSourceId
+		@param index The subtitle stream index
+		@param format Format
+		@param startPositionTicks StartPositionTicks
+		@return ApiHeadVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatRequest
 	*/
 	HeadVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat(ctx context.Context, id string, mediaSourceId string, index int32, format string, startPositionTicks int64) ApiHeadVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatRequest
 
@@ -222,16 +221,16 @@ type SubtitleServiceAPI interface {
 	HeadVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatExecute(r ApiHeadVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatRequest) (*http.Response, error)
 
 	/*
-	HeadVideosByIdByMediasourceidSubtitlesByIndexStreamByFormat Gets subtitles in a specified format.
+		HeadVideosByIdByMediasourceidSubtitlesByIndexStreamByFormat Gets subtitles in a specified format.
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@param mediaSourceId MediaSourceId
-	@param index The subtitle stream index
-	@param format Format
-	@return ApiHeadVideosByIdByMediasourceidSubtitlesByIndexStreamByFormatRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@param mediaSourceId MediaSourceId
+		@param index The subtitle stream index
+		@param format Format
+		@return ApiHeadVideosByIdByMediasourceidSubtitlesByIndexStreamByFormatRequest
 	*/
 	HeadVideosByIdByMediasourceidSubtitlesByIndexStreamByFormat(ctx context.Context, id string, mediaSourceId string, index int32, format string) ApiHeadVideosByIdByMediasourceidSubtitlesByIndexStreamByFormatRequest
 
@@ -239,14 +238,14 @@ type SubtitleServiceAPI interface {
 	HeadVideosByIdByMediasourceidSubtitlesByIndexStreamByFormatExecute(r ApiHeadVideosByIdByMediasourceidSubtitlesByIndexStreamByFormatRequest) (*http.Response, error)
 
 	/*
-	PostItemsByIdRemotesearchSubtitlesBySubtitleid Method for PostItemsByIdRemotesearchSubtitlesBySubtitleid
+		PostItemsByIdRemotesearchSubtitlesBySubtitleid Method for PostItemsByIdRemotesearchSubtitlesBySubtitleid
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@param subtitleId SubtitleId
-	@return ApiPostItemsByIdRemotesearchSubtitlesBySubtitleidRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@param subtitleId SubtitleId
+		@return ApiPostItemsByIdRemotesearchSubtitlesBySubtitleidRequest
 	*/
 	PostItemsByIdRemotesearchSubtitlesBySubtitleid(ctx context.Context, id string, subtitleId string) ApiPostItemsByIdRemotesearchSubtitlesBySubtitleidRequest
 
@@ -255,14 +254,14 @@ type SubtitleServiceAPI interface {
 	PostItemsByIdRemotesearchSubtitlesBySubtitleidExecute(r ApiPostItemsByIdRemotesearchSubtitlesBySubtitleidRequest) (*SubtitlesSubtitleDownloadResult, *http.Response, error)
 
 	/*
-	PostItemsByIdSubtitlesByIndexDelete Deletes an external subtitle file
+		PostItemsByIdSubtitlesByIndexDelete Deletes an external subtitle file
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@param index The subtitle stream index
-	@return ApiPostItemsByIdSubtitlesByIndexDeleteRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@param index The subtitle stream index
+		@return ApiPostItemsByIdSubtitlesByIndexDeleteRequest
 	*/
 	PostItemsByIdSubtitlesByIndexDelete(ctx context.Context, id string, index int32) ApiPostItemsByIdSubtitlesByIndexDeleteRequest
 
@@ -270,14 +269,14 @@ type SubtitleServiceAPI interface {
 	PostItemsByIdSubtitlesByIndexDeleteExecute(r ApiPostItemsByIdSubtitlesByIndexDeleteRequest) (*http.Response, error)
 
 	/*
-	PostVideosByIdSubtitlesByIndexDelete Deletes an external subtitle file
+		PostVideosByIdSubtitlesByIndexDelete Deletes an external subtitle file
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@param index The subtitle stream index
-	@return ApiPostVideosByIdSubtitlesByIndexDeleteRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@param index The subtitle stream index
+		@return ApiPostVideosByIdSubtitlesByIndexDeleteRequest
 	*/
 	PostVideosByIdSubtitlesByIndexDelete(ctx context.Context, id string, index int32) ApiPostVideosByIdSubtitlesByIndexDeleteRequest
 
@@ -289,11 +288,11 @@ type SubtitleServiceAPI interface {
 type SubtitleServiceAPIService service
 
 type ApiDeleteItemsByIdSubtitlesByIndexRequest struct {
-	ctx context.Context
-	ApiService SubtitleServiceAPI
-	id string
+	ctx           context.Context
+	ApiService    SubtitleServiceAPI
+	id            string
 	mediaSourceId *string
-	index int32
+	index         int32
 }
 
 // MediaSourceId
@@ -311,26 +310,26 @@ DeleteItemsByIdSubtitlesByIndex Deletes an external subtitle file
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @param index The subtitle stream index
- @return ApiDeleteItemsByIdSubtitlesByIndexRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@param index The subtitle stream index
+	@return ApiDeleteItemsByIdSubtitlesByIndexRequest
 */
 func (a *SubtitleServiceAPIService) DeleteItemsByIdSubtitlesByIndex(ctx context.Context, id string, index int32) ApiDeleteItemsByIdSubtitlesByIndexRequest {
 	return ApiDeleteItemsByIdSubtitlesByIndexRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
-		index: index,
+		ctx:        ctx,
+		id:         id,
+		index:      index,
 	}
 }
 
 // Execute executes the request
 func (a *SubtitleServiceAPIService) DeleteItemsByIdSubtitlesByIndexExecute(r ApiDeleteItemsByIdSubtitlesByIndexRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodDelete
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodDelete
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SubtitleServiceAPIService.DeleteItemsByIdSubtitlesByIndex")
@@ -410,11 +409,11 @@ func (a *SubtitleServiceAPIService) DeleteItemsByIdSubtitlesByIndexExecute(r Api
 }
 
 type ApiDeleteVideosByIdSubtitlesByIndexRequest struct {
-	ctx context.Context
-	ApiService SubtitleServiceAPI
-	id string
+	ctx           context.Context
+	ApiService    SubtitleServiceAPI
+	id            string
 	mediaSourceId *string
-	index int32
+	index         int32
 }
 
 // MediaSourceId
@@ -432,26 +431,26 @@ DeleteVideosByIdSubtitlesByIndex Deletes an external subtitle file
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @param index The subtitle stream index
- @return ApiDeleteVideosByIdSubtitlesByIndexRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@param index The subtitle stream index
+	@return ApiDeleteVideosByIdSubtitlesByIndexRequest
 */
 func (a *SubtitleServiceAPIService) DeleteVideosByIdSubtitlesByIndex(ctx context.Context, id string, index int32) ApiDeleteVideosByIdSubtitlesByIndexRequest {
 	return ApiDeleteVideosByIdSubtitlesByIndexRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
-		index: index,
+		ctx:        ctx,
+		id:         id,
+		index:      index,
 	}
 }
 
 // Execute executes the request
 func (a *SubtitleServiceAPIService) DeleteVideosByIdSubtitlesByIndexExecute(r ApiDeleteVideosByIdSubtitlesByIndexRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodDelete
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodDelete
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SubtitleServiceAPIService.DeleteVideosByIdSubtitlesByIndex")
@@ -531,15 +530,15 @@ func (a *SubtitleServiceAPIService) DeleteVideosByIdSubtitlesByIndexExecute(r Ap
 }
 
 type ApiGetItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatRequest struct {
-	ctx context.Context
-	ApiService SubtitleServiceAPI
-	id string
-	mediaSourceId string
-	index int32
-	format string
+	ctx                context.Context
+	ApiService         SubtitleServiceAPI
+	id                 string
+	mediaSourceId      string
+	index              int32
+	format             string
 	startPositionTicks int64
-	endPositionTicks *int64
-	copyTimestamps *bool
+	endPositionTicks   *int64
+	copyTimestamps     *bool
 }
 
 // EndPositionTicks
@@ -563,22 +562,22 @@ GetItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat Ge
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @param mediaSourceId MediaSourceId
- @param index The subtitle stream index
- @param format Format
- @param startPositionTicks StartPositionTicks
- @return ApiGetItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@param mediaSourceId MediaSourceId
+	@param index The subtitle stream index
+	@param format Format
+	@param startPositionTicks StartPositionTicks
+	@return ApiGetItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatRequest
 */
 func (a *SubtitleServiceAPIService) GetItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat(ctx context.Context, id string, mediaSourceId string, index int32, format string, startPositionTicks int64) ApiGetItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatRequest {
 	return ApiGetItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatRequest{
-		ApiService: a,
-		ctx: ctx,
-		id: id,
-		mediaSourceId: mediaSourceId,
-		index: index,
-		format: format,
+		ApiService:         a,
+		ctx:                ctx,
+		id:                 id,
+		mediaSourceId:      mediaSourceId,
+		index:              index,
+		format:             format,
 		startPositionTicks: startPositionTicks,
 	}
 }
@@ -586,9 +585,9 @@ func (a *SubtitleServiceAPIService) GetItemsByIdByMediasourceidSubtitlesByIndexB
 // Execute executes the request
 func (a *SubtitleServiceAPIService) GetItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatExecute(r ApiGetItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SubtitleServiceAPIService.GetItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat")
@@ -673,15 +672,15 @@ func (a *SubtitleServiceAPIService) GetItemsByIdByMediasourceidSubtitlesByIndexB
 }
 
 type ApiGetItemsByIdByMediasourceidSubtitlesByIndexStreamByFormatRequest struct {
-	ctx context.Context
-	ApiService SubtitleServiceAPI
-	id string
-	mediaSourceId string
-	index int32
-	format string
+	ctx                context.Context
+	ApiService         SubtitleServiceAPI
+	id                 string
+	mediaSourceId      string
+	index              int32
+	format             string
 	startPositionTicks *int64
-	endPositionTicks *int64
-	copyTimestamps *bool
+	endPositionTicks   *int64
+	copyTimestamps     *bool
 }
 
 // StartPositionTicks
@@ -711,30 +710,30 @@ GetItemsByIdByMediasourceidSubtitlesByIndexStreamByFormat Gets subtitles in a sp
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @param mediaSourceId MediaSourceId
- @param index The subtitle stream index
- @param format Format
- @return ApiGetItemsByIdByMediasourceidSubtitlesByIndexStreamByFormatRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@param mediaSourceId MediaSourceId
+	@param index The subtitle stream index
+	@param format Format
+	@return ApiGetItemsByIdByMediasourceidSubtitlesByIndexStreamByFormatRequest
 */
 func (a *SubtitleServiceAPIService) GetItemsByIdByMediasourceidSubtitlesByIndexStreamByFormat(ctx context.Context, id string, mediaSourceId string, index int32, format string) ApiGetItemsByIdByMediasourceidSubtitlesByIndexStreamByFormatRequest {
 	return ApiGetItemsByIdByMediasourceidSubtitlesByIndexStreamByFormatRequest{
-		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ApiService:    a,
+		ctx:           ctx,
+		id:            id,
 		mediaSourceId: mediaSourceId,
-		index: index,
-		format: format,
+		index:         index,
+		format:        format,
 	}
 }
 
 // Execute executes the request
 func (a *SubtitleServiceAPIService) GetItemsByIdByMediasourceidSubtitlesByIndexStreamByFormatExecute(r ApiGetItemsByIdByMediasourceidSubtitlesByIndexStreamByFormatRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SubtitleServiceAPIService.GetItemsByIdByMediasourceidSubtitlesByIndexStreamByFormat")
@@ -821,13 +820,13 @@ func (a *SubtitleServiceAPIService) GetItemsByIdByMediasourceidSubtitlesByIndexS
 }
 
 type ApiGetItemsByIdRemotesearchSubtitlesByLanguageRequest struct {
-	ctx context.Context
-	ApiService SubtitleServiceAPI
-	id string
-	mediaSourceId *string
-	language string
-	isPerfectMatch *bool
-	isForced *bool
+	ctx               context.Context
+	ApiService        SubtitleServiceAPI
+	id                string
+	mediaSourceId     *string
+	language          string
+	isPerfectMatch    *bool
+	isForced          *bool
 	isHearingImpaired *bool
 }
 
@@ -864,28 +863,29 @@ GetItemsByIdRemotesearchSubtitlesByLanguage Method for GetItemsByIdRemotesearchS
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @param language Language
- @return ApiGetItemsByIdRemotesearchSubtitlesByLanguageRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@param language Language
+	@return ApiGetItemsByIdRemotesearchSubtitlesByLanguageRequest
 */
 func (a *SubtitleServiceAPIService) GetItemsByIdRemotesearchSubtitlesByLanguage(ctx context.Context, id string, language string) ApiGetItemsByIdRemotesearchSubtitlesByLanguageRequest {
 	return ApiGetItemsByIdRemotesearchSubtitlesByLanguageRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
-		language: language,
+		ctx:        ctx,
+		id:         id,
+		language:   language,
 	}
 }
 
 // Execute executes the request
-//  @return []RemoteSubtitleInfo
+//
+//	@return []RemoteSubtitleInfo
 func (a *SubtitleServiceAPIService) GetItemsByIdRemotesearchSubtitlesByLanguageExecute(r ApiGetItemsByIdRemotesearchSubtitlesByLanguageRequest) ([]RemoteSubtitleInfo, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []RemoteSubtitleInfo
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue []RemoteSubtitleInfo
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SubtitleServiceAPIService.GetItemsByIdRemotesearchSubtitlesByLanguage")
@@ -983,9 +983,9 @@ func (a *SubtitleServiceAPIService) GetItemsByIdRemotesearchSubtitlesByLanguageE
 }
 
 type ApiGetProvidersSubtitlesSubtitlesByIdRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService SubtitleServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiGetProvidersSubtitlesSubtitlesByIdRequest) Execute() (*http.Response, error) {
@@ -997,24 +997,24 @@ GetProvidersSubtitlesSubtitlesById Method for GetProvidersSubtitlesSubtitlesById
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiGetProvidersSubtitlesSubtitlesByIdRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiGetProvidersSubtitlesSubtitlesByIdRequest
 */
 func (a *SubtitleServiceAPIService) GetProvidersSubtitlesSubtitlesById(ctx context.Context, id string) ApiGetProvidersSubtitlesSubtitlesByIdRequest {
 	return ApiGetProvidersSubtitlesSubtitlesByIdRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *SubtitleServiceAPIService) GetProvidersSubtitlesSubtitlesByIdExecute(r ApiGetProvidersSubtitlesSubtitlesByIdRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SubtitleServiceAPIService.GetProvidersSubtitlesSubtitlesById")
@@ -1089,11 +1089,11 @@ func (a *SubtitleServiceAPIService) GetProvidersSubtitlesSubtitlesByIdExecute(r 
 }
 
 type ApiGetVideosByIdByMediasourceidAttachmentsByIndexStreamRequest struct {
-	ctx context.Context
-	ApiService SubtitleServiceAPI
-	id string
+	ctx           context.Context
+	ApiService    SubtitleServiceAPI
+	id            string
 	mediaSourceId string
-	index int32
+	index         int32
 }
 
 func (r ApiGetVideosByIdByMediasourceidAttachmentsByIndexStreamRequest) Execute() (*http.Response, error) {
@@ -1105,28 +1105,28 @@ GetVideosByIdByMediasourceidAttachmentsByIndexStream Gets subtitles in a specifi
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @param mediaSourceId MediaSourceId
- @param index The subtitle stream index
- @return ApiGetVideosByIdByMediasourceidAttachmentsByIndexStreamRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@param mediaSourceId MediaSourceId
+	@param index The subtitle stream index
+	@return ApiGetVideosByIdByMediasourceidAttachmentsByIndexStreamRequest
 */
 func (a *SubtitleServiceAPIService) GetVideosByIdByMediasourceidAttachmentsByIndexStream(ctx context.Context, id string, mediaSourceId string, index int32) ApiGetVideosByIdByMediasourceidAttachmentsByIndexStreamRequest {
 	return ApiGetVideosByIdByMediasourceidAttachmentsByIndexStreamRequest{
-		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ApiService:    a,
+		ctx:           ctx,
+		id:            id,
 		mediaSourceId: mediaSourceId,
-		index: index,
+		index:         index,
 	}
 }
 
 // Execute executes the request
 func (a *SubtitleServiceAPIService) GetVideosByIdByMediasourceidAttachmentsByIndexStreamExecute(r ApiGetVideosByIdByMediasourceidAttachmentsByIndexStreamRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SubtitleServiceAPIService.GetVideosByIdByMediasourceidAttachmentsByIndexStream")
@@ -1203,15 +1203,15 @@ func (a *SubtitleServiceAPIService) GetVideosByIdByMediasourceidAttachmentsByInd
 }
 
 type ApiGetVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatRequest struct {
-	ctx context.Context
-	ApiService SubtitleServiceAPI
-	id string
-	mediaSourceId string
-	index int32
-	format string
+	ctx                context.Context
+	ApiService         SubtitleServiceAPI
+	id                 string
+	mediaSourceId      string
+	index              int32
+	format             string
 	startPositionTicks int64
-	endPositionTicks *int64
-	copyTimestamps *bool
+	endPositionTicks   *int64
+	copyTimestamps     *bool
 }
 
 // EndPositionTicks
@@ -1235,22 +1235,22 @@ GetVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat G
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @param mediaSourceId MediaSourceId
- @param index The subtitle stream index
- @param format Format
- @param startPositionTicks StartPositionTicks
- @return ApiGetVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@param mediaSourceId MediaSourceId
+	@param index The subtitle stream index
+	@param format Format
+	@param startPositionTicks StartPositionTicks
+	@return ApiGetVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatRequest
 */
 func (a *SubtitleServiceAPIService) GetVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat(ctx context.Context, id string, mediaSourceId string, index int32, format string, startPositionTicks int64) ApiGetVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatRequest {
 	return ApiGetVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatRequest{
-		ApiService: a,
-		ctx: ctx,
-		id: id,
-		mediaSourceId: mediaSourceId,
-		index: index,
-		format: format,
+		ApiService:         a,
+		ctx:                ctx,
+		id:                 id,
+		mediaSourceId:      mediaSourceId,
+		index:              index,
+		format:             format,
 		startPositionTicks: startPositionTicks,
 	}
 }
@@ -1258,9 +1258,9 @@ func (a *SubtitleServiceAPIService) GetVideosByIdByMediasourceidSubtitlesByIndex
 // Execute executes the request
 func (a *SubtitleServiceAPIService) GetVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatExecute(r ApiGetVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SubtitleServiceAPIService.GetVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat")
@@ -1345,15 +1345,15 @@ func (a *SubtitleServiceAPIService) GetVideosByIdByMediasourceidSubtitlesByIndex
 }
 
 type ApiGetVideosByIdByMediasourceidSubtitlesByIndexStreamByFormatRequest struct {
-	ctx context.Context
-	ApiService SubtitleServiceAPI
-	id string
-	mediaSourceId string
-	index int32
-	format string
+	ctx                context.Context
+	ApiService         SubtitleServiceAPI
+	id                 string
+	mediaSourceId      string
+	index              int32
+	format             string
 	startPositionTicks *int64
-	endPositionTicks *int64
-	copyTimestamps *bool
+	endPositionTicks   *int64
+	copyTimestamps     *bool
 }
 
 // StartPositionTicks
@@ -1383,30 +1383,30 @@ GetVideosByIdByMediasourceidSubtitlesByIndexStreamByFormat Gets subtitles in a s
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @param mediaSourceId MediaSourceId
- @param index The subtitle stream index
- @param format Format
- @return ApiGetVideosByIdByMediasourceidSubtitlesByIndexStreamByFormatRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@param mediaSourceId MediaSourceId
+	@param index The subtitle stream index
+	@param format Format
+	@return ApiGetVideosByIdByMediasourceidSubtitlesByIndexStreamByFormatRequest
 */
 func (a *SubtitleServiceAPIService) GetVideosByIdByMediasourceidSubtitlesByIndexStreamByFormat(ctx context.Context, id string, mediaSourceId string, index int32, format string) ApiGetVideosByIdByMediasourceidSubtitlesByIndexStreamByFormatRequest {
 	return ApiGetVideosByIdByMediasourceidSubtitlesByIndexStreamByFormatRequest{
-		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ApiService:    a,
+		ctx:           ctx,
+		id:            id,
 		mediaSourceId: mediaSourceId,
-		index: index,
-		format: format,
+		index:         index,
+		format:        format,
 	}
 }
 
 // Execute executes the request
 func (a *SubtitleServiceAPIService) GetVideosByIdByMediasourceidSubtitlesByIndexStreamByFormatExecute(r ApiGetVideosByIdByMediasourceidSubtitlesByIndexStreamByFormatRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SubtitleServiceAPIService.GetVideosByIdByMediasourceidSubtitlesByIndexStreamByFormat")
@@ -1493,15 +1493,15 @@ func (a *SubtitleServiceAPIService) GetVideosByIdByMediasourceidSubtitlesByIndex
 }
 
 type ApiHeadItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatRequest struct {
-	ctx context.Context
-	ApiService SubtitleServiceAPI
-	id string
-	mediaSourceId string
-	index int32
-	format string
+	ctx                context.Context
+	ApiService         SubtitleServiceAPI
+	id                 string
+	mediaSourceId      string
+	index              int32
+	format             string
 	startPositionTicks int64
-	endPositionTicks *int64
-	copyTimestamps *bool
+	endPositionTicks   *int64
+	copyTimestamps     *bool
 }
 
 // EndPositionTicks
@@ -1525,22 +1525,22 @@ HeadItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat G
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @param mediaSourceId MediaSourceId
- @param index The subtitle stream index
- @param format Format
- @param startPositionTicks StartPositionTicks
- @return ApiHeadItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@param mediaSourceId MediaSourceId
+	@param index The subtitle stream index
+	@param format Format
+	@param startPositionTicks StartPositionTicks
+	@return ApiHeadItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatRequest
 */
 func (a *SubtitleServiceAPIService) HeadItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat(ctx context.Context, id string, mediaSourceId string, index int32, format string, startPositionTicks int64) ApiHeadItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatRequest {
 	return ApiHeadItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatRequest{
-		ApiService: a,
-		ctx: ctx,
-		id: id,
-		mediaSourceId: mediaSourceId,
-		index: index,
-		format: format,
+		ApiService:         a,
+		ctx:                ctx,
+		id:                 id,
+		mediaSourceId:      mediaSourceId,
+		index:              index,
+		format:             format,
 		startPositionTicks: startPositionTicks,
 	}
 }
@@ -1548,9 +1548,9 @@ func (a *SubtitleServiceAPIService) HeadItemsByIdByMediasourceidSubtitlesByIndex
 // Execute executes the request
 func (a *SubtitleServiceAPIService) HeadItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatExecute(r ApiHeadItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodHead
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodHead
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SubtitleServiceAPIService.HeadItemsByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat")
@@ -1635,15 +1635,15 @@ func (a *SubtitleServiceAPIService) HeadItemsByIdByMediasourceidSubtitlesByIndex
 }
 
 type ApiHeadItemsByIdByMediasourceidSubtitlesByIndexStreamByFormatRequest struct {
-	ctx context.Context
-	ApiService SubtitleServiceAPI
-	id string
-	mediaSourceId string
-	index int32
-	format string
+	ctx                context.Context
+	ApiService         SubtitleServiceAPI
+	id                 string
+	mediaSourceId      string
+	index              int32
+	format             string
 	startPositionTicks *int64
-	endPositionTicks *int64
-	copyTimestamps *bool
+	endPositionTicks   *int64
+	copyTimestamps     *bool
 }
 
 // StartPositionTicks
@@ -1673,30 +1673,30 @@ HeadItemsByIdByMediasourceidSubtitlesByIndexStreamByFormat Gets subtitles in a s
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @param mediaSourceId MediaSourceId
- @param index The subtitle stream index
- @param format Format
- @return ApiHeadItemsByIdByMediasourceidSubtitlesByIndexStreamByFormatRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@param mediaSourceId MediaSourceId
+	@param index The subtitle stream index
+	@param format Format
+	@return ApiHeadItemsByIdByMediasourceidSubtitlesByIndexStreamByFormatRequest
 */
 func (a *SubtitleServiceAPIService) HeadItemsByIdByMediasourceidSubtitlesByIndexStreamByFormat(ctx context.Context, id string, mediaSourceId string, index int32, format string) ApiHeadItemsByIdByMediasourceidSubtitlesByIndexStreamByFormatRequest {
 	return ApiHeadItemsByIdByMediasourceidSubtitlesByIndexStreamByFormatRequest{
-		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ApiService:    a,
+		ctx:           ctx,
+		id:            id,
 		mediaSourceId: mediaSourceId,
-		index: index,
-		format: format,
+		index:         index,
+		format:        format,
 	}
 }
 
 // Execute executes the request
 func (a *SubtitleServiceAPIService) HeadItemsByIdByMediasourceidSubtitlesByIndexStreamByFormatExecute(r ApiHeadItemsByIdByMediasourceidSubtitlesByIndexStreamByFormatRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodHead
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodHead
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SubtitleServiceAPIService.HeadItemsByIdByMediasourceidSubtitlesByIndexStreamByFormat")
@@ -1783,15 +1783,15 @@ func (a *SubtitleServiceAPIService) HeadItemsByIdByMediasourceidSubtitlesByIndex
 }
 
 type ApiHeadVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatRequest struct {
-	ctx context.Context
-	ApiService SubtitleServiceAPI
-	id string
-	mediaSourceId string
-	index int32
-	format string
+	ctx                context.Context
+	ApiService         SubtitleServiceAPI
+	id                 string
+	mediaSourceId      string
+	index              int32
+	format             string
 	startPositionTicks int64
-	endPositionTicks *int64
-	copyTimestamps *bool
+	endPositionTicks   *int64
+	copyTimestamps     *bool
 }
 
 // EndPositionTicks
@@ -1815,22 +1815,22 @@ HeadVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat 
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @param mediaSourceId MediaSourceId
- @param index The subtitle stream index
- @param format Format
- @param startPositionTicks StartPositionTicks
- @return ApiHeadVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@param mediaSourceId MediaSourceId
+	@param index The subtitle stream index
+	@param format Format
+	@param startPositionTicks StartPositionTicks
+	@return ApiHeadVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatRequest
 */
 func (a *SubtitleServiceAPIService) HeadVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat(ctx context.Context, id string, mediaSourceId string, index int32, format string, startPositionTicks int64) ApiHeadVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatRequest {
 	return ApiHeadVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatRequest{
-		ApiService: a,
-		ctx: ctx,
-		id: id,
-		mediaSourceId: mediaSourceId,
-		index: index,
-		format: format,
+		ApiService:         a,
+		ctx:                ctx,
+		id:                 id,
+		mediaSourceId:      mediaSourceId,
+		index:              index,
+		format:             format,
 		startPositionTicks: startPositionTicks,
 	}
 }
@@ -1838,9 +1838,9 @@ func (a *SubtitleServiceAPIService) HeadVideosByIdByMediasourceidSubtitlesByInde
 // Execute executes the request
 func (a *SubtitleServiceAPIService) HeadVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatExecute(r ApiHeadVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormatRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodHead
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodHead
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SubtitleServiceAPIService.HeadVideosByIdByMediasourceidSubtitlesByIndexByStartpositionticksStreamByFormat")
@@ -1925,15 +1925,15 @@ func (a *SubtitleServiceAPIService) HeadVideosByIdByMediasourceidSubtitlesByInde
 }
 
 type ApiHeadVideosByIdByMediasourceidSubtitlesByIndexStreamByFormatRequest struct {
-	ctx context.Context
-	ApiService SubtitleServiceAPI
-	id string
-	mediaSourceId string
-	index int32
-	format string
+	ctx                context.Context
+	ApiService         SubtitleServiceAPI
+	id                 string
+	mediaSourceId      string
+	index              int32
+	format             string
 	startPositionTicks *int64
-	endPositionTicks *int64
-	copyTimestamps *bool
+	endPositionTicks   *int64
+	copyTimestamps     *bool
 }
 
 // StartPositionTicks
@@ -1963,30 +1963,30 @@ HeadVideosByIdByMediasourceidSubtitlesByIndexStreamByFormat Gets subtitles in a 
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @param mediaSourceId MediaSourceId
- @param index The subtitle stream index
- @param format Format
- @return ApiHeadVideosByIdByMediasourceidSubtitlesByIndexStreamByFormatRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@param mediaSourceId MediaSourceId
+	@param index The subtitle stream index
+	@param format Format
+	@return ApiHeadVideosByIdByMediasourceidSubtitlesByIndexStreamByFormatRequest
 */
 func (a *SubtitleServiceAPIService) HeadVideosByIdByMediasourceidSubtitlesByIndexStreamByFormat(ctx context.Context, id string, mediaSourceId string, index int32, format string) ApiHeadVideosByIdByMediasourceidSubtitlesByIndexStreamByFormatRequest {
 	return ApiHeadVideosByIdByMediasourceidSubtitlesByIndexStreamByFormatRequest{
-		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ApiService:    a,
+		ctx:           ctx,
+		id:            id,
 		mediaSourceId: mediaSourceId,
-		index: index,
-		format: format,
+		index:         index,
+		format:        format,
 	}
 }
 
 // Execute executes the request
 func (a *SubtitleServiceAPIService) HeadVideosByIdByMediasourceidSubtitlesByIndexStreamByFormatExecute(r ApiHeadVideosByIdByMediasourceidSubtitlesByIndexStreamByFormatRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodHead
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodHead
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SubtitleServiceAPIService.HeadVideosByIdByMediasourceidSubtitlesByIndexStreamByFormat")
@@ -2073,11 +2073,11 @@ func (a *SubtitleServiceAPIService) HeadVideosByIdByMediasourceidSubtitlesByInde
 }
 
 type ApiPostItemsByIdRemotesearchSubtitlesBySubtitleidRequest struct {
-	ctx context.Context
-	ApiService SubtitleServiceAPI
-	id string
+	ctx           context.Context
+	ApiService    SubtitleServiceAPI
+	id            string
 	mediaSourceId *string
-	subtitleId string
+	subtitleId    string
 }
 
 // MediaSourceId
@@ -2095,28 +2095,29 @@ PostItemsByIdRemotesearchSubtitlesBySubtitleid Method for PostItemsByIdRemotesea
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @param subtitleId SubtitleId
- @return ApiPostItemsByIdRemotesearchSubtitlesBySubtitleidRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@param subtitleId SubtitleId
+	@return ApiPostItemsByIdRemotesearchSubtitlesBySubtitleidRequest
 */
 func (a *SubtitleServiceAPIService) PostItemsByIdRemotesearchSubtitlesBySubtitleid(ctx context.Context, id string, subtitleId string) ApiPostItemsByIdRemotesearchSubtitlesBySubtitleidRequest {
 	return ApiPostItemsByIdRemotesearchSubtitlesBySubtitleidRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 		subtitleId: subtitleId,
 	}
 }
 
 // Execute executes the request
-//  @return SubtitlesSubtitleDownloadResult
+//
+//	@return SubtitlesSubtitleDownloadResult
 func (a *SubtitleServiceAPIService) PostItemsByIdRemotesearchSubtitlesBySubtitleidExecute(r ApiPostItemsByIdRemotesearchSubtitlesBySubtitleidRequest) (*SubtitlesSubtitleDownloadResult, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *SubtitlesSubtitleDownloadResult
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *SubtitlesSubtitleDownloadResult
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SubtitleServiceAPIService.PostItemsByIdRemotesearchSubtitlesBySubtitleid")
@@ -2205,11 +2206,11 @@ func (a *SubtitleServiceAPIService) PostItemsByIdRemotesearchSubtitlesBySubtitle
 }
 
 type ApiPostItemsByIdSubtitlesByIndexDeleteRequest struct {
-	ctx context.Context
-	ApiService SubtitleServiceAPI
-	id string
+	ctx           context.Context
+	ApiService    SubtitleServiceAPI
+	id            string
 	mediaSourceId *string
-	index int32
+	index         int32
 }
 
 // MediaSourceId
@@ -2227,26 +2228,26 @@ PostItemsByIdSubtitlesByIndexDelete Deletes an external subtitle file
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @param index The subtitle stream index
- @return ApiPostItemsByIdSubtitlesByIndexDeleteRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@param index The subtitle stream index
+	@return ApiPostItemsByIdSubtitlesByIndexDeleteRequest
 */
 func (a *SubtitleServiceAPIService) PostItemsByIdSubtitlesByIndexDelete(ctx context.Context, id string, index int32) ApiPostItemsByIdSubtitlesByIndexDeleteRequest {
 	return ApiPostItemsByIdSubtitlesByIndexDeleteRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
-		index: index,
+		ctx:        ctx,
+		id:         id,
+		index:      index,
 	}
 }
 
 // Execute executes the request
 func (a *SubtitleServiceAPIService) PostItemsByIdSubtitlesByIndexDeleteExecute(r ApiPostItemsByIdSubtitlesByIndexDeleteRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SubtitleServiceAPIService.PostItemsByIdSubtitlesByIndexDelete")
@@ -2326,11 +2327,11 @@ func (a *SubtitleServiceAPIService) PostItemsByIdSubtitlesByIndexDeleteExecute(r
 }
 
 type ApiPostVideosByIdSubtitlesByIndexDeleteRequest struct {
-	ctx context.Context
-	ApiService SubtitleServiceAPI
-	id string
+	ctx           context.Context
+	ApiService    SubtitleServiceAPI
+	id            string
 	mediaSourceId *string
-	index int32
+	index         int32
 }
 
 // MediaSourceId
@@ -2348,26 +2349,26 @@ PostVideosByIdSubtitlesByIndexDelete Deletes an external subtitle file
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @param index The subtitle stream index
- @return ApiPostVideosByIdSubtitlesByIndexDeleteRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@param index The subtitle stream index
+	@return ApiPostVideosByIdSubtitlesByIndexDeleteRequest
 */
 func (a *SubtitleServiceAPIService) PostVideosByIdSubtitlesByIndexDelete(ctx context.Context, id string, index int32) ApiPostVideosByIdSubtitlesByIndexDeleteRequest {
 	return ApiPostVideosByIdSubtitlesByIndexDeleteRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
-		index: index,
+		ctx:        ctx,
+		id:         id,
+		index:      index,
 	}
 }
 
 // Execute executes the request
 func (a *SubtitleServiceAPIService) PostVideosByIdSubtitlesByIndexDeleteExecute(r ApiPostVideosByIdSubtitlesByIndexDeleteRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SubtitleServiceAPIService.PostVideosByIdSubtitlesByIndexDelete")

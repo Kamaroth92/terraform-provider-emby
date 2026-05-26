@@ -19,20 +19,20 @@ var _ MappedNullable = &PlaybackStopInfo{}
 
 // PlaybackStopInfo struct for PlaybackStopInfo
 type PlaybackStopInfo struct {
-	NowPlayingQueue []QueueItem `json:"NowPlayingQueue,omitempty"`
-	PlaylistItemId *string `json:"PlaylistItemId,omitempty"`
-	PlaylistIndex *int32 `json:"PlaylistIndex,omitempty"`
-	PlaylistLength *int32 `json:"PlaylistLength,omitempty"`
-	SessionId *string `json:"SessionId,omitempty"`
-	IsAutomated *bool `json:"IsAutomated,omitempty"`
-	Failed *bool `json:"Failed,omitempty"`
-	NextMediaType *string `json:"NextMediaType,omitempty"`
-	PlaySessionId *string `json:"PlaySessionId,omitempty"`
-	ItemId *string `json:"ItemId,omitempty"`
-	LiveStreamId *string `json:"LiveStreamId,omitempty"`
-	MediaSourceId *string `json:"MediaSourceId,omitempty"`
-	Item *BaseItemDto `json:"Item,omitempty"`
-	PositionTicks NullableInt64 `json:"PositionTicks,omitempty"`
+	NowPlayingQueue []QueueItem   `json:"NowPlayingQueue,omitempty"`
+	PlaylistItemId  *string       `json:"PlaylistItemId,omitempty"`
+	PlaylistIndex   *int32        `json:"PlaylistIndex,omitempty"`
+	PlaylistLength  *int32        `json:"PlaylistLength,omitempty"`
+	SessionId       *string       `json:"SessionId,omitempty"`
+	IsAutomated     *bool         `json:"IsAutomated,omitempty"`
+	Failed          *bool         `json:"Failed,omitempty"`
+	NextMediaType   *string       `json:"NextMediaType,omitempty"`
+	PlaySessionId   *string       `json:"PlaySessionId,omitempty"`
+	ItemId          *string       `json:"ItemId,omitempty"`
+	LiveStreamId    *string       `json:"LiveStreamId,omitempty"`
+	MediaSourceId   *string       `json:"MediaSourceId,omitempty"`
+	Item            *BaseItemDto  `json:"Item,omitempty"`
+	PositionTicks   NullableInt64 `json:"PositionTicks,omitempty"`
 }
 
 // NewPlaybackStopInfo instantiates a new PlaybackStopInfo object
@@ -500,6 +500,7 @@ func (o *PlaybackStopInfo) HasPositionTicks() bool {
 func (o *PlaybackStopInfo) SetPositionTicks(v int64) {
 	o.PositionTicks.Set(&v)
 }
+
 // SetPositionTicksNil sets the value for PositionTicks to be an explicit nil
 func (o *PlaybackStopInfo) SetPositionTicksNil() {
 	o.PositionTicks.Set(nil)
@@ -511,7 +512,7 @@ func (o *PlaybackStopInfo) UnsetPositionTicks() {
 }
 
 func (o PlaybackStopInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -600,5 +601,3 @@ func (v *NullablePlaybackStopInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

@@ -19,17 +19,16 @@ import (
 	"strings"
 )
 
-
 type ItemRefreshServiceAPI interface {
 
 	/*
-	PostItemsByIdRefresh Refreshes metadata for an item
+		PostItemsByIdRefresh Refreshes metadata for an item
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiPostItemsByIdRefreshRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiPostItemsByIdRefreshRequest
 	*/
 	PostItemsByIdRefresh(ctx context.Context, id string) ApiPostItemsByIdRefreshRequest
 
@@ -41,18 +40,18 @@ type ItemRefreshServiceAPI interface {
 type ItemRefreshServiceAPIService service
 
 type ApiPostItemsByIdRefreshRequest struct {
-	ctx context.Context
-	ApiService ItemRefreshServiceAPI
-	id string
-	baseRefreshRequest *BaseRefreshRequest
-	recursive *bool
+	ctx                 context.Context
+	ApiService          ItemRefreshServiceAPI
+	id                  string
+	baseRefreshRequest  *BaseRefreshRequest
+	recursive           *bool
 	metadataRefreshMode *MetadataRefreshMode
-	imageRefreshMode *MetadataRefreshMode
-	replaceAllMetadata *bool
-	replaceAllImages *bool
+	imageRefreshMode    *MetadataRefreshMode
+	replaceAllMetadata  *bool
+	replaceAllImages    *bool
 }
 
-// BaseRefreshRequest: 
+// BaseRefreshRequest:
 func (r ApiPostItemsByIdRefreshRequest) BaseRefreshRequest(baseRefreshRequest BaseRefreshRequest) ApiPostItemsByIdRefreshRequest {
 	r.baseRefreshRequest = &baseRefreshRequest
 	return r
@@ -97,24 +96,24 @@ PostItemsByIdRefresh Refreshes metadata for an item
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiPostItemsByIdRefreshRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiPostItemsByIdRefreshRequest
 */
 func (a *ItemRefreshServiceAPIService) PostItemsByIdRefresh(ctx context.Context, id string) ApiPostItemsByIdRefreshRequest {
 	return ApiPostItemsByIdRefreshRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *ItemRefreshServiceAPIService) PostItemsByIdRefreshExecute(r ApiPostItemsByIdRefreshRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ItemRefreshServiceAPIService.PostItemsByIdRefresh")

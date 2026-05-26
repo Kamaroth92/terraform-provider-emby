@@ -21,8 +21,8 @@ type EnumsUIViewType string
 // List of Enums.UIViewType
 const (
 	ENUMSUIVIEWTYPE_REGULAR_PAGE EnumsUIViewType = "RegularPage"
-	ENUMSUIVIEWTYPE_DIALOG EnumsUIViewType = "Dialog"
-	ENUMSUIVIEWTYPE_WIZARD EnumsUIViewType = "Wizard"
+	ENUMSUIVIEWTYPE_DIALOG       EnumsUIViewType = "Dialog"
+	ENUMSUIVIEWTYPE_WIZARD       EnumsUIViewType = "Wizard"
 )
 
 // All allowed values of EnumsUIViewType enum
@@ -110,4 +110,3 @@ func (v *NullableEnumsUIViewType) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

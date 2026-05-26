@@ -19,8 +19,8 @@ var _ MappedNullable = &QueryResultSyncJob{}
 
 // QueryResultSyncJob struct for QueryResultSyncJob
 type QueryResultSyncJob struct {
-	Items []SyncJob `json:"Items,omitempty"`
-	TotalRecordCount *int32 `json:"TotalRecordCount,omitempty"`
+	Items            []SyncJob `json:"Items,omitempty"`
+	TotalRecordCount *int32    `json:"TotalRecordCount,omitempty"`
 }
 
 // NewQueryResultSyncJob instantiates a new QueryResultSyncJob object
@@ -105,7 +105,7 @@ func (o *QueryResultSyncJob) SetTotalRecordCount(v int32) {
 }
 
 func (o QueryResultSyncJob) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -158,5 +158,3 @@ func (v *NullableQueryResultSyncJob) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

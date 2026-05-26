@@ -20,32 +20,32 @@ var _ MappedNullable = &LiveTvTimerInfoDto{}
 
 // LiveTvTimerInfoDto struct for LiveTvTimerInfoDto
 type LiveTvTimerInfoDto struct {
-	Status *LiveTvRecordingStatus `json:"Status,omitempty"`
-	SeriesTimerId *string `json:"SeriesTimerId,omitempty"`
-	RunTimeTicks NullableInt64 `json:"RunTimeTicks,omitempty"`
-	ProgramInfo *BaseItemDto `json:"ProgramInfo,omitempty"`
-	TimerType *LiveTvTimerType `json:"TimerType,omitempty"`
-	Id *string `json:"Id,omitempty"`
-	Type *string `json:"Type,omitempty"`
-	ServerId *string `json:"ServerId,omitempty"`
-	ChannelId *string `json:"ChannelId,omitempty"`
-	ChannelName *string `json:"ChannelName,omitempty"`
-	ChannelNumber *string `json:"ChannelNumber,omitempty"`
-	ChannelPrimaryImageTag *string `json:"ChannelPrimaryImageTag,omitempty"`
-	ProgramId *string `json:"ProgramId,omitempty"`
-	Name *string `json:"Name,omitempty"`
-	Overview *string `json:"Overview,omitempty"`
-	ParentFolderId *string `json:"ParentFolderId,omitempty"`
-	StartDate *time.Time `json:"StartDate,omitempty"`
-	EndDate *time.Time `json:"EndDate,omitempty"`
-	Priority *int32 `json:"Priority,omitempty"`
-	PrePaddingSeconds *int32 `json:"PrePaddingSeconds,omitempty"`
-	PostPaddingSeconds *int32 `json:"PostPaddingSeconds,omitempty"`
-	IsPrePaddingRequired *bool `json:"IsPrePaddingRequired,omitempty"`
-	ParentBackdropItemId *string `json:"ParentBackdropItemId,omitempty"`
-	ParentBackdropImageTags []string `json:"ParentBackdropImageTags,omitempty"`
-	IsPostPaddingRequired *bool `json:"IsPostPaddingRequired,omitempty"`
-	KeepUntil *LiveTvKeepUntil `json:"KeepUntil,omitempty"`
+	Status                  *LiveTvRecordingStatus `json:"Status,omitempty"`
+	SeriesTimerId           *string                `json:"SeriesTimerId,omitempty"`
+	RunTimeTicks            NullableInt64          `json:"RunTimeTicks,omitempty"`
+	ProgramInfo             *BaseItemDto           `json:"ProgramInfo,omitempty"`
+	TimerType               *LiveTvTimerType       `json:"TimerType,omitempty"`
+	Id                      *string                `json:"Id,omitempty"`
+	Type                    *string                `json:"Type,omitempty"`
+	ServerId                *string                `json:"ServerId,omitempty"`
+	ChannelId               *string                `json:"ChannelId,omitempty"`
+	ChannelName             *string                `json:"ChannelName,omitempty"`
+	ChannelNumber           *string                `json:"ChannelNumber,omitempty"`
+	ChannelPrimaryImageTag  *string                `json:"ChannelPrimaryImageTag,omitempty"`
+	ProgramId               *string                `json:"ProgramId,omitempty"`
+	Name                    *string                `json:"Name,omitempty"`
+	Overview                *string                `json:"Overview,omitempty"`
+	ParentFolderId          *string                `json:"ParentFolderId,omitempty"`
+	StartDate               *time.Time             `json:"StartDate,omitempty"`
+	EndDate                 *time.Time             `json:"EndDate,omitempty"`
+	Priority                *int32                 `json:"Priority,omitempty"`
+	PrePaddingSeconds       *int32                 `json:"PrePaddingSeconds,omitempty"`
+	PostPaddingSeconds      *int32                 `json:"PostPaddingSeconds,omitempty"`
+	IsPrePaddingRequired    *bool                  `json:"IsPrePaddingRequired,omitempty"`
+	ParentBackdropItemId    *string                `json:"ParentBackdropItemId,omitempty"`
+	ParentBackdropImageTags []string               `json:"ParentBackdropImageTags,omitempty"`
+	IsPostPaddingRequired   *bool                  `json:"IsPostPaddingRequired,omitempty"`
+	KeepUntil               *LiveTvKeepUntil       `json:"KeepUntil,omitempty"`
 }
 
 // NewLiveTvTimerInfoDto instantiates a new LiveTvTimerInfoDto object
@@ -161,6 +161,7 @@ func (o *LiveTvTimerInfoDto) HasRunTimeTicks() bool {
 func (o *LiveTvTimerInfoDto) SetRunTimeTicks(v int64) {
 	o.RunTimeTicks.Set(&v)
 }
+
 // SetRunTimeTicksNil sets the value for RunTimeTicks to be an explicit nil
 func (o *LiveTvTimerInfoDto) SetRunTimeTicksNil() {
 	o.RunTimeTicks.Set(nil)
@@ -908,7 +909,7 @@ func (o *LiveTvTimerInfoDto) SetKeepUntil(v LiveTvKeepUntil) {
 }
 
 func (o LiveTvTimerInfoDto) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -1033,5 +1034,3 @@ func (v *NullableLiveTvTimerInfoDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

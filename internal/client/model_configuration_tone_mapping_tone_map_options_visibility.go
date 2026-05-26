@@ -19,17 +19,17 @@ var _ MappedNullable = &ConfigurationToneMappingToneMapOptionsVisibility{}
 
 // ConfigurationToneMappingToneMapOptionsVisibility struct for ConfigurationToneMappingToneMapOptionsVisibility
 type ConfigurationToneMappingToneMapOptionsVisibility struct {
-	ShowAdvanced *bool `json:"ShowAdvanced,omitempty"`
-	IsSoftwareToneMappingAvailable *bool `json:"IsSoftwareToneMappingAvailable,omitempty"`
-	IsAnyHardwareToneMappingAvailable *bool `json:"IsAnyHardwareToneMappingAvailable,omitempty"`
-	ShowNvidiaOptions *bool `json:"ShowNvidiaOptions,omitempty"`
-	ShowQuickSyncOptions *bool `json:"ShowQuickSyncOptions,omitempty"`
-	ShowVaapiOptions *bool `json:"ShowVaapiOptions,omitempty"`
-	IsOpenClAvailable *bool `json:"IsOpenClAvailable,omitempty"`
-	IsOpenClSuperTAvailable *bool `json:"IsOpenClSuperTAvailable,omitempty"`
-	IsVaapiNativeAvailable *bool `json:"IsVaapiNativeAvailable,omitempty"`
-	IsQuickSyncNativeAvailable *bool `json:"IsQuickSyncNativeAvailable,omitempty"`
-	OperatingSystem *OperatingSystem `json:"OperatingSystem,omitempty"`
+	ShowAdvanced                      *bool            `json:"ShowAdvanced,omitempty"`
+	IsSoftwareToneMappingAvailable    *bool            `json:"IsSoftwareToneMappingAvailable,omitempty"`
+	IsAnyHardwareToneMappingAvailable *bool            `json:"IsAnyHardwareToneMappingAvailable,omitempty"`
+	ShowNvidiaOptions                 *bool            `json:"ShowNvidiaOptions,omitempty"`
+	ShowQuickSyncOptions              *bool            `json:"ShowQuickSyncOptions,omitempty"`
+	ShowVaapiOptions                  *bool            `json:"ShowVaapiOptions,omitempty"`
+	IsOpenClAvailable                 *bool            `json:"IsOpenClAvailable,omitempty"`
+	IsOpenClSuperTAvailable           *bool            `json:"IsOpenClSuperTAvailable,omitempty"`
+	IsVaapiNativeAvailable            *bool            `json:"IsVaapiNativeAvailable,omitempty"`
+	IsQuickSyncNativeAvailable        *bool            `json:"IsQuickSyncNativeAvailable,omitempty"`
+	OperatingSystem                   *OperatingSystem `json:"OperatingSystem,omitempty"`
 }
 
 // NewConfigurationToneMappingToneMapOptionsVisibility instantiates a new ConfigurationToneMappingToneMapOptionsVisibility object
@@ -402,7 +402,7 @@ func (o *ConfigurationToneMappingToneMapOptionsVisibility) SetOperatingSystem(v 
 }
 
 func (o ConfigurationToneMappingToneMapOptionsVisibility) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -482,5 +482,3 @@ func (v *NullableConfigurationToneMappingToneMapOptionsVisibility) UnmarshalJSON
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

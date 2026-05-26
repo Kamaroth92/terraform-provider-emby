@@ -21,8 +21,8 @@ type SegmentSkipMode string
 // List of SegmentSkipMode
 const (
 	SEGMENTSKIPMODE_SHOW_BUTTON SegmentSkipMode = "ShowButton"
-	SEGMENTSKIPMODE_AUTO_SKIP SegmentSkipMode = "AutoSkip"
-	SEGMENTSKIPMODE_NONE SegmentSkipMode = "None"
+	SEGMENTSKIPMODE_AUTO_SKIP   SegmentSkipMode = "AutoSkip"
+	SEGMENTSKIPMODE_NONE        SegmentSkipMode = "None"
 )
 
 // All allowed values of SegmentSkipMode enum
@@ -110,4 +110,3 @@ func (v *NullableSegmentSkipMode) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

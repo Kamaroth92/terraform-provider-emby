@@ -20,10 +20,10 @@ type IOFileSystemEntryType string
 
 // List of IO.FileSystemEntryType
 const (
-	IOFILESYSTEMENTRYTYPE_FILE IOFileSystemEntryType = "File"
-	IOFILESYSTEMENTRYTYPE_DIRECTORY IOFileSystemEntryType = "Directory"
+	IOFILESYSTEMENTRYTYPE_FILE             IOFileSystemEntryType = "File"
+	IOFILESYSTEMENTRYTYPE_DIRECTORY        IOFileSystemEntryType = "Directory"
 	IOFILESYSTEMENTRYTYPE_NETWORK_COMPUTER IOFileSystemEntryType = "NetworkComputer"
-	IOFILESYSTEMENTRYTYPE_NETWORK_SHARE IOFileSystemEntryType = "NetworkShare"
+	IOFILESYSTEMENTRYTYPE_NETWORK_SHARE    IOFileSystemEntryType = "NetworkShare"
 )
 
 // All allowed values of IOFileSystemEntryType enum
@@ -112,4 +112,3 @@ func (v *NullableIOFileSystemEntryType) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

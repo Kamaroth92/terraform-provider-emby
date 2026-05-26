@@ -19,10 +19,10 @@ var _ MappedNullable = &LibrarySubFolder{}
 
 // LibrarySubFolder struct for LibrarySubFolder
 type LibrarySubFolder struct {
-	Name *string `json:"Name,omitempty"`
-	Id *string `json:"Id,omitempty"`
-	Path *string `json:"Path,omitempty"`
-	IsUserAccessConfigurable *bool `json:"IsUserAccessConfigurable,omitempty"`
+	Name                     *string `json:"Name,omitempty"`
+	Id                       *string `json:"Id,omitempty"`
+	Path                     *string `json:"Path,omitempty"`
+	IsUserAccessConfigurable *bool   `json:"IsUserAccessConfigurable,omitempty"`
 }
 
 // NewLibrarySubFolder instantiates a new LibrarySubFolder object
@@ -171,7 +171,7 @@ func (o *LibrarySubFolder) SetIsUserAccessConfigurable(v bool) {
 }
 
 func (o LibrarySubFolder) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -230,5 +230,3 @@ func (v *NullableLibrarySubFolder) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

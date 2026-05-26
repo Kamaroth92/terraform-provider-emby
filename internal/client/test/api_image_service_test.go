@@ -1,3 +1,5 @@
+// Copyright (c) HashiCorp, Inc.
+
 /*
 Emby Server REST API (BETA)
 
@@ -11,10 +13,10 @@ package embyclient
 
 import (
 	"context"
+	openapiclient "github.com/Kamaroth92/terraform-provider-emby/client"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func Test_embyclient_ImageServiceAPIService(t *testing.T) {
@@ -24,7 +26,7 @@ func Test_embyclient_ImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test ImageServiceAPIService DeleteItemsByIdImagesByType", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var type_ ImageType
@@ -38,7 +40,7 @@ func Test_embyclient_ImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test ImageServiceAPIService DeleteItemsByIdImagesByTypeByIndex", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var index int32
@@ -53,7 +55,7 @@ func Test_embyclient_ImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test ImageServiceAPIService DeleteUsersByIdImagesByType", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var type_ ImageType
@@ -67,7 +69,7 @@ func Test_embyclient_ImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test ImageServiceAPIService DeleteUsersByIdImagesByTypeByIndex", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var index int32
@@ -82,7 +84,7 @@ func Test_embyclient_ImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test ImageServiceAPIService GetArtistsByNameImagesByType", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var type_ ImageType
@@ -96,7 +98,7 @@ func Test_embyclient_ImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test ImageServiceAPIService GetArtistsByNameImagesByTypeByIndex", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var index int32
@@ -111,7 +113,7 @@ func Test_embyclient_ImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test ImageServiceAPIService GetGamegenresByNameImagesByType", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var type_ ImageType
@@ -125,7 +127,7 @@ func Test_embyclient_ImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test ImageServiceAPIService GetGamegenresByNameImagesByTypeByIndex", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var index int32
@@ -140,7 +142,7 @@ func Test_embyclient_ImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test ImageServiceAPIService GetGenresByNameImagesByType", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var type_ ImageType
@@ -154,7 +156,7 @@ func Test_embyclient_ImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test ImageServiceAPIService GetGenresByNameImagesByTypeByIndex", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var index int32
@@ -169,7 +171,7 @@ func Test_embyclient_ImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test ImageServiceAPIService GetItemsByIdImages", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -183,7 +185,7 @@ func Test_embyclient_ImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test ImageServiceAPIService GetItemsByIdImagesByType", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var type_ ImageType
@@ -197,7 +199,7 @@ func Test_embyclient_ImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test ImageServiceAPIService GetItemsByIdImagesByTypeByIndex", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var index int32
@@ -212,7 +214,7 @@ func Test_embyclient_ImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test ImageServiceAPIService GetItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var percentPlayed int32
 		var unPlayedCount int32
@@ -233,7 +235,7 @@ func Test_embyclient_ImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test ImageServiceAPIService GetMusicgenresByNameImagesByType", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var type_ ImageType
@@ -247,7 +249,7 @@ func Test_embyclient_ImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test ImageServiceAPIService GetMusicgenresByNameImagesByTypeByIndex", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var index int32
@@ -262,7 +264,7 @@ func Test_embyclient_ImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test ImageServiceAPIService GetPersonsByNameImagesByType", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var type_ ImageType
@@ -276,7 +278,7 @@ func Test_embyclient_ImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test ImageServiceAPIService GetPersonsByNameImagesByTypeByIndex", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var index int32
@@ -291,7 +293,7 @@ func Test_embyclient_ImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test ImageServiceAPIService GetStudiosByNameImagesByType", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var type_ ImageType
@@ -305,7 +307,7 @@ func Test_embyclient_ImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test ImageServiceAPIService GetStudiosByNameImagesByTypeByIndex", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var index int32
@@ -320,7 +322,7 @@ func Test_embyclient_ImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test ImageServiceAPIService GetUsersByIdImagesByType", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var type_ ImageType
@@ -334,7 +336,7 @@ func Test_embyclient_ImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test ImageServiceAPIService GetUsersByIdImagesByTypeByIndex", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var index int32
@@ -349,7 +351,7 @@ func Test_embyclient_ImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test ImageServiceAPIService HeadArtistsByNameImagesByType", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var type_ ImageType
@@ -363,7 +365,7 @@ func Test_embyclient_ImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test ImageServiceAPIService HeadArtistsByNameImagesByTypeByIndex", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var index int32
@@ -378,7 +380,7 @@ func Test_embyclient_ImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test ImageServiceAPIService HeadGamegenresByNameImagesByType", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var type_ ImageType
@@ -392,7 +394,7 @@ func Test_embyclient_ImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test ImageServiceAPIService HeadGamegenresByNameImagesByTypeByIndex", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var index int32
@@ -407,7 +409,7 @@ func Test_embyclient_ImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test ImageServiceAPIService HeadGenresByNameImagesByType", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var type_ ImageType
@@ -421,7 +423,7 @@ func Test_embyclient_ImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test ImageServiceAPIService HeadGenresByNameImagesByTypeByIndex", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var index int32
@@ -436,7 +438,7 @@ func Test_embyclient_ImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test ImageServiceAPIService HeadItemsByIdImagesByType", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var type_ ImageType
@@ -450,7 +452,7 @@ func Test_embyclient_ImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test ImageServiceAPIService HeadItemsByIdImagesByTypeByIndex", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var index int32
@@ -465,7 +467,7 @@ func Test_embyclient_ImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test ImageServiceAPIService HeadItemsByIdImagesByTypeByIndexByTagByFormatByMaxwidthByMaxheightByPercentplayedByUnplayedcount", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var percentPlayed int32
 		var unPlayedCount int32
@@ -486,7 +488,7 @@ func Test_embyclient_ImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test ImageServiceAPIService HeadMusicgenresByNameImagesByType", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var type_ ImageType
@@ -500,7 +502,7 @@ func Test_embyclient_ImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test ImageServiceAPIService HeadMusicgenresByNameImagesByTypeByIndex", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var index int32
@@ -515,7 +517,7 @@ func Test_embyclient_ImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test ImageServiceAPIService HeadPersonsByNameImagesByType", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var type_ ImageType
@@ -529,7 +531,7 @@ func Test_embyclient_ImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test ImageServiceAPIService HeadPersonsByNameImagesByTypeByIndex", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var index int32
@@ -544,7 +546,7 @@ func Test_embyclient_ImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test ImageServiceAPIService HeadStudiosByNameImagesByType", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var type_ ImageType
@@ -558,7 +560,7 @@ func Test_embyclient_ImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test ImageServiceAPIService HeadStudiosByNameImagesByTypeByIndex", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var index int32
@@ -573,7 +575,7 @@ func Test_embyclient_ImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test ImageServiceAPIService HeadUsersByIdImagesByType", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var type_ ImageType
@@ -587,7 +589,7 @@ func Test_embyclient_ImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test ImageServiceAPIService HeadUsersByIdImagesByTypeByIndex", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var index int32
@@ -602,7 +604,7 @@ func Test_embyclient_ImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test ImageServiceAPIService PostItemsByIdImagesByType", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var type_ ImageType
@@ -616,7 +618,7 @@ func Test_embyclient_ImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test ImageServiceAPIService PostItemsByIdImagesByTypeByIndex", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var index int32
@@ -631,7 +633,7 @@ func Test_embyclient_ImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test ImageServiceAPIService PostItemsByIdImagesByTypeByIndexDelete", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var index int32
@@ -646,7 +648,7 @@ func Test_embyclient_ImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test ImageServiceAPIService PostItemsByIdImagesByTypeByIndexIndex", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var type_ ImageType
@@ -661,7 +663,7 @@ func Test_embyclient_ImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test ImageServiceAPIService PostItemsByIdImagesByTypeByIndexUrl", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var type_ ImageType
@@ -676,7 +678,7 @@ func Test_embyclient_ImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test ImageServiceAPIService PostItemsByIdImagesByTypeDelete", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var type_ ImageType
@@ -690,7 +692,7 @@ func Test_embyclient_ImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test ImageServiceAPIService PostUsersByIdImagesByType", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var type_ ImageType
@@ -704,7 +706,7 @@ func Test_embyclient_ImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test ImageServiceAPIService PostUsersByIdImagesByTypeByIndex", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var type_ ImageType
@@ -718,7 +720,7 @@ func Test_embyclient_ImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test ImageServiceAPIService PostUsersByIdImagesByTypeByIndexDelete", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var index int32
@@ -733,7 +735,7 @@ func Test_embyclient_ImageServiceAPIService(t *testing.T) {
 
 	t.Run("Test ImageServiceAPIService PostUsersByIdImagesByTypeDelete", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var type_ ImageType

@@ -1,3 +1,5 @@
+// Copyright (c) HashiCorp, Inc.
+
 /*
 Emby Server REST API (BETA)
 
@@ -11,10 +13,10 @@ package embyclient
 
 import (
 	"context"
+	openapiclient "github.com/Kamaroth92/terraform-provider-emby/client"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func Test_embyclient_ItemLookupServiceAPIService(t *testing.T) {
@@ -24,7 +26,7 @@ func Test_embyclient_ItemLookupServiceAPIService(t *testing.T) {
 
 	t.Run("Test ItemLookupServiceAPIService GetItemsByIdExternalidinfos", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -38,7 +40,7 @@ func Test_embyclient_ItemLookupServiceAPIService(t *testing.T) {
 
 	t.Run("Test ItemLookupServiceAPIService GetItemsRemotesearchImage", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.ItemLookupServiceAPI.GetItemsRemotesearchImage(context.Background()).Execute()
 
@@ -49,7 +51,7 @@ func Test_embyclient_ItemLookupServiceAPIService(t *testing.T) {
 
 	t.Run("Test ItemLookupServiceAPIService PostItemsMetadataReset", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.ItemLookupServiceAPI.PostItemsMetadataReset(context.Background()).Execute()
 
@@ -60,7 +62,7 @@ func Test_embyclient_ItemLookupServiceAPIService(t *testing.T) {
 
 	t.Run("Test ItemLookupServiceAPIService PostItemsRemotesearchApplyById", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -73,7 +75,7 @@ func Test_embyclient_ItemLookupServiceAPIService(t *testing.T) {
 
 	t.Run("Test ItemLookupServiceAPIService PostItemsRemotesearchBook", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ItemLookupServiceAPI.PostItemsRemotesearchBook(context.Background()).Execute()
 
@@ -85,7 +87,7 @@ func Test_embyclient_ItemLookupServiceAPIService(t *testing.T) {
 
 	t.Run("Test ItemLookupServiceAPIService PostItemsRemotesearchBoxset", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ItemLookupServiceAPI.PostItemsRemotesearchBoxset(context.Background()).Execute()
 
@@ -97,7 +99,7 @@ func Test_embyclient_ItemLookupServiceAPIService(t *testing.T) {
 
 	t.Run("Test ItemLookupServiceAPIService PostItemsRemotesearchGame", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ItemLookupServiceAPI.PostItemsRemotesearchGame(context.Background()).Execute()
 
@@ -109,7 +111,7 @@ func Test_embyclient_ItemLookupServiceAPIService(t *testing.T) {
 
 	t.Run("Test ItemLookupServiceAPIService PostItemsRemotesearchMovie", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ItemLookupServiceAPI.PostItemsRemotesearchMovie(context.Background()).Execute()
 
@@ -121,7 +123,7 @@ func Test_embyclient_ItemLookupServiceAPIService(t *testing.T) {
 
 	t.Run("Test ItemLookupServiceAPIService PostItemsRemotesearchMusicalbum", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ItemLookupServiceAPI.PostItemsRemotesearchMusicalbum(context.Background()).Execute()
 
@@ -133,7 +135,7 @@ func Test_embyclient_ItemLookupServiceAPIService(t *testing.T) {
 
 	t.Run("Test ItemLookupServiceAPIService PostItemsRemotesearchMusicartist", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ItemLookupServiceAPI.PostItemsRemotesearchMusicartist(context.Background()).Execute()
 
@@ -145,7 +147,7 @@ func Test_embyclient_ItemLookupServiceAPIService(t *testing.T) {
 
 	t.Run("Test ItemLookupServiceAPIService PostItemsRemotesearchMusicvideo", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ItemLookupServiceAPI.PostItemsRemotesearchMusicvideo(context.Background()).Execute()
 
@@ -157,7 +159,7 @@ func Test_embyclient_ItemLookupServiceAPIService(t *testing.T) {
 
 	t.Run("Test ItemLookupServiceAPIService PostItemsRemotesearchPerson", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ItemLookupServiceAPI.PostItemsRemotesearchPerson(context.Background()).Execute()
 
@@ -169,7 +171,7 @@ func Test_embyclient_ItemLookupServiceAPIService(t *testing.T) {
 
 	t.Run("Test ItemLookupServiceAPIService PostItemsRemotesearchSeries", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ItemLookupServiceAPI.PostItemsRemotesearchSeries(context.Background()).Execute()
 
@@ -181,7 +183,7 @@ func Test_embyclient_ItemLookupServiceAPIService(t *testing.T) {
 
 	t.Run("Test ItemLookupServiceAPIService PostItemsRemotesearchTrailer", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ItemLookupServiceAPI.PostItemsRemotesearchTrailer(context.Background()).Execute()
 

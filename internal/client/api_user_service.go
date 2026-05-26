@@ -16,21 +16,20 @@ import (
 	"io"
 	"net/http"
 	"net/url"
-	"strings"
 	"os"
+	"strings"
 )
-
 
 type UserServiceAPI interface {
 
 	/*
-	DeleteUsersById Deletes a user
+		DeleteUsersById Deletes a user
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiDeleteUsersByIdRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id
+		@return ApiDeleteUsersByIdRequest
 	*/
 	DeleteUsersById(ctx context.Context, id string) ApiDeleteUsersByIdRequest
 
@@ -38,14 +37,14 @@ type UserServiceAPI interface {
 	DeleteUsersByIdExecute(r ApiDeleteUsersByIdRequest) (*http.Response, error)
 
 	/*
-	DeleteUsersByIdTrackselectionsByTracktype Clears audio or subtitle track selections for a user
+		DeleteUsersByIdTrackselectionsByTracktype Clears audio or subtitle track selections for a user
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@param trackType
-	@return ApiDeleteUsersByIdTrackselectionsByTracktypeRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id
+		@param trackType
+		@return ApiDeleteUsersByIdTrackselectionsByTracktypeRequest
 	*/
 	DeleteUsersByIdTrackselectionsByTracktype(ctx context.Context, id string, trackType string) ApiDeleteUsersByIdTrackselectionsByTracktypeRequest
 
@@ -53,13 +52,13 @@ type UserServiceAPI interface {
 	DeleteUsersByIdTrackselectionsByTracktypeExecute(r ApiDeleteUsersByIdTrackselectionsByTracktypeRequest) (*http.Response, error)
 
 	/*
-	GetUsersById Gets a user by Id
+		GetUsersById Gets a user by Id
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiGetUsersByIdRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id
+		@return ApiGetUsersByIdRequest
 	*/
 	GetUsersById(ctx context.Context, id string) ApiGetUsersByIdRequest
 
@@ -68,14 +67,14 @@ type UserServiceAPI interface {
 	GetUsersByIdExecute(r ApiGetUsersByIdRequest) (*UserDto, *http.Response, error)
 
 	/*
-	GetUsersByUseridTypedsettingsByKey Gets a typed user setting
+		GetUsersByUseridTypedsettingsByKey Gets a typed user setting
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param key Key
-	@param userId
-	@return ApiGetUsersByUseridTypedsettingsByKeyRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param key Key
+		@param userId
+		@return ApiGetUsersByUseridTypedsettingsByKeyRequest
 	*/
 	GetUsersByUseridTypedsettingsByKey(ctx context.Context, key string, userId string) ApiGetUsersByUseridTypedsettingsByKeyRequest
 
@@ -83,12 +82,12 @@ type UserServiceAPI interface {
 	GetUsersByUseridTypedsettingsByKeyExecute(r ApiGetUsersByUseridTypedsettingsByKeyRequest) (*http.Response, error)
 
 	/*
-	GetUsersItemaccess Gets a list of users
+		GetUsersItemaccess Gets a list of users
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetUsersItemaccessRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetUsersItemaccessRequest
 	*/
 	GetUsersItemaccess(ctx context.Context) ApiGetUsersItemaccessRequest
 
@@ -97,12 +96,12 @@ type UserServiceAPI interface {
 	GetUsersItemaccessExecute(r ApiGetUsersItemaccessRequest) (*QueryResultUserDto, *http.Response, error)
 
 	/*
-	GetUsersPrefixes Gets a list of users
+		GetUsersPrefixes Gets a list of users
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetUsersPrefixesRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetUsersPrefixesRequest
 	*/
 	GetUsersPrefixes(ctx context.Context) ApiGetUsersPrefixesRequest
 
@@ -111,12 +110,12 @@ type UserServiceAPI interface {
 	GetUsersPrefixesExecute(r ApiGetUsersPrefixesRequest) ([]NameIdPair, *http.Response, error)
 
 	/*
-	GetUsersPublic Gets a list of publicly visible users for display on a login screen.
+		GetUsersPublic Gets a list of publicly visible users for display on a login screen.
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetUsersPublicRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetUsersPublicRequest
 	*/
 	GetUsersPublic(ctx context.Context) ApiGetUsersPublicRequest
 
@@ -125,12 +124,12 @@ type UserServiceAPI interface {
 	GetUsersPublicExecute(r ApiGetUsersPublicRequest) ([]UserDto, *http.Response, error)
 
 	/*
-	GetUsersQuery Gets a list of users
+		GetUsersQuery Gets a list of users
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetUsersQueryRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetUsersQueryRequest
 	*/
 	GetUsersQuery(ctx context.Context) ApiGetUsersQueryRequest
 
@@ -139,14 +138,14 @@ type UserServiceAPI interface {
 	GetUsersQueryExecute(r ApiGetUsersQueryRequest) (*QueryResultUserDto, *http.Response, error)
 
 	/*
-	PostUsersAuthenticatebyname Authenticates a user
+			PostUsersAuthenticatebyname Authenticates a user
 
-	Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure
----
-Requires authentication as user
+			Authenticate a user by nane and password. A 200 status code indicates success, while anything in the 400 or 500 range indicates failure
+		---
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostUsersAuthenticatebynameRequest
+			@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+			@return ApiPostUsersAuthenticatebynameRequest
 	*/
 	PostUsersAuthenticatebyname(ctx context.Context) ApiPostUsersAuthenticatebynameRequest
 
@@ -155,13 +154,13 @@ Requires authentication as user
 	PostUsersAuthenticatebynameExecute(r ApiPostUsersAuthenticatebynameRequest) (*AuthenticationAuthenticationResult, *http.Response, error)
 
 	/*
-	PostUsersById Updates a user
+		PostUsersById Updates a user
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiPostUsersByIdRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id
+		@return ApiPostUsersByIdRequest
 	*/
 	PostUsersById(ctx context.Context, id string) ApiPostUsersByIdRequest
 
@@ -169,13 +168,13 @@ Requires authentication as user
 	PostUsersByIdExecute(r ApiPostUsersByIdRequest) (*http.Response, error)
 
 	/*
-	PostUsersByIdAuthenticate Authenticates a user
+		PostUsersByIdAuthenticate Authenticates a user
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiPostUsersByIdAuthenticateRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id
+		@return ApiPostUsersByIdAuthenticateRequest
 	*/
 	PostUsersByIdAuthenticate(ctx context.Context, id string) ApiPostUsersByIdAuthenticateRequest
 
@@ -184,13 +183,13 @@ Requires authentication as user
 	PostUsersByIdAuthenticateExecute(r ApiPostUsersByIdAuthenticateRequest) (*AuthenticationAuthenticationResult, *http.Response, error)
 
 	/*
-	PostUsersByIdConfiguration Updates a user configuration
+		PostUsersByIdConfiguration Updates a user configuration
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiPostUsersByIdConfigurationRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id
+		@return ApiPostUsersByIdConfigurationRequest
 	*/
 	PostUsersByIdConfiguration(ctx context.Context, id string) ApiPostUsersByIdConfigurationRequest
 
@@ -198,13 +197,13 @@ Requires authentication as user
 	PostUsersByIdConfigurationExecute(r ApiPostUsersByIdConfigurationRequest) (*http.Response, error)
 
 	/*
-	PostUsersByIdConfigurationPartial Updates a user configuration
+		PostUsersByIdConfigurationPartial Updates a user configuration
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiPostUsersByIdConfigurationPartialRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id
+		@return ApiPostUsersByIdConfigurationPartialRequest
 	*/
 	PostUsersByIdConfigurationPartial(ctx context.Context, id string) ApiPostUsersByIdConfigurationPartialRequest
 
@@ -212,13 +211,13 @@ Requires authentication as user
 	PostUsersByIdConfigurationPartialExecute(r ApiPostUsersByIdConfigurationPartialRequest) (*http.Response, error)
 
 	/*
-	PostUsersByIdDelete Deletes a user
+		PostUsersByIdDelete Deletes a user
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiPostUsersByIdDeleteRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id
+		@return ApiPostUsersByIdDeleteRequest
 	*/
 	PostUsersByIdDelete(ctx context.Context, id string) ApiPostUsersByIdDeleteRequest
 
@@ -226,13 +225,13 @@ Requires authentication as user
 	PostUsersByIdDeleteExecute(r ApiPostUsersByIdDeleteRequest) (*http.Response, error)
 
 	/*
-	PostUsersByIdPassword Updates a user's password
+		PostUsersByIdPassword Updates a user's password
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiPostUsersByIdPasswordRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id
+		@return ApiPostUsersByIdPasswordRequest
 	*/
 	PostUsersByIdPassword(ctx context.Context, id string) ApiPostUsersByIdPasswordRequest
 
@@ -240,13 +239,13 @@ Requires authentication as user
 	PostUsersByIdPasswordExecute(r ApiPostUsersByIdPasswordRequest) (*http.Response, error)
 
 	/*
-	PostUsersByIdPolicy Updates a user policy
+		PostUsersByIdPolicy Updates a user policy
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiPostUsersByIdPolicyRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id
+		@return ApiPostUsersByIdPolicyRequest
 	*/
 	PostUsersByIdPolicy(ctx context.Context, id string) ApiPostUsersByIdPolicyRequest
 
@@ -254,14 +253,14 @@ Requires authentication as user
 	PostUsersByIdPolicyExecute(r ApiPostUsersByIdPolicyRequest) (*http.Response, error)
 
 	/*
-	PostUsersByIdTrackselectionsByTracktypeDelete Clears audio or subtitle track selections for a user
+		PostUsersByIdTrackselectionsByTracktypeDelete Clears audio or subtitle track selections for a user
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@param trackType
-	@return ApiPostUsersByIdTrackselectionsByTracktypeDeleteRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id
+		@param trackType
+		@return ApiPostUsersByIdTrackselectionsByTracktypeDeleteRequest
 	*/
 	PostUsersByIdTrackselectionsByTracktypeDelete(ctx context.Context, id string, trackType string) ApiPostUsersByIdTrackselectionsByTracktypeDeleteRequest
 
@@ -269,14 +268,14 @@ Requires authentication as user
 	PostUsersByIdTrackselectionsByTracktypeDeleteExecute(r ApiPostUsersByIdTrackselectionsByTracktypeDeleteRequest) (*http.Response, error)
 
 	/*
-	PostUsersByUseridTypedsettingsByKey Updates a typed user setting
+		PostUsersByUseridTypedsettingsByKey Updates a typed user setting
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param userId
-	@param key Key
-	@return ApiPostUsersByUseridTypedsettingsByKeyRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param userId
+		@param key Key
+		@return ApiPostUsersByUseridTypedsettingsByKeyRequest
 	*/
 	PostUsersByUseridTypedsettingsByKey(ctx context.Context, userId string, key string) ApiPostUsersByUseridTypedsettingsByKeyRequest
 
@@ -284,12 +283,12 @@ Requires authentication as user
 	PostUsersByUseridTypedsettingsByKeyExecute(r ApiPostUsersByUseridTypedsettingsByKeyRequest) (*http.Response, error)
 
 	/*
-	PostUsersForgotpassword Initiates the forgot password process for a local user
+		PostUsersForgotpassword Initiates the forgot password process for a local user
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostUsersForgotpasswordRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostUsersForgotpasswordRequest
 	*/
 	PostUsersForgotpassword(ctx context.Context) ApiPostUsersForgotpasswordRequest
 
@@ -298,12 +297,12 @@ Requires authentication as user
 	PostUsersForgotpasswordExecute(r ApiPostUsersForgotpasswordRequest) (*ForgotPasswordResult, *http.Response, error)
 
 	/*
-	PostUsersForgotpasswordPin Redeems a forgot password pin
+		PostUsersForgotpasswordPin Redeems a forgot password pin
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostUsersForgotpasswordPinRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostUsersForgotpasswordPinRequest
 	*/
 	PostUsersForgotpasswordPin(ctx context.Context) ApiPostUsersForgotpasswordPinRequest
 
@@ -312,12 +311,12 @@ Requires authentication as user
 	PostUsersForgotpasswordPinExecute(r ApiPostUsersForgotpasswordPinRequest) (*PinRedeemResult, *http.Response, error)
 
 	/*
-	PostUsersNew Creates a user
+		PostUsersNew Creates a user
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostUsersNewRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostUsersNewRequest
 	*/
 	PostUsersNew(ctx context.Context) ApiPostUsersNewRequest
 
@@ -330,9 +329,9 @@ Requires authentication as user
 type UserServiceAPIService service
 
 type ApiDeleteUsersByIdRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService UserServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiDeleteUsersByIdRequest) Execute() (*http.Response, error) {
@@ -344,24 +343,24 @@ DeleteUsersById Deletes a user
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id
- @return ApiDeleteUsersByIdRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id
+	@return ApiDeleteUsersByIdRequest
 */
 func (a *UserServiceAPIService) DeleteUsersById(ctx context.Context, id string) ApiDeleteUsersByIdRequest {
 	return ApiDeleteUsersByIdRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *UserServiceAPIService) DeleteUsersByIdExecute(r ApiDeleteUsersByIdRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodDelete
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodDelete
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserServiceAPIService.DeleteUsersById")
@@ -436,10 +435,10 @@ func (a *UserServiceAPIService) DeleteUsersByIdExecute(r ApiDeleteUsersByIdReque
 }
 
 type ApiDeleteUsersByIdTrackselectionsByTracktypeRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService UserServiceAPI
-	id string
-	trackType string
+	id         string
+	trackType  string
 }
 
 func (r ApiDeleteUsersByIdTrackselectionsByTracktypeRequest) Execute() (*http.Response, error) {
@@ -451,26 +450,26 @@ DeleteUsersByIdTrackselectionsByTracktype Clears audio or subtitle track selecti
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id
- @param trackType
- @return ApiDeleteUsersByIdTrackselectionsByTracktypeRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id
+	@param trackType
+	@return ApiDeleteUsersByIdTrackselectionsByTracktypeRequest
 */
 func (a *UserServiceAPIService) DeleteUsersByIdTrackselectionsByTracktype(ctx context.Context, id string, trackType string) ApiDeleteUsersByIdTrackselectionsByTracktypeRequest {
 	return ApiDeleteUsersByIdTrackselectionsByTracktypeRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
-		trackType: trackType,
+		ctx:        ctx,
+		id:         id,
+		trackType:  trackType,
 	}
 }
 
 // Execute executes the request
 func (a *UserServiceAPIService) DeleteUsersByIdTrackselectionsByTracktypeExecute(r ApiDeleteUsersByIdTrackselectionsByTracktypeRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodDelete
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodDelete
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserServiceAPIService.DeleteUsersByIdTrackselectionsByTracktype")
@@ -546,9 +545,9 @@ func (a *UserServiceAPIService) DeleteUsersByIdTrackselectionsByTracktypeExecute
 }
 
 type ApiGetUsersByIdRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService UserServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiGetUsersByIdRequest) Execute() (*UserDto, *http.Response, error) {
@@ -560,26 +559,27 @@ GetUsersById Gets a user by Id
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id
- @return ApiGetUsersByIdRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id
+	@return ApiGetUsersByIdRequest
 */
 func (a *UserServiceAPIService) GetUsersById(ctx context.Context, id string) ApiGetUsersByIdRequest {
 	return ApiGetUsersByIdRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
-//  @return UserDto
+//
+//	@return UserDto
 func (a *UserServiceAPIService) GetUsersByIdExecute(r ApiGetUsersByIdRequest) (*UserDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *UserDto
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *UserDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserServiceAPIService.GetUsersById")
@@ -663,10 +663,10 @@ func (a *UserServiceAPIService) GetUsersByIdExecute(r ApiGetUsersByIdRequest) (*
 }
 
 type ApiGetUsersByUseridTypedsettingsByKeyRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService UserServiceAPI
-	key string
-	userId string
+	key        string
+	userId     string
 }
 
 func (r ApiGetUsersByUseridTypedsettingsByKeyRequest) Execute() (*http.Response, error) {
@@ -678,26 +678,26 @@ GetUsersByUseridTypedsettingsByKey Gets a typed user setting
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param key Key
- @param userId
- @return ApiGetUsersByUseridTypedsettingsByKeyRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param key Key
+	@param userId
+	@return ApiGetUsersByUseridTypedsettingsByKeyRequest
 */
 func (a *UserServiceAPIService) GetUsersByUseridTypedsettingsByKey(ctx context.Context, key string, userId string) ApiGetUsersByUseridTypedsettingsByKeyRequest {
 	return ApiGetUsersByUseridTypedsettingsByKeyRequest{
 		ApiService: a,
-		ctx: ctx,
-		key: key,
-		userId: userId,
+		ctx:        ctx,
+		key:        key,
+		userId:     userId,
 	}
 }
 
 // Execute executes the request
 func (a *UserServiceAPIService) GetUsersByUseridTypedsettingsByKeyExecute(r ApiGetUsersByUseridTypedsettingsByKeyRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserServiceAPIService.GetUsersByUseridTypedsettingsByKey")
@@ -773,14 +773,14 @@ func (a *UserServiceAPIService) GetUsersByUseridTypedsettingsByKeyExecute(r ApiG
 }
 
 type ApiGetUsersItemaccessRequest struct {
-	ctx context.Context
-	ApiService UserServiceAPI
-	isHidden *bool
-	isDisabled *bool
-	startIndex *int32
-	limit *int32
+	ctx                     context.Context
+	ApiService              UserServiceAPI
+	isHidden                *bool
+	isDisabled              *bool
+	startIndex              *int32
+	limit                   *int32
 	nameStartsWithOrGreater *string
-	sortOrder *string
+	sortOrder               *string
 }
 
 // Optional filter by IsHidden&#x3D;true or false
@@ -828,24 +828,25 @@ GetUsersItemaccess Gets a list of users
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetUsersItemaccessRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetUsersItemaccessRequest
 */
 func (a *UserServiceAPIService) GetUsersItemaccess(ctx context.Context) ApiGetUsersItemaccessRequest {
 	return ApiGetUsersItemaccessRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return QueryResultUserDto
+//
+//	@return QueryResultUserDto
 func (a *UserServiceAPIService) GetUsersItemaccessExecute(r ApiGetUsersItemaccessRequest) (*QueryResultUserDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *QueryResultUserDto
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *QueryResultUserDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserServiceAPIService.GetUsersItemaccess")
@@ -946,14 +947,14 @@ func (a *UserServiceAPIService) GetUsersItemaccessExecute(r ApiGetUsersItemacces
 }
 
 type ApiGetUsersPrefixesRequest struct {
-	ctx context.Context
-	ApiService UserServiceAPI
-	isHidden *bool
-	isDisabled *bool
-	startIndex *int32
-	limit *int32
+	ctx                     context.Context
+	ApiService              UserServiceAPI
+	isHidden                *bool
+	isDisabled              *bool
+	startIndex              *int32
+	limit                   *int32
 	nameStartsWithOrGreater *string
-	sortOrder *string
+	sortOrder               *string
 }
 
 // Optional filter by IsHidden&#x3D;true or false
@@ -1001,24 +1002,25 @@ GetUsersPrefixes Gets a list of users
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetUsersPrefixesRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetUsersPrefixesRequest
 */
 func (a *UserServiceAPIService) GetUsersPrefixes(ctx context.Context) ApiGetUsersPrefixesRequest {
 	return ApiGetUsersPrefixesRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return []NameIdPair
+//
+//	@return []NameIdPair
 func (a *UserServiceAPIService) GetUsersPrefixesExecute(r ApiGetUsersPrefixesRequest) ([]NameIdPair, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []NameIdPair
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue []NameIdPair
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserServiceAPIService.GetUsersPrefixes")
@@ -1119,7 +1121,7 @@ func (a *UserServiceAPIService) GetUsersPrefixesExecute(r ApiGetUsersPrefixesReq
 }
 
 type ApiGetUsersPublicRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService UserServiceAPI
 }
 
@@ -1132,24 +1134,25 @@ GetUsersPublic Gets a list of publicly visible users for display on a login scre
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetUsersPublicRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetUsersPublicRequest
 */
 func (a *UserServiceAPIService) GetUsersPublic(ctx context.Context) ApiGetUsersPublicRequest {
 	return ApiGetUsersPublicRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return []UserDto
+//
+//	@return []UserDto
 func (a *UserServiceAPIService) GetUsersPublicExecute(r ApiGetUsersPublicRequest) ([]UserDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []UserDto
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue []UserDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserServiceAPIService.GetUsersPublic")
@@ -1232,14 +1235,14 @@ func (a *UserServiceAPIService) GetUsersPublicExecute(r ApiGetUsersPublicRequest
 }
 
 type ApiGetUsersQueryRequest struct {
-	ctx context.Context
-	ApiService UserServiceAPI
-	isHidden *bool
-	isDisabled *bool
-	startIndex *int32
-	limit *int32
+	ctx                     context.Context
+	ApiService              UserServiceAPI
+	isHidden                *bool
+	isDisabled              *bool
+	startIndex              *int32
+	limit                   *int32
 	nameStartsWithOrGreater *string
-	sortOrder *string
+	sortOrder               *string
 }
 
 // Optional filter by IsHidden&#x3D;true or false
@@ -1287,24 +1290,25 @@ GetUsersQuery Gets a list of users
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetUsersQueryRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetUsersQueryRequest
 */
 func (a *UserServiceAPIService) GetUsersQuery(ctx context.Context) ApiGetUsersQueryRequest {
 	return ApiGetUsersQueryRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return QueryResultUserDto
+//
+//	@return QueryResultUserDto
 func (a *UserServiceAPIService) GetUsersQueryExecute(r ApiGetUsersQueryRequest) (*QueryResultUserDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *QueryResultUserDto
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *QueryResultUserDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserServiceAPIService.GetUsersQuery")
@@ -1405,9 +1409,9 @@ func (a *UserServiceAPIService) GetUsersQueryExecute(r ApiGetUsersQueryRequest) 
 }
 
 type ApiPostUsersAuthenticatebynameRequest struct {
-	ctx context.Context
-	ApiService UserServiceAPI
-	xEmbyAuthorization *string
+	ctx                    context.Context
+	ApiService             UserServiceAPI
+	xEmbyAuthorization     *string
 	authenticateUserByName *AuthenticateUserByName
 }
 
@@ -1434,24 +1438,25 @@ Authenticate a user by nane and password. A 200 status code indicates success, w
 ---
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostUsersAuthenticatebynameRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostUsersAuthenticatebynameRequest
 */
 func (a *UserServiceAPIService) PostUsersAuthenticatebyname(ctx context.Context) ApiPostUsersAuthenticatebynameRequest {
 	return ApiPostUsersAuthenticatebynameRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return AuthenticationAuthenticationResult
+//
+//	@return AuthenticationAuthenticationResult
 func (a *UserServiceAPIService) PostUsersAuthenticatebynameExecute(r ApiPostUsersAuthenticatebynameRequest) (*AuthenticationAuthenticationResult, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *AuthenticationAuthenticationResult
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *AuthenticationAuthenticationResult
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserServiceAPIService.PostUsersAuthenticatebyname")
@@ -1543,13 +1548,13 @@ func (a *UserServiceAPIService) PostUsersAuthenticatebynameExecute(r ApiPostUser
 }
 
 type ApiPostUsersByIdRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService UserServiceAPI
-	id string
-	userDto *UserDto
+	id         string
+	userDto    *UserDto
 }
 
-// UserDto: 
+// UserDto:
 func (r ApiPostUsersByIdRequest) UserDto(userDto UserDto) ApiPostUsersByIdRequest {
 	r.userDto = &userDto
 	return r
@@ -1564,24 +1569,24 @@ PostUsersById Updates a user
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id
- @return ApiPostUsersByIdRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id
+	@return ApiPostUsersByIdRequest
 */
 func (a *UserServiceAPIService) PostUsersById(ctx context.Context, id string) ApiPostUsersByIdRequest {
 	return ApiPostUsersByIdRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *UserServiceAPIService) PostUsersByIdExecute(r ApiPostUsersByIdRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserServiceAPIService.PostUsersById")
@@ -1661,9 +1666,9 @@ func (a *UserServiceAPIService) PostUsersByIdExecute(r ApiPostUsersByIdRequest) 
 }
 
 type ApiPostUsersByIdAuthenticateRequest struct {
-	ctx context.Context
-	ApiService UserServiceAPI
-	id string
+	ctx              context.Context
+	ApiService       UserServiceAPI
+	id               string
 	authenticateUser *AuthenticateUser
 }
 
@@ -1682,26 +1687,27 @@ PostUsersByIdAuthenticate Authenticates a user
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id
- @return ApiPostUsersByIdAuthenticateRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id
+	@return ApiPostUsersByIdAuthenticateRequest
 */
 func (a *UserServiceAPIService) PostUsersByIdAuthenticate(ctx context.Context, id string) ApiPostUsersByIdAuthenticateRequest {
 	return ApiPostUsersByIdAuthenticateRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
-//  @return AuthenticationAuthenticationResult
+//
+//	@return AuthenticationAuthenticationResult
 func (a *UserServiceAPIService) PostUsersByIdAuthenticateExecute(r ApiPostUsersByIdAuthenticateRequest) (*AuthenticationAuthenticationResult, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *AuthenticationAuthenticationResult
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *AuthenticationAuthenticationResult
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserServiceAPIService.PostUsersByIdAuthenticate")
@@ -1790,13 +1796,13 @@ func (a *UserServiceAPIService) PostUsersByIdAuthenticateExecute(r ApiPostUsersB
 }
 
 type ApiPostUsersByIdConfigurationRequest struct {
-	ctx context.Context
-	ApiService UserServiceAPI
-	id string
+	ctx               context.Context
+	ApiService        UserServiceAPI
+	id                string
 	userConfiguration *UserConfiguration
 }
 
-// UserConfiguration: 
+// UserConfiguration:
 func (r ApiPostUsersByIdConfigurationRequest) UserConfiguration(userConfiguration UserConfiguration) ApiPostUsersByIdConfigurationRequest {
 	r.userConfiguration = &userConfiguration
 	return r
@@ -1811,24 +1817,24 @@ PostUsersByIdConfiguration Updates a user configuration
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id
- @return ApiPostUsersByIdConfigurationRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id
+	@return ApiPostUsersByIdConfigurationRequest
 */
 func (a *UserServiceAPIService) PostUsersByIdConfiguration(ctx context.Context, id string) ApiPostUsersByIdConfigurationRequest {
 	return ApiPostUsersByIdConfigurationRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *UserServiceAPIService) PostUsersByIdConfigurationExecute(r ApiPostUsersByIdConfigurationRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserServiceAPIService.PostUsersByIdConfiguration")
@@ -1908,10 +1914,10 @@ func (a *UserServiceAPIService) PostUsersByIdConfigurationExecute(r ApiPostUsers
 }
 
 type ApiPostUsersByIdConfigurationPartialRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService UserServiceAPI
-	id string
-	body *os.File
+	id         string
+	body       *os.File
 }
 
 // Binary stream
@@ -1929,24 +1935,24 @@ PostUsersByIdConfigurationPartial Updates a user configuration
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id
- @return ApiPostUsersByIdConfigurationPartialRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id
+	@return ApiPostUsersByIdConfigurationPartialRequest
 */
 func (a *UserServiceAPIService) PostUsersByIdConfigurationPartial(ctx context.Context, id string) ApiPostUsersByIdConfigurationPartialRequest {
 	return ApiPostUsersByIdConfigurationPartialRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *UserServiceAPIService) PostUsersByIdConfigurationPartialExecute(r ApiPostUsersByIdConfigurationPartialRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserServiceAPIService.PostUsersByIdConfigurationPartial")
@@ -2026,9 +2032,9 @@ func (a *UserServiceAPIService) PostUsersByIdConfigurationPartialExecute(r ApiPo
 }
 
 type ApiPostUsersByIdDeleteRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService UserServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiPostUsersByIdDeleteRequest) Execute() (*http.Response, error) {
@@ -2040,24 +2046,24 @@ PostUsersByIdDelete Deletes a user
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id
- @return ApiPostUsersByIdDeleteRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id
+	@return ApiPostUsersByIdDeleteRequest
 */
 func (a *UserServiceAPIService) PostUsersByIdDelete(ctx context.Context, id string) ApiPostUsersByIdDeleteRequest {
 	return ApiPostUsersByIdDeleteRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *UserServiceAPIService) PostUsersByIdDeleteExecute(r ApiPostUsersByIdDeleteRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserServiceAPIService.PostUsersByIdDelete")
@@ -2132,9 +2138,9 @@ func (a *UserServiceAPIService) PostUsersByIdDeleteExecute(r ApiPostUsersByIdDel
 }
 
 type ApiPostUsersByIdPasswordRequest struct {
-	ctx context.Context
-	ApiService UserServiceAPI
-	id string
+	ctx                context.Context
+	ApiService         UserServiceAPI
+	id                 string
 	updateUserPassword *UpdateUserPassword
 }
 
@@ -2153,24 +2159,24 @@ PostUsersByIdPassword Updates a user's password
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id
- @return ApiPostUsersByIdPasswordRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id
+	@return ApiPostUsersByIdPasswordRequest
 */
 func (a *UserServiceAPIService) PostUsersByIdPassword(ctx context.Context, id string) ApiPostUsersByIdPasswordRequest {
 	return ApiPostUsersByIdPasswordRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *UserServiceAPIService) PostUsersByIdPasswordExecute(r ApiPostUsersByIdPasswordRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserServiceAPIService.PostUsersByIdPassword")
@@ -2250,13 +2256,13 @@ func (a *UserServiceAPIService) PostUsersByIdPasswordExecute(r ApiPostUsersByIdP
 }
 
 type ApiPostUsersByIdPolicyRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService UserServiceAPI
-	id string
+	id         string
 	userPolicy *UserPolicy
 }
 
-// UserPolicy: 
+// UserPolicy:
 func (r ApiPostUsersByIdPolicyRequest) UserPolicy(userPolicy UserPolicy) ApiPostUsersByIdPolicyRequest {
 	r.userPolicy = &userPolicy
 	return r
@@ -2271,24 +2277,24 @@ PostUsersByIdPolicy Updates a user policy
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id
- @return ApiPostUsersByIdPolicyRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id
+	@return ApiPostUsersByIdPolicyRequest
 */
 func (a *UserServiceAPIService) PostUsersByIdPolicy(ctx context.Context, id string) ApiPostUsersByIdPolicyRequest {
 	return ApiPostUsersByIdPolicyRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *UserServiceAPIService) PostUsersByIdPolicyExecute(r ApiPostUsersByIdPolicyRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserServiceAPIService.PostUsersByIdPolicy")
@@ -2368,10 +2374,10 @@ func (a *UserServiceAPIService) PostUsersByIdPolicyExecute(r ApiPostUsersByIdPol
 }
 
 type ApiPostUsersByIdTrackselectionsByTracktypeDeleteRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService UserServiceAPI
-	id string
-	trackType string
+	id         string
+	trackType  string
 }
 
 func (r ApiPostUsersByIdTrackselectionsByTracktypeDeleteRequest) Execute() (*http.Response, error) {
@@ -2383,26 +2389,26 @@ PostUsersByIdTrackselectionsByTracktypeDelete Clears audio or subtitle track sel
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id
- @param trackType
- @return ApiPostUsersByIdTrackselectionsByTracktypeDeleteRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id
+	@param trackType
+	@return ApiPostUsersByIdTrackselectionsByTracktypeDeleteRequest
 */
 func (a *UserServiceAPIService) PostUsersByIdTrackselectionsByTracktypeDelete(ctx context.Context, id string, trackType string) ApiPostUsersByIdTrackselectionsByTracktypeDeleteRequest {
 	return ApiPostUsersByIdTrackselectionsByTracktypeDeleteRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
-		trackType: trackType,
+		ctx:        ctx,
+		id:         id,
+		trackType:  trackType,
 	}
 }
 
 // Execute executes the request
 func (a *UserServiceAPIService) PostUsersByIdTrackselectionsByTracktypeDeleteExecute(r ApiPostUsersByIdTrackselectionsByTracktypeDeleteRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserServiceAPIService.PostUsersByIdTrackselectionsByTracktypeDelete")
@@ -2478,11 +2484,11 @@ func (a *UserServiceAPIService) PostUsersByIdTrackselectionsByTracktypeDeleteExe
 }
 
 type ApiPostUsersByUseridTypedsettingsByKeyRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService UserServiceAPI
-	userId string
-	key string
-	body *os.File
+	userId     string
+	key        string
+	body       *os.File
 }
 
 // Binary stream
@@ -2500,26 +2506,26 @@ PostUsersByUseridTypedsettingsByKey Updates a typed user setting
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param userId
- @param key Key
- @return ApiPostUsersByUseridTypedsettingsByKeyRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param userId
+	@param key Key
+	@return ApiPostUsersByUseridTypedsettingsByKeyRequest
 */
 func (a *UserServiceAPIService) PostUsersByUseridTypedsettingsByKey(ctx context.Context, userId string, key string) ApiPostUsersByUseridTypedsettingsByKeyRequest {
 	return ApiPostUsersByUseridTypedsettingsByKeyRequest{
 		ApiService: a,
-		ctx: ctx,
-		userId: userId,
-		key: key,
+		ctx:        ctx,
+		userId:     userId,
+		key:        key,
 	}
 }
 
 // Execute executes the request
 func (a *UserServiceAPIService) PostUsersByUseridTypedsettingsByKeyExecute(r ApiPostUsersByUseridTypedsettingsByKeyRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserServiceAPIService.PostUsersByUseridTypedsettingsByKey")
@@ -2600,8 +2606,8 @@ func (a *UserServiceAPIService) PostUsersByUseridTypedsettingsByKeyExecute(r Api
 }
 
 type ApiPostUsersForgotpasswordRequest struct {
-	ctx context.Context
-	ApiService UserServiceAPI
+	ctx            context.Context
+	ApiService     UserServiceAPI
 	forgotPassword *ForgotPassword
 }
 
@@ -2620,24 +2626,25 @@ PostUsersForgotpassword Initiates the forgot password process for a local user
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostUsersForgotpasswordRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostUsersForgotpasswordRequest
 */
 func (a *UserServiceAPIService) PostUsersForgotpassword(ctx context.Context) ApiPostUsersForgotpasswordRequest {
 	return ApiPostUsersForgotpasswordRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return ForgotPasswordResult
+//
+//	@return ForgotPasswordResult
 func (a *UserServiceAPIService) PostUsersForgotpasswordExecute(r ApiPostUsersForgotpasswordRequest) (*ForgotPasswordResult, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *ForgotPasswordResult
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *ForgotPasswordResult
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserServiceAPIService.PostUsersForgotpassword")
@@ -2725,8 +2732,8 @@ func (a *UserServiceAPIService) PostUsersForgotpasswordExecute(r ApiPostUsersFor
 }
 
 type ApiPostUsersForgotpasswordPinRequest struct {
-	ctx context.Context
-	ApiService UserServiceAPI
+	ctx               context.Context
+	ApiService        UserServiceAPI
 	forgotPasswordPin *ForgotPasswordPin
 }
 
@@ -2745,24 +2752,25 @@ PostUsersForgotpasswordPin Redeems a forgot password pin
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostUsersForgotpasswordPinRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostUsersForgotpasswordPinRequest
 */
 func (a *UserServiceAPIService) PostUsersForgotpasswordPin(ctx context.Context) ApiPostUsersForgotpasswordPinRequest {
 	return ApiPostUsersForgotpasswordPinRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return PinRedeemResult
+//
+//	@return PinRedeemResult
 func (a *UserServiceAPIService) PostUsersForgotpasswordPinExecute(r ApiPostUsersForgotpasswordPinRequest) (*PinRedeemResult, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *PinRedeemResult
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *PinRedeemResult
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserServiceAPIService.PostUsersForgotpasswordPin")
@@ -2850,8 +2858,8 @@ func (a *UserServiceAPIService) PostUsersForgotpasswordPinExecute(r ApiPostUsers
 }
 
 type ApiPostUsersNewRequest struct {
-	ctx context.Context
-	ApiService UserServiceAPI
+	ctx              context.Context
+	ApiService       UserServiceAPI
 	createUserByName *CreateUserByName
 }
 
@@ -2870,24 +2878,25 @@ PostUsersNew Creates a user
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostUsersNewRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostUsersNewRequest
 */
 func (a *UserServiceAPIService) PostUsersNew(ctx context.Context) ApiPostUsersNewRequest {
 	return ApiPostUsersNewRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return UserDto
+//
+//	@return UserDto
 func (a *UserServiceAPIService) PostUsersNewExecute(r ApiPostUsersNewRequest) (*UserDto, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *UserDto
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *UserDto
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserServiceAPIService.PostUsersNew")

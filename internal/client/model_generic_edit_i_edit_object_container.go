@@ -19,9 +19,9 @@ var _ MappedNullable = &GenericEditIEditObjectContainer{}
 
 // GenericEditIEditObjectContainer struct for GenericEditIEditObjectContainer
 type GenericEditIEditObjectContainer struct {
-	Object map[string]interface{} `json:"Object,omitempty"`
+	Object        map[string]interface{} `json:"Object,omitempty"`
 	DefaultObject map[string]interface{} `json:"DefaultObject,omitempty"`
-	TypeName *string `json:"TypeName,omitempty"`
+	TypeName      *string                `json:"TypeName,omitempty"`
 }
 
 // NewGenericEditIEditObjectContainer instantiates a new GenericEditIEditObjectContainer object
@@ -138,7 +138,7 @@ func (o *GenericEditIEditObjectContainer) SetTypeName(v string) {
 }
 
 func (o GenericEditIEditObjectContainer) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -194,5 +194,3 @@ func (v *NullableGenericEditIEditObjectContainer) UnmarshalJSON(src []byte) erro
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

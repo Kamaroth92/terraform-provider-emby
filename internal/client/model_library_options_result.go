@@ -19,12 +19,12 @@ var _ MappedNullable = &LibraryOptionsResult{}
 
 // LibraryOptionsResult struct for LibraryOptionsResult
 type LibraryOptionsResult struct {
-	MetadataSavers []LibraryOptionInfo `json:"MetadataSavers,omitempty"`
-	MetadataReaders []LibraryOptionInfo `json:"MetadataReaders,omitempty"`
-	SubtitleFetchers []LibraryOptionInfo `json:"SubtitleFetchers,omitempty"`
-	LyricsFetchers []LibraryOptionInfo `json:"LyricsFetchers,omitempty"`
-	TypeOptions []LibraryTypeOptions `json:"TypeOptions,omitempty"`
-	DefaultLibraryOptions *LibraryOptions `json:"DefaultLibraryOptions,omitempty"`
+	MetadataSavers        []LibraryOptionInfo  `json:"MetadataSavers,omitempty"`
+	MetadataReaders       []LibraryOptionInfo  `json:"MetadataReaders,omitempty"`
+	SubtitleFetchers      []LibraryOptionInfo  `json:"SubtitleFetchers,omitempty"`
+	LyricsFetchers        []LibraryOptionInfo  `json:"LyricsFetchers,omitempty"`
+	TypeOptions           []LibraryTypeOptions `json:"TypeOptions,omitempty"`
+	DefaultLibraryOptions *LibraryOptions      `json:"DefaultLibraryOptions,omitempty"`
 }
 
 // NewLibraryOptionsResult instantiates a new LibraryOptionsResult object
@@ -237,7 +237,7 @@ func (o *LibraryOptionsResult) SetDefaultLibraryOptions(v LibraryOptions) {
 }
 
 func (o LibraryOptionsResult) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -302,5 +302,3 @@ func (v *NullableLibraryOptionsResult) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

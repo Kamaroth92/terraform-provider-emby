@@ -19,31 +19,31 @@ var _ MappedNullable = &VideoCodecBase{}
 
 // VideoCodecBase struct for VideoCodecBase
 type VideoCodecBase struct {
-	CodecDeviceInfo *CommonInterfacesICodecDeviceInfo `json:"CodecDeviceInfo,omitempty"`
-	CodecKind *CodecKinds `json:"CodecKind,omitempty"`
-	MediaTypeName *string `json:"MediaTypeName,omitempty"`
-	VideoMediaType *VideoMediaTypes `json:"VideoMediaType,omitempty"`
-	MinWidth NullableInt32 `json:"MinWidth,omitempty"`
-	MaxWidth NullableInt32 `json:"MaxWidth,omitempty"`
-	MinHeight NullableInt32 `json:"MinHeight,omitempty"`
-	MaxHeight NullableInt32 `json:"MaxHeight,omitempty"`
-	WidthAlignment NullableInt32 `json:"WidthAlignment,omitempty"`
-	HeightAlignment NullableInt32 `json:"HeightAlignment,omitempty"`
-	MaxBitRate *BitRate `json:"MaxBitRate,omitempty"`
-	SupportedColorFormats []ColorFormats `json:"SupportedColorFormats,omitempty"`
-	SupportedColorFormatStrings []string `json:"SupportedColorFormatStrings,omitempty"`
-	ProfileAndLevelInformation []ProfileLevelInformation `json:"ProfileAndLevelInformation,omitempty"`
-	Id *string `json:"Id,omitempty"`
-	Direction *CodecDirections `json:"Direction,omitempty"`
-	Name *string `json:"Name,omitempty"`
-	Description *string `json:"Description,omitempty"`
-	FrameworkCodec *string `json:"FrameworkCodec,omitempty"`
-	IsHardwareCodec *bool `json:"IsHardwareCodec,omitempty"`
-	SecondaryFramework *SecondaryFrameworks `json:"SecondaryFramework,omitempty"`
-	SecondaryFrameworkCodec *string `json:"SecondaryFrameworkCodec,omitempty"`
-	MaxInstanceCount NullableInt32 `json:"MaxInstanceCount,omitempty"`
-	IsEnabledByDefault *bool `json:"IsEnabledByDefault,omitempty"`
-	DefaultPriority *int32 `json:"DefaultPriority,omitempty"`
+	CodecDeviceInfo             *CommonInterfacesICodecDeviceInfo `json:"CodecDeviceInfo,omitempty"`
+	CodecKind                   *CodecKinds                       `json:"CodecKind,omitempty"`
+	MediaTypeName               *string                           `json:"MediaTypeName,omitempty"`
+	VideoMediaType              *VideoMediaTypes                  `json:"VideoMediaType,omitempty"`
+	MinWidth                    NullableInt32                     `json:"MinWidth,omitempty"`
+	MaxWidth                    NullableInt32                     `json:"MaxWidth,omitempty"`
+	MinHeight                   NullableInt32                     `json:"MinHeight,omitempty"`
+	MaxHeight                   NullableInt32                     `json:"MaxHeight,omitempty"`
+	WidthAlignment              NullableInt32                     `json:"WidthAlignment,omitempty"`
+	HeightAlignment             NullableInt32                     `json:"HeightAlignment,omitempty"`
+	MaxBitRate                  *BitRate                          `json:"MaxBitRate,omitempty"`
+	SupportedColorFormats       []ColorFormats                    `json:"SupportedColorFormats,omitempty"`
+	SupportedColorFormatStrings []string                          `json:"SupportedColorFormatStrings,omitempty"`
+	ProfileAndLevelInformation  []ProfileLevelInformation         `json:"ProfileAndLevelInformation,omitempty"`
+	Id                          *string                           `json:"Id,omitempty"`
+	Direction                   *CodecDirections                  `json:"Direction,omitempty"`
+	Name                        *string                           `json:"Name,omitempty"`
+	Description                 *string                           `json:"Description,omitempty"`
+	FrameworkCodec              *string                           `json:"FrameworkCodec,omitempty"`
+	IsHardwareCodec             *bool                             `json:"IsHardwareCodec,omitempty"`
+	SecondaryFramework          *SecondaryFrameworks              `json:"SecondaryFramework,omitempty"`
+	SecondaryFrameworkCodec     *string                           `json:"SecondaryFrameworkCodec,omitempty"`
+	MaxInstanceCount            NullableInt32                     `json:"MaxInstanceCount,omitempty"`
+	IsEnabledByDefault          *bool                             `json:"IsEnabledByDefault,omitempty"`
+	DefaultPriority             *int32                            `json:"DefaultPriority,omitempty"`
 }
 
 // NewVideoCodecBase instantiates a new VideoCodecBase object
@@ -223,6 +223,7 @@ func (o *VideoCodecBase) HasMinWidth() bool {
 func (o *VideoCodecBase) SetMinWidth(v int32) {
 	o.MinWidth.Set(&v)
 }
+
 // SetMinWidthNil sets the value for MinWidth to be an explicit nil
 func (o *VideoCodecBase) SetMinWidthNil() {
 	o.MinWidth.Set(nil)
@@ -265,6 +266,7 @@ func (o *VideoCodecBase) HasMaxWidth() bool {
 func (o *VideoCodecBase) SetMaxWidth(v int32) {
 	o.MaxWidth.Set(&v)
 }
+
 // SetMaxWidthNil sets the value for MaxWidth to be an explicit nil
 func (o *VideoCodecBase) SetMaxWidthNil() {
 	o.MaxWidth.Set(nil)
@@ -307,6 +309,7 @@ func (o *VideoCodecBase) HasMinHeight() bool {
 func (o *VideoCodecBase) SetMinHeight(v int32) {
 	o.MinHeight.Set(&v)
 }
+
 // SetMinHeightNil sets the value for MinHeight to be an explicit nil
 func (o *VideoCodecBase) SetMinHeightNil() {
 	o.MinHeight.Set(nil)
@@ -349,6 +352,7 @@ func (o *VideoCodecBase) HasMaxHeight() bool {
 func (o *VideoCodecBase) SetMaxHeight(v int32) {
 	o.MaxHeight.Set(&v)
 }
+
 // SetMaxHeightNil sets the value for MaxHeight to be an explicit nil
 func (o *VideoCodecBase) SetMaxHeightNil() {
 	o.MaxHeight.Set(nil)
@@ -391,6 +395,7 @@ func (o *VideoCodecBase) HasWidthAlignment() bool {
 func (o *VideoCodecBase) SetWidthAlignment(v int32) {
 	o.WidthAlignment.Set(&v)
 }
+
 // SetWidthAlignmentNil sets the value for WidthAlignment to be an explicit nil
 func (o *VideoCodecBase) SetWidthAlignmentNil() {
 	o.WidthAlignment.Set(nil)
@@ -433,6 +438,7 @@ func (o *VideoCodecBase) HasHeightAlignment() bool {
 func (o *VideoCodecBase) SetHeightAlignment(v int32) {
 	o.HeightAlignment.Set(&v)
 }
+
 // SetHeightAlignmentNil sets the value for HeightAlignment to be an explicit nil
 func (o *VideoCodecBase) SetHeightAlignmentNil() {
 	o.HeightAlignment.Set(nil)
@@ -859,6 +865,7 @@ func (o *VideoCodecBase) HasMaxInstanceCount() bool {
 func (o *VideoCodecBase) SetMaxInstanceCount(v int32) {
 	o.MaxInstanceCount.Set(&v)
 }
+
 // SetMaxInstanceCountNil sets the value for MaxInstanceCount to be an explicit nil
 func (o *VideoCodecBase) SetMaxInstanceCountNil() {
 	o.MaxInstanceCount.Set(nil)
@@ -934,7 +941,7 @@ func (o *VideoCodecBase) SetDefaultPriority(v int32) {
 }
 
 func (o VideoCodecBase) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -1056,5 +1063,3 @@ func (v *NullableVideoCodecBase) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

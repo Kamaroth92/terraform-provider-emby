@@ -20,7 +20,7 @@ var _ MappedNullable = &NameIdPair{}
 // NameIdPair struct for NameIdPair
 type NameIdPair struct {
 	Name *string `json:"Name,omitempty"`
-	Id *string `json:"Id,omitempty"`
+	Id   *string `json:"Id,omitempty"`
 }
 
 // NewNameIdPair instantiates a new NameIdPair object
@@ -105,7 +105,7 @@ func (o *NameIdPair) SetId(v string) {
 }
 
 func (o NameIdPair) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -158,5 +158,3 @@ func (v *NullableNameIdPair) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

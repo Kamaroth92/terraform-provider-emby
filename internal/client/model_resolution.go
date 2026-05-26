@@ -19,7 +19,7 @@ var _ MappedNullable = &Resolution{}
 
 // Resolution struct for Resolution
 type Resolution struct {
-	Width *int32 `json:"Width,omitempty"`
+	Width  *int32 `json:"Width,omitempty"`
 	Height *int32 `json:"Height,omitempty"`
 }
 
@@ -105,7 +105,7 @@ func (o *Resolution) SetHeight(v int32) {
 }
 
 func (o Resolution) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -158,5 +158,3 @@ func (v *NullableResolution) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

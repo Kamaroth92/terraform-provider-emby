@@ -19,9 +19,9 @@ var _ MappedNullable = &CodecConfiguration{}
 
 // CodecConfiguration struct for CodecConfiguration
 type CodecConfiguration struct {
-	IsEnabled *bool `json:"IsEnabled,omitempty"`
-	Priority *int32 `json:"Priority,omitempty"`
-	CodecId *string `json:"CodecId,omitempty"`
+	IsEnabled *bool   `json:"IsEnabled,omitempty"`
+	Priority  *int32  `json:"Priority,omitempty"`
+	CodecId   *string `json:"CodecId,omitempty"`
 }
 
 // NewCodecConfiguration instantiates a new CodecConfiguration object
@@ -138,7 +138,7 @@ func (o *CodecConfiguration) SetCodecId(v string) {
 }
 
 func (o CodecConfiguration) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -194,5 +194,3 @@ func (v *NullableCodecConfiguration) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

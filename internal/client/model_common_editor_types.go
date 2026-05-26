@@ -20,26 +20,26 @@ type CommonEditorTypes string
 
 // List of Common.EditorTypes
 const (
-	COMMONEDITORTYPES_GROUP CommonEditorTypes = "Group"
-	COMMONEDITORTYPES_TEXT CommonEditorTypes = "Text"
-	COMMONEDITORTYPES_NUMERIC CommonEditorTypes = "Numeric"
-	COMMONEDITORTYPES_BOOLEAN CommonEditorTypes = "Boolean"
-	COMMONEDITORTYPES_SELECT_SINGLE CommonEditorTypes = "SelectSingle"
+	COMMONEDITORTYPES_GROUP           CommonEditorTypes = "Group"
+	COMMONEDITORTYPES_TEXT            CommonEditorTypes = "Text"
+	COMMONEDITORTYPES_NUMERIC         CommonEditorTypes = "Numeric"
+	COMMONEDITORTYPES_BOOLEAN         CommonEditorTypes = "Boolean"
+	COMMONEDITORTYPES_SELECT_SINGLE   CommonEditorTypes = "SelectSingle"
 	COMMONEDITORTYPES_SELECT_MULTIPLE CommonEditorTypes = "SelectMultiple"
-	COMMONEDITORTYPES_DATE CommonEditorTypes = "Date"
-	COMMONEDITORTYPES_FILE_PATH CommonEditorTypes = "FilePath"
-	COMMONEDITORTYPES_FOLDER_PATH CommonEditorTypes = "FolderPath"
-	COMMONEDITORTYPES_STATUS_ITEM CommonEditorTypes = "StatusItem"
-	COMMONEDITORTYPES_PROGRESS_ITEM CommonEditorTypes = "ProgressItem"
-	COMMONEDITORTYPES_BUTTON_ITEM CommonEditorTypes = "ButtonItem"
-	COMMONEDITORTYPES_BUTTON_GROUP CommonEditorTypes = "ButtonGroup"
-	COMMONEDITORTYPES_CAPTION_ITEM CommonEditorTypes = "CaptionItem"
-	COMMONEDITORTYPES_LABEL_ITEM CommonEditorTypes = "LabelItem"
-	COMMONEDITORTYPES_ITEM_LIST CommonEditorTypes = "ItemList"
-	COMMONEDITORTYPES_RADIO_GROUP CommonEditorTypes = "RadioGroup"
-	COMMONEDITORTYPES_DX_DATA_GRID CommonEditorTypes = "DxDataGrid"
-	COMMONEDITORTYPES_DX_PIVOT_GRID CommonEditorTypes = "DxPivotGrid"
-	COMMONEDITORTYPES_SPACER_ITEM CommonEditorTypes = "SpacerItem"
+	COMMONEDITORTYPES_DATE            CommonEditorTypes = "Date"
+	COMMONEDITORTYPES_FILE_PATH       CommonEditorTypes = "FilePath"
+	COMMONEDITORTYPES_FOLDER_PATH     CommonEditorTypes = "FolderPath"
+	COMMONEDITORTYPES_STATUS_ITEM     CommonEditorTypes = "StatusItem"
+	COMMONEDITORTYPES_PROGRESS_ITEM   CommonEditorTypes = "ProgressItem"
+	COMMONEDITORTYPES_BUTTON_ITEM     CommonEditorTypes = "ButtonItem"
+	COMMONEDITORTYPES_BUTTON_GROUP    CommonEditorTypes = "ButtonGroup"
+	COMMONEDITORTYPES_CAPTION_ITEM    CommonEditorTypes = "CaptionItem"
+	COMMONEDITORTYPES_LABEL_ITEM      CommonEditorTypes = "LabelItem"
+	COMMONEDITORTYPES_ITEM_LIST       CommonEditorTypes = "ItemList"
+	COMMONEDITORTYPES_RADIO_GROUP     CommonEditorTypes = "RadioGroup"
+	COMMONEDITORTYPES_DX_DATA_GRID    CommonEditorTypes = "DxDataGrid"
+	COMMONEDITORTYPES_DX_PIVOT_GRID   CommonEditorTypes = "DxPivotGrid"
+	COMMONEDITORTYPES_SPACER_ITEM     CommonEditorTypes = "SpacerItem"
 )
 
 // All allowed values of CommonEditorTypes enum
@@ -144,4 +144,3 @@ func (v *NullableCommonEditorTypes) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

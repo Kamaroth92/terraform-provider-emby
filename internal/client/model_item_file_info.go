@@ -19,11 +19,11 @@ var _ MappedNullable = &ItemFileInfo{}
 
 // ItemFileInfo struct for ItemFileInfo
 type ItemFileInfo struct {
-	Type *ItemFileType `json:"Type,omitempty"`
-	Name *string `json:"Name,omitempty"`
-	Path *string `json:"Path,omitempty"`
-	ImageType *ImageType `json:"ImageType,omitempty"`
-	Index *int32 `json:"Index,omitempty"`
+	Type      *ItemFileType `json:"Type,omitempty"`
+	Name      *string       `json:"Name,omitempty"`
+	Path      *string       `json:"Path,omitempty"`
+	ImageType *ImageType    `json:"ImageType,omitempty"`
+	Index     *int32        `json:"Index,omitempty"`
 }
 
 // NewItemFileInfo instantiates a new ItemFileInfo object
@@ -204,7 +204,7 @@ func (o *ItemFileInfo) SetIndex(v int32) {
 }
 
 func (o ItemFileInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -266,5 +266,3 @@ func (v *NullableItemFileInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

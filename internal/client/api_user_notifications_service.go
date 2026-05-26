@@ -18,16 +18,15 @@ import (
 	"net/url"
 )
 
-
 type UserNotificationsServiceAPI interface {
 
 	/*
-	GetNotificationsServicesDefaults Gets default notification info
+		GetNotificationsServicesDefaults Gets default notification info
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetNotificationsServicesDefaultsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetNotificationsServicesDefaultsRequest
 	*/
 	GetNotificationsServicesDefaults(ctx context.Context) ApiGetNotificationsServicesDefaultsRequest
 
@@ -36,12 +35,12 @@ type UserNotificationsServiceAPI interface {
 	GetNotificationsServicesDefaultsExecute(r ApiGetNotificationsServicesDefaultsRequest) (*UserNotificationInfo, *http.Response, error)
 
 	/*
-	PostNotificationsServicesTest Sends a test notification
+		PostNotificationsServicesTest Sends a test notification
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostNotificationsServicesTestRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostNotificationsServicesTestRequest
 	*/
 	PostNotificationsServicesTest(ctx context.Context) ApiPostNotificationsServicesTestRequest
 
@@ -53,7 +52,7 @@ type UserNotificationsServiceAPI interface {
 type UserNotificationsServiceAPIService service
 
 type ApiGetNotificationsServicesDefaultsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService UserNotificationsServiceAPI
 }
 
@@ -66,24 +65,25 @@ GetNotificationsServicesDefaults Gets default notification info
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetNotificationsServicesDefaultsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetNotificationsServicesDefaultsRequest
 */
 func (a *UserNotificationsServiceAPIService) GetNotificationsServicesDefaults(ctx context.Context) ApiGetNotificationsServicesDefaultsRequest {
 	return ApiGetNotificationsServicesDefaultsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return UserNotificationInfo
+//
+//	@return UserNotificationInfo
 func (a *UserNotificationsServiceAPIService) GetNotificationsServicesDefaultsExecute(r ApiGetNotificationsServicesDefaultsRequest) (*UserNotificationInfo, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *UserNotificationInfo
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *UserNotificationInfo
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserNotificationsServiceAPIService.GetNotificationsServicesDefaults")
@@ -166,12 +166,12 @@ func (a *UserNotificationsServiceAPIService) GetNotificationsServicesDefaultsExe
 }
 
 type ApiPostNotificationsServicesTestRequest struct {
-	ctx context.Context
-	ApiService UserNotificationsServiceAPI
+	ctx                  context.Context
+	ApiService           UserNotificationsServiceAPI
 	userNotificationInfo *UserNotificationInfo
 }
 
-// UserNotificationInfo: 
+// UserNotificationInfo:
 func (r ApiPostNotificationsServicesTestRequest) UserNotificationInfo(userNotificationInfo UserNotificationInfo) ApiPostNotificationsServicesTestRequest {
 	r.userNotificationInfo = &userNotificationInfo
 	return r
@@ -186,22 +186,22 @@ PostNotificationsServicesTest Sends a test notification
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostNotificationsServicesTestRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostNotificationsServicesTestRequest
 */
 func (a *UserNotificationsServiceAPIService) PostNotificationsServicesTest(ctx context.Context) ApiPostNotificationsServicesTestRequest {
 	return ApiPostNotificationsServicesTestRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *UserNotificationsServiceAPIService) PostNotificationsServicesTestExecute(r ApiPostNotificationsServicesTestRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserNotificationsServiceAPIService.PostNotificationsServicesTest")

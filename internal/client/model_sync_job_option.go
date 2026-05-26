@@ -20,12 +20,12 @@ type SyncJobOption string
 
 // List of SyncJobOption
 const (
-	SYNCJOBOPTION_NAME SyncJobOption = "Name"
-	SYNCJOBOPTION_QUALITY SyncJobOption = "Quality"
-	SYNCJOBOPTION_UNWATCHED_ONLY SyncJobOption = "UnwatchedOnly"
+	SYNCJOBOPTION_NAME             SyncJobOption = "Name"
+	SYNCJOBOPTION_QUALITY          SyncJobOption = "Quality"
+	SYNCJOBOPTION_UNWATCHED_ONLY   SyncJobOption = "UnwatchedOnly"
 	SYNCJOBOPTION_SYNC_NEW_CONTENT SyncJobOption = "SyncNewContent"
-	SYNCJOBOPTION_ITEM_LIMIT SyncJobOption = "ItemLimit"
-	SYNCJOBOPTION_PROFILE SyncJobOption = "Profile"
+	SYNCJOBOPTION_ITEM_LIMIT       SyncJobOption = "ItemLimit"
+	SYNCJOBOPTION_PROFILE          SyncJobOption = "Profile"
 )
 
 // All allowed values of SyncJobOption enum
@@ -116,4 +116,3 @@ func (v *NullableSyncJobOption) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

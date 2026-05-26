@@ -20,8 +20,8 @@ type UserActionType string
 
 // List of UserActionType
 const (
-	USERACTIONTYPE_PLAYED_ITEM UserActionType = "PlayedItem"
-	USERACTIONTYPE_MARK_PLAYED UserActionType = "MarkPlayed"
+	USERACTIONTYPE_PLAYED_ITEM   UserActionType = "PlayedItem"
+	USERACTIONTYPE_MARK_PLAYED   UserActionType = "MarkPlayed"
 	USERACTIONTYPE_MARK_FAVORITE UserActionType = "MarkFavorite"
 )
 
@@ -110,4 +110,3 @@ func (v *NullableUserActionType) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

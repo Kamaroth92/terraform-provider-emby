@@ -19,8 +19,8 @@ var _ MappedNullable = &DlnaProfilesProtocolInfoDetection{}
 
 // DlnaProfilesProtocolInfoDetection struct for DlnaProfilesProtocolInfoDetection
 type DlnaProfilesProtocolInfoDetection struct {
-	EnabledForVideo *bool `json:"EnabledForVideo,omitempty"`
-	EnabledForAudio *bool `json:"EnabledForAudio,omitempty"`
+	EnabledForVideo  *bool `json:"EnabledForVideo,omitempty"`
+	EnabledForAudio  *bool `json:"EnabledForAudio,omitempty"`
 	EnabledForPhotos *bool `json:"EnabledForPhotos,omitempty"`
 }
 
@@ -138,7 +138,7 @@ func (o *DlnaProfilesProtocolInfoDetection) SetEnabledForPhotos(v bool) {
 }
 
 func (o DlnaProfilesProtocolInfoDetection) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -194,5 +194,3 @@ func (v *NullableDlnaProfilesProtocolInfoDetection) UnmarshalJSON(src []byte) er
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

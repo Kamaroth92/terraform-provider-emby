@@ -20,10 +20,10 @@ type UserItemShareLevel string
 
 // List of UserItemShareLevel
 const (
-	USERITEMSHARELEVEL_NONE UserItemShareLevel = "None"
-	USERITEMSHARELEVEL_READ UserItemShareLevel = "Read"
-	USERITEMSHARELEVEL_WRITE UserItemShareLevel = "Write"
-	USERITEMSHARELEVEL_MANAGE UserItemShareLevel = "Manage"
+	USERITEMSHARELEVEL_NONE          UserItemShareLevel = "None"
+	USERITEMSHARELEVEL_READ          UserItemShareLevel = "Read"
+	USERITEMSHARELEVEL_WRITE         UserItemShareLevel = "Write"
+	USERITEMSHARELEVEL_MANAGE        UserItemShareLevel = "Manage"
 	USERITEMSHARELEVEL_MANAGE_DELETE UserItemShareLevel = "ManageDelete"
 )
 
@@ -114,4 +114,3 @@ func (v *NullableUserItemShareLevel) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

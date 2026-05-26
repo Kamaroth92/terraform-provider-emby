@@ -19,12 +19,12 @@ var _ MappedNullable = &ResponseProfile{}
 
 // ResponseProfile struct for ResponseProfile
 type ResponseProfile struct {
-	Container *string `json:"Container,omitempty"`
-	AudioCodec *string `json:"AudioCodec,omitempty"`
-	VideoCodec *string `json:"VideoCodec,omitempty"`
-	Type *DlnaProfileType `json:"Type,omitempty"`
-	OrgPn *string `json:"OrgPn,omitempty"`
-	MimeType *string `json:"MimeType,omitempty"`
+	Container  *string            `json:"Container,omitempty"`
+	AudioCodec *string            `json:"AudioCodec,omitempty"`
+	VideoCodec *string            `json:"VideoCodec,omitempty"`
+	Type       *DlnaProfileType   `json:"Type,omitempty"`
+	OrgPn      *string            `json:"OrgPn,omitempty"`
+	MimeType   *string            `json:"MimeType,omitempty"`
 	Conditions []ProfileCondition `json:"Conditions,omitempty"`
 }
 
@@ -270,7 +270,7 @@ func (o *ResponseProfile) SetConditions(v []ProfileCondition) {
 }
 
 func (o ResponseProfile) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -338,5 +338,3 @@ func (v *NullableResponseProfile) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

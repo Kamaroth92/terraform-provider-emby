@@ -19,8 +19,8 @@ var _ MappedNullable = &ApiListingProviderTypeInfo{}
 
 // ApiListingProviderTypeInfo struct for ApiListingProviderTypeInfo
 type ApiListingProviderTypeInfo struct {
-	Name *string `json:"Name,omitempty"`
-	Id *string `json:"Id,omitempty"`
+	Name     *string `json:"Name,omitempty"`
+	Id       *string `json:"Id,omitempty"`
 	SetupUrl *string `json:"SetupUrl,omitempty"`
 }
 
@@ -138,7 +138,7 @@ func (o *ApiListingProviderTypeInfo) SetSetupUrl(v string) {
 }
 
 func (o ApiListingProviderTypeInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -194,5 +194,3 @@ func (v *NullableApiListingProviderTypeInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

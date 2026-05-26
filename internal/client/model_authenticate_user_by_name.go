@@ -20,7 +20,7 @@ var _ MappedNullable = &AuthenticateUserByName{}
 // AuthenticateUserByName struct for AuthenticateUserByName
 type AuthenticateUserByName struct {
 	Username *string `json:"Username,omitempty"`
-	Pw *string `json:"Pw,omitempty"`
+	Pw       *string `json:"Pw,omitempty"`
 }
 
 // NewAuthenticateUserByName instantiates a new AuthenticateUserByName object
@@ -105,7 +105,7 @@ func (o *AuthenticateUserByName) SetPw(v string) {
 }
 
 func (o AuthenticateUserByName) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -158,5 +158,3 @@ func (v *NullableAuthenticateUserByName) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

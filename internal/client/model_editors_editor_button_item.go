@@ -19,16 +19,16 @@ var _ MappedNullable = &EditorsEditorButtonItem{}
 
 // EditorsEditorButtonItem struct for EditorsEditorButtonItem
 type EditorsEditorButtonItem struct {
-	EditorType *CommonEditorTypes `json:"EditorType,omitempty"`
-	Name *string `json:"Name,omitempty"`
-	Id *string `json:"Id,omitempty"`
-	AllowEmpty *bool `json:"AllowEmpty,omitempty"`
-	IsReadOnly *bool `json:"IsReadOnly,omitempty"`
-	IsAdvanced *bool `json:"IsAdvanced,omitempty"`
-	DisplayName *string `json:"DisplayName,omitempty"`
-	Description *string `json:"Description,omitempty"`
-	FeatureRequiresPremiere *bool `json:"FeatureRequiresPremiere,omitempty"`
-	ParentId *string `json:"ParentId,omitempty"`
+	EditorType              *CommonEditorTypes `json:"EditorType,omitempty"`
+	Name                    *string            `json:"Name,omitempty"`
+	Id                      *string            `json:"Id,omitempty"`
+	AllowEmpty              *bool              `json:"AllowEmpty,omitempty"`
+	IsReadOnly              *bool              `json:"IsReadOnly,omitempty"`
+	IsAdvanced              *bool              `json:"IsAdvanced,omitempty"`
+	DisplayName             *string            `json:"DisplayName,omitempty"`
+	Description             *string            `json:"Description,omitempty"`
+	FeatureRequiresPremiere *bool              `json:"FeatureRequiresPremiere,omitempty"`
+	ParentId                *string            `json:"ParentId,omitempty"`
 }
 
 // NewEditorsEditorButtonItem instantiates a new EditorsEditorButtonItem object
@@ -369,7 +369,7 @@ func (o *EditorsEditorButtonItem) SetParentId(v string) {
 }
 
 func (o EditorsEditorButtonItem) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -446,5 +446,3 @@ func (v *NullableEditorsEditorButtonItem) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

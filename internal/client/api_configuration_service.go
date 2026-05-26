@@ -16,20 +16,19 @@ import (
 	"io"
 	"net/http"
 	"net/url"
-	"strings"
 	"os"
+	"strings"
 )
-
 
 type ConfigurationServiceAPI interface {
 
 	/*
-	GetSystemConfiguration Gets application configuration
+		GetSystemConfiguration Gets application configuration
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetSystemConfigurationRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetSystemConfigurationRequest
 	*/
 	GetSystemConfiguration(ctx context.Context) ApiGetSystemConfigurationRequest
 
@@ -38,13 +37,13 @@ type ConfigurationServiceAPI interface {
 	GetSystemConfigurationExecute(r ApiGetSystemConfigurationRequest) (*ServerConfiguration, *http.Response, error)
 
 	/*
-	GetSystemConfigurationByKey Gets a named configuration
+		GetSystemConfigurationByKey Gets a named configuration
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param key Key
-	@return ApiGetSystemConfigurationByKeyRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param key Key
+		@return ApiGetSystemConfigurationByKeyRequest
 	*/
 	GetSystemConfigurationByKey(ctx context.Context, key string) ApiGetSystemConfigurationByKeyRequest
 
@@ -52,12 +51,12 @@ type ConfigurationServiceAPI interface {
 	GetSystemConfigurationByKeyExecute(r ApiGetSystemConfigurationByKeyRequest) (*http.Response, error)
 
 	/*
-	PostSystemConfiguration Updates application configuration
+		PostSystemConfiguration Updates application configuration
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostSystemConfigurationRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostSystemConfigurationRequest
 	*/
 	PostSystemConfiguration(ctx context.Context) ApiPostSystemConfigurationRequest
 
@@ -65,13 +64,13 @@ type ConfigurationServiceAPI interface {
 	PostSystemConfigurationExecute(r ApiPostSystemConfigurationRequest) (*http.Response, error)
 
 	/*
-	PostSystemConfigurationByKey Updates named configuration
+		PostSystemConfigurationByKey Updates named configuration
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param key Key
-	@return ApiPostSystemConfigurationByKeyRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param key Key
+		@return ApiPostSystemConfigurationByKeyRequest
 	*/
 	PostSystemConfigurationByKey(ctx context.Context, key string) ApiPostSystemConfigurationByKeyRequest
 
@@ -79,12 +78,12 @@ type ConfigurationServiceAPI interface {
 	PostSystemConfigurationByKeyExecute(r ApiPostSystemConfigurationByKeyRequest) (*http.Response, error)
 
 	/*
-	PostSystemConfigurationPartial Updates application configuration
+		PostSystemConfigurationPartial Updates application configuration
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostSystemConfigurationPartialRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostSystemConfigurationPartialRequest
 	*/
 	PostSystemConfigurationPartial(ctx context.Context) ApiPostSystemConfigurationPartialRequest
 
@@ -96,7 +95,7 @@ type ConfigurationServiceAPI interface {
 type ConfigurationServiceAPIService service
 
 type ApiGetSystemConfigurationRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService ConfigurationServiceAPI
 }
 
@@ -109,24 +108,25 @@ GetSystemConfiguration Gets application configuration
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetSystemConfigurationRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetSystemConfigurationRequest
 */
 func (a *ConfigurationServiceAPIService) GetSystemConfiguration(ctx context.Context) ApiGetSystemConfigurationRequest {
 	return ApiGetSystemConfigurationRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return ServerConfiguration
+//
+//	@return ServerConfiguration
 func (a *ConfigurationServiceAPIService) GetSystemConfigurationExecute(r ApiGetSystemConfigurationRequest) (*ServerConfiguration, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *ServerConfiguration
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *ServerConfiguration
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ConfigurationServiceAPIService.GetSystemConfiguration")
@@ -209,9 +209,9 @@ func (a *ConfigurationServiceAPIService) GetSystemConfigurationExecute(r ApiGetS
 }
 
 type ApiGetSystemConfigurationByKeyRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService ConfigurationServiceAPI
-	key string
+	key        string
 }
 
 func (r ApiGetSystemConfigurationByKeyRequest) Execute() (*http.Response, error) {
@@ -223,24 +223,24 @@ GetSystemConfigurationByKey Gets a named configuration
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param key Key
- @return ApiGetSystemConfigurationByKeyRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param key Key
+	@return ApiGetSystemConfigurationByKeyRequest
 */
 func (a *ConfigurationServiceAPIService) GetSystemConfigurationByKey(ctx context.Context, key string) ApiGetSystemConfigurationByKeyRequest {
 	return ApiGetSystemConfigurationByKeyRequest{
 		ApiService: a,
-		ctx: ctx,
-		key: key,
+		ctx:        ctx,
+		key:        key,
 	}
 }
 
 // Execute executes the request
 func (a *ConfigurationServiceAPIService) GetSystemConfigurationByKeyExecute(r ApiGetSystemConfigurationByKeyRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ConfigurationServiceAPIService.GetSystemConfigurationByKey")
@@ -315,12 +315,12 @@ func (a *ConfigurationServiceAPIService) GetSystemConfigurationByKeyExecute(r Ap
 }
 
 type ApiPostSystemConfigurationRequest struct {
-	ctx context.Context
-	ApiService ConfigurationServiceAPI
+	ctx                 context.Context
+	ApiService          ConfigurationServiceAPI
 	serverConfiguration *ServerConfiguration
 }
 
-// ServerConfiguration: 
+// ServerConfiguration:
 func (r ApiPostSystemConfigurationRequest) ServerConfiguration(serverConfiguration ServerConfiguration) ApiPostSystemConfigurationRequest {
 	r.serverConfiguration = &serverConfiguration
 	return r
@@ -335,22 +335,22 @@ PostSystemConfiguration Updates application configuration
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostSystemConfigurationRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostSystemConfigurationRequest
 */
 func (a *ConfigurationServiceAPIService) PostSystemConfiguration(ctx context.Context) ApiPostSystemConfigurationRequest {
 	return ApiPostSystemConfigurationRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *ConfigurationServiceAPIService) PostSystemConfigurationExecute(r ApiPostSystemConfigurationRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ConfigurationServiceAPIService.PostSystemConfiguration")
@@ -429,10 +429,10 @@ func (a *ConfigurationServiceAPIService) PostSystemConfigurationExecute(r ApiPos
 }
 
 type ApiPostSystemConfigurationByKeyRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService ConfigurationServiceAPI
-	key string
-	body *os.File
+	key        string
+	body       *os.File
 }
 
 // Binary stream
@@ -450,24 +450,24 @@ PostSystemConfigurationByKey Updates named configuration
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param key Key
- @return ApiPostSystemConfigurationByKeyRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param key Key
+	@return ApiPostSystemConfigurationByKeyRequest
 */
 func (a *ConfigurationServiceAPIService) PostSystemConfigurationByKey(ctx context.Context, key string) ApiPostSystemConfigurationByKeyRequest {
 	return ApiPostSystemConfigurationByKeyRequest{
 		ApiService: a,
-		ctx: ctx,
-		key: key,
+		ctx:        ctx,
+		key:        key,
 	}
 }
 
 // Execute executes the request
 func (a *ConfigurationServiceAPIService) PostSystemConfigurationByKeyExecute(r ApiPostSystemConfigurationByKeyRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ConfigurationServiceAPIService.PostSystemConfigurationByKey")
@@ -547,9 +547,9 @@ func (a *ConfigurationServiceAPIService) PostSystemConfigurationByKeyExecute(r A
 }
 
 type ApiPostSystemConfigurationPartialRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService ConfigurationServiceAPI
-	body *os.File
+	body       *os.File
 }
 
 // Binary stream
@@ -567,22 +567,22 @@ PostSystemConfigurationPartial Updates application configuration
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostSystemConfigurationPartialRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostSystemConfigurationPartialRequest
 */
 func (a *ConfigurationServiceAPIService) PostSystemConfigurationPartial(ctx context.Context) ApiPostSystemConfigurationPartialRequest {
 	return ApiPostSystemConfigurationPartialRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *ConfigurationServiceAPIService) PostSystemConfigurationPartialExecute(r ApiPostSystemConfigurationPartialRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ConfigurationServiceAPIService.PostSystemConfigurationPartial")

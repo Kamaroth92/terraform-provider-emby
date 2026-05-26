@@ -19,19 +19,19 @@ var _ MappedNullable = &DeviceProfile{}
 
 // DeviceProfile struct for DeviceProfile
 type DeviceProfile struct {
-	Name *string `json:"Name,omitempty"`
-	Id *string `json:"Id,omitempty"`
-	SupportedMediaTypes *string `json:"SupportedMediaTypes,omitempty"`
-	MaxStreamingBitrate NullableInt64 `json:"MaxStreamingBitrate,omitempty"`
-	MusicStreamingTranscodingBitrate NullableInt32 `json:"MusicStreamingTranscodingBitrate,omitempty"`
-	MaxStaticMusicBitrate NullableInt32 `json:"MaxStaticMusicBitrate,omitempty"`
-	DeclaredFeatures []string `json:"DeclaredFeatures,omitempty"`
-	DirectPlayProfiles []DirectPlayProfile `json:"DirectPlayProfiles,omitempty"`
-	TranscodingProfiles []TranscodingProfile `json:"TranscodingProfiles,omitempty"`
-	ContainerProfiles []ContainerProfile `json:"ContainerProfiles,omitempty"`
-	CodecProfiles []CodecProfile `json:"CodecProfiles,omitempty"`
-	ResponseProfiles []ResponseProfile `json:"ResponseProfiles,omitempty"`
-	SubtitleProfiles []SubtitleProfile `json:"SubtitleProfiles,omitempty"`
+	Name                             *string              `json:"Name,omitempty"`
+	Id                               *string              `json:"Id,omitempty"`
+	SupportedMediaTypes              *string              `json:"SupportedMediaTypes,omitempty"`
+	MaxStreamingBitrate              NullableInt64        `json:"MaxStreamingBitrate,omitempty"`
+	MusicStreamingTranscodingBitrate NullableInt32        `json:"MusicStreamingTranscodingBitrate,omitempty"`
+	MaxStaticMusicBitrate            NullableInt32        `json:"MaxStaticMusicBitrate,omitempty"`
+	DeclaredFeatures                 []string             `json:"DeclaredFeatures,omitempty"`
+	DirectPlayProfiles               []DirectPlayProfile  `json:"DirectPlayProfiles,omitempty"`
+	TranscodingProfiles              []TranscodingProfile `json:"TranscodingProfiles,omitempty"`
+	ContainerProfiles                []ContainerProfile   `json:"ContainerProfiles,omitempty"`
+	CodecProfiles                    []CodecProfile       `json:"CodecProfiles,omitempty"`
+	ResponseProfiles                 []ResponseProfile    `json:"ResponseProfiles,omitempty"`
+	SubtitleProfiles                 []SubtitleProfile    `json:"SubtitleProfiles,omitempty"`
 }
 
 // NewDeviceProfile instantiates a new DeviceProfile object
@@ -179,6 +179,7 @@ func (o *DeviceProfile) HasMaxStreamingBitrate() bool {
 func (o *DeviceProfile) SetMaxStreamingBitrate(v int64) {
 	o.MaxStreamingBitrate.Set(&v)
 }
+
 // SetMaxStreamingBitrateNil sets the value for MaxStreamingBitrate to be an explicit nil
 func (o *DeviceProfile) SetMaxStreamingBitrateNil() {
 	o.MaxStreamingBitrate.Set(nil)
@@ -221,6 +222,7 @@ func (o *DeviceProfile) HasMusicStreamingTranscodingBitrate() bool {
 func (o *DeviceProfile) SetMusicStreamingTranscodingBitrate(v int32) {
 	o.MusicStreamingTranscodingBitrate.Set(&v)
 }
+
 // SetMusicStreamingTranscodingBitrateNil sets the value for MusicStreamingTranscodingBitrate to be an explicit nil
 func (o *DeviceProfile) SetMusicStreamingTranscodingBitrateNil() {
 	o.MusicStreamingTranscodingBitrate.Set(nil)
@@ -263,6 +265,7 @@ func (o *DeviceProfile) HasMaxStaticMusicBitrate() bool {
 func (o *DeviceProfile) SetMaxStaticMusicBitrate(v int32) {
 	o.MaxStaticMusicBitrate.Set(&v)
 }
+
 // SetMaxStaticMusicBitrateNil sets the value for MaxStaticMusicBitrate to be an explicit nil
 func (o *DeviceProfile) SetMaxStaticMusicBitrateNil() {
 	o.MaxStaticMusicBitrate.Set(nil)
@@ -498,7 +501,7 @@ func (o *DeviceProfile) SetSubtitleProfiles(v []SubtitleProfile) {
 }
 
 func (o DeviceProfile) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -584,5 +587,3 @@ func (v *NullableDeviceProfile) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

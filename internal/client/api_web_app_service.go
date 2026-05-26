@@ -18,16 +18,15 @@ import (
 	"net/url"
 )
 
-
 type WebAppServiceAPI interface {
 
 	/*
-	GetWebConfigurationpage Method for GetWebConfigurationpage
+		GetWebConfigurationpage Method for GetWebConfigurationpage
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetWebConfigurationpageRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetWebConfigurationpageRequest
 	*/
 	GetWebConfigurationpage(ctx context.Context) ApiGetWebConfigurationpageRequest
 
@@ -35,12 +34,12 @@ type WebAppServiceAPI interface {
 	GetWebConfigurationpageExecute(r ApiGetWebConfigurationpageRequest) (*http.Response, error)
 
 	/*
-	GetWebConfigurationpages Method for GetWebConfigurationpages
+		GetWebConfigurationpages Method for GetWebConfigurationpages
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetWebConfigurationpagesRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetWebConfigurationpagesRequest
 	*/
 	GetWebConfigurationpages(ctx context.Context) ApiGetWebConfigurationpagesRequest
 
@@ -49,12 +48,12 @@ type WebAppServiceAPI interface {
 	GetWebConfigurationpagesExecute(r ApiGetWebConfigurationpagesRequest) ([]ApiConfigurationPageInfo, *http.Response, error)
 
 	/*
-	GetWebStrings Method for GetWebStrings
+		GetWebStrings Method for GetWebStrings
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetWebStringsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetWebStringsRequest
 	*/
 	GetWebStrings(ctx context.Context) ApiGetWebStringsRequest
 
@@ -62,12 +61,12 @@ type WebAppServiceAPI interface {
 	GetWebStringsExecute(r ApiGetWebStringsRequest) (*http.Response, error)
 
 	/*
-	GetWebStringset Method for GetWebStringset
+		GetWebStringset Method for GetWebStringset
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetWebStringsetRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetWebStringsetRequest
 	*/
 	GetWebStringset(ctx context.Context) ApiGetWebStringsetRequest
 
@@ -80,7 +79,7 @@ type WebAppServiceAPI interface {
 type WebAppServiceAPIService service
 
 type ApiGetWebConfigurationpageRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService WebAppServiceAPI
 }
 
@@ -93,22 +92,22 @@ GetWebConfigurationpage Method for GetWebConfigurationpage
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetWebConfigurationpageRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetWebConfigurationpageRequest
 */
 func (a *WebAppServiceAPIService) GetWebConfigurationpage(ctx context.Context) ApiGetWebConfigurationpageRequest {
 	return ApiGetWebConfigurationpageRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *WebAppServiceAPIService) GetWebConfigurationpageExecute(r ApiGetWebConfigurationpageRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "WebAppServiceAPIService.GetWebConfigurationpage")
@@ -182,7 +181,7 @@ func (a *WebAppServiceAPIService) GetWebConfigurationpageExecute(r ApiGetWebConf
 }
 
 type ApiGetWebConfigurationpagesRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService WebAppServiceAPI
 }
 
@@ -195,24 +194,25 @@ GetWebConfigurationpages Method for GetWebConfigurationpages
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetWebConfigurationpagesRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetWebConfigurationpagesRequest
 */
 func (a *WebAppServiceAPIService) GetWebConfigurationpages(ctx context.Context) ApiGetWebConfigurationpagesRequest {
 	return ApiGetWebConfigurationpagesRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return []ApiConfigurationPageInfo
+//
+//	@return []ApiConfigurationPageInfo
 func (a *WebAppServiceAPIService) GetWebConfigurationpagesExecute(r ApiGetWebConfigurationpagesRequest) ([]ApiConfigurationPageInfo, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []ApiConfigurationPageInfo
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue []ApiConfigurationPageInfo
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "WebAppServiceAPIService.GetWebConfigurationpages")
@@ -295,7 +295,7 @@ func (a *WebAppServiceAPIService) GetWebConfigurationpagesExecute(r ApiGetWebCon
 }
 
 type ApiGetWebStringsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService WebAppServiceAPI
 }
 
@@ -308,22 +308,22 @@ GetWebStrings Method for GetWebStrings
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetWebStringsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetWebStringsRequest
 */
 func (a *WebAppServiceAPIService) GetWebStrings(ctx context.Context) ApiGetWebStringsRequest {
 	return ApiGetWebStringsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *WebAppServiceAPIService) GetWebStringsExecute(r ApiGetWebStringsRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "WebAppServiceAPIService.GetWebStrings")
@@ -397,7 +397,7 @@ func (a *WebAppServiceAPIService) GetWebStringsExecute(r ApiGetWebStringsRequest
 }
 
 type ApiGetWebStringsetRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService WebAppServiceAPI
 }
 
@@ -410,24 +410,25 @@ GetWebStringset Method for GetWebStringset
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetWebStringsetRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetWebStringsetRequest
 */
 func (a *WebAppServiceAPIService) GetWebStringset(ctx context.Context) ApiGetWebStringsetRequest {
 	return ApiGetWebStringsetRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return []string
+//
+//	@return []string
 func (a *WebAppServiceAPIService) GetWebStringsetExecute(r ApiGetWebStringsetRequest) ([]string, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  []string
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue []string
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "WebAppServiceAPIService.GetWebStringset")

@@ -19,10 +19,10 @@ var _ MappedNullable = &DirectPlayProfile{}
 
 // DirectPlayProfile struct for DirectPlayProfile
 type DirectPlayProfile struct {
-	Container *string `json:"Container,omitempty"`
-	AudioCodec *string `json:"AudioCodec,omitempty"`
-	VideoCodec *string `json:"VideoCodec,omitempty"`
-	Type *DlnaProfileType `json:"Type,omitempty"`
+	Container  *string          `json:"Container,omitempty"`
+	AudioCodec *string          `json:"AudioCodec,omitempty"`
+	VideoCodec *string          `json:"VideoCodec,omitempty"`
+	Type       *DlnaProfileType `json:"Type,omitempty"`
 }
 
 // NewDirectPlayProfile instantiates a new DirectPlayProfile object
@@ -171,7 +171,7 @@ func (o *DirectPlayProfile) SetType(v DlnaProfileType) {
 }
 
 func (o DirectPlayProfile) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -230,5 +230,3 @@ func (v *NullableDirectPlayProfile) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

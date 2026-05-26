@@ -20,9 +20,9 @@ type LoggingLogSeverity string
 
 // List of Logging.LogSeverity
 const (
-	LOGGINGLOGSEVERITY_INFO LoggingLogSeverity = "Info"
+	LOGGINGLOGSEVERITY_INFO  LoggingLogSeverity = "Info"
 	LOGGINGLOGSEVERITY_DEBUG LoggingLogSeverity = "Debug"
-	LOGGINGLOGSEVERITY_WARN LoggingLogSeverity = "Warn"
+	LOGGINGLOGSEVERITY_WARN  LoggingLogSeverity = "Warn"
 	LOGGINGLOGSEVERITY_ERROR LoggingLogSeverity = "Error"
 	LOGGINGLOGSEVERITY_FATAL LoggingLogSeverity = "Fatal"
 )
@@ -114,4 +114,3 @@ func (v *NullableLoggingLogSeverity) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

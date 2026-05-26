@@ -18,16 +18,15 @@ import (
 	"net/url"
 )
 
-
 type ChapterApiEndpointAPI interface {
 
 	/*
-	GetChapterApiGetChapters Get a list of items for type and filtered
+		GetChapterApiGetChapters Get a list of items for type and filtered
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetChapterApiGetChaptersRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetChapterApiGetChaptersRequest
 	*/
 	GetChapterApiGetChapters(ctx context.Context) ApiGetChapterApiGetChaptersRequest
 
@@ -36,12 +35,12 @@ type ChapterApiEndpointAPI interface {
 	GetChapterApiGetChaptersExecute(r ApiGetChapterApiGetChaptersRequest) (map[string]interface{}, *http.Response, error)
 
 	/*
-	GetChapterApiGetItemPath Get a list of items for type and filtered
+		GetChapterApiGetItemPath Get a list of items for type and filtered
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetChapterApiGetItemPathRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetChapterApiGetItemPathRequest
 	*/
 	GetChapterApiGetItemPath(ctx context.Context) ApiGetChapterApiGetItemPathRequest
 
@@ -50,12 +49,12 @@ type ChapterApiEndpointAPI interface {
 	GetChapterApiGetItemPathExecute(r ApiGetChapterApiGetItemPathRequest) (map[string]interface{}, *http.Response, error)
 
 	/*
-	GetChapterApiGetItems Get a list of items for type and filtered
+		GetChapterApiGetItems Get a list of items for type and filtered
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetChapterApiGetItemsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetChapterApiGetItemsRequest
 	*/
 	GetChapterApiGetItems(ctx context.Context) ApiGetChapterApiGetItemsRequest
 
@@ -64,12 +63,12 @@ type ChapterApiEndpointAPI interface {
 	GetChapterApiGetItemsExecute(r ApiGetChapterApiGetItemsRequest) (map[string]interface{}, *http.Response, error)
 
 	/*
-	GetChapterApiGetSummary Get a list of items for type and filtered
+		GetChapterApiGetSummary Get a list of items for type and filtered
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetChapterApiGetSummaryRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetChapterApiGetSummaryRequest
 	*/
 	GetChapterApiGetSummary(ctx context.Context) ApiGetChapterApiGetSummaryRequest
 
@@ -78,12 +77,12 @@ type ChapterApiEndpointAPI interface {
 	GetChapterApiGetSummaryExecute(r ApiGetChapterApiGetSummaryRequest) (map[string]interface{}, *http.Response, error)
 
 	/*
-	GetChapterApiUpdateChapters Updates chapters
+		GetChapterApiUpdateChapters Updates chapters
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetChapterApiUpdateChaptersRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetChapterApiUpdateChaptersRequest
 	*/
 	GetChapterApiUpdateChapters(ctx context.Context) ApiGetChapterApiUpdateChaptersRequest
 
@@ -96,9 +95,9 @@ type ChapterApiEndpointAPI interface {
 type ChapterApiEndpointAPIService service
 
 type ApiGetChapterApiGetChaptersRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService ChapterApiEndpointAPI
-	id *int32
+	id         *int32
 }
 
 // item id
@@ -116,24 +115,25 @@ GetChapterApiGetChapters Get a list of items for type and filtered
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetChapterApiGetChaptersRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetChapterApiGetChaptersRequest
 */
 func (a *ChapterApiEndpointAPIService) GetChapterApiGetChapters(ctx context.Context) ApiGetChapterApiGetChaptersRequest {
 	return ApiGetChapterApiGetChaptersRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return map[string]interface{}
+//
+//	@return map[string]interface{}
 func (a *ChapterApiEndpointAPIService) GetChapterApiGetChaptersExecute(r ApiGetChapterApiGetChaptersRequest) (map[string]interface{}, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  map[string]interface{}
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue map[string]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ChapterApiEndpointAPIService.GetChapterApiGetChapters")
@@ -220,9 +220,9 @@ func (a *ChapterApiEndpointAPIService) GetChapterApiGetChaptersExecute(r ApiGetC
 }
 
 type ApiGetChapterApiGetItemPathRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService ChapterApiEndpointAPI
-	id *int32
+	id         *int32
 }
 
 // item id
@@ -240,24 +240,25 @@ GetChapterApiGetItemPath Get a list of items for type and filtered
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetChapterApiGetItemPathRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetChapterApiGetItemPathRequest
 */
 func (a *ChapterApiEndpointAPIService) GetChapterApiGetItemPath(ctx context.Context) ApiGetChapterApiGetItemPathRequest {
 	return ApiGetChapterApiGetItemPathRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return map[string]interface{}
+//
+//	@return map[string]interface{}
 func (a *ChapterApiEndpointAPIService) GetChapterApiGetItemPathExecute(r ApiGetChapterApiGetItemPathRequest) (map[string]interface{}, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  map[string]interface{}
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue map[string]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ChapterApiEndpointAPIService.GetChapterApiGetItemPath")
@@ -344,11 +345,11 @@ func (a *ChapterApiEndpointAPIService) GetChapterApiGetItemPathExecute(r ApiGetC
 }
 
 type ApiGetChapterApiGetItemsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService ChapterApiEndpointAPI
-	filter *string
-	itemType *string
-	parent *int32
+	filter     *string
+	itemType   *string
+	parent     *int32
 }
 
 // filter string
@@ -378,24 +379,25 @@ GetChapterApiGetItems Get a list of items for type and filtered
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetChapterApiGetItemsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetChapterApiGetItemsRequest
 */
 func (a *ChapterApiEndpointAPIService) GetChapterApiGetItems(ctx context.Context) ApiGetChapterApiGetItemsRequest {
 	return ApiGetChapterApiGetItemsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return map[string]interface{}
+//
+//	@return map[string]interface{}
 func (a *ChapterApiEndpointAPIService) GetChapterApiGetItemsExecute(r ApiGetChapterApiGetItemsRequest) (map[string]interface{}, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  map[string]interface{}
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue map[string]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ChapterApiEndpointAPIService.GetChapterApiGetItems")
@@ -487,9 +489,9 @@ func (a *ChapterApiEndpointAPIService) GetChapterApiGetItemsExecute(r ApiGetChap
 }
 
 type ApiGetChapterApiGetSummaryRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService ChapterApiEndpointAPI
-	type_ *string
+	type_      *string
 }
 
 // summary type
@@ -507,24 +509,25 @@ GetChapterApiGetSummary Get a list of items for type and filtered
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetChapterApiGetSummaryRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetChapterApiGetSummaryRequest
 */
 func (a *ChapterApiEndpointAPIService) GetChapterApiGetSummary(ctx context.Context) ApiGetChapterApiGetSummaryRequest {
 	return ApiGetChapterApiGetSummaryRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return map[string]interface{}
+//
+//	@return map[string]interface{}
 func (a *ChapterApiEndpointAPIService) GetChapterApiGetSummaryExecute(r ApiGetChapterApiGetSummaryRequest) (map[string]interface{}, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  map[string]interface{}
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue map[string]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ChapterApiEndpointAPIService.GetChapterApiGetSummary")
@@ -611,14 +614,14 @@ func (a *ChapterApiEndpointAPIService) GetChapterApiGetSummaryExecute(r ApiGetCh
 }
 
 type ApiGetChapterApiUpdateChaptersRequest struct {
-	ctx context.Context
-	ApiService ChapterApiEndpointAPI
-	id *int64
-	indexList *string
-	action *string
-	name *string
-	type_ *string
-	time *string
+	ctx          context.Context
+	ApiService   ChapterApiEndpointAPI
+	id           *int64
+	indexList    *string
+	action       *string
+	name         *string
+	type_        *string
+	time         *string
 	autoInterval *int32
 }
 
@@ -673,24 +676,25 @@ GetChapterApiUpdateChapters Updates chapters
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetChapterApiUpdateChaptersRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetChapterApiUpdateChaptersRequest
 */
 func (a *ChapterApiEndpointAPIService) GetChapterApiUpdateChapters(ctx context.Context) ApiGetChapterApiUpdateChaptersRequest {
 	return ApiGetChapterApiUpdateChaptersRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return map[string]interface{}
+//
+//	@return map[string]interface{}
 func (a *ChapterApiEndpointAPIService) GetChapterApiUpdateChaptersExecute(r ApiGetChapterApiUpdateChaptersRequest) (map[string]interface{}, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  map[string]interface{}
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue map[string]interface{}
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ChapterApiEndpointAPIService.GetChapterApiUpdateChapters")

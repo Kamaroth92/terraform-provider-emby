@@ -19,11 +19,11 @@ var _ MappedNullable = &BaseItemPerson{}
 
 // BaseItemPerson struct for BaseItemPerson
 type BaseItemPerson struct {
-	Name *string `json:"Name,omitempty"`
-	Id *string `json:"Id,omitempty"`
-	Role *string `json:"Role,omitempty"`
-	Type *PersonType `json:"Type,omitempty"`
-	PrimaryImageTag *string `json:"PrimaryImageTag,omitempty"`
+	Name            *string     `json:"Name,omitempty"`
+	Id              *string     `json:"Id,omitempty"`
+	Role            *string     `json:"Role,omitempty"`
+	Type            *PersonType `json:"Type,omitempty"`
+	PrimaryImageTag *string     `json:"PrimaryImageTag,omitempty"`
 }
 
 // NewBaseItemPerson instantiates a new BaseItemPerson object
@@ -204,7 +204,7 @@ func (o *BaseItemPerson) SetPrimaryImageTag(v string) {
 }
 
 func (o BaseItemPerson) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -266,5 +266,3 @@ func (v *NullableBaseItemPerson) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

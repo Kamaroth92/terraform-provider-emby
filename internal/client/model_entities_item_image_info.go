@@ -20,12 +20,12 @@ var _ MappedNullable = &EntitiesItemImageInfo{}
 
 // EntitiesItemImageInfo struct for EntitiesItemImageInfo
 type EntitiesItemImageInfo struct {
-	Path *string `json:"Path,omitempty"`
-	Type *ImageType `json:"Type,omitempty"`
-	Orientation *DrawingImageOrientation `json:"Orientation,omitempty"`
-	DateModified *time.Time `json:"DateModified,omitempty"`
-	Width *int32 `json:"Width,omitempty"`
-	Height *int32 `json:"Height,omitempty"`
+	Path         *string                  `json:"Path,omitempty"`
+	Type         *ImageType               `json:"Type,omitempty"`
+	Orientation  *DrawingImageOrientation `json:"Orientation,omitempty"`
+	DateModified *time.Time               `json:"DateModified,omitempty"`
+	Width        *int32                   `json:"Width,omitempty"`
+	Height       *int32                   `json:"Height,omitempty"`
 }
 
 // NewEntitiesItemImageInfo instantiates a new EntitiesItemImageInfo object
@@ -238,7 +238,7 @@ func (o *EntitiesItemImageInfo) SetHeight(v int32) {
 }
 
 func (o EntitiesItemImageInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -303,5 +303,3 @@ func (v *NullableEntitiesItemImageInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

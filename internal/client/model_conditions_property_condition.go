@@ -19,12 +19,12 @@ var _ MappedNullable = &ConditionsPropertyCondition{}
 
 // ConditionsPropertyCondition struct for ConditionsPropertyCondition
 type ConditionsPropertyCondition struct {
-	AffectedPropertyId *string `json:"AffectedPropertyId,omitempty"`
-	ConditionType *ConditionsPropertyConditionType `json:"ConditionType,omitempty"`
-	TargetPropertyId *string `json:"TargetPropertyId,omitempty"`
-	SimpleCondition *AttributesSimpleCondition `json:"SimpleCondition,omitempty"`
-	ValueCondition *AttributesValueCondition `json:"ValueCondition,omitempty"`
-	Value map[string]interface{} `json:"Value,omitempty"`
+	AffectedPropertyId *string                          `json:"AffectedPropertyId,omitempty"`
+	ConditionType      *ConditionsPropertyConditionType `json:"ConditionType,omitempty"`
+	TargetPropertyId   *string                          `json:"TargetPropertyId,omitempty"`
+	SimpleCondition    *AttributesSimpleCondition       `json:"SimpleCondition,omitempty"`
+	ValueCondition     *AttributesValueCondition        `json:"ValueCondition,omitempty"`
+	Value              map[string]interface{}           `json:"Value,omitempty"`
 }
 
 // NewConditionsPropertyCondition instantiates a new ConditionsPropertyCondition object
@@ -237,7 +237,7 @@ func (o *ConditionsPropertyCondition) SetValue(v map[string]interface{}) {
 }
 
 func (o ConditionsPropertyCondition) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -302,5 +302,3 @@ func (v *NullableConditionsPropertyCondition) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

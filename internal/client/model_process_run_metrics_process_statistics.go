@@ -19,11 +19,11 @@ var _ MappedNullable = &ProcessRunMetricsProcessStatistics{}
 
 // ProcessRunMetricsProcessStatistics struct for ProcessRunMetricsProcessStatistics
 type ProcessRunMetricsProcessStatistics struct {
-	CurrentCpu *float64 `json:"CurrentCpu,omitempty"`
-	AverageCpu *float64 `json:"AverageCpu,omitempty"`
-	CurrentVirtualMemory *float64 `json:"CurrentVirtualMemory,omitempty"`
-	CurrentWorkingSet *float64 `json:"CurrentWorkingSet,omitempty"`
-	Metrics []ProcessRunMetricsProcessMetricPoint `json:"Metrics,omitempty"`
+	CurrentCpu           *float64                              `json:"CurrentCpu,omitempty"`
+	AverageCpu           *float64                              `json:"AverageCpu,omitempty"`
+	CurrentVirtualMemory *float64                              `json:"CurrentVirtualMemory,omitempty"`
+	CurrentWorkingSet    *float64                              `json:"CurrentWorkingSet,omitempty"`
+	Metrics              []ProcessRunMetricsProcessMetricPoint `json:"Metrics,omitempty"`
 }
 
 // NewProcessRunMetricsProcessStatistics instantiates a new ProcessRunMetricsProcessStatistics object
@@ -204,7 +204,7 @@ func (o *ProcessRunMetricsProcessStatistics) SetMetrics(v []ProcessRunMetricsPro
 }
 
 func (o ProcessRunMetricsProcessStatistics) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -266,5 +266,3 @@ func (v *NullableProcessRunMetricsProcessStatistics) UnmarshalJSON(src []byte) e
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

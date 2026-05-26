@@ -20,7 +20,7 @@ var _ MappedNullable = &UserLibraryLeaveSharedItems{}
 // UserLibraryLeaveSharedItems struct for UserLibraryLeaveSharedItems
 type UserLibraryLeaveSharedItems struct {
 	ItemIds []string `json:"ItemIds,omitempty"`
-	UserId *string `json:"UserId,omitempty"`
+	UserId  *string  `json:"UserId,omitempty"`
 }
 
 // NewUserLibraryLeaveSharedItems instantiates a new UserLibraryLeaveSharedItems object
@@ -105,7 +105,7 @@ func (o *UserLibraryLeaveSharedItems) SetUserId(v string) {
 }
 
 func (o UserLibraryLeaveSharedItems) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -158,5 +158,3 @@ func (v *NullableUserLibraryLeaveSharedItems) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

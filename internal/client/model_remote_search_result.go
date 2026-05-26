@@ -20,25 +20,25 @@ var _ MappedNullable = &RemoteSearchResult{}
 
 // RemoteSearchResult struct for RemoteSearchResult
 type RemoteSearchResult struct {
-	Name *string `json:"Name,omitempty"`
-	OriginalTitle *string `json:"OriginalTitle,omitempty"`
-	ProviderIds *map[string]string `json:"ProviderIds,omitempty"`
-	ProductionYear NullableInt32 `json:"ProductionYear,omitempty"`
-	IndexNumber NullableInt32 `json:"IndexNumber,omitempty"`
-	IndexNumberEnd NullableInt32 `json:"IndexNumberEnd,omitempty"`
-	ParentIndexNumber NullableInt32 `json:"ParentIndexNumber,omitempty"`
-	SortIndexNumber NullableInt32 `json:"SortIndexNumber,omitempty"`
-	SortParentIndexNumber NullableInt32 `json:"SortParentIndexNumber,omitempty"`
-	PremiereDate NullableTime `json:"PremiereDate,omitempty"`
-	StartDate NullableTime `json:"StartDate,omitempty"`
-	EndDate NullableTime `json:"EndDate,omitempty"`
-	ImageUrl *string `json:"ImageUrl,omitempty"`
-	SearchProviderName *string `json:"SearchProviderName,omitempty"`
-	GameSystem *string `json:"GameSystem,omitempty"`
-	Overview *string `json:"Overview,omitempty"`
-	DisambiguationComment *string `json:"DisambiguationComment,omitempty"`
-	AlbumArtist *RemoteSearchResult `json:"AlbumArtist,omitempty"`
-	Artists []RemoteSearchResult `json:"Artists,omitempty"`
+	Name                  *string              `json:"Name,omitempty"`
+	OriginalTitle         *string              `json:"OriginalTitle,omitempty"`
+	ProviderIds           *map[string]string   `json:"ProviderIds,omitempty"`
+	ProductionYear        NullableInt32        `json:"ProductionYear,omitempty"`
+	IndexNumber           NullableInt32        `json:"IndexNumber,omitempty"`
+	IndexNumberEnd        NullableInt32        `json:"IndexNumberEnd,omitempty"`
+	ParentIndexNumber     NullableInt32        `json:"ParentIndexNumber,omitempty"`
+	SortIndexNumber       NullableInt32        `json:"SortIndexNumber,omitempty"`
+	SortParentIndexNumber NullableInt32        `json:"SortParentIndexNumber,omitempty"`
+	PremiereDate          NullableTime         `json:"PremiereDate,omitempty"`
+	StartDate             NullableTime         `json:"StartDate,omitempty"`
+	EndDate               NullableTime         `json:"EndDate,omitempty"`
+	ImageUrl              *string              `json:"ImageUrl,omitempty"`
+	SearchProviderName    *string              `json:"SearchProviderName,omitempty"`
+	GameSystem            *string              `json:"GameSystem,omitempty"`
+	Overview              *string              `json:"Overview,omitempty"`
+	DisambiguationComment *string              `json:"DisambiguationComment,omitempty"`
+	AlbumArtist           *RemoteSearchResult  `json:"AlbumArtist,omitempty"`
+	Artists               []RemoteSearchResult `json:"Artists,omitempty"`
 }
 
 // NewRemoteSearchResult instantiates a new RemoteSearchResult object
@@ -186,6 +186,7 @@ func (o *RemoteSearchResult) HasProductionYear() bool {
 func (o *RemoteSearchResult) SetProductionYear(v int32) {
 	o.ProductionYear.Set(&v)
 }
+
 // SetProductionYearNil sets the value for ProductionYear to be an explicit nil
 func (o *RemoteSearchResult) SetProductionYearNil() {
 	o.ProductionYear.Set(nil)
@@ -228,6 +229,7 @@ func (o *RemoteSearchResult) HasIndexNumber() bool {
 func (o *RemoteSearchResult) SetIndexNumber(v int32) {
 	o.IndexNumber.Set(&v)
 }
+
 // SetIndexNumberNil sets the value for IndexNumber to be an explicit nil
 func (o *RemoteSearchResult) SetIndexNumberNil() {
 	o.IndexNumber.Set(nil)
@@ -270,6 +272,7 @@ func (o *RemoteSearchResult) HasIndexNumberEnd() bool {
 func (o *RemoteSearchResult) SetIndexNumberEnd(v int32) {
 	o.IndexNumberEnd.Set(&v)
 }
+
 // SetIndexNumberEndNil sets the value for IndexNumberEnd to be an explicit nil
 func (o *RemoteSearchResult) SetIndexNumberEndNil() {
 	o.IndexNumberEnd.Set(nil)
@@ -312,6 +315,7 @@ func (o *RemoteSearchResult) HasParentIndexNumber() bool {
 func (o *RemoteSearchResult) SetParentIndexNumber(v int32) {
 	o.ParentIndexNumber.Set(&v)
 }
+
 // SetParentIndexNumberNil sets the value for ParentIndexNumber to be an explicit nil
 func (o *RemoteSearchResult) SetParentIndexNumberNil() {
 	o.ParentIndexNumber.Set(nil)
@@ -354,6 +358,7 @@ func (o *RemoteSearchResult) HasSortIndexNumber() bool {
 func (o *RemoteSearchResult) SetSortIndexNumber(v int32) {
 	o.SortIndexNumber.Set(&v)
 }
+
 // SetSortIndexNumberNil sets the value for SortIndexNumber to be an explicit nil
 func (o *RemoteSearchResult) SetSortIndexNumberNil() {
 	o.SortIndexNumber.Set(nil)
@@ -396,6 +401,7 @@ func (o *RemoteSearchResult) HasSortParentIndexNumber() bool {
 func (o *RemoteSearchResult) SetSortParentIndexNumber(v int32) {
 	o.SortParentIndexNumber.Set(&v)
 }
+
 // SetSortParentIndexNumberNil sets the value for SortParentIndexNumber to be an explicit nil
 func (o *RemoteSearchResult) SetSortParentIndexNumberNil() {
 	o.SortParentIndexNumber.Set(nil)
@@ -438,6 +444,7 @@ func (o *RemoteSearchResult) HasPremiereDate() bool {
 func (o *RemoteSearchResult) SetPremiereDate(v time.Time) {
 	o.PremiereDate.Set(&v)
 }
+
 // SetPremiereDateNil sets the value for PremiereDate to be an explicit nil
 func (o *RemoteSearchResult) SetPremiereDateNil() {
 	o.PremiereDate.Set(nil)
@@ -480,6 +487,7 @@ func (o *RemoteSearchResult) HasStartDate() bool {
 func (o *RemoteSearchResult) SetStartDate(v time.Time) {
 	o.StartDate.Set(&v)
 }
+
 // SetStartDateNil sets the value for StartDate to be an explicit nil
 func (o *RemoteSearchResult) SetStartDateNil() {
 	o.StartDate.Set(nil)
@@ -522,6 +530,7 @@ func (o *RemoteSearchResult) HasEndDate() bool {
 func (o *RemoteSearchResult) SetEndDate(v time.Time) {
 	o.EndDate.Set(&v)
 }
+
 // SetEndDateNil sets the value for EndDate to be an explicit nil
 func (o *RemoteSearchResult) SetEndDateNil() {
 	o.EndDate.Set(nil)
@@ -757,7 +766,7 @@ func (o *RemoteSearchResult) SetArtists(v []RemoteSearchResult) {
 }
 
 func (o RemoteSearchResult) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -861,5 +870,3 @@ func (v *NullableRemoteSearchResult) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

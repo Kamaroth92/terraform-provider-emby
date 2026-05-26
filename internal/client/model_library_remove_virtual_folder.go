@@ -19,8 +19,8 @@ var _ MappedNullable = &LibraryRemoveVirtualFolder{}
 
 // LibraryRemoveVirtualFolder struct for LibraryRemoveVirtualFolder
 type LibraryRemoveVirtualFolder struct {
-	Id *string `json:"Id,omitempty"`
-	RefreshLibrary *bool `json:"RefreshLibrary,omitempty"`
+	Id             *string `json:"Id,omitempty"`
+	RefreshLibrary *bool   `json:"RefreshLibrary,omitempty"`
 }
 
 // NewLibraryRemoveVirtualFolder instantiates a new LibraryRemoveVirtualFolder object
@@ -105,7 +105,7 @@ func (o *LibraryRemoveVirtualFolder) SetRefreshLibrary(v bool) {
 }
 
 func (o LibraryRemoveVirtualFolder) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -158,5 +158,3 @@ func (v *NullableLibraryRemoveVirtualFolder) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

@@ -1,3 +1,5 @@
+// Copyright (c) HashiCorp, Inc.
+
 /*
 Emby Server REST API (BETA)
 
@@ -11,10 +13,10 @@ package embyclient
 
 import (
 	"context"
+	openapiclient "github.com/Kamaroth92/terraform-provider-emby/client"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func Test_embyclient_LibraryServiceAPIService(t *testing.T) {
@@ -24,7 +26,7 @@ func Test_embyclient_LibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test LibraryServiceAPIService DeleteItems", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.LibraryServiceAPI.DeleteItems(context.Background()).Execute()
 
@@ -35,7 +37,7 @@ func Test_embyclient_LibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test LibraryServiceAPIService DeleteItemsById", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -48,7 +50,7 @@ func Test_embyclient_LibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test LibraryServiceAPIService GetAlbumsByIdSimilar", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -62,7 +64,7 @@ func Test_embyclient_LibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test LibraryServiceAPIService GetArtistsByIdSimilar", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -76,7 +78,7 @@ func Test_embyclient_LibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test LibraryServiceAPIService GetGamesByIdSimilar", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -90,7 +92,7 @@ func Test_embyclient_LibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test LibraryServiceAPIService GetItemsByIdAncestors", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -104,7 +106,7 @@ func Test_embyclient_LibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test LibraryServiceAPIService GetItemsByIdCriticreviews", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -118,7 +120,7 @@ func Test_embyclient_LibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test LibraryServiceAPIService GetItemsByIdDeleteinfo", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -132,7 +134,7 @@ func Test_embyclient_LibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test LibraryServiceAPIService GetItemsByIdDownload", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -145,7 +147,7 @@ func Test_embyclient_LibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test LibraryServiceAPIService GetItemsByIdFile", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -158,7 +160,7 @@ func Test_embyclient_LibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test LibraryServiceAPIService GetItemsByIdSimilar", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -172,7 +174,7 @@ func Test_embyclient_LibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test LibraryServiceAPIService GetItemsByIdThememedia", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -186,7 +188,7 @@ func Test_embyclient_LibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test LibraryServiceAPIService GetItemsByIdThemesongs", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -200,7 +202,7 @@ func Test_embyclient_LibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test LibraryServiceAPIService GetItemsByIdThemevideos", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -214,7 +216,7 @@ func Test_embyclient_LibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test LibraryServiceAPIService GetItemsCounts", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.LibraryServiceAPI.GetItemsCounts(context.Background()).Execute()
 
@@ -226,7 +228,7 @@ func Test_embyclient_LibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test LibraryServiceAPIService GetItemsIntros", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.LibraryServiceAPI.GetItemsIntros(context.Background()).Execute()
 
@@ -238,7 +240,7 @@ func Test_embyclient_LibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test LibraryServiceAPIService GetLibrariesAvailableoptions", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.LibraryServiceAPI.GetLibrariesAvailableoptions(context.Background()).Execute()
 
@@ -250,7 +252,7 @@ func Test_embyclient_LibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test LibraryServiceAPIService GetLibraryMediafolders", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.LibraryServiceAPI.GetLibraryMediafolders(context.Background()).Execute()
 
@@ -262,7 +264,7 @@ func Test_embyclient_LibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test LibraryServiceAPIService GetLibraryPhysicalpaths", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.LibraryServiceAPI.GetLibraryPhysicalpaths(context.Background()).Execute()
 
@@ -274,7 +276,7 @@ func Test_embyclient_LibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test LibraryServiceAPIService GetLibrarySelectablemediafolders", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.LibraryServiceAPI.GetLibrarySelectablemediafolders(context.Background()).Execute()
 
@@ -286,7 +288,7 @@ func Test_embyclient_LibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test LibraryServiceAPIService GetMoviesByIdSimilar", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -300,7 +302,7 @@ func Test_embyclient_LibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test LibraryServiceAPIService GetShowsByIdSimilar", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -314,7 +316,7 @@ func Test_embyclient_LibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test LibraryServiceAPIService GetTrailersByIdSimilar", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -328,7 +330,7 @@ func Test_embyclient_LibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test LibraryServiceAPIService PostItemsByIdDelete", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -341,7 +343,7 @@ func Test_embyclient_LibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test LibraryServiceAPIService PostItemsDelete", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.LibraryServiceAPI.PostItemsDelete(context.Background()).Execute()
 
@@ -352,7 +354,7 @@ func Test_embyclient_LibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test LibraryServiceAPIService PostLibraryMediaUpdated", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.LibraryServiceAPI.PostLibraryMediaUpdated(context.Background()).Execute()
 
@@ -363,7 +365,7 @@ func Test_embyclient_LibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test LibraryServiceAPIService PostLibraryMoviesAdded", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.LibraryServiceAPI.PostLibraryMoviesAdded(context.Background()).Execute()
 
@@ -374,7 +376,7 @@ func Test_embyclient_LibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test LibraryServiceAPIService PostLibraryMoviesUpdated", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.LibraryServiceAPI.PostLibraryMoviesUpdated(context.Background()).Execute()
 
@@ -385,7 +387,7 @@ func Test_embyclient_LibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test LibraryServiceAPIService PostLibraryRefresh", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.LibraryServiceAPI.PostLibraryRefresh(context.Background()).Execute()
 
@@ -396,7 +398,7 @@ func Test_embyclient_LibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test LibraryServiceAPIService PostLibrarySeriesAdded", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.LibraryServiceAPI.PostLibrarySeriesAdded(context.Background()).Execute()
 
@@ -407,7 +409,7 @@ func Test_embyclient_LibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test LibraryServiceAPIService PostLibrarySeriesUpdated", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.LibraryServiceAPI.PostLibrarySeriesUpdated(context.Background()).Execute()
 

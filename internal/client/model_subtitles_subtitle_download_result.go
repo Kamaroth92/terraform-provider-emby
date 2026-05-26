@@ -71,6 +71,7 @@ func (o *SubtitlesSubtitleDownloadResult) HasNewIndex() bool {
 func (o *SubtitlesSubtitleDownloadResult) SetNewIndex(v int32) {
 	o.NewIndex.Set(&v)
 }
+
 // SetNewIndexNil sets the value for NewIndex to be an explicit nil
 func (o *SubtitlesSubtitleDownloadResult) SetNewIndexNil() {
 	o.NewIndex.Set(nil)
@@ -82,7 +83,7 @@ func (o *SubtitlesSubtitleDownloadResult) UnsetNewIndex() {
 }
 
 func (o SubtitlesSubtitleDownloadResult) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -132,5 +133,3 @@ func (v *NullableSubtitlesSubtitleDownloadResult) UnmarshalJSON(src []byte) erro
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

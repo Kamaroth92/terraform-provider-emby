@@ -20,20 +20,20 @@ type ImageType string
 
 // List of ImageType
 const (
-	IMAGETYPE_PRIMARY ImageType = "Primary"
-	IMAGETYPE_ART ImageType = "Art"
-	IMAGETYPE_BACKDROP ImageType = "Backdrop"
-	IMAGETYPE_BANNER ImageType = "Banner"
-	IMAGETYPE_LOGO ImageType = "Logo"
-	IMAGETYPE_THUMB ImageType = "Thumb"
-	IMAGETYPE_DISC ImageType = "Disc"
-	IMAGETYPE_BOX ImageType = "Box"
-	IMAGETYPE_SCREENSHOT ImageType = "Screenshot"
-	IMAGETYPE_MENU ImageType = "Menu"
-	IMAGETYPE_CHAPTER ImageType = "Chapter"
-	IMAGETYPE_BOX_REAR ImageType = "BoxRear"
-	IMAGETYPE_THUMBNAIL ImageType = "Thumbnail"
-	IMAGETYPE_LOGO_LIGHT ImageType = "LogoLight"
+	IMAGETYPE_PRIMARY          ImageType = "Primary"
+	IMAGETYPE_ART              ImageType = "Art"
+	IMAGETYPE_BACKDROP         ImageType = "Backdrop"
+	IMAGETYPE_BANNER           ImageType = "Banner"
+	IMAGETYPE_LOGO             ImageType = "Logo"
+	IMAGETYPE_THUMB            ImageType = "Thumb"
+	IMAGETYPE_DISC             ImageType = "Disc"
+	IMAGETYPE_BOX              ImageType = "Box"
+	IMAGETYPE_SCREENSHOT       ImageType = "Screenshot"
+	IMAGETYPE_MENU             ImageType = "Menu"
+	IMAGETYPE_CHAPTER          ImageType = "Chapter"
+	IMAGETYPE_BOX_REAR         ImageType = "BoxRear"
+	IMAGETYPE_THUMBNAIL        ImageType = "Thumbnail"
+	IMAGETYPE_LOGO_LIGHT       ImageType = "LogoLight"
 	IMAGETYPE_LOGO_LIGHT_COLOR ImageType = "LogoLightColor"
 )
 
@@ -134,4 +134,3 @@ func (v *NullableImageType) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

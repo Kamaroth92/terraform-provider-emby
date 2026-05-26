@@ -19,22 +19,22 @@ var _ MappedNullable = &LiveStreamRequest{}
 
 // LiveStreamRequest struct for LiveStreamRequest
 type LiveStreamRequest struct {
-	OpenToken *string `json:"OpenToken,omitempty"`
-	UserId *string `json:"UserId,omitempty"`
-	PlaySessionId *string `json:"PlaySessionId,omitempty"`
-	MaxStreamingBitrate NullableInt64 `json:"MaxStreamingBitrate,omitempty"`
-	StartTimeTicks NullableInt64 `json:"StartTimeTicks,omitempty"`
-	AudioStreamIndex NullableInt32 `json:"AudioStreamIndex,omitempty"`
-	SubtitleStreamIndex NullableInt32 `json:"SubtitleStreamIndex,omitempty"`
-	MaxAudioChannels NullableInt32 `json:"MaxAudioChannels,omitempty"`
-	ItemId *int64 `json:"ItemId,omitempty"`
-	DeviceProfile *DeviceProfile `json:"DeviceProfile,omitempty"`
-	EnableDirectPlay *bool `json:"EnableDirectPlay,omitempty"`
-	EnableDirectStream *bool `json:"EnableDirectStream,omitempty"`
-	EnableTranscoding *bool `json:"EnableTranscoding,omitempty"`
-	AllowVideoStreamCopy *bool `json:"AllowVideoStreamCopy,omitempty"`
-	AllowInterlacedVideoStreamCopy *bool `json:"AllowInterlacedVideoStreamCopy,omitempty"`
-	AllowAudioStreamCopy *bool `json:"AllowAudioStreamCopy,omitempty"`
+	OpenToken                      *string        `json:"OpenToken,omitempty"`
+	UserId                         *string        `json:"UserId,omitempty"`
+	PlaySessionId                  *string        `json:"PlaySessionId,omitempty"`
+	MaxStreamingBitrate            NullableInt64  `json:"MaxStreamingBitrate,omitempty"`
+	StartTimeTicks                 NullableInt64  `json:"StartTimeTicks,omitempty"`
+	AudioStreamIndex               NullableInt32  `json:"AudioStreamIndex,omitempty"`
+	SubtitleStreamIndex            NullableInt32  `json:"SubtitleStreamIndex,omitempty"`
+	MaxAudioChannels               NullableInt32  `json:"MaxAudioChannels,omitempty"`
+	ItemId                         *int64         `json:"ItemId,omitempty"`
+	DeviceProfile                  *DeviceProfile `json:"DeviceProfile,omitempty"`
+	EnableDirectPlay               *bool          `json:"EnableDirectPlay,omitempty"`
+	EnableDirectStream             *bool          `json:"EnableDirectStream,omitempty"`
+	EnableTranscoding              *bool          `json:"EnableTranscoding,omitempty"`
+	AllowVideoStreamCopy           *bool          `json:"AllowVideoStreamCopy,omitempty"`
+	AllowInterlacedVideoStreamCopy *bool          `json:"AllowInterlacedVideoStreamCopy,omitempty"`
+	AllowAudioStreamCopy           *bool          `json:"AllowAudioStreamCopy,omitempty"`
 }
 
 // NewLiveStreamRequest instantiates a new LiveStreamRequest object
@@ -182,6 +182,7 @@ func (o *LiveStreamRequest) HasMaxStreamingBitrate() bool {
 func (o *LiveStreamRequest) SetMaxStreamingBitrate(v int64) {
 	o.MaxStreamingBitrate.Set(&v)
 }
+
 // SetMaxStreamingBitrateNil sets the value for MaxStreamingBitrate to be an explicit nil
 func (o *LiveStreamRequest) SetMaxStreamingBitrateNil() {
 	o.MaxStreamingBitrate.Set(nil)
@@ -224,6 +225,7 @@ func (o *LiveStreamRequest) HasStartTimeTicks() bool {
 func (o *LiveStreamRequest) SetStartTimeTicks(v int64) {
 	o.StartTimeTicks.Set(&v)
 }
+
 // SetStartTimeTicksNil sets the value for StartTimeTicks to be an explicit nil
 func (o *LiveStreamRequest) SetStartTimeTicksNil() {
 	o.StartTimeTicks.Set(nil)
@@ -266,6 +268,7 @@ func (o *LiveStreamRequest) HasAudioStreamIndex() bool {
 func (o *LiveStreamRequest) SetAudioStreamIndex(v int32) {
 	o.AudioStreamIndex.Set(&v)
 }
+
 // SetAudioStreamIndexNil sets the value for AudioStreamIndex to be an explicit nil
 func (o *LiveStreamRequest) SetAudioStreamIndexNil() {
 	o.AudioStreamIndex.Set(nil)
@@ -308,6 +311,7 @@ func (o *LiveStreamRequest) HasSubtitleStreamIndex() bool {
 func (o *LiveStreamRequest) SetSubtitleStreamIndex(v int32) {
 	o.SubtitleStreamIndex.Set(&v)
 }
+
 // SetSubtitleStreamIndexNil sets the value for SubtitleStreamIndex to be an explicit nil
 func (o *LiveStreamRequest) SetSubtitleStreamIndexNil() {
 	o.SubtitleStreamIndex.Set(nil)
@@ -350,6 +354,7 @@ func (o *LiveStreamRequest) HasMaxAudioChannels() bool {
 func (o *LiveStreamRequest) SetMaxAudioChannels(v int32) {
 	o.MaxAudioChannels.Set(&v)
 }
+
 // SetMaxAudioChannelsNil sets the value for MaxAudioChannels to be an explicit nil
 func (o *LiveStreamRequest) SetMaxAudioChannelsNil() {
 	o.MaxAudioChannels.Set(nil)
@@ -617,7 +622,7 @@ func (o *LiveStreamRequest) SetAllowAudioStreamCopy(v bool) {
 }
 
 func (o LiveStreamRequest) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -712,5 +717,3 @@ func (v *NullableLiveStreamRequest) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

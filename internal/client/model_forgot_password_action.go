@@ -21,7 +21,7 @@ type ForgotPasswordAction string
 // List of ForgotPasswordAction
 const (
 	FORGOTPASSWORDACTION_CONTACT_ADMIN ForgotPasswordAction = "ContactAdmin"
-	FORGOTPASSWORDACTION_PIN_CODE ForgotPasswordAction = "PinCode"
+	FORGOTPASSWORDACTION_PIN_CODE      ForgotPasswordAction = "PinCode"
 )
 
 // All allowed values of ForgotPasswordAction enum
@@ -108,4 +108,3 @@ func (v *NullableForgotPasswordAction) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

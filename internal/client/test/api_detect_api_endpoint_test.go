@@ -1,3 +1,5 @@
+// Copyright (c) HashiCorp, Inc.
+
 /*
 Emby Server REST API (BETA)
 
@@ -11,10 +13,10 @@ package embyclient
 
 import (
 	"context"
+	openapiclient "github.com/Kamaroth92/terraform-provider-emby/client"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func Test_embyclient_DetectApiEndpointAPIService(t *testing.T) {
@@ -24,7 +26,7 @@ func Test_embyclient_DetectApiEndpointAPIService(t *testing.T) {
 
 	t.Run("Test DetectApiEndpointAPIService GetChapterApiCancelJob", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.DetectApiEndpointAPI.GetChapterApiCancelJob(context.Background()).Execute()
 
@@ -36,7 +38,7 @@ func Test_embyclient_DetectApiEndpointAPIService(t *testing.T) {
 
 	t.Run("Test DetectApiEndpointAPIService GetChapterApiDownloadIntroData", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.DetectApiEndpointAPI.GetChapterApiDownloadIntroData(context.Background()).Execute()
 
@@ -48,7 +50,7 @@ func Test_embyclient_DetectApiEndpointAPIService(t *testing.T) {
 
 	t.Run("Test DetectApiEndpointAPIService GetChapterApiGetEpisodeList", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.DetectApiEndpointAPI.GetChapterApiGetEpisodeList(context.Background()).Execute()
 
@@ -60,7 +62,7 @@ func Test_embyclient_DetectApiEndpointAPIService(t *testing.T) {
 
 	t.Run("Test DetectApiEndpointAPIService GetChapterApiGetJobInfo", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.DetectApiEndpointAPI.GetChapterApiGetJobInfo(context.Background()).Execute()
 
@@ -72,7 +74,7 @@ func Test_embyclient_DetectApiEndpointAPIService(t *testing.T) {
 
 	t.Run("Test DetectApiEndpointAPIService GetChapterApiGetJobItem", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.DetectApiEndpointAPI.GetChapterApiGetJobItem(context.Background()).Execute()
 
@@ -84,7 +86,7 @@ func Test_embyclient_DetectApiEndpointAPIService(t *testing.T) {
 
 	t.Run("Test DetectApiEndpointAPIService GetChapterApiGetJobList", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.DetectApiEndpointAPI.GetChapterApiGetJobList(context.Background()).Execute()
 
@@ -96,7 +98,7 @@ func Test_embyclient_DetectApiEndpointAPIService(t *testing.T) {
 
 	t.Run("Test DetectApiEndpointAPIService GetChapterApiGetSeasonList", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.DetectApiEndpointAPI.GetChapterApiGetSeasonList(context.Background()).Execute()
 
@@ -108,7 +110,7 @@ func Test_embyclient_DetectApiEndpointAPIService(t *testing.T) {
 
 	t.Run("Test DetectApiEndpointAPIService GetChapterApiGetSeriesList", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.DetectApiEndpointAPI.GetChapterApiGetSeriesList(context.Background()).Execute()
 
@@ -120,7 +122,7 @@ func Test_embyclient_DetectApiEndpointAPIService(t *testing.T) {
 
 	t.Run("Test DetectApiEndpointAPIService GetChapterApiInsertChapters", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.DetectApiEndpointAPI.GetChapterApiInsertChapters(context.Background()).Execute()
 
@@ -132,7 +134,7 @@ func Test_embyclient_DetectApiEndpointAPIService(t *testing.T) {
 
 	t.Run("Test DetectApiEndpointAPIService GetChapterApiIntroDataStats", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.DetectApiEndpointAPI.GetChapterApiIntroDataStats(context.Background()).Execute()
 
@@ -144,7 +146,7 @@ func Test_embyclient_DetectApiEndpointAPIService(t *testing.T) {
 
 	t.Run("Test DetectApiEndpointAPIService GetChapterApiReloadIntroData", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.DetectApiEndpointAPI.GetChapterApiReloadIntroData(context.Background()).Execute()
 
@@ -156,7 +158,7 @@ func Test_embyclient_DetectApiEndpointAPIService(t *testing.T) {
 
 	t.Run("Test DetectApiEndpointAPIService GetChapterApiRemoveJob", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.DetectApiEndpointAPI.GetChapterApiRemoveJob(context.Background()).Execute()
 
@@ -168,7 +170,7 @@ func Test_embyclient_DetectApiEndpointAPIService(t *testing.T) {
 
 	t.Run("Test DetectApiEndpointAPIService PostChapterApiAddDetectionJob", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.DetectApiEndpointAPI.PostChapterApiAddDetectionJob(context.Background()).Execute()
 

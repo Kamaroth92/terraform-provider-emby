@@ -19,9 +19,9 @@ var _ MappedNullable = &ImageOption{}
 
 // ImageOption struct for ImageOption
 type ImageOption struct {
-	Type *ImageType `json:"Type,omitempty"`
-	Limit *int32 `json:"Limit,omitempty"`
-	MinWidth *int32 `json:"MinWidth,omitempty"`
+	Type     *ImageType `json:"Type,omitempty"`
+	Limit    *int32     `json:"Limit,omitempty"`
+	MinWidth *int32     `json:"MinWidth,omitempty"`
 }
 
 // NewImageOption instantiates a new ImageOption object
@@ -138,7 +138,7 @@ func (o *ImageOption) SetMinWidth(v int32) {
 }
 
 func (o ImageOption) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -194,5 +194,3 @@ func (v *NullableImageOption) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

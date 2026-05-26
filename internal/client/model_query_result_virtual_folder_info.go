@@ -19,8 +19,8 @@ var _ MappedNullable = &QueryResultVirtualFolderInfo{}
 
 // QueryResultVirtualFolderInfo struct for QueryResultVirtualFolderInfo
 type QueryResultVirtualFolderInfo struct {
-	Items []VirtualFolderInfo `json:"Items,omitempty"`
-	TotalRecordCount *int32 `json:"TotalRecordCount,omitempty"`
+	Items            []VirtualFolderInfo `json:"Items,omitempty"`
+	TotalRecordCount *int32              `json:"TotalRecordCount,omitempty"`
 }
 
 // NewQueryResultVirtualFolderInfo instantiates a new QueryResultVirtualFolderInfo object
@@ -105,7 +105,7 @@ func (o *QueryResultVirtualFolderInfo) SetTotalRecordCount(v int32) {
 }
 
 func (o QueryResultVirtualFolderInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -158,5 +158,3 @@ func (v *NullableQueryResultVirtualFolderInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

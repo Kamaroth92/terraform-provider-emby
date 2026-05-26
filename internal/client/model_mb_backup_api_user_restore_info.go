@@ -105,7 +105,7 @@ func (o *MBBackupApiUserRestoreInfo) SetTargetUserId(v string) {
 }
 
 func (o MBBackupApiUserRestoreInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -158,5 +158,3 @@ func (v *NullableMBBackupApiUserRestoreInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

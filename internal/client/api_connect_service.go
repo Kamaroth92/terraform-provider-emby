@@ -19,17 +19,16 @@ import (
 	"strings"
 )
 
-
 type ConnectServiceAPI interface {
 
 	/*
-	DeleteUsersByIdConnectLink Removes a Connect link for a user
+		DeleteUsersByIdConnectLink Removes a Connect link for a user
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id User Id
-	@return ApiDeleteUsersByIdConnectLinkRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id User Id
+		@return ApiDeleteUsersByIdConnectLinkRequest
 	*/
 	DeleteUsersByIdConnectLink(ctx context.Context, id string) ApiDeleteUsersByIdConnectLinkRequest
 
@@ -37,12 +36,12 @@ type ConnectServiceAPI interface {
 	DeleteUsersByIdConnectLinkExecute(r ApiDeleteUsersByIdConnectLinkRequest) (*http.Response, error)
 
 	/*
-	GetConnectExchange Gets the corresponding local user from a connect user id
+		GetConnectExchange Gets the corresponding local user from a connect user id
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetConnectExchangeRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetConnectExchangeRequest
 	*/
 	GetConnectExchange(ctx context.Context) ApiGetConnectExchangeRequest
 
@@ -51,12 +50,12 @@ type ConnectServiceAPI interface {
 	GetConnectExchangeExecute(r ApiGetConnectExchangeRequest) (*ConnectConnectAuthenticationExchangeResult, *http.Response, error)
 
 	/*
-	GetConnectPending Creates a Connect link for a user
+		GetConnectPending Creates a Connect link for a user
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetConnectPendingRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetConnectPendingRequest
 	*/
 	GetConnectPending(ctx context.Context) ApiGetConnectPendingRequest
 
@@ -64,13 +63,13 @@ type ConnectServiceAPI interface {
 	GetConnectPendingExecute(r ApiGetConnectPendingRequest) (*http.Response, error)
 
 	/*
-	PostUsersByIdConnectLink Creates a Connect link for a user
+		PostUsersByIdConnectLink Creates a Connect link for a user
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id User Id
-	@return ApiPostUsersByIdConnectLinkRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id User Id
+		@return ApiPostUsersByIdConnectLinkRequest
 	*/
 	PostUsersByIdConnectLink(ctx context.Context, id string) ApiPostUsersByIdConnectLinkRequest
 
@@ -79,13 +78,13 @@ type ConnectServiceAPI interface {
 	PostUsersByIdConnectLinkExecute(r ApiPostUsersByIdConnectLinkRequest) (*ConnectUserLinkResult, *http.Response, error)
 
 	/*
-	PostUsersByIdConnectLinkDelete Removes a Connect link for a user
+		PostUsersByIdConnectLinkDelete Removes a Connect link for a user
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id User Id
-	@return ApiPostUsersByIdConnectLinkDeleteRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id User Id
+		@return ApiPostUsersByIdConnectLinkDeleteRequest
 	*/
 	PostUsersByIdConnectLinkDelete(ctx context.Context, id string) ApiPostUsersByIdConnectLinkDeleteRequest
 
@@ -97,9 +96,9 @@ type ConnectServiceAPI interface {
 type ConnectServiceAPIService service
 
 type ApiDeleteUsersByIdConnectLinkRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService ConnectServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiDeleteUsersByIdConnectLinkRequest) Execute() (*http.Response, error) {
@@ -111,24 +110,24 @@ DeleteUsersByIdConnectLink Removes a Connect link for a user
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id User Id
- @return ApiDeleteUsersByIdConnectLinkRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id User Id
+	@return ApiDeleteUsersByIdConnectLinkRequest
 */
 func (a *ConnectServiceAPIService) DeleteUsersByIdConnectLink(ctx context.Context, id string) ApiDeleteUsersByIdConnectLinkRequest {
 	return ApiDeleteUsersByIdConnectLinkRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *ConnectServiceAPIService) DeleteUsersByIdConnectLinkExecute(r ApiDeleteUsersByIdConnectLinkRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodDelete
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodDelete
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ConnectServiceAPIService.DeleteUsersByIdConnectLink")
@@ -203,8 +202,8 @@ func (a *ConnectServiceAPIService) DeleteUsersByIdConnectLinkExecute(r ApiDelete
 }
 
 type ApiGetConnectExchangeRequest struct {
-	ctx context.Context
-	ApiService ConnectServiceAPI
+	ctx           context.Context
+	ApiService    ConnectServiceAPI
 	connectUserId *string
 }
 
@@ -223,24 +222,25 @@ GetConnectExchange Gets the corresponding local user from a connect user id
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetConnectExchangeRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetConnectExchangeRequest
 */
 func (a *ConnectServiceAPIService) GetConnectExchange(ctx context.Context) ApiGetConnectExchangeRequest {
 	return ApiGetConnectExchangeRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return ConnectConnectAuthenticationExchangeResult
+//
+//	@return ConnectConnectAuthenticationExchangeResult
 func (a *ConnectServiceAPIService) GetConnectExchangeExecute(r ApiGetConnectExchangeRequest) (*ConnectConnectAuthenticationExchangeResult, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *ConnectConnectAuthenticationExchangeResult
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *ConnectConnectAuthenticationExchangeResult
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ConnectServiceAPIService.GetConnectExchange")
@@ -327,7 +327,7 @@ func (a *ConnectServiceAPIService) GetConnectExchangeExecute(r ApiGetConnectExch
 }
 
 type ApiGetConnectPendingRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService ConnectServiceAPI
 }
 
@@ -340,22 +340,22 @@ GetConnectPending Creates a Connect link for a user
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetConnectPendingRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetConnectPendingRequest
 */
 func (a *ConnectServiceAPIService) GetConnectPending(ctx context.Context) ApiGetConnectPendingRequest {
 	return ApiGetConnectPendingRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *ConnectServiceAPIService) GetConnectPendingExecute(r ApiGetConnectPendingRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ConnectServiceAPIService.GetConnectPending")
@@ -429,9 +429,9 @@ func (a *ConnectServiceAPIService) GetConnectPendingExecute(r ApiGetConnectPendi
 }
 
 type ApiPostUsersByIdConnectLinkRequest struct {
-	ctx context.Context
-	ApiService ConnectServiceAPI
-	id string
+	ctx             context.Context
+	ApiService      ConnectServiceAPI
+	id              string
 	connectUsername *string
 }
 
@@ -450,26 +450,27 @@ PostUsersByIdConnectLink Creates a Connect link for a user
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id User Id
- @return ApiPostUsersByIdConnectLinkRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id User Id
+	@return ApiPostUsersByIdConnectLinkRequest
 */
 func (a *ConnectServiceAPIService) PostUsersByIdConnectLink(ctx context.Context, id string) ApiPostUsersByIdConnectLinkRequest {
 	return ApiPostUsersByIdConnectLinkRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
-//  @return ConnectUserLinkResult
+//
+//	@return ConnectUserLinkResult
 func (a *ConnectServiceAPIService) PostUsersByIdConnectLinkExecute(r ApiPostUsersByIdConnectLinkRequest) (*ConnectUserLinkResult, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *ConnectUserLinkResult
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *ConnectUserLinkResult
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ConnectServiceAPIService.PostUsersByIdConnectLink")
@@ -557,9 +558,9 @@ func (a *ConnectServiceAPIService) PostUsersByIdConnectLinkExecute(r ApiPostUser
 }
 
 type ApiPostUsersByIdConnectLinkDeleteRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService ConnectServiceAPI
-	id string
+	id         string
 }
 
 func (r ApiPostUsersByIdConnectLinkDeleteRequest) Execute() (*http.Response, error) {
@@ -571,24 +572,24 @@ PostUsersByIdConnectLinkDelete Removes a Connect link for a user
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id User Id
- @return ApiPostUsersByIdConnectLinkDeleteRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id User Id
+	@return ApiPostUsersByIdConnectLinkDeleteRequest
 */
 func (a *ConnectServiceAPIService) PostUsersByIdConnectLinkDelete(ctx context.Context, id string) ApiPostUsersByIdConnectLinkDeleteRequest {
 	return ApiPostUsersByIdConnectLinkDeleteRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *ConnectServiceAPIService) PostUsersByIdConnectLinkDeleteExecute(r ApiPostUsersByIdConnectLinkDeleteRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ConnectServiceAPIService.PostUsersByIdConnectLinkDelete")

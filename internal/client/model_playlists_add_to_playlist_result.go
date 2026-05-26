@@ -19,8 +19,8 @@ var _ MappedNullable = &PlaylistsAddToPlaylistResult{}
 
 // PlaylistsAddToPlaylistResult struct for PlaylistsAddToPlaylistResult
 type PlaylistsAddToPlaylistResult struct {
-	Id *string `json:"Id,omitempty"`
-	ItemAddedCount *int32 `json:"ItemAddedCount,omitempty"`
+	Id             *string `json:"Id,omitempty"`
+	ItemAddedCount *int32  `json:"ItemAddedCount,omitempty"`
 }
 
 // NewPlaylistsAddToPlaylistResult instantiates a new PlaylistsAddToPlaylistResult object
@@ -105,7 +105,7 @@ func (o *PlaylistsAddToPlaylistResult) SetItemAddedCount(v int32) {
 }
 
 func (o PlaylistsAddToPlaylistResult) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -158,5 +158,3 @@ func (v *NullablePlaylistsAddToPlaylistResult) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

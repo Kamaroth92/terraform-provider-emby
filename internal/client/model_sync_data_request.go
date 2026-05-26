@@ -19,8 +19,8 @@ var _ MappedNullable = &SyncDataRequest{}
 
 // SyncDataRequest struct for SyncDataRequest
 type SyncDataRequest struct {
-	LocalItemIds []string `json:"LocalItemIds,omitempty"`
-	InternalTargetIds []int64 `json:"InternalTargetIds,omitempty"`
+	LocalItemIds      []string `json:"LocalItemIds,omitempty"`
+	InternalTargetIds []int64  `json:"InternalTargetIds,omitempty"`
 }
 
 // NewSyncDataRequest instantiates a new SyncDataRequest object
@@ -105,7 +105,7 @@ func (o *SyncDataRequest) SetInternalTargetIds(v []int64) {
 }
 
 func (o SyncDataRequest) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -158,5 +158,3 @@ func (v *NullableSyncDataRequest) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

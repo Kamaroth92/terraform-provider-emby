@@ -20,15 +20,15 @@ type EnumsUICommandType string
 
 // List of Enums.UICommandType
 const (
-	ENUMSUICOMMANDTYPE_CUSTOM EnumsUICommandType = "Custom"
-	ENUMSUICOMMANDTYPE_WIZARD_CANCEL EnumsUICommandType = "WizardCancel"
-	ENUMSUICOMMANDTYPE_WIZARD_BACK EnumsUICommandType = "WizardBack"
-	ENUMSUICOMMANDTYPE_WIZARD_NEXT EnumsUICommandType = "WizardNext"
-	ENUMSUICOMMANDTYPE_WIZARD_FINISH EnumsUICommandType = "WizardFinish"
-	ENUMSUICOMMANDTYPE_DIALOG_CANCEL EnumsUICommandType = "DialogCancel"
-	ENUMSUICOMMANDTYPE_DIALOG_OK EnumsUICommandType = "DialogOk"
-	ENUMSUICOMMANDTYPE_PAGE_SAVE EnumsUICommandType = "PageSave"
-	ENUMSUICOMMANDTYPE_PAGE_BACK EnumsUICommandType = "PageBack"
+	ENUMSUICOMMANDTYPE_CUSTOM         EnumsUICommandType = "Custom"
+	ENUMSUICOMMANDTYPE_WIZARD_CANCEL  EnumsUICommandType = "WizardCancel"
+	ENUMSUICOMMANDTYPE_WIZARD_BACK    EnumsUICommandType = "WizardBack"
+	ENUMSUICOMMANDTYPE_WIZARD_NEXT    EnumsUICommandType = "WizardNext"
+	ENUMSUICOMMANDTYPE_WIZARD_FINISH  EnumsUICommandType = "WizardFinish"
+	ENUMSUICOMMANDTYPE_DIALOG_CANCEL  EnumsUICommandType = "DialogCancel"
+	ENUMSUICOMMANDTYPE_DIALOG_OK      EnumsUICommandType = "DialogOk"
+	ENUMSUICOMMANDTYPE_PAGE_SAVE      EnumsUICommandType = "PageSave"
+	ENUMSUICOMMANDTYPE_PAGE_BACK      EnumsUICommandType = "PageBack"
 	ENUMSUICOMMANDTYPE_WIZARD_BUTTON1 EnumsUICommandType = "WizardButton1"
 	ENUMSUICOMMANDTYPE_WIZARD_BUTTON2 EnumsUICommandType = "WizardButton2"
 	ENUMSUICOMMANDTYPE_WIZARD_BUTTON3 EnumsUICommandType = "WizardButton3"
@@ -128,4 +128,3 @@ func (v *NullableEnumsUICommandType) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

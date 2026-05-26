@@ -19,20 +19,19 @@ import (
 	"strings"
 )
 
-
 type DynamicHlsServiceAPI interface {
 
 	/*
-	GetAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainer Method for GetAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainer
+		GetAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainer Method for GetAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainer
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param segmentContainer
-	@param segmentId
-	@param id
-	@param playlistId
-	@return ApiGetAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainerRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param segmentContainer
+		@param segmentId
+		@param id
+		@param playlistId
+		@return ApiGetAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainerRequest
 	*/
 	GetAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainer(ctx context.Context, segmentContainer string, segmentId string, id string, playlistId string) ApiGetAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainerRequest
 
@@ -40,13 +39,13 @@ type DynamicHlsServiceAPI interface {
 	GetAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainerExecute(r ApiGetAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainerRequest) (*http.Response, error)
 
 	/*
-	GetAudioByIdLiveM3u8 Method for GetAudioByIdLiveM3u8
+		GetAudioByIdLiveM3u8 Method for GetAudioByIdLiveM3u8
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiGetAudioByIdLiveM3u8Request
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiGetAudioByIdLiveM3u8Request
 	*/
 	GetAudioByIdLiveM3u8(ctx context.Context, id string) ApiGetAudioByIdLiveM3u8Request
 
@@ -54,13 +53,13 @@ type DynamicHlsServiceAPI interface {
 	GetAudioByIdLiveM3u8Execute(r ApiGetAudioByIdLiveM3u8Request) (*http.Response, error)
 
 	/*
-	GetAudioByIdMainM3u8 Gets an audio stream using HTTP live streaming.
+		GetAudioByIdMainM3u8 Gets an audio stream using HTTP live streaming.
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiGetAudioByIdMainM3u8Request
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiGetAudioByIdMainM3u8Request
 	*/
 	GetAudioByIdMainM3u8(ctx context.Context, id string) ApiGetAudioByIdMainM3u8Request
 
@@ -68,13 +67,13 @@ type DynamicHlsServiceAPI interface {
 	GetAudioByIdMainM3u8Execute(r ApiGetAudioByIdMainM3u8Request) (*http.Response, error)
 
 	/*
-	GetAudioByIdMasterM3u8 Gets an audio stream using HTTP live streaming.
+		GetAudioByIdMasterM3u8 Gets an audio stream using HTTP live streaming.
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiGetAudioByIdMasterM3u8Request
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiGetAudioByIdMasterM3u8Request
 	*/
 	GetAudioByIdMasterM3u8(ctx context.Context, id string) ApiGetAudioByIdMasterM3u8Request
 
@@ -82,16 +81,16 @@ type DynamicHlsServiceAPI interface {
 	GetAudioByIdMasterM3u8Execute(r ApiGetAudioByIdMasterM3u8Request) (*http.Response, error)
 
 	/*
-	GetVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainer Method for GetVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainer
+		GetVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainer Method for GetVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainer
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param segmentContainer
-	@param segmentId
-	@param id
-	@param playlistId
-	@return ApiGetVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainerRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param segmentContainer
+		@param segmentId
+		@param id
+		@param playlistId
+		@return ApiGetVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainerRequest
 	*/
 	GetVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainer(ctx context.Context, segmentContainer string, segmentId string, id string, playlistId string) ApiGetVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainerRequest
 
@@ -99,13 +98,13 @@ type DynamicHlsServiceAPI interface {
 	GetVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainerExecute(r ApiGetVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainerRequest) (*http.Response, error)
 
 	/*
-	GetVideosByIdLiveM3u8 Method for GetVideosByIdLiveM3u8
+		GetVideosByIdLiveM3u8 Method for GetVideosByIdLiveM3u8
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiGetVideosByIdLiveM3u8Request
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiGetVideosByIdLiveM3u8Request
 	*/
 	GetVideosByIdLiveM3u8(ctx context.Context, id string) ApiGetVideosByIdLiveM3u8Request
 
@@ -113,13 +112,13 @@ type DynamicHlsServiceAPI interface {
 	GetVideosByIdLiveM3u8Execute(r ApiGetVideosByIdLiveM3u8Request) (*http.Response, error)
 
 	/*
-	GetVideosByIdLiveSubtitlesM3u8 Gets an HLS subtitle playlist.
+		GetVideosByIdLiveSubtitlesM3u8 Gets an HLS subtitle playlist.
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiGetVideosByIdLiveSubtitlesM3u8Request
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiGetVideosByIdLiveSubtitlesM3u8Request
 	*/
 	GetVideosByIdLiveSubtitlesM3u8(ctx context.Context, id string) ApiGetVideosByIdLiveSubtitlesM3u8Request
 
@@ -127,13 +126,13 @@ type DynamicHlsServiceAPI interface {
 	GetVideosByIdLiveSubtitlesM3u8Execute(r ApiGetVideosByIdLiveSubtitlesM3u8Request) (*http.Response, error)
 
 	/*
-	GetVideosByIdMainM3u8 Gets a video stream using HTTP live streaming.
+		GetVideosByIdMainM3u8 Gets a video stream using HTTP live streaming.
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiGetVideosByIdMainM3u8Request
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiGetVideosByIdMainM3u8Request
 	*/
 	GetVideosByIdMainM3u8(ctx context.Context, id string) ApiGetVideosByIdMainM3u8Request
 
@@ -141,13 +140,13 @@ type DynamicHlsServiceAPI interface {
 	GetVideosByIdMainM3u8Execute(r ApiGetVideosByIdMainM3u8Request) (*http.Response, error)
 
 	/*
-	GetVideosByIdMasterM3u8 Gets a video stream using HTTP live streaming.
+		GetVideosByIdMasterM3u8 Gets a video stream using HTTP live streaming.
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiGetVideosByIdMasterM3u8Request
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiGetVideosByIdMasterM3u8Request
 	*/
 	GetVideosByIdMasterM3u8(ctx context.Context, id string) ApiGetVideosByIdMasterM3u8Request
 
@@ -155,13 +154,13 @@ type DynamicHlsServiceAPI interface {
 	GetVideosByIdMasterM3u8Execute(r ApiGetVideosByIdMasterM3u8Request) (*http.Response, error)
 
 	/*
-	GetVideosByIdSubtitlesM3u8 Gets an HLS subtitle playlist.
+		GetVideosByIdSubtitlesM3u8 Gets an HLS subtitle playlist.
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiGetVideosByIdSubtitlesM3u8Request
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiGetVideosByIdSubtitlesM3u8Request
 	*/
 	GetVideosByIdSubtitlesM3u8(ctx context.Context, id string) ApiGetVideosByIdSubtitlesM3u8Request
 
@@ -169,16 +168,16 @@ type DynamicHlsServiceAPI interface {
 	GetVideosByIdSubtitlesM3u8Execute(r ApiGetVideosByIdSubtitlesM3u8Request) (*http.Response, error)
 
 	/*
-	HeadAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainer Method for HeadAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainer
+		HeadAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainer Method for HeadAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainer
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param segmentContainer
-	@param segmentId
-	@param id
-	@param playlistId
-	@return ApiHeadAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainerRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param segmentContainer
+		@param segmentId
+		@param id
+		@param playlistId
+		@return ApiHeadAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainerRequest
 	*/
 	HeadAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainer(ctx context.Context, segmentContainer string, segmentId string, id string, playlistId string) ApiHeadAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainerRequest
 
@@ -186,13 +185,13 @@ type DynamicHlsServiceAPI interface {
 	HeadAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainerExecute(r ApiHeadAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainerRequest) (*http.Response, error)
 
 	/*
-	HeadAudioByIdMasterM3u8 Gets an audio stream using HTTP live streaming.
+		HeadAudioByIdMasterM3u8 Gets an audio stream using HTTP live streaming.
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiHeadAudioByIdMasterM3u8Request
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiHeadAudioByIdMasterM3u8Request
 	*/
 	HeadAudioByIdMasterM3u8(ctx context.Context, id string) ApiHeadAudioByIdMasterM3u8Request
 
@@ -200,16 +199,16 @@ type DynamicHlsServiceAPI interface {
 	HeadAudioByIdMasterM3u8Execute(r ApiHeadAudioByIdMasterM3u8Request) (*http.Response, error)
 
 	/*
-	HeadVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainer Method for HeadVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainer
+		HeadVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainer Method for HeadVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainer
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param segmentContainer
-	@param segmentId
-	@param id
-	@param playlistId
-	@return ApiHeadVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainerRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param segmentContainer
+		@param segmentId
+		@param id
+		@param playlistId
+		@return ApiHeadVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainerRequest
 	*/
 	HeadVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainer(ctx context.Context, segmentContainer string, segmentId string, id string, playlistId string) ApiHeadVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainerRequest
 
@@ -217,13 +216,13 @@ type DynamicHlsServiceAPI interface {
 	HeadVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainerExecute(r ApiHeadVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainerRequest) (*http.Response, error)
 
 	/*
-	HeadVideosByIdMasterM3u8 Gets a video stream using HTTP live streaming.
+		HeadVideosByIdMasterM3u8 Gets a video stream using HTTP live streaming.
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiHeadVideosByIdMasterM3u8Request
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiHeadVideosByIdMasterM3u8Request
 	*/
 	HeadVideosByIdMasterM3u8(ctx context.Context, id string) ApiHeadVideosByIdMasterM3u8Request
 
@@ -235,12 +234,12 @@ type DynamicHlsServiceAPI interface {
 type DynamicHlsServiceAPIService service
 
 type ApiGetAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainerRequest struct {
-	ctx context.Context
-	ApiService DynamicHlsServiceAPI
+	ctx              context.Context
+	ApiService       DynamicHlsServiceAPI
 	segmentContainer string
-	segmentId string
-	id string
-	playlistId string
+	segmentId        string
+	id               string
+	playlistId       string
 }
 
 func (r ApiGetAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainerRequest) Execute() (*http.Response, error) {
@@ -252,30 +251,30 @@ GetAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainer Method for GetAudioByI
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param segmentContainer
- @param segmentId
- @param id
- @param playlistId
- @return ApiGetAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainerRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param segmentContainer
+	@param segmentId
+	@param id
+	@param playlistId
+	@return ApiGetAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainerRequest
 */
 func (a *DynamicHlsServiceAPIService) GetAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainer(ctx context.Context, segmentContainer string, segmentId string, id string, playlistId string) ApiGetAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainerRequest {
 	return ApiGetAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainerRequest{
-		ApiService: a,
-		ctx: ctx,
+		ApiService:       a,
+		ctx:              ctx,
 		segmentContainer: segmentContainer,
-		segmentId: segmentId,
-		id: id,
-		playlistId: playlistId,
+		segmentId:        segmentId,
+		id:               id,
+		playlistId:       playlistId,
 	}
 }
 
 // Execute executes the request
 func (a *DynamicHlsServiceAPIService) GetAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainerExecute(r ApiGetAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainerRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DynamicHlsServiceAPIService.GetAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainer")
@@ -353,32 +352,32 @@ func (a *DynamicHlsServiceAPIService) GetAudioByIdHls1ByPlaylistidBySegmentidByS
 }
 
 type ApiGetAudioByIdLiveM3u8Request struct {
-	ctx context.Context
-	ApiService DynamicHlsServiceAPI
-	id string
-	container *string
-	deviceProfileId *string
-	deviceId *string
-	audioCodec *string
+	ctx                  context.Context
+	ApiService           DynamicHlsServiceAPI
+	id                   string
+	container            *string
+	deviceProfileId      *string
+	deviceId             *string
+	audioCodec           *string
 	enableAutoStreamCopy *bool
-	audioSampleRate *int32
-	audioBitRate *int32
-	audioChannels *int32
-	maxAudioChannels *int32
-	static *bool
-	copyTimestamps *bool
-	startTimeTicks *int64
-	width *int32
-	height *int32
-	maxWidth *int32
-	maxHeight *int32
-	videoBitRate *int32
-	subtitleStreamIndex *int32
-	subtitleMethod *SubtitleDeliveryMethod
-	maxVideoBitDepth *int32
-	videoCodec *string
-	audioStreamIndex *int32
-	videoStreamIndex *int32
+	audioSampleRate      *int32
+	audioBitRate         *int32
+	audioChannels        *int32
+	maxAudioChannels     *int32
+	static               *bool
+	copyTimestamps       *bool
+	startTimeTicks       *int64
+	width                *int32
+	height               *int32
+	maxWidth             *int32
+	maxHeight            *int32
+	videoBitRate         *int32
+	subtitleStreamIndex  *int32
+	subtitleMethod       *SubtitleDeliveryMethod
+	maxVideoBitDepth     *int32
+	videoCodec           *string
+	audioStreamIndex     *int32
+	videoStreamIndex     *int32
 }
 
 // Container
@@ -528,24 +527,24 @@ GetAudioByIdLiveM3u8 Method for GetAudioByIdLiveM3u8
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiGetAudioByIdLiveM3u8Request
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiGetAudioByIdLiveM3u8Request
 */
 func (a *DynamicHlsServiceAPIService) GetAudioByIdLiveM3u8(ctx context.Context, id string) ApiGetAudioByIdLiveM3u8Request {
 	return ApiGetAudioByIdLiveM3u8Request{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *DynamicHlsServiceAPIService) GetAudioByIdLiveM3u8Execute(r ApiGetAudioByIdLiveM3u8Request) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DynamicHlsServiceAPIService.GetAudioByIdLiveM3u8")
@@ -690,32 +689,32 @@ func (a *DynamicHlsServiceAPIService) GetAudioByIdLiveM3u8Execute(r ApiGetAudioB
 }
 
 type ApiGetAudioByIdMainM3u8Request struct {
-	ctx context.Context
-	ApiService DynamicHlsServiceAPI
-	id string
-	container *string
-	deviceProfileId *string
-	deviceId *string
-	audioCodec *string
+	ctx                  context.Context
+	ApiService           DynamicHlsServiceAPI
+	id                   string
+	container            *string
+	deviceProfileId      *string
+	deviceId             *string
+	audioCodec           *string
 	enableAutoStreamCopy *bool
-	audioSampleRate *int32
-	audioBitRate *int32
-	audioChannels *int32
-	maxAudioChannels *int32
-	static *bool
-	copyTimestamps *bool
-	startTimeTicks *int64
-	width *int32
-	height *int32
-	maxWidth *int32
-	maxHeight *int32
-	videoBitRate *int32
-	subtitleStreamIndex *int32
-	subtitleMethod *SubtitleDeliveryMethod
-	maxVideoBitDepth *int32
-	videoCodec *string
-	audioStreamIndex *int32
-	videoStreamIndex *int32
+	audioSampleRate      *int32
+	audioBitRate         *int32
+	audioChannels        *int32
+	maxAudioChannels     *int32
+	static               *bool
+	copyTimestamps       *bool
+	startTimeTicks       *int64
+	width                *int32
+	height               *int32
+	maxWidth             *int32
+	maxHeight            *int32
+	videoBitRate         *int32
+	subtitleStreamIndex  *int32
+	subtitleMethod       *SubtitleDeliveryMethod
+	maxVideoBitDepth     *int32
+	videoCodec           *string
+	audioStreamIndex     *int32
+	videoStreamIndex     *int32
 }
 
 // Container
@@ -865,24 +864,24 @@ GetAudioByIdMainM3u8 Gets an audio stream using HTTP live streaming.
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiGetAudioByIdMainM3u8Request
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiGetAudioByIdMainM3u8Request
 */
 func (a *DynamicHlsServiceAPIService) GetAudioByIdMainM3u8(ctx context.Context, id string) ApiGetAudioByIdMainM3u8Request {
 	return ApiGetAudioByIdMainM3u8Request{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *DynamicHlsServiceAPIService) GetAudioByIdMainM3u8Execute(r ApiGetAudioByIdMainM3u8Request) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DynamicHlsServiceAPIService.GetAudioByIdMainM3u8")
@@ -1027,32 +1026,32 @@ func (a *DynamicHlsServiceAPIService) GetAudioByIdMainM3u8Execute(r ApiGetAudioB
 }
 
 type ApiGetAudioByIdMasterM3u8Request struct {
-	ctx context.Context
-	ApiService DynamicHlsServiceAPI
-	id string
-	container *string
-	deviceProfileId *string
-	deviceId *string
-	audioCodec *string
+	ctx                  context.Context
+	ApiService           DynamicHlsServiceAPI
+	id                   string
+	container            *string
+	deviceProfileId      *string
+	deviceId             *string
+	audioCodec           *string
 	enableAutoStreamCopy *bool
-	audioSampleRate *int32
-	audioBitRate *int32
-	audioChannels *int32
-	maxAudioChannels *int32
-	static *bool
-	copyTimestamps *bool
-	startTimeTicks *int64
-	width *int32
-	height *int32
-	maxWidth *int32
-	maxHeight *int32
-	videoBitRate *int32
-	subtitleStreamIndex *int32
-	subtitleMethod *SubtitleDeliveryMethod
-	maxVideoBitDepth *int32
-	videoCodec *string
-	audioStreamIndex *int32
-	videoStreamIndex *int32
+	audioSampleRate      *int32
+	audioBitRate         *int32
+	audioChannels        *int32
+	maxAudioChannels     *int32
+	static               *bool
+	copyTimestamps       *bool
+	startTimeTicks       *int64
+	width                *int32
+	height               *int32
+	maxWidth             *int32
+	maxHeight            *int32
+	videoBitRate         *int32
+	subtitleStreamIndex  *int32
+	subtitleMethod       *SubtitleDeliveryMethod
+	maxVideoBitDepth     *int32
+	videoCodec           *string
+	audioStreamIndex     *int32
+	videoStreamIndex     *int32
 }
 
 // Container
@@ -1202,24 +1201,24 @@ GetAudioByIdMasterM3u8 Gets an audio stream using HTTP live streaming.
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiGetAudioByIdMasterM3u8Request
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiGetAudioByIdMasterM3u8Request
 */
 func (a *DynamicHlsServiceAPIService) GetAudioByIdMasterM3u8(ctx context.Context, id string) ApiGetAudioByIdMasterM3u8Request {
 	return ApiGetAudioByIdMasterM3u8Request{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *DynamicHlsServiceAPIService) GetAudioByIdMasterM3u8Execute(r ApiGetAudioByIdMasterM3u8Request) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DynamicHlsServiceAPIService.GetAudioByIdMasterM3u8")
@@ -1364,12 +1363,12 @@ func (a *DynamicHlsServiceAPIService) GetAudioByIdMasterM3u8Execute(r ApiGetAudi
 }
 
 type ApiGetVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainerRequest struct {
-	ctx context.Context
-	ApiService DynamicHlsServiceAPI
+	ctx              context.Context
+	ApiService       DynamicHlsServiceAPI
 	segmentContainer string
-	segmentId string
-	id string
-	playlistId string
+	segmentId        string
+	id               string
+	playlistId       string
 }
 
 func (r ApiGetVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainerRequest) Execute() (*http.Response, error) {
@@ -1381,30 +1380,30 @@ GetVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainer Method for GetVideosB
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param segmentContainer
- @param segmentId
- @param id
- @param playlistId
- @return ApiGetVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainerRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param segmentContainer
+	@param segmentId
+	@param id
+	@param playlistId
+	@return ApiGetVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainerRequest
 */
 func (a *DynamicHlsServiceAPIService) GetVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainer(ctx context.Context, segmentContainer string, segmentId string, id string, playlistId string) ApiGetVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainerRequest {
 	return ApiGetVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainerRequest{
-		ApiService: a,
-		ctx: ctx,
+		ApiService:       a,
+		ctx:              ctx,
 		segmentContainer: segmentContainer,
-		segmentId: segmentId,
-		id: id,
-		playlistId: playlistId,
+		segmentId:        segmentId,
+		id:               id,
+		playlistId:       playlistId,
 	}
 }
 
 // Execute executes the request
 func (a *DynamicHlsServiceAPIService) GetVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainerExecute(r ApiGetVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainerRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DynamicHlsServiceAPIService.GetVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainer")
@@ -1482,32 +1481,32 @@ func (a *DynamicHlsServiceAPIService) GetVideosByIdHls1ByPlaylistidBySegmentidBy
 }
 
 type ApiGetVideosByIdLiveM3u8Request struct {
-	ctx context.Context
-	ApiService DynamicHlsServiceAPI
-	id string
-	container *string
-	deviceProfileId *string
-	deviceId *string
-	audioCodec *string
+	ctx                  context.Context
+	ApiService           DynamicHlsServiceAPI
+	id                   string
+	container            *string
+	deviceProfileId      *string
+	deviceId             *string
+	audioCodec           *string
 	enableAutoStreamCopy *bool
-	audioSampleRate *int32
-	audioBitRate *int32
-	audioChannels *int32
-	maxAudioChannels *int32
-	static *bool
-	copyTimestamps *bool
-	startTimeTicks *int64
-	width *int32
-	height *int32
-	maxWidth *int32
-	maxHeight *int32
-	videoBitRate *int32
-	subtitleStreamIndex *int32
-	subtitleMethod *SubtitleDeliveryMethod
-	maxVideoBitDepth *int32
-	videoCodec *string
-	audioStreamIndex *int32
-	videoStreamIndex *int32
+	audioSampleRate      *int32
+	audioBitRate         *int32
+	audioChannels        *int32
+	maxAudioChannels     *int32
+	static               *bool
+	copyTimestamps       *bool
+	startTimeTicks       *int64
+	width                *int32
+	height               *int32
+	maxWidth             *int32
+	maxHeight            *int32
+	videoBitRate         *int32
+	subtitleStreamIndex  *int32
+	subtitleMethod       *SubtitleDeliveryMethod
+	maxVideoBitDepth     *int32
+	videoCodec           *string
+	audioStreamIndex     *int32
+	videoStreamIndex     *int32
 }
 
 // Container
@@ -1657,24 +1656,24 @@ GetVideosByIdLiveM3u8 Method for GetVideosByIdLiveM3u8
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiGetVideosByIdLiveM3u8Request
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiGetVideosByIdLiveM3u8Request
 */
 func (a *DynamicHlsServiceAPIService) GetVideosByIdLiveM3u8(ctx context.Context, id string) ApiGetVideosByIdLiveM3u8Request {
 	return ApiGetVideosByIdLiveM3u8Request{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *DynamicHlsServiceAPIService) GetVideosByIdLiveM3u8Execute(r ApiGetVideosByIdLiveM3u8Request) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DynamicHlsServiceAPIService.GetVideosByIdLiveM3u8")
@@ -1819,11 +1818,11 @@ func (a *DynamicHlsServiceAPIService) GetVideosByIdLiveM3u8Execute(r ApiGetVideo
 }
 
 type ApiGetVideosByIdLiveSubtitlesM3u8Request struct {
-	ctx context.Context
-	ApiService DynamicHlsServiceAPI
-	id string
+	ctx                   context.Context
+	ApiService            DynamicHlsServiceAPI
+	id                    string
 	subtitleSegmentLength *int32
-	manifestSubtitles *string
+	manifestSubtitles     *string
 }
 
 // The subtitle segment length
@@ -1847,24 +1846,24 @@ GetVideosByIdLiveSubtitlesM3u8 Gets an HLS subtitle playlist.
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiGetVideosByIdLiveSubtitlesM3u8Request
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiGetVideosByIdLiveSubtitlesM3u8Request
 */
 func (a *DynamicHlsServiceAPIService) GetVideosByIdLiveSubtitlesM3u8(ctx context.Context, id string) ApiGetVideosByIdLiveSubtitlesM3u8Request {
 	return ApiGetVideosByIdLiveSubtitlesM3u8Request{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *DynamicHlsServiceAPIService) GetVideosByIdLiveSubtitlesM3u8Execute(r ApiGetVideosByIdLiveSubtitlesM3u8Request) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DynamicHlsServiceAPIService.GetVideosByIdLiveSubtitlesM3u8")
@@ -1947,32 +1946,32 @@ func (a *DynamicHlsServiceAPIService) GetVideosByIdLiveSubtitlesM3u8Execute(r Ap
 }
 
 type ApiGetVideosByIdMainM3u8Request struct {
-	ctx context.Context
-	ApiService DynamicHlsServiceAPI
-	id string
-	container *string
-	deviceProfileId *string
-	deviceId *string
-	audioCodec *string
+	ctx                  context.Context
+	ApiService           DynamicHlsServiceAPI
+	id                   string
+	container            *string
+	deviceProfileId      *string
+	deviceId             *string
+	audioCodec           *string
 	enableAutoStreamCopy *bool
-	audioSampleRate *int32
-	audioBitRate *int32
-	audioChannels *int32
-	maxAudioChannels *int32
-	static *bool
-	copyTimestamps *bool
-	startTimeTicks *int64
-	width *int32
-	height *int32
-	maxWidth *int32
-	maxHeight *int32
-	videoBitRate *int32
-	subtitleStreamIndex *int32
-	subtitleMethod *SubtitleDeliveryMethod
-	maxVideoBitDepth *int32
-	videoCodec *string
-	audioStreamIndex *int32
-	videoStreamIndex *int32
+	audioSampleRate      *int32
+	audioBitRate         *int32
+	audioChannels        *int32
+	maxAudioChannels     *int32
+	static               *bool
+	copyTimestamps       *bool
+	startTimeTicks       *int64
+	width                *int32
+	height               *int32
+	maxWidth             *int32
+	maxHeight            *int32
+	videoBitRate         *int32
+	subtitleStreamIndex  *int32
+	subtitleMethod       *SubtitleDeliveryMethod
+	maxVideoBitDepth     *int32
+	videoCodec           *string
+	audioStreamIndex     *int32
+	videoStreamIndex     *int32
 }
 
 // Container
@@ -2122,24 +2121,24 @@ GetVideosByIdMainM3u8 Gets a video stream using HTTP live streaming.
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiGetVideosByIdMainM3u8Request
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiGetVideosByIdMainM3u8Request
 */
 func (a *DynamicHlsServiceAPIService) GetVideosByIdMainM3u8(ctx context.Context, id string) ApiGetVideosByIdMainM3u8Request {
 	return ApiGetVideosByIdMainM3u8Request{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *DynamicHlsServiceAPIService) GetVideosByIdMainM3u8Execute(r ApiGetVideosByIdMainM3u8Request) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DynamicHlsServiceAPIService.GetVideosByIdMainM3u8")
@@ -2284,32 +2283,32 @@ func (a *DynamicHlsServiceAPIService) GetVideosByIdMainM3u8Execute(r ApiGetVideo
 }
 
 type ApiGetVideosByIdMasterM3u8Request struct {
-	ctx context.Context
-	ApiService DynamicHlsServiceAPI
-	id string
-	container *string
-	deviceProfileId *string
-	deviceId *string
-	audioCodec *string
+	ctx                  context.Context
+	ApiService           DynamicHlsServiceAPI
+	id                   string
+	container            *string
+	deviceProfileId      *string
+	deviceId             *string
+	audioCodec           *string
 	enableAutoStreamCopy *bool
-	audioSampleRate *int32
-	audioBitRate *int32
-	audioChannels *int32
-	maxAudioChannels *int32
-	static *bool
-	copyTimestamps *bool
-	startTimeTicks *int64
-	width *int32
-	height *int32
-	maxWidth *int32
-	maxHeight *int32
-	videoBitRate *int32
-	subtitleStreamIndex *int32
-	subtitleMethod *SubtitleDeliveryMethod
-	maxVideoBitDepth *int32
-	videoCodec *string
-	audioStreamIndex *int32
-	videoStreamIndex *int32
+	audioSampleRate      *int32
+	audioBitRate         *int32
+	audioChannels        *int32
+	maxAudioChannels     *int32
+	static               *bool
+	copyTimestamps       *bool
+	startTimeTicks       *int64
+	width                *int32
+	height               *int32
+	maxWidth             *int32
+	maxHeight            *int32
+	videoBitRate         *int32
+	subtitleStreamIndex  *int32
+	subtitleMethod       *SubtitleDeliveryMethod
+	maxVideoBitDepth     *int32
+	videoCodec           *string
+	audioStreamIndex     *int32
+	videoStreamIndex     *int32
 }
 
 // Container
@@ -2459,24 +2458,24 @@ GetVideosByIdMasterM3u8 Gets a video stream using HTTP live streaming.
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiGetVideosByIdMasterM3u8Request
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiGetVideosByIdMasterM3u8Request
 */
 func (a *DynamicHlsServiceAPIService) GetVideosByIdMasterM3u8(ctx context.Context, id string) ApiGetVideosByIdMasterM3u8Request {
 	return ApiGetVideosByIdMasterM3u8Request{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *DynamicHlsServiceAPIService) GetVideosByIdMasterM3u8Execute(r ApiGetVideosByIdMasterM3u8Request) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DynamicHlsServiceAPIService.GetVideosByIdMasterM3u8")
@@ -2621,11 +2620,11 @@ func (a *DynamicHlsServiceAPIService) GetVideosByIdMasterM3u8Execute(r ApiGetVid
 }
 
 type ApiGetVideosByIdSubtitlesM3u8Request struct {
-	ctx context.Context
-	ApiService DynamicHlsServiceAPI
-	id string
+	ctx                   context.Context
+	ApiService            DynamicHlsServiceAPI
+	id                    string
 	subtitleSegmentLength *int32
-	manifestSubtitles *string
+	manifestSubtitles     *string
 }
 
 // The subtitle segment length
@@ -2649,24 +2648,24 @@ GetVideosByIdSubtitlesM3u8 Gets an HLS subtitle playlist.
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiGetVideosByIdSubtitlesM3u8Request
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiGetVideosByIdSubtitlesM3u8Request
 */
 func (a *DynamicHlsServiceAPIService) GetVideosByIdSubtitlesM3u8(ctx context.Context, id string) ApiGetVideosByIdSubtitlesM3u8Request {
 	return ApiGetVideosByIdSubtitlesM3u8Request{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *DynamicHlsServiceAPIService) GetVideosByIdSubtitlesM3u8Execute(r ApiGetVideosByIdSubtitlesM3u8Request) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DynamicHlsServiceAPIService.GetVideosByIdSubtitlesM3u8")
@@ -2749,12 +2748,12 @@ func (a *DynamicHlsServiceAPIService) GetVideosByIdSubtitlesM3u8Execute(r ApiGet
 }
 
 type ApiHeadAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainerRequest struct {
-	ctx context.Context
-	ApiService DynamicHlsServiceAPI
+	ctx              context.Context
+	ApiService       DynamicHlsServiceAPI
 	segmentContainer string
-	segmentId string
-	id string
-	playlistId string
+	segmentId        string
+	id               string
+	playlistId       string
 }
 
 func (r ApiHeadAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainerRequest) Execute() (*http.Response, error) {
@@ -2766,30 +2765,30 @@ HeadAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainer Method for HeadAudioB
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param segmentContainer
- @param segmentId
- @param id
- @param playlistId
- @return ApiHeadAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainerRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param segmentContainer
+	@param segmentId
+	@param id
+	@param playlistId
+	@return ApiHeadAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainerRequest
 */
 func (a *DynamicHlsServiceAPIService) HeadAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainer(ctx context.Context, segmentContainer string, segmentId string, id string, playlistId string) ApiHeadAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainerRequest {
 	return ApiHeadAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainerRequest{
-		ApiService: a,
-		ctx: ctx,
+		ApiService:       a,
+		ctx:              ctx,
 		segmentContainer: segmentContainer,
-		segmentId: segmentId,
-		id: id,
-		playlistId: playlistId,
+		segmentId:        segmentId,
+		id:               id,
+		playlistId:       playlistId,
 	}
 }
 
 // Execute executes the request
 func (a *DynamicHlsServiceAPIService) HeadAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainerExecute(r ApiHeadAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainerRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodHead
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodHead
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DynamicHlsServiceAPIService.HeadAudioByIdHls1ByPlaylistidBySegmentidBySegmentcontainer")
@@ -2867,32 +2866,32 @@ func (a *DynamicHlsServiceAPIService) HeadAudioByIdHls1ByPlaylistidBySegmentidBy
 }
 
 type ApiHeadAudioByIdMasterM3u8Request struct {
-	ctx context.Context
-	ApiService DynamicHlsServiceAPI
-	id string
-	container *string
-	deviceProfileId *string
-	deviceId *string
-	audioCodec *string
+	ctx                  context.Context
+	ApiService           DynamicHlsServiceAPI
+	id                   string
+	container            *string
+	deviceProfileId      *string
+	deviceId             *string
+	audioCodec           *string
 	enableAutoStreamCopy *bool
-	audioSampleRate *int32
-	audioBitRate *int32
-	audioChannels *int32
-	maxAudioChannels *int32
-	static *bool
-	copyTimestamps *bool
-	startTimeTicks *int64
-	width *int32
-	height *int32
-	maxWidth *int32
-	maxHeight *int32
-	videoBitRate *int32
-	subtitleStreamIndex *int32
-	subtitleMethod *SubtitleDeliveryMethod
-	maxVideoBitDepth *int32
-	videoCodec *string
-	audioStreamIndex *int32
-	videoStreamIndex *int32
+	audioSampleRate      *int32
+	audioBitRate         *int32
+	audioChannels        *int32
+	maxAudioChannels     *int32
+	static               *bool
+	copyTimestamps       *bool
+	startTimeTicks       *int64
+	width                *int32
+	height               *int32
+	maxWidth             *int32
+	maxHeight            *int32
+	videoBitRate         *int32
+	subtitleStreamIndex  *int32
+	subtitleMethod       *SubtitleDeliveryMethod
+	maxVideoBitDepth     *int32
+	videoCodec           *string
+	audioStreamIndex     *int32
+	videoStreamIndex     *int32
 }
 
 // Container
@@ -3042,24 +3041,24 @@ HeadAudioByIdMasterM3u8 Gets an audio stream using HTTP live streaming.
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiHeadAudioByIdMasterM3u8Request
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiHeadAudioByIdMasterM3u8Request
 */
 func (a *DynamicHlsServiceAPIService) HeadAudioByIdMasterM3u8(ctx context.Context, id string) ApiHeadAudioByIdMasterM3u8Request {
 	return ApiHeadAudioByIdMasterM3u8Request{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *DynamicHlsServiceAPIService) HeadAudioByIdMasterM3u8Execute(r ApiHeadAudioByIdMasterM3u8Request) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodHead
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodHead
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DynamicHlsServiceAPIService.HeadAudioByIdMasterM3u8")
@@ -3204,12 +3203,12 @@ func (a *DynamicHlsServiceAPIService) HeadAudioByIdMasterM3u8Execute(r ApiHeadAu
 }
 
 type ApiHeadVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainerRequest struct {
-	ctx context.Context
-	ApiService DynamicHlsServiceAPI
+	ctx              context.Context
+	ApiService       DynamicHlsServiceAPI
 	segmentContainer string
-	segmentId string
-	id string
-	playlistId string
+	segmentId        string
+	id               string
+	playlistId       string
 }
 
 func (r ApiHeadVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainerRequest) Execute() (*http.Response, error) {
@@ -3221,30 +3220,30 @@ HeadVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainer Method for HeadVideo
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param segmentContainer
- @param segmentId
- @param id
- @param playlistId
- @return ApiHeadVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainerRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param segmentContainer
+	@param segmentId
+	@param id
+	@param playlistId
+	@return ApiHeadVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainerRequest
 */
 func (a *DynamicHlsServiceAPIService) HeadVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainer(ctx context.Context, segmentContainer string, segmentId string, id string, playlistId string) ApiHeadVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainerRequest {
 	return ApiHeadVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainerRequest{
-		ApiService: a,
-		ctx: ctx,
+		ApiService:       a,
+		ctx:              ctx,
 		segmentContainer: segmentContainer,
-		segmentId: segmentId,
-		id: id,
-		playlistId: playlistId,
+		segmentId:        segmentId,
+		id:               id,
+		playlistId:       playlistId,
 	}
 }
 
 // Execute executes the request
 func (a *DynamicHlsServiceAPIService) HeadVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainerExecute(r ApiHeadVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainerRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodHead
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodHead
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DynamicHlsServiceAPIService.HeadVideosByIdHls1ByPlaylistidBySegmentidBySegmentcontainer")
@@ -3322,32 +3321,32 @@ func (a *DynamicHlsServiceAPIService) HeadVideosByIdHls1ByPlaylistidBySegmentidB
 }
 
 type ApiHeadVideosByIdMasterM3u8Request struct {
-	ctx context.Context
-	ApiService DynamicHlsServiceAPI
-	id string
-	container *string
-	deviceProfileId *string
-	deviceId *string
-	audioCodec *string
+	ctx                  context.Context
+	ApiService           DynamicHlsServiceAPI
+	id                   string
+	container            *string
+	deviceProfileId      *string
+	deviceId             *string
+	audioCodec           *string
 	enableAutoStreamCopy *bool
-	audioSampleRate *int32
-	audioBitRate *int32
-	audioChannels *int32
-	maxAudioChannels *int32
-	static *bool
-	copyTimestamps *bool
-	startTimeTicks *int64
-	width *int32
-	height *int32
-	maxWidth *int32
-	maxHeight *int32
-	videoBitRate *int32
-	subtitleStreamIndex *int32
-	subtitleMethod *SubtitleDeliveryMethod
-	maxVideoBitDepth *int32
-	videoCodec *string
-	audioStreamIndex *int32
-	videoStreamIndex *int32
+	audioSampleRate      *int32
+	audioBitRate         *int32
+	audioChannels        *int32
+	maxAudioChannels     *int32
+	static               *bool
+	copyTimestamps       *bool
+	startTimeTicks       *int64
+	width                *int32
+	height               *int32
+	maxWidth             *int32
+	maxHeight            *int32
+	videoBitRate         *int32
+	subtitleStreamIndex  *int32
+	subtitleMethod       *SubtitleDeliveryMethod
+	maxVideoBitDepth     *int32
+	videoCodec           *string
+	audioStreamIndex     *int32
+	videoStreamIndex     *int32
 }
 
 // Container
@@ -3497,24 +3496,24 @@ HeadVideosByIdMasterM3u8 Gets a video stream using HTTP live streaming.
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiHeadVideosByIdMasterM3u8Request
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiHeadVideosByIdMasterM3u8Request
 */
 func (a *DynamicHlsServiceAPIService) HeadVideosByIdMasterM3u8(ctx context.Context, id string) ApiHeadVideosByIdMasterM3u8Request {
 	return ApiHeadVideosByIdMasterM3u8Request{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *DynamicHlsServiceAPIService) HeadVideosByIdMasterM3u8Execute(r ApiHeadVideosByIdMasterM3u8Request) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodHead
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodHead
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DynamicHlsServiceAPIService.HeadVideosByIdMasterM3u8")

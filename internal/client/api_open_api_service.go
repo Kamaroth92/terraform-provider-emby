@@ -18,16 +18,15 @@ import (
 	"net/url"
 )
 
-
 type OpenApiServiceAPI interface {
 
 	/*
-	GetOpenapi Gets the OpenAPI 3 specifications
+		GetOpenapi Gets the OpenAPI 3 specifications
 
-	No authentication required
+		No authentication required
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetOpenapiRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetOpenapiRequest
 	*/
 	GetOpenapi(ctx context.Context) ApiGetOpenapiRequest
 
@@ -36,12 +35,12 @@ type OpenApiServiceAPI interface {
 	GetOpenapiExecute(r ApiGetOpenapiRequest) (string, *http.Response, error)
 
 	/*
-	GetOpenapiJson Gets OpenAPI 3 specifications
+		GetOpenapiJson Gets OpenAPI 3 specifications
 
-	No authentication required
+		No authentication required
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetOpenapiJsonRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetOpenapiJsonRequest
 	*/
 	GetOpenapiJson(ctx context.Context) ApiGetOpenapiJsonRequest
 
@@ -50,12 +49,12 @@ type OpenApiServiceAPI interface {
 	GetOpenapiJsonExecute(r ApiGetOpenapiJsonRequest) (string, *http.Response, error)
 
 	/*
-	GetSwagger Gets the swagger specifications
+		GetSwagger Gets the swagger specifications
 
-	No authentication required
+		No authentication required
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetSwaggerRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetSwaggerRequest
 	*/
 	GetSwagger(ctx context.Context) ApiGetSwaggerRequest
 
@@ -64,12 +63,12 @@ type OpenApiServiceAPI interface {
 	GetSwaggerExecute(r ApiGetSwaggerRequest) (string, *http.Response, error)
 
 	/*
-	GetSwaggerJson Gets the swagger specifications
+		GetSwaggerJson Gets the swagger specifications
 
-	No authentication required
+		No authentication required
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetSwaggerJsonRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetSwaggerJsonRequest
 	*/
 	GetSwaggerJson(ctx context.Context) ApiGetSwaggerJsonRequest
 
@@ -82,7 +81,7 @@ type OpenApiServiceAPI interface {
 type OpenApiServiceAPIService service
 
 type ApiGetOpenapiRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService OpenApiServiceAPI
 }
 
@@ -95,24 +94,25 @@ GetOpenapi Gets the OpenAPI 3 specifications
 
 No authentication required
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetOpenapiRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetOpenapiRequest
 */
 func (a *OpenApiServiceAPIService) GetOpenapi(ctx context.Context) ApiGetOpenapiRequest {
 	return ApiGetOpenapiRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return string
+//
+//	@return string
 func (a *OpenApiServiceAPIService) GetOpenapiExecute(r ApiGetOpenapiRequest) (string, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  string
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue string
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "OpenApiServiceAPIService.GetOpenapi")
@@ -181,7 +181,7 @@ func (a *OpenApiServiceAPIService) GetOpenapiExecute(r ApiGetOpenapiRequest) (st
 }
 
 type ApiGetOpenapiJsonRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService OpenApiServiceAPI
 }
 
@@ -194,24 +194,25 @@ GetOpenapiJson Gets OpenAPI 3 specifications
 
 No authentication required
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetOpenapiJsonRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetOpenapiJsonRequest
 */
 func (a *OpenApiServiceAPIService) GetOpenapiJson(ctx context.Context) ApiGetOpenapiJsonRequest {
 	return ApiGetOpenapiJsonRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return string
+//
+//	@return string
 func (a *OpenApiServiceAPIService) GetOpenapiJsonExecute(r ApiGetOpenapiJsonRequest) (string, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  string
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue string
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "OpenApiServiceAPIService.GetOpenapiJson")
@@ -280,7 +281,7 @@ func (a *OpenApiServiceAPIService) GetOpenapiJsonExecute(r ApiGetOpenapiJsonRequ
 }
 
 type ApiGetSwaggerRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService OpenApiServiceAPI
 }
 
@@ -293,24 +294,25 @@ GetSwagger Gets the swagger specifications
 
 No authentication required
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetSwaggerRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetSwaggerRequest
 */
 func (a *OpenApiServiceAPIService) GetSwagger(ctx context.Context) ApiGetSwaggerRequest {
 	return ApiGetSwaggerRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return string
+//
+//	@return string
 func (a *OpenApiServiceAPIService) GetSwaggerExecute(r ApiGetSwaggerRequest) (string, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  string
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue string
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "OpenApiServiceAPIService.GetSwagger")
@@ -379,7 +381,7 @@ func (a *OpenApiServiceAPIService) GetSwaggerExecute(r ApiGetSwaggerRequest) (st
 }
 
 type ApiGetSwaggerJsonRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService OpenApiServiceAPI
 }
 
@@ -392,24 +394,25 @@ GetSwaggerJson Gets the swagger specifications
 
 No authentication required
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetSwaggerJsonRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetSwaggerJsonRequest
 */
 func (a *OpenApiServiceAPIService) GetSwaggerJson(ctx context.Context) ApiGetSwaggerJsonRequest {
 	return ApiGetSwaggerJsonRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return string
+//
+//	@return string
 func (a *OpenApiServiceAPIService) GetSwaggerJsonExecute(r ApiGetSwaggerJsonRequest) (string, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  string
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue string
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "OpenApiServiceAPIService.GetSwaggerJson")

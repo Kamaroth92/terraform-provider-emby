@@ -1,3 +1,5 @@
+// Copyright (c) HashiCorp, Inc.
+
 /*
 Emby Server REST API (BETA)
 
@@ -11,10 +13,10 @@ package embyclient
 
 import (
 	"context"
+	openapiclient "github.com/Kamaroth92/terraform-provider-emby/client"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func Test_embyclient_WebAppServiceAPIService(t *testing.T) {
@@ -24,7 +26,7 @@ func Test_embyclient_WebAppServiceAPIService(t *testing.T) {
 
 	t.Run("Test WebAppServiceAPIService GetWebConfigurationpage", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.WebAppServiceAPI.GetWebConfigurationpage(context.Background()).Execute()
 
@@ -35,7 +37,7 @@ func Test_embyclient_WebAppServiceAPIService(t *testing.T) {
 
 	t.Run("Test WebAppServiceAPIService GetWebConfigurationpages", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.WebAppServiceAPI.GetWebConfigurationpages(context.Background()).Execute()
 
@@ -47,7 +49,7 @@ func Test_embyclient_WebAppServiceAPIService(t *testing.T) {
 
 	t.Run("Test WebAppServiceAPIService GetWebStrings", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.WebAppServiceAPI.GetWebStrings(context.Background()).Execute()
 
@@ -58,7 +60,7 @@ func Test_embyclient_WebAppServiceAPIService(t *testing.T) {
 
 	t.Run("Test WebAppServiceAPIService GetWebStringset", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.WebAppServiceAPI.GetWebStringset(context.Background()).Execute()
 

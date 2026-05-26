@@ -19,10 +19,10 @@ var _ MappedNullable = &SessionPartyInfo{}
 
 // SessionPartyInfo struct for SessionPartyInfo
 type SessionPartyInfo struct {
-	Id *string `json:"Id,omitempty"`
-	Name *string `json:"Name,omitempty"`
+	Id       *string              `json:"Id,omitempty"`
+	Name     *string              `json:"Name,omitempty"`
 	Sessions []SessionSessionInfo `json:"Sessions,omitempty"`
-	Users []EntitiesUser `json:"Users,omitempty"`
+	Users    []EntitiesUser       `json:"Users,omitempty"`
 }
 
 // NewSessionPartyInfo instantiates a new SessionPartyInfo object
@@ -171,7 +171,7 @@ func (o *SessionPartyInfo) SetUsers(v []EntitiesUser) {
 }
 
 func (o SessionPartyInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -230,5 +230,3 @@ func (v *NullableSessionPartyInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

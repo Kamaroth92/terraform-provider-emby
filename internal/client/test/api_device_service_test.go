@@ -1,3 +1,5 @@
+// Copyright (c) HashiCorp, Inc.
+
 /*
 Emby Server REST API (BETA)
 
@@ -11,10 +13,10 @@ package embyclient
 
 import (
 	"context"
+	openapiclient "github.com/Kamaroth92/terraform-provider-emby/client"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func Test_embyclient_DeviceServiceAPIService(t *testing.T) {
@@ -24,7 +26,7 @@ func Test_embyclient_DeviceServiceAPIService(t *testing.T) {
 
 	t.Run("Test DeviceServiceAPIService DeleteDevices", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.DeviceServiceAPI.DeleteDevices(context.Background()).Execute()
 
@@ -35,7 +37,7 @@ func Test_embyclient_DeviceServiceAPIService(t *testing.T) {
 
 	t.Run("Test DeviceServiceAPIService GetDevices", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.DeviceServiceAPI.GetDevices(context.Background()).Execute()
 
@@ -47,7 +49,7 @@ func Test_embyclient_DeviceServiceAPIService(t *testing.T) {
 
 	t.Run("Test DeviceServiceAPIService GetDevicesCamerauploads", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.DeviceServiceAPI.GetDevicesCamerauploads(context.Background()).Execute()
 
@@ -59,7 +61,7 @@ func Test_embyclient_DeviceServiceAPIService(t *testing.T) {
 
 	t.Run("Test DeviceServiceAPIService GetDevicesInfo", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.DeviceServiceAPI.GetDevicesInfo(context.Background()).Execute()
 
@@ -71,7 +73,7 @@ func Test_embyclient_DeviceServiceAPIService(t *testing.T) {
 
 	t.Run("Test DeviceServiceAPIService GetDevicesOptions", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.DeviceServiceAPI.GetDevicesOptions(context.Background()).Execute()
 
@@ -83,7 +85,7 @@ func Test_embyclient_DeviceServiceAPIService(t *testing.T) {
 
 	t.Run("Test DeviceServiceAPIService PostDevicesCamerauploads", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.DeviceServiceAPI.PostDevicesCamerauploads(context.Background()).Execute()
 
@@ -94,7 +96,7 @@ func Test_embyclient_DeviceServiceAPIService(t *testing.T) {
 
 	t.Run("Test DeviceServiceAPIService PostDevicesDelete", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.DeviceServiceAPI.PostDevicesDelete(context.Background()).Execute()
 
@@ -105,7 +107,7 @@ func Test_embyclient_DeviceServiceAPIService(t *testing.T) {
 
 	t.Run("Test DeviceServiceAPIService PostDevicesOptions", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.DeviceServiceAPI.PostDevicesOptions(context.Background()).Execute()
 

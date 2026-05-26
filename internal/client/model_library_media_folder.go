@@ -19,11 +19,11 @@ var _ MappedNullable = &LibraryMediaFolder{}
 
 // LibraryMediaFolder struct for LibraryMediaFolder
 type LibraryMediaFolder struct {
-	Name *string `json:"Name,omitempty"`
-	Id *string `json:"Id,omitempty"`
-	Guid *string `json:"Guid,omitempty"`
-	SubFolders []LibrarySubFolder `json:"SubFolders,omitempty"`
-	IsUserAccessConfigurable *bool `json:"IsUserAccessConfigurable,omitempty"`
+	Name                     *string            `json:"Name,omitempty"`
+	Id                       *string            `json:"Id,omitempty"`
+	Guid                     *string            `json:"Guid,omitempty"`
+	SubFolders               []LibrarySubFolder `json:"SubFolders,omitempty"`
+	IsUserAccessConfigurable *bool              `json:"IsUserAccessConfigurable,omitempty"`
 }
 
 // NewLibraryMediaFolder instantiates a new LibraryMediaFolder object
@@ -204,7 +204,7 @@ func (o *LibraryMediaFolder) SetIsUserAccessConfigurable(v bool) {
 }
 
 func (o LibraryMediaFolder) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -266,5 +266,3 @@ func (v *NullableLibraryMediaFolder) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

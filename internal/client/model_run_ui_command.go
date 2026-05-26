@@ -19,10 +19,10 @@ var _ MappedNullable = &RunUICommand{}
 
 // RunUICommand struct for RunUICommand
 type RunUICommand struct {
-	PageId *string `json:"PageId,omitempty"`
-	CommandId *string `json:"CommandId,omitempty"`
-	Data *string `json:"Data,omitempty"`
-	ItemId *string `json:"ItemId,omitempty"`
+	PageId       *string `json:"PageId,omitempty"`
+	CommandId    *string `json:"CommandId,omitempty"`
+	Data         *string `json:"Data,omitempty"`
+	ItemId       *string `json:"ItemId,omitempty"`
 	ClientLocale *string `json:"ClientLocale,omitempty"`
 }
 
@@ -204,7 +204,7 @@ func (o *RunUICommand) SetClientLocale(v string) {
 }
 
 func (o RunUICommand) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -266,5 +266,3 @@ func (v *NullableRunUICommand) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

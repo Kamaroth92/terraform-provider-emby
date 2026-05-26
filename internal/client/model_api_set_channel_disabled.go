@@ -19,9 +19,9 @@ var _ MappedNullable = &ApiSetChannelDisabled{}
 
 // ApiSetChannelDisabled struct for ApiSetChannelDisabled
 type ApiSetChannelDisabled struct {
-	Id *string `json:"Id,omitempty"`
+	Id           *string `json:"Id,omitempty"`
 	ManagementId *string `json:"ManagementId,omitempty"`
-	Disabled *bool `json:"Disabled,omitempty"`
+	Disabled     *bool   `json:"Disabled,omitempty"`
 }
 
 // NewApiSetChannelDisabled instantiates a new ApiSetChannelDisabled object
@@ -138,7 +138,7 @@ func (o *ApiSetChannelDisabled) SetDisabled(v bool) {
 }
 
 func (o ApiSetChannelDisabled) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -194,5 +194,3 @@ func (v *NullableApiSetChannelDisabled) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

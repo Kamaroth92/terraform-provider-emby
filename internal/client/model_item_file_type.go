@@ -20,8 +20,8 @@ type ItemFileType string
 
 // List of ItemFileType
 const (
-	ITEMFILETYPE_MEDIA ItemFileType = "Media"
-	ITEMFILETYPE_IMAGE ItemFileType = "Image"
+	ITEMFILETYPE_MEDIA     ItemFileType = "Media"
+	ITEMFILETYPE_IMAGE     ItemFileType = "Image"
 	ITEMFILETYPE_SUBTITLES ItemFileType = "Subtitles"
 )
 
@@ -110,4 +110,3 @@ func (v *NullableItemFileType) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

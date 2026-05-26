@@ -20,9 +20,9 @@ type AttributesSimpleCondition string
 
 // List of Attributes.SimpleCondition
 const (
-	ATTRIBUTESSIMPLECONDITION_IS_TRUE AttributesSimpleCondition = "IsTrue"
-	ATTRIBUTESSIMPLECONDITION_IS_FALSE AttributesSimpleCondition = "IsFalse"
-	ATTRIBUTESSIMPLECONDITION_IS_NULL AttributesSimpleCondition = "IsNull"
+	ATTRIBUTESSIMPLECONDITION_IS_TRUE              AttributesSimpleCondition = "IsTrue"
+	ATTRIBUTESSIMPLECONDITION_IS_FALSE             AttributesSimpleCondition = "IsFalse"
+	ATTRIBUTESSIMPLECONDITION_IS_NULL              AttributesSimpleCondition = "IsNull"
 	ATTRIBUTESSIMPLECONDITION_IS_NOT_NULL_OR_EMPTY AttributesSimpleCondition = "IsNotNullOrEmpty"
 )
 
@@ -112,4 +112,3 @@ func (v *NullableAttributesSimpleCondition) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

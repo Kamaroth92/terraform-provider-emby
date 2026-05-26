@@ -20,33 +20,33 @@ var _ MappedNullable = &SyncJob{}
 
 // SyncJob struct for SyncJob
 type SyncJob struct {
-	Id *int64 `json:"Id,omitempty"`
-	TargetId *string `json:"TargetId,omitempty"`
-	InternalTargetId *int64 `json:"InternalTargetId,omitempty"`
-	TargetName *string `json:"TargetName,omitempty"`
-	Quality *string `json:"Quality,omitempty"`
-	Bitrate NullableInt32 `json:"Bitrate,omitempty"`
-	Container *string `json:"Container,omitempty"`
-	VideoCodec *string `json:"VideoCodec,omitempty"`
-	AudioCodec *string `json:"AudioCodec,omitempty"`
-	Profile *string `json:"Profile,omitempty"`
-	Category *SyncCategory `json:"Category,omitempty"`
-	ParentId *int64 `json:"ParentId,omitempty"`
-	Progress *float64 `json:"Progress,omitempty"`
-	Name *string `json:"Name,omitempty"`
-	Status *SyncJobStatus `json:"Status,omitempty"`
-	UserId *int64 `json:"UserId,omitempty"`
-	UnwatchedOnly *bool `json:"UnwatchedOnly,omitempty"`
-	SyncNewContent *bool `json:"SyncNewContent,omitempty"`
-	ItemLimit NullableInt32 `json:"ItemLimit,omitempty"`
-	RequestedItemIds []int64 `json:"RequestedItemIds,omitempty"`
-	ItemId *int64 `json:"ItemId,omitempty"`
-	DateCreated *time.Time `json:"DateCreated,omitempty"`
-	DateLastModified *time.Time `json:"DateLastModified,omitempty"`
-	ItemCount *int32 `json:"ItemCount,omitempty"`
-	ParentName *string `json:"ParentName,omitempty"`
-	PrimaryImageItemId *string `json:"PrimaryImageItemId,omitempty"`
-	PrimaryImageTag *string `json:"PrimaryImageTag,omitempty"`
+	Id                 *int64         `json:"Id,omitempty"`
+	TargetId           *string        `json:"TargetId,omitempty"`
+	InternalTargetId   *int64         `json:"InternalTargetId,omitempty"`
+	TargetName         *string        `json:"TargetName,omitempty"`
+	Quality            *string        `json:"Quality,omitempty"`
+	Bitrate            NullableInt32  `json:"Bitrate,omitempty"`
+	Container          *string        `json:"Container,omitempty"`
+	VideoCodec         *string        `json:"VideoCodec,omitempty"`
+	AudioCodec         *string        `json:"AudioCodec,omitempty"`
+	Profile            *string        `json:"Profile,omitempty"`
+	Category           *SyncCategory  `json:"Category,omitempty"`
+	ParentId           *int64         `json:"ParentId,omitempty"`
+	Progress           *float64       `json:"Progress,omitempty"`
+	Name               *string        `json:"Name,omitempty"`
+	Status             *SyncJobStatus `json:"Status,omitempty"`
+	UserId             *int64         `json:"UserId,omitempty"`
+	UnwatchedOnly      *bool          `json:"UnwatchedOnly,omitempty"`
+	SyncNewContent     *bool          `json:"SyncNewContent,omitempty"`
+	ItemLimit          NullableInt32  `json:"ItemLimit,omitempty"`
+	RequestedItemIds   []int64        `json:"RequestedItemIds,omitempty"`
+	ItemId             *int64         `json:"ItemId,omitempty"`
+	DateCreated        *time.Time     `json:"DateCreated,omitempty"`
+	DateLastModified   *time.Time     `json:"DateLastModified,omitempty"`
+	ItemCount          *int32         `json:"ItemCount,omitempty"`
+	ParentName         *string        `json:"ParentName,omitempty"`
+	PrimaryImageItemId *string        `json:"PrimaryImageItemId,omitempty"`
+	PrimaryImageTag    *string        `json:"PrimaryImageTag,omitempty"`
 }
 
 // NewSyncJob instantiates a new SyncJob object
@@ -258,6 +258,7 @@ func (o *SyncJob) HasBitrate() bool {
 func (o *SyncJob) SetBitrate(v int32) {
 	o.Bitrate.Set(&v)
 }
+
 // SetBitrateNil sets the value for Bitrate to be an explicit nil
 func (o *SyncJob) SetBitrateNil() {
 	o.Bitrate.Set(nil)
@@ -684,6 +685,7 @@ func (o *SyncJob) HasItemLimit() bool {
 func (o *SyncJob) SetItemLimit(v int32) {
 	o.ItemLimit.Set(&v)
 }
+
 // SetItemLimitNil sets the value for ItemLimit to be an explicit nil
 func (o *SyncJob) SetItemLimitNil() {
 	o.ItemLimit.Set(nil)
@@ -951,7 +953,7 @@ func (o *SyncJob) SetPrimaryImageTag(v string) {
 }
 
 func (o SyncJob) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -1079,5 +1081,3 @@ func (v *NullableSyncJob) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

@@ -19,20 +19,20 @@ var _ MappedNullable = &EditorsEditorRoot{}
 
 // EditorsEditorRoot struct for EditorsEditorRoot
 type EditorsEditorRoot struct {
-	PropertyConditions []ConditionsPropertyCondition `json:"PropertyConditions,omitempty"`
-	PostbackActions []ActionsPostbackAction `json:"PostbackActions,omitempty"`
-	TitleButton *EditorsEditorButtonItem `json:"TitleButton,omitempty"`
-	EditorItems []EditorsEditorBase `json:"EditorItems,omitempty"`
-	EditorType *CommonEditorTypes `json:"EditorType,omitempty"`
-	Name *string `json:"Name,omitempty"`
-	Id *string `json:"Id,omitempty"`
-	AllowEmpty *bool `json:"AllowEmpty,omitempty"`
-	IsReadOnly *bool `json:"IsReadOnly,omitempty"`
-	IsAdvanced *bool `json:"IsAdvanced,omitempty"`
-	DisplayName *string `json:"DisplayName,omitempty"`
-	Description *string `json:"Description,omitempty"`
-	FeatureRequiresPremiere *bool `json:"FeatureRequiresPremiere,omitempty"`
-	ParentId *string `json:"ParentId,omitempty"`
+	PropertyConditions      []ConditionsPropertyCondition `json:"PropertyConditions,omitempty"`
+	PostbackActions         []ActionsPostbackAction       `json:"PostbackActions,omitempty"`
+	TitleButton             *EditorsEditorButtonItem      `json:"TitleButton,omitempty"`
+	EditorItems             []EditorsEditorBase           `json:"EditorItems,omitempty"`
+	EditorType              *CommonEditorTypes            `json:"EditorType,omitempty"`
+	Name                    *string                       `json:"Name,omitempty"`
+	Id                      *string                       `json:"Id,omitempty"`
+	AllowEmpty              *bool                         `json:"AllowEmpty,omitempty"`
+	IsReadOnly              *bool                         `json:"IsReadOnly,omitempty"`
+	IsAdvanced              *bool                         `json:"IsAdvanced,omitempty"`
+	DisplayName             *string                       `json:"DisplayName,omitempty"`
+	Description             *string                       `json:"Description,omitempty"`
+	FeatureRequiresPremiere *bool                         `json:"FeatureRequiresPremiere,omitempty"`
+	ParentId                *string                       `json:"ParentId,omitempty"`
 }
 
 // NewEditorsEditorRoot instantiates a new EditorsEditorRoot object
@@ -501,7 +501,7 @@ func (o *EditorsEditorRoot) SetParentId(v string) {
 }
 
 func (o EditorsEditorRoot) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -590,5 +590,3 @@ func (v *NullableEditorsEditorRoot) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

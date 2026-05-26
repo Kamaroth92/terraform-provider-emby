@@ -19,8 +19,8 @@ var _ MappedNullable = &QueryResultBaseItemDto{}
 
 // QueryResultBaseItemDto struct for QueryResultBaseItemDto
 type QueryResultBaseItemDto struct {
-	Items []BaseItemDto `json:"Items,omitempty"`
-	TotalRecordCount *int32 `json:"TotalRecordCount,omitempty"`
+	Items            []BaseItemDto `json:"Items,omitempty"`
+	TotalRecordCount *int32        `json:"TotalRecordCount,omitempty"`
 }
 
 // NewQueryResultBaseItemDto instantiates a new QueryResultBaseItemDto object
@@ -105,7 +105,7 @@ func (o *QueryResultBaseItemDto) SetTotalRecordCount(v int32) {
 }
 
 func (o QueryResultBaseItemDto) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -158,5 +158,3 @@ func (v *NullableQueryResultBaseItemDto) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

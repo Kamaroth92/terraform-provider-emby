@@ -20,10 +20,10 @@ var _ MappedNullable = &DevicesLocalFileInfo{}
 
 // DevicesLocalFileInfo struct for DevicesLocalFileInfo
 type DevicesLocalFileInfo struct {
-	Name *string `json:"Name,omitempty"`
-	Id *string `json:"Id,omitempty"`
-	Album *string `json:"Album,omitempty"`
-	MimeType *string `json:"MimeType,omitempty"`
+	Name        *string      `json:"Name,omitempty"`
+	Id          *string      `json:"Id,omitempty"`
+	Album       *string      `json:"Album,omitempty"`
+	MimeType    *string      `json:"MimeType,omitempty"`
 	DateCreated NullableTime `json:"DateCreated,omitempty"`
 }
 
@@ -204,6 +204,7 @@ func (o *DevicesLocalFileInfo) HasDateCreated() bool {
 func (o *DevicesLocalFileInfo) SetDateCreated(v time.Time) {
 	o.DateCreated.Set(&v)
 }
+
 // SetDateCreatedNil sets the value for DateCreated to be an explicit nil
 func (o *DevicesLocalFileInfo) SetDateCreatedNil() {
 	o.DateCreated.Set(nil)
@@ -215,7 +216,7 @@ func (o *DevicesLocalFileInfo) UnsetDateCreated() {
 }
 
 func (o DevicesLocalFileInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -277,5 +278,3 @@ func (v *NullableDevicesLocalFileInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

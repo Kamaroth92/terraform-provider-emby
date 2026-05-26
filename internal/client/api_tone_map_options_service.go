@@ -19,16 +19,15 @@ import (
 	"os"
 )
 
-
 type ToneMapOptionsServiceAPI interface {
 
 	/*
-	GetEncodingFulltonemapoptions Gets the tone mapping options
+		GetEncodingFulltonemapoptions Gets the tone mapping options
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetEncodingFulltonemapoptionsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetEncodingFulltonemapoptionsRequest
 	*/
 	GetEncodingFulltonemapoptions(ctx context.Context) ApiGetEncodingFulltonemapoptionsRequest
 
@@ -37,12 +36,12 @@ type ToneMapOptionsServiceAPI interface {
 	GetEncodingFulltonemapoptionsExecute(r ApiGetEncodingFulltonemapoptionsRequest) (*EditObjectContainer, *http.Response, error)
 
 	/*
-	GetEncodingPublictonemapoptions Gets the tone mapping options
+		GetEncodingPublictonemapoptions Gets the tone mapping options
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetEncodingPublictonemapoptionsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetEncodingPublictonemapoptionsRequest
 	*/
 	GetEncodingPublictonemapoptions(ctx context.Context) ApiGetEncodingPublictonemapoptionsRequest
 
@@ -51,12 +50,12 @@ type ToneMapOptionsServiceAPI interface {
 	GetEncodingPublictonemapoptionsExecute(r ApiGetEncodingPublictonemapoptionsRequest) (*EditObjectContainer, *http.Response, error)
 
 	/*
-	PostEncodingFulltonemapoptions Updates the tone mapping options
+		PostEncodingFulltonemapoptions Updates the tone mapping options
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostEncodingFulltonemapoptionsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostEncodingFulltonemapoptionsRequest
 	*/
 	PostEncodingFulltonemapoptions(ctx context.Context) ApiPostEncodingFulltonemapoptionsRequest
 
@@ -64,12 +63,12 @@ type ToneMapOptionsServiceAPI interface {
 	PostEncodingFulltonemapoptionsExecute(r ApiPostEncodingFulltonemapoptionsRequest) (*http.Response, error)
 
 	/*
-	PostEncodingPublictonemapoptions Updates the tone mapping options
+		PostEncodingPublictonemapoptions Updates the tone mapping options
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostEncodingPublictonemapoptionsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostEncodingPublictonemapoptionsRequest
 	*/
 	PostEncodingPublictonemapoptions(ctx context.Context) ApiPostEncodingPublictonemapoptionsRequest
 
@@ -81,7 +80,7 @@ type ToneMapOptionsServiceAPI interface {
 type ToneMapOptionsServiceAPIService service
 
 type ApiGetEncodingFulltonemapoptionsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService ToneMapOptionsServiceAPI
 }
 
@@ -94,24 +93,25 @@ GetEncodingFulltonemapoptions Gets the tone mapping options
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetEncodingFulltonemapoptionsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetEncodingFulltonemapoptionsRequest
 */
 func (a *ToneMapOptionsServiceAPIService) GetEncodingFulltonemapoptions(ctx context.Context) ApiGetEncodingFulltonemapoptionsRequest {
 	return ApiGetEncodingFulltonemapoptionsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return EditObjectContainer
+//
+//	@return EditObjectContainer
 func (a *ToneMapOptionsServiceAPIService) GetEncodingFulltonemapoptionsExecute(r ApiGetEncodingFulltonemapoptionsRequest) (*EditObjectContainer, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *EditObjectContainer
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *EditObjectContainer
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ToneMapOptionsServiceAPIService.GetEncodingFulltonemapoptions")
@@ -194,7 +194,7 @@ func (a *ToneMapOptionsServiceAPIService) GetEncodingFulltonemapoptionsExecute(r
 }
 
 type ApiGetEncodingPublictonemapoptionsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService ToneMapOptionsServiceAPI
 }
 
@@ -207,24 +207,25 @@ GetEncodingPublictonemapoptions Gets the tone mapping options
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetEncodingPublictonemapoptionsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetEncodingPublictonemapoptionsRequest
 */
 func (a *ToneMapOptionsServiceAPIService) GetEncodingPublictonemapoptions(ctx context.Context) ApiGetEncodingPublictonemapoptionsRequest {
 	return ApiGetEncodingPublictonemapoptionsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return EditObjectContainer
+//
+//	@return EditObjectContainer
 func (a *ToneMapOptionsServiceAPIService) GetEncodingPublictonemapoptionsExecute(r ApiGetEncodingPublictonemapoptionsRequest) (*EditObjectContainer, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *EditObjectContainer
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *EditObjectContainer
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ToneMapOptionsServiceAPIService.GetEncodingPublictonemapoptions")
@@ -307,9 +308,9 @@ func (a *ToneMapOptionsServiceAPIService) GetEncodingPublictonemapoptionsExecute
 }
 
 type ApiPostEncodingFulltonemapoptionsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService ToneMapOptionsServiceAPI
-	body *os.File
+	body       *os.File
 }
 
 // Binary stream
@@ -327,22 +328,22 @@ PostEncodingFulltonemapoptions Updates the tone mapping options
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostEncodingFulltonemapoptionsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostEncodingFulltonemapoptionsRequest
 */
 func (a *ToneMapOptionsServiceAPIService) PostEncodingFulltonemapoptions(ctx context.Context) ApiPostEncodingFulltonemapoptionsRequest {
 	return ApiPostEncodingFulltonemapoptionsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *ToneMapOptionsServiceAPIService) PostEncodingFulltonemapoptionsExecute(r ApiPostEncodingFulltonemapoptionsRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ToneMapOptionsServiceAPIService.PostEncodingFulltonemapoptions")
@@ -421,9 +422,9 @@ func (a *ToneMapOptionsServiceAPIService) PostEncodingFulltonemapoptionsExecute(
 }
 
 type ApiPostEncodingPublictonemapoptionsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService ToneMapOptionsServiceAPI
-	body *os.File
+	body       *os.File
 }
 
 // Binary stream
@@ -441,22 +442,22 @@ PostEncodingPublictonemapoptions Updates the tone mapping options
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostEncodingPublictonemapoptionsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostEncodingPublictonemapoptionsRequest
 */
 func (a *ToneMapOptionsServiceAPIService) PostEncodingPublictonemapoptions(ctx context.Context) ApiPostEncodingPublictonemapoptionsRequest {
 	return ApiPostEncodingPublictonemapoptionsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *ToneMapOptionsServiceAPIService) PostEncodingPublictonemapoptionsExecute(r ApiPostEncodingPublictonemapoptionsRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ToneMapOptionsServiceAPIService.PostEncodingPublictonemapoptions")

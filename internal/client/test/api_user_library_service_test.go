@@ -1,3 +1,5 @@
+// Copyright (c) HashiCorp, Inc.
+
 /*
 Emby Server REST API (BETA)
 
@@ -11,10 +13,10 @@ package embyclient
 
 import (
 	"context"
+	openapiclient "github.com/Kamaroth92/terraform-provider-emby/client"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func Test_embyclient_UserLibraryServiceAPIService(t *testing.T) {
@@ -24,7 +26,7 @@ func Test_embyclient_UserLibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test UserLibraryServiceAPIService DeleteUsersByUseridFavoriteitemsById", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var userId string
 		var id string
@@ -39,7 +41,7 @@ func Test_embyclient_UserLibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test UserLibraryServiceAPIService DeleteUsersByUseridItemsByIdRating", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var userId string
 		var id string
@@ -54,7 +56,7 @@ func Test_embyclient_UserLibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test UserLibraryServiceAPIService GetLivetvProgramsById", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -68,7 +70,7 @@ func Test_embyclient_UserLibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test UserLibraryServiceAPIService GetUsersByUseridItemsById", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var userId string
 		var id string
@@ -83,7 +85,7 @@ func Test_embyclient_UserLibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test UserLibraryServiceAPIService GetUsersByUseridItemsByIdIntros", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var userId string
 		var id string
@@ -98,7 +100,7 @@ func Test_embyclient_UserLibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test UserLibraryServiceAPIService GetUsersByUseridItemsByIdLocaltrailers", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var userId string
 		var id string
@@ -113,7 +115,7 @@ func Test_embyclient_UserLibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test UserLibraryServiceAPIService GetUsersByUseridItemsByIdSpecialfeatures", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var userId string
 		var id string
@@ -128,7 +130,7 @@ func Test_embyclient_UserLibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test UserLibraryServiceAPIService GetUsersByUseridItemsLatest", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var userId string
 
@@ -142,7 +144,7 @@ func Test_embyclient_UserLibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test UserLibraryServiceAPIService GetUsersByUseridItemsRoot", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var userId string
 
@@ -156,7 +158,7 @@ func Test_embyclient_UserLibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test UserLibraryServiceAPIService GetVideosByIdAdditionalparts", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -170,7 +172,7 @@ func Test_embyclient_UserLibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test UserLibraryServiceAPIService PostItemsAccess", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.UserLibraryServiceAPI.PostItemsAccess(context.Background()).Execute()
 
@@ -181,7 +183,7 @@ func Test_embyclient_UserLibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test UserLibraryServiceAPIService PostItemsByIdMakeprivate", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -194,7 +196,7 @@ func Test_embyclient_UserLibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test UserLibraryServiceAPIService PostItemsByIdMakepublic", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -207,7 +209,7 @@ func Test_embyclient_UserLibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test UserLibraryServiceAPIService PostItemsSharedLeave", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.UserLibraryServiceAPI.PostItemsSharedLeave(context.Background()).Execute()
 
@@ -218,7 +220,7 @@ func Test_embyclient_UserLibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test UserLibraryServiceAPIService PostUsersByUseridFavoriteitemsById", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var userId string
 		var id string
@@ -233,7 +235,7 @@ func Test_embyclient_UserLibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test UserLibraryServiceAPIService PostUsersByUseridFavoriteitemsByIdDelete", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var userId string
 		var id string
@@ -248,7 +250,7 @@ func Test_embyclient_UserLibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test UserLibraryServiceAPIService PostUsersByUseridItemsByIdHidefromresume", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var userId string
 		var id string
@@ -263,7 +265,7 @@ func Test_embyclient_UserLibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test UserLibraryServiceAPIService PostUsersByUseridItemsByIdRating", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var userId string
 		var id string
@@ -278,7 +280,7 @@ func Test_embyclient_UserLibraryServiceAPIService(t *testing.T) {
 
 	t.Run("Test UserLibraryServiceAPIService PostUsersByUseridItemsByIdRatingDelete", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var userId string
 		var id string

@@ -18,16 +18,15 @@ import (
 	"net/url"
 )
 
-
 type BackupApiAPI interface {
 
 	/*
-	GetBackuprestoreBackupinfo Method for GetBackuprestoreBackupinfo
+		GetBackuprestoreBackupinfo Method for GetBackuprestoreBackupinfo
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetBackuprestoreBackupinfoRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetBackuprestoreBackupinfoRequest
 	*/
 	GetBackuprestoreBackupinfo(ctx context.Context) ApiGetBackuprestoreBackupinfoRequest
 
@@ -36,12 +35,12 @@ type BackupApiAPI interface {
 	GetBackuprestoreBackupinfoExecute(r ApiGetBackuprestoreBackupinfoRequest) (*MBBackupApiAllBackupsInfo, *http.Response, error)
 
 	/*
-	PostBackuprestoreRestore Method for PostBackuprestoreRestore
+		PostBackuprestoreRestore Method for PostBackuprestoreRestore
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostBackuprestoreRestoreRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostBackuprestoreRestoreRequest
 	*/
 	PostBackuprestoreRestore(ctx context.Context) ApiPostBackuprestoreRestoreRequest
 
@@ -49,12 +48,12 @@ type BackupApiAPI interface {
 	PostBackuprestoreRestoreExecute(r ApiPostBackuprestoreRestoreRequest) (*http.Response, error)
 
 	/*
-	PostBackuprestoreRestoredata Method for PostBackuprestoreRestoredata
+		PostBackuprestoreRestoredata Method for PostBackuprestoreRestoredata
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostBackuprestoreRestoredataRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostBackuprestoreRestoredataRequest
 	*/
 	PostBackuprestoreRestoredata(ctx context.Context) ApiPostBackuprestoreRestoredataRequest
 
@@ -66,7 +65,7 @@ type BackupApiAPI interface {
 type BackupApiAPIService service
 
 type ApiGetBackuprestoreBackupinfoRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService BackupApiAPI
 }
 
@@ -79,24 +78,25 @@ GetBackuprestoreBackupinfo Method for GetBackuprestoreBackupinfo
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetBackuprestoreBackupinfoRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetBackuprestoreBackupinfoRequest
 */
 func (a *BackupApiAPIService) GetBackuprestoreBackupinfo(ctx context.Context) ApiGetBackuprestoreBackupinfoRequest {
 	return ApiGetBackuprestoreBackupinfoRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return MBBackupApiAllBackupsInfo
+//
+//	@return MBBackupApiAllBackupsInfo
 func (a *BackupApiAPIService) GetBackuprestoreBackupinfoExecute(r ApiGetBackuprestoreBackupinfoRequest) (*MBBackupApiAllBackupsInfo, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *MBBackupApiAllBackupsInfo
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *MBBackupApiAllBackupsInfo
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "BackupApiAPIService.GetBackuprestoreBackupinfo")
@@ -179,12 +179,12 @@ func (a *BackupApiAPIService) GetBackuprestoreBackupinfoExecute(r ApiGetBackupre
 }
 
 type ApiPostBackuprestoreRestoreRequest struct {
-	ctx context.Context
-	ApiService BackupApiAPI
+	ctx                       context.Context
+	ApiService                BackupApiAPI
 	mBBackupApiRestoreOptions *MBBackupApiRestoreOptions
 }
 
-// RestoreOptions: 
+// RestoreOptions:
 func (r ApiPostBackuprestoreRestoreRequest) MBBackupApiRestoreOptions(mBBackupApiRestoreOptions MBBackupApiRestoreOptions) ApiPostBackuprestoreRestoreRequest {
 	r.mBBackupApiRestoreOptions = &mBBackupApiRestoreOptions
 	return r
@@ -199,22 +199,22 @@ PostBackuprestoreRestore Method for PostBackuprestoreRestore
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostBackuprestoreRestoreRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostBackuprestoreRestoreRequest
 */
 func (a *BackupApiAPIService) PostBackuprestoreRestore(ctx context.Context) ApiPostBackuprestoreRestoreRequest {
 	return ApiPostBackuprestoreRestoreRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *BackupApiAPIService) PostBackuprestoreRestoreExecute(r ApiPostBackuprestoreRestoreRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "BackupApiAPIService.PostBackuprestoreRestore")
@@ -293,12 +293,12 @@ func (a *BackupApiAPIService) PostBackuprestoreRestoreExecute(r ApiPostBackupres
 }
 
 type ApiPostBackuprestoreRestoredataRequest struct {
-	ctx context.Context
-	ApiService BackupApiAPI
+	ctx                           context.Context
+	ApiService                    BackupApiAPI
 	mBBackupApiDataRestoreOptions *MBBackupApiDataRestoreOptions
 }
 
-// DataRestoreOptions: 
+// DataRestoreOptions:
 func (r ApiPostBackuprestoreRestoredataRequest) MBBackupApiDataRestoreOptions(mBBackupApiDataRestoreOptions MBBackupApiDataRestoreOptions) ApiPostBackuprestoreRestoredataRequest {
 	r.mBBackupApiDataRestoreOptions = &mBBackupApiDataRestoreOptions
 	return r
@@ -313,22 +313,22 @@ PostBackuprestoreRestoredata Method for PostBackuprestoreRestoredata
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostBackuprestoreRestoredataRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostBackuprestoreRestoredataRequest
 */
 func (a *BackupApiAPIService) PostBackuprestoreRestoredata(ctx context.Context) ApiPostBackuprestoreRestoredataRequest {
 	return ApiPostBackuprestoreRestoredataRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *BackupApiAPIService) PostBackuprestoreRestoredataExecute(r ApiPostBackuprestoreRestoredataRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "BackupApiAPIService.PostBackuprestoreRestoredata")

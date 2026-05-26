@@ -20,22 +20,22 @@ var _ MappedNullable = &PlayerStateInfo{}
 
 // PlayerStateInfo struct for PlayerStateInfo
 type PlayerStateInfo struct {
-	PositionTicks NullableInt64 `json:"PositionTicks,omitempty"`
-	CanSeek *bool `json:"CanSeek,omitempty"`
-	IsPaused *bool `json:"IsPaused,omitempty"`
-	IsMuted *bool `json:"IsMuted,omitempty"`
-	VolumeLevel NullableInt32 `json:"VolumeLevel,omitempty"`
-	AudioStreamIndex NullableInt32 `json:"AudioStreamIndex,omitempty"`
-	SubtitleStreamIndex NullableInt32 `json:"SubtitleStreamIndex,omitempty"`
-	MediaSourceId *string `json:"MediaSourceId,omitempty"`
-	MediaSource *MediaSourceInfo `json:"MediaSource,omitempty"`
-	PlayMethod *PlayMethod `json:"PlayMethod,omitempty"`
-	RepeatMode *RepeatMode `json:"RepeatMode,omitempty"`
-	SleepTimerMode *SleepTimerMode `json:"SleepTimerMode,omitempty"`
-	SleepTimerEndTime NullableTime `json:"SleepTimerEndTime,omitempty"`
-	SubtitleOffset *int32 `json:"SubtitleOffset,omitempty"`
-	Shuffle *bool `json:"Shuffle,omitempty"`
-	PlaybackRate *float64 `json:"PlaybackRate,omitempty"`
+	PositionTicks       NullableInt64    `json:"PositionTicks,omitempty"`
+	CanSeek             *bool            `json:"CanSeek,omitempty"`
+	IsPaused            *bool            `json:"IsPaused,omitempty"`
+	IsMuted             *bool            `json:"IsMuted,omitempty"`
+	VolumeLevel         NullableInt32    `json:"VolumeLevel,omitempty"`
+	AudioStreamIndex    NullableInt32    `json:"AudioStreamIndex,omitempty"`
+	SubtitleStreamIndex NullableInt32    `json:"SubtitleStreamIndex,omitempty"`
+	MediaSourceId       *string          `json:"MediaSourceId,omitempty"`
+	MediaSource         *MediaSourceInfo `json:"MediaSource,omitempty"`
+	PlayMethod          *PlayMethod      `json:"PlayMethod,omitempty"`
+	RepeatMode          *RepeatMode      `json:"RepeatMode,omitempty"`
+	SleepTimerMode      *SleepTimerMode  `json:"SleepTimerMode,omitempty"`
+	SleepTimerEndTime   NullableTime     `json:"SleepTimerEndTime,omitempty"`
+	SubtitleOffset      *int32           `json:"SubtitleOffset,omitempty"`
+	Shuffle             *bool            `json:"Shuffle,omitempty"`
+	PlaybackRate        *float64         `json:"PlaybackRate,omitempty"`
 }
 
 // NewPlayerStateInfo instantiates a new PlayerStateInfo object
@@ -87,6 +87,7 @@ func (o *PlayerStateInfo) HasPositionTicks() bool {
 func (o *PlayerStateInfo) SetPositionTicks(v int64) {
 	o.PositionTicks.Set(&v)
 }
+
 // SetPositionTicksNil sets the value for PositionTicks to be an explicit nil
 func (o *PlayerStateInfo) SetPositionTicksNil() {
 	o.PositionTicks.Set(nil)
@@ -225,6 +226,7 @@ func (o *PlayerStateInfo) HasVolumeLevel() bool {
 func (o *PlayerStateInfo) SetVolumeLevel(v int32) {
 	o.VolumeLevel.Set(&v)
 }
+
 // SetVolumeLevelNil sets the value for VolumeLevel to be an explicit nil
 func (o *PlayerStateInfo) SetVolumeLevelNil() {
 	o.VolumeLevel.Set(nil)
@@ -267,6 +269,7 @@ func (o *PlayerStateInfo) HasAudioStreamIndex() bool {
 func (o *PlayerStateInfo) SetAudioStreamIndex(v int32) {
 	o.AudioStreamIndex.Set(&v)
 }
+
 // SetAudioStreamIndexNil sets the value for AudioStreamIndex to be an explicit nil
 func (o *PlayerStateInfo) SetAudioStreamIndexNil() {
 	o.AudioStreamIndex.Set(nil)
@@ -309,6 +312,7 @@ func (o *PlayerStateInfo) HasSubtitleStreamIndex() bool {
 func (o *PlayerStateInfo) SetSubtitleStreamIndex(v int32) {
 	o.SubtitleStreamIndex.Set(&v)
 }
+
 // SetSubtitleStreamIndexNil sets the value for SubtitleStreamIndex to be an explicit nil
 func (o *PlayerStateInfo) SetSubtitleStreamIndexNil() {
 	o.SubtitleStreamIndex.Set(nil)
@@ -511,6 +515,7 @@ func (o *PlayerStateInfo) HasSleepTimerEndTime() bool {
 func (o *PlayerStateInfo) SetSleepTimerEndTime(v time.Time) {
 	o.SleepTimerEndTime.Set(&v)
 }
+
 // SetSleepTimerEndTimeNil sets the value for SleepTimerEndTime to be an explicit nil
 func (o *PlayerStateInfo) SetSleepTimerEndTimeNil() {
 	o.SleepTimerEndTime.Set(nil)
@@ -618,7 +623,7 @@ func (o *PlayerStateInfo) SetPlaybackRate(v float64) {
 }
 
 func (o PlayerStateInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -713,5 +718,3 @@ func (v *NullablePlayerStateInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

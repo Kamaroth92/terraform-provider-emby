@@ -20,13 +20,13 @@ type LiveTvRecordingStatus string
 
 // List of LiveTv.RecordingStatus
 const (
-	LIVETVRECORDINGSTATUS_NEW LiveTvRecordingStatus = "New"
-	LIVETVRECORDINGSTATUS_IN_PROGRESS LiveTvRecordingStatus = "InProgress"
-	LIVETVRECORDINGSTATUS_COMPLETED LiveTvRecordingStatus = "Completed"
-	LIVETVRECORDINGSTATUS_CANCELLED LiveTvRecordingStatus = "Cancelled"
-	LIVETVRECORDINGSTATUS_CONFLICTED_OK LiveTvRecordingStatus = "ConflictedOk"
+	LIVETVRECORDINGSTATUS_NEW               LiveTvRecordingStatus = "New"
+	LIVETVRECORDINGSTATUS_IN_PROGRESS       LiveTvRecordingStatus = "InProgress"
+	LIVETVRECORDINGSTATUS_COMPLETED         LiveTvRecordingStatus = "Completed"
+	LIVETVRECORDINGSTATUS_CANCELLED         LiveTvRecordingStatus = "Cancelled"
+	LIVETVRECORDINGSTATUS_CONFLICTED_OK     LiveTvRecordingStatus = "ConflictedOk"
 	LIVETVRECORDINGSTATUS_CONFLICTED_NOT_OK LiveTvRecordingStatus = "ConflictedNotOk"
-	LIVETVRECORDINGSTATUS_ERROR LiveTvRecordingStatus = "Error"
+	LIVETVRECORDINGSTATUS_ERROR             LiveTvRecordingStatus = "Error"
 )
 
 // All allowed values of LiveTvRecordingStatus enum
@@ -118,4 +118,3 @@ func (v *NullableLiveTvRecordingStatus) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

@@ -19,11 +19,11 @@ var _ MappedNullable = &SyncQualityOption{}
 
 // SyncQualityOption struct for SyncQualityOption
 type SyncQualityOption struct {
-	Name *string `json:"Name,omitempty"`
-	Description *string `json:"Description,omitempty"`
-	Id *string `json:"Id,omitempty"`
-	IsDefault *bool `json:"IsDefault,omitempty"`
-	IsOriginalQuality *bool `json:"IsOriginalQuality,omitempty"`
+	Name              *string `json:"Name,omitempty"`
+	Description       *string `json:"Description,omitempty"`
+	Id                *string `json:"Id,omitempty"`
+	IsDefault         *bool   `json:"IsDefault,omitempty"`
+	IsOriginalQuality *bool   `json:"IsOriginalQuality,omitempty"`
 }
 
 // NewSyncQualityOption instantiates a new SyncQualityOption object
@@ -204,7 +204,7 @@ func (o *SyncQualityOption) SetIsOriginalQuality(v bool) {
 }
 
 func (o SyncQualityOption) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -266,5 +266,3 @@ func (v *NullableSyncQualityOption) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

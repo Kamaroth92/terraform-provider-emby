@@ -24,10 +24,10 @@ const (
 	MEDIAPROTOCOL_HTTP MediaProtocol = "Http"
 	MEDIAPROTOCOL_RTMP MediaProtocol = "Rtmp"
 	MEDIAPROTOCOL_RTSP MediaProtocol = "Rtsp"
-	MEDIAPROTOCOL_UDP MediaProtocol = "Udp"
-	MEDIAPROTOCOL_RTP MediaProtocol = "Rtp"
-	MEDIAPROTOCOL_FTP MediaProtocol = "Ftp"
-	MEDIAPROTOCOL_MMS MediaProtocol = "Mms"
+	MEDIAPROTOCOL_UDP  MediaProtocol = "Udp"
+	MEDIAPROTOCOL_RTP  MediaProtocol = "Rtp"
+	MEDIAPROTOCOL_FTP  MediaProtocol = "Ftp"
+	MEDIAPROTOCOL_MMS  MediaProtocol = "Mms"
 )
 
 // All allowed values of MediaProtocol enum
@@ -120,4 +120,3 @@ func (v *NullableMediaProtocol) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

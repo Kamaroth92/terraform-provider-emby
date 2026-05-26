@@ -19,10 +19,10 @@ var _ MappedNullable = &ValidatePath{}
 
 // ValidatePath struct for ValidatePath
 type ValidatePath struct {
-	ValidateWriteable *bool `json:"ValidateWriteable,omitempty"`
-	IsFile NullableBool `json:"IsFile,omitempty"`
-	Username *string `json:"Username,omitempty"`
-	Password *string `json:"Password,omitempty"`
+	ValidateWriteable *bool        `json:"ValidateWriteable,omitempty"`
+	IsFile            NullableBool `json:"IsFile,omitempty"`
+	Username          *string      `json:"Username,omitempty"`
+	Password          *string      `json:"Password,omitempty"`
 }
 
 // NewValidatePath instantiates a new ValidatePath object
@@ -106,6 +106,7 @@ func (o *ValidatePath) HasIsFile() bool {
 func (o *ValidatePath) SetIsFile(v bool) {
 	o.IsFile.Set(&v)
 }
+
 // SetIsFileNil sets the value for IsFile to be an explicit nil
 func (o *ValidatePath) SetIsFileNil() {
 	o.IsFile.Set(nil)
@@ -181,7 +182,7 @@ func (o *ValidatePath) SetPassword(v string) {
 }
 
 func (o ValidatePath) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -240,5 +241,3 @@ func (v *NullableValidatePath) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

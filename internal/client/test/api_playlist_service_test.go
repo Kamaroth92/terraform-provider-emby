@@ -1,3 +1,5 @@
+// Copyright (c) HashiCorp, Inc.
+
 /*
 Emby Server REST API (BETA)
 
@@ -11,10 +13,10 @@ package embyclient
 
 import (
 	"context"
+	openapiclient "github.com/Kamaroth92/terraform-provider-emby/client"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func Test_embyclient_PlaylistServiceAPIService(t *testing.T) {
@@ -24,7 +26,7 @@ func Test_embyclient_PlaylistServiceAPIService(t *testing.T) {
 
 	t.Run("Test PlaylistServiceAPIService DeletePlaylistsByIdItems", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -37,7 +39,7 @@ func Test_embyclient_PlaylistServiceAPIService(t *testing.T) {
 
 	t.Run("Test PlaylistServiceAPIService GetPlaylistsByIdAddtoplaylistinfo", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -51,7 +53,7 @@ func Test_embyclient_PlaylistServiceAPIService(t *testing.T) {
 
 	t.Run("Test PlaylistServiceAPIService GetPlaylistsByIdItems", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -65,7 +67,7 @@ func Test_embyclient_PlaylistServiceAPIService(t *testing.T) {
 
 	t.Run("Test PlaylistServiceAPIService PostPlaylists", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.PlaylistServiceAPI.PostPlaylists(context.Background()).Execute()
 
@@ -77,7 +79,7 @@ func Test_embyclient_PlaylistServiceAPIService(t *testing.T) {
 
 	t.Run("Test PlaylistServiceAPIService PostPlaylistsByIdItems", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -91,7 +93,7 @@ func Test_embyclient_PlaylistServiceAPIService(t *testing.T) {
 
 	t.Run("Test PlaylistServiceAPIService PostPlaylistsByIdItemsByItemidMoveByNewindex", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var itemId int64
 		var id string
@@ -106,7 +108,7 @@ func Test_embyclient_PlaylistServiceAPIService(t *testing.T) {
 
 	t.Run("Test PlaylistServiceAPIService PostPlaylistsByIdItemsDelete", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 

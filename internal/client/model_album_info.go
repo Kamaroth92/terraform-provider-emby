@@ -20,20 +20,20 @@ var _ MappedNullable = &AlbumInfo{}
 
 // AlbumInfo struct for AlbumInfo
 type AlbumInfo struct {
-	AlbumArtists []string `json:"AlbumArtists,omitempty"`
-	SongInfos []SongInfo `json:"SongInfos,omitempty"`
-	Name *string `json:"Name,omitempty"`
-	Path *string `json:"Path,omitempty"`
-	MetadataLanguage *string `json:"MetadataLanguage,omitempty"`
-	MetadataCountryCode *string `json:"MetadataCountryCode,omitempty"`
-	MetadataLanguages []GlobalizationCultureDto `json:"MetadataLanguages,omitempty"`
-	ProviderIds *map[string]string `json:"ProviderIds,omitempty"`
-	Year NullableInt32 `json:"Year,omitempty"`
-	IndexNumber NullableInt32 `json:"IndexNumber,omitempty"`
-	ParentIndexNumber NullableInt32 `json:"ParentIndexNumber,omitempty"`
-	PremiereDate NullableTime `json:"PremiereDate,omitempty"`
-	IsAutomated *bool `json:"IsAutomated,omitempty"`
-	EnableAdultMetadata *bool `json:"EnableAdultMetadata,omitempty"`
+	AlbumArtists        []string                  `json:"AlbumArtists,omitempty"`
+	SongInfos           []SongInfo                `json:"SongInfos,omitempty"`
+	Name                *string                   `json:"Name,omitempty"`
+	Path                *string                   `json:"Path,omitempty"`
+	MetadataLanguage    *string                   `json:"MetadataLanguage,omitempty"`
+	MetadataCountryCode *string                   `json:"MetadataCountryCode,omitempty"`
+	MetadataLanguages   []GlobalizationCultureDto `json:"MetadataLanguages,omitempty"`
+	ProviderIds         *map[string]string        `json:"ProviderIds,omitempty"`
+	Year                NullableInt32             `json:"Year,omitempty"`
+	IndexNumber         NullableInt32             `json:"IndexNumber,omitempty"`
+	ParentIndexNumber   NullableInt32             `json:"ParentIndexNumber,omitempty"`
+	PremiereDate        NullableTime              `json:"PremiereDate,omitempty"`
+	IsAutomated         *bool                     `json:"IsAutomated,omitempty"`
+	EnableAdultMetadata *bool                     `json:"EnableAdultMetadata,omitempty"`
 }
 
 // NewAlbumInfo instantiates a new AlbumInfo object
@@ -341,6 +341,7 @@ func (o *AlbumInfo) HasYear() bool {
 func (o *AlbumInfo) SetYear(v int32) {
 	o.Year.Set(&v)
 }
+
 // SetYearNil sets the value for Year to be an explicit nil
 func (o *AlbumInfo) SetYearNil() {
 	o.Year.Set(nil)
@@ -383,6 +384,7 @@ func (o *AlbumInfo) HasIndexNumber() bool {
 func (o *AlbumInfo) SetIndexNumber(v int32) {
 	o.IndexNumber.Set(&v)
 }
+
 // SetIndexNumberNil sets the value for IndexNumber to be an explicit nil
 func (o *AlbumInfo) SetIndexNumberNil() {
 	o.IndexNumber.Set(nil)
@@ -425,6 +427,7 @@ func (o *AlbumInfo) HasParentIndexNumber() bool {
 func (o *AlbumInfo) SetParentIndexNumber(v int32) {
 	o.ParentIndexNumber.Set(&v)
 }
+
 // SetParentIndexNumberNil sets the value for ParentIndexNumber to be an explicit nil
 func (o *AlbumInfo) SetParentIndexNumberNil() {
 	o.ParentIndexNumber.Set(nil)
@@ -467,6 +470,7 @@ func (o *AlbumInfo) HasPremiereDate() bool {
 func (o *AlbumInfo) SetPremiereDate(v time.Time) {
 	o.PremiereDate.Set(&v)
 }
+
 // SetPremiereDateNil sets the value for PremiereDate to be an explicit nil
 func (o *AlbumInfo) SetPremiereDateNil() {
 	o.PremiereDate.Set(nil)
@@ -542,7 +546,7 @@ func (o *AlbumInfo) SetEnableAdultMetadata(v bool) {
 }
 
 func (o AlbumInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -631,5 +635,3 @@ func (v *NullableAlbumInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

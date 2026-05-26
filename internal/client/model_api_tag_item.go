@@ -20,7 +20,7 @@ var _ MappedNullable = &ApiTagItem{}
 // ApiTagItem struct for ApiTagItem
 type ApiTagItem struct {
 	Name *string `json:"Name,omitempty"`
-	Id *string `json:"Id,omitempty"`
+	Id   *string `json:"Id,omitempty"`
 }
 
 // NewApiTagItem instantiates a new ApiTagItem object
@@ -105,7 +105,7 @@ func (o *ApiTagItem) SetId(v string) {
 }
 
 func (o ApiTagItem) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -158,5 +158,3 @@ func (v *NullableApiTagItem) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

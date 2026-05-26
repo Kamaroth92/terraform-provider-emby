@@ -19,9 +19,9 @@ var _ MappedNullable = &PlaybackInfoResponse{}
 
 // PlaybackInfoResponse struct for PlaybackInfoResponse
 type PlaybackInfoResponse struct {
-	MediaSources []MediaSourceInfo `json:"MediaSources,omitempty"`
-	PlaySessionId *string `json:"PlaySessionId,omitempty"`
-	ErrorCode *PlaybackErrorCode `json:"ErrorCode,omitempty"`
+	MediaSources  []MediaSourceInfo  `json:"MediaSources,omitempty"`
+	PlaySessionId *string            `json:"PlaySessionId,omitempty"`
+	ErrorCode     *PlaybackErrorCode `json:"ErrorCode,omitempty"`
 }
 
 // NewPlaybackInfoResponse instantiates a new PlaybackInfoResponse object
@@ -138,7 +138,7 @@ func (o *PlaybackInfoResponse) SetErrorCode(v PlaybackErrorCode) {
 }
 
 func (o PlaybackInfoResponse) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -194,5 +194,3 @@ func (v *NullablePlaybackInfoResponse) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

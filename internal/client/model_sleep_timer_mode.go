@@ -20,9 +20,9 @@ type SleepTimerMode string
 
 // List of SleepTimerMode
 const (
-	SLEEPTIMERMODE_NONE SleepTimerMode = "None"
+	SLEEPTIMERMODE_NONE       SleepTimerMode = "None"
 	SLEEPTIMERMODE_AFTER_ITEM SleepTimerMode = "AfterItem"
-	SLEEPTIMERMODE_AT_TIME SleepTimerMode = "AtTime"
+	SLEEPTIMERMODE_AT_TIME    SleepTimerMode = "AtTime"
 )
 
 // All allowed values of SleepTimerMode enum
@@ -110,4 +110,3 @@ func (v *NullableSleepTimerMode) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

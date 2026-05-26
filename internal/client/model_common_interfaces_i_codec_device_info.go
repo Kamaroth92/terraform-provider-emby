@@ -19,21 +19,21 @@ var _ MappedNullable = &CommonInterfacesICodecDeviceInfo{}
 
 // CommonInterfacesICodecDeviceInfo struct for CommonInterfacesICodecDeviceInfo
 type CommonInterfacesICodecDeviceInfo struct {
-	Capabilities *CommonInterfacesICodecDeviceCapabilities `json:"Capabilities,omitempty"`
-	Adapter *int32 `json:"Adapter,omitempty"`
-	Name *string `json:"Name,omitempty"`
-	Desription *string `json:"Desription,omitempty"`
-	Driver *string `json:"Driver,omitempty"`
-	DriverVersion *Version `json:"DriverVersion,omitempty"`
-	ApiVersion *Version `json:"ApiVersion,omitempty"`
-	VendorId *int32 `json:"VendorId,omitempty"`
-	DeviceId *int32 `json:"DeviceId,omitempty"`
-	DeviceIdentifier *string `json:"DeviceIdentifier,omitempty"`
-	HardwareContextFramework *SecondaryFrameworks `json:"HardwareContextFramework,omitempty"`
-	DevPath *string `json:"DevPath,omitempty"`
-	DrmNode *string `json:"DrmNode,omitempty"`
-	VendorName *string `json:"VendorName,omitempty"`
-	DeviceName *string `json:"DeviceName,omitempty"`
+	Capabilities             *CommonInterfacesICodecDeviceCapabilities `json:"Capabilities,omitempty"`
+	Adapter                  *int32                                    `json:"Adapter,omitempty"`
+	Name                     *string                                   `json:"Name,omitempty"`
+	Desription               *string                                   `json:"Desription,omitempty"`
+	Driver                   *string                                   `json:"Driver,omitempty"`
+	DriverVersion            *Version                                  `json:"DriverVersion,omitempty"`
+	ApiVersion               *Version                                  `json:"ApiVersion,omitempty"`
+	VendorId                 *int32                                    `json:"VendorId,omitempty"`
+	DeviceId                 *int32                                    `json:"DeviceId,omitempty"`
+	DeviceIdentifier         *string                                   `json:"DeviceIdentifier,omitempty"`
+	HardwareContextFramework *SecondaryFrameworks                      `json:"HardwareContextFramework,omitempty"`
+	DevPath                  *string                                   `json:"DevPath,omitempty"`
+	DrmNode                  *string                                   `json:"DrmNode,omitempty"`
+	VendorName               *string                                   `json:"VendorName,omitempty"`
+	DeviceName               *string                                   `json:"DeviceName,omitempty"`
 }
 
 // NewCommonInterfacesICodecDeviceInfo instantiates a new CommonInterfacesICodecDeviceInfo object
@@ -534,7 +534,7 @@ func (o *CommonInterfacesICodecDeviceInfo) SetDeviceName(v string) {
 }
 
 func (o CommonInterfacesICodecDeviceInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -626,5 +626,3 @@ func (v *NullableCommonInterfacesICodecDeviceInfo) UnmarshalJSON(src []byte) err
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

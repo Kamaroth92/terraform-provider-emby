@@ -19,7 +19,7 @@ var _ MappedNullable = &SyncJobCreationResult{}
 
 // SyncJobCreationResult struct for SyncJobCreationResult
 type SyncJobCreationResult struct {
-	Job *SyncJob `json:"Job,omitempty"`
+	Job      *SyncJob      `json:"Job,omitempty"`
 	JobItems []SyncJobItem `json:"JobItems,omitempty"`
 }
 
@@ -105,7 +105,7 @@ func (o *SyncJobCreationResult) SetJobItems(v []SyncJobItem) {
 }
 
 func (o SyncJobCreationResult) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -158,5 +158,3 @@ func (v *NullableSyncJobCreationResult) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

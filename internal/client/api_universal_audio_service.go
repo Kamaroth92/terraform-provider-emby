@@ -19,17 +19,16 @@ import (
 	"strings"
 )
 
-
 type UniversalAudioServiceAPI interface {
 
 	/*
-	GetAudioByIdUniversal Gets an audio stream
+		GetAudioByIdUniversal Gets an audio stream
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiGetAudioByIdUniversalRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiGetAudioByIdUniversalRequest
 	*/
 	GetAudioByIdUniversal(ctx context.Context, id string) ApiGetAudioByIdUniversalRequest
 
@@ -37,14 +36,14 @@ type UniversalAudioServiceAPI interface {
 	GetAudioByIdUniversalExecute(r ApiGetAudioByIdUniversalRequest) (*http.Response, error)
 
 	/*
-	GetAudioByIdUniversalByContainer Gets an audio stream
+		GetAudioByIdUniversalByContainer Gets an audio stream
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@param container
-	@return ApiGetAudioByIdUniversalByContainerRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@param container
+		@return ApiGetAudioByIdUniversalByContainerRequest
 	*/
 	GetAudioByIdUniversalByContainer(ctx context.Context, id string, container string) ApiGetAudioByIdUniversalByContainerRequest
 
@@ -52,13 +51,13 @@ type UniversalAudioServiceAPI interface {
 	GetAudioByIdUniversalByContainerExecute(r ApiGetAudioByIdUniversalByContainerRequest) (*http.Response, error)
 
 	/*
-	HeadAudioByIdUniversal Gets an audio stream
+		HeadAudioByIdUniversal Gets an audio stream
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiHeadAudioByIdUniversalRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiHeadAudioByIdUniversalRequest
 	*/
 	HeadAudioByIdUniversal(ctx context.Context, id string) ApiHeadAudioByIdUniversalRequest
 
@@ -66,14 +65,14 @@ type UniversalAudioServiceAPI interface {
 	HeadAudioByIdUniversalExecute(r ApiHeadAudioByIdUniversalRequest) (*http.Response, error)
 
 	/*
-	HeadAudioByIdUniversalByContainer Gets an audio stream
+		HeadAudioByIdUniversalByContainer Gets an audio stream
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@param container
-	@return ApiHeadAudioByIdUniversalByContainerRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@param container
+		@return ApiHeadAudioByIdUniversalByContainerRequest
 	*/
 	HeadAudioByIdUniversalByContainer(ctx context.Context, id string, container string) ApiHeadAudioByIdUniversalByContainerRequest
 
@@ -85,10 +84,10 @@ type UniversalAudioServiceAPI interface {
 type UniversalAudioServiceAPIService service
 
 type ApiGetAudioByIdUniversalRequest struct {
-	ctx context.Context
-	ApiService UniversalAudioServiceAPI
-	id string
-	deviceId *string
+	ctx            context.Context
+	ApiService     UniversalAudioServiceAPI
+	id             string
+	deviceId       *string
 	startTimeTicks *int64
 }
 
@@ -113,24 +112,24 @@ GetAudioByIdUniversal Gets an audio stream
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiGetAudioByIdUniversalRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiGetAudioByIdUniversalRequest
 */
 func (a *UniversalAudioServiceAPIService) GetAudioByIdUniversal(ctx context.Context, id string) ApiGetAudioByIdUniversalRequest {
 	return ApiGetAudioByIdUniversalRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *UniversalAudioServiceAPIService) GetAudioByIdUniversalExecute(r ApiGetAudioByIdUniversalRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UniversalAudioServiceAPIService.GetAudioByIdUniversal")
@@ -211,11 +210,11 @@ func (a *UniversalAudioServiceAPIService) GetAudioByIdUniversalExecute(r ApiGetA
 }
 
 type ApiGetAudioByIdUniversalByContainerRequest struct {
-	ctx context.Context
-	ApiService UniversalAudioServiceAPI
-	id string
-	container string
-	deviceId *string
+	ctx            context.Context
+	ApiService     UniversalAudioServiceAPI
+	id             string
+	container      string
+	deviceId       *string
 	startTimeTicks *int64
 }
 
@@ -240,26 +239,26 @@ GetAudioByIdUniversalByContainer Gets an audio stream
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @param container
- @return ApiGetAudioByIdUniversalByContainerRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@param container
+	@return ApiGetAudioByIdUniversalByContainerRequest
 */
 func (a *UniversalAudioServiceAPIService) GetAudioByIdUniversalByContainer(ctx context.Context, id string, container string) ApiGetAudioByIdUniversalByContainerRequest {
 	return ApiGetAudioByIdUniversalByContainerRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
-		container: container,
+		ctx:        ctx,
+		id:         id,
+		container:  container,
 	}
 }
 
 // Execute executes the request
 func (a *UniversalAudioServiceAPIService) GetAudioByIdUniversalByContainerExecute(r ApiGetAudioByIdUniversalByContainerRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UniversalAudioServiceAPIService.GetAudioByIdUniversalByContainer")
@@ -341,10 +340,10 @@ func (a *UniversalAudioServiceAPIService) GetAudioByIdUniversalByContainerExecut
 }
 
 type ApiHeadAudioByIdUniversalRequest struct {
-	ctx context.Context
-	ApiService UniversalAudioServiceAPI
-	id string
-	deviceId *string
+	ctx            context.Context
+	ApiService     UniversalAudioServiceAPI
+	id             string
+	deviceId       *string
 	startTimeTicks *int64
 }
 
@@ -369,24 +368,24 @@ HeadAudioByIdUniversal Gets an audio stream
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiHeadAudioByIdUniversalRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiHeadAudioByIdUniversalRequest
 */
 func (a *UniversalAudioServiceAPIService) HeadAudioByIdUniversal(ctx context.Context, id string) ApiHeadAudioByIdUniversalRequest {
 	return ApiHeadAudioByIdUniversalRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *UniversalAudioServiceAPIService) HeadAudioByIdUniversalExecute(r ApiHeadAudioByIdUniversalRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodHead
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodHead
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UniversalAudioServiceAPIService.HeadAudioByIdUniversal")
@@ -467,11 +466,11 @@ func (a *UniversalAudioServiceAPIService) HeadAudioByIdUniversalExecute(r ApiHea
 }
 
 type ApiHeadAudioByIdUniversalByContainerRequest struct {
-	ctx context.Context
-	ApiService UniversalAudioServiceAPI
-	id string
-	container string
-	deviceId *string
+	ctx            context.Context
+	ApiService     UniversalAudioServiceAPI
+	id             string
+	container      string
+	deviceId       *string
 	startTimeTicks *int64
 }
 
@@ -496,26 +495,26 @@ HeadAudioByIdUniversalByContainer Gets an audio stream
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @param container
- @return ApiHeadAudioByIdUniversalByContainerRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@param container
+	@return ApiHeadAudioByIdUniversalByContainerRequest
 */
 func (a *UniversalAudioServiceAPIService) HeadAudioByIdUniversalByContainer(ctx context.Context, id string, container string) ApiHeadAudioByIdUniversalByContainerRequest {
 	return ApiHeadAudioByIdUniversalByContainerRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
-		container: container,
+		ctx:        ctx,
+		id:         id,
+		container:  container,
 	}
 }
 
 // Execute executes the request
 func (a *UniversalAudioServiceAPIService) HeadAudioByIdUniversalByContainerExecute(r ApiHeadAudioByIdUniversalByContainerRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodHead
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodHead
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UniversalAudioServiceAPIService.HeadAudioByIdUniversalByContainer")

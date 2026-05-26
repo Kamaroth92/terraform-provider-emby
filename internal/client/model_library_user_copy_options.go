@@ -20,9 +20,9 @@ type LibraryUserCopyOptions string
 
 // List of Library.UserCopyOptions
 const (
-	LIBRARYUSERCOPYOPTIONS_USER_POLICY LibraryUserCopyOptions = "UserPolicy"
+	LIBRARYUSERCOPYOPTIONS_USER_POLICY        LibraryUserCopyOptions = "UserPolicy"
 	LIBRARYUSERCOPYOPTIONS_USER_CONFIGURATION LibraryUserCopyOptions = "UserConfiguration"
-	LIBRARYUSERCOPYOPTIONS_USER_DATA LibraryUserCopyOptions = "UserData"
+	LIBRARYUSERCOPYOPTIONS_USER_DATA          LibraryUserCopyOptions = "UserData"
 )
 
 // All allowed values of LibraryUserCopyOptions enum
@@ -110,4 +110,3 @@ func (v *NullableLibraryUserCopyOptions) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

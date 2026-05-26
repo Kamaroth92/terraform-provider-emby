@@ -21,7 +21,7 @@ var _ MappedNullable = &LiveTvGuideInfo{}
 // LiveTvGuideInfo struct for LiveTvGuideInfo
 type LiveTvGuideInfo struct {
 	StartDate *time.Time `json:"StartDate,omitempty"`
-	EndDate *time.Time `json:"EndDate,omitempty"`
+	EndDate   *time.Time `json:"EndDate,omitempty"`
 }
 
 // NewLiveTvGuideInfo instantiates a new LiveTvGuideInfo object
@@ -106,7 +106,7 @@ func (o *LiveTvGuideInfo) SetEndDate(v time.Time) {
 }
 
 func (o LiveTvGuideInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -159,5 +159,3 @@ func (v *NullableLiveTvGuideInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

@@ -19,18 +19,17 @@ import (
 	"strings"
 )
 
-
 type AudioServiceAPI interface {
 
 	/*
-	GetAudioByIdByStreamfilename Gets an audio stream
+		GetAudioByIdByStreamfilename Gets an audio stream
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param streamFileName
-	@param id Item Id
-	@return ApiGetAudioByIdByStreamfilenameRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param streamFileName
+		@param id Item Id
+		@return ApiGetAudioByIdByStreamfilenameRequest
 	*/
 	GetAudioByIdByStreamfilename(ctx context.Context, streamFileName string, id string) ApiGetAudioByIdByStreamfilenameRequest
 
@@ -38,13 +37,13 @@ type AudioServiceAPI interface {
 	GetAudioByIdByStreamfilenameExecute(r ApiGetAudioByIdByStreamfilenameRequest) (*http.Response, error)
 
 	/*
-	GetAudioByIdStream Gets an audio stream
+		GetAudioByIdStream Gets an audio stream
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiGetAudioByIdStreamRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiGetAudioByIdStreamRequest
 	*/
 	GetAudioByIdStream(ctx context.Context, id string) ApiGetAudioByIdStreamRequest
 
@@ -52,14 +51,14 @@ type AudioServiceAPI interface {
 	GetAudioByIdStreamExecute(r ApiGetAudioByIdStreamRequest) (*http.Response, error)
 
 	/*
-	GetAudioByIdStreamByContainer Gets an audio stream
+		GetAudioByIdStreamByContainer Gets an audio stream
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@param container Container
-	@return ApiGetAudioByIdStreamByContainerRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@param container Container
+		@return ApiGetAudioByIdStreamByContainerRequest
 	*/
 	GetAudioByIdStreamByContainer(ctx context.Context, id string, container string) ApiGetAudioByIdStreamByContainerRequest
 
@@ -67,14 +66,14 @@ type AudioServiceAPI interface {
 	GetAudioByIdStreamByContainerExecute(r ApiGetAudioByIdStreamByContainerRequest) (*http.Response, error)
 
 	/*
-	HeadAudioByIdByStreamfilename Gets an audio stream
+		HeadAudioByIdByStreamfilename Gets an audio stream
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param streamFileName
-	@param id Item Id
-	@return ApiHeadAudioByIdByStreamfilenameRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param streamFileName
+		@param id Item Id
+		@return ApiHeadAudioByIdByStreamfilenameRequest
 	*/
 	HeadAudioByIdByStreamfilename(ctx context.Context, streamFileName string, id string) ApiHeadAudioByIdByStreamfilenameRequest
 
@@ -82,13 +81,13 @@ type AudioServiceAPI interface {
 	HeadAudioByIdByStreamfilenameExecute(r ApiHeadAudioByIdByStreamfilenameRequest) (*http.Response, error)
 
 	/*
-	HeadAudioByIdStream Gets an audio stream
+		HeadAudioByIdStream Gets an audio stream
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiHeadAudioByIdStreamRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiHeadAudioByIdStreamRequest
 	*/
 	HeadAudioByIdStream(ctx context.Context, id string) ApiHeadAudioByIdStreamRequest
 
@@ -96,14 +95,14 @@ type AudioServiceAPI interface {
 	HeadAudioByIdStreamExecute(r ApiHeadAudioByIdStreamRequest) (*http.Response, error)
 
 	/*
-	HeadAudioByIdStreamByContainer Gets an audio stream
+		HeadAudioByIdStreamByContainer Gets an audio stream
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@param container Container
-	@return ApiHeadAudioByIdStreamByContainerRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@param container Container
+		@return ApiHeadAudioByIdStreamByContainerRequest
 	*/
 	HeadAudioByIdStreamByContainer(ctx context.Context, id string, container string) ApiHeadAudioByIdStreamByContainerRequest
 
@@ -115,33 +114,33 @@ type AudioServiceAPI interface {
 type AudioServiceAPIService service
 
 type ApiGetAudioByIdByStreamfilenameRequest struct {
-	ctx context.Context
-	ApiService AudioServiceAPI
-	streamFileName string
-	id string
-	container *string
-	deviceProfileId *string
-	deviceId *string
-	audioCodec *string
+	ctx                  context.Context
+	ApiService           AudioServiceAPI
+	streamFileName       string
+	id                   string
+	container            *string
+	deviceProfileId      *string
+	deviceId             *string
+	audioCodec           *string
 	enableAutoStreamCopy *bool
-	audioSampleRate *int32
-	audioBitRate *int32
-	audioChannels *int32
-	maxAudioChannels *int32
-	static *bool
-	copyTimestamps *bool
-	startTimeTicks *int64
-	width *int32
-	height *int32
-	maxWidth *int32
-	maxHeight *int32
-	videoBitRate *int32
-	subtitleStreamIndex *int32
-	subtitleMethod *SubtitleDeliveryMethod
-	maxVideoBitDepth *int32
-	videoCodec *string
-	audioStreamIndex *int32
-	videoStreamIndex *int32
+	audioSampleRate      *int32
+	audioBitRate         *int32
+	audioChannels        *int32
+	maxAudioChannels     *int32
+	static               *bool
+	copyTimestamps       *bool
+	startTimeTicks       *int64
+	width                *int32
+	height               *int32
+	maxWidth             *int32
+	maxHeight            *int32
+	videoBitRate         *int32
+	subtitleStreamIndex  *int32
+	subtitleMethod       *SubtitleDeliveryMethod
+	maxVideoBitDepth     *int32
+	videoCodec           *string
+	audioStreamIndex     *int32
+	videoStreamIndex     *int32
 }
 
 // Container
@@ -291,26 +290,26 @@ GetAudioByIdByStreamfilename Gets an audio stream
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param streamFileName
- @param id Item Id
- @return ApiGetAudioByIdByStreamfilenameRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param streamFileName
+	@param id Item Id
+	@return ApiGetAudioByIdByStreamfilenameRequest
 */
 func (a *AudioServiceAPIService) GetAudioByIdByStreamfilename(ctx context.Context, streamFileName string, id string) ApiGetAudioByIdByStreamfilenameRequest {
 	return ApiGetAudioByIdByStreamfilenameRequest{
-		ApiService: a,
-		ctx: ctx,
+		ApiService:     a,
+		ctx:            ctx,
 		streamFileName: streamFileName,
-		id: id,
+		id:             id,
 	}
 }
 
 // Execute executes the request
 func (a *AudioServiceAPIService) GetAudioByIdByStreamfilenameExecute(r ApiGetAudioByIdByStreamfilenameRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AudioServiceAPIService.GetAudioByIdByStreamfilename")
@@ -456,32 +455,32 @@ func (a *AudioServiceAPIService) GetAudioByIdByStreamfilenameExecute(r ApiGetAud
 }
 
 type ApiGetAudioByIdStreamRequest struct {
-	ctx context.Context
-	ApiService AudioServiceAPI
-	id string
-	container *string
-	deviceProfileId *string
-	deviceId *string
-	audioCodec *string
+	ctx                  context.Context
+	ApiService           AudioServiceAPI
+	id                   string
+	container            *string
+	deviceProfileId      *string
+	deviceId             *string
+	audioCodec           *string
 	enableAutoStreamCopy *bool
-	audioSampleRate *int32
-	audioBitRate *int32
-	audioChannels *int32
-	maxAudioChannels *int32
-	static *bool
-	copyTimestamps *bool
-	startTimeTicks *int64
-	width *int32
-	height *int32
-	maxWidth *int32
-	maxHeight *int32
-	videoBitRate *int32
-	subtitleStreamIndex *int32
-	subtitleMethod *SubtitleDeliveryMethod
-	maxVideoBitDepth *int32
-	videoCodec *string
-	audioStreamIndex *int32
-	videoStreamIndex *int32
+	audioSampleRate      *int32
+	audioBitRate         *int32
+	audioChannels        *int32
+	maxAudioChannels     *int32
+	static               *bool
+	copyTimestamps       *bool
+	startTimeTicks       *int64
+	width                *int32
+	height               *int32
+	maxWidth             *int32
+	maxHeight            *int32
+	videoBitRate         *int32
+	subtitleStreamIndex  *int32
+	subtitleMethod       *SubtitleDeliveryMethod
+	maxVideoBitDepth     *int32
+	videoCodec           *string
+	audioStreamIndex     *int32
+	videoStreamIndex     *int32
 }
 
 // Container
@@ -631,24 +630,24 @@ GetAudioByIdStream Gets an audio stream
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiGetAudioByIdStreamRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiGetAudioByIdStreamRequest
 */
 func (a *AudioServiceAPIService) GetAudioByIdStream(ctx context.Context, id string) ApiGetAudioByIdStreamRequest {
 	return ApiGetAudioByIdStreamRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *AudioServiceAPIService) GetAudioByIdStreamExecute(r ApiGetAudioByIdStreamRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AudioServiceAPIService.GetAudioByIdStream")
@@ -793,32 +792,32 @@ func (a *AudioServiceAPIService) GetAudioByIdStreamExecute(r ApiGetAudioByIdStre
 }
 
 type ApiGetAudioByIdStreamByContainerRequest struct {
-	ctx context.Context
-	ApiService AudioServiceAPI
-	id string
-	container string
-	deviceProfileId *string
-	deviceId *string
-	audioCodec *string
+	ctx                  context.Context
+	ApiService           AudioServiceAPI
+	id                   string
+	container            string
+	deviceProfileId      *string
+	deviceId             *string
+	audioCodec           *string
 	enableAutoStreamCopy *bool
-	audioSampleRate *int32
-	audioBitRate *int32
-	audioChannels *int32
-	maxAudioChannels *int32
-	static *bool
-	copyTimestamps *bool
-	startTimeTicks *int64
-	width *int32
-	height *int32
-	maxWidth *int32
-	maxHeight *int32
-	videoBitRate *int32
-	subtitleStreamIndex *int32
-	subtitleMethod *SubtitleDeliveryMethod
-	maxVideoBitDepth *int32
-	videoCodec *string
-	audioStreamIndex *int32
-	videoStreamIndex *int32
+	audioSampleRate      *int32
+	audioBitRate         *int32
+	audioChannels        *int32
+	maxAudioChannels     *int32
+	static               *bool
+	copyTimestamps       *bool
+	startTimeTicks       *int64
+	width                *int32
+	height               *int32
+	maxWidth             *int32
+	maxHeight            *int32
+	videoBitRate         *int32
+	subtitleStreamIndex  *int32
+	subtitleMethod       *SubtitleDeliveryMethod
+	maxVideoBitDepth     *int32
+	videoCodec           *string
+	audioStreamIndex     *int32
+	videoStreamIndex     *int32
 }
 
 // Optional. The dlna device profile id to utilize.
@@ -962,26 +961,26 @@ GetAudioByIdStreamByContainer Gets an audio stream
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @param container Container
- @return ApiGetAudioByIdStreamByContainerRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@param container Container
+	@return ApiGetAudioByIdStreamByContainerRequest
 */
 func (a *AudioServiceAPIService) GetAudioByIdStreamByContainer(ctx context.Context, id string, container string) ApiGetAudioByIdStreamByContainerRequest {
 	return ApiGetAudioByIdStreamByContainerRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
-		container: container,
+		ctx:        ctx,
+		id:         id,
+		container:  container,
 	}
 }
 
 // Execute executes the request
 func (a *AudioServiceAPIService) GetAudioByIdStreamByContainerExecute(r ApiGetAudioByIdStreamByContainerRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AudioServiceAPIService.GetAudioByIdStreamByContainer")
@@ -1123,33 +1122,33 @@ func (a *AudioServiceAPIService) GetAudioByIdStreamByContainerExecute(r ApiGetAu
 }
 
 type ApiHeadAudioByIdByStreamfilenameRequest struct {
-	ctx context.Context
-	ApiService AudioServiceAPI
-	streamFileName string
-	id string
-	container *string
-	deviceProfileId *string
-	deviceId *string
-	audioCodec *string
+	ctx                  context.Context
+	ApiService           AudioServiceAPI
+	streamFileName       string
+	id                   string
+	container            *string
+	deviceProfileId      *string
+	deviceId             *string
+	audioCodec           *string
 	enableAutoStreamCopy *bool
-	audioSampleRate *int32
-	audioBitRate *int32
-	audioChannels *int32
-	maxAudioChannels *int32
-	static *bool
-	copyTimestamps *bool
-	startTimeTicks *int64
-	width *int32
-	height *int32
-	maxWidth *int32
-	maxHeight *int32
-	videoBitRate *int32
-	subtitleStreamIndex *int32
-	subtitleMethod *SubtitleDeliveryMethod
-	maxVideoBitDepth *int32
-	videoCodec *string
-	audioStreamIndex *int32
-	videoStreamIndex *int32
+	audioSampleRate      *int32
+	audioBitRate         *int32
+	audioChannels        *int32
+	maxAudioChannels     *int32
+	static               *bool
+	copyTimestamps       *bool
+	startTimeTicks       *int64
+	width                *int32
+	height               *int32
+	maxWidth             *int32
+	maxHeight            *int32
+	videoBitRate         *int32
+	subtitleStreamIndex  *int32
+	subtitleMethod       *SubtitleDeliveryMethod
+	maxVideoBitDepth     *int32
+	videoCodec           *string
+	audioStreamIndex     *int32
+	videoStreamIndex     *int32
 }
 
 // Container
@@ -1299,26 +1298,26 @@ HeadAudioByIdByStreamfilename Gets an audio stream
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param streamFileName
- @param id Item Id
- @return ApiHeadAudioByIdByStreamfilenameRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param streamFileName
+	@param id Item Id
+	@return ApiHeadAudioByIdByStreamfilenameRequest
 */
 func (a *AudioServiceAPIService) HeadAudioByIdByStreamfilename(ctx context.Context, streamFileName string, id string) ApiHeadAudioByIdByStreamfilenameRequest {
 	return ApiHeadAudioByIdByStreamfilenameRequest{
-		ApiService: a,
-		ctx: ctx,
+		ApiService:     a,
+		ctx:            ctx,
 		streamFileName: streamFileName,
-		id: id,
+		id:             id,
 	}
 }
 
 // Execute executes the request
 func (a *AudioServiceAPIService) HeadAudioByIdByStreamfilenameExecute(r ApiHeadAudioByIdByStreamfilenameRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodHead
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodHead
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AudioServiceAPIService.HeadAudioByIdByStreamfilename")
@@ -1464,32 +1463,32 @@ func (a *AudioServiceAPIService) HeadAudioByIdByStreamfilenameExecute(r ApiHeadA
 }
 
 type ApiHeadAudioByIdStreamRequest struct {
-	ctx context.Context
-	ApiService AudioServiceAPI
-	id string
-	container *string
-	deviceProfileId *string
-	deviceId *string
-	audioCodec *string
+	ctx                  context.Context
+	ApiService           AudioServiceAPI
+	id                   string
+	container            *string
+	deviceProfileId      *string
+	deviceId             *string
+	audioCodec           *string
 	enableAutoStreamCopy *bool
-	audioSampleRate *int32
-	audioBitRate *int32
-	audioChannels *int32
-	maxAudioChannels *int32
-	static *bool
-	copyTimestamps *bool
-	startTimeTicks *int64
-	width *int32
-	height *int32
-	maxWidth *int32
-	maxHeight *int32
-	videoBitRate *int32
-	subtitleStreamIndex *int32
-	subtitleMethod *SubtitleDeliveryMethod
-	maxVideoBitDepth *int32
-	videoCodec *string
-	audioStreamIndex *int32
-	videoStreamIndex *int32
+	audioSampleRate      *int32
+	audioBitRate         *int32
+	audioChannels        *int32
+	maxAudioChannels     *int32
+	static               *bool
+	copyTimestamps       *bool
+	startTimeTicks       *int64
+	width                *int32
+	height               *int32
+	maxWidth             *int32
+	maxHeight            *int32
+	videoBitRate         *int32
+	subtitleStreamIndex  *int32
+	subtitleMethod       *SubtitleDeliveryMethod
+	maxVideoBitDepth     *int32
+	videoCodec           *string
+	audioStreamIndex     *int32
+	videoStreamIndex     *int32
 }
 
 // Container
@@ -1639,24 +1638,24 @@ HeadAudioByIdStream Gets an audio stream
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiHeadAudioByIdStreamRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiHeadAudioByIdStreamRequest
 */
 func (a *AudioServiceAPIService) HeadAudioByIdStream(ctx context.Context, id string) ApiHeadAudioByIdStreamRequest {
 	return ApiHeadAudioByIdStreamRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
 func (a *AudioServiceAPIService) HeadAudioByIdStreamExecute(r ApiHeadAudioByIdStreamRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodHead
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodHead
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AudioServiceAPIService.HeadAudioByIdStream")
@@ -1801,32 +1800,32 @@ func (a *AudioServiceAPIService) HeadAudioByIdStreamExecute(r ApiHeadAudioByIdSt
 }
 
 type ApiHeadAudioByIdStreamByContainerRequest struct {
-	ctx context.Context
-	ApiService AudioServiceAPI
-	id string
-	container string
-	deviceProfileId *string
-	deviceId *string
-	audioCodec *string
+	ctx                  context.Context
+	ApiService           AudioServiceAPI
+	id                   string
+	container            string
+	deviceProfileId      *string
+	deviceId             *string
+	audioCodec           *string
 	enableAutoStreamCopy *bool
-	audioSampleRate *int32
-	audioBitRate *int32
-	audioChannels *int32
-	maxAudioChannels *int32
-	static *bool
-	copyTimestamps *bool
-	startTimeTicks *int64
-	width *int32
-	height *int32
-	maxWidth *int32
-	maxHeight *int32
-	videoBitRate *int32
-	subtitleStreamIndex *int32
-	subtitleMethod *SubtitleDeliveryMethod
-	maxVideoBitDepth *int32
-	videoCodec *string
-	audioStreamIndex *int32
-	videoStreamIndex *int32
+	audioSampleRate      *int32
+	audioBitRate         *int32
+	audioChannels        *int32
+	maxAudioChannels     *int32
+	static               *bool
+	copyTimestamps       *bool
+	startTimeTicks       *int64
+	width                *int32
+	height               *int32
+	maxWidth             *int32
+	maxHeight            *int32
+	videoBitRate         *int32
+	subtitleStreamIndex  *int32
+	subtitleMethod       *SubtitleDeliveryMethod
+	maxVideoBitDepth     *int32
+	videoCodec           *string
+	audioStreamIndex     *int32
+	videoStreamIndex     *int32
 }
 
 // Optional. The dlna device profile id to utilize.
@@ -1970,26 +1969,26 @@ HeadAudioByIdStreamByContainer Gets an audio stream
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @param container Container
- @return ApiHeadAudioByIdStreamByContainerRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@param container Container
+	@return ApiHeadAudioByIdStreamByContainerRequest
 */
 func (a *AudioServiceAPIService) HeadAudioByIdStreamByContainer(ctx context.Context, id string, container string) ApiHeadAudioByIdStreamByContainerRequest {
 	return ApiHeadAudioByIdStreamByContainerRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
-		container: container,
+		ctx:        ctx,
+		id:         id,
+		container:  container,
 	}
 }
 
 // Execute executes the request
 func (a *AudioServiceAPIService) HeadAudioByIdStreamByContainerExecute(r ApiHeadAudioByIdStreamByContainerRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodHead
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodHead
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "AudioServiceAPIService.HeadAudioByIdStreamByContainer")

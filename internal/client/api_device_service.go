@@ -19,16 +19,15 @@ import (
 	"os"
 )
 
-
 type DeviceServiceAPI interface {
 
 	/*
-	DeleteDevices Deletes a device
+		DeleteDevices Deletes a device
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiDeleteDevicesRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiDeleteDevicesRequest
 	*/
 	DeleteDevices(ctx context.Context) ApiDeleteDevicesRequest
 
@@ -36,12 +35,12 @@ type DeviceServiceAPI interface {
 	DeleteDevicesExecute(r ApiDeleteDevicesRequest) (*http.Response, error)
 
 	/*
-	GetDevices Gets all devices
+		GetDevices Gets all devices
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetDevicesRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetDevicesRequest
 	*/
 	GetDevices(ctx context.Context) ApiGetDevicesRequest
 
@@ -50,12 +49,12 @@ type DeviceServiceAPI interface {
 	GetDevicesExecute(r ApiGetDevicesRequest) (*QueryResultDevicesDeviceInfo, *http.Response, error)
 
 	/*
-	GetDevicesCamerauploads Gets camera upload history for a device
+		GetDevicesCamerauploads Gets camera upload history for a device
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetDevicesCamerauploadsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetDevicesCamerauploadsRequest
 	*/
 	GetDevicesCamerauploads(ctx context.Context) ApiGetDevicesCamerauploadsRequest
 
@@ -64,12 +63,12 @@ type DeviceServiceAPI interface {
 	GetDevicesCamerauploadsExecute(r ApiGetDevicesCamerauploadsRequest) (*DevicesContentUploadHistory, *http.Response, error)
 
 	/*
-	GetDevicesInfo Gets info for a device
+		GetDevicesInfo Gets info for a device
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetDevicesInfoRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetDevicesInfoRequest
 	*/
 	GetDevicesInfo(ctx context.Context) ApiGetDevicesInfoRequest
 
@@ -78,12 +77,12 @@ type DeviceServiceAPI interface {
 	GetDevicesInfoExecute(r ApiGetDevicesInfoRequest) (*DevicesDeviceInfo, *http.Response, error)
 
 	/*
-	GetDevicesOptions Gets options for a device
+		GetDevicesOptions Gets options for a device
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetDevicesOptionsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetDevicesOptionsRequest
 	*/
 	GetDevicesOptions(ctx context.Context) ApiGetDevicesOptionsRequest
 
@@ -92,12 +91,12 @@ type DeviceServiceAPI interface {
 	GetDevicesOptionsExecute(r ApiGetDevicesOptionsRequest) (*DevicesDeviceOptions, *http.Response, error)
 
 	/*
-	PostDevicesCamerauploads Uploads content
+		PostDevicesCamerauploads Uploads content
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostDevicesCamerauploadsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostDevicesCamerauploadsRequest
 	*/
 	PostDevicesCamerauploads(ctx context.Context) ApiPostDevicesCamerauploadsRequest
 
@@ -105,12 +104,12 @@ type DeviceServiceAPI interface {
 	PostDevicesCamerauploadsExecute(r ApiPostDevicesCamerauploadsRequest) (*http.Response, error)
 
 	/*
-	PostDevicesDelete Deletes a device
+		PostDevicesDelete Deletes a device
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostDevicesDeleteRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostDevicesDeleteRequest
 	*/
 	PostDevicesDelete(ctx context.Context) ApiPostDevicesDeleteRequest
 
@@ -118,12 +117,12 @@ type DeviceServiceAPI interface {
 	PostDevicesDeleteExecute(r ApiPostDevicesDeleteRequest) (*http.Response, error)
 
 	/*
-	PostDevicesOptions Updates device options
+		PostDevicesOptions Updates device options
 
-	Requires authentication as administrator
+		Requires authentication as administrator
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostDevicesOptionsRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostDevicesOptionsRequest
 	*/
 	PostDevicesOptions(ctx context.Context) ApiPostDevicesOptionsRequest
 
@@ -135,9 +134,9 @@ type DeviceServiceAPI interface {
 type DeviceServiceAPIService service
 
 type ApiDeleteDevicesRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService DeviceServiceAPI
-	id *string
+	id         *string
 }
 
 // Device Id
@@ -155,22 +154,22 @@ DeleteDevices Deletes a device
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiDeleteDevicesRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiDeleteDevicesRequest
 */
 func (a *DeviceServiceAPIService) DeleteDevices(ctx context.Context) ApiDeleteDevicesRequest {
 	return ApiDeleteDevicesRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *DeviceServiceAPIService) DeleteDevicesExecute(r ApiDeleteDevicesRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodDelete
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodDelete
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DeviceServiceAPIService.DeleteDevices")
@@ -248,9 +247,9 @@ func (a *DeviceServiceAPIService) DeleteDevicesExecute(r ApiDeleteDevicesRequest
 }
 
 type ApiGetDevicesRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService DeviceServiceAPI
-	sortOrder *string
+	sortOrder  *string
 }
 
 // Sort Order - Ascending,Descending
@@ -268,24 +267,25 @@ GetDevices Gets all devices
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetDevicesRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetDevicesRequest
 */
 func (a *DeviceServiceAPIService) GetDevices(ctx context.Context) ApiGetDevicesRequest {
 	return ApiGetDevicesRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return QueryResultDevicesDeviceInfo
+//
+//	@return QueryResultDevicesDeviceInfo
 func (a *DeviceServiceAPIService) GetDevicesExecute(r ApiGetDevicesRequest) (*QueryResultDevicesDeviceInfo, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *QueryResultDevicesDeviceInfo
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *QueryResultDevicesDeviceInfo
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DeviceServiceAPIService.GetDevices")
@@ -371,7 +371,7 @@ func (a *DeviceServiceAPIService) GetDevicesExecute(r ApiGetDevicesRequest) (*Qu
 }
 
 type ApiGetDevicesCamerauploadsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService DeviceServiceAPI
 }
 
@@ -384,24 +384,25 @@ GetDevicesCamerauploads Gets camera upload history for a device
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetDevicesCamerauploadsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetDevicesCamerauploadsRequest
 */
 func (a *DeviceServiceAPIService) GetDevicesCamerauploads(ctx context.Context) ApiGetDevicesCamerauploadsRequest {
 	return ApiGetDevicesCamerauploadsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return DevicesContentUploadHistory
+//
+//	@return DevicesContentUploadHistory
 func (a *DeviceServiceAPIService) GetDevicesCamerauploadsExecute(r ApiGetDevicesCamerauploadsRequest) (*DevicesContentUploadHistory, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *DevicesContentUploadHistory
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *DevicesContentUploadHistory
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DeviceServiceAPIService.GetDevicesCamerauploads")
@@ -484,9 +485,9 @@ func (a *DeviceServiceAPIService) GetDevicesCamerauploadsExecute(r ApiGetDevices
 }
 
 type ApiGetDevicesInfoRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService DeviceServiceAPI
-	id *string
+	id         *string
 }
 
 // Device Id
@@ -504,24 +505,25 @@ GetDevicesInfo Gets info for a device
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetDevicesInfoRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetDevicesInfoRequest
 */
 func (a *DeviceServiceAPIService) GetDevicesInfo(ctx context.Context) ApiGetDevicesInfoRequest {
 	return ApiGetDevicesInfoRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return DevicesDeviceInfo
+//
+//	@return DevicesDeviceInfo
 func (a *DeviceServiceAPIService) GetDevicesInfoExecute(r ApiGetDevicesInfoRequest) (*DevicesDeviceInfo, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *DevicesDeviceInfo
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *DevicesDeviceInfo
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DeviceServiceAPIService.GetDevicesInfo")
@@ -608,9 +610,9 @@ func (a *DeviceServiceAPIService) GetDevicesInfoExecute(r ApiGetDevicesInfoReque
 }
 
 type ApiGetDevicesOptionsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService DeviceServiceAPI
-	id *string
+	id         *string
 }
 
 // Device Id
@@ -628,24 +630,25 @@ GetDevicesOptions Gets options for a device
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetDevicesOptionsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetDevicesOptionsRequest
 */
 func (a *DeviceServiceAPIService) GetDevicesOptions(ctx context.Context) ApiGetDevicesOptionsRequest {
 	return ApiGetDevicesOptionsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return DevicesDeviceOptions
+//
+//	@return DevicesDeviceOptions
 func (a *DeviceServiceAPIService) GetDevicesOptionsExecute(r ApiGetDevicesOptionsRequest) (*DevicesDeviceOptions, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *DevicesDeviceOptions
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *DevicesDeviceOptions
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DeviceServiceAPIService.GetDevicesOptions")
@@ -732,12 +735,12 @@ func (a *DeviceServiceAPIService) GetDevicesOptionsExecute(r ApiGetDevicesOption
 }
 
 type ApiPostDevicesCamerauploadsRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService DeviceServiceAPI
-	album *string
-	name *string
-	id *string
-	body *os.File
+	album      *string
+	name       *string
+	id         *string
+	body       *os.File
 }
 
 // Album
@@ -773,22 +776,22 @@ PostDevicesCamerauploads Uploads content
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostDevicesCamerauploadsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostDevicesCamerauploadsRequest
 */
 func (a *DeviceServiceAPIService) PostDevicesCamerauploads(ctx context.Context) ApiPostDevicesCamerauploadsRequest {
 	return ApiPostDevicesCamerauploadsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *DeviceServiceAPIService) PostDevicesCamerauploadsExecute(r ApiPostDevicesCamerauploadsRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DeviceServiceAPIService.PostDevicesCamerauploads")
@@ -879,9 +882,9 @@ func (a *DeviceServiceAPIService) PostDevicesCamerauploadsExecute(r ApiPostDevic
 }
 
 type ApiPostDevicesDeleteRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService DeviceServiceAPI
-	id *string
+	id         *string
 }
 
 // Device Id
@@ -899,22 +902,22 @@ PostDevicesDelete Deletes a device
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostDevicesDeleteRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostDevicesDeleteRequest
 */
 func (a *DeviceServiceAPIService) PostDevicesDelete(ctx context.Context) ApiPostDevicesDeleteRequest {
 	return ApiPostDevicesDeleteRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *DeviceServiceAPIService) PostDevicesDeleteExecute(r ApiPostDevicesDeleteRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DeviceServiceAPIService.PostDevicesDelete")
@@ -992,9 +995,9 @@ func (a *DeviceServiceAPIService) PostDevicesDeleteExecute(r ApiPostDevicesDelet
 }
 
 type ApiPostDevicesOptionsRequest struct {
-	ctx context.Context
-	ApiService DeviceServiceAPI
-	id *string
+	ctx                  context.Context
+	ApiService           DeviceServiceAPI
+	id                   *string
 	devicesDeviceOptions *DevicesDeviceOptions
 }
 
@@ -1004,7 +1007,7 @@ func (r ApiPostDevicesOptionsRequest) Id(id string) ApiPostDevicesOptionsRequest
 	return r
 }
 
-// DeviceOptions: 
+// DeviceOptions:
 func (r ApiPostDevicesOptionsRequest) DevicesDeviceOptions(devicesDeviceOptions DevicesDeviceOptions) ApiPostDevicesOptionsRequest {
 	r.devicesDeviceOptions = &devicesDeviceOptions
 	return r
@@ -1019,22 +1022,22 @@ PostDevicesOptions Updates device options
 
 Requires authentication as administrator
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostDevicesOptionsRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostDevicesOptionsRequest
 */
 func (a *DeviceServiceAPIService) PostDevicesOptions(ctx context.Context) ApiPostDevicesOptionsRequest {
 	return ApiPostDevicesOptionsRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *DeviceServiceAPIService) PostDevicesOptionsExecute(r ApiPostDevicesOptionsRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DeviceServiceAPIService.PostDevicesOptions")

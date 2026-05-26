@@ -19,12 +19,12 @@ var _ MappedNullable = &CommonPluginsIPlugin{}
 
 // CommonPluginsIPlugin struct for CommonPluginsIPlugin
 type CommonPluginsIPlugin struct {
-	Name *string `json:"Name,omitempty"`
-	Description *string `json:"Description,omitempty"`
-	Id *string `json:"Id,omitempty"`
-	Version *Version `json:"Version,omitempty"`
-	AssemblyFilePath *string `json:"AssemblyFilePath,omitempty"`
-	DataFolderPath *string `json:"DataFolderPath,omitempty"`
+	Name             *string  `json:"Name,omitempty"`
+	Description      *string  `json:"Description,omitempty"`
+	Id               *string  `json:"Id,omitempty"`
+	Version          *Version `json:"Version,omitempty"`
+	AssemblyFilePath *string  `json:"AssemblyFilePath,omitempty"`
+	DataFolderPath   *string  `json:"DataFolderPath,omitempty"`
 }
 
 // NewCommonPluginsIPlugin instantiates a new CommonPluginsIPlugin object
@@ -237,7 +237,7 @@ func (o *CommonPluginsIPlugin) SetDataFolderPath(v string) {
 }
 
 func (o CommonPluginsIPlugin) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -302,5 +302,3 @@ func (v *NullableCommonPluginsIPlugin) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

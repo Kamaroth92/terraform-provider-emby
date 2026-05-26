@@ -19,9 +19,9 @@ var _ MappedNullable = &UpdateUserPassword{}
 
 // UpdateUserPassword struct for UpdateUserPassword
 type UpdateUserPassword struct {
-	Id *string `json:"Id,omitempty"`
-	NewPw *string `json:"NewPw,omitempty"`
-	ResetPassword *bool `json:"ResetPassword,omitempty"`
+	Id            *string `json:"Id,omitempty"`
+	NewPw         *string `json:"NewPw,omitempty"`
+	ResetPassword *bool   `json:"ResetPassword,omitempty"`
 }
 
 // NewUpdateUserPassword instantiates a new UpdateUserPassword object
@@ -138,7 +138,7 @@ func (o *UpdateUserPassword) SetResetPassword(v bool) {
 }
 
 func (o UpdateUserPassword) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -194,5 +194,3 @@ func (v *NullableUpdateUserPassword) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

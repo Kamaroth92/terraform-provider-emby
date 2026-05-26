@@ -19,11 +19,11 @@ var _ MappedNullable = &DisplayPreferences{}
 
 // DisplayPreferences struct for DisplayPreferences
 type DisplayPreferences struct {
-	Id *string `json:"Id,omitempty"`
-	SortBy *string `json:"SortBy,omitempty"`
+	Id          *string            `json:"Id,omitempty"`
+	SortBy      *string            `json:"SortBy,omitempty"`
 	CustomPrefs *map[string]string `json:"CustomPrefs,omitempty"`
-	SortOrder *SortOrder `json:"SortOrder,omitempty"`
-	Client *string `json:"Client,omitempty"`
+	SortOrder   *SortOrder         `json:"SortOrder,omitempty"`
+	Client      *string            `json:"Client,omitempty"`
 }
 
 // NewDisplayPreferences instantiates a new DisplayPreferences object
@@ -204,7 +204,7 @@ func (o *DisplayPreferences) SetClient(v string) {
 }
 
 func (o DisplayPreferences) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -266,5 +266,3 @@ func (v *NullableDisplayPreferences) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

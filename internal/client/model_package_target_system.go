@@ -20,10 +20,10 @@ type PackageTargetSystem string
 
 // List of PackageTargetSystem
 const (
-	PACKAGETARGETSYSTEM_SERVER PackageTargetSystem = "Server"
+	PACKAGETARGETSYSTEM_SERVER     PackageTargetSystem = "Server"
 	PACKAGETARGETSYSTEM_MB_THEATER PackageTargetSystem = "MBTheater"
 	PACKAGETARGETSYSTEM_MB_CLASSIC PackageTargetSystem = "MBClassic"
-	PACKAGETARGETSYSTEM_OTHER PackageTargetSystem = "Other"
+	PACKAGETARGETSYSTEM_OTHER      PackageTargetSystem = "Other"
 )
 
 // All allowed values of PackageTargetSystem enum
@@ -112,4 +112,3 @@ func (v *NullablePackageTargetSystem) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

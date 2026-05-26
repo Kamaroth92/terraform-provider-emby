@@ -1,3 +1,5 @@
+// Copyright (c) HashiCorp, Inc.
+
 /*
 Emby Server REST API (BETA)
 
@@ -11,10 +13,10 @@ package embyclient
 
 import (
 	"context"
+	openapiclient "github.com/Kamaroth92/terraform-provider-emby/client"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
@@ -24,7 +26,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService DeleteLivetvChannelmappingoptions", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.LiveTvServiceAPI.DeleteLivetvChannelmappingoptions(context.Background()).Execute()
 
@@ -35,7 +37,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService DeleteLivetvChannelmappings", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.LiveTvServiceAPI.DeleteLivetvChannelmappings(context.Background()).Execute()
 
@@ -46,7 +48,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService DeleteLivetvListingproviders", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.LiveTvServiceAPI.DeleteLivetvListingproviders(context.Background()).Execute()
 
@@ -57,7 +59,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService DeleteLivetvRecordingsById", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -70,7 +72,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService DeleteLivetvSeriestimersById", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -83,7 +85,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService DeleteLivetvTimersById", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -96,7 +98,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService DeleteLivetvTunerhosts", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.LiveTvServiceAPI.DeleteLivetvTunerhosts(context.Background()).Execute()
 
@@ -107,7 +109,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService GetLivetvAvailablerecordingoptions", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.LiveTvServiceAPI.GetLivetvAvailablerecordingoptions(context.Background()).Execute()
 
@@ -119,7 +121,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService GetLivetvChannelmappingoptions", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.LiveTvServiceAPI.GetLivetvChannelmappingoptions(context.Background()).Execute()
 
@@ -130,7 +132,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService GetLivetvChannelmappings", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.LiveTvServiceAPI.GetLivetvChannelmappings(context.Background()).Execute()
 
@@ -141,7 +143,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService GetLivetvChannels", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.LiveTvServiceAPI.GetLivetvChannels(context.Background()).Execute()
 
@@ -153,7 +155,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService GetLivetvChannelsById", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -167,7 +169,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService GetLivetvChanneltags", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.LiveTvServiceAPI.GetLivetvChanneltags(context.Background()).Execute()
 
@@ -179,7 +181,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService GetLivetvChanneltagsPrefixes", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.LiveTvServiceAPI.GetLivetvChanneltagsPrefixes(context.Background()).Execute()
 
@@ -191,7 +193,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService GetLivetvEPG", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.LiveTvServiceAPI.GetLivetvEPG(context.Background()).Execute()
 
@@ -203,7 +205,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService GetLivetvFolder", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.LiveTvServiceAPI.GetLivetvFolder(context.Background()).Execute()
 
@@ -215,7 +217,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService GetLivetvGuideinfo", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.LiveTvServiceAPI.GetLivetvGuideinfo(context.Background()).Execute()
 
@@ -227,7 +229,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService GetLivetvInfo", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.LiveTvServiceAPI.GetLivetvInfo(context.Background()).Execute()
 
@@ -239,7 +241,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService GetLivetvListingproviders", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.LiveTvServiceAPI.GetLivetvListingproviders(context.Background()).Execute()
 
@@ -251,7 +253,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService GetLivetvListingprovidersAvailable", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.LiveTvServiceAPI.GetLivetvListingprovidersAvailable(context.Background()).Execute()
 
@@ -263,7 +265,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService GetLivetvListingprovidersDefault", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.LiveTvServiceAPI.GetLivetvListingprovidersDefault(context.Background()).Execute()
 
@@ -275,7 +277,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService GetLivetvListingprovidersLineups", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.LiveTvServiceAPI.GetLivetvListingprovidersLineups(context.Background()).Execute()
 
@@ -287,7 +289,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService GetLivetvManageChannels", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.LiveTvServiceAPI.GetLivetvManageChannels(context.Background()).Execute()
 
@@ -299,7 +301,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService GetLivetvPrograms", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.LiveTvServiceAPI.GetLivetvPrograms(context.Background()).Execute()
 
@@ -310,7 +312,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService GetLivetvProgramsRecommended", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.LiveTvServiceAPI.GetLivetvProgramsRecommended(context.Background()).Execute()
 
@@ -322,7 +324,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService GetLivetvRecordings", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.LiveTvServiceAPI.GetLivetvRecordings(context.Background()).Execute()
 
@@ -333,7 +335,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService GetLivetvRecordingsById", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -347,7 +349,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService GetLivetvRecordingsFolders", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.LiveTvServiceAPI.GetLivetvRecordingsFolders(context.Background()).Execute()
 
@@ -359,7 +361,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService GetLivetvRecordingsGroups", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.LiveTvServiceAPI.GetLivetvRecordingsGroups(context.Background()).Execute()
 
@@ -371,7 +373,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService GetLivetvRecordingsSeries", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.LiveTvServiceAPI.GetLivetvRecordingsSeries(context.Background()).Execute()
 
@@ -383,7 +385,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService GetLivetvSeriestimers", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.LiveTvServiceAPI.GetLivetvSeriestimers(context.Background()).Execute()
 
@@ -395,7 +397,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService GetLivetvSeriestimersById", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -409,7 +411,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService GetLivetvTimers", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.LiveTvServiceAPI.GetLivetvTimers(context.Background()).Execute()
 
@@ -421,7 +423,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService GetLivetvTimersById", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -435,7 +437,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService GetLivetvTimersDefaults", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.LiveTvServiceAPI.GetLivetvTimersDefaults(context.Background()).Execute()
 
@@ -447,7 +449,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService GetLivetvTunerhosts", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.LiveTvServiceAPI.GetLivetvTunerhosts(context.Background()).Execute()
 
@@ -459,7 +461,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService GetLivetvTunerhostsDefaultByType", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var type_ string
 
@@ -473,7 +475,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService GetLivetvTunerhostsTypes", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.LiveTvServiceAPI.GetLivetvTunerhostsTypes(context.Background()).Execute()
 
@@ -485,7 +487,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService GetLivetvTunersDiscover", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.LiveTvServiceAPI.GetLivetvTunersDiscover(context.Background()).Execute()
 
@@ -497,7 +499,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService GetLivetvTunersDiscvover", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.LiveTvServiceAPI.GetLivetvTunersDiscvover(context.Background()).Execute()
 
@@ -509,7 +511,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService HeadLivetvChannelmappingoptions", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.LiveTvServiceAPI.HeadLivetvChannelmappingoptions(context.Background()).Execute()
 
@@ -520,7 +522,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService HeadLivetvChannelmappings", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.LiveTvServiceAPI.HeadLivetvChannelmappings(context.Background()).Execute()
 
@@ -531,7 +533,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService PostLivetvChannelmappingoptions", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.LiveTvServiceAPI.PostLivetvChannelmappingoptions(context.Background()).Execute()
 
@@ -542,7 +544,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService PostLivetvChannelmappings", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.LiveTvServiceAPI.PostLivetvChannelmappings(context.Background()).Execute()
 
@@ -553,7 +555,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService PostLivetvListingproviders", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.LiveTvServiceAPI.PostLivetvListingproviders(context.Background()).Execute()
 
@@ -565,7 +567,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService PostLivetvListingprovidersDelete", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.LiveTvServiceAPI.PostLivetvListingprovidersDelete(context.Background()).Execute()
 
@@ -576,7 +578,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService PostLivetvManageChannelsByIdDisabled", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -590,7 +592,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService PostLivetvManageChannelsByIdSortindex", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -604,7 +606,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService PostLivetvPrograms", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.LiveTvServiceAPI.PostLivetvPrograms(context.Background()).Execute()
 
@@ -615,7 +617,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService PostLivetvRecordingsByIdDelete", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -628,7 +630,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService PostLivetvSeriestimers", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.LiveTvServiceAPI.PostLivetvSeriestimers(context.Background()).Execute()
 
@@ -640,7 +642,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService PostLivetvSeriestimersById", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -653,7 +655,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService PostLivetvSeriestimersByIdDelete", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -666,7 +668,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService PostLivetvTimers", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.LiveTvServiceAPI.PostLivetvTimers(context.Background()).Execute()
 
@@ -677,7 +679,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService PostLivetvTimersById", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -690,7 +692,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService PostLivetvTimersByIdDelete", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -703,7 +705,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService PostLivetvTunerhosts", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.LiveTvServiceAPI.PostLivetvTunerhosts(context.Background()).Execute()
 
@@ -715,7 +717,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService PostLivetvTunerhostsDelete", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.LiveTvServiceAPI.PostLivetvTunerhostsDelete(context.Background()).Execute()
 
@@ -726,7 +728,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService PostLivetvTunersByIdReset", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -739,7 +741,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService PutLivetvChannelmappingoptions", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.LiveTvServiceAPI.PutLivetvChannelmappingoptions(context.Background()).Execute()
 
@@ -750,7 +752,7 @@ func Test_embyclient_LiveTvServiceAPIService(t *testing.T) {
 
 	t.Run("Test LiveTvServiceAPIService PutLivetvChannelmappings", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.LiveTvServiceAPI.PutLivetvChannelmappings(context.Background()).Execute()
 

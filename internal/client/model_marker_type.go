@@ -20,9 +20,9 @@ type MarkerType string
 
 // List of MarkerType
 const (
-	MARKERTYPE_CHAPTER MarkerType = "Chapter"
-	MARKERTYPE_INTRO_START MarkerType = "IntroStart"
-	MARKERTYPE_INTRO_END MarkerType = "IntroEnd"
+	MARKERTYPE_CHAPTER       MarkerType = "Chapter"
+	MARKERTYPE_INTRO_START   MarkerType = "IntroStart"
+	MARKERTYPE_INTRO_END     MarkerType = "IntroEnd"
 	MARKERTYPE_CREDITS_START MarkerType = "CreditsStart"
 )
 
@@ -112,4 +112,3 @@ func (v *NullableMarkerType) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

@@ -19,17 +19,16 @@ import (
 	"strings"
 )
 
-
 type MediaInfoServiceAPI interface {
 
 	/*
-	GetItemsByIdPlaybackinfo Gets live playback media info for an item
+		GetItemsByIdPlaybackinfo Gets live playback media info for an item
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id Item Id
-	@return ApiGetItemsByIdPlaybackinfoRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id Item Id
+		@return ApiGetItemsByIdPlaybackinfoRequest
 	*/
 	GetItemsByIdPlaybackinfo(ctx context.Context, id string) ApiGetItemsByIdPlaybackinfoRequest
 
@@ -38,12 +37,12 @@ type MediaInfoServiceAPI interface {
 	GetItemsByIdPlaybackinfoExecute(r ApiGetItemsByIdPlaybackinfoRequest) (*PlaybackInfoResponse, *http.Response, error)
 
 	/*
-	GetPlaybackBitratetest Method for GetPlaybackBitratetest
+		GetPlaybackBitratetest Method for GetPlaybackBitratetest
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiGetPlaybackBitratetestRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiGetPlaybackBitratetestRequest
 	*/
 	GetPlaybackBitratetest(ctx context.Context) ApiGetPlaybackBitratetestRequest
 
@@ -51,13 +50,13 @@ type MediaInfoServiceAPI interface {
 	GetPlaybackBitratetestExecute(r ApiGetPlaybackBitratetestRequest) (*http.Response, error)
 
 	/*
-	PostItemsByIdPlaybackinfo Gets live playback media info for an item
+		PostItemsByIdPlaybackinfo Gets live playback media info for an item
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@param id
-	@return ApiPostItemsByIdPlaybackinfoRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@param id
+		@return ApiPostItemsByIdPlaybackinfoRequest
 	*/
 	PostItemsByIdPlaybackinfo(ctx context.Context, id string) ApiPostItemsByIdPlaybackinfoRequest
 
@@ -66,12 +65,12 @@ type MediaInfoServiceAPI interface {
 	PostItemsByIdPlaybackinfoExecute(r ApiPostItemsByIdPlaybackinfoRequest) (*PlaybackInfoResponse, *http.Response, error)
 
 	/*
-	PostLivestreamsClose Closes a media source
+		PostLivestreamsClose Closes a media source
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostLivestreamsCloseRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostLivestreamsCloseRequest
 	*/
 	PostLivestreamsClose(ctx context.Context) ApiPostLivestreamsCloseRequest
 
@@ -79,12 +78,12 @@ type MediaInfoServiceAPI interface {
 	PostLivestreamsCloseExecute(r ApiPostLivestreamsCloseRequest) (*http.Response, error)
 
 	/*
-	PostLivestreamsMediainfo Gets media info for a live stream
+		PostLivestreamsMediainfo Gets media info for a live stream
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostLivestreamsMediainfoRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostLivestreamsMediainfoRequest
 	*/
 	PostLivestreamsMediainfo(ctx context.Context) ApiPostLivestreamsMediainfoRequest
 
@@ -92,12 +91,12 @@ type MediaInfoServiceAPI interface {
 	PostLivestreamsMediainfoExecute(r ApiPostLivestreamsMediainfoRequest) (*http.Response, error)
 
 	/*
-	PostLivestreamsOpen Opens a media source
+		PostLivestreamsOpen Opens a media source
 
-	Requires authentication as user
+		Requires authentication as user
 
-	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
-	@return ApiPostLivestreamsOpenRequest
+		@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+		@return ApiPostLivestreamsOpenRequest
 	*/
 	PostLivestreamsOpen(ctx context.Context) ApiPostLivestreamsOpenRequest
 
@@ -110,10 +109,10 @@ type MediaInfoServiceAPI interface {
 type MediaInfoServiceAPIService service
 
 type ApiGetItemsByIdPlaybackinfoRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService MediaInfoServiceAPI
-	id string
-	userId *string
+	id         string
+	userId     *string
 }
 
 // User Id
@@ -131,26 +130,27 @@ GetItemsByIdPlaybackinfo Gets live playback media info for an item
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id Item Id
- @return ApiGetItemsByIdPlaybackinfoRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id Item Id
+	@return ApiGetItemsByIdPlaybackinfoRequest
 */
 func (a *MediaInfoServiceAPIService) GetItemsByIdPlaybackinfo(ctx context.Context, id string) ApiGetItemsByIdPlaybackinfoRequest {
 	return ApiGetItemsByIdPlaybackinfoRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
-//  @return PlaybackInfoResponse
+//
+//	@return PlaybackInfoResponse
 func (a *MediaInfoServiceAPIService) GetItemsByIdPlaybackinfoExecute(r ApiGetItemsByIdPlaybackinfoRequest) (*PlaybackInfoResponse, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *PlaybackInfoResponse
+		localVarHTTPMethod  = http.MethodGet
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *PlaybackInfoResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "MediaInfoServiceAPIService.GetItemsByIdPlaybackinfo")
@@ -238,9 +238,9 @@ func (a *MediaInfoServiceAPIService) GetItemsByIdPlaybackinfoExecute(r ApiGetIte
 }
 
 type ApiGetPlaybackBitratetestRequest struct {
-	ctx context.Context
+	ctx        context.Context
 	ApiService MediaInfoServiceAPI
-	size *int64
+	size       *int64
 }
 
 // Size
@@ -258,22 +258,22 @@ GetPlaybackBitratetest Method for GetPlaybackBitratetest
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiGetPlaybackBitratetestRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiGetPlaybackBitratetestRequest
 */
 func (a *MediaInfoServiceAPIService) GetPlaybackBitratetest(ctx context.Context) ApiGetPlaybackBitratetestRequest {
 	return ApiGetPlaybackBitratetestRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *MediaInfoServiceAPIService) GetPlaybackBitratetestExecute(r ApiGetPlaybackBitratetestRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodGet
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodGet
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "MediaInfoServiceAPIService.GetPlaybackBitratetest")
@@ -351,13 +351,13 @@ func (a *MediaInfoServiceAPIService) GetPlaybackBitratetestExecute(r ApiGetPlayb
 }
 
 type ApiPostItemsByIdPlaybackinfoRequest struct {
-	ctx context.Context
-	ApiService MediaInfoServiceAPI
-	id string
+	ctx                 context.Context
+	ApiService          MediaInfoServiceAPI
+	id                  string
 	playbackInfoRequest *PlaybackInfoRequest
 }
 
-// PlaybackInfoRequest: 
+// PlaybackInfoRequest:
 func (r ApiPostItemsByIdPlaybackinfoRequest) PlaybackInfoRequest(playbackInfoRequest PlaybackInfoRequest) ApiPostItemsByIdPlaybackinfoRequest {
 	r.playbackInfoRequest = &playbackInfoRequest
 	return r
@@ -372,26 +372,27 @@ PostItemsByIdPlaybackinfo Gets live playback media info for an item
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param id
- @return ApiPostItemsByIdPlaybackinfoRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@param id
+	@return ApiPostItemsByIdPlaybackinfoRequest
 */
 func (a *MediaInfoServiceAPIService) PostItemsByIdPlaybackinfo(ctx context.Context, id string) ApiPostItemsByIdPlaybackinfoRequest {
 	return ApiPostItemsByIdPlaybackinfoRequest{
 		ApiService: a,
-		ctx: ctx,
-		id: id,
+		ctx:        ctx,
+		id:         id,
 	}
 }
 
 // Execute executes the request
-//  @return PlaybackInfoResponse
+//
+//	@return PlaybackInfoResponse
 func (a *MediaInfoServiceAPIService) PostItemsByIdPlaybackinfoExecute(r ApiPostItemsByIdPlaybackinfoRequest) (*PlaybackInfoResponse, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *PlaybackInfoResponse
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *PlaybackInfoResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "MediaInfoServiceAPIService.PostItemsByIdPlaybackinfo")
@@ -480,8 +481,8 @@ func (a *MediaInfoServiceAPIService) PostItemsByIdPlaybackinfoExecute(r ApiPostI
 }
 
 type ApiPostLivestreamsCloseRequest struct {
-	ctx context.Context
-	ApiService MediaInfoServiceAPI
+	ctx          context.Context
+	ApiService   MediaInfoServiceAPI
 	liveStreamId *string
 }
 
@@ -500,22 +501,22 @@ PostLivestreamsClose Closes a media source
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostLivestreamsCloseRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostLivestreamsCloseRequest
 */
 func (a *MediaInfoServiceAPIService) PostLivestreamsClose(ctx context.Context) ApiPostLivestreamsCloseRequest {
 	return ApiPostLivestreamsCloseRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *MediaInfoServiceAPIService) PostLivestreamsCloseExecute(r ApiPostLivestreamsCloseRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "MediaInfoServiceAPIService.PostLivestreamsClose")
@@ -593,8 +594,8 @@ func (a *MediaInfoServiceAPIService) PostLivestreamsCloseExecute(r ApiPostLivest
 }
 
 type ApiPostLivestreamsMediainfoRequest struct {
-	ctx context.Context
-	ApiService MediaInfoServiceAPI
+	ctx          context.Context
+	ApiService   MediaInfoServiceAPI
 	liveStreamId *string
 }
 
@@ -613,22 +614,22 @@ PostLivestreamsMediainfo Gets media info for a live stream
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostLivestreamsMediainfoRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostLivestreamsMediainfoRequest
 */
 func (a *MediaInfoServiceAPIService) PostLivestreamsMediainfo(ctx context.Context) ApiPostLivestreamsMediainfoRequest {
 	return ApiPostLivestreamsMediainfoRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
 func (a *MediaInfoServiceAPIService) PostLivestreamsMediainfoExecute(r ApiPostLivestreamsMediainfoRequest) (*http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
+		localVarHTTPMethod = http.MethodPost
+		localVarPostBody   interface{}
+		formFiles          []formFile
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "MediaInfoServiceAPIService.PostLivestreamsMediainfo")
@@ -706,12 +707,12 @@ func (a *MediaInfoServiceAPIService) PostLivestreamsMediainfoExecute(r ApiPostLi
 }
 
 type ApiPostLivestreamsOpenRequest struct {
-	ctx context.Context
-	ApiService MediaInfoServiceAPI
+	ctx               context.Context
+	ApiService        MediaInfoServiceAPI
 	liveStreamRequest *LiveStreamRequest
 }
 
-// LiveStreamRequest: 
+// LiveStreamRequest:
 func (r ApiPostLivestreamsOpenRequest) LiveStreamRequest(liveStreamRequest LiveStreamRequest) ApiPostLivestreamsOpenRequest {
 	r.liveStreamRequest = &liveStreamRequest
 	return r
@@ -726,24 +727,25 @@ PostLivestreamsOpen Opens a media source
 
 Requires authentication as user
 
- @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiPostLivestreamsOpenRequest
+	@param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+	@return ApiPostLivestreamsOpenRequest
 */
 func (a *MediaInfoServiceAPIService) PostLivestreamsOpen(ctx context.Context) ApiPostLivestreamsOpenRequest {
 	return ApiPostLivestreamsOpenRequest{
 		ApiService: a,
-		ctx: ctx,
+		ctx:        ctx,
 	}
 }
 
 // Execute executes the request
-//  @return LiveStreamResponse
+//
+//	@return LiveStreamResponse
 func (a *MediaInfoServiceAPIService) PostLivestreamsOpenExecute(r ApiPostLivestreamsOpenRequest) (*LiveStreamResponse, *http.Response, error) {
 	var (
-		localVarHTTPMethod   = http.MethodPost
-		localVarPostBody     interface{}
-		formFiles            []formFile
-		localVarReturnValue  *LiveStreamResponse
+		localVarHTTPMethod  = http.MethodPost
+		localVarPostBody    interface{}
+		formFiles           []formFile
+		localVarReturnValue *LiveStreamResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "MediaInfoServiceAPIService.PostLivestreamsOpen")

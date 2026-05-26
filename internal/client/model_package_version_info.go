@@ -20,18 +20,18 @@ var _ MappedNullable = &PackageVersionInfo{}
 
 // PackageVersionInfo struct for PackageVersionInfo
 type PackageVersionInfo struct {
-	Name *string `json:"name,omitempty"`
-	Guid *string `json:"guid,omitempty"`
-	VersionStr *string `json:"versionStr,omitempty"`
-	Classification *PackageVersionClass `json:"classification,omitempty"`
-	Description *string `json:"description,omitempty"`
-	RequiredVersionStr *string `json:"requiredVersionStr,omitempty"`
-	SourceUrl *string `json:"sourceUrl,omitempty"`
-	Checksum *string `json:"checksum,omitempty"`
-	TargetFilename *string `json:"targetFilename,omitempty"`
-	InfoUrl *string `json:"infoUrl,omitempty"`
-	Runtimes *string `json:"runtimes,omitempty"`
-	Timestamp NullableTime `json:"timestamp,omitempty"`
+	Name               *string              `json:"name,omitempty"`
+	Guid               *string              `json:"guid,omitempty"`
+	VersionStr         *string              `json:"versionStr,omitempty"`
+	Classification     *PackageVersionClass `json:"classification,omitempty"`
+	Description        *string              `json:"description,omitempty"`
+	RequiredVersionStr *string              `json:"requiredVersionStr,omitempty"`
+	SourceUrl          *string              `json:"sourceUrl,omitempty"`
+	Checksum           *string              `json:"checksum,omitempty"`
+	TargetFilename     *string              `json:"targetFilename,omitempty"`
+	InfoUrl            *string              `json:"infoUrl,omitempty"`
+	Runtimes           *string              `json:"runtimes,omitempty"`
+	Timestamp          NullableTime         `json:"timestamp,omitempty"`
 }
 
 // NewPackageVersionInfo instantiates a new PackageVersionInfo object
@@ -435,6 +435,7 @@ func (o *PackageVersionInfo) HasTimestamp() bool {
 func (o *PackageVersionInfo) SetTimestamp(v time.Time) {
 	o.Timestamp.Set(&v)
 }
+
 // SetTimestampNil sets the value for Timestamp to be an explicit nil
 func (o *PackageVersionInfo) SetTimestampNil() {
 	o.Timestamp.Set(nil)
@@ -446,7 +447,7 @@ func (o *PackageVersionInfo) UnsetTimestamp() {
 }
 
 func (o PackageVersionInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -529,5 +530,3 @@ func (v *NullablePackageVersionInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

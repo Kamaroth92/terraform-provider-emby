@@ -19,10 +19,10 @@ var _ MappedNullable = &AuthenticationAuthenticationResult{}
 
 // AuthenticationAuthenticationResult struct for AuthenticationAuthenticationResult
 type AuthenticationAuthenticationResult struct {
-	User *UserDto `json:"User,omitempty"`
+	User        *UserDto            `json:"User,omitempty"`
 	SessionInfo *SessionSessionInfo `json:"SessionInfo,omitempty"`
-	AccessToken *string `json:"AccessToken,omitempty"`
-	ServerId *string `json:"ServerId,omitempty"`
+	AccessToken *string             `json:"AccessToken,omitempty"`
+	ServerId    *string             `json:"ServerId,omitempty"`
 }
 
 // NewAuthenticationAuthenticationResult instantiates a new AuthenticationAuthenticationResult object
@@ -171,7 +171,7 @@ func (o *AuthenticationAuthenticationResult) SetServerId(v string) {
 }
 
 func (o AuthenticationAuthenticationResult) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -230,5 +230,3 @@ func (v *NullableAuthenticationAuthenticationResult) UnmarshalJSON(src []byte) e
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

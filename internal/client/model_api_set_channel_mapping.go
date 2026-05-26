@@ -19,7 +19,7 @@ var _ MappedNullable = &ApiSetChannelMapping{}
 
 // ApiSetChannelMapping struct for ApiSetChannelMapping
 type ApiSetChannelMapping struct {
-	TunerChannelId *string `json:"TunerChannelId,omitempty"`
+	TunerChannelId    *string `json:"TunerChannelId,omitempty"`
 	ProviderChannelId *string `json:"ProviderChannelId,omitempty"`
 }
 
@@ -105,7 +105,7 @@ func (o *ApiSetChannelMapping) SetProviderChannelId(v string) {
 }
 
 func (o ApiSetChannelMapping) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -158,5 +158,3 @@ func (v *NullableApiSetChannelMapping) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

@@ -21,7 +21,7 @@ type DlnaProfilesDeviceProfileType string
 // List of Dlna.Profiles.DeviceProfileType
 const (
 	DLNAPROFILESDEVICEPROFILETYPE_SYSTEM DlnaProfilesDeviceProfileType = "System"
-	DLNAPROFILESDEVICEPROFILETYPE_USER DlnaProfilesDeviceProfileType = "User"
+	DLNAPROFILESDEVICEPROFILETYPE_USER   DlnaProfilesDeviceProfileType = "User"
 )
 
 // All allowed values of DlnaProfilesDeviceProfileType enum
@@ -108,4 +108,3 @@ func (v *NullableDlnaProfilesDeviceProfileType) UnmarshalJSON(src []byte) error 
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

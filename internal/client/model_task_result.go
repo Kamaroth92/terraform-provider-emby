@@ -20,14 +20,14 @@ var _ MappedNullable = &TaskResult{}
 
 // TaskResult struct for TaskResult
 type TaskResult struct {
-	StartTimeUtc *time.Time `json:"StartTimeUtc,omitempty"`
-	EndTimeUtc *time.Time `json:"EndTimeUtc,omitempty"`
-	Status *TaskCompletionStatus `json:"Status,omitempty"`
-	Name *string `json:"Name,omitempty"`
-	Key *string `json:"Key,omitempty"`
-	Id *string `json:"Id,omitempty"`
-	ErrorMessage *string `json:"ErrorMessage,omitempty"`
-	LongErrorMessage *string `json:"LongErrorMessage,omitempty"`
+	StartTimeUtc     *time.Time            `json:"StartTimeUtc,omitempty"`
+	EndTimeUtc       *time.Time            `json:"EndTimeUtc,omitempty"`
+	Status           *TaskCompletionStatus `json:"Status,omitempty"`
+	Name             *string               `json:"Name,omitempty"`
+	Key              *string               `json:"Key,omitempty"`
+	Id               *string               `json:"Id,omitempty"`
+	ErrorMessage     *string               `json:"ErrorMessage,omitempty"`
+	LongErrorMessage *string               `json:"LongErrorMessage,omitempty"`
 }
 
 // NewTaskResult instantiates a new TaskResult object
@@ -304,7 +304,7 @@ func (o *TaskResult) SetLongErrorMessage(v string) {
 }
 
 func (o TaskResult) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -375,5 +375,3 @@ func (v *NullableTaskResult) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

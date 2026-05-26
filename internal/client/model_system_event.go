@@ -20,9 +20,9 @@ type SystemEvent string
 
 // List of SystemEvent
 const (
-	SYSTEMEVENT_WAKE_FROM_SLEEP SystemEvent = "WakeFromSleep"
+	SYSTEMEVENT_WAKE_FROM_SLEEP              SystemEvent = "WakeFromSleep"
 	SYSTEMEVENT_DISPLAY_CONFIGURATION_CHANGE SystemEvent = "DisplayConfigurationChange"
-	SYSTEMEVENT_NETWORK_CHANGE SystemEvent = "NetworkChange"
+	SYSTEMEVENT_NETWORK_CHANGE               SystemEvent = "NetworkChange"
 )
 
 // All allowed values of SystemEvent enum
@@ -110,4 +110,3 @@ func (v *NullableSystemEvent) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

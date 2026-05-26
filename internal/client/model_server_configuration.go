@@ -19,75 +19,75 @@ var _ MappedNullable = &ServerConfiguration{}
 
 // ServerConfiguration struct for ServerConfiguration
 type ServerConfiguration struct {
-	EnableUPnP *bool `json:"EnableUPnP,omitempty"`
-	PublicPort *int32 `json:"PublicPort,omitempty"`
-	PublicHttpsPort *int32 `json:"PublicHttpsPort,omitempty"`
-	HttpServerPortNumber *int32 `json:"HttpServerPortNumber,omitempty"`
-	HttpsPortNumber *int32 `json:"HttpsPortNumber,omitempty"`
-	EnableHttps *bool `json:"EnableHttps,omitempty"`
-	CertificatePath *string `json:"CertificatePath,omitempty"`
-	CertificatePassword *string `json:"CertificatePassword,omitempty"`
-	IsPortAuthorized *bool `json:"IsPortAuthorized,omitempty"`
-	AutoRunWebApp *bool `json:"AutoRunWebApp,omitempty"`
-	EnableRemoteAccess *bool `json:"EnableRemoteAccess,omitempty"`
-	LogAllQueryTimes *bool `json:"LogAllQueryTimes,omitempty"`
-	DisableOutgoingIPv6 *bool `json:"DisableOutgoingIPv6,omitempty"`
-	EnableCaseSensitiveItemIds *bool `json:"EnableCaseSensitiveItemIds,omitempty"`
-	MetadataPath *string `json:"MetadataPath,omitempty"`
-	MetadataNetworkPath *string `json:"MetadataNetworkPath,omitempty"`
-	PreferredMetadataLanguage *string `json:"PreferredMetadataLanguage,omitempty"`
-	MetadataCountryCode *string `json:"MetadataCountryCode,omitempty"`
-	SortRemoveWords []string `json:"SortRemoveWords,omitempty"`
-	LibraryMonitorDelaySeconds *int32 `json:"LibraryMonitorDelaySeconds,omitempty"`
-	EnableDashboardResponseCaching *bool `json:"EnableDashboardResponseCaching,omitempty"`
-	DashboardSourcePath *string `json:"DashboardSourcePath,omitempty"`
-	ImageSavingConvention *ImageSavingConvention `json:"ImageSavingConvention,omitempty"`
-	EnableAutomaticRestart *bool `json:"EnableAutomaticRestart,omitempty"`
-	ServerName *string `json:"ServerName,omitempty"`
+	EnableUPnP                           *bool                    `json:"EnableUPnP,omitempty"`
+	PublicPort                           *int32                   `json:"PublicPort,omitempty"`
+	PublicHttpsPort                      *int32                   `json:"PublicHttpsPort,omitempty"`
+	HttpServerPortNumber                 *int32                   `json:"HttpServerPortNumber,omitempty"`
+	HttpsPortNumber                      *int32                   `json:"HttpsPortNumber,omitempty"`
+	EnableHttps                          *bool                    `json:"EnableHttps,omitempty"`
+	CertificatePath                      *string                  `json:"CertificatePath,omitempty"`
+	CertificatePassword                  *string                  `json:"CertificatePassword,omitempty"`
+	IsPortAuthorized                     *bool                    `json:"IsPortAuthorized,omitempty"`
+	AutoRunWebApp                        *bool                    `json:"AutoRunWebApp,omitempty"`
+	EnableRemoteAccess                   *bool                    `json:"EnableRemoteAccess,omitempty"`
+	LogAllQueryTimes                     *bool                    `json:"LogAllQueryTimes,omitempty"`
+	DisableOutgoingIPv6                  *bool                    `json:"DisableOutgoingIPv6,omitempty"`
+	EnableCaseSensitiveItemIds           *bool                    `json:"EnableCaseSensitiveItemIds,omitempty"`
+	MetadataPath                         *string                  `json:"MetadataPath,omitempty"`
+	MetadataNetworkPath                  *string                  `json:"MetadataNetworkPath,omitempty"`
+	PreferredMetadataLanguage            *string                  `json:"PreferredMetadataLanguage,omitempty"`
+	MetadataCountryCode                  *string                  `json:"MetadataCountryCode,omitempty"`
+	SortRemoveWords                      []string                 `json:"SortRemoveWords,omitempty"`
+	LibraryMonitorDelaySeconds           *int32                   `json:"LibraryMonitorDelaySeconds,omitempty"`
+	EnableDashboardResponseCaching       *bool                    `json:"EnableDashboardResponseCaching,omitempty"`
+	DashboardSourcePath                  *string                  `json:"DashboardSourcePath,omitempty"`
+	ImageSavingConvention                *ImageSavingConvention   `json:"ImageSavingConvention,omitempty"`
+	EnableAutomaticRestart               *bool                    `json:"EnableAutomaticRestart,omitempty"`
+	ServerName                           *string                  `json:"ServerName,omitempty"`
 	PreferredDetectedRemoteAddressFamily *NetSocketsAddressFamily `json:"PreferredDetectedRemoteAddressFamily,omitempty"`
-	WanDdns *string `json:"WanDdns,omitempty"`
-	UICulture *string `json:"UICulture,omitempty"`
-	RemoteClientBitrateLimit *int32 `json:"RemoteClientBitrateLimit,omitempty"`
-	LocalNetworkSubnets []string `json:"LocalNetworkSubnets,omitempty"`
-	LocalNetworkAddresses []string `json:"LocalNetworkAddresses,omitempty"`
-	EnableExternalContentInSuggestions *bool `json:"EnableExternalContentInSuggestions,omitempty"`
-	RequireHttps *bool `json:"RequireHttps,omitempty"`
-	IsBehindProxy *bool `json:"IsBehindProxy,omitempty"`
-	RemoteIPFilter []string `json:"RemoteIPFilter,omitempty"`
-	IsRemoteIPFilterBlacklist *bool `json:"IsRemoteIPFilterBlacklist,omitempty"`
-	ImageExtractionTimeoutMs *int32 `json:"ImageExtractionTimeoutMs,omitempty"`
-	PathSubstitutions []PathSubstitution `json:"PathSubstitutions,omitempty"`
-	UninstalledPlugins []string `json:"UninstalledPlugins,omitempty"`
-	CollapseVideoFolders *bool `json:"CollapseVideoFolders,omitempty"`
-	EnableOriginalTrackTitles *bool `json:"EnableOriginalTrackTitles,omitempty"`
-	VacuumDatabaseOnStartup *bool `json:"VacuumDatabaseOnStartup,omitempty"`
-	SimultaneousStreamLimit *int32 `json:"SimultaneousStreamLimit,omitempty"`
-	DatabaseCacheSizeMB *int32 `json:"DatabaseCacheSizeMB,omitempty"`
-	EnableSqLiteMmio *bool `json:"EnableSqLiteMmio,omitempty"`
-	PlaylistsUpgradedToM3U *bool `json:"PlaylistsUpgradedToM3U,omitempty"`
-	ImageExtractorUpgraded1 *bool `json:"ImageExtractorUpgraded1,omitempty"`
-	EnablePeopleLetterSubFolders *bool `json:"EnablePeopleLetterSubFolders,omitempty"`
-	OptimizeDatabaseOnShutdown *bool `json:"OptimizeDatabaseOnShutdown,omitempty"`
-	DatabaseAnalysisLimit *int32 `json:"DatabaseAnalysisLimit,omitempty"`
-	MaxLibraryDatabaseConnections *int32 `json:"MaxLibraryDatabaseConnections,omitempty"`
-	MaxAuthDbConnections *int32 `json:"MaxAuthDbConnections,omitempty"`
-	MaxOtherDbConnections *int32 `json:"MaxOtherDbConnections,omitempty"`
-	DisableAsyncIO *bool `json:"DisableAsyncIO,omitempty"`
-	MigratedToUserItemShares8 *bool `json:"MigratedToUserItemShares8,omitempty"`
-	MigratedLibraryOptionsToDb *bool `json:"MigratedLibraryOptionsToDb,omitempty"`
-	AllowLegacyLocalNetworkPassword *bool `json:"AllowLegacyLocalNetworkPassword,omitempty"`
-	EnableSavedMetadataForPeople *bool `json:"EnableSavedMetadataForPeople,omitempty"`
-	TvChannelsRefreshed *bool `json:"TvChannelsRefreshed,omitempty"`
-	ProxyHeaderMode *ProxyHeaderMode `json:"ProxyHeaderMode,omitempty"`
-	IsInMaintenanceMode *bool `json:"IsInMaintenanceMode,omitempty"`
-	MaintenanceModeMessage *string `json:"MaintenanceModeMessage,omitempty"`
-	EnableDebugLevelLogging *bool `json:"EnableDebugLevelLogging,omitempty"`
-	RevertDebugLogging *string `json:"RevertDebugLogging,omitempty"`
-	EnableAutoUpdate *bool `json:"EnableAutoUpdate,omitempty"`
-	LogFileRetentionDays *int32 `json:"LogFileRetentionDays,omitempty"`
-	RunAtStartup *bool `json:"RunAtStartup,omitempty"`
-	IsStartupWizardCompleted *bool `json:"IsStartupWizardCompleted,omitempty"`
-	CachePath *string `json:"CachePath,omitempty"`
+	WanDdns                              *string                  `json:"WanDdns,omitempty"`
+	UICulture                            *string                  `json:"UICulture,omitempty"`
+	RemoteClientBitrateLimit             *int32                   `json:"RemoteClientBitrateLimit,omitempty"`
+	LocalNetworkSubnets                  []string                 `json:"LocalNetworkSubnets,omitempty"`
+	LocalNetworkAddresses                []string                 `json:"LocalNetworkAddresses,omitempty"`
+	EnableExternalContentInSuggestions   *bool                    `json:"EnableExternalContentInSuggestions,omitempty"`
+	RequireHttps                         *bool                    `json:"RequireHttps,omitempty"`
+	IsBehindProxy                        *bool                    `json:"IsBehindProxy,omitempty"`
+	RemoteIPFilter                       []string                 `json:"RemoteIPFilter,omitempty"`
+	IsRemoteIPFilterBlacklist            *bool                    `json:"IsRemoteIPFilterBlacklist,omitempty"`
+	ImageExtractionTimeoutMs             *int32                   `json:"ImageExtractionTimeoutMs,omitempty"`
+	PathSubstitutions                    []PathSubstitution       `json:"PathSubstitutions,omitempty"`
+	UninstalledPlugins                   []string                 `json:"UninstalledPlugins,omitempty"`
+	CollapseVideoFolders                 *bool                    `json:"CollapseVideoFolders,omitempty"`
+	EnableOriginalTrackTitles            *bool                    `json:"EnableOriginalTrackTitles,omitempty"`
+	VacuumDatabaseOnStartup              *bool                    `json:"VacuumDatabaseOnStartup,omitempty"`
+	SimultaneousStreamLimit              *int32                   `json:"SimultaneousStreamLimit,omitempty"`
+	DatabaseCacheSizeMB                  *int32                   `json:"DatabaseCacheSizeMB,omitempty"`
+	EnableSqLiteMmio                     *bool                    `json:"EnableSqLiteMmio,omitempty"`
+	PlaylistsUpgradedToM3U               *bool                    `json:"PlaylistsUpgradedToM3U,omitempty"`
+	ImageExtractorUpgraded1              *bool                    `json:"ImageExtractorUpgraded1,omitempty"`
+	EnablePeopleLetterSubFolders         *bool                    `json:"EnablePeopleLetterSubFolders,omitempty"`
+	OptimizeDatabaseOnShutdown           *bool                    `json:"OptimizeDatabaseOnShutdown,omitempty"`
+	DatabaseAnalysisLimit                *int32                   `json:"DatabaseAnalysisLimit,omitempty"`
+	MaxLibraryDatabaseConnections        *int32                   `json:"MaxLibraryDatabaseConnections,omitempty"`
+	MaxAuthDbConnections                 *int32                   `json:"MaxAuthDbConnections,omitempty"`
+	MaxOtherDbConnections                *int32                   `json:"MaxOtherDbConnections,omitempty"`
+	DisableAsyncIO                       *bool                    `json:"DisableAsyncIO,omitempty"`
+	MigratedToUserItemShares8            *bool                    `json:"MigratedToUserItemShares8,omitempty"`
+	MigratedLibraryOptionsToDb           *bool                    `json:"MigratedLibraryOptionsToDb,omitempty"`
+	AllowLegacyLocalNetworkPassword      *bool                    `json:"AllowLegacyLocalNetworkPassword,omitempty"`
+	EnableSavedMetadataForPeople         *bool                    `json:"EnableSavedMetadataForPeople,omitempty"`
+	TvChannelsRefreshed                  *bool                    `json:"TvChannelsRefreshed,omitempty"`
+	ProxyHeaderMode                      *ProxyHeaderMode         `json:"ProxyHeaderMode,omitempty"`
+	IsInMaintenanceMode                  *bool                    `json:"IsInMaintenanceMode,omitempty"`
+	MaintenanceModeMessage               *string                  `json:"MaintenanceModeMessage,omitempty"`
+	EnableDebugLevelLogging              *bool                    `json:"EnableDebugLevelLogging,omitempty"`
+	RevertDebugLogging                   *string                  `json:"RevertDebugLogging,omitempty"`
+	EnableAutoUpdate                     *bool                    `json:"EnableAutoUpdate,omitempty"`
+	LogFileRetentionDays                 *int32                   `json:"LogFileRetentionDays,omitempty"`
+	RunAtStartup                         *bool                    `json:"RunAtStartup,omitempty"`
+	IsStartupWizardCompleted             *bool                    `json:"IsStartupWizardCompleted,omitempty"`
+	CachePath                            *string                  `json:"CachePath,omitempty"`
 }
 
 // NewServerConfiguration instantiates a new ServerConfiguration object
@@ -2316,7 +2316,7 @@ func (o *ServerConfiguration) SetCachePath(v string) {
 }
 
 func (o ServerConfiguration) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -2570,5 +2570,3 @@ func (v *NullableServerConfiguration) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

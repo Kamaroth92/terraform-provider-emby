@@ -20,15 +20,15 @@ var _ MappedNullable = &UserAction{}
 
 // UserAction struct for UserAction
 type UserAction struct {
-	Id *string `json:"Id,omitempty"`
-	ServerId *string `json:"ServerId,omitempty"`
-	UserId *string `json:"UserId,omitempty"`
-	ItemId *string `json:"ItemId,omitempty"`
-	Type *UserActionType `json:"Type,omitempty"`
-	Date *time.Time `json:"Date,omitempty"`
-	PositionTicks NullableInt64 `json:"PositionTicks,omitempty"`
-	Played NullableBool `json:"Played,omitempty"`
-	IsFavorite NullableBool `json:"IsFavorite,omitempty"`
+	Id            *string         `json:"Id,omitempty"`
+	ServerId      *string         `json:"ServerId,omitempty"`
+	UserId        *string         `json:"UserId,omitempty"`
+	ItemId        *string         `json:"ItemId,omitempty"`
+	Type          *UserActionType `json:"Type,omitempty"`
+	Date          *time.Time      `json:"Date,omitempty"`
+	PositionTicks NullableInt64   `json:"PositionTicks,omitempty"`
+	Played        NullableBool    `json:"Played,omitempty"`
+	IsFavorite    NullableBool    `json:"IsFavorite,omitempty"`
 }
 
 // NewUserAction instantiates a new UserAction object
@@ -272,6 +272,7 @@ func (o *UserAction) HasPositionTicks() bool {
 func (o *UserAction) SetPositionTicks(v int64) {
 	o.PositionTicks.Set(&v)
 }
+
 // SetPositionTicksNil sets the value for PositionTicks to be an explicit nil
 func (o *UserAction) SetPositionTicksNil() {
 	o.PositionTicks.Set(nil)
@@ -314,6 +315,7 @@ func (o *UserAction) HasPlayed() bool {
 func (o *UserAction) SetPlayed(v bool) {
 	o.Played.Set(&v)
 }
+
 // SetPlayedNil sets the value for Played to be an explicit nil
 func (o *UserAction) SetPlayedNil() {
 	o.Played.Set(nil)
@@ -356,6 +358,7 @@ func (o *UserAction) HasIsFavorite() bool {
 func (o *UserAction) SetIsFavorite(v bool) {
 	o.IsFavorite.Set(&v)
 }
+
 // SetIsFavoriteNil sets the value for IsFavorite to be an explicit nil
 func (o *UserAction) SetIsFavoriteNil() {
 	o.IsFavorite.Set(nil)
@@ -367,7 +370,7 @@ func (o *UserAction) UnsetIsFavorite() {
 }
 
 func (o UserAction) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -441,5 +444,3 @@ func (v *NullableUserAction) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

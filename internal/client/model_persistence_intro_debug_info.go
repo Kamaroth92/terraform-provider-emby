@@ -19,10 +19,10 @@ var _ MappedNullable = &PersistenceIntroDebugInfo{}
 
 // PersistenceIntroDebugInfo struct for PersistenceIntroDebugInfo
 type PersistenceIntroDebugInfo struct {
-	Id *int64 `json:"Id,omitempty"`
-	Path *string `json:"Path,omitempty"`
-	Start *int64 `json:"Start,omitempty"`
-	End *int64 `json:"End,omitempty"`
+	Id    *int64  `json:"Id,omitempty"`
+	Path  *string `json:"Path,omitempty"`
+	Start *int64  `json:"Start,omitempty"`
+	End   *int64  `json:"End,omitempty"`
 }
 
 // NewPersistenceIntroDebugInfo instantiates a new PersistenceIntroDebugInfo object
@@ -171,7 +171,7 @@ func (o *PersistenceIntroDebugInfo) SetEnd(v int64) {
 }
 
 func (o PersistenceIntroDebugInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -230,5 +230,3 @@ func (v *NullablePersistenceIntroDebugInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

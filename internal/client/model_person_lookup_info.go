@@ -20,18 +20,18 @@ var _ MappedNullable = &PersonLookupInfo{}
 
 // PersonLookupInfo struct for PersonLookupInfo
 type PersonLookupInfo struct {
-	Name *string `json:"Name,omitempty"`
-	Path *string `json:"Path,omitempty"`
-	MetadataLanguage *string `json:"MetadataLanguage,omitempty"`
-	MetadataCountryCode *string `json:"MetadataCountryCode,omitempty"`
-	MetadataLanguages []GlobalizationCultureDto `json:"MetadataLanguages,omitempty"`
-	ProviderIds *map[string]string `json:"ProviderIds,omitempty"`
-	Year NullableInt32 `json:"Year,omitempty"`
-	IndexNumber NullableInt32 `json:"IndexNumber,omitempty"`
-	ParentIndexNumber NullableInt32 `json:"ParentIndexNumber,omitempty"`
-	PremiereDate NullableTime `json:"PremiereDate,omitempty"`
-	IsAutomated *bool `json:"IsAutomated,omitempty"`
-	EnableAdultMetadata *bool `json:"EnableAdultMetadata,omitempty"`
+	Name                *string                   `json:"Name,omitempty"`
+	Path                *string                   `json:"Path,omitempty"`
+	MetadataLanguage    *string                   `json:"MetadataLanguage,omitempty"`
+	MetadataCountryCode *string                   `json:"MetadataCountryCode,omitempty"`
+	MetadataLanguages   []GlobalizationCultureDto `json:"MetadataLanguages,omitempty"`
+	ProviderIds         *map[string]string        `json:"ProviderIds,omitempty"`
+	Year                NullableInt32             `json:"Year,omitempty"`
+	IndexNumber         NullableInt32             `json:"IndexNumber,omitempty"`
+	ParentIndexNumber   NullableInt32             `json:"ParentIndexNumber,omitempty"`
+	PremiereDate        NullableTime              `json:"PremiereDate,omitempty"`
+	IsAutomated         *bool                     `json:"IsAutomated,omitempty"`
+	EnableAdultMetadata *bool                     `json:"EnableAdultMetadata,omitempty"`
 }
 
 // NewPersonLookupInfo instantiates a new PersonLookupInfo object
@@ -275,6 +275,7 @@ func (o *PersonLookupInfo) HasYear() bool {
 func (o *PersonLookupInfo) SetYear(v int32) {
 	o.Year.Set(&v)
 }
+
 // SetYearNil sets the value for Year to be an explicit nil
 func (o *PersonLookupInfo) SetYearNil() {
 	o.Year.Set(nil)
@@ -317,6 +318,7 @@ func (o *PersonLookupInfo) HasIndexNumber() bool {
 func (o *PersonLookupInfo) SetIndexNumber(v int32) {
 	o.IndexNumber.Set(&v)
 }
+
 // SetIndexNumberNil sets the value for IndexNumber to be an explicit nil
 func (o *PersonLookupInfo) SetIndexNumberNil() {
 	o.IndexNumber.Set(nil)
@@ -359,6 +361,7 @@ func (o *PersonLookupInfo) HasParentIndexNumber() bool {
 func (o *PersonLookupInfo) SetParentIndexNumber(v int32) {
 	o.ParentIndexNumber.Set(&v)
 }
+
 // SetParentIndexNumberNil sets the value for ParentIndexNumber to be an explicit nil
 func (o *PersonLookupInfo) SetParentIndexNumberNil() {
 	o.ParentIndexNumber.Set(nil)
@@ -401,6 +404,7 @@ func (o *PersonLookupInfo) HasPremiereDate() bool {
 func (o *PersonLookupInfo) SetPremiereDate(v time.Time) {
 	o.PremiereDate.Set(&v)
 }
+
 // SetPremiereDateNil sets the value for PremiereDate to be an explicit nil
 func (o *PersonLookupInfo) SetPremiereDateNil() {
 	o.PremiereDate.Set(nil)
@@ -476,7 +480,7 @@ func (o *PersonLookupInfo) SetEnableAdultMetadata(v bool) {
 }
 
 func (o PersonLookupInfo) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -559,5 +563,3 @@ func (v *NullablePersonLookupInfo) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

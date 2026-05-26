@@ -19,11 +19,11 @@ var _ MappedNullable = &PlayRequest{}
 
 // PlayRequest struct for PlayRequest
 type PlayRequest struct {
-	ControllingUserId *string `json:"ControllingUserId,omitempty"`
+	ControllingUserId   *string       `json:"ControllingUserId,omitempty"`
 	SubtitleStreamIndex NullableInt32 `json:"SubtitleStreamIndex,omitempty"`
-	AudioStreamIndex NullableInt32 `json:"AudioStreamIndex,omitempty"`
-	MediaSourceId *string `json:"MediaSourceId,omitempty"`
-	StartIndex NullableInt32 `json:"StartIndex,omitempty"`
+	AudioStreamIndex    NullableInt32 `json:"AudioStreamIndex,omitempty"`
+	MediaSourceId       *string       `json:"MediaSourceId,omitempty"`
+	StartIndex          NullableInt32 `json:"StartIndex,omitempty"`
 }
 
 // NewPlayRequest instantiates a new PlayRequest object
@@ -107,6 +107,7 @@ func (o *PlayRequest) HasSubtitleStreamIndex() bool {
 func (o *PlayRequest) SetSubtitleStreamIndex(v int32) {
 	o.SubtitleStreamIndex.Set(&v)
 }
+
 // SetSubtitleStreamIndexNil sets the value for SubtitleStreamIndex to be an explicit nil
 func (o *PlayRequest) SetSubtitleStreamIndexNil() {
 	o.SubtitleStreamIndex.Set(nil)
@@ -149,6 +150,7 @@ func (o *PlayRequest) HasAudioStreamIndex() bool {
 func (o *PlayRequest) SetAudioStreamIndex(v int32) {
 	o.AudioStreamIndex.Set(&v)
 }
+
 // SetAudioStreamIndexNil sets the value for AudioStreamIndex to be an explicit nil
 func (o *PlayRequest) SetAudioStreamIndexNil() {
 	o.AudioStreamIndex.Set(nil)
@@ -223,6 +225,7 @@ func (o *PlayRequest) HasStartIndex() bool {
 func (o *PlayRequest) SetStartIndex(v int32) {
 	o.StartIndex.Set(&v)
 }
+
 // SetStartIndexNil sets the value for StartIndex to be an explicit nil
 func (o *PlayRequest) SetStartIndexNil() {
 	o.StartIndex.Set(nil)
@@ -234,7 +237,7 @@ func (o *PlayRequest) UnsetStartIndex() {
 }
 
 func (o PlayRequest) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -296,5 +299,3 @@ func (v *NullablePlayRequest) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

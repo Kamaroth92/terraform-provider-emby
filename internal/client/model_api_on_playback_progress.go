@@ -20,12 +20,12 @@ var _ MappedNullable = &ApiOnPlaybackProgress{}
 
 // ApiOnPlaybackProgress struct for ApiOnPlaybackProgress
 type ApiOnPlaybackProgress struct {
-	PlaylistIndex *int32 `json:"PlaylistIndex,omitempty"`
-	PlaylistLength *int32 `json:"PlaylistLength,omitempty"`
-	Shuffle *bool `json:"Shuffle,omitempty"`
-	SleepTimerMode *SleepTimerMode `json:"SleepTimerMode,omitempty"`
-	SleepTimerEndTime NullableTime `json:"SleepTimerEndTime,omitempty"`
-	EventName *ProgressEvent `json:"EventName,omitempty"`
+	PlaylistIndex     *int32          `json:"PlaylistIndex,omitempty"`
+	PlaylistLength    *int32          `json:"PlaylistLength,omitempty"`
+	Shuffle           *bool           `json:"Shuffle,omitempty"`
+	SleepTimerMode    *SleepTimerMode `json:"SleepTimerMode,omitempty"`
+	SleepTimerEndTime NullableTime    `json:"SleepTimerEndTime,omitempty"`
+	EventName         *ProgressEvent  `json:"EventName,omitempty"`
 }
 
 // NewApiOnPlaybackProgress instantiates a new ApiOnPlaybackProgress object
@@ -205,6 +205,7 @@ func (o *ApiOnPlaybackProgress) HasSleepTimerEndTime() bool {
 func (o *ApiOnPlaybackProgress) SetSleepTimerEndTime(v time.Time) {
 	o.SleepTimerEndTime.Set(&v)
 }
+
 // SetSleepTimerEndTimeNil sets the value for SleepTimerEndTime to be an explicit nil
 func (o *ApiOnPlaybackProgress) SetSleepTimerEndTimeNil() {
 	o.SleepTimerEndTime.Set(nil)
@@ -248,7 +249,7 @@ func (o *ApiOnPlaybackProgress) SetEventName(v ProgressEvent) {
 }
 
 func (o ApiOnPlaybackProgress) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -313,5 +314,3 @@ func (v *NullableApiOnPlaybackProgress) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

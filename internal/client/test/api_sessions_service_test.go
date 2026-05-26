@@ -1,3 +1,5 @@
+// Copyright (c) HashiCorp, Inc.
+
 /*
 Emby Server REST API (BETA)
 
@@ -11,10 +13,10 @@ package embyclient
 
 import (
 	"context"
+	openapiclient "github.com/Kamaroth92/terraform-provider-emby/client"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func Test_embyclient_SessionsServiceAPIService(t *testing.T) {
@@ -24,7 +26,7 @@ func Test_embyclient_SessionsServiceAPIService(t *testing.T) {
 
 	t.Run("Test SessionsServiceAPIService DeleteAuthKeysByKey", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var key string
 
@@ -37,7 +39,7 @@ func Test_embyclient_SessionsServiceAPIService(t *testing.T) {
 
 	t.Run("Test SessionsServiceAPIService DeleteSessionsByIdUsersByUserid", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var userId string
@@ -51,7 +53,7 @@ func Test_embyclient_SessionsServiceAPIService(t *testing.T) {
 
 	t.Run("Test SessionsServiceAPIService GetAuthKeys", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.SessionsServiceAPI.GetAuthKeys(context.Background()).Execute()
 
@@ -62,7 +64,7 @@ func Test_embyclient_SessionsServiceAPIService(t *testing.T) {
 
 	t.Run("Test SessionsServiceAPIService GetAuthProviders", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.SessionsServiceAPI.GetAuthProviders(context.Background()).Execute()
 
@@ -74,7 +76,7 @@ func Test_embyclient_SessionsServiceAPIService(t *testing.T) {
 
 	t.Run("Test SessionsServiceAPIService GetSessions", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.SessionsServiceAPI.GetSessions(context.Background()).Execute()
 
@@ -86,7 +88,7 @@ func Test_embyclient_SessionsServiceAPIService(t *testing.T) {
 
 	t.Run("Test SessionsServiceAPIService GetSessionsPlayqueue", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.SessionsServiceAPI.GetSessionsPlayqueue(context.Background()).Execute()
 
@@ -98,7 +100,7 @@ func Test_embyclient_SessionsServiceAPIService(t *testing.T) {
 
 	t.Run("Test SessionsServiceAPIService PostAuthKeys", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.SessionsServiceAPI.PostAuthKeys(context.Background()).Execute()
 
@@ -109,7 +111,7 @@ func Test_embyclient_SessionsServiceAPIService(t *testing.T) {
 
 	t.Run("Test SessionsServiceAPIService PostAuthKeysByKeyDelete", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var key string
 
@@ -122,7 +124,7 @@ func Test_embyclient_SessionsServiceAPIService(t *testing.T) {
 
 	t.Run("Test SessionsServiceAPIService PostSessionsByIdCommand", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -135,7 +137,7 @@ func Test_embyclient_SessionsServiceAPIService(t *testing.T) {
 
 	t.Run("Test SessionsServiceAPIService PostSessionsByIdCommandByCommand", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var command string
@@ -149,7 +151,7 @@ func Test_embyclient_SessionsServiceAPIService(t *testing.T) {
 
 	t.Run("Test SessionsServiceAPIService PostSessionsByIdMessage", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -162,7 +164,7 @@ func Test_embyclient_SessionsServiceAPIService(t *testing.T) {
 
 	t.Run("Test SessionsServiceAPIService PostSessionsByIdPlaying", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -175,7 +177,7 @@ func Test_embyclient_SessionsServiceAPIService(t *testing.T) {
 
 	t.Run("Test SessionsServiceAPIService PostSessionsByIdPlayingByCommand", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var command PlaystateCommand
@@ -189,7 +191,7 @@ func Test_embyclient_SessionsServiceAPIService(t *testing.T) {
 
 	t.Run("Test SessionsServiceAPIService PostSessionsByIdSystemByCommand", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var command string
@@ -203,7 +205,7 @@ func Test_embyclient_SessionsServiceAPIService(t *testing.T) {
 
 	t.Run("Test SessionsServiceAPIService PostSessionsByIdUsersByUserid", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var userId string
@@ -217,7 +219,7 @@ func Test_embyclient_SessionsServiceAPIService(t *testing.T) {
 
 	t.Run("Test SessionsServiceAPIService PostSessionsByIdUsersByUseridDelete", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 		var userId string
@@ -231,7 +233,7 @@ func Test_embyclient_SessionsServiceAPIService(t *testing.T) {
 
 	t.Run("Test SessionsServiceAPIService PostSessionsByIdViewing", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var id string
 
@@ -244,7 +246,7 @@ func Test_embyclient_SessionsServiceAPIService(t *testing.T) {
 
 	t.Run("Test SessionsServiceAPIService PostSessionsCapabilities", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.SessionsServiceAPI.PostSessionsCapabilities(context.Background()).Execute()
 
@@ -255,7 +257,7 @@ func Test_embyclient_SessionsServiceAPIService(t *testing.T) {
 
 	t.Run("Test SessionsServiceAPIService PostSessionsCapabilitiesFull", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.SessionsServiceAPI.PostSessionsCapabilitiesFull(context.Background()).Execute()
 
@@ -266,7 +268,7 @@ func Test_embyclient_SessionsServiceAPIService(t *testing.T) {
 
 	t.Run("Test SessionsServiceAPIService PostSessionsLogout", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		httpRes, err := apiClient.SessionsServiceAPI.PostSessionsLogout(context.Background()).Execute()
 

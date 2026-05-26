@@ -19,7 +19,7 @@ var _ MappedNullable = &LibraryUpdateLibraryOptions{}
 
 // LibraryUpdateLibraryOptions struct for LibraryUpdateLibraryOptions
 type LibraryUpdateLibraryOptions struct {
-	Id *string `json:"Id,omitempty"`
+	Id             *string         `json:"Id,omitempty"`
 	LibraryOptions *LibraryOptions `json:"LibraryOptions,omitempty"`
 }
 
@@ -105,7 +105,7 @@ func (o *LibraryUpdateLibraryOptions) SetLibraryOptions(v LibraryOptions) {
 }
 
 func (o LibraryUpdateLibraryOptions) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -158,5 +158,3 @@ func (v *NullableLibraryUpdateLibraryOptions) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

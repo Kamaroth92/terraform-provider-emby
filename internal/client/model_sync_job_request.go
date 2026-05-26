@@ -19,22 +19,22 @@ var _ MappedNullable = &SyncJobRequest{}
 
 // SyncJobRequest struct for SyncJobRequest
 type SyncJobRequest struct {
-	TargetId *string `json:"TargetId,omitempty"`
-	ItemIds []string `json:"ItemIds,omitempty"`
-	Category *SyncCategory `json:"Category,omitempty"`
-	ParentId *string `json:"ParentId,omitempty"`
-	Quality *string `json:"Quality,omitempty"`
-	Profile *string `json:"Profile,omitempty"`
-	Container *string `json:"Container,omitempty"`
-	VideoCodec *string `json:"VideoCodec,omitempty"`
-	AudioCodec *string `json:"AudioCodec,omitempty"`
-	Name *string `json:"Name,omitempty"`
-	UserId *string `json:"UserId,omitempty"`
-	UnwatchedOnly *bool `json:"UnwatchedOnly,omitempty"`
-	SyncNewContent *bool `json:"SyncNewContent,omitempty"`
-	ItemLimit NullableInt32 `json:"ItemLimit,omitempty"`
-	Bitrate NullableInt32 `json:"Bitrate,omitempty"`
-	Downloaded *bool `json:"Downloaded,omitempty"`
+	TargetId       *string       `json:"TargetId,omitempty"`
+	ItemIds        []string      `json:"ItemIds,omitempty"`
+	Category       *SyncCategory `json:"Category,omitempty"`
+	ParentId       *string       `json:"ParentId,omitempty"`
+	Quality        *string       `json:"Quality,omitempty"`
+	Profile        *string       `json:"Profile,omitempty"`
+	Container      *string       `json:"Container,omitempty"`
+	VideoCodec     *string       `json:"VideoCodec,omitempty"`
+	AudioCodec     *string       `json:"AudioCodec,omitempty"`
+	Name           *string       `json:"Name,omitempty"`
+	UserId         *string       `json:"UserId,omitempty"`
+	UnwatchedOnly  *bool         `json:"UnwatchedOnly,omitempty"`
+	SyncNewContent *bool         `json:"SyncNewContent,omitempty"`
+	ItemLimit      NullableInt32 `json:"ItemLimit,omitempty"`
+	Bitrate        NullableInt32 `json:"Bitrate,omitempty"`
+	Downloaded     *bool         `json:"Downloaded,omitempty"`
 }
 
 // NewSyncJobRequest instantiates a new SyncJobRequest object
@@ -502,6 +502,7 @@ func (o *SyncJobRequest) HasItemLimit() bool {
 func (o *SyncJobRequest) SetItemLimit(v int32) {
 	o.ItemLimit.Set(&v)
 }
+
 // SetItemLimitNil sets the value for ItemLimit to be an explicit nil
 func (o *SyncJobRequest) SetItemLimitNil() {
 	o.ItemLimit.Set(nil)
@@ -544,6 +545,7 @@ func (o *SyncJobRequest) HasBitrate() bool {
 func (o *SyncJobRequest) SetBitrate(v int32) {
 	o.Bitrate.Set(&v)
 }
+
 // SetBitrateNil sets the value for Bitrate to be an explicit nil
 func (o *SyncJobRequest) SetBitrateNil() {
 	o.Bitrate.Set(nil)
@@ -587,7 +589,7 @@ func (o *SyncJobRequest) SetDownloaded(v bool) {
 }
 
 func (o SyncJobRequest) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -682,5 +684,3 @@ func (v *NullableSyncJobRequest) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

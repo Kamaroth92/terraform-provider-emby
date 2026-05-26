@@ -20,8 +20,8 @@ type SeriesDisplayOrder string
 
 // List of SeriesDisplayOrder
 const (
-	SERIESDISPLAYORDER_AIRED SeriesDisplayOrder = "Aired"
-	SERIESDISPLAYORDER_DVD SeriesDisplayOrder = "Dvd"
+	SERIESDISPLAYORDER_AIRED    SeriesDisplayOrder = "Aired"
+	SERIESDISPLAYORDER_DVD      SeriesDisplayOrder = "Dvd"
 	SERIESDISPLAYORDER_ABSOLUTE SeriesDisplayOrder = "Absolute"
 )
 
@@ -110,4 +110,3 @@ func (v *NullableSeriesDisplayOrder) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

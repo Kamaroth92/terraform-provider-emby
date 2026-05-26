@@ -20,7 +20,7 @@ var _ MappedNullable = &PlaybackReportingApiCustomQuery{}
 // PlaybackReportingApiCustomQuery struct for PlaybackReportingApiCustomQuery
 type PlaybackReportingApiCustomQuery struct {
 	CustomQueryString *string `json:"CustomQueryString,omitempty"`
-	ReplaceUserId *bool `json:"ReplaceUserId,omitempty"`
+	ReplaceUserId     *bool   `json:"ReplaceUserId,omitempty"`
 }
 
 // NewPlaybackReportingApiCustomQuery instantiates a new PlaybackReportingApiCustomQuery object
@@ -105,7 +105,7 @@ func (o *PlaybackReportingApiCustomQuery) SetReplaceUserId(v bool) {
 }
 
 func (o PlaybackReportingApiCustomQuery) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -158,5 +158,3 @@ func (v *NullablePlaybackReportingApiCustomQuery) UnmarshalJSON(src []byte) erro
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

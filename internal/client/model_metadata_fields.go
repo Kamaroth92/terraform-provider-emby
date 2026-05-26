@@ -20,27 +20,27 @@ type MetadataFields string
 
 // List of MetadataFields
 const (
-	METADATAFIELDS_CAST MetadataFields = "Cast"
-	METADATAFIELDS_GENRES MetadataFields = "Genres"
-	METADATAFIELDS_PRODUCTION_LOCATIONS MetadataFields = "ProductionLocations"
-	METADATAFIELDS_STUDIOS MetadataFields = "Studios"
-	METADATAFIELDS_TAGS MetadataFields = "Tags"
-	METADATAFIELDS_NAME MetadataFields = "Name"
-	METADATAFIELDS_OVERVIEW MetadataFields = "Overview"
-	METADATAFIELDS_RUNTIME MetadataFields = "Runtime"
-	METADATAFIELDS_OFFICIAL_RATING MetadataFields = "OfficialRating"
-	METADATAFIELDS_COLLECTIONS MetadataFields = "Collections"
-	METADATAFIELDS_CHANNEL_NUMBER MetadataFields = "ChannelNumber"
-	METADATAFIELDS_SORT_NAME MetadataFields = "SortName"
-	METADATAFIELDS_ORIGINAL_TITLE MetadataFields = "OriginalTitle"
-	METADATAFIELDS_SORT_INDEX_NUMBER MetadataFields = "SortIndexNumber"
+	METADATAFIELDS_CAST                     MetadataFields = "Cast"
+	METADATAFIELDS_GENRES                   MetadataFields = "Genres"
+	METADATAFIELDS_PRODUCTION_LOCATIONS     MetadataFields = "ProductionLocations"
+	METADATAFIELDS_STUDIOS                  MetadataFields = "Studios"
+	METADATAFIELDS_TAGS                     MetadataFields = "Tags"
+	METADATAFIELDS_NAME                     MetadataFields = "Name"
+	METADATAFIELDS_OVERVIEW                 MetadataFields = "Overview"
+	METADATAFIELDS_RUNTIME                  MetadataFields = "Runtime"
+	METADATAFIELDS_OFFICIAL_RATING          MetadataFields = "OfficialRating"
+	METADATAFIELDS_COLLECTIONS              MetadataFields = "Collections"
+	METADATAFIELDS_CHANNEL_NUMBER           MetadataFields = "ChannelNumber"
+	METADATAFIELDS_SORT_NAME                MetadataFields = "SortName"
+	METADATAFIELDS_ORIGINAL_TITLE           MetadataFields = "OriginalTitle"
+	METADATAFIELDS_SORT_INDEX_NUMBER        MetadataFields = "SortIndexNumber"
 	METADATAFIELDS_SORT_PARENT_INDEX_NUMBER MetadataFields = "SortParentIndexNumber"
-	METADATAFIELDS_COMMUNITY_RATING MetadataFields = "CommunityRating"
-	METADATAFIELDS_CRITIC_RATING MetadataFields = "CriticRating"
-	METADATAFIELDS_TAGLINE MetadataFields = "Tagline"
-	METADATAFIELDS_COMPOSERS MetadataFields = "Composers"
-	METADATAFIELDS_ARTISTS MetadataFields = "Artists"
-	METADATAFIELDS_ALBUM_ARTISTS MetadataFields = "AlbumArtists"
+	METADATAFIELDS_COMMUNITY_RATING         MetadataFields = "CommunityRating"
+	METADATAFIELDS_CRITIC_RATING            MetadataFields = "CriticRating"
+	METADATAFIELDS_TAGLINE                  MetadataFields = "Tagline"
+	METADATAFIELDS_COMPOSERS                MetadataFields = "Composers"
+	METADATAFIELDS_ARTISTS                  MetadataFields = "Artists"
+	METADATAFIELDS_ALBUM_ARTISTS            MetadataFields = "AlbumArtists"
 )
 
 // All allowed values of MetadataFields enum
@@ -146,4 +146,3 @@ func (v *NullableMetadataFields) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-

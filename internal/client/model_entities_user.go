@@ -20,26 +20,26 @@ var _ MappedNullable = &EntitiesUser{}
 
 // EntitiesUser struct for EntitiesUser
 type EntitiesUser struct {
-	UsesIdForConfigurationPath *bool `json:"UsesIdForConfigurationPath,omitempty"`
-	Password *string `json:"Password,omitempty"`
-	EasyPassword *string `json:"EasyPassword,omitempty"`
-	Salt *string `json:"Salt,omitempty"`
-	ConnectUserName *string `json:"ConnectUserName,omitempty"`
-	ConnectUserId *string `json:"ConnectUserId,omitempty"`
-	ConnectLinkType *ConnectUserLinkType `json:"ConnectLinkType,omitempty"`
-	ConnectAccessKey *string `json:"ConnectAccessKey,omitempty"`
-	ImageInfos []EntitiesItemImageInfo `json:"ImageInfos,omitempty"`
-	Name *string `json:"Name,omitempty"`
-	LastLoginDate NullableTime `json:"LastLoginDate,omitempty"`
-	LastActivityDate NullableTime `json:"LastActivityDate,omitempty"`
-	PlayedPercentage NullableFloat64 `json:"PlayedPercentage,omitempty"`
-	RecursiveChildCountEqualsChildCount *bool `json:"RecursiveChildCountEqualsChildCount,omitempty"`
-	OriginalParsedName *string `json:"OriginalParsedName,omitempty"`
-	IsNameParsedFromFolder *bool `json:"IsNameParsedFromFolder,omitempty"`
-	IdString *string `json:"IdString,omitempty"`
-	DateCreated *time.Time `json:"DateCreated,omitempty"`
-	ImportedCollections []LinkedItemInfo `json:"ImportedCollections,omitempty"`
-	ResolvedPresentationUniqueKey *string `json:"ResolvedPresentationUniqueKey,omitempty"`
+	UsesIdForConfigurationPath          *bool                   `json:"UsesIdForConfigurationPath,omitempty"`
+	Password                            *string                 `json:"Password,omitempty"`
+	EasyPassword                        *string                 `json:"EasyPassword,omitempty"`
+	Salt                                *string                 `json:"Salt,omitempty"`
+	ConnectUserName                     *string                 `json:"ConnectUserName,omitempty"`
+	ConnectUserId                       *string                 `json:"ConnectUserId,omitempty"`
+	ConnectLinkType                     *ConnectUserLinkType    `json:"ConnectLinkType,omitempty"`
+	ConnectAccessKey                    *string                 `json:"ConnectAccessKey,omitempty"`
+	ImageInfos                          []EntitiesItemImageInfo `json:"ImageInfos,omitempty"`
+	Name                                *string                 `json:"Name,omitempty"`
+	LastLoginDate                       NullableTime            `json:"LastLoginDate,omitempty"`
+	LastActivityDate                    NullableTime            `json:"LastActivityDate,omitempty"`
+	PlayedPercentage                    NullableFloat64         `json:"PlayedPercentage,omitempty"`
+	RecursiveChildCountEqualsChildCount *bool                   `json:"RecursiveChildCountEqualsChildCount,omitempty"`
+	OriginalParsedName                  *string                 `json:"OriginalParsedName,omitempty"`
+	IsNameParsedFromFolder              *bool                   `json:"IsNameParsedFromFolder,omitempty"`
+	IdString                            *string                 `json:"IdString,omitempty"`
+	DateCreated                         *time.Time              `json:"DateCreated,omitempty"`
+	ImportedCollections                 []LinkedItemInfo        `json:"ImportedCollections,omitempty"`
+	ResolvedPresentationUniqueKey       *string                 `json:"ResolvedPresentationUniqueKey,omitempty"`
 }
 
 // NewEntitiesUser instantiates a new EntitiesUser object
@@ -411,6 +411,7 @@ func (o *EntitiesUser) HasLastLoginDate() bool {
 func (o *EntitiesUser) SetLastLoginDate(v time.Time) {
 	o.LastLoginDate.Set(&v)
 }
+
 // SetLastLoginDateNil sets the value for LastLoginDate to be an explicit nil
 func (o *EntitiesUser) SetLastLoginDateNil() {
 	o.LastLoginDate.Set(nil)
@@ -453,6 +454,7 @@ func (o *EntitiesUser) HasLastActivityDate() bool {
 func (o *EntitiesUser) SetLastActivityDate(v time.Time) {
 	o.LastActivityDate.Set(&v)
 }
+
 // SetLastActivityDateNil sets the value for LastActivityDate to be an explicit nil
 func (o *EntitiesUser) SetLastActivityDateNil() {
 	o.LastActivityDate.Set(nil)
@@ -495,6 +497,7 @@ func (o *EntitiesUser) HasPlayedPercentage() bool {
 func (o *EntitiesUser) SetPlayedPercentage(v float64) {
 	o.PlayedPercentage.Set(&v)
 }
+
 // SetPlayedPercentageNil sets the value for PlayedPercentage to be an explicit nil
 func (o *EntitiesUser) SetPlayedPercentageNil() {
 	o.PlayedPercentage.Set(nil)
@@ -730,7 +733,7 @@ func (o *EntitiesUser) SetResolvedPresentationUniqueKey(v string) {
 }
 
 func (o EntitiesUser) MarshalJSON() ([]byte, error) {
-	toSerialize,err := o.ToMap()
+	toSerialize, err := o.ToMap()
 	if err != nil {
 		return []byte{}, err
 	}
@@ -837,5 +840,3 @@ func (v *NullableEntitiesUser) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
-
-

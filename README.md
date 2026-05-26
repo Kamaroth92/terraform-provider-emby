@@ -53,3 +53,8 @@ In order to run the full suite of Acceptance tests, run `make testacc`.
 ```shell
 make testacc
 ```
+
+## AI Disclaimer
+
+This project started as a way to learn how to make a Terraform provider and then was more or less abandoned. 
+I then had more of a need to implement some of these things and AI was used to populate some of API endpoints that I was missing and needed based on what I had already done.

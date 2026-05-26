@@ -1,4 +1,6 @@
 #!/usr/bin/env pwsh
+# Copyright (c) HashiCorp, Inc.
+
 # Usage:
 #   .\generate-sdk.ps1 -EmbyHost "https://my-emby-server:8096"
 

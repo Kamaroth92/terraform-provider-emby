@@ -486,6 +486,18 @@ func (r *UserResource) Create(ctx context.Context, req resource.CreateRequest, r
 		return
 	}
 
+	// Read back the full user so all computed fields are populated.
+	reread, httpResp, err := r.data.Client.UserServiceAPI.GetUsersById(r.data.Auth, plan.Id.ValueString()).Execute()
+	if err != nil {
+		if httpResp != nil && httpResp.StatusCode == 404 {
+			resp.State.RemoveResource(ctx)
+			return
+		}
+		resp.Diagnostics.AddError("Unable to read back user after creation", err.Error())
+		return
+	}
+	mapUserToState(reread, &plan)
+
 	resp.Diagnostics.Append(resp.State.Set(ctx, &plan)...)
 }
 
@@ -545,6 +557,18 @@ func (r *UserResource) Update(ctx context.Context, req resource.UpdateRequest, r
 	if resp.Diagnostics.HasError() {
 		return
 	}
+
+	// Read back the full user so all computed fields are populated.
+	reread, httpResp, err := r.data.Client.UserServiceAPI.GetUsersById(r.data.Auth, plan.Id.ValueString()).Execute()
+	if err != nil {
+		if httpResp != nil && httpResp.StatusCode == 404 {
+			resp.State.RemoveResource(ctx)
+			return
+		}
+		resp.Diagnostics.AddError("Unable to read back user after update", err.Error())
+		return
+	}
+	mapUserToState(reread, &plan)
 
 	resp.Diagnostics.Append(resp.State.Set(ctx, &plan)...)
 }

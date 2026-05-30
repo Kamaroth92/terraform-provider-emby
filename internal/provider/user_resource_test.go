@@ -23,7 +23,7 @@ func TestAccUserResource_basic(t *testing.T) {
 					resource.TestCheckResourceAttr("emby_user.test", "is_administrator", "false"),
 					resource.TestCheckResourceAttrSet("emby_user.test", "id"),
 					// Spot-check computed fields are no longer unknown.
-					resource.TestCheckResourceAttrSet("emby_user.test", "audio_language_preference"),
+					resource.TestCheckResourceAttr("emby_user.test", "audio_language_preference", ""),
 					resource.TestCheckResourceAttr("emby_user.test", "enable_all_folders", "true"),
 				),
 			},
@@ -50,8 +50,10 @@ func testAccUserConfig(name string, admin bool) string {
 provider "emby" {}
 
 resource "emby_user" "test" {
-  name              = %[1]q
-  is_administrator  = %[2]t
+  name                       = %[1]q
+  is_administrator           = %[2]t
+  audio_language_preference  = ""
+  enable_all_folders         = true
 }
 `, name, admin)
 }

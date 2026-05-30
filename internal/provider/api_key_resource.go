@@ -184,5 +184,20 @@ func (r *ApiKeyResource) Delete(ctx context.Context, req resource.DeleteRequest,
 	_, err := r.data.Client.SessionsServiceAPI.DeleteAuthKeysByKey(r.data.Auth, state.AccessToken.ValueString()).Execute()
 	if err != nil {
 		resp.Diagnostics.AddError("Unable to delete API key", err.Error())
+		return
+	}
+
+	// Verify the key is actually gone before confirming deletion.
+	keys, listErr := r.listKeys(ctx)
+	if listErr == nil {
+		for _, k := range keys {
+			if k.AccessToken == state.AccessToken.ValueString() {
+				resp.Diagnostics.AddError(
+					"API key still exists after delete",
+					"The Emby API returned success but the key was found on verification. Retry on next apply.",
+				)
+				return
+			}
+		}
 	}
 }

@@ -150,8 +150,11 @@ func (r *UserLibraryAccessResource) Delete(ctx context.Context, req resource.Del
 	}
 
 	// Restore full library access
-	user, _, err := r.data.Client.UserServiceAPI.GetUsersById(r.data.Auth, state.UserId.ValueString()).Execute()
+	user, httpResp, err := r.data.Client.UserServiceAPI.GetUsersById(r.data.Auth, state.UserId.ValueString()).Execute()
 	if err != nil {
+		if httpResp != nil && httpResp.StatusCode == 404 {
+			return // user already gone, nothing to restore
+		}
 		resp.Diagnostics.AddError("Unable to read user", err.Error())
 		return
 	}
@@ -166,6 +169,7 @@ func (r *UserLibraryAccessResource) Delete(ctx context.Context, req resource.Del
 	_, err = r.data.Client.UserServiceAPI.PostUsersByIdPolicy(r.data.Auth, user.GetId()).UserPolicy(policy).Execute()
 	if err != nil {
 		resp.Diagnostics.AddError("Unable to restore user library access", err.Error())
+		return
 	}
 }
 

@@ -43,5 +43,6 @@ data "emby_library" "by_id" {
 ### Read-Only
 
 - `collection_type` (String) The collection type (e.g. movies, tvshows, music).
+- `guid` (String) The library GUID.
 - `item_id` (String) The internal item ID used for policy bindings (e.g. EnabledFolders).
 - `locations` (List of String) The file system paths for the library.

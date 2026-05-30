@@ -117,6 +117,7 @@ func (p *EmbyProvider) Resources(_ context.Context) []func() resource.Resource {
 		NewUserResource,
 		NewUserLibraryAccessResource,
 		NewApiKeyResource,
+		NewLibraryResource,
 	}
 }
 

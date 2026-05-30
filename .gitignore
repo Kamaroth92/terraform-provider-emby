@@ -37,8 +37,7 @@ website/vendor
 .devcontainer/.env
 
 .vscode/
-.claude/
-TASK.md
 __debug_bin*
 
 openapi-spec.json
+local-tests/

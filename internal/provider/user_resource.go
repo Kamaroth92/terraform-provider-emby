@@ -5,6 +5,7 @@ package provider
 import (
 	"context"
 	"fmt"
+	"sync"
 
 	embyclient "github.com/Kamaroth92/terraform-provider-emby/client"
 	"github.com/hashicorp/terraform-plugin-framework/attr"
@@ -12,13 +13,13 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/path"
 	"github.com/hashicorp/terraform-plugin-framework/resource"
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema"
-	"github.com/hashicorp/terraform-plugin-framework/resource/schema/booldefault"
-	"github.com/hashicorp/terraform-plugin-framework/resource/schema/int64default"
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema/planmodifier"
-	"github.com/hashicorp/terraform-plugin-framework/resource/schema/stringdefault"
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema/stringplanmodifier"
 	"github.com/hashicorp/terraform-plugin-framework/types"
 )
+
+// userDeleteMutex serializes user deletions to avoid Emby server race conditions.
+var userDeleteMutex sync.Mutex
 
 var (
 	_ resource.Resource                = &UserResource{}
@@ -114,43 +115,36 @@ func (r *UserResource) Schema(_ context.Context, _ resource.SchemaRequest, resp 
 			"is_administrator": schema.BoolAttribute{
 				Optional:            true,
 				Computed:            true,
-				Default:             booldefault.StaticBool(false),
 				MarkdownDescription: "Whether the user is an administrator.",
 			},
 			"is_hidden": schema.BoolAttribute{
 				Optional:            true,
 				Computed:            true,
-				Default:             booldefault.StaticBool(false),
 				MarkdownDescription: "Whether the user is hidden from login screens.",
 			},
 			"is_hidden_remotely": schema.BoolAttribute{
 				Optional:            true,
 				Computed:            true,
-				Default:             booldefault.StaticBool(false),
 				MarkdownDescription: "Whether the user is hidden from remote connections.",
 			},
 			"is_hidden_from_unused_devices": schema.BoolAttribute{
 				Optional:            true,
 				Computed:            true,
-				Default:             booldefault.StaticBool(false),
 				MarkdownDescription: "Whether the user is hidden from unused devices.",
 			},
 			"is_disabled": schema.BoolAttribute{
 				Optional:            true,
 				Computed:            true,
-				Default:             booldefault.StaticBool(false),
 				MarkdownDescription: "Whether the user account is disabled.",
 			},
 			"enable_remote_access": schema.BoolAttribute{
 				Optional:            true,
 				Computed:            true,
-				Default:             booldefault.StaticBool(true),
 				MarkdownDescription: "Whether the user can access remotely.",
 			},
 			"enable_media_playback": schema.BoolAttribute{
 				Optional:            true,
 				Computed:            true,
-				Default:             booldefault.StaticBool(true),
 				MarkdownDescription: "Whether the user can play media.",
 			},
 			"authentication_provider_id": schema.StringAttribute{
@@ -162,7 +156,6 @@ func (r *UserResource) Schema(_ context.Context, _ resource.SchemaRequest, resp 
 			"enable_all_folders": schema.BoolAttribute{
 				Optional:            true,
 				Computed:            true,
-				Default:             booldefault.StaticBool(true),
 				MarkdownDescription: "Whether the user can access all library folders. Set to false to restrict to `enabled_folders`.",
 			},
 			"enabled_folders": schema.SetAttribute{
@@ -181,7 +174,6 @@ func (r *UserResource) Schema(_ context.Context, _ resource.SchemaRequest, resp 
 			"enable_all_channels": schema.BoolAttribute{
 				Optional:            true,
 				Computed:            true,
-				Default:             booldefault.StaticBool(true),
 				MarkdownDescription: "Whether the user can access all channels. Set to false to restrict to `enabled_channels`.",
 			},
 			"enabled_channels": schema.SetAttribute{
@@ -194,7 +186,6 @@ func (r *UserResource) Schema(_ context.Context, _ resource.SchemaRequest, resp 
 			"enable_all_devices": schema.BoolAttribute{
 				Optional:            true,
 				Computed:            true,
-				Default:             booldefault.StaticBool(true),
 				MarkdownDescription: "Whether the user can use all devices. Set to false to restrict to `enabled_devices`.",
 			},
 			"enabled_devices": schema.SetAttribute{
@@ -219,13 +210,11 @@ func (r *UserResource) Schema(_ context.Context, _ resource.SchemaRequest, resp 
 			"is_tag_blocking_mode_inclusive": schema.BoolAttribute{
 				Optional:            true,
 				Computed:            true,
-				Default:             booldefault.StaticBool(false),
 				MarkdownDescription: "If false, `blocked_tags` are excluded. If true, only content matching `blocked_tags` or `include_tags` is allowed.",
 			},
 			"allow_tag_or_rating": schema.BoolAttribute{
 				Optional:            true,
 				Computed:            true,
-				Default:             booldefault.StaticBool(false),
 				MarkdownDescription: "Whether a single tag OR rating match is sufficient to restrict content.",
 			},
 			"max_parental_rating": schema.Int64Attribute{
@@ -242,100 +231,84 @@ func (r *UserResource) Schema(_ context.Context, _ resource.SchemaRequest, resp 
 			"enable_content_deletion": schema.BoolAttribute{
 				Optional:            true,
 				Computed:            true,
-				Default:             booldefault.StaticBool(false),
 				MarkdownDescription: "Whether the user can delete content.",
 			},
 			"enable_content_downloading": schema.BoolAttribute{
 				Optional:            true,
 				Computed:            true,
-				Default:             booldefault.StaticBool(true),
 				MarkdownDescription: "Whether the user can download content.",
 			},
 			"enable_subtitle_downloading": schema.BoolAttribute{
 				Optional:            true,
 				Computed:            true,
-				Default:             booldefault.StaticBool(true),
 				MarkdownDescription: "Whether the user can download subtitles.",
 			},
 			"enable_subtitle_management": schema.BoolAttribute{
 				Optional:            true,
 				Computed:            true,
-				Default:             booldefault.StaticBool(false),
 				MarkdownDescription: "Whether the user can manage subtitles.",
 			},
 			"enable_sync_transcoding": schema.BoolAttribute{
 				Optional:            true,
 				Computed:            true,
-				Default:             booldefault.StaticBool(true),
 				MarkdownDescription: "Whether the user can use sync transcoding.",
 			},
 			"enable_media_conversion": schema.BoolAttribute{
 				Optional:            true,
 				Computed:            true,
-				Default:             booldefault.StaticBool(true),
 				MarkdownDescription: "Whether the user can convert media.",
 			},
 			"enable_public_sharing": schema.BoolAttribute{
 				Optional:            true,
 				Computed:            true,
-				Default:             booldefault.StaticBool(false),
 				MarkdownDescription: "Whether the user can share content publicly.",
 			},
 			// --- Policy: playback ---
 			"enable_audio_playback_transcoding": schema.BoolAttribute{
 				Optional:            true,
 				Computed:            true,
-				Default:             booldefault.StaticBool(true),
 				MarkdownDescription: "Whether the user can transcode audio.",
 			},
 			"enable_video_playback_transcoding": schema.BoolAttribute{
 				Optional:            true,
 				Computed:            true,
-				Default:             booldefault.StaticBool(true),
 				MarkdownDescription: "Whether the user can transcode video.",
 			},
 			"enable_playback_remuxing": schema.BoolAttribute{
 				Optional:            true,
 				Computed:            true,
-				Default:             booldefault.StaticBool(true),
 				MarkdownDescription: "Whether the user can remux playback.",
 			},
 			"remote_client_bitrate_limit": schema.Int64Attribute{
 				Optional:            true,
 				Computed:            true,
-				Default:             int64default.StaticInt64(0),
 				MarkdownDescription: "Bitrate limit for remote clients in kbps. 0 means unlimited.",
 			},
 			"simultaneous_stream_limit": schema.Int64Attribute{
 				Optional:            true,
 				Computed:            true,
-				Default:             int64default.StaticInt64(0),
 				MarkdownDescription: "Maximum number of simultaneous streams. 0 means unlimited.",
 			},
 			// --- Policy: live TV ---
 			"enable_live_tv_access": schema.BoolAttribute{
 				Optional:            true,
 				Computed:            true,
-				Default:             booldefault.StaticBool(true),
 				MarkdownDescription: "Whether the user can access Live TV.",
 			},
 			"enable_live_tv_management": schema.BoolAttribute{
 				Optional:            true,
 				Computed:            true,
-				Default:             booldefault.StaticBool(false),
 				MarkdownDescription: "Whether the user can manage Live TV.",
 			},
 			// --- Policy: other ---
 			"allow_camera_upload": schema.BoolAttribute{
 				Optional:            true,
 				Computed:            true,
-				Default:             booldefault.StaticBool(true),
 				MarkdownDescription: "Whether the user can upload from camera.",
 			},
 			"allow_sharing_personal_items": schema.BoolAttribute{
 				Optional:            true,
 				Computed:            true,
-				Default:             booldefault.StaticBool(false),
 				MarkdownDescription: "Whether the user can share personal items.",
 			},
 			// --- Configuration: profile ---
@@ -347,7 +320,6 @@ func (r *UserResource) Schema(_ context.Context, _ resource.SchemaRequest, resp 
 			"play_default_audio_track": schema.BoolAttribute{
 				Optional:            true,
 				Computed:            true,
-				Default:             booldefault.StaticBool(true),
 				MarkdownDescription: "Whether to play the default audio track.",
 			},
 			"subtitle_language_preference": schema.StringAttribute{
@@ -358,13 +330,11 @@ func (r *UserResource) Schema(_ context.Context, _ resource.SchemaRequest, resp 
 			"subtitle_mode": schema.StringAttribute{
 				Optional:            true,
 				Computed:            true,
-				Default:             stringdefault.StaticString("Default"),
 				MarkdownDescription: "Subtitle playback mode. Valid values: Default, Always, OnlyForced, None, Smart, HearingImpaired.",
 			},
 			"display_missing_episodes": schema.BoolAttribute{
 				Optional:            true,
 				Computed:            true,
-				Default:             booldefault.StaticBool(true),
 				MarkdownDescription: "Whether to display missing episodes in series views.",
 			},
 			"ordered_views": schema.ListAttribute{
@@ -388,37 +358,31 @@ func (r *UserResource) Schema(_ context.Context, _ resource.SchemaRequest, resp 
 			"hide_played_in_latest": schema.BoolAttribute{
 				Optional:            true,
 				Computed:            true,
-				Default:             booldefault.StaticBool(true),
 				MarkdownDescription: "Whether to hide played items in the 'Latest' section.",
 			},
 			"hide_played_in_more_like_this": schema.BoolAttribute{
 				Optional:            true,
 				Computed:            true,
-				Default:             booldefault.StaticBool(true),
 				MarkdownDescription: "Whether to hide played items in 'More Like This'.",
 			},
 			"hide_played_in_suggestions": schema.BoolAttribute{
 				Optional:            true,
 				Computed:            true,
-				Default:             booldefault.StaticBool(true),
 				MarkdownDescription: "Whether to hide played items in suggestions.",
 			},
 			"remember_audio_selections": schema.BoolAttribute{
 				Optional:            true,
 				Computed:            true,
-				Default:             booldefault.StaticBool(true),
 				MarkdownDescription: "Whether to remember audio track selections.",
 			},
 			"remember_subtitle_selections": schema.BoolAttribute{
 				Optional:            true,
 				Computed:            true,
-				Default:             booldefault.StaticBool(true),
 				MarkdownDescription: "Whether to remember subtitle track selections.",
 			},
 			"enable_next_episode_auto_play": schema.BoolAttribute{
 				Optional:            true,
 				Computed:            true,
-				Default:             booldefault.StaticBool(true),
 				MarkdownDescription: "Whether to auto-play the next episode.",
 			},
 			"resume_rewind_seconds": schema.Int64Attribute{
@@ -429,7 +393,6 @@ func (r *UserResource) Schema(_ context.Context, _ resource.SchemaRequest, resp 
 			"intro_skip_mode": schema.StringAttribute{
 				Optional:            true,
 				Computed:            true,
-				Default:             stringdefault.StaticString("ShowButton"),
 				MarkdownDescription: "Intro skip behavior. Valid values: ShowButton, AutoSkip, None.",
 			},
 		},
@@ -574,6 +537,9 @@ func (r *UserResource) Update(ctx context.Context, req resource.UpdateRequest, r
 }
 
 func (r *UserResource) Delete(ctx context.Context, req resource.DeleteRequest, resp *resource.DeleteResponse) {
+	userDeleteMutex.Lock()
+	defer userDeleteMutex.Unlock()
+
 	var state UserResourceModel
 	resp.Diagnostics.Append(req.State.Get(ctx, &state)...)
 	if resp.Diagnostics.HasError() {
@@ -583,6 +549,23 @@ func (r *UserResource) Delete(ctx context.Context, req resource.DeleteRequest, r
 	_, err := r.data.Client.UserServiceAPI.PostUsersByIdDelete(r.data.Auth, state.Id.ValueString()).Execute()
 	if err != nil {
 		resp.Diagnostics.AddError("Unable to delete user", err.Error())
+		return
+	}
+
+	// Verify the user is actually gone before confirming deletion.
+	verify, verifyResp, verifyErr := r.data.Client.UserServiceAPI.GetUsersById(r.data.Auth, state.Id.ValueString()).Execute()
+	if verifyErr == nil && verify != nil && verifyResp.StatusCode == 200 {
+		resp.Diagnostics.AddError(
+			"User still exists after delete",
+			fmt.Sprintf("The Emby API returned success for the delete but user %q was found on verification. A concurrent delete may have silently failed. Retry on next apply.", state.Id.ValueString()),
+		)
+		return
+	}
+	if verifyErr != nil && verifyResp != nil && verifyResp.StatusCode != 404 {
+		resp.Diagnostics.AddError(
+			"Unable to verify user deletion",
+			fmt.Sprintf("Delete appeared to succeed but verification failed: %s", verifyErr.Error()),
+		)
 		return
 	}
 }

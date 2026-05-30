@@ -25,6 +25,7 @@ type LibraryModel struct {
 	Id             types.String   `tfsdk:"id"`
 	ItemId         types.String   `tfsdk:"item_id"`
 	Name           types.String   `tfsdk:"name"`
+	Guid           types.String   `tfsdk:"guid"`
 	CollectionType types.String   `tfsdk:"collection_type"`
 	Locations      []types.String `tfsdk:"locations"`
 }
@@ -52,6 +53,10 @@ func (d *LibrariesDataSource) Schema(_ context.Context, _ datasource.SchemaReque
 						}, "item_id": schema.StringAttribute{
 							Computed:            true,
 							MarkdownDescription: "The internal item ID used for policy bindings (e.g. EnabledFolders).",
+						},
+						"guid": schema.StringAttribute{
+							Computed:            true,
+							MarkdownDescription: "The library GUID.",
 						}, "name": schema.StringAttribute{
 							Computed:            true,
 							MarkdownDescription: "The library name.",
@@ -110,6 +115,7 @@ func (d *LibrariesDataSource) Read(ctx context.Context, _ datasource.ReadRequest
 			Id:             types.StringValue(folder.GetId()),
 			ItemId:         types.StringValue(folder.GetItemId()),
 			Name:           types.StringValue(libraryName),
+			Guid:           types.StringValue(folder.GetGuid()),
 			CollectionType: types.StringValue(folder.GetCollectionType()),
 			Locations:      locations,
 		}

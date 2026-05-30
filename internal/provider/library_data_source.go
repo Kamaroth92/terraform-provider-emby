@@ -21,6 +21,7 @@ type LibraryDataSourceModel struct {
 	Name           types.String   `tfsdk:"name"`
 	Id             types.String   `tfsdk:"id"`
 	ItemId         types.String   `tfsdk:"item_id"`
+	Guid           types.String   `tfsdk:"guid"`
 	CollectionType types.String   `tfsdk:"collection_type"`
 	Locations      []types.String `tfsdk:"locations"`
 }
@@ -40,17 +41,19 @@ func (d *LibraryDataSource) Schema(_ context.Context, _ datasource.SchemaRequest
 			"name": schema.StringAttribute{
 				Optional:            true,
 				MarkdownDescription: "The name of the library to retrieve.",
-				// ExactlyOneOf:        []string{"id", "name"},
 			},
 			"id": schema.StringAttribute{
-				Optional: true,
-				Computed: true,
-				// ExactlyOneOf:        []string{"id", "name"},
+				Optional:            true,
+				Computed:            true,
 				MarkdownDescription: "The library ID.",
 			},
 			"item_id": schema.StringAttribute{
 				Computed:            true,
 				MarkdownDescription: "The internal item ID used for policy bindings (e.g. EnabledFolders).",
+			},
+			"guid": schema.StringAttribute{
+				Computed:            true,
+				MarkdownDescription: "The library GUID.",
 			},
 			"collection_type": schema.StringAttribute{
 				Computed:            true,
@@ -124,6 +127,7 @@ func (d *LibraryDataSource) Read(ctx context.Context, req datasource.ReadRequest
 				Name:           types.StringValue(folder.GetName()),
 				Id:             types.StringValue(folder.GetId()),
 				ItemId:         types.StringValue(folder.GetItemId()),
+				Guid:           types.StringValue(folder.GetGuid()),
 				CollectionType: types.StringValue(folder.GetCollectionType()),
 				Locations:      locations,
 			}

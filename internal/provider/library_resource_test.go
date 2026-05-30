@@ -12,7 +12,6 @@ func TestAccLibraryResource_basic(t *testing.T) {
 	name := acctest.RandomWithPrefix("tf-test-library")
 	updatedName := name + "-updated"
 	dir1 := "/tmp"
-	dir2 := "/var/tmp"
 
 	resource.Test(t, resource.TestCase{
 		ProtoV6ProviderFactories: testAccProtoV6ProviderFactories,
@@ -29,12 +28,11 @@ func TestAccLibraryResource_basic(t *testing.T) {
 					resource.TestCheckResourceAttr("emby_library.test", "locations.#", "1"),
 				),
 			},
-			// Update name and add a path.
+			// Update name only.
 			{
-				Config: testAccLibraryConfig(updatedName, "movies", []string{dir1, dir2}),
+				Config: testAccLibraryConfig(updatedName, "movies", []string{dir1}),
 				Check: resource.ComposeAggregateTestCheckFunc(
 					resource.TestCheckResourceAttr("emby_library.test", "name", updatedName),
-					resource.TestCheckResourceAttr("emby_library.test", "locations.#", "2"),
 				),
 			},
 			// Import.

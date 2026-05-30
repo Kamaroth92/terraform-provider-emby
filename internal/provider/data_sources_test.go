@@ -54,6 +54,52 @@ func TestAccUserDataSource_byName(t *testing.T) {
 	})
 }
 
+func TestAccUserDataSource_byId(t *testing.T) {
+	name := acctest.RandomWithPrefix("tf-test-ds-id-user")
+
+	resource.Test(t, resource.TestCase{
+		ProtoV6ProviderFactories: testAccProtoV6ProviderFactories,
+		Steps: []resource.TestStep{
+			// Create a user so we can look it up.
+			{
+				Config: testAccUserDataSourceByIdSetup(name, false),
+				Check:  resource.TestCheckResourceAttr("emby_user.ds_id_source", "name", name),
+			},
+			// Look up by ID.
+			{
+				Config: testAccUserDataSourceByIdSetup(name, true),
+				Check: resource.ComposeAggregateTestCheckFunc(
+					resource.TestCheckResourceAttr("data.emby_user.test", "name", name),
+					resource.TestCheckResourceAttrSet("data.emby_user.test", "id"),
+				),
+			},
+		},
+	})
+}
+
+func testAccUserDataSourceByIdSetup(name string, useDataSource bool) string {
+	if useDataSource {
+		return fmt.Sprintf(`
+provider "emby" {}
+
+resource "emby_user" "ds_id_source" {
+  name = %[1]q
+}
+
+data "emby_user" "test" {
+  id = emby_user.ds_id_source.id
+}
+`, name)
+	}
+	return fmt.Sprintf(`
+provider "emby" {}
+
+resource "emby_user" "ds_id_source" {
+  name = %[1]q
+}
+`, name)
+}
+
 func testAccUserDataSourceConfig(name string, useDataSource bool) string {
 	if useDataSource {
 		return fmt.Sprintf(`

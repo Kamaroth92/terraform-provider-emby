@@ -2,7 +2,6 @@ package provider
 
 import (
 	"fmt"
-	"os"
 	"testing"
 
 	"github.com/hashicorp/terraform-plugin-testing/helper/acctest"
@@ -11,11 +10,7 @@ import (
 
 func TestAccLibraryDataSource_byName(t *testing.T) {
 	name := acctest.RandomWithPrefix("tf-test-ds-lib")
-	dir, err := os.MkdirTemp("", "emby-test-ds-lib-*")
-	if err != nil {
-		t.Fatalf("failed to create temp dir: %s", err)
-	}
-	defer os.RemoveAll(dir)
+	dir := t.TempDir()
 
 	resource.Test(t, resource.TestCase{
 		ProtoV6ProviderFactories: testAccProtoV6ProviderFactories,
@@ -41,11 +36,7 @@ func TestAccLibraryDataSource_byName(t *testing.T) {
 
 func TestAccLibraryDataSource_byId(t *testing.T) {
 	name := acctest.RandomWithPrefix("tf-test-ds-lib-id")
-	dir, err := os.MkdirTemp("", "emby-test-ds-lib-id-*")
-	if err != nil {
-		t.Fatalf("failed to create temp dir: %s", err)
-	}
-	defer os.RemoveAll(dir)
+	dir := t.TempDir()
 
 	resource.Test(t, resource.TestCase{
 		ProtoV6ProviderFactories: testAccProtoV6ProviderFactories,

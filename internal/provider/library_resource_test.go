@@ -12,7 +12,7 @@ func TestAccLibraryResource_basic(t *testing.T) {
 	name := acctest.RandomWithPrefix("tf-test-library")
 	updatedName := name + "-updated"
 	dir1 := "/tmp"
-	dir2 := "/tmp"
+	dir2 := "/var/tmp"
 
 	resource.Test(t, resource.TestCase{
 		ProtoV6ProviderFactories: testAccProtoV6ProviderFactories,

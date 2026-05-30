@@ -11,8 +11,8 @@ import (
 func TestAccLibraryResource_basic(t *testing.T) {
 	name := acctest.RandomWithPrefix("tf-test-library")
 	updatedName := name + "-updated"
-	dir1 := t.TempDir()
-	dir2 := t.TempDir()
+	dir1 := "/tmp"
+	dir2 := "/tmp"
 
 	resource.Test(t, resource.TestCase{
 		ProtoV6ProviderFactories: testAccProtoV6ProviderFactories,

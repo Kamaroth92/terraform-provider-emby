@@ -10,7 +10,7 @@ import (
 
 func TestAccLibraryDataSource_byName(t *testing.T) {
 	name := acctest.RandomWithPrefix("tf-test-ds-lib")
-	dir := t.TempDir()
+	dir := "/tmp"
 
 	resource.Test(t, resource.TestCase{
 		ProtoV6ProviderFactories: testAccProtoV6ProviderFactories,
@@ -36,7 +36,7 @@ func TestAccLibraryDataSource_byName(t *testing.T) {
 
 func TestAccLibraryDataSource_byId(t *testing.T) {
 	name := acctest.RandomWithPrefix("tf-test-ds-lib-id")
-	dir := t.TempDir()
+	dir := "/tmp"
 
 	resource.Test(t, resource.TestCase{
 		ProtoV6ProviderFactories: testAccProtoV6ProviderFactories,

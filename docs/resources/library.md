@@ -21,6 +21,72 @@ Manages an Emby library (virtual folder).
 - `name` (String) The library name.
 - `paths` (List of String) The file system paths for the library. At least one path is required.
 
+### Optional
+
+- `auto_generate_chapter_interval_minutes` (Number) Interval in minutes for auto-generated chapter points.
+- `auto_generate_chapters` (Boolean) Automatically generate chapters for media files.
+- `automatic_refresh_interval_days` (Number) Number of days between automatic library refreshes. 0 to disable.
+- `cache_images` (Boolean) Cache downloaded images locally.
+- `collapse_single_item_folders` (Boolean) Collapse folders that contain only a single item.
+- `content_type` (String) The content type override for the library.
+- `disabled_local_metadata_readers` (Set of String) Local metadata reader plugins to disable.
+- `disabled_lyrics_fetchers` (Set of String) Lyrics fetcher plugins to disable.
+- `disabled_subtitle_fetchers` (Set of String) Subtitle fetcher plugins to disable.
+- `download_images_in_advance` (Boolean) Download images in advance instead of on-demand.
+- `enable_adult_metadata` (Boolean) Enable metadata from adult sources.
+- `enable_archive_media_files` (Boolean) Enable archive media files (e.g. RAR, ZIP) support.
+- `enable_audio_resume` (Boolean) Enable audio playback resume.
+- `enable_automatic_series_grouping` (Boolean) Automatically group movies into collections based on metadata.
+- `enable_chapter_image_extraction` (Boolean) Extract chapter images from video files.
+- `enable_embedded_titles` (Boolean) Use embedded titles from media files instead of filenames.
+- `enable_marker_detection` (Boolean) Enable intro/credits marker detection.
+- `enable_marker_detection_during_library_scan` (Boolean) Run marker detection during scheduled library scans.
+- `enable_multi_part_items` (Boolean) Enable multi-part file support (e.g. CD1, CD2).
+- `enable_multi_version_by_files` (Boolean) Group multiple versions of the same media by file naming.
+- `enable_multi_version_by_metadata` (Boolean) Group multiple versions of the same media by metadata.
+- `enable_photos` (Boolean) Enable photos in this library.
+- `enable_plex_ignore` (Boolean) Respect .plexignore files in library folders.
+- `enable_realtime_monitor` (Boolean) Enable real time monitoring of file changes.
+- `exclude_from_search` (Boolean) Exclude this library from global search results.
+- `extract_chapter_images_during_library_scan` (Boolean) Extract chapter images during scheduled library scans.
+- `force_collapse_single_item_folders` (Boolean) Force collapse single-item folders even when metadata disagrees.
+- `forced_subtitles_only` (Boolean) Only download forced/foreign subtitles.
+- `hearing_impaired_subtitles_only` (Boolean) Only download subtitles for the hearing impaired (SDH).
+- `ignore_file_extensions` (Set of String) File extensions to ignore during library scans.
+- `ignore_hidden_files` (Boolean) Ignore hidden files when scanning the library.
+- `import_collections` (Boolean) Import collections from the library folders.
+- `import_playlists` (Boolean) Import playlists from the library folders.
+- `intro_detection_fingerprint_length` (Number) Fingerprint length in seconds for intro detection.
+- `local_metadata_reader_order` (List of String) Order of local metadata reader plugins.
+- `lyrics_download_languages` (Set of String) Languages to download lyrics for.
+- `lyrics_download_max_age_days` (Number) Maximum age in days for lyrics downloads. 0 for any age.
+- `lyrics_fetcher_order` (List of String) Priority order of lyrics fetcher plugins.
+- `max_resume_pct` (Number) Maximum percentage played to still allow resume.
+- `merge_top_level_folders` (Boolean) Merge top-level folders into a single view for multi-path libraries.
+- `metadata_country_code` (String) Country code used for metadata ratings (e.g. US, GB).
+- `metadata_savers` (Set of String) Metadata saver plugins to use (e.g. Emby Xml, Nfo).
+- `min_collection_items` (Number) Minimum number of items required to create a collection.
+- `min_resume_duration_seconds` (Number) Minimum duration in seconds for an item to be resumable.
+- `min_resume_pct` (Number) Minimum percentage played to allow resume.
+- `music_folder_structure` (String) Folder structure pattern for music libraries.
+- `placeholder_metadata_refresh_interval_days` (Number) Number of days between metadata refreshes for items with placeholder metadata.
+- `preferred_image_language` (String) Preferred language for images (e.g. en, fr, de).
+- `preferred_metadata_language` (String) Preferred language for metadata (e.g. en, fr, de).
+- `require_perfect_subtitle_match` (Boolean) Only download subtitles that are a perfect match for the media.
+- `sample_ignore_size` (Number) Ignore sample files smaller than this size in bytes.
+- `save_local_metadata` (Boolean) Save metadata alongside media files (NFO, etc).
+- `save_local_thumbnail_sets` (Boolean) Save thumbnail images alongside media files.
+- `save_lyrics_with_media` (Boolean) Save downloaded lyrics alongside media files.
+- `save_metadata_hidden` (Boolean) Save metadata as hidden files.
+- `save_subtitles_with_media` (Boolean) Save downloaded subtitles alongside media files.
+- `share_embedded_music_album_images` (Boolean) Share embedded album art images across tracks in the same album.
+- `skip_subtitles_if_audio_track_matches` (Boolean) Skip downloading subtitles if the audio track language matches.
+- `skip_subtitles_if_embedded_subtitles_present` (Boolean) Skip downloading subtitles if the media already has embedded subtitles.
+- `subtitle_download_languages` (Set of String) Languages to download subtitles for (e.g. eng, fre).
+- `subtitle_download_max_age_days` (Number) Maximum age in days for subtitle downloads. 0 for any age.
+- `subtitle_fetcher_order` (List of String) Priority order of subtitle fetcher plugins.
+- `thumbnail_images_interval_seconds` (Number) Interval in seconds between thumbnail image generation.
+
 ### Read-Only
 
 - `guid` (String) The library GUID.

@@ -11,7 +11,7 @@ import (
 func TestAccUserLibraryAccessResource_basic(t *testing.T) {
 	userName := acctest.RandomWithPrefix("tf-test-ula-user")
 	libName := acctest.RandomWithPrefix("tf-test-ula-lib")
-	dir := t.TempDir()
+	dir := "/tmp"
 
 	resource.Test(t, resource.TestCase{
 		ProtoV6ProviderFactories: testAccProtoV6ProviderFactories,

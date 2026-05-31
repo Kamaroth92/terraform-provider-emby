@@ -50,17 +50,17 @@ type LibraryResourceModel struct {
 	CacheImages                           types.Bool `tfsdk:"cache_images"`
 
 	// --- Metadata ---
-	PreferredMetadataLanguage      types.String `tfsdk:"preferred_metadata_language"`
-	PreferredImageLanguage         types.String `tfsdk:"preferred_image_language"`
-	MetadataCountryCode            types.String `tfsdk:"metadata_country_code"`
-	ContentType                    types.String `tfsdk:"content_type"`
-	MetadataSavers                 types.Set    `tfsdk:"metadata_savers"`
-	DisabledLocalMetadataReaders   types.Set    `tfsdk:"disabled_local_metadata_readers"`
-	LocalMetadataReaderOrder       types.List   `tfsdk:"local_metadata_reader_order"`
-	SaveLocalMetadata              types.Bool   `tfsdk:"save_local_metadata"`
-	SaveMetadataHidden             types.Bool   `tfsdk:"save_metadata_hidden"`
-	SaveLocalThumbnailSets         types.Bool   `tfsdk:"save_local_thumbnail_sets"`
-	EnableAdultMetadata            types.Bool   `tfsdk:"enable_adult_metadata"`
+	PreferredMetadataLanguage    types.String `tfsdk:"preferred_metadata_language"`
+	PreferredImageLanguage       types.String `tfsdk:"preferred_image_language"`
+	MetadataCountryCode          types.String `tfsdk:"metadata_country_code"`
+	ContentType                  types.String `tfsdk:"content_type"`
+	MetadataSavers               types.Set    `tfsdk:"metadata_savers"`
+	DisabledLocalMetadataReaders types.Set    `tfsdk:"disabled_local_metadata_readers"`
+	LocalMetadataReaderOrder     types.List   `tfsdk:"local_metadata_reader_order"`
+	SaveLocalMetadata            types.Bool   `tfsdk:"save_local_metadata"`
+	SaveMetadataHidden           types.Bool   `tfsdk:"save_metadata_hidden"`
+	SaveLocalThumbnailSets       types.Bool   `tfsdk:"save_local_thumbnail_sets"`
+	EnableAdultMetadata          types.Bool   `tfsdk:"enable_adult_metadata"`
 
 	// --- File Handling ---
 	IgnoreHiddenFiles    types.Bool `tfsdk:"ignore_hidden_files"`
@@ -70,16 +70,16 @@ type LibraryResourceModel struct {
 	ImportCollections    types.Bool `tfsdk:"import_collections"`
 
 	// --- Subtitles ---
-	DisabledSubtitleFetchers                types.Set    `tfsdk:"disabled_subtitle_fetchers"`
-	SubtitleFetcherOrder                    types.List   `tfsdk:"subtitle_fetcher_order"`
-	SubtitleDownloadLanguages               types.Set    `tfsdk:"subtitle_download_languages"`
-	SubtitleDownloadMaxAgeDays              types.Int64  `tfsdk:"subtitle_download_max_age_days"`
-	SkipSubtitlesIfEmbeddedSubtitlesPresent types.Bool   `tfsdk:"skip_subtitles_if_embedded_subtitles_present"`
-	SkipSubtitlesIfAudioTrackMatches        types.Bool   `tfsdk:"skip_subtitles_if_audio_track_matches"`
-	RequirePerfectSubtitleMatch             types.Bool   `tfsdk:"require_perfect_subtitle_match"`
-	SaveSubtitlesWithMedia                  types.Bool   `tfsdk:"save_subtitles_with_media"`
-	ForcedSubtitlesOnly                     types.Bool   `tfsdk:"forced_subtitles_only"`
-	HearingImpairedSubtitlesOnly            types.Bool   `tfsdk:"hearing_impaired_subtitles_only"`
+	DisabledSubtitleFetchers                types.Set   `tfsdk:"disabled_subtitle_fetchers"`
+	SubtitleFetcherOrder                    types.List  `tfsdk:"subtitle_fetcher_order"`
+	SubtitleDownloadLanguages               types.Set   `tfsdk:"subtitle_download_languages"`
+	SubtitleDownloadMaxAgeDays              types.Int64 `tfsdk:"subtitle_download_max_age_days"`
+	SkipSubtitlesIfEmbeddedSubtitlesPresent types.Bool  `tfsdk:"skip_subtitles_if_embedded_subtitles_present"`
+	SkipSubtitlesIfAudioTrackMatches        types.Bool  `tfsdk:"skip_subtitles_if_audio_track_matches"`
+	RequirePerfectSubtitleMatch             types.Bool  `tfsdk:"require_perfect_subtitle_match"`
+	SaveSubtitlesWithMedia                  types.Bool  `tfsdk:"save_subtitles_with_media"`
+	ForcedSubtitlesOnly                     types.Bool  `tfsdk:"forced_subtitles_only"`
+	HearingImpairedSubtitlesOnly            types.Bool  `tfsdk:"hearing_impaired_subtitles_only"`
 
 	// --- Lyrics ---
 	DisabledLyricsFetchers   types.Set   `tfsdk:"disabled_lyrics_fetchers"`
@@ -89,23 +89,23 @@ type LibraryResourceModel struct {
 	SaveLyricsWithMedia      types.Bool  `tfsdk:"save_lyrics_with_media"`
 
 	// --- Advanced ---
-	EnableEmbeddedTitles           types.Bool   `tfsdk:"enable_embedded_titles"`
-	EnableAudioResume              types.Bool   `tfsdk:"enable_audio_resume"`
-	AutoGenerateChapters           types.Bool   `tfsdk:"auto_generate_chapters"`
-	AutoGenerateChapterIntervalMinutes types.Int64 `tfsdk:"auto_generate_chapter_interval_minutes"`
-	AutomaticRefreshIntervalDays       types.Int64 `tfsdk:"automatic_refresh_interval_days"`
-	PlaceholderMetadataRefreshIntervalDays types.Int64 `tfsdk:"placeholder_metadata_refresh_interval_days"`
-	MergeTopLevelFolders               types.Bool  `tfsdk:"merge_top_level_folders"`
-	CollapseSingleItemFolders          types.Bool  `tfsdk:"collapse_single_item_folders"`
-	ForceCollapseSingleItemFolders     types.Bool  `tfsdk:"force_collapse_single_item_folders"`
-	EnableAutomaticSeriesGrouping      types.Bool  `tfsdk:"enable_automatic_series_grouping"`
-	ShareEmbeddedMusicAlbumImages      types.Bool  `tfsdk:"share_embedded_music_album_images"`
-	EnableMultiVersionByFiles          types.Bool  `tfsdk:"enable_multi_version_by_files"`
-	EnableMultiVersionByMetadata       types.Bool  `tfsdk:"enable_multi_version_by_metadata"`
-	EnableMultiPartItems               types.Bool  `tfsdk:"enable_multi_part_items"`
-	MinCollectionItems                 types.Int64 `tfsdk:"min_collection_items"`
-	MusicFolderStructure               types.String `tfsdk:"music_folder_structure"`
-	ExcludeFromSearch                  types.Bool  `tfsdk:"exclude_from_search"`
+	EnableEmbeddedTitles                   types.Bool   `tfsdk:"enable_embedded_titles"`
+	EnableAudioResume                      types.Bool   `tfsdk:"enable_audio_resume"`
+	AutoGenerateChapters                   types.Bool   `tfsdk:"auto_generate_chapters"`
+	AutoGenerateChapterIntervalMinutes     types.Int64  `tfsdk:"auto_generate_chapter_interval_minutes"`
+	AutomaticRefreshIntervalDays           types.Int64  `tfsdk:"automatic_refresh_interval_days"`
+	PlaceholderMetadataRefreshIntervalDays types.Int64  `tfsdk:"placeholder_metadata_refresh_interval_days"`
+	MergeTopLevelFolders                   types.Bool   `tfsdk:"merge_top_level_folders"`
+	CollapseSingleItemFolders              types.Bool   `tfsdk:"collapse_single_item_folders"`
+	ForceCollapseSingleItemFolders         types.Bool   `tfsdk:"force_collapse_single_item_folders"`
+	EnableAutomaticSeriesGrouping          types.Bool   `tfsdk:"enable_automatic_series_grouping"`
+	ShareEmbeddedMusicAlbumImages          types.Bool   `tfsdk:"share_embedded_music_album_images"`
+	EnableMultiVersionByFiles              types.Bool   `tfsdk:"enable_multi_version_by_files"`
+	EnableMultiVersionByMetadata           types.Bool   `tfsdk:"enable_multi_version_by_metadata"`
+	EnableMultiPartItems                   types.Bool   `tfsdk:"enable_multi_part_items"`
+	MinCollectionItems                     types.Int64  `tfsdk:"min_collection_items"`
+	MusicFolderStructure                   types.String `tfsdk:"music_folder_structure"`
+	ExcludeFromSearch                      types.Bool   `tfsdk:"exclude_from_search"`
 
 	// --- Resume / Playback ---
 	MinResumePct                   types.Int64 `tfsdk:"min_resume_pct"`

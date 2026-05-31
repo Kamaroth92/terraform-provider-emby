@@ -670,19 +670,23 @@ func (r *LibraryResource) Update(ctx context.Context, req resource.UpdateRequest
 		}
 	}
 
-	// Update library options only if something changed.
+	// Update library options only if the plan explicitly sets at least one
+	// option and it differs from the current state. Sending an empty object
+	// can reset server-side defaults (e.g. clearing CollectionType).
 	planOpts := buildLibraryOptions(plan)
-	stateOpts := buildLibraryOptions(state)
-	if !libraryOptionsEqual(planOpts, stateOpts) {
-		updateOpts := embyclient.NewLibraryUpdateLibraryOptions()
-		updateOpts.SetId(plan.Id.ValueString())
-		updateOpts.SetLibraryOptions(planOpts)
+	if !libraryOptionsEmpty(planOpts) {
+		stateOpts := buildLibraryOptions(state)
+		if !libraryOptionsEqual(planOpts, stateOpts) {
+			updateOpts := embyclient.NewLibraryUpdateLibraryOptions()
+			updateOpts.SetId(plan.Id.ValueString())
+			updateOpts.SetLibraryOptions(planOpts)
 
-		_, err := r.data.Client.LibraryStructureServiceAPI.PostLibraryVirtualfoldersLibraryoptions(r.data.Auth).
-			LibraryUpdateLibraryOptions(*updateOpts).Execute()
-		if err != nil {
-			resp.Diagnostics.AddError("Unable to update library options", err.Error())
-			return
+			_, err := r.data.Client.LibraryStructureServiceAPI.PostLibraryVirtualfoldersLibraryoptions(r.data.Auth).
+				LibraryUpdateLibraryOptions(*updateOpts).Execute()
+			if err != nil {
+				resp.Diagnostics.AddError("Unable to update library options", err.Error())
+				return
+			}
 		}
 	}
 
